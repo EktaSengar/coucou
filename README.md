@@ -1,8 +1,8 @@
-# Learn French with AI 🇫🇷
+# Coucou 🇫🇷
 
-A free, AI-era playbook for English speakers learning French — the smart method, the best 2026 AI tools, a copy-paste prompt cookbook, a study routine, and a downloadable tracker. Beginner → **DELF B2** (and French citizenship).
+*Coucou* — a friendly French "hi!" — is a free, AI-era playbook for English speakers learning French: the smart method, the best 2026 AI tools, a copy-paste prompt cookbook, a study routine, and a downloadable tracker. Beginner → **DELF B2** (and French citizenship).
 
-**Live site:** https://ektasengar.github.io/learn-french-with-ai/
+**Live site:** https://ektasengar.github.io/coucou/
 
 ## What's inside
 

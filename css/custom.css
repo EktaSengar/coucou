@@ -1,0 +1,24 @@
+/* Coucou — minimal overrides; Tailwind utilities do the rest (matches portfolio) */
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+/* Alpine */
+[x-cloak] { display: none !important; }
+
+/* Hide native <details> markers (we use custom +/- indicators) */
+summary { list-style: none; }
+summary::-webkit-details-marker { display: none; }
+
+/* Accessibility focus ring (matches portfolio) */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

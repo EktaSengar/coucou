@@ -564,5 +564,525 @@
       "Say two things you like doing in your free time with « faire de »."
     ],
     "tutorPrompt": "Be my A2 French tutor on weather and free time. Ask me about today's weather, the seasons, and my hobbies, one simple question at a time. Correct my « il fait… » and « faire du / de la… ». After eight exchanges, list the weather and hobby words I should remember."
+  },
+  {
+    "id": "b1-01-imparfait",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "Telling stories — the imparfait",
+    "minutes": 30,
+    "goal": "Describe how things used to be, set the scene in a story, and feel the difference between the imparfait and the passé composé.",
+    "vocab": [
+      {
+        "fr": "Quand j'étais petit(e)",
+        "phonetic": "kahn zhay-TEH puh-TEE(T)",
+        "en": "When I was little"
+      },
+      {
+        "fr": "avant",
+        "phonetic": "ah-VAHN",
+        "en": "before / in the past"
+      },
+      {
+        "fr": "à l'époque",
+        "phonetic": "ah lay-POK",
+        "en": "back then / at the time"
+      },
+      {
+        "fr": "d'habitude",
+        "phonetic": "dah-bee-TEWD",
+        "en": "usually"
+      },
+      {
+        "fr": "tous les jours",
+        "phonetic": "too lay ZHOOR",
+        "en": "every day"
+      },
+      {
+        "fr": "souvent",
+        "phonetic": "soo-VAHN",
+        "en": "often"
+      },
+      {
+        "fr": "un souvenir",
+        "phonetic": "uhn soov-NEER",
+        "en": "a memory"
+      },
+      {
+        "fr": "il était une fois",
+        "phonetic": "eel ay-teh ewn FWAH",
+        "en": "once upon a time"
+      }
+    ],
+    "grammar": {
+      "point": "Imparfait vs passé composé",
+      "explain": "The imparfait sets the scene and describes how things were or used to be — habits, ongoing background, age, weather, feelings: « je jouais au foot tous les samedis », « il faisait beau ». Form it from the nous form of the present (nous parlons → parl-) plus the endings -ais, -ais, -ait, -ions, -iez, -aient (être is the only irregular stem: ét-). The passé composé is for the single, completed events that move the story forward: « j'ai marqué un but ». Rule of thumb: imparfait = the backdrop, passé composé = what happened."
+    },
+    "examples": [
+      "Quand j'étais jeune, je jouais du piano tous les jours. (kahn zhay-teh ZHUHN, zhuh zhoo-EH dew pee-ah-NOH too lay ZHOOR)",
+      "Il faisait nuit quand le téléphone a sonné. (eel fuh-zeh NWEE kahn luh tay-lay-FON ah soh-NAY)"
+    ],
+    "practice": [
+      "Describe your childhood bedroom using the imparfait: « il y avait… », « c'était… ».",
+      "Tell a 3-sentence story: set the scene in the imparfait, then drop in one event in the passé composé.",
+      "Finish the pattern: « Avant, je… mais maintenant, je… » (before vs now).",
+      "Say three things you used to do every weekend as a kid."
+    ],
+    "tutorPrompt": "Be my B1 French tutor focused on the imparfait. Ask me to tell short stories and describe how things used to be when I was a child. Push me to mix the imparfait (background, habits) with the passé composé (events). Correct my tense choice each time with a one-line why, and at the end summarise the imparfait vs passé composé rule in two sentences."
+  },
+  {
+    "id": "b1-02-futur-simple",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "Talking about the future",
+    "minutes": 25,
+    "goal": "Make plans, predictions and promises with the real future tense — beyond « je vais ».",
+    "vocab": [
+      {
+        "fr": "demain / bientôt",
+        "phonetic": "duh-MAN / byan-TOH",
+        "en": "tomorrow / soon"
+      },
+      {
+        "fr": "l'année prochaine",
+        "phonetic": "lah-NAY proh-SHEN",
+        "en": "next year"
+      },
+      {
+        "fr": "un jour",
+        "phonetic": "uhn ZHOOR",
+        "en": "one day / someday"
+      },
+      {
+        "fr": "j'espère que",
+        "phonetic": "zhes-PEHR kuh",
+        "en": "I hope that"
+      },
+      {
+        "fr": "je pense que",
+        "phonetic": "zhuh pahns KUH",
+        "en": "I think that"
+      },
+      {
+        "fr": "un projet",
+        "phonetic": "uhn proh-ZHEH",
+        "en": "a plan / project"
+      },
+      {
+        "fr": "réussir",
+        "phonetic": "ray-ew-SEER",
+        "en": "to succeed"
+      },
+      {
+        "fr": "peut-être",
+        "phonetic": "puh-TEH-truh",
+        "en": "maybe"
+      }
+    ],
+    "grammar": {
+      "point": "Le futur simple",
+      "explain": "For most verbs, take the infinitive and add -ai, -as, -a, -ons, -ez, -ont: « je parlerai, tu finiras, il prendra » (drop the final -e of -re verbs). A handful are irregular but very common: être → ser-, avoir → aur-, aller → ir-, faire → fer-, pouvoir → pourr-, vouloir → voudr-, voir → verr-. Use it for plans and predictions further off than the near future. After « quand » and « dès que », French uses the future too: « quand j'aurai le temps, je t'appellerai »."
+    },
+    "examples": [
+      "L'année prochaine, nous irons vivre à Lyon. (lah-nay proh-shen, noo zee-ROHN vee-vruh ah lee-OHN)",
+      "Quand tu arriveras, on dînera ensemble. (kahn tew ah-reev-RAH, ohn dee-nuh-RAH ahn-SAHM-bluh)"
+    ],
+    "practice": [
+      "Say three things you'll do next weekend using the futur simple.",
+      "Make a prediction about 2030 with « je pense que… ».",
+      "Complete: « Quand j'aurai le temps, je… ».",
+      "Turn a « je vais + infinitif » plan into the futur simple."
+    ],
+    "tutorPrompt": "Be my B1 French tutor for the futur simple. Ask me about my plans, hopes and predictions for the future. Make me use the real future tense (not just « je vais + infinitif »), including after « quand » and « dès que ». Correct my conjugations, especially the irregular stems (ser-, aur-, ir-, fer-, pourr-…), and finish with five future-tense sentences to remember."
+  },
+  {
+    "id": "b1-03-conditionnel",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "Politeness, advice & « what if »",
+    "minutes": 30,
+    "goal": "Sound polite, give advice and talk about what you would do — the conditional.",
+    "vocab": [
+      {
+        "fr": "je voudrais",
+        "phonetic": "zhuh voo-DREH",
+        "en": "I would like"
+      },
+      {
+        "fr": "j'aimerais",
+        "phonetic": "zhem-REH",
+        "en": "I would love / like"
+      },
+      {
+        "fr": "pourriez-vous… ?",
+        "phonetic": "poo-ree-AY voo",
+        "en": "could you…?"
+      },
+      {
+        "fr": "à ta place",
+        "phonetic": "ah tah PLASS",
+        "en": "if I were you"
+      },
+      {
+        "fr": "tu devrais",
+        "phonetic": "tew duh-VREH",
+        "en": "you should"
+      },
+      {
+        "fr": "ce serait",
+        "phonetic": "suh suh-REH",
+        "en": "it would be"
+      },
+      {
+        "fr": "si possible",
+        "phonetic": "see poh-SEE-bluh",
+        "en": "if possible"
+      },
+      {
+        "fr": "au cas où",
+        "phonetic": "oh kah OO",
+        "en": "just in case"
+      }
+    ],
+    "grammar": {
+      "point": "Le conditionnel & les phrases avec « si »",
+      "explain": "Build the conditional on the same stem as the futur simple, but add the imparfait endings (-ais, -ais, -ait, -ions, -iez, -aient): « je voudrais, tu pourrais, il serait ». Use it to be polite (« je voudrais un café »), to give advice (« tu devrais te reposer ») and for hypotheticals. The key pattern is si + imparfait → conditionnel: « Si j'avais le temps, je voyagerais plus » (If I had time, I would travel more). Careful: never put the conditional directly after « si »."
+    },
+    "examples": [
+      "Si j'étais riche, j'achèterais un appartement à Paris. (see zhay-teh REESH, zhash-tuh-REH uhn ah-par-tuh-MAHN ah pa-REE)",
+      "Pourriez-vous m'aider, s'il vous plaît ? (poo-ree-ay VOO meh-DAY, seel voo PLEH)"
+    ],
+    "practice": [
+      "Make three polite requests with « je voudrais » / « pourriez-vous… ? ».",
+      "Give a friend advice with « tu devrais… ».",
+      "Complete: « Si j'avais plus de temps, je… ».",
+      "Say what you would do with a free week, using the conditional."
+    ],
+    "tutorPrompt": "Be my B1 French tutor for the conditionnel. Practise three things with me: polite requests (« je voudrais », « pourriez-vous »), giving advice (« tu devrais », « à ta place je… »), and hypotheticals with « si + imparfait → conditionnel ». Correct my endings and remind me never to use the conditional right after « si ». End with five conditional phrases worth memorising."
+  },
+  {
+    "id": "b1-04-pronouns",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "Speaking smoothly — pronouns, y & en",
+    "minutes": 30,
+    "goal": "Stop repeating yourself — replace whole phrases with object pronouns, y and en.",
+    "vocab": [
+      {
+        "fr": "le / la / les",
+        "phonetic": "luh / lah / lay",
+        "en": "it / them (direct object)"
+      },
+      {
+        "fr": "lui / leur",
+        "phonetic": "lwee / luhr",
+        "en": "to him-her / to them"
+      },
+      {
+        "fr": "me / te / nous / vous",
+        "phonetic": "muh / tuh / noo / voo",
+        "en": "me / you / us / you"
+      },
+      {
+        "fr": "y",
+        "phonetic": "ee",
+        "en": "there / to it"
+      },
+      {
+        "fr": "en",
+        "phonetic": "ahn",
+        "en": "some / of it / of them"
+      },
+      {
+        "fr": "Je le sais",
+        "phonetic": "zhuh luh SEH",
+        "en": "I know it"
+      },
+      {
+        "fr": "J'y vais",
+        "phonetic": "zhee VEH",
+        "en": "I'm going (there)"
+      },
+      {
+        "fr": "J'en veux",
+        "phonetic": "zhahn VUH",
+        "en": "I want some"
+      }
+    ],
+    "grammar": {
+      "point": "Les pronoms : le/la/les, lui/leur, y et en",
+      "explain": "Object pronouns go before the verb. Direct objects (the thing) → le, la, les: « Tu vois le film ? — Oui, je le vois. » Indirect objects (à + a person) → lui, leur: « Je téléphone à Marie → je lui téléphone. » Use y to replace à + a place or thing: « Je vais à Paris → j'y vais. » Use en to replace de + something or a quantity: « Tu veux du café ? — Oui, j'en veux. » In the passé composé and the negative they still sit before the verb: « Je ne l'ai pas vu. »"
+    },
+    "examples": [
+      "Tu connais ce restaurant ? — Oui, je le connais, j'y vais souvent. (tew koh-neh suh res-toh-RAHN ? wee, zhuh luh koh-NEH, zhee veh soo-VAHN)",
+      "Des croissants ? J'en prends deux, merci. (day krwah-SAHN ? zhahn prahn DUH, mehr-SEE)"
+    ],
+    "practice": [
+      "Answer without repeating the noun: « Tu aimes le café ? » → « Oui, je… ».",
+      "Replace the place with y: « Je vais au marché » → « J'… ».",
+      "Replace with lui/leur: « Je parle à mes parents » → « Je… ».",
+      "Use en for a quantity: « J'ai trois frères » → « J'en ai trois »."
+    ],
+    "tutorPrompt": "Be my B1 French tutor for object pronouns plus y and en. Give me short questions and make me answer without repeating the noun — using le/la/les, lui/leur, y and en correctly, including in the passé composé and the negative. Correct my pronoun choice and word order each time, and finish with a quick recap of when to use y vs en."
+  },
+  {
+    "id": "b1-05-relative-pronouns",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "Linking ideas — qui, que, où, dont",
+    "minutes": 25,
+    "goal": "Join short sentences into richer ones with relative pronouns — and sound more fluent.",
+    "vocab": [
+      {
+        "fr": "qui",
+        "phonetic": "kee",
+        "en": "who / which (subject)"
+      },
+      {
+        "fr": "que",
+        "phonetic": "kuh",
+        "en": "that / which (object)"
+      },
+      {
+        "fr": "où",
+        "phonetic": "oo",
+        "en": "where / when"
+      },
+      {
+        "fr": "dont",
+        "phonetic": "dohn",
+        "en": "whose / of which / about which"
+      },
+      {
+        "fr": "ce qui / ce que",
+        "phonetic": "suh kee / suh kuh",
+        "en": "what (the thing that)"
+      },
+      {
+        "fr": "parce que",
+        "phonetic": "par-suh KUH",
+        "en": "because"
+      },
+      {
+        "fr": "alors que",
+        "phonetic": "ah-lor KUH",
+        "en": "whereas / while"
+      },
+      {
+        "fr": "c'est pour ça que",
+        "phonetic": "seh poor SAH kuh",
+        "en": "that's why"
+      }
+    ],
+    "grammar": {
+      "point": "Les pronoms relatifs : qui, que, où, dont",
+      "explain": "Relative pronouns glue two ideas into one sentence. Qui replaces the subject (the doer): « le train qui part à 8h ». Que replaces the object: « le livre que je lis ». Où means where or when: « la ville où j'habite », « le jour où on s'est rencontrés ». Dont replaces de + something — it covers whose and verbs/expressions built with de (parler de, avoir besoin de): « le film dont tout le monde parle », « l'ami dont la sœur habite à Nice »."
+    },
+    "examples": [
+      "C'est un quartier que j'adore et où il y a beaucoup de cafés. (seh tuhn kar-tee-AY kuh zhah-DOR ay oo eel yah boh-koo duh ka-FAY)",
+      "Voilà le livre dont je t'ai parlé. (vwah-lah luh LEEVR dohn zhuh tay par-LAY)"
+    ],
+    "practice": [
+      "Join with qui: « J'ai un ami. Il habite à Lyon. »",
+      "Join with que: « Voici le film. J'ai vu ce film hier. »",
+      "Use où to describe your neighbourhood: « J'habite dans un quartier où… ».",
+      "Use dont in your own sentence: « C'est la chose dont j'ai besoin. »"
+    ],
+    "tutorPrompt": "Be my B1 French tutor for relative pronouns. Give me pairs of short sentences and have me combine each into one using qui, que, où or dont. Then ask me to describe my neighbourhood and my best friend in richer sentences using these pronouns. Correct my choice (especially que vs dont) with a one-line why, and finish with the rule for dont."
+  },
+  {
+    "id": "b1-06-opinions",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "Giving your opinion — and the subjunctive",
+    "minutes": 30,
+    "goal": "Express opinions, agree, disagree, and meet the present subjunctive.",
+    "vocab": [
+      {
+        "fr": "à mon avis",
+        "phonetic": "ah mohn ah-VEE",
+        "en": "in my opinion"
+      },
+      {
+        "fr": "je trouve que",
+        "phonetic": "zhuh troov KUH",
+        "en": "I find / think that"
+      },
+      {
+        "fr": "je suis d'accord",
+        "phonetic": "zhuh swee dah-KOR",
+        "en": "I agree"
+      },
+      {
+        "fr": "je ne suis pas d'accord",
+        "phonetic": "zhuh nuh swee pah dah-KOR",
+        "en": "I disagree"
+      },
+      {
+        "fr": "il faut que",
+        "phonetic": "eel foh KUH",
+        "en": "it's necessary that"
+      },
+      {
+        "fr": "je ne pense pas que",
+        "phonetic": "zhuh nuh pahns pah KUH",
+        "en": "I don't think that"
+      },
+      {
+        "fr": "cependant",
+        "phonetic": "suh-pahn-DAHN",
+        "en": "however"
+      },
+      {
+        "fr": "par contre",
+        "phonetic": "par KOHN-truh",
+        "en": "on the other hand"
+      }
+    ],
+    "grammar": {
+      "point": "Donner son avis & le subjonctif présent",
+      "explain": "To give an opinion: « à mon avis… », « je trouve que… », « je pense que… » (these take the normal indicative). But certain triggers force the subjunctive — wanting, necessity, emotion and doubt: « il faut que », « je veux que », « je suis content que », « bien que », and « je ne pense pas que ». Form the subjunctive from the ils form of the present minus -ent, plus -e, -es, -e, -ions, -iez, -ent: « que je parle, que tu finisses, qu'il prenne ». Key irregulars: être (sois…), avoir (aie…), aller (aille…), faire (fasse…), pouvoir (puisse…). Example: « Il faut que je parte. »"
+    },
+    "examples": [
+      "À mon avis, il faut qu'on fasse plus attention à l'environnement. (ah mohn ah-vee, eel foh kohn FASS plew zah-tahn-syohn ah lahn-vee-rohn-MAHN)",
+      "Je ne pense pas que ce soit une bonne idée. (zhuh nuh pahns pah kuh suh SWAH ewn bon ee-DAY)"
+    ],
+    "practice": [
+      "Give your opinion on city life with « à mon avis… ».",
+      "Agree, then disagree: « Je suis d'accord, mais par contre… ».",
+      "Use « il faut que » + subjunctive to say what someone must do.",
+      "Complete and force the subjunctive: « Je ne pense pas que ce… »."
+    ],
+    "tutorPrompt": "Be my B1 French tutor for opinions and the present subjunctive. Pick a light debate topic and ask for my view; make me use « à mon avis », « je trouve que », and connectors like « cependant » and « par contre ». Then push me to use the subjunctive after « il faut que », « je veux que » and « je ne pense pas que ». Correct my subjunctive forms gently and list five subjunctive trigger phrases at the end."
+  },
+  {
+    "id": "b1-07-work",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "At work & the job interview",
+    "minutes": 30,
+    "goal": "Talk about your job, your experience, and get through a French job interview.",
+    "vocab": [
+      {
+        "fr": "un entretien (d'embauche)",
+        "phonetic": "uhn ahn-truh-TYAN dahm-BOHSH",
+        "en": "a job interview"
+      },
+      {
+        "fr": "un poste / un emploi",
+        "phonetic": "uhn POST / uhn ahm-PLWAH",
+        "en": "a position / a job"
+      },
+      {
+        "fr": "une entreprise",
+        "phonetic": "ewn ahn-truh-PREEZ",
+        "en": "a company"
+      },
+      {
+        "fr": "un CV / une lettre de motivation",
+        "phonetic": "uhn say-VAY / ewn LET-ruh duh moh-tee-vah-SYOHN",
+        "en": "a résumé / a cover letter"
+      },
+      {
+        "fr": "l'expérience / les compétences",
+        "phonetic": "lex-pay-RYAHNS / lay kohm-pay-TAHNS",
+        "en": "experience / skills"
+      },
+      {
+        "fr": "un(e) collègue",
+        "phonetic": "uhn koh-LEG",
+        "en": "a colleague"
+      },
+      {
+        "fr": "une réunion",
+        "phonetic": "ewn ray-ew-NYOHN",
+        "en": "a meeting"
+      },
+      {
+        "fr": "le salaire",
+        "phonetic": "luh sah-LEHR",
+        "en": "the salary"
+      }
+    ],
+    "grammar": {
+      "point": "Parler de la durée : depuis, pendant, il y a",
+      "explain": "To say how long, French uses three time words. Depuis = since / for an action that is still going — and it takes the present tense: « je travaille ici depuis trois ans » (I've worked here for three years, and still do). Pendant = for a finished, measured duration: « j'ai vécu à Londres pendant deux ans ». Il y a = ago: « j'ai commencé il y a un mois ». Watch the trap: English uses the perfect (I have worked), but with depuis French stays in the present."
+    },
+    "examples": [
+      "Je travaille dans le marketing depuis cinq ans. (zhuh trah-vahy dahn luh mar-kuh-TING duh-pwee sank AHN)",
+      "J'ai quitté mon ancien poste il y a six mois. (zhay kee-TAY mohn ahn-syan POST eel yah see MWAH)"
+    ],
+    "practice": [
+      "Introduce yourself professionally: name, job, company, and how long with « depuis ».",
+      "Answer: « Parlez-moi de votre expérience. »",
+      "Give two of your strengths: « Je suis… et je sais… ».",
+      "Ask three questions you'd ask in an interview (hours, salary, team)."
+    ],
+    "tutorPrompt": "Role-play a French job interview at B1. You're the recruiter and I'm the candidate; ask me about my background, experience, strengths and weaknesses, and why I want the job — one question at a time, in French. Make me use « depuis », « pendant » and « il y a » correctly for durations. Help me when I'm stuck and finish with my five most useful corrections plus a few interview phrases to remember."
+  },
+  {
+    "id": "b1-08-admin-housing",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "Housing & French admin (la paperasse)",
+    "minutes": 30,
+    "goal": "Rent an apartment, compare your options, and survive French bureaucracy — la paperasse.",
+    "vocab": [
+      {
+        "fr": "un appartement / un logement",
+        "phonetic": "uhn ah-par-tuh-MAHN / uhn lohzh-MAHN",
+        "en": "a flat / housing"
+      },
+      {
+        "fr": "le loyer / les charges",
+        "phonetic": "luh lwah-YAY / lay SHARZH",
+        "en": "rent / utility charges"
+      },
+      {
+        "fr": "un bail / une caution",
+        "phonetic": "uhn BAHY / ewn koh-SYOHN",
+        "en": "a lease / a deposit"
+      },
+      {
+        "fr": "un dossier",
+        "phonetic": "uhn doh-SYAY",
+        "en": "a file / an application"
+      },
+      {
+        "fr": "un justificatif de domicile",
+        "phonetic": "uhn zhew-stee-fee-kah-TEEF duh doh-mee-SEEL",
+        "en": "proof of address"
+      },
+      {
+        "fr": "un rendez-vous",
+        "phonetic": "uhn rahn-day-VOO",
+        "en": "an appointment"
+      },
+      {
+        "fr": "la préfecture",
+        "phonetic": "lah pray-fek-TEWR",
+        "en": "the prefecture (admin office)"
+      },
+      {
+        "fr": "remplir un formulaire",
+        "phonetic": "rahm-PLEER uhn for-mew-LEHR",
+        "en": "to fill in a form"
+      }
+    ],
+    "grammar": {
+      "point": "Comparer : le comparatif et le superlatif",
+      "explain": "To compare, frame the adjective with plus / moins / aussi … que: « cet appartement est plus grand que l'autre », « il est moins cher que le premier », « aussi lumineux que… ». For the superlative (the most / least), add le/la/les: « l'appartement le plus lumineux », « le quartier le moins cher ». Two irregulars to know: bon → meilleur (better / best, an adjective) and bien → mieux (better, an adverb): « c'est le meilleur quartier » vs « ici on mange mieux »."
+    },
+    "examples": [
+      "Cet appartement est plus cher, mais il est mieux situé que l'autre. (set ah-par-tuh-mahn eh plew SHEHR, meh eel eh myuh see-tew-AY kuh LOH-truh)",
+      "Pour le dossier, il faut un justificatif de domicile et les trois derniers bulletins de salaire. (poor luh doh-syay, eel foh uhn zhew-stee-fee-kah-teef duh doh-mee-seel ay lay trwah dehr-nyay bewl-TAN duh sah-LEHR)"
+    ],
+    "practice": [
+      "Compare two flats using plus / moins / aussi… que.",
+      "Say which neighbourhood is « le plus » and « le moins » expensive.",
+      "Ask an estate agent three questions about a flat (rent, charges, deposit).",
+      "Explain politely that a document is missing from your dossier."
+    ],
+    "tutorPrompt": "Role-play French admin and apartment-hunting at B1. First be an estate agent showing me a flat — make me ask about the loyer, charges, caution and bail, and compare two options with the comparative and superlative. Then switch to a clerk at the préfecture handling my dossier. Keep it in French, help me when I'm stuck, and finish with the key housing/admin vocabulary plus five phrases to remember."
   }
 ]

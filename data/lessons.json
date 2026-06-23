@@ -1,0 +1,312 @@
+[
+  {
+    "id": "a1-00-sounds",
+    "level": "A1",
+    "module": "Sounds & spelling",
+    "title": "Pronunciation basics — French sounds",
+    "minutes": 20,
+    "goal": "Learn the handful of rules that make French spelling finally click, and read common words aloud with confidence.",
+    "phonics": [
+      { "sound": "Silent final consonants", "say": "usually don't say the last letter", "examples": ["Paris (pa-REE)", "trois (trwah)", "petit (puh-TEE)", "français (frahn-SEH)"] },
+      { "sound": "…but C, R, F, L are often said", "say": "remember the word « CaReFuL »", "examples": ["avec (a-VEK)", "bonjour (bohn-ZHOOR)", "neuf (nuhf)", "il (eel)"] },
+      { "sound": "Final -e and -ent are silent", "say": "they just soften the word", "examples": ["France (frahnss)", "elle parle (el PARL)", "ils parlent (eel PARL)"] },
+      { "sound": "é, -er, -ez = « ay »", "say": "like the « ay » in day", "examples": ["café (ka-FAY)", "parler (par-LAY)", "vous parlez (voo par-LAY)"] },
+      { "sound": "ou = « oo », u = tight « ew »", "say": "for u, round your lips and say « ee »", "examples": ["vous (voo)", "tu (tew)", "rue (rew)"] },
+      { "sound": "Nasal vowels: on, an, in, un", "say": "push the air through your nose; barely say the n", "examples": ["bonjour (bohn-ZHOOR)", "blanc (blahn)", "vin (van)", "un (uhn)"] },
+      { "sound": "ch = « sh », gn = « ny »", "say": "like « sh » in shoe and « ny » in canyon", "examples": ["chat (sha)", "chercher (sher-SHAY)", "Espagne (es-PAHN-yuh)"] },
+      { "sound": "h is silent, qu = « k »", "say": "never say the h; qu is a hard k", "examples": ["homme (om)", "heure (ur)", "quatre (KAT-ruh)"] },
+      { "sound": "The French « r »", "say": "a soft sound from the back of the throat, like a gentle gargle", "examples": ["rouge (roozh)", "merci (mehr-SEE)", "Paris (pa-REE)"] },
+      { "sound": "Liaison — link to the next vowel", "say": "a silent final consonant wakes up before a vowel", "examples": ["vous avez (voo-za-VAY)", "les amis (lay-za-MEE)", "un ami (uhn-na-MEE)"] }
+    ],
+    "vocab": [
+      { "fr": "Bonjour", "phonetic": "bohn-ZHOOR", "en": "Hello / good morning" },
+      { "fr": "Merci", "phonetic": "mehr-SEE", "en": "Thank you" },
+      { "fr": "S'il vous plaît", "phonetic": "seel voo PLEH", "en": "Please" },
+      { "fr": "Au revoir", "phonetic": "oh ruh-VWAHR", "en": "Goodbye" },
+      { "fr": "Oui / Non", "phonetic": "wee / nohn", "en": "Yes / No" },
+      { "fr": "Excusez-moi", "phonetic": "ek-skew-zay MWAH", "en": "Excuse me" },
+      { "fr": "Je voudrais", "phonetic": "zhuh voo-DREH", "en": "I would like" },
+      { "fr": "Beaucoup", "phonetic": "boh-KOO", "en": "A lot / very much" }
+    ],
+    "grammar": {
+      "point": "The golden rule: silent endings",
+      "explain": "French words are usually shorter than they look. The final consonant and a final -e are normally silent — petit sounds like « puh-TEE » and ils parlent sounds like « eel PARL ». The big exceptions are C, R, F, L (think « CaReFuL »), which you usually do pronounce: avec, bonjour, neuf, il."
+    },
+    "examples": [
+      "Bonjour ! Comment ça va ? (bohn-ZHOOR, koh-mahn sah VAH)",
+      "Je voudrais un café, s'il vous plaît. (zhuh voo-DREH uhn ka-FAY, seel voo PLEH)"
+    ],
+    "practice": [
+      "Read these aloud, then tap 🔊 to check the silent letters: Paris, petit, français, vous.",
+      "Practise the « ay » sound: café, parler, vous parlez, nez.",
+      "Say the u vs ou pairs out loud: tu / tout, rue / roue, vu / vous.",
+      "Try one nasal vowel slowly: bon… vin… pain… un."
+    ],
+    "tutorPrompt": "Be my French pronunciation coach at A1, in English with French examples. Give me eight short, common words to read aloud, one at a time. Focus on: silent final letters, the « ay » sound (é, -er, -ez), the u vs ou difference, and nasal vowels (on, an, in, un). After each word, give me an English-style respelling and a quick tip. Keep it light and encouraging, and end with the three sounds I should drill most."
+  },
+  {
+    "id": "a1-01-greetings",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Saying hello & introducing yourself",
+    "minutes": 15,
+    "goal": "Greet someone, say your name and where you're from, and ask the same back.",
+    "vocab": [
+      { "fr": "Bonjour", "phonetic": "bohn-ZHOOR", "en": "Hello / good morning" },
+      { "fr": "Bonsoir", "phonetic": "bohn-SWAHR", "en": "Good evening" },
+      { "fr": "Salut", "phonetic": "sah-LEW", "en": "Hi / bye (informal)" },
+      { "fr": "Enchanté(e)", "phonetic": "ahn-shahn-TAY", "en": "Nice to meet you" },
+      { "fr": "Je m'appelle…", "phonetic": "zhuh ma-PEL", "en": "My name is…" },
+      { "fr": "Comment vous appelez-vous ?", "phonetic": "koh-mahn voo-za-play VOO", "en": "What's your name? (formal)" },
+      { "fr": "Comment tu t'appelles ?", "phonetic": "koh-mahn tew ta-PEL", "en": "What's your name? (informal)" },
+      { "fr": "Je viens d'Inde", "phonetic": "zhuh vyan DAND", "en": "I'm from India" },
+      { "fr": "Et vous ? / Et toi ?", "phonetic": "ay VOO / ay TWAH", "en": "And you? (formal / informal)" },
+      { "fr": "Au revoir", "phonetic": "oh ruh-VWAHR", "en": "Goodbye" },
+      { "fr": "À bientôt", "phonetic": "ah byan-TOH", "en": "See you soon" }
+    ],
+    "grammar": {
+      "point": "S'appeler & venir de",
+      "explain": "To say your name: je m'appelle, tu t'appelles, il/elle s'appelle. To say where you're from, use venir de + place: je viens de Paris, but je viens d'Inde — « de » becomes « d' » before a vowel."
+    },
+    "examples": [
+      "— Bonjour ! Je m'appelle Ekta. Et vous ? — Enchanté, moi c'est Marc.",
+      "— Tu viens d'où ? — Je viens d'Inde, et toi ?"
+    ],
+    "practice": [
+      "Introduce yourself in three sentences: hello, your name, where you're from.",
+      "Greet someone formally (Bonjour, vous), then informally (Salut, tu).",
+      "Ask two people their name — once with « vous », once with « tu »."
+    ],
+    "tutorPrompt": "Let's role-play a first meeting, in French, at A1 level. Greet me and ask my name and where I'm from, one simple question at a time. Keep your French very simple. If I'm stuck, give me the phrase. After about six exchanges, list my three most useful corrections and three phrases to remember."
+  },
+  {
+    "id": "a1-02-politeness",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Polite words & survival phrases",
+    "minutes": 15,
+    "goal": "Be polite and cope when you don't understand — please, thank you, sorry, and asking someone to repeat.",
+    "vocab": [
+      { "fr": "S'il vous plaît / s'il te plaît", "phonetic": "seel voo PLEH / seel tuh PLEH", "en": "Please (formal / informal)" },
+      { "fr": "Merci (beaucoup)", "phonetic": "mehr-SEE (boh-KOO)", "en": "Thank you (very much)" },
+      { "fr": "De rien", "phonetic": "duh RYAN", "en": "You're welcome" },
+      { "fr": "Excusez-moi", "phonetic": "ek-skew-zay MWAH", "en": "Excuse me" },
+      { "fr": "Pardon", "phonetic": "par-DOHN", "en": "Sorry / excuse me" },
+      { "fr": "Oui / Non", "phonetic": "wee / nohn", "en": "Yes / No" },
+      { "fr": "Je ne comprends pas", "phonetic": "zhuh nuh kohn-prahn PAH", "en": "I don't understand" },
+      { "fr": "Vous pouvez répéter, s'il vous plaît ?", "phonetic": "voo poo-vay ray-pay-TAY, seel voo PLEH", "en": "Can you repeat, please?" },
+      { "fr": "Vous parlez anglais ?", "phonetic": "voo par-lay ahn-GLEH", "en": "Do you speak English?" },
+      { "fr": "Je ne sais pas", "phonetic": "zhuh nuh seh PAH", "en": "I don't know" },
+      { "fr": "D'accord", "phonetic": "da-KOR", "en": "OK / agreed" }
+    ],
+    "grammar": {
+      "point": "Negation: ne … pas",
+      "explain": "Wrap ne … pas around the verb: je comprends → je ne comprends pas; je sais → je ne sais pas. In everyday speech people often drop the « ne »: « je sais pas »."
+    },
+    "examples": [
+      "— Excusez-moi, vous pouvez répéter, s'il vous plaît ? — Bien sûr !",
+      "— Merci beaucoup ! — De rien."
+    ],
+    "practice": [
+      "Politely ask someone to repeat what they said.",
+      "Say you don't understand, then ask if they speak English.",
+      "Make three sentences negative using ne … pas."
+    ],
+    "tutorPrompt": "Be my French tutor at A1. Speak only simple French, and deliberately use a few phrases I might not know so I have to say « je ne comprends pas » or ask you to repeat. Coach me to stay polite (merci, s'il vous plaît, pardon). After six exchanges, summarise the polite phrases I should memorise."
+  },
+  {
+    "id": "a1-03-numbers",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Numbers & saying your age",
+    "minutes": 20,
+    "goal": "Count 0–69, and say or ask someone's age and phone number.",
+    "vocab": [
+      { "fr": "un, deux, trois, quatre, cinq", "phonetic": "uhn, duh, trwah, KAT-ruh, sank", "en": "1, 2, 3, 4, 5" },
+      { "fr": "six, sept, huit, neuf, dix", "phonetic": "seess, set, weet, nuhf, deess", "en": "6, 7, 8, 9, 10" },
+      { "fr": "vingt / trente / quarante", "phonetic": "van / trahnt / ka-RAHNT", "en": "20 / 30 / 40" },
+      { "fr": "cinquante / soixante", "phonetic": "san-KAHNT / swah-SAHNT", "en": "50 / 60" },
+      { "fr": "J'ai trente ans", "phonetic": "zhay trahnt AHN", "en": "I'm thirty (years old)" },
+      { "fr": "Quel âge avez-vous ?", "phonetic": "kel ahzh a-vay VOO", "en": "How old are you? (formal)" },
+      { "fr": "Quel âge as-tu ?", "phonetic": "kel ahzh ah TEW", "en": "How old are you? (informal)" },
+      { "fr": "un numéro de téléphone", "phonetic": "uhn new-may-ROH duh tay-lay-FON", "en": "a phone number" }
+    ],
+    "grammar": {
+      "point": "« Avoir » for age",
+      "explain": "French uses avoir (to have), not être: j'ai trente ans literally means « I have thirty years ». Forms: j'ai, tu as, il/elle a. Never drop the word « ans »."
+    },
+    "examples": [
+      "— Quel âge as-tu ? — J'ai vingt-cinq ans.",
+      "— Ton numéro ? — Zéro six, douze, trente-quatre…"
+    ],
+    "practice": [
+      "Say your age, then ask someone else theirs.",
+      "Count out loud from 1 to 20.",
+      "Read your phone number in French, in pairs of digits."
+    ],
+    "tutorPrompt": "A1 French tutor. Drill numbers 0–69 and age with me. Ask my age, give me small numbers to say in French, and ask me to read a couple of phone numbers. Correct me each time and keep it light. End with five numbers I should practise that I got wrong."
+  },
+  {
+    "id": "a1-04-cafe",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Ordering at a café",
+    "minutes": 20,
+    "goal": "Order a drink or snack politely and ask for the bill.",
+    "vocab": [
+      { "fr": "Je voudrais…", "phonetic": "zhuh voo-DREH", "en": "I would like…" },
+      { "fr": "un café / un café au lait", "phonetic": "uhn ka-FAY / uhn ka-fay oh LEH", "en": "an espresso / a coffee with milk" },
+      { "fr": "un thé / une eau", "phonetic": "uhn TAY / ewn OH", "en": "a tea / a water" },
+      { "fr": "un croissant", "phonetic": "uhn krwah-SAHN", "en": "a croissant" },
+      { "fr": "L'addition, s'il vous plaît", "phonetic": "la-dee-SYOHN, seel voo PLEH", "en": "The bill, please" },
+      { "fr": "Vous avez… ?", "phonetic": "voo-za-VAY", "en": "Do you have…?" },
+      { "fr": "C'est combien ?", "phonetic": "seh kohn-BYAN", "en": "How much is it?" },
+      { "fr": "Sur place ou à emporter ?", "phonetic": "sewr plahss oo ah ahn-por-TAY", "en": "Eat in or takeaway?" },
+      { "fr": "Et avec ceci ?", "phonetic": "ay a-vek suh-SEE", "en": "Anything else?" }
+    ],
+    "grammar": {
+      "point": "« Je voudrais » + un / une",
+      "explain": "« Je voudrais » (I would like) is the polite way to order — softer than « je veux » (I want). Choose un (masculine) or une (feminine): un café, une eau, un croissant, une bière."
+    },
+    "examples": [
+      "— Bonjour, je voudrais un café et un croissant, s'il vous plaît. — Sur place ? — Oui.",
+      "— L'addition, s'il vous plaît. — Voilà, ça fait quatre euros."
+    ],
+    "practice": [
+      "Order a coffee and a croissant politely.",
+      "Ask how much something costs, then ask for the bill.",
+      "Order something « à emporter » (takeaway)."
+    ],
+    "tutorPrompt": "Role-play in French at A1: you're a waiter in a Paris café and I'm the customer. Greet me, take my order, ask « sur place ou à emporter ? », and bring the bill when I ask. Stay in French and offer the phrase if I'm stuck. At the end, give me three corrections and three café words to remember."
+  },
+  {
+    "id": "a1-05-shopping",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Shopping, prices & money",
+    "minutes": 20,
+    "goal": "Buy something at a shop or market and understand the price.",
+    "vocab": [
+      { "fr": "soixante-dix / quatre-vingts / quatre-vingt-dix", "phonetic": "swah-sahnt-DEESS / kat-ruh-VAN / kat-ruh-van-DEESS", "en": "70 / 80 / 90" },
+      { "fr": "cent", "phonetic": "sahn", "en": "100" },
+      { "fr": "Combien ça coûte ?", "phonetic": "kohn-byan sah KOOT", "en": "How much does it cost?" },
+      { "fr": "Ça fait combien ?", "phonetic": "sah feh kohn-BYAN", "en": "How much is that (total)?" },
+      { "fr": "Je cherche…", "phonetic": "zhuh SHERSH", "en": "I'm looking for…" },
+      { "fr": "un kilo de…", "phonetic": "uhn kee-LOH duh", "en": "a kilo of…" },
+      { "fr": "C'est trop cher", "phonetic": "seh troh SHEHR", "en": "It's too expensive" },
+      { "fr": "en espèces / par carte", "phonetic": "ahn es-PESS / par KART", "en": "in cash / by card" },
+      { "fr": "Je prends ça", "phonetic": "zhuh prahn SAH", "en": "I'll take this" }
+    ],
+    "grammar": {
+      "point": "Du / de la / des (some)",
+      "explain": "To say « some »: du (masc.) — du pain; de la (fem.) — de la confiture; des (plural) — des pommes. But after a quantity you use just « de »: un kilo de pommes, une bouteille d'eau."
+    },
+    "examples": [
+      "— Je voudrais un kilo de pommes, s'il vous plaît. — Et avec ceci ? — C'est tout. Ça fait combien ?",
+      "— Ça fait quatre euros cinquante. — Je paie par carte."
+    ],
+    "practice": [
+      "Ask the price of two different items.",
+      "Buy a kilo of apples and some bread.",
+      "Say something is too expensive, then say you'll pay by card."
+    ],
+    "tutorPrompt": "Role-play at A1: you're a market vendor in France and I'm shopping for fruit and bread. Tell me prices (in euros and cents), ask « et avec ceci ? », and total it up. Stay in French and help me with the numbers. At the end, quiz me on five of the prices you said."
+  },
+  {
+    "id": "a1-06-directions",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Asking for directions",
+    "minutes": 20,
+    "goal": "Ask where something is and understand simple directions.",
+    "vocab": [
+      { "fr": "Où est… ?", "phonetic": "oo EH", "en": "Where is…?" },
+      { "fr": "Où sont les toilettes ?", "phonetic": "oo sohn lay twah-LET", "en": "Where are the toilets?" },
+      { "fr": "Pardon, je cherche…", "phonetic": "par-DOHN, zhuh SHERSH", "en": "Excuse me, I'm looking for…" },
+      { "fr": "la gare / la rue", "phonetic": "lah GAR / lah REW", "en": "the station / the street" },
+      { "fr": "à droite / à gauche", "phonetic": "ah DRWAHT / ah GOHSH", "en": "on the right / on the left" },
+      { "fr": "tout droit", "phonetic": "too DRWAH", "en": "straight ahead" },
+      { "fr": "à côté de / en face de", "phonetic": "ah koh-TAY duh / ahn FAHSS duh", "en": "next to / opposite" },
+      { "fr": "loin / près", "phonetic": "lwan / preh", "en": "far / near" },
+      { "fr": "C'est loin ?", "phonetic": "seh LWAN", "en": "Is it far?" }
+    ],
+    "grammar": {
+      "point": "« Où est » vs « Où sont »",
+      "explain": "Use Où est le/la… for one thing, Où sont les… for plural. Careful: à droite (on the right) is not the same as tout droit (straight ahead)!"
+    },
+    "examples": [
+      "— Pardon, où est la gare, s'il vous plaît ? — Tout droit, puis à gauche. C'est à côté de la poste.",
+      "— C'est loin ? — Non, c'est tout près."
+    ],
+    "practice": [
+      "Ask where the station is, politely.",
+      "Ask where the toilets are and whether it's far.",
+      "Give simple directions to someone: straight ahead, then right."
+    ],
+    "tutorPrompt": "A1 French role-play: I'm a tourist lost in a French town and you're a friendly local. I'll ask for directions (la gare, les toilettes, un restaurant) and you answer with simple directions (à droite, à gauche, tout droit, en face de). Keep it slow and simple. At the end, recap the direction words I should remember."
+  },
+  {
+    "id": "a1-07-time-days",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Time, days & making plans",
+    "minutes": 20,
+    "goal": "Tell the time, name the days, and arrange to meet someone.",
+    "vocab": [
+      { "fr": "Quelle heure est-il ?", "phonetic": "kel ur eh-TEEL", "en": "What time is it?" },
+      { "fr": "Il est huit heures", "phonetic": "eel eh weet UR", "en": "It's eight o'clock" },
+      { "fr": "et demie / et quart / moins le quart", "phonetic": "ay duh-MEE / ay KAR / mwan luh KAR", "en": "half past / quarter past / quarter to" },
+      { "fr": "lundi, mardi, mercredi, jeudi", "phonetic": "luhn-DEE, mar-DEE, mehr-kruh-DEE, zhuh-DEE", "en": "Mon, Tue, Wed, Thu" },
+      { "fr": "vendredi, samedi, dimanche", "phonetic": "vahn-druh-DEE, sam-DEE, dee-MAHNSH", "en": "Fri, Sat, Sun" },
+      { "fr": "aujourd'hui / demain", "phonetic": "oh-zhoor-DWEE / duh-MAN", "en": "today / tomorrow" },
+      { "fr": "le matin / l'après-midi / le soir", "phonetic": "luh ma-TAN / la-preh-mee-DEE / luh SWAHR", "en": "morning / afternoon / evening" },
+      { "fr": "On se voit à… ?", "phonetic": "ohn suh vwah ah", "en": "Shall we meet at…?" }
+    ],
+    "grammar": {
+      "point": "Telling the time with « il est »",
+      "explain": "Il est + number + heure(s): il est une heure, il est deux heures. Add et demie (:30), et quart (:15), moins le quart (:45). Days are not capitalised in French, and « le lundi » means « on Mondays »."
+    },
+    "examples": [
+      "— Quelle heure est-il ? — Il est sept heures et demie.",
+      "— On se voit demain à midi ? — D'accord, à demain !"
+    ],
+    "practice": [
+      "Say three times in French: 9:00, 10:30, 6:45.",
+      "Say what day it is today and what day it is tomorrow.",
+      "Invite someone to meet tomorrow morning."
+    ],
+    "tutorPrompt": "A1 French tutor. Practise time and days with me. Ask me « quelle heure est-il ? » with different clock times, ask what day it is, and try to arrange a time to meet. Correct my answers gently. End by listing the time phrases I should review."
+  },
+  {
+    "id": "a1-08-family-routine",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Family & your daily routine",
+    "minutes": 25,
+    "goal": "Describe your family and talk about your everyday routine in the present tense.",
+    "vocab": [
+      { "fr": "ma famille", "phonetic": "mah fa-MEEY", "en": "my family" },
+      { "fr": "mon mari / ma femme", "phonetic": "mohn ma-REE / mah FAM", "en": "my husband / my wife" },
+      { "fr": "mon père / ma mère", "phonetic": "mohn PEHR / mah MEHR", "en": "my father / my mother" },
+      { "fr": "mon frère / ma sœur", "phonetic": "mohn FREHR / mah SUR", "en": "my brother / my sister" },
+      { "fr": "J'habite à Paris", "phonetic": "zha-BEET ah pa-REE", "en": "I live in Paris" },
+      { "fr": "je travaille / je parle", "phonetic": "zhuh tra-VYE / zhuh PARL", "en": "I work / I speak" },
+      { "fr": "je me lève", "phonetic": "zhuh muh LEV", "en": "I get up" },
+      { "fr": "tous les jours / souvent", "phonetic": "too lay ZHOOR / soo-VAHN", "en": "every day / often" }
+    ],
+    "grammar": {
+      "point": "Present tense of -er verbs",
+      "explain": "Most French verbs end in -er. Drop -er and add: je -e, tu -es, il/elle -e, nous -ons, vous -ez, ils/elles -ent. So parler → je parle, tu parles, il parle, nous parlons, vous parlez, ils parlent."
+    },
+    "examples": [
+      "J'habite à Paris avec mon mari. Je parle anglais et un peu français.",
+      "Le matin, je me lève à sept heures et je travaille à la maison."
+    ],
+    "practice": [
+      "Introduce two members of your family.",
+      "Conjugate « parler » and « habiter » (je, tu, il, nous, vous, ils).",
+      "Describe your morning in three sentences using -er verbs."
+    ],
+    "tutorPrompt": "A1 French conversation. Ask me about my family and my daily routine, one simple question at a time (where I live, who I live with, what I do in a day). Stay in easy French and gently correct my -er verb conjugations. After about eight questions, give me feedback and five words to remember."
+  }
+]

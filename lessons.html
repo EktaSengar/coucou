@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lessons — Coucou</title>
+<meta name="description" content="Free, structured French lessons from Coucou — start with the A1 'Survival basics' module and work your way toward DELF B2.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="French lessons — Coucou">
+<meta property="og:description" content="Structured French lessons, beginner to DELF B2. Start with A1 survival basics.">
+<meta property="og:url" content="https://ektasengar.github.io/coucou/lessons.html">
+<meta property="og:image" content="https://ektasengar.github.io/coucou/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ektasengar.github.io/coucou/assets/og.png">
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('catalog', () => ({
+    lessons: [], done: {}, loading: true, error: false,
+    async init() {
+      try {
+        const res = await fetch('./data/lessons.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('http ' + res.status);
+        this.lessons = await res.json();
+      } catch (e) { this.error = true; this.loading = false; return; }
+      this.lessons.forEach(l => { this.done[l.id] = this.read(l.id); });
+      this.loading = false;
+    },
+    read(id) { try { return localStorage.getItem('lf-lesson-' + id) === '1'; } catch (e) { return false; } },
+    // Group lessons by level + module, preserving file order.
+    get groups() {
+      const out = [], map = {};
+      for (const l of this.lessons) {
+        const key = l.level + '|' + l.module;
+        if (!map[key]) { map[key] = { level: l.level, module: l.module, items: [] }; out.push(map[key]); }
+        map[key].items.push(l);
+      }
+      return out;
+    },
+    doneCount(items) { return items.filter(i => this.done[i.id]).length; },
+    get total() { return this.lessons.length; },
+    get totalDone() { return this.lessons.filter(l => this.done[l.id]).length; },
+  }));
+});
+</script>
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+<!-- NAV -->
+<nav x-data="{ open: false }" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="flex items-center justify-between h-16">
+      <a href="./" class="flex items-center gap-2 font-extrabold text-slate-900 tracking-tight"><span>🇫🇷</span> coucou <span class="font-medium text-blue-600 hidden sm:inline">· learn French</span></a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="./#how" class="text-sm text-slate-600 hover:text-slate-900">How it works</a>
+        <a href="./lessons.html" class="text-sm font-medium text-blue-600">Lessons</a>
+        <a href="./#prompts" class="text-sm text-slate-600 hover:text-slate-900">Prompts</a>
+        <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
+        <a href="./#tracker" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors">Get the tracker</a>
+      </div>
+      <button @click="open = !open" class="md:hidden p-2 text-slate-600" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div x-show="open" x-cloak class="md:hidden pb-4 space-y-1">
+      <a href="./#how" class="block py-2 text-sm text-slate-600">How it works</a>
+      <a href="./lessons.html" class="block py-2 text-sm font-medium text-blue-600">Lessons</a>
+      <a href="./#prompts" class="block py-2 text-sm text-slate-600">Prompts</a>
+      <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
+      <a href="./#tracker" class="block py-2 text-sm font-medium text-slate-900">Get the tracker →</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-5xl mx-auto px-5 py-12 md:py-16" x-data="catalog()">
+
+  <!-- header -->
+  <div class="max-w-2xl">
+    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-5">📚 Free · self-paced · practise each one with your AI tutor</span>
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">Lessons</h1>
+    <p class="mt-4 text-lg text-slate-600">Short, practical lessons that build from your first « bonjour » toward DELF&nbsp;B2. Each one gives you the words, one grammar point, examples, things to practise — and a one-click tutor to try it out loud.</p>
+  </div>
+
+  <!-- overall progress -->
+  <div x-show="!loading && !error" x-cloak class="mt-8 flex items-center gap-3 text-sm text-slate-600">
+    <div class="h-2 w-40 rounded-full bg-slate-100 overflow-hidden">
+      <div class="h-full bg-blue-600 transition-all duration-500" :style="`width:${total ? (totalDone/total*100) : 0}%`"></div>
+    </div>
+    <span><strong class="text-slate-900" x-text="totalDone"></strong> / <span x-text="total"></span> lessons done</span>
+  </div>
+
+  <!-- loading / error -->
+  <p x-show="loading" class="mt-12 text-slate-500">Loading lessons…</p>
+  <div x-show="error" x-cloak class="mt-12 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-sm text-slate-600">
+    Couldn't load the lessons. If you opened this file directly, run it through the local server (<code class="bg-slate-200 px-1.5 py-0.5 rounded">node serve.js</code>) or view it on the live site.
+  </div>
+
+  <!-- modules -->
+  <template x-for="g in groups" :key="g.level + g.module">
+    <section class="mt-12">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-bold text-slate-900">
+          <span class="inline-flex items-center justify-center px-2 py-0.5 mr-2 rounded-md bg-blue-600 text-white text-xs font-bold align-middle" x-text="g.level"></span>
+          <span x-text="g.module"></span>
+        </h2>
+        <span class="text-xs text-slate-400" x-text="doneCount(g.items) + ' / ' + g.items.length + ' done'"></span>
+      </div>
+      <div class="mt-5 grid sm:grid-cols-2 gap-4">
+        <template x-for="(l, i) in g.items" :key="l.id">
+          <a :href="'./lesson.html?id=' + l.id"
+             class="group block rounded-xl border border-slate-200 p-5 hover:border-blue-400 hover:shadow-sm transition-all">
+            <div class="flex items-start justify-between gap-3">
+              <div class="flex items-center gap-2 text-xs font-medium text-slate-400">
+                <span x-text="'Lesson ' + (i + 1)"></span>
+                <span x-show="l.minutes">· <span x-text="l.minutes"></span> min</span>
+              </div>
+              <span x-show="done[l.id]" x-cloak class="inline-flex items-center gap-1 text-xs font-medium text-green-600">✓ done</span>
+            </div>
+            <h3 class="mt-2 font-semibold text-slate-900 group-hover:text-blue-700" x-text="l.title"></h3>
+            <p class="mt-1 text-sm text-slate-600" x-text="l.goal"></p>
+            <span class="mt-3 inline-block text-sm font-medium text-blue-600">Start lesson →</span>
+          </a>
+        </template>
+      </div>
+    </section>
+  </template>
+
+  <!-- next up -->
+  <div x-show="!loading && !error" x-cloak class="mt-14 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-sm text-slate-600">
+    More levels are on the way (A2 → B1 → B2). Want to go faster right now? Open the <a href="./tutor.html" class="text-blue-600 hover:underline font-medium">24/7 tutor</a> or log today's practice on the <a href="./#tracker" class="text-blue-600 hover:underline font-medium">tracker</a>.
+  </div>
+
+</main>
+
+<footer class="border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-5 py-10 text-center">
+    <p class="text-lg font-bold text-slate-900">Un pas à la fois. 🇫🇷</p>
+    <p class="mt-2 text-sm text-slate-500"><strong>Coucou</strong> · a free, open playbook · built with AI · 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>

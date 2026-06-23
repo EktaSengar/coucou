@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson — Coucou</title>
+<meta name="description" content="A French lesson from Coucou: key words, one grammar point, examples, practice, and a one-click AI tutor.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('lessonView', () => ({
+    all: [], lesson: null, idx: -1, loading: true, error: false, done: false, copied: false,
+    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: null,
+    async init() {
+      this.initVoice();
+      const id = new URLSearchParams(location.search).get('id');
+      try {
+        const res = await fetch('./data/lessons.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('http ' + res.status);
+        this.all = await res.json();
+      } catch (e) { this.error = true; this.loading = false; return; }
+      this.idx = this.all.findIndex(l => l.id === id);
+      this.lesson = this.idx >= 0 ? this.all[this.idx] : null;
+      if (this.lesson) {
+        document.title = this.lesson.title + ' — Coucou';
+        try { this.done = localStorage.getItem('lf-lesson-' + this.lesson.id) === '1'; } catch (e) {}
+      }
+      this.loading = false;
+    },
+    toggleDone() {
+      this.done = !this.done;
+      try { localStorage.setItem('lf-lesson-' + this.lesson.id, this.done ? '1' : '0'); } catch (e) {}
+    },
+    get prev() { return this.idx > 0 ? this.all[this.idx - 1] : null; },
+    get next() { return (this.idx >= 0 && this.idx < this.all.length - 1) ? this.all[this.idx + 1] : null; },
+    get claudeUrl() { return 'https://claude.ai/new?q=' + encodeURIComponent(this.lesson.tutorPrompt); },
+    get chatgptUrl() { return 'https://chatgpt.com/?q=' + encodeURIComponent(this.lesson.tutorPrompt); },
+    copy() {
+      const done = () => { this.copied = true; setTimeout(() => this.copied = false, 1500); };
+      const t = this.lesson.tutorPrompt;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(t).then(done).catch(done);
+      } else { done(); }
+    },
+    initVoice() {
+      if (!this.canSpeak) return;
+      const pick = () => {
+        const vs = speechSynthesis.getVoices();
+        this.frVoice = vs.find(v => /fr[-_]?fr/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null;
+      };
+      pick();
+      speechSynthesis.addEventListener('voiceschanged', pick);
+    },
+    // Read French aloud with the device's French voice. Strips English-only
+    // parentheticals and turns "/" into a pause so lists read naturally.
+    speak(text, key) {
+      if (!this.canSpeak || !text) return;
+      const clean = String(text).replace(/\([^)]*\)/g, '').replace(/\s*\/\s*/g, ', ').replace(/\s+/g, ' ').trim();
+      try {
+        speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(clean);
+        u.lang = 'fr-FR';
+        if (this.frVoice) u.voice = this.frVoice;
+        u.rate = 0.9;
+        this.speaking = key;
+        u.onend = u.onerror = () => { if (this.speaking === key) this.speaking = null; };
+        speechSynthesis.speak(u);
+      } catch (e) { this.speaking = null; }
+    },
+  }));
+});
+</script>
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+<!-- NAV -->
+<nav x-data="{ open: false }" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="flex items-center justify-between h-16">
+      <a href="./" class="flex items-center gap-2 font-extrabold text-slate-900 tracking-tight"><span>🇫🇷</span> coucou <span class="font-medium text-blue-600 hidden sm:inline">· learn French</span></a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="./#how" class="text-sm text-slate-600 hover:text-slate-900">How it works</a>
+        <a href="./lessons.html" class="text-sm font-medium text-blue-600">Lessons</a>
+        <a href="./#prompts" class="text-sm text-slate-600 hover:text-slate-900">Prompts</a>
+        <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
+        <a href="./#tracker" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors">Get the tracker</a>
+      </div>
+      <button @click="open = !open" class="md:hidden p-2 text-slate-600" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div x-show="open" x-cloak class="md:hidden pb-4 space-y-1">
+      <a href="./#how" class="block py-2 text-sm text-slate-600">How it works</a>
+      <a href="./lessons.html" class="block py-2 text-sm font-medium text-blue-600">Lessons</a>
+      <a href="./#prompts" class="block py-2 text-sm text-slate-600">Prompts</a>
+      <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
+      <a href="./#tracker" class="block py-2 text-sm font-medium text-slate-900">Get the tracker →</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-3xl mx-auto px-5 py-10 md:py-14" x-data="lessonView()">
+
+  <p x-show="loading" class="text-slate-500">Loading…</p>
+
+  <!-- not found / error -->
+  <div x-show="!loading && !lesson" x-cloak class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-8 text-center">
+    <p class="text-slate-700 font-medium">That lesson couldn't be found.</p>
+    <p class="mt-1 text-sm text-slate-500">It may have moved, or the file needs to be served by the local server / live site.</p>
+    <a href="./lessons.html" class="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline">← Back to all lessons</a>
+  </div>
+
+  <!-- lesson -->
+  <article x-show="!loading && lesson" x-cloak>
+
+    <!-- breadcrumb + meta -->
+    <div class="flex items-center gap-2 text-sm text-slate-500">
+      <a href="./lessons.html" class="hover:text-slate-900">Lessons</a>
+      <span>/</span>
+      <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-blue-600 text-white text-xs font-bold" x-text="lesson?.level"></span>
+      <span x-text="lesson?.module"></span>
+    </div>
+
+    <h1 class="mt-4 text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900" x-text="lesson?.title"></h1>
+    <p class="mt-3 text-lg text-slate-600"><span class="font-semibold text-slate-900">Goal:</span> <span x-text="lesson?.goal"></span></p>
+    <p class="mt-2 text-sm text-slate-400" x-show="lesson?.minutes">⏱ about <span x-text="lesson?.minutes"></span> minutes</p>
+
+    <!-- phonics (pronunciation rules) -->
+    <section class="mt-10" x-show="lesson.phonics && lesson.phonics.length" x-cloak>
+      <div class="flex items-center justify-between gap-3">
+        <h2 class="text-sm font-semibold text-slate-900 uppercase tracking-wide">Sound rules</h2>
+        <span x-show="canSpeak" class="text-xs text-slate-400">🔊 tap any word</span>
+      </div>
+      <div class="mt-3 space-y-3">
+        <template x-for="(r, i) in lesson.phonics" :key="i">
+          <div class="rounded-xl border border-slate-200 p-4">
+            <div class="sm:flex sm:items-baseline sm:justify-between gap-3">
+              <h3 class="font-semibold text-slate-900" x-text="r.sound"></h3>
+              <span class="text-sm text-slate-500" x-text="r.say"></span>
+            </div>
+            <div class="mt-2.5 flex flex-wrap gap-2">
+              <template x-for="(ex, j) in r.examples" :key="j">
+                <button @click="speak(ex, 'p' + i + '-' + j)" type="button"
+                        :class="speaking === ('p' + i + '-' + j) ? 'border-blue-400 text-blue-700 bg-blue-50' : 'border-slate-200 text-slate-700 hover:border-blue-300'"
+                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-sm transition-colors">
+                  <span x-show="canSpeak" aria-hidden="true">🔊</span><span x-text="ex"></span>
+                </button>
+              </template>
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- vocab -->
+    <section class="mt-10">
+      <div class="flex items-center justify-between gap-3">
+        <h2 class="text-sm font-semibold text-slate-900 uppercase tracking-wide">Key words</h2>
+        <span x-show="canSpeak" x-cloak class="text-xs text-slate-400">🔊 tap to hear</span>
+      </div>
+      <div class="mt-3 overflow-hidden rounded-xl border border-slate-200">
+        <table class="w-full text-sm">
+          <tbody>
+            <template x-for="(v, i) in lesson.vocab" :key="i">
+              <tr :class="i % 2 ? 'bg-slate-50' : 'bg-white'" class="border-b border-slate-100 last:border-0">
+                <td class="px-4 py-2.5 align-top">
+                  <span class="inline-flex items-start gap-2">
+                    <button x-show="canSpeak" @click="speak(v.fr, 'v' + i)" type="button"
+                            :class="speaking === ('v' + i) ? 'text-blue-600' : 'text-slate-400 hover:text-blue-600'"
+                            class="shrink-0 leading-6 transition-colors" :aria-label="'Listen: ' + v.fr">🔊</button>
+                    <span>
+                      <span class="font-medium text-slate-900" x-text="v.fr"></span>
+                      <span x-show="v.phonetic" x-cloak class="block text-xs italic text-slate-400" x-text="v.phonetic"></span>
+                    </span>
+                  </span>
+                </td>
+                <td class="px-4 py-2.5 text-slate-600 align-top" x-text="v.en"></td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- grammar -->
+    <section class="mt-8" x-show="lesson.grammar">
+      <h2 class="text-sm font-semibold text-slate-900 uppercase tracking-wide">One grammar point</h2>
+      <div class="mt-3 rounded-xl border border-blue-200 bg-blue-50 p-5">
+        <h3 class="font-semibold text-slate-900" x-text="lesson.grammar.point"></h3>
+        <p class="mt-1.5 text-sm text-slate-700 leading-relaxed" x-text="lesson.grammar.explain"></p>
+      </div>
+    </section>
+
+    <!-- examples -->
+    <section class="mt-8" x-show="lesson.examples && lesson.examples.length">
+      <h2 class="text-sm font-semibold text-slate-900 uppercase tracking-wide">Examples</h2>
+      <ul class="mt-3 space-y-2">
+        <template x-for="(ex, i) in lesson.examples" :key="i">
+          <li class="flex items-start gap-3 rounded-lg border border-slate-200 px-4 py-3">
+            <button x-show="canSpeak" @click="speak(ex, 'e' + i)" type="button"
+                    :class="speaking === ('e' + i) ? 'text-blue-600' : 'text-slate-400 hover:text-blue-600'"
+                    class="shrink-0 mt-0.5 transition-colors" aria-label="Listen to example">🔊</button>
+            <span class="text-slate-800 italic" x-text="ex"></span>
+          </li>
+        </template>
+      </ul>
+    </section>
+
+    <!-- practice -->
+    <section class="mt-8" x-show="lesson.practice && lesson.practice.length">
+      <h2 class="text-sm font-semibold text-slate-900 uppercase tracking-wide">Now you try</h2>
+      <ul class="mt-3 space-y-2">
+        <template x-for="(p, i) in lesson.practice" :key="i">
+          <li class="flex gap-3 text-slate-700">
+            <span class="flex items-center justify-center shrink-0 w-6 h-6 rounded-full bg-slate-900 text-white text-xs font-bold" x-text="i + 1"></span>
+            <span x-text="p"></span>
+          </li>
+        </template>
+      </ul>
+    </section>
+
+    <!-- tutor CTA -->
+    <section class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6" x-show="lesson.tutorPrompt">
+      <h2 class="font-semibold text-slate-900">Practise this out loud 🎙️</h2>
+      <p class="mt-1 text-sm text-slate-600">Open an AI tutor primed for exactly this lesson — it'll keep you in French and correct you as you go.</p>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a :href="claudeUrl" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors">▶ Practise in Claude</a>
+        <a :href="chatgptUrl" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-white transition-colors">▶ Practise in ChatGPT</a>
+        <button @click="copy()" class="inline-flex items-center gap-2 px-5 py-3 border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-white transition-colors" x-text="copied ? 'Copied ✓' : 'Copy prompt'"></button>
+      </div>
+    </section>
+
+    <!-- mark done -->
+    <div class="mt-8 flex items-center justify-between rounded-xl border border-slate-200 px-5 py-4">
+      <label class="flex items-center gap-3 cursor-pointer select-none">
+        <input type="checkbox" :checked="done" @change="toggleDone()" class="w-5 h-5 accent-blue-600">
+        <span class="text-sm font-medium text-slate-900">Mark this lesson complete</span>
+      </label>
+      <span x-show="done" x-cloak class="text-sm font-medium text-green-600">✓ Nice work</span>
+    </div>
+
+    <!-- prev / next -->
+    <nav class="mt-8 flex items-stretch gap-3">
+      <a x-show="prev" x-cloak :href="'./lesson.html?id=' + (prev?.id)" class="flex-1 rounded-xl border border-slate-200 p-4 hover:border-blue-400 transition-colors">
+        <span class="text-xs text-slate-400">← Previous</span>
+        <span class="block mt-1 text-sm font-medium text-slate-900" x-text="prev?.title"></span>
+      </a>
+      <a x-show="next" x-cloak :href="'./lesson.html?id=' + (next?.id)" class="flex-1 rounded-xl border border-slate-200 p-4 text-right hover:border-blue-400 transition-colors">
+        <span class="text-xs text-slate-400">Next →</span>
+        <span class="block mt-1 text-sm font-medium text-slate-900" x-text="next?.title"></span>
+      </a>
+    </nav>
+
+    <p class="mt-8 text-center"><a href="./lessons.html" class="text-sm font-medium text-blue-600 hover:underline">← All lessons</a></p>
+
+  </article>
+</main>
+
+<footer class="border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-5 py-10 text-center">
+    <p class="text-lg font-bold text-slate-900">Continue comme ça ! 🇫🇷</p>
+    <p class="mt-2 text-sm text-slate-500"><strong>Coucou</strong> · a free, open playbook · built with AI · 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>

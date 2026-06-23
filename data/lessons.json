@@ -308,5 +308,261 @@
       "Describe your morning in three sentences using -er verbs."
     ],
     "tutorPrompt": "A1 French conversation. Ask me about my family and my daily routine, one simple question at a time (where I live, who I live with, what I do in a day). Stay in easy French and gently correct my -er verb conjugations. After about eight questions, give me feedback and five words to remember."
+  },
+  {
+    "id": "a2-01-past-avoir",
+    "level": "A2",
+    "module": "Everyday life",
+    "title": "The past tense — passé composé with avoir",
+    "minutes": 25,
+    "goal": "Talk about what you did, using the passé composé with avoir.",
+    "vocab": [
+      { "fr": "hier", "phonetic": "ee-EHR", "en": "yesterday" },
+      { "fr": "J'ai mangé", "phonetic": "zhay mahn-ZHAY", "en": "I ate / I have eaten" },
+      { "fr": "J'ai fait", "phonetic": "zhay FEH", "en": "I did / I made" },
+      { "fr": "J'ai vu", "phonetic": "zhay VEW", "en": "I saw" },
+      { "fr": "J'ai parlé", "phonetic": "zhay par-LAY", "en": "I spoke" },
+      { "fr": "la semaine dernière", "phonetic": "lah suh-men dehr-NYEHR", "en": "last week" },
+      { "fr": "Qu'est-ce que tu as fait ?", "phonetic": "kess-kuh tew ah FEH", "en": "What did you do?" },
+      { "fr": "déjà / pas encore", "phonetic": "day-ZHA / pa-zahn-KOR", "en": "already / not yet" }
+    ],
+    "grammar": {
+      "point": "Passé composé with avoir",
+      "explain": "For most past actions: avoir (present) + a past participle. -er verbs → -é (parler → parlé), -ir verbs → -i (finir → fini), and learn the key irregulars: fait (faire), vu (voir), eu (avoir), été (être). So « j'ai mangé » means both I ate and I have eaten."
+    },
+    "examples": [
+      "Hier, j'ai mangé au restaurant et j'ai vu un film. (ee-EHR, zhay mahn-ZHAY oh res-toh-RAHN ay zhay vew uhn FEELM)",
+      "— Qu'est-ce que tu as fait ce week-end ? — J'ai travaillé. (kess-kuh tew ah feh suh week-END ? zhay tra-va-YAY)"
+    ],
+    "practice": [
+      "Say three things you did yesterday using « j'ai… ».",
+      "Form the passé composé of: parler, manger, regarder, finir.",
+      "Ask « Qu'est-ce que tu as fait hier ? » and then answer it."
+    ],
+    "tutorPrompt": "Be my A2 French tutor focused on the passé composé with avoir. Ask me what I did yesterday and last weekend, one question at a time, in simple French. Gently correct my past participles and my use of avoir. After about eight exchanges, list the participles I should memorise."
+  },
+  {
+    "id": "a2-02-past-etre",
+    "level": "A2",
+    "module": "Everyday life",
+    "title": "Past tense with être & getting around",
+    "minutes": 25,
+    "goal": "Say where you went and came from, using the passé composé with être (with agreement).",
+    "vocab": [
+      { "fr": "Je suis allé(e)", "phonetic": "zhuh swee a-LAY", "en": "I went" },
+      { "fr": "Je suis venu(e)", "phonetic": "zhuh swee vuh-NEW", "en": "I came" },
+      { "fr": "Je suis parti(e)", "phonetic": "zhuh swee par-TEE", "en": "I left" },
+      { "fr": "Je suis resté(e)", "phonetic": "zhuh swee res-TAY", "en": "I stayed" },
+      { "fr": "Je suis arrivé(e)", "phonetic": "zhuh swee a-ree-VAY", "en": "I arrived" },
+      { "fr": "né(e)", "phonetic": "NAY", "en": "born" },
+      { "fr": "en train / en bus / en voiture", "phonetic": "ahn TRAN / ahn BEWSS / ahn vwah-TEWR", "en": "by train / by bus / by car" },
+      { "fr": "le week-end dernier", "phonetic": "luh week-end dehr-NYAY", "en": "last weekend" }
+    ],
+    "grammar": {
+      "point": "Passé composé with être",
+      "explain": "A small set of movement verbs use être, not avoir: aller, venir, partir, arriver, rester, entrer, sortir, monter, descendre, naître, mourir. With être the participle agrees with the subject: « je suis allé » (m.) / « je suis allée » (f.); « nous sommes allés »."
+    },
+    "examples": [
+      "Le week-end dernier, je suis allé(e) à Lyon en train. (luh week-end dehr-NYAY, zhuh swee a-LAY ah lee-OHN ahn TRAN)",
+      "Elle est née à Paris et elle est restée en France. (el eh nay ah pa-REE ay el eh res-TAY ahn FRAHNSS)"
+    ],
+    "practice": [
+      "Say where you went last weekend with « je suis allé(e) à… ».",
+      "Add the right ending (m./f.) to: allé, venu, parti for « je ».",
+      "Say how you travelled: en train, en bus, en voiture, à pied."
+    ],
+    "tutorPrompt": "Be my A2 French tutor on the passé composé with être. Ask me where I went recently and how I got there, one question at a time in simple French. Watch my être/avoir choice and the agreement (-e for feminine). After eight exchanges, recap the « être » verbs and the agreement rule."
+  },
+  {
+    "id": "a2-03-futur-proche",
+    "level": "A2",
+    "module": "Everyday life",
+    "title": "Making plans — the near future",
+    "minutes": 20,
+    "goal": "Say what you are going to do, using the near future (aller + infinitive).",
+    "vocab": [
+      { "fr": "Je vais + (infinitif)", "phonetic": "zhuh veh", "en": "I'm going to…" },
+      { "fr": "demain / ce soir", "phonetic": "duh-MAN / suh SWAHR", "en": "tomorrow / this evening" },
+      { "fr": "la semaine prochaine", "phonetic": "lah suh-men pro-SHEN", "en": "next week" },
+      { "fr": "Je vais voir", "phonetic": "zhuh veh VWAHR", "en": "I'm going to see" },
+      { "fr": "On va manger", "phonetic": "ohn va mahn-ZHAY", "en": "We're going to eat" },
+      { "fr": "Qu'est-ce que tu vas faire ?", "phonetic": "kess-kuh tew va FEHR", "en": "What are you going to do?" },
+      { "fr": "J'ai l'intention de…", "phonetic": "zhay lan-tahn-syohn duh", "en": "I plan to…" },
+      { "fr": "bientôt", "phonetic": "byan-TOH", "en": "soon" }
+    ],
+    "grammar": {
+      "point": "Le futur proche: aller + infinitive",
+      "explain": "For the near future, use aller (present) + an infinitive — just like English « going to »: je vais, tu vas, il/elle va, nous allons, vous allez, ils vont, then + manger / voir / faire. « Demain, je vais travailler » = Tomorrow I'm going to work."
+    },
+    "examples": [
+      "Ce soir, on va voir un film. (suh swahr, ohn va vwahr uhn FEELM)",
+      "— Qu'est-ce que tu vas faire demain ? — Je vais visiter le musée. (kess-kuh tew va fehr duh-MAN ? zhuh veh vee-zee-TAY luh mew-ZAY)"
+    ],
+    "practice": [
+      "Say three things you're going to do tomorrow with « je vais… ».",
+      "Conjugate « aller »: je, tu, il, nous, vous, ils.",
+      "Ask « Qu'est-ce que tu vas faire ce week-end ? » and answer it."
+    ],
+    "tutorPrompt": "Be my A2 French tutor on the futur proche (aller + infinitive). Ask me about my plans for tomorrow, this weekend and next week, one simple question at a time. Correct my use of aller + infinitive. After eight exchanges, list useful time expressions (demain, ce soir, la semaine prochaine…)."
+  },
+  {
+    "id": "a2-04-descriptions",
+    "level": "A2",
+    "module": "Everyday life",
+    "title": "Describing people & places",
+    "minutes": 25,
+    "goal": "Describe people, places and things using adjectives that agree.",
+    "vocab": [
+      { "fr": "grand(e) / petit(e)", "phonetic": "grahn(d) / puh-TEE(T)", "en": "big, tall / small" },
+      { "fr": "beau / belle", "phonetic": "boh / bel", "en": "handsome / beautiful" },
+      { "fr": "jeune / vieux (vieille)", "phonetic": "zhuhn / vyuh (vyay)", "en": "young / old" },
+      { "fr": "gentil(le)", "phonetic": "zhahn-TEE(Y)", "en": "kind, nice" },
+      { "fr": "sympa", "phonetic": "san-PA", "en": "friendly (informal)" },
+      { "fr": "joli(e)", "phonetic": "zho-LEE", "en": "pretty" },
+      { "fr": "Il est… / Elle est…", "phonetic": "eel eh / el eh", "en": "He is… / She is…" },
+      { "fr": "plus… que / moins… que", "phonetic": "plew… kuh / mwan… kuh", "en": "more… than / less… than" }
+    ],
+    "grammar": {
+      "point": "Adjective agreement & position",
+      "explain": "Adjectives agree with the noun: add -e for feminine (grand → grande) and -s for plural (grands). Most go after the noun (une maison blanche), but a few short common ones go before (un grand homme, une belle ville). Comparisons: plus / moins / aussi + adjective + que."
+    },
+    "examples": [
+      "Ma sœur est grande et très gentille. (mah sur eh grahnd ay treh zhahn-TEEY)",
+      "Paris est plus grand que Lyon. (pa-REE eh plew grahn kuh lee-OHN)"
+    ],
+    "practice": [
+      "Describe a family member with two adjectives (mind the agreement).",
+      "Make these feminine: grand, petit, gentil, beau.",
+      "Compare two cities using « plus… que »."
+    ],
+    "tutorPrompt": "Be my A2 French tutor on descriptions and adjectives. Ask me to describe my family, my city and my home, one question at a time in simple French. Correct my adjective agreement (masculine/feminine) and position. After eight exchanges, recap the adjectives I used and their feminine forms."
+  },
+  {
+    "id": "a2-05-restaurant",
+    "level": "A2",
+    "module": "Everyday life",
+    "title": "At the restaurant",
+    "minutes": 25,
+    "goal": "Order a full meal, ask about dishes, and handle the bill.",
+    "vocab": [
+      { "fr": "une table pour deux", "phonetic": "ewn tahbl poor DUH", "en": "a table for two" },
+      { "fr": "la carte / le menu", "phonetic": "lah KART / luh muh-NEW", "en": "the menu / the set menu" },
+      { "fr": "une entrée / un plat / un dessert", "phonetic": "ewn ahn-TRAY / uhn PLAH / uhn deh-SEHR", "en": "starter / main / dessert" },
+      { "fr": "Je vais prendre…", "phonetic": "zhuh veh PRAHN-druh", "en": "I'll have…" },
+      { "fr": "Qu'est-ce que vous recommandez ?", "phonetic": "kess-kuh voo ruh-koh-mahn-DAY", "en": "What do you recommend?" },
+      { "fr": "saignant / à point / bien cuit", "phonetic": "seh-NYAHN / ah PWAN / byan KWEE", "en": "rare / medium / well done" },
+      { "fr": "une carafe d'eau", "phonetic": "ewn ka-RAF DOH", "en": "a jug of tap water" },
+      { "fr": "C'était délicieux", "phonetic": "say-teh day-lee-SYUH", "en": "It was delicious" }
+    ],
+    "grammar": {
+      "point": "« Je vais prendre » & the partitive",
+      "explain": "To order, use « je vais prendre… » (I'll have…) or « je voudrais… ». Use the partitive for food and drink: du poisson, de la salade, de l'eau, des frites. In the negative it becomes « de »: « je ne prends pas de viande »."
+    },
+    "examples": [
+      "Bonsoir, une table pour deux, s'il vous plaît. (bohn-SWAHR, ewn tahbl poor DUH, seel voo PLEH)",
+      "Je vais prendre le steak, à point, et une carafe d'eau. (zhuh veh prahn-druh luh STEK, ah PWAN, ay ewn ka-RAF DOH)"
+    ],
+    "practice": [
+      "Ask for a table for two and the menu.",
+      "Order a starter, a main and a dessert with « je vais prendre ».",
+      "Ask the waiter what they recommend, then ask for the bill."
+    ],
+    "tutorPrompt": "Role-play at A2: you're a waiter at a French restaurant and I'm a customer. Seat me, take a full order (starter, main, dessert, drink), ask how I want my meat cooked, and bring the bill. Stay in French and help me when I'm stuck. At the end, give me five restaurant phrases to remember."
+  },
+  {
+    "id": "a2-06-clothes",
+    "level": "A2",
+    "module": "Everyday life",
+    "title": "Shopping for clothes",
+    "minutes": 25,
+    "goal": "Buy clothes — sizes, colours, trying things on, and prices.",
+    "vocab": [
+      { "fr": "les vêtements", "phonetic": "lay vet-MAHN", "en": "clothes" },
+      { "fr": "un pantalon / une robe / une chemise", "phonetic": "uhn pahn-ta-LOHN / ewn ROB / ewn shuh-MEEZ", "en": "trousers / a dress / a shirt" },
+      { "fr": "une veste / des chaussures", "phonetic": "ewn VEST / day shoh-SEWR", "en": "a jacket / shoes" },
+      { "fr": "la taille / la pointure", "phonetic": "lah TYE / lah pwan-TEWR", "en": "size (clothes) / size (shoes)" },
+      { "fr": "Je peux l'essayer ?", "phonetic": "zhuh puh leh-say-YAY", "en": "Can I try it on?" },
+      { "fr": "C'est trop grand / petit", "phonetic": "seh troh grahn / puh-TEE", "en": "It's too big / small" },
+      { "fr": "une cabine d'essayage", "phonetic": "ewn ka-been deh-say-YAZH", "en": "a fitting room" },
+      { "fr": "Quelle couleur ?", "phonetic": "kel koo-LUR", "en": "Which colour?" }
+    ],
+    "grammar": {
+      "point": "« Ce / cette / ces » (this / these)",
+      "explain": "Demonstratives point at things: ce (masc.) — ce pantalon; cette (fem.) — cette robe; ces (plural) — ces chaussures; and cet before a masculine vowel — cet imperméable. Object pronouns avoid repetition: « Je le prends » (I'll take it), « Je les essaie » (I'll try them)."
+    },
+    "examples": [
+      "Bonjour, je cherche une veste. Je peux l'essayer ? (… zhuh shersh ewn VEST. zhuh puh leh-say-YAY ?)",
+      "Cette robe est trop petite, vous avez la taille au-dessus ? (set rob eh troh puh-TEET, voo-za-vay lah tye oh-duh-SEW ?)"
+    ],
+    "practice": [
+      "Ask to try on a jacket and say your size.",
+      "Say something is too big and ask for the next size up.",
+      "Use ce / cette / ces with: pantalon, robe, chaussures."
+    ],
+    "tutorPrompt": "Role-play at A2: you're a shop assistant in a French clothing store and I'm a customer. Help me find clothes, ask my size and colour, send me to the fitting room, and tell me prices. Stay in French. At the end, list the clothes and shopping words I should remember."
+  },
+  {
+    "id": "a2-07-health",
+    "level": "A2",
+    "module": "Everyday life",
+    "title": "Health & at the doctor",
+    "minutes": 25,
+    "goal": "Say how you feel, describe symptoms, and cope at the doctor or pharmacy.",
+    "vocab": [
+      { "fr": "Je ne me sens pas bien", "phonetic": "zhuh nuh muh sahn pa BYAN", "en": "I don't feel well" },
+      { "fr": "J'ai mal à la tête", "phonetic": "zhay mal ah lah TET", "en": "I have a headache" },
+      { "fr": "J'ai mal au ventre / à la gorge", "phonetic": "zhay mal oh VAHN-truh / ah lah GORZH", "en": "stomachache / sore throat" },
+      { "fr": "J'ai de la fièvre", "phonetic": "zhay duh lah FYEV-ruh", "en": "I have a fever" },
+      { "fr": "Je suis fatigué(e)", "phonetic": "zhuh swee fa-tee-GAY", "en": "I'm tired" },
+      { "fr": "un médecin / une pharmacie", "phonetic": "uhn mayd-SAN / ewn far-ma-SEE", "en": "a doctor / a pharmacy" },
+      { "fr": "un médicament / une ordonnance", "phonetic": "uhn may-dee-ka-MAHN / ewn or-do-NAHNSS", "en": "a medicine / a prescription" },
+      { "fr": "depuis deux jours", "phonetic": "duh-pwee duh ZHOOR", "en": "for two days" }
+    ],
+    "grammar": {
+      "point": "« avoir mal à » & au / à la / aux",
+      "explain": "To say what hurts: avoir mal à + body part, and à combines with the article: à + le = au (j'ai mal au dos), à + la stays à la (à la tête), à + les = aux (j'ai mal aux dents). Use « depuis » for how long: « depuis deux jours »."
+    },
+    "examples": [
+      "Bonjour docteur, j'ai mal à la gorge depuis deux jours. (… zhay mal ah lah gorzh duh-pwee duh ZHOOR)",
+      "Je suis fatigué(e) et j'ai de la fièvre. (zhuh swee fa-tee-GAY ay zhay duh lah FYEV-ruh)"
+    ],
+    "practice": [
+      "Say three things that hurt using « j'ai mal à… » (mind au / à la / aux).",
+      "Tell a doctor how you feel and for how long (depuis…).",
+      "Ask for a medicine at the pharmacy."
+    ],
+    "tutorPrompt": "Role-play at A2: you're a French doctor or pharmacist and I'm describing how I feel. Ask about my symptoms and how long I've had them, one question at a time in simple French. Correct my « avoir mal à » and au / à la / aux. At the end, recap the health words I should remember."
+  },
+  {
+    "id": "a2-08-weather-leisure",
+    "level": "A2",
+    "module": "Everyday life",
+    "title": "Weather, seasons & free time",
+    "minutes": 20,
+    "goal": "Talk about the weather, the seasons, and what you like doing in your free time.",
+    "vocab": [
+      { "fr": "Quel temps fait-il ?", "phonetic": "kel tahn feh-TEEL", "en": "What's the weather like?" },
+      { "fr": "Il fait beau / mauvais", "phonetic": "eel feh BOH / moh-VEH", "en": "It's nice / bad weather" },
+      { "fr": "Il fait chaud / froid", "phonetic": "eel feh SHOH / FRWAH", "en": "It's hot / cold" },
+      { "fr": "Il pleut / Il neige", "phonetic": "eel PLUH / eel NEZH", "en": "It's raining / snowing" },
+      { "fr": "au printemps / en été / en hiver", "phonetic": "oh pran-TAHN / ahn ay-TAY / ahn ee-VEHR", "en": "in spring / summer / winter" },
+      { "fr": "J'aime / Je n'aime pas", "phonetic": "zhem / zhuh nem PAH", "en": "I like / I don't like" },
+      { "fr": "faire du sport / de la natation", "phonetic": "fehr dew SPOR / duh lah na-ta-SYOHN", "en": "to do sport / swimming" },
+      { "fr": "mon temps libre", "phonetic": "mohn tahn LEE-bruh", "en": "my free time" }
+    ],
+    "grammar": {
+      "point": "Weather with « il fait » & activities with « faire de »",
+      "explain": "Weather usually uses « il fait » + adjective (il fait beau, il fait froid) or a verb (il pleut, il neige). For activities, « faire de » + the partitive: je fais du vélo, de la danse, de l'escalade, des randonnées."
+    },
+    "examples": [
+      "En hiver, il fait froid et il neige souvent. (ahn ee-VEHR, eel feh frwah ay eel nezh soo-VAHN)",
+      "Pendant mon temps libre, j'aime faire du sport. (pahn-dahn mohn tahn LEE-bruh, zhem fehr dew SPOR)"
+    ],
+    "practice": [
+      "Describe today's weather in two sentences.",
+      "Say what the weather is like in each season where you live.",
+      "Say two things you like doing in your free time with « faire de »."
+    ],
+    "tutorPrompt": "Be my A2 French tutor on weather and free time. Ask me about today's weather, the seasons, and my hobbies, one simple question at a time. Correct my « il fait… » and « faire du / de la… ». After eight exchanges, list the weather and hobby words I should remember."
   }
 ]

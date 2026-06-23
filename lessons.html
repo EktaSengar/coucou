@@ -63,7 +63,7 @@ document.addEventListener('alpine:init', () => {
       <div class="hidden md:flex items-center gap-6">
         <a href="./#how" class="text-sm text-slate-600 hover:text-slate-900">How it works</a>
         <a href="./lessons.html" class="text-sm font-medium text-blue-600">Lessons</a>
-        <a href="./#prompts" class="text-sm text-slate-600 hover:text-slate-900">Prompts</a>
+        <a href="./practice.html" class="text-sm text-slate-600 hover:text-slate-900">Practice</a>
         <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
         <a href="./#tracker" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors">Get the tracker</a>
       </div>
@@ -74,7 +74,7 @@ document.addEventListener('alpine:init', () => {
     <div x-show="open" x-cloak class="md:hidden pb-4 space-y-1">
       <a href="./#how" class="block py-2 text-sm text-slate-600">How it works</a>
       <a href="./lessons.html" class="block py-2 text-sm font-medium text-blue-600">Lessons</a>
-      <a href="./#prompts" class="block py-2 text-sm text-slate-600">Prompts</a>
+      <a href="./practice.html" class="block py-2 text-sm text-slate-600">Practice</a>
       <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
       <a href="./#tracker" class="block py-2 text-sm font-medium text-slate-900">Get the tracker →</a>
     </div>
@@ -97,6 +97,15 @@ document.addEventListener('alpine:init', () => {
     </div>
     <span><strong class="text-slate-900" x-text="totalDone"></strong> / <span x-text="total"></span> lessons done</span>
   </div>
+
+  <!-- practice banner -->
+  <a href="./practice.html" class="mt-6 flex items-center justify-between gap-4 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4 hover:border-blue-400 transition-colors">
+    <div>
+      <p class="font-semibold text-slate-900">🎴 Review with flashcards &amp; quiz</p>
+      <p class="text-sm text-slate-600">Drill the vocabulary from any lesson — with audio.</p>
+    </div>
+    <span class="shrink-0 text-sm font-medium text-blue-600">Practise →</span>
+  </a>
 
   <!-- loading / error -->
   <p x-show="loading" class="mt-12 text-slate-500">Loading lessons…</p>

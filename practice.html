@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice — flashcards & quiz — Coucou</title>
+<meta name="description" content="Review your French with flashcards and a multiple-choice quiz — built from the Coucou lessons, with audio.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('practice', () => ({
+    all: [], loading: true, error: false,
+    levels: [], level: '',
+    scope: 'all', mode: 'flashcards', started: false,
+    pool: [], deck: [], i: 0, flipped: false, dir: 'fr-en',
+    options: [], answered: false, chosen: null, correct: 0, missed: [], finished: false,
+    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: null,
+
+    async init() {
+      this.initVoice();
+      try {
+        const res = await fetch('./data/lessons.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('http ' + res.status);
+        this.all = await res.json();
+      } catch (e) { this.error = true; this.loading = false; return; }
+      this.levels = [...new Set(this.all.map(l => l.level))];
+      this.level = this.levels[0] || '';
+      const q = new URLSearchParams(location.search);
+      const qmode = q.get('mode'); if (qmode === 'quiz' || qmode === 'flashcards') this.mode = qmode;
+      const qscope = q.get('scope');
+      if (qscope === 'all') { this.scope = 'all'; }
+      else if (qscope) { const l = this.all.find(x => x.id === qscope); if (l) { this.level = l.level; this.scope = qscope; } }
+      this.loading = false;
+      if (q.get('go') === '1') this.start();
+    },
+
+    get lessonsForLevel() { return this.all.filter(l => l.level === this.level); },
+    vocabOf(lesson) { return (lesson.vocab || []).map(v => ({ fr: v.fr, phonetic: v.phonetic || '', en: v.en, lessonTitle: lesson.title })); },
+    get levelPool() { return this.lessonsForLevel.flatMap(l => this.vocabOf(l)); },
+    buildPool() {
+      if (this.scope === 'all') return this.levelPool;
+      const l = this.all.find(x => x.id === this.scope);
+      return l ? this.vocabOf(l) : [];
+    },
+    shuffle(a) { a = a.slice(); for (let k = a.length - 1; k > 0; k--) { const j = Math.floor(Math.random() * (k + 1)); [a[k], a[j]] = [a[j], a[k]]; } return a; },
+
+    start() {
+      this.pool = this.buildPool();
+      if (!this.pool.length) return;
+      this.deck = this.shuffle(this.pool);
+      this.i = 0; this.flipped = false; this.correct = 0; this.missed = []; this.finished = false;
+      this.started = true;
+      if (this.mode === 'quiz') this.makeQuestion();
+    },
+    leave() { this.started = false; this.finished = false; if (this.canSpeak) speechSynthesis.cancel(); },
+
+    // flashcards
+    get card() { return this.deck[this.i] || null; },
+    flip() { this.flipped = !this.flipped; },
+    nextCard() { if (this.i < this.deck.length - 1) { this.i++; this.flipped = false; } },
+    prevCard() { if (this.i > 0) { this.i--; this.flipped = false; } },
+    reshuffle() { this.deck = this.shuffle(this.pool); this.i = 0; this.flipped = false; },
+    toggleDir() { this.dir = this.dir === 'fr-en' ? 'en-fr' : 'fr-en'; this.flipped = false; },
+
+    // quiz
+    makeQuestion() {
+      this.answered = false; this.chosen = null;
+      const cur = this.deck[this.i];
+      const others = this.shuffle(this.pool.filter(x => x.en !== cur.en)).slice(0, 3).map(x => x.en);
+      this.options = this.shuffle([cur.en, ...others]);
+    },
+    choose(opt) {
+      if (this.answered) return;
+      this.answered = true; this.chosen = opt;
+      if (opt === this.deck[this.i].en) this.correct++; else this.missed.push(this.deck[this.i]);
+    },
+    nextQuestion() { if (this.i < this.deck.length - 1) { this.i++; this.makeQuestion(); } else { this.finished = true; } },
+    reviewMissed() { if (!this.missed.length) return; this.deck = this.shuffle(this.missed); this.i = 0; this.correct = 0; this.missed = []; this.finished = false; this.makeQuestion(); },
+    optClass(opt) {
+      if (!this.answered) return 'border-slate-200 hover:border-blue-400 text-slate-800';
+      const correct = this.deck[this.i].en;
+      if (opt === correct) return 'border-green-500 bg-green-50 text-green-800';
+      if (opt === this.chosen) return 'border-red-400 bg-red-50 text-red-700';
+      return 'border-slate-200 text-slate-400';
+    },
+    get pct() { return this.deck.length ? Math.round((this.correct / this.deck.length) * 100) : 0; },
+    get verdict() {
+      const p = this.pct;
+      if (p >= 90) return 'Excellent ! 🎉';
+      if (p >= 70) return 'Bien joué — solid work.';
+      if (p >= 50) return 'Getting there — review and retry.';
+      return 'Early days — give it another go.';
+    },
+
+    // speech
+    initVoice() {
+      if (!this.canSpeak) return;
+      const pick = () => { const vs = speechSynthesis.getVoices(); this.frVoice = vs.find(v => /fr[-_]?fr/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null; };
+      pick(); speechSynthesis.addEventListener('voiceschanged', pick);
+    },
+    speak(text, key) {
+      if (!this.canSpeak || !text) return;
+      const clean = String(text).replace(/\([^)]*\)/g, '').replace(/\s*\/\s*/g, ', ').replace(/\s+/g, ' ').trim();
+      try {
+        speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(clean);
+        u.lang = 'fr-FR'; if (this.frVoice) u.voice = this.frVoice; u.rate = 0.9;
+        this.speaking = key; u.onend = u.onerror = () => { if (this.speaking === key) this.speaking = null; };
+        speechSynthesis.speak(u);
+      } catch (e) { this.speaking = null; }
+    },
+  }));
+});
+</script>
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+<!-- NAV -->
+<nav x-data="{ open: false }" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="flex items-center justify-between h-16">
+      <a href="./" class="flex items-center gap-2 font-extrabold text-slate-900 tracking-tight"><span>🇫🇷</span> coucou <span class="font-medium text-blue-600 hidden sm:inline">· learn French</span></a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="./lessons.html" class="text-sm text-slate-600 hover:text-slate-900">Lessons</a>
+        <a href="./practice.html" class="text-sm font-medium text-blue-600">Practice</a>
+        <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
+        <a href="./#tracker" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors">Get the tracker</a>
+      </div>
+      <button @click="open = !open" class="md:hidden p-2 text-slate-600" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div x-show="open" x-cloak class="md:hidden pb-4 space-y-1">
+      <a href="./lessons.html" class="block py-2 text-sm text-slate-600">Lessons</a>
+      <a href="./practice.html" class="block py-2 text-sm font-medium text-blue-600">Practice</a>
+      <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
+      <a href="./#tracker" class="block py-2 text-sm font-medium text-slate-900">Get the tracker →</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-2xl mx-auto px-5 py-10 md:py-14" x-data="practice()">
+
+  <div class="text-center">
+    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-4">🎴 Flashcards &amp; quiz</span>
+    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">Practice your words</h1>
+    <p class="mt-3 text-slate-600">Review the vocabulary from your lessons — flip flashcards or test yourself, with audio.</p>
+  </div>
+
+  <p x-show="loading" class="mt-10 text-center text-slate-500">Loading…</p>
+  <div x-show="error" x-cloak class="mt-10 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-sm text-slate-600 text-center">
+    Couldn't load the words. View this on the live site or via the local server.
+  </div>
+
+  <!-- SETUP -->
+  <div x-show="!loading && !error && !started" x-cloak class="mt-10 rounded-2xl border border-slate-200 shadow-sm bg-white p-6 md:p-8">
+    <div x-show="levels.length > 1">
+      <h2 class="text-sm font-semibold text-slate-900 uppercase tracking-wide">Level</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <template x-for="lv in levels" :key="lv">
+          <button @click="level = lv; scope = 'all'" x-text="lv"
+            :class="level === lv ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
+            class="px-4 py-2 rounded-full text-sm font-bold transition-colors"></button>
+        </template>
+      </div>
+    </div>
+
+    <div :class="levels.length > 1 ? 'mt-7' : ''">
+      <h2 class="text-sm font-semibold text-slate-900 uppercase tracking-wide">What to practise</h2>
+      <div class="mt-3 grid sm:grid-cols-2 gap-2">
+        <button @click="scope = 'all'"
+          :class="scope === 'all' ? 'border-blue-600 ring-1 ring-blue-600 bg-blue-50' : 'border-slate-200 hover:border-slate-300'"
+          class="text-left px-4 py-3 rounded-xl border transition-colors">
+          <span class="font-semibold text-slate-900">All <span x-text="level"></span> words</span>
+          <span class="block text-xs text-slate-500" x-text="levelPool.length + ' words'"></span>
+        </button>
+        <template x-for="l in lessonsForLevel" :key="l.id">
+          <button @click="scope = l.id"
+            :class="scope === l.id ? 'border-blue-600 ring-1 ring-blue-600 bg-blue-50' : 'border-slate-200 hover:border-slate-300'"
+            class="text-left px-4 py-3 rounded-xl border transition-colors">
+            <span class="font-semibold text-slate-900 text-sm" x-text="l.title"></span>
+            <span class="block text-xs text-slate-500" x-text="(l.vocab ? l.vocab.length : 0) + ' words'"></span>
+          </button>
+        </template>
+      </div>
+    </div>
+
+    <div class="mt-7">
+      <h2 class="text-sm font-semibold text-slate-900 uppercase tracking-wide">Mode</h2>
+      <div class="mt-3 grid grid-cols-2 gap-3">
+        <button @click="mode = 'flashcards'"
+          :class="mode === 'flashcards' ? 'border-blue-600 ring-1 ring-blue-600 bg-blue-50' : 'border-slate-200 hover:border-slate-300'"
+          class="p-4 rounded-xl border text-left transition-colors">
+          <div class="text-xl">🎴</div><div class="mt-1 font-semibold text-slate-900">Flashcards</div>
+          <div class="text-xs text-slate-500">Flip to reveal · self-paced</div>
+        </button>
+        <button @click="mode = 'quiz'"
+          :class="mode === 'quiz' ? 'border-blue-600 ring-1 ring-blue-600 bg-blue-50' : 'border-slate-200 hover:border-slate-300'"
+          class="p-4 rounded-xl border text-left transition-colors">
+          <div class="text-xl">📝</div><div class="mt-1 font-semibold text-slate-900">Quiz</div>
+          <div class="text-xs text-slate-500">Multiple choice · scored</div>
+        </button>
+      </div>
+    </div>
+
+    <button @click="start()" class="mt-7 w-full inline-flex items-center justify-center px-6 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors">▶ Start</button>
+  </div>
+
+  <!-- FLASHCARDS -->
+  <div x-show="started && mode === 'flashcards' && card" x-cloak class="mt-10">
+    <div class="flex items-center justify-between text-sm text-slate-500">
+      <button @click="leave()" class="hover:text-slate-900">← Change</button>
+      <span x-text="(i + 1) + ' / ' + deck.length"></span>
+      <button @click="toggleDir()" class="hover:text-slate-900" x-text="dir === 'fr-en' ? 'FR → EN' : 'EN → FR'"></button>
+    </div>
+
+    <div @click="flip()" class="mt-4 min-h-60 cursor-pointer select-none rounded-2xl border border-slate-200 shadow-sm bg-white p-8 flex flex-col items-center justify-center text-center">
+      <!-- prompt -->
+      <div x-show="dir === 'fr-en'">
+        <div class="text-3xl font-bold text-slate-900" x-text="card.fr"></div>
+        <div x-show="card.phonetic" class="mt-1 text-sm italic text-slate-400" x-text="card.phonetic"></div>
+        <button x-show="canSpeak" @click.stop="speak(card.fr, 'c')" class="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-sm text-slate-600 hover:border-blue-300">🔊 listen</button>
+      </div>
+      <div x-show="dir === 'en-fr'" class="text-2xl font-semibold text-slate-900" x-text="card.en"></div>
+
+      <!-- answer -->
+      <div x-show="flipped" x-cloak class="mt-6 pt-6 border-t border-slate-200 w-full">
+        <div x-show="dir === 'fr-en'" class="text-2xl font-semibold text-slate-900" x-text="card.en"></div>
+        <div x-show="dir === 'en-fr'">
+          <div class="text-3xl font-bold text-slate-900" x-text="card.fr"></div>
+          <div x-show="card.phonetic" class="mt-1 text-sm italic text-slate-400" x-text="card.phonetic"></div>
+          <button x-show="canSpeak" @click.stop="speak(card.fr, 'c')" class="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-sm text-slate-600 hover:border-blue-300">🔊 listen</button>
+        </div>
+      </div>
+
+      <div x-show="!flipped" class="mt-4 text-xs text-slate-400">tap to reveal</div>
+    </div>
+
+    <p class="mt-2 text-center text-xs text-slate-400" x-text="'from: ' + card.lessonTitle"></p>
+
+    <div class="mt-5 flex items-center justify-between gap-3">
+      <button @click="prevCard()" :disabled="i === 0" :class="i === 0 ? 'opacity-40' : 'hover:bg-slate-50'" class="px-5 py-2.5 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg">← Prev</button>
+      <button @click="reshuffle()" class="px-4 py-2.5 text-sm font-medium text-slate-500 hover:text-slate-900">⤮ Shuffle</button>
+      <button @click="nextCard()" :disabled="i === deck.length - 1" :class="i === deck.length - 1 ? 'opacity-40' : 'hover:bg-slate-800'" class="px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg">Next →</button>
+    </div>
+  </div>
+
+  <!-- QUIZ -->
+  <div x-show="started && mode === 'quiz' && !finished && card" x-cloak class="mt-10">
+    <div class="flex items-center justify-between text-sm text-slate-500">
+      <button @click="leave()" class="hover:text-slate-900">← Change</button>
+      <span x-text="'Question ' + (i + 1) + ' / ' + deck.length"></span>
+      <span>Score: <strong class="text-slate-900" x-text="correct"></strong></span>
+    </div>
+    <div class="mt-3 h-2 w-full rounded-full bg-slate-100 overflow-hidden">
+      <div class="h-full bg-blue-600 transition-all duration-300" :style="`width:${(i / deck.length) * 100}%`"></div>
+    </div>
+
+    <div class="mt-6 rounded-2xl border border-slate-200 shadow-sm bg-white p-6 text-center">
+      <p class="text-xs text-slate-400 uppercase tracking-wide">What does this mean?</p>
+      <div class="mt-2 text-3xl font-bold text-slate-900" x-text="card.fr"></div>
+      <div x-show="card.phonetic" class="mt-1 text-sm italic text-slate-400" x-text="card.phonetic"></div>
+      <button x-show="canSpeak" @click="speak(card.fr, 'q')" class="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-sm text-slate-600 hover:border-blue-300">🔊 listen</button>
+    </div>
+
+    <div class="mt-4 grid gap-2.5">
+      <template x-for="(opt, oi) in options" :key="oi">
+        <button @click="choose(opt)" :disabled="answered" :class="optClass(opt)" class="text-left px-4 py-3 rounded-xl border font-medium transition-colors" x-text="opt"></button>
+      </template>
+    </div>
+
+    <div x-show="answered" x-cloak class="mt-4 flex items-center justify-between gap-3">
+      <p class="text-sm" :class="chosen === card.en ? 'text-green-700' : 'text-red-700'"
+         x-text="chosen === card.en ? '✓ Correct!' : ('✗ Answer: ' + card.en)"></p>
+      <button @click="nextQuestion()" class="px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800"
+              x-text="i < deck.length - 1 ? 'Next →' : 'See results →'"></button>
+    </div>
+  </div>
+
+  <!-- QUIZ RESULTS -->
+  <div x-show="finished" x-cloak class="mt-10 rounded-2xl border border-slate-200 shadow-sm bg-white p-6 md:p-8 text-center">
+    <p class="text-sm text-slate-500 uppercase tracking-wide">Your score</p>
+    <div class="mt-2 text-5xl font-extrabold text-slate-900"><span x-text="correct"></span> / <span x-text="deck.length"></span></div>
+    <p class="mt-1 text-blue-600 font-medium" x-text="pct + '% · ' + verdict"></p>
+
+    <div x-show="missed.length" x-cloak class="mt-6 text-left">
+      <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wide">Review these</h3>
+      <ul class="mt-3 space-y-2">
+        <template x-for="(m, mi) in missed" :key="mi">
+          <li class="flex items-center justify-between gap-3 rounded-lg border border-slate-200 px-4 py-2.5">
+            <span><span class="font-medium text-slate-900" x-text="m.fr"></span> <span class="text-slate-500">— <span x-text="m.en"></span></span></span>
+            <button x-show="canSpeak" @click="speak(m.fr, 'm' + mi)" class="shrink-0 text-slate-400 hover:text-blue-600" aria-label="Listen">🔊</button>
+          </li>
+        </template>
+      </ul>
+    </div>
+
+    <div class="mt-7 flex flex-wrap justify-center gap-3">
+      <button @click="start()" class="px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800">↻ Try again</button>
+      <button x-show="missed.length" @click="reviewMissed()" class="px-5 py-2.5 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50">Practise the misses</button>
+      <button @click="leave()" class="px-5 py-2.5 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50">Change set</button>
+    </div>
+  </div>
+
+  <p class="mt-10 text-center"><a href="./lessons.html" class="text-sm font-medium text-blue-600 hover:underline">← Back to lessons</a></p>
+
+</main>
+
+<footer class="border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-5 py-10 text-center">
+    <p class="text-lg font-bold text-slate-900">C'est en forgeant qu'on devient forgeron. 🇫🇷</p>
+    <p class="mt-2 text-sm text-slate-500"><strong>Coucou</strong> · a free, open playbook · built with AI · 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>

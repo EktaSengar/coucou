@@ -1,0 +1,86 @@
+[
+  {
+    "id": "a1-politesse",
+    "level": "A1",
+    "focus": "Politeness & greetings",
+    "title": "Les formules de politesse",
+    "intro": "The everyday phrases you'll say a hundred times. Copy the melody, not just the words.",
+    "phrases": [
+      { "fr": "Bonjour, comment allez-vous ?", "en": "Hello, how are you?", "hint": "Liaison: comment‿allez‿vous. Let your voice rise politely at the end." },
+      { "fr": "Excusez-moi, je suis désolé.", "en": "Excuse me, I'm sorry.", "hint": "In fast speech « je suis » shrinks to 'chui'." },
+      { "fr": "Merci beaucoup, bonne journée !", "en": "Thanks a lot, have a good day!", "hint": "Silent endings: beaucou(p), journé(e). Warm, smiling tone." },
+      { "fr": "Je voudrais un café, s'il vous plaît.", "en": "I'd like a coffee, please.", "hint": "Soft French r in « voudrais »; the t in plaît is silent." },
+      { "fr": "Enchanté, à bientôt !", "en": "Nice to meet you, see you soon!", "hint": "Nasal 'en' in enchanté; link à‿bientôt smoothly." }
+    ]
+  },
+  {
+    "id": "a2-liaisons",
+    "level": "A2",
+    "focus": "Liaisons",
+    "title": "Enchaîner les mots",
+    "intro": "French glues words together. Shadow these until the joins feel automatic.",
+    "phrases": [
+      { "fr": "Nous avons un grand appartement.", "en": "We have a big apartment.", "hint": "nous‿avons, un‿grand‿appartement — the d sounds like a t." },
+      { "fr": "Ils habitent aux États-Unis.", "en": "They live in the United States.", "hint": "ils‿habitent (s→z), aux‿États (z). Don't stop between words." },
+      { "fr": "C'est un très bon ami.", "en": "He's a very good friend.", "hint": "bon‿ami links with an n; the s of très is silent." },
+      { "fr": "Vous êtes vraiment trop aimable.", "en": "You're really too kind.", "hint": "vous‿êtes (z), trop‿aimable (p sound). One smooth flow." },
+      { "fr": "On en a encore un peu.", "en": "We still have a bit left.", "hint": "on‿en‿a — three tiny words spoken as one." }
+    ]
+  },
+  {
+    "id": "a2-questions",
+    "level": "A2",
+    "focus": "Questions & intonation",
+    "title": "Poser des questions",
+    "intro": "Intonation is half the meaning. Match the rise and fall exactly.",
+    "phrases": [
+      { "fr": "Qu'est-ce que tu fais ce week-end ?", "en": "What are you doing this weekend?", "hint": "« qu'est-ce que » is one chunk: 'kesk'. Say it fast." },
+      { "fr": "Tu viens avec nous ?", "en": "Are you coming with us?", "hint": "A yes/no question — let your voice rise at the end." },
+      { "fr": "Pourquoi est-ce que c'est fermé ?", "en": "Why is it closed?", "hint": "A 'why' question falls at the end instead of rising." },
+      { "fr": "On se voit à quelle heure ?", "en": "What time are we meeting?", "hint": "quelle‿heure links to 'kel-eur'." },
+      { "fr": "Ça te dit d'aller au ciné ?", "en": "Fancy going to the movies?", "hint": "Casual: « ça te dit » = do you feel like…?" }
+    ]
+  },
+  {
+    "id": "b1-fillers",
+    "level": "B1",
+    "focus": "Sounding natural",
+    "title": "Les tics de langage",
+    "intro": "The little words that make you sound French. Drop them in and your speech relaxes.",
+    "phrases": [
+      { "fr": "Du coup, on y va.", "en": "So, let's go.", "hint": "« du coup » is THE French filler. on‿y‿va flows together." },
+      { "fr": "En fait, je ne sais pas trop.", "en": "Actually, I'm not really sure.", "hint": "In speech the 'ne' vanishes: 'je sais pas'." },
+      { "fr": "Bah, ça dépend, tu vois.", "en": "Well, it depends, you know.", "hint": "« bah » and « tu vois » frame relaxed speech." },
+      { "fr": "Voilà, c'est exactement ça.", "en": "There, that's exactly it.", "hint": "« voilà » wraps up a thought. Stress exactement." },
+      { "fr": "Bref, c'était une bonne soirée.", "en": "Anyway, it was a good evening.", "hint": "« bref » = to sum up. Liaison: c'était‿une, bonne‿soirée." }
+    ]
+  },
+  {
+    "id": "b1-nasales",
+    "level": "B1",
+    "focus": "Nasal vowels",
+    "title": "Les voyelles nasales",
+    "intro": "The sounds English doesn't have. Don't pronounce the n — let the vowel go through your nose.",
+    "phrases": [
+      { "fr": "Un bon vin blanc.", "en": "A good white wine.", "hint": "Four nasal-ish vowels in a row: un / bon / vin / blanc." },
+      { "fr": "Cent ans, c'est très long.", "en": "A hundred years is very long.", "hint": "« cent ans » — nasal, then liaison cent‿ans." },
+      { "fr": "On entend bien le son.", "en": "We hear the sound clearly.", "hint": "on / en(tend) / bien / son — a nasal workout." },
+      { "fr": "Mon oncle prend le train.", "en": "My uncle takes the train.", "hint": "mon‿oncle liaison; prend and train are both nasal." },
+      { "fr": "Demain matin, pas maintenant.", "en": "Tomorrow morning, not now.", "hint": "The 'ain' nasal: demain / maintenant." }
+    ]
+  },
+  {
+    "id": "b2-opinion",
+    "level": "B2",
+    "focus": "Giving an opinion",
+    "title": "Donner son avis (oral DELF)",
+    "intro": "The phrases that open and nuance a B2 argument. Say them until they're reflexes for the oral exam.",
+    "phrases": [
+      { "fr": "À vrai dire, je ne suis pas convaincu.", "en": "To be honest, I'm not convinced.", "hint": "A strong opener for the DELF oral; convaincu has the -ain- nasal." },
+      { "fr": "Il me semble que c'est exagéré.", "en": "It seems to me that's exaggerated.", "hint": "A softened, hedged opinion — very B2." },
+      { "fr": "Cela dit, je comprends ton point de vue.", "en": "That said, I understand your point of view.", "hint": "« cela dit » concedes a point before you disagree." },
+      { "fr": "On ne peut pas nier que c'est un problème.", "en": "We can't deny it's a problem.", "hint": "Double-negative structure: ne… pas nier." },
+      { "fr": "À mon sens, il faudrait nuancer.", "en": "In my view, we should be more nuanced.", "hint": "« nuancer » shows the examiner you can qualify a claim." }
+    ]
+  }
+]

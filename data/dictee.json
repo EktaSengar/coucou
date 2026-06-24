@@ -1,0 +1,72 @@
+[
+  {
+    "id": "a1-presentation",
+    "level": "A1",
+    "theme": "Everyday",
+    "title": "Se présenter",
+    "intro": "Short, friendly sentences to start. Listen for the silent endings you can't hear but must write.",
+    "sentences": [
+      { "fr": "Bonjour, je m'appelle Marie.", "en": "Hello, my name is Marie.", "tip": "« je m'appelle » — two p's, two l's, and don't forget the apostrophe." },
+      { "fr": "Comment allez-vous aujourd'hui ?", "en": "How are you today?", "tip": "Hear the liaison: « allez‿vous ». And « aujourd'hui » hides a silent d." },
+      { "fr": "J'habite à Paris depuis deux ans.", "en": "I've been living in Paris for two years.", "tip": "Liaison « deux‿ans » sounds like a z — but you still write « deux ans »." },
+      { "fr": "Nous sommes très contents de vous voir.", "en": "We're very happy to see you.", "tip": "« contents » is plural — the silent -s agrees with « nous »." },
+      { "fr": "Il fait beau ce matin.", "en": "The weather is nice this morning.", "tip": "« ce matin », not « se matin » — a classic homophone trap." }
+    ]
+  },
+  {
+    "id": "a1-chiffres",
+    "level": "A1",
+    "theme": "Numbers & time",
+    "title": "Les chiffres et l'heure",
+    "intro": "Numbers and times are where listening points are won or lost. Train them on purpose.",
+    "sentences": [
+      { "fr": "Il est huit heures et quart.", "en": "It's a quarter past eight.", "tip": "Liaison « huit‿heures »." },
+      { "fr": "J'ai soixante-dix euros dans mon sac.", "en": "I have seventy euros in my bag.", "tip": "70 = soixante-dix (sixty-ten). Hyphenated." },
+      { "fr": "Il y a quatre-vingts personnes dans la salle.", "en": "There are eighty people in the room.", "tip": "80 = quatre-vingts — with an -s when it ends the number." },
+      { "fr": "Le rendez-vous est à quinze heures trente.", "en": "The appointment is at 3:30 p.m.", "tip": "15 h 30 spoken in full. Liaison « quinze‿heures »." },
+      { "fr": "Mon train part à neuf heures moins le quart.", "en": "My train leaves at a quarter to nine.", "tip": "Liaison « neuf‿heures » — here the f sounds like a v." }
+    ]
+  },
+  {
+    "id": "a2-quotidien",
+    "level": "A2",
+    "theme": "Daily life",
+    "title": "La maison et le quotidien",
+    "intro": "Everyday actions — watch the past-tense agreements and the reflexive verbs.",
+    "sentences": [
+      { "fr": "Je me lève tôt et je prends mon café.", "en": "I get up early and have my coffee.", "tip": "« je me lève » — reflexive, with an accent grave." },
+      { "fr": "Les enfants jouent dans le jardin.", "en": "The children are playing in the garden.", "tip": "« jouent » — the -ent ending is completely silent." },
+      { "fr": "Nous avons acheté une nouvelle voiture.", "en": "We bought a new car.", "tip": "« acheté » here ends in -é (past participle), not -er." },
+      { "fr": "Elle est allée au marché ce week-end.", "en": "She went to the market this weekend.", "tip": "« allée » — with être, the participle agrees: extra -e for « elle »." },
+      { "fr": "Tu as oublié tes clés sur la table.", "en": "You left your keys on the table.", "tip": "« tes clés » — both are plural, both take a silent -s." }
+    ]
+  },
+  {
+    "id": "b1-societe",
+    "level": "B1",
+    "theme": "Opinions & society",
+    "title": "Donner son avis",
+    "intro": "The connectors and verb moods you'll need to argue a point — and the first taste of the subjunctive.",
+    "sentences": [
+      { "fr": "À mon avis, il faudrait réduire la pollution.", "en": "In my opinion, we should reduce pollution.", "tip": "« faudrait » — conditional, silent -t." },
+      { "fr": "Beaucoup de gens pensent que c'est une bonne idée.", "en": "Many people think it's a good idea.", "tip": "« pensent » — silent -ent. « c'est », not « ses » or « ces »." },
+      { "fr": "Si j'avais le temps, je voyagerais davantage.", "en": "If I had time, I would travel more.", "tip": "si + imparfait, then conditional. « voyagerais » ends in -ais." },
+      { "fr": "Il est important que nous fassions un effort.", "en": "It's important that we make an effort.", "tip": "« que nous fassions » — subjunctive of faire. Liaison « un‿effort »." },
+      { "fr": "Les jeunes utilisent de plus en plus leur téléphone.", "en": "Young people use their phones more and more.", "tip": "« leur » stays singular here — one phone each, no -s." }
+    ]
+  },
+  {
+    "id": "b2-actualite",
+    "level": "B2",
+    "theme": "News & argument",
+    "title": "Actualité et argumentation",
+    "intro": "Full DELF-B2 register: abstract nouns, the subjunctive, and the agreements that separate B2 from B1.",
+    "sentences": [
+      { "fr": "Bien qu'il soit difficile, ce changement est nécessaire.", "en": "Although it is difficult, this change is necessary.", "tip": "« Bien que » forces the subjunctive « soit »." },
+      { "fr": "Les autorités ont annoncé de nouvelles mesures économiques.", "en": "The authorities have announced new economic measures.", "tip": "« nouvelles mesures économiques » — three feminine plurals to agree." },
+      { "fr": "Cette décision aura des conséquences importantes pour l'avenir.", "en": "This decision will have major consequences for the future.", "tip": "« aura » — simple future. « conséquences importantes » both plural." },
+      { "fr": "Nombreux sont ceux qui s'inquiètent de la situation.", "en": "Many are those who worry about the situation.", "tip": "« s'inquiètent » — reflexive, silent -ent, accent grave on the è." },
+      { "fr": "Il ne faut pas négliger l'impact environnemental de nos choix.", "en": "We must not neglect the environmental impact of our choices.", "tip": "« environnemental » — double n, then -mental. A spelling trap even for natives." }
+    ]
+  }
+]

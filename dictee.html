@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dictée — train your ear by writing — Coucou</title>
+<meta name="description" content="French dictation practice: listen to a sentence, type what you hear, and get a word-by-word diff. The single best drill for catching silent endings, liaisons and agreements — laddered A1 to DELF B2.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dictée — train your French ear by writing — Coucou">
+<meta property="og:description" content="Listen, type, and see a word-by-word diff. The classic French drill for silent endings, liaisons and agreements.">
+<meta property="og:url" content="https://ektasengar.github.io/coucou/dictee.html">
+<meta property="og:image" content="https://ektasengar.github.io/coucou/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ektasengar.github.io/coucou/assets/og.png">
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('dictee', () => ({
+    all: [], loading: true, error: false,
+    level: 'all',
+    current: null, idx: 0, typed: '', checked: false, revealed: false, result: null,
+    results: [], finished: false, done: {},
+    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: false,
+
+    async init() {
+      this.initVoice();
+      try {
+        const res = await fetch('./data/dictee.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('http ' + res.status);
+        this.all = await res.json();
+      } catch (e) { this.error = true; this.loading = false; return; }
+      this.all.forEach(s => { this.done[s.id] = this.read(s.id); });
+      const q = new URLSearchParams(location.search);
+      const ql = q.get('level'); if (ql) this.level = ql;
+      this.loading = false;
+      const qid = q.get('id');
+      if (qid) { const s = this.all.find(x => x.id === qid); if (s) this.open(s); }
+    },
+    read(id) { try { return localStorage.getItem('lf-dictee-' + id) === '1'; } catch (e) { return false; } },
+
+    // catalogue
+    levelOrder: ['A1', 'A2', 'B1', 'B2'],
+    get levels() { return this.levelOrder.filter(l => this.all.some(i => i.level === l)); },
+    get list() { return this.all.filter(i => this.level === 'all' || i.level === this.level); },
+
+    // run a set
+    open(set) {
+      this.current = set;
+      this.idx = 0; this.results = []; this.finished = false;
+      this.resetSentence();
+      window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+      this.$nextTick(() => this.play(1));
+    },
+    close() { if (this.canSpeak) speechSynthesis.cancel(); this.current = null; this.finished = false; },
+    resetSentence() { this.typed = ''; this.checked = false; this.revealed = false; this.result = null; },
+    get sentence() { return this.current ? this.current.sentences[this.idx] : null; },
+    get total() { return this.current ? this.current.sentences.length : 0; },
+
+    // --- word-level diff (LCS alignment) ---
+    tokenize(s) { return String(s || '').trim().split(/\s+/).filter(Boolean); },
+    norm(w) { return String(w).toLowerCase().replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, ''); },
+    lcs(a, b) {
+      const n = a.length, m = b.length;
+      const dp = Array.from({ length: n + 1 }, () => new Int32Array(m + 1));
+      for (let i = n - 1; i >= 0; i--)
+        for (let j = m - 1; j >= 0; j--)
+          dp[i][j] = a[i] === b[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+      const ai = new Set(), bi = new Set(); let i = 0, j = 0;
+      while (i < n && j < m) {
+        if (a[i] === b[j]) { ai.add(i); bi.add(j); i++; j++; }
+        else if (dp[i + 1][j] >= dp[i][j + 1]) i++; else j++;
+      }
+      return { ai, bi };
+    },
+    check() {
+      if (this.checked) return;
+      const aTok = this.tokenize(this.typed), bTok = this.tokenize(this.sentence.fr);
+      const { ai, bi } = this.lcs(aTok.map(this.norm), bTok.map(this.norm));
+      const answerTokens = bTok.map((w, k) => ({ w, hit: bi.has(k) }));
+      const userTokens = aTok.map((w, k) => ({ w, hit: ai.has(k) }));
+      const correct = bi.size, total = bTok.length;
+      this.result = { answerTokens, userTokens, correct, total, pct: total ? Math.round(correct / total * 100) : 0 };
+      this.results[this.idx] = { correct, total };
+      this.checked = true;
+    },
+    revealAnswer() {
+      if (!this.checked) { this.check(); }
+      this.revealed = true;
+    },
+    next() {
+      if (this.idx + 1 >= this.total) { this.finish(); return; }
+      this.idx++; this.resetSentence();
+      this.$nextTick(() => this.play(1));
+    },
+    finish() {
+      this.finished = true;
+      if (this.canSpeak) speechSynthesis.cancel();
+      try { localStorage.setItem('lf-dictee-' + this.current.id, '1'); } catch (e) {}
+      this.done[this.current.id] = true;
+      window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+    },
+    get setScore() {
+      const c = this.results.reduce((s, r) => s + (r ? r.correct : 0), 0);
+      const t = this.results.reduce((s, r) => s + (r ? r.total : 0), 0);
+      return { correct: c, total: t, pct: t ? Math.round(c / t * 100) : 0 };
+    },
+    get verdict() {
+      const p = this.setScore.pct;
+      if (p >= 95) return 'Quasi parfait ! 🎉';
+      if (p >= 80) return 'Très bien — solid ear.';
+      if (p >= 60) return 'Pas mal — replay the tricky ones.';
+      return 'Keep at it — dictée is hard. Retry it.';
+    },
+
+    // speech
+    initVoice() {
+      if (!this.canSpeak) return;
+      const pick = () => { const vs = speechSynthesis.getVoices(); this.frVoice = vs.find(v => /fr[-_]?fr/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null; };
+      pick(); speechSynthesis.addEventListener('voiceschanged', pick);
+    },
+    play(rate) {
+      if (!this.canSpeak || !this.sentence) return;
+      try {
+        speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(this.sentence.fr);
+        u.lang = 'fr-FR'; if (this.frVoice) u.voice = this.frVoice; u.rate = rate || 1;
+        this.speaking = true;
+        u.onend = u.onerror = () => { this.speaking = false; };
+        speechSynthesis.speak(u);
+      } catch (e) { this.speaking = false; }
+    },
+    stop() { if (this.canSpeak) speechSynthesis.cancel(); this.speaking = false; },
+  }));
+});
+</script>
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+<!-- NAV -->
+<nav x-data="{ open: false }" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="flex items-center justify-between h-16">
+      <a href="./" class="flex items-center gap-2 font-extrabold text-slate-900 tracking-tight"><span>🇫🇷</span> coucou <span class="font-medium text-blue-600 hidden sm:inline">· learn French</span></a>
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="./lessons.html" class="text-sm text-slate-600 hover:text-slate-900">Lessons</a>
+        <a href="./practice.html" class="text-sm text-slate-600 hover:text-slate-900">Practice</a>
+        <a href="./train.html" class="text-sm text-slate-600 hover:text-slate-900">Read &amp; Listen</a>
+        <a href="./watch.html" class="text-sm text-slate-600 hover:text-slate-900">Watch 🎬</a>
+        <a href="./dictee.html" class="text-sm font-medium text-blue-600">Dictée ✍️</a>
+        <a href="./shadow.html" class="text-sm text-slate-600 hover:text-slate-900">Shadow 🗣️</a>
+        <a href="./mock.html" class="text-sm text-slate-600 hover:text-slate-900">Mock exam 🎓</a>
+        <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
+      </div>
+      <button @click="open = !open" class="lg:hidden p-2 text-slate-600" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div x-show="open" x-cloak class="lg:hidden pb-4 space-y-1">
+      <a href="./lessons.html" class="block py-2 text-sm text-slate-600">Lessons</a>
+      <a href="./practice.html" class="block py-2 text-sm text-slate-600">Practice</a>
+      <a href="./train.html" class="block py-2 text-sm text-slate-600">Read &amp; Listen</a>
+      <a href="./watch.html" class="block py-2 text-sm text-slate-600">Watch 🎬</a>
+      <a href="./dictee.html" class="block py-2 text-sm font-medium text-blue-600">Dictée ✍️</a>
+      <a href="./shadow.html" class="block py-2 text-sm text-slate-600">Shadow 🗣️</a>
+      <a href="./mock.html" class="block py-2 text-sm text-slate-600">Mock exam 🎓</a>
+      <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
+      <a href="./#tracker" class="block py-2 text-sm font-medium text-slate-900">Get the tracker →</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-3xl mx-auto px-5 py-10 md:py-14" x-data="dictee()">
+
+  <!-- header -->
+  <div x-show="!current" x-cloak>
+    <div class="max-w-2xl">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-5">✍️ Dictée · listen &amp; write</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">Dictée</h1>
+      <p class="mt-4 text-lg text-slate-600">The oldest French drill, and still the best for the ear. You hear a sentence, you type exactly what you heard, and we mark it <strong class="text-slate-900">word by word</strong>. It forces you to catch the things you can't quite hear — silent endings, liaisons, and the agreements that betray your level.</p>
+    </div>
+    <div class="mt-6 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-4 text-sm text-slate-600">
+      💡 <strong class="text-slate-900">Tip:</strong> play it twice before typing, use <em>slow</em> for the hard bits, and don't peek. Capitalisation and punctuation don't count — accents and spelling do.
+    </div>
+  </div>
+
+  <p x-show="loading" class="mt-10 text-slate-500">Loading…</p>
+  <div x-show="error" x-cloak class="mt-10 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-sm text-slate-600">
+    Couldn't load the dictations. View this on the live site or via the local server (<code class="bg-slate-200 px-1.5 py-0.5 rounded">node serve.js</code>).
+  </div>
+  <div x-show="!loading && !error && !canSpeak && !current" x-cloak class="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
+    Your browser has no French speech voice, so the audio won't play here. Try Chrome or Safari.
+  </div>
+
+  <!-- ============ CATALOGUE ============ -->
+  <div x-show="!loading && !error && !current" x-cloak class="mt-8">
+    <div class="flex items-center gap-2 flex-wrap">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wide mr-1">Level</span>
+      <button @click="level = 'all'" :class="level === 'all' ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'" class="px-3.5 py-1.5 rounded-full text-sm font-bold transition-colors">All</button>
+      <template x-for="lv in levels" :key="lv">
+        <button @click="level = lv" x-text="lv" :class="level === lv ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'" class="px-3.5 py-1.5 rounded-full text-sm font-bold transition-colors"></button>
+      </template>
+    </div>
+
+    <div class="mt-6 grid sm:grid-cols-2 gap-4">
+      <template x-for="s in list" :key="s.id">
+        <button @click="open(s)" class="group text-left block rounded-xl border border-slate-200 p-5 hover:border-blue-400 hover:shadow-sm transition-all">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-center gap-2 text-xs font-medium text-slate-400">
+              <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-blue-600 text-white font-bold" x-text="s.level"></span>
+              <span x-text="s.theme"></span>
+            </div>
+            <span x-show="done[s.id]" x-cloak class="inline-flex items-center gap-1 text-xs font-medium text-green-600">✓ done</span>
+          </div>
+          <h3 class="mt-2 font-semibold text-slate-900 group-hover:text-blue-700" x-text="s.title"></h3>
+          <div class="mt-2 text-xs text-slate-400">✍️ <span x-text="s.sentences.length"></span> sentences</div>
+        </button>
+      </template>
+    </div>
+  </div>
+
+  <!-- ============ SET RUNNER ============ -->
+  <article x-show="current && !finished" x-cloak>
+    <template x-if="current && !finished">
+      <div>
+        <!-- breadcrumb + progress -->
+        <div class="flex items-center justify-between gap-2 text-sm text-slate-500">
+          <div class="flex items-center gap-2">
+            <button @click="close()" class="hover:text-slate-900">← All</button>
+            <span>/</span>
+            <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-blue-600 text-white text-xs font-bold" x-text="current.level"></span>
+            <span x-text="current.title"></span>
+          </div>
+          <span class="text-xs text-slate-400">Sentence <span x-text="idx + 1"></span> / <span x-text="total"></span></span>
+        </div>
+
+        <!-- progress bar -->
+        <div class="mt-3 h-1.5 w-full rounded-full bg-slate-100 overflow-hidden">
+          <div class="h-full bg-blue-600 transition-all duration-300" :style="'width:' + ((idx) / total * 100) + '%'"></div>
+        </div>
+
+        <!-- player -->
+        <div class="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-5 text-center">
+          <p class="text-sm text-slate-500">Listen and type what you hear 👂</p>
+          <div class="mt-3 flex items-center justify-center gap-3">
+            <button @click="play(1)" :disabled="!canSpeak" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors disabled:opacity-40">▶ Play</button>
+            <button @click="play(0.65)" :disabled="!canSpeak" class="inline-flex items-center gap-2 px-4 py-3 border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-white transition-colors disabled:opacity-40">🐢 Slow</button>
+          </div>
+        </div>
+
+        <!-- input -->
+        <div class="mt-5">
+          <textarea x-model="typed" :disabled="checked" rows="2" placeholder="Type the sentence in French…"
+            @keydown.enter.prevent="checked ? next() : check()"
+            class="w-full rounded-xl border border-slate-300 px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-slate-50"></textarea>
+          <div class="mt-3 flex flex-wrap gap-3">
+            <button x-show="!checked" @click="check()" class="px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">Check</button>
+            <button x-show="!checked" @click="revealAnswer()" class="px-5 py-2.5 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50">Reveal answer</button>
+            <button x-show="checked" x-cloak @click="next()" class="px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800" x-text="idx + 1 >= total ? 'Finish →' : 'Next sentence →'"></button>
+          </div>
+        </div>
+
+        <!-- result / diff -->
+        <div x-show="checked" x-cloak class="mt-6 space-y-4">
+          <!-- the correct sentence, marked -->
+          <div class="rounded-xl border border-slate-200 p-5">
+            <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Correct sentence</p>
+            <p class="mt-2 text-lg leading-relaxed">
+              <template x-for="(t, ti) in result.answerTokens" :key="ti">
+                <span :class="t.hit ? 'text-green-700' : 'text-red-600 font-semibold underline decoration-red-300 decoration-2'" x-text="t.w + ' '"></span>
+              </template>
+            </p>
+            <!-- your attempt -->
+            <div x-show="result.userTokens.length" x-cloak class="mt-3 pt-3 border-t border-slate-100">
+              <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">What you wrote</p>
+              <p class="mt-2 text-base leading-relaxed">
+                <template x-for="(t, ti) in result.userTokens" :key="ti">
+                  <span :class="t.hit ? 'text-slate-700' : 'text-red-500 line-through decoration-red-300'" x-text="t.w + ' '"></span>
+                </template>
+              </p>
+            </div>
+            <p class="mt-3 text-sm font-medium" :class="result.pct >= 80 ? 'text-green-600' : result.pct >= 50 ? 'text-amber-600' : 'text-red-600'">
+              <span x-text="result.correct"></span> / <span x-text="result.total"></span> words · <span x-text="result.pct + '%'"></span>
+            </p>
+          </div>
+
+          <!-- translation + tip -->
+          <div class="rounded-xl bg-blue-50 border border-blue-100 p-4 text-sm">
+            <p class="text-slate-700"><span class="font-semibold text-slate-900">Meaning:</span> <span x-text="sentence.en"></span></p>
+            <p x-show="sentence.tip" x-cloak class="mt-1.5 text-slate-600"><span class="font-semibold text-slate-900">💡 </span><span x-text="sentence.tip"></span></p>
+          </div>
+        </div>
+      </div>
+    </template>
+  </article>
+
+  <!-- ============ SUMMARY ============ -->
+  <article x-show="current && finished" x-cloak>
+    <template x-if="current && finished">
+      <div class="text-center">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 text-green-700 text-sm font-medium mb-4">✓ Set complete</span>
+        <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900" x-text="current.title"></h1>
+        <div class="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-8 inline-block">
+          <p class="text-sm text-slate-500 uppercase tracking-wide">Words caught</p>
+          <div class="mt-1 text-4xl font-extrabold text-slate-900"><span x-text="setScore.correct"></span> / <span x-text="setScore.total"></span></div>
+          <p class="mt-1 text-blue-600 font-medium" x-text="setScore.pct + '% · ' + verdict"></p>
+        </div>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <button @click="open(current)" class="px-5 py-2.5 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-white">↻ Retry this set</button>
+          <button @click="close()" class="px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800">More dictations →</button>
+        </div>
+        <div class="mt-8 rounded-xl border border-dashed border-slate-300 bg-white p-5 text-sm text-slate-600 text-left">
+          🎙️ <strong class="text-slate-900">Next:</strong> take these sentences to the <a href="./tutor.html" class="text-blue-600 hover:underline font-medium">24/7 tutor</a> and use them in a conversation — turn what your ear caught into something your mouth can say.
+        </div>
+      </div>
+    </template>
+  </article>
+
+</main>
+
+<footer class="border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-5 py-10 text-center">
+    <p class="text-lg font-bold text-slate-900">Ce qui s'entend doit aussi s'écrire. 🇫🇷</p>
+    <p class="mt-2 text-sm text-slate-500"><strong>Coucou</strong> · a free, open playbook · built with AI · 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>

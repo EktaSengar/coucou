@@ -63,24 +63,29 @@ document.addEventListener('alpine:init', () => {
   <div class="max-w-5xl mx-auto px-5">
     <div class="flex items-center justify-between h-16">
       <a href="./" class="flex items-center gap-2 font-extrabold text-slate-900 tracking-tight"><span>🇫🇷</span> coucou <span class="font-medium text-blue-600 hidden sm:inline">· learn French</span></a>
-      <div class="hidden md:flex items-center gap-6">
+      <div class="hidden lg:flex items-center gap-6">
         <a href="./#how" class="text-sm text-slate-600 hover:text-slate-900">How it works</a>
         <a href="./lessons.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Lessons</a>
         <a href="./practice.html" class="text-sm text-slate-600 hover:text-slate-900">Practice</a>
         <a href="./train.html" class="text-sm text-slate-600 hover:text-slate-900">Read &amp; Listen</a>
+        <a href="./watch.html" class="text-sm text-slate-600 hover:text-slate-900">Watch 🎬</a>
+        <a href="./dictee.html" class="text-sm text-slate-600 hover:text-slate-900">Dictée ✍️</a>
+        <a href="./shadow.html" class="text-sm text-slate-600 hover:text-slate-900">Shadow 🗣️</a>
         <a href="./mock.html" class="text-sm text-slate-600 hover:text-slate-900">Mock exam 🎓</a>
         <a href="./tutor.html" class="text-sm font-medium text-blue-600">Tutor</a>
-        <a href="./#tracker" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors">Get the tracker</a>
       </div>
-      <button @click="open = !open" class="md:hidden p-2 text-slate-600" aria-label="Menu">
+      <button @click="open = !open" class="lg:hidden p-2 text-slate-600" aria-label="Menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
-    <div x-show="open" x-cloak class="md:hidden pb-4 space-y-1">
+    <div x-show="open" x-cloak class="lg:hidden pb-4 space-y-1">
       <a href="./#how" class="block py-2 text-sm text-slate-600">How it works</a>
       <a href="./lessons.html" class="block py-2 text-sm font-medium text-blue-600">Lessons</a>
       <a href="./practice.html" class="block py-2 text-sm text-slate-600">Practice</a>
       <a href="./train.html" class="block py-2 text-sm text-slate-600">Read &amp; Listen</a>
+      <a href="./watch.html" class="block py-2 text-sm text-slate-600">Watch 🎬</a>
+      <a href="./dictee.html" class="block py-2 text-sm text-slate-600">Dictée ✍️</a>
+      <a href="./shadow.html" class="block py-2 text-sm text-slate-600">Shadow 🗣️</a>
       <a href="./mock.html" class="block py-2 text-sm text-slate-600">Mock exam 🎓</a>
       <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor</a>
       <a href="./#tracker" class="block py-2 text-sm font-medium text-slate-900">Get the tracker →</a>

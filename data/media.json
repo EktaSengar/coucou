@@ -1,0 +1,218 @@
+[
+  {
+    "id": "a1-tchoupi-pyjama",
+    "level": "A1",
+    "theme": "Cartoon · everyday",
+    "kind": "embed",
+    "source": "T'choupi",
+    "youtube": "DBvEMrL9_Og",
+    "minutes": 5,
+    "title": "T'choupi à l'école — la journée du pyjama",
+    "why": "A children's cartoon: clear, slow speech and the pictures carry the meaning. The gentlest possible listening — perfect for your very first weeks.",
+    "mission": [
+      "Watch once with no subtitles — just follow the pictures.",
+      "Watch again and catch the words you already know.",
+      "Say out loud, in French, what you think is happening."
+    ],
+    "watchFor": [
+      { "fr": "bonjour / au revoir", "en": "hello / goodbye" },
+      { "fr": "l'école", "en": "school" },
+      { "fr": "le doudou", "en": "comfort toy" },
+      { "fr": "jouer", "en": "to play" },
+      { "fr": "dormir", "en": "to sleep" }
+    ]
+  },
+  {
+    "id": "a1-greetings-superfrench",
+    "level": "A1",
+    "theme": "Survival French",
+    "kind": "embed",
+    "source": "Easy French",
+    "youtube": "ymPWksz-UUc",
+    "minutes": 7,
+    "title": "French greetings every beginner needs (Super Easy French)",
+    "why": "Real French, spoken slowly, with French + English subtitles. The greetings you'll use on day one in Paris.",
+    "watchFor": [
+      { "fr": "Salut", "en": "Hi (informal)" },
+      { "fr": "Coucou", "en": "Hey (very informal)" },
+      { "fr": "Bonsoir", "en": "Good evening" },
+      { "fr": "Enchanté(e)", "en": "Nice to meet you" },
+      { "fr": "Ça va ?", "en": "How's it going?" }
+    ],
+    "questions": [
+      {
+        "type": "mcq",
+        "q": "« Salut ! » — when do you use it?",
+        "options": ["With friends and people your age", "In a formal email to a stranger", "Only on the phone"],
+        "answer": 0,
+        "explain": "« Salut » is informal — great with friends, but not with your boss on day one."
+      },
+      {
+        "type": "mcq",
+        "q": "Which greeting do you use in the evening?",
+        "options": ["Bonjour", "Bonsoir", "Bonne nuit"],
+        "answer": 1,
+        "explain": "« Bonsoir » = good evening. « Bonne nuit » is only when you leave to go to sleep."
+      },
+      {
+        "type": "tf",
+        "q": "« Enchanté(e) » means « nice to meet you ».",
+        "options": ["Vrai", "Faux"],
+        "answer": 0,
+        "explain": "Yes — you say it the first time you meet someone."
+      },
+      {
+        "type": "mcq",
+        "q": "« Coucou » is…",
+        "options": ["A formal greeting for work", "A very informal, friendly « hi »", "A way to say goodbye only"],
+        "answer": 1,
+        "explain": "« Coucou » is warm and casual — exactly why this site is called Coucou. 😊"
+      }
+    ]
+  },
+  {
+    "id": "a1-tv5-debutant",
+    "level": "A1",
+    "theme": "Graded exercises",
+    "kind": "link",
+    "source": "TV5MONDE",
+    "url": "https://apprendre.tv5monde.com/fr/exercices/a1-debutant",
+    "minutes": 10,
+    "title": "TV5MONDE — A1 listening exercises (auto-marked)",
+    "why": "Real TV clips cut to beginner length, each with built-in comprehension questions that mark themselves. 2000+ free exercises.",
+    "mission": [
+      "Pick any video, watch it twice before answering.",
+      "Do the exercise — it corrects you instantly.",
+      "Note 3 new words in your tracker."
+    ]
+  },
+  {
+    "id": "a2-easyfrench-street",
+    "level": "A2",
+    "theme": "Real conversations",
+    "kind": "link",
+    "source": "Easy French",
+    "url": "https://www.youtube.com/@EasyFrench/videos",
+    "minutes": 8,
+    "title": "Easy French — real street interviews (FR + EN subtitles)",
+    "why": "Real people answering simple questions on the streets of Paris. Start with the « Super Easy French » ones, then the normal-speed ones.",
+    "mission": [
+      "Choose a « Super Easy French » video first.",
+      "Watch with both subtitles, then again with French only.",
+      "Shadow one sentence — copy the rhythm out loud."
+    ]
+  },
+  {
+    "id": "a2-tv5-elementaire",
+    "level": "A2",
+    "theme": "Graded exercises",
+    "kind": "link",
+    "source": "TV5MONDE",
+    "url": "https://apprendre.tv5monde.com/fr/exercices/a2-elementaire",
+    "minutes": 10,
+    "title": "TV5MONDE — A2 listening exercises (auto-marked)",
+    "why": "The next step up: slightly faster clips, still with self-correcting comprehension questions."
+  },
+  {
+    "id": "a2-tchoupi-compil",
+    "level": "A2",
+    "theme": "Cartoon · background listening",
+    "kind": "embed",
+    "source": "T'choupi",
+    "youtube": "5HZiLNgNb24",
+    "minutes": 60,
+    "title": "T'choupi — 1-hour cartoon compilation (passive listening)",
+    "why": "Put it on while you cook or tidy up. Passive exposure trains your ear to French rhythm — no pressure to understand every word.",
+    "mission": [
+      "Don't translate — let the sound wash over you.",
+      "Catch one new word per episode and write it down."
+    ]
+  },
+  {
+    "id": "b1-innerfrench",
+    "level": "B1",
+    "theme": "Podcast · culture & society",
+    "kind": "embed",
+    "source": "InnerFrench",
+    "youtube": "PLycTNLUo2y2EAKEhVfxB9gYo6r0OTMgM0",
+    "playlist": true,
+    "minutes": 30,
+    "title": "InnerFrench — slow, clear French on real topics (B1 → B2)",
+    "why": "Made for learners: natural but clear French about culture, history and society. The single best bridge across the intermediate plateau. Full transcripts at innerfrench.com.",
+    "mission": [
+      "Listen once without the transcript.",
+      "Listen again following the transcript on innerfrench.com.",
+      "Tell your AI tutor what the episode was about, in French."
+    ]
+  },
+  {
+    "id": "b1-tv5-intermediaire",
+    "level": "B1",
+    "theme": "Graded exercises",
+    "kind": "link",
+    "source": "TV5MONDE",
+    "url": "https://apprendre.tv5monde.com/fr/exercices/b1-intermediaire",
+    "minutes": 12,
+    "title": "TV5MONDE — B1 listening exercises (auto-marked)",
+    "why": "Authentic news and culture clips with comprehension questions — very close to the DELF listening format."
+  },
+  {
+    "id": "b1-rfi-journal",
+    "level": "B1",
+    "theme": "News · daily",
+    "kind": "link",
+    "source": "RFI",
+    "url": "https://francaisfacile.rfi.fr/fr/",
+    "minutes": 10,
+    "title": "RFI — Le journal en français facile (news + transcript)",
+    "why": "A 10-minute world-news bulletin every day in simplified French, with the transcript and self-correcting exercises. Builds the news vocabulary DELF B2 loves.",
+    "mission": [
+      "Listen first with the transcript hidden.",
+      "Re-read with the transcript and look up 5 words.",
+      "Summarise one news item to your tutor in French."
+    ]
+  },
+  {
+    "id": "b2-tv5-avance",
+    "level": "B2",
+    "theme": "Graded exercises",
+    "kind": "link",
+    "source": "TV5MONDE",
+    "url": "https://apprendre.tv5monde.com/fr/exercices/b2-avance",
+    "minutes": 15,
+    "title": "TV5MONDE — B2 listening exercises (auto-marked)",
+    "why": "Full-speed authentic broadcasts with DELF-style questions. The closest free thing to the real B2 listening paper.",
+    "mission": [
+      "Watch once at normal speed — no pausing, like the exam.",
+      "Answer, then re-watch to see what you missed.",
+      "Replay the hard passages and shadow them out loud."
+    ]
+  },
+  {
+    "id": "b2-rfi-youtube",
+    "level": "B2",
+    "theme": "News · authentic speed",
+    "kind": "link",
+    "source": "RFI",
+    "url": "https://www.youtube.com/@RFI_FrancaisFacile",
+    "minutes": 10,
+    "title": "RFI Français Facile — daily news on YouTube",
+    "why": "The same news at full authentic pace. Train your ear for the fast, smeared French of real radio."
+  },
+  {
+    "id": "b2-arte",
+    "level": "B2",
+    "theme": "Documentaries · stretch",
+    "kind": "link",
+    "source": "Arte",
+    "url": "https://www.arte.tv/fr/",
+    "minutes": 30,
+    "title": "Arte — documentaries & reportages (B2 / C1 stretch)",
+    "why": "Real French TV made for natives: documentaries on science, society and culture. Hard, but the fastest way to push past B2 toward C1.",
+    "mission": [
+      "Pick a short reportage on a topic you already like.",
+      "Use French subtitles (sous-titres) as a crutch at first.",
+      "Drop the subtitles once you can follow the gist."
+    ]
+  }
+]

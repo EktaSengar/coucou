@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DELF B2 mock exam — Coucou</title>
+<meta name="description" content="A full DELF B2 mock exam — listening, reading, writing and speaking — scored out of 100, with answers explained and an AI examiner for the written and oral parts.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DELF B2 mock exam — Coucou">
+<meta property="og:description" content="Sit a full DELF B2 mock: listening, reading, writing, speaking — scored /100 with explanations.">
+<meta property="og:url" content="https://ektasengar.github.io/coucou/mock.html">
+<meta property="og:image" content="https://ektasengar.github.io/coucou/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ektasengar.github.io/coucou/assets/og.png">
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('mock', () => ({
+    all: [], loading: true, error: false,
+    step: 'intro',                 // intro | co | ce | pe | po | results
+    coItems: [], ceItems: [], coAns: [], ceAns: [],
+    essay: '', peScore: '', poScore: '', showModel: false,
+    startedAt: null, now: Date.now(), tick: null,
+    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: false,
+
+    PE_SUBJECT: "Un magazine francophone organise un débat : « Faut-il limiter le temps passé sur les réseaux sociaux ? » Rédigez une contribution argumentée d'environ 250 mots pour donner votre point de vue, en illustrant vos arguments par des exemples.",
+    PO_TRIGGER: "De plus en plus de villes envisagent d'interdire la publicité pour la « malbouffe » (produits trop gras ou trop sucrés) à proximité des écoles. Pour les uns, c'est une mesure de santé publique nécessaire ; pour les autres, une atteinte à la liberté de choix.",
+    MODEL_ESSAY: "De nos jours, les réseaux sociaux occupent une place considérable dans notre quotidien, en particulier chez les jeunes. Faut-il pour autant limiter le temps qu'on y consacre ? Si la question mérite d'être posée, je pense qu'une limitation raisonnable serait bénéfique.\n\nD'une part, il est indéniable que ces plateformes présentent des avantages. Elles permettent de garder le contact avec ses proches, de s'informer rapidement et de découvrir de nouvelles idées. Pour beaucoup, elles sont même devenues un véritable outil de travail.\n\nCependant, leur usage excessif n'est pas sans danger. De nombreuses études montrent qu'un temps d'écran trop important nuit au sommeil, à la concentration et parfois à l'estime de soi. De plus, les algorithmes sont conçus pour nous retenir le plus longtemps possible, si bien qu'il devient difficile de s'arrêter.\n\nFaut-il alors tout interdire ? Certainement pas. Une interdiction stricte serait à la fois irréaliste et contre-productive. En revanche, il me semble essentiel d'apprendre, dès le plus jeune âge, à utiliser ces outils de manière raisonnée : fixer des limites de temps, privilégier les contenus utiles et savoir se déconnecter.\n\nEn conclusion, plutôt que d'imposer une limite venue de l'extérieur, je suis convaincu(e) qu'il vaut mieux développer chez chacun une véritable discipline personnelle. C'est, à mon sens, la seule solution durable.",
+
+    async init() {
+      this.initVoice();
+      try {
+        const res = await fetch('./data/comprehension.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('http ' + res.status);
+        this.all = await res.json();
+      } catch (e) { this.error = true; this.loading = false; return; }
+      this.loading = false;
+    },
+
+    shuffle(a) { a = a.slice(); for (let k = a.length - 1; k > 0; k--) { const j = Math.floor(Math.random() * (k + 1)); [a[k], a[j]] = [a[j], a[k]]; } return a; },
+    pick(pool, n) { return this.shuffle(pool).slice(0, n); },
+
+    start() {
+      const L = this.all.filter(i => i.skill === 'listening' && i.level === 'B2');
+      const R = this.all.filter(i => i.skill === 'reading' && i.level === 'B2');
+      this.coItems = this.pick(L, Math.min(2, L.length));
+      this.ceItems = this.pick(R, Math.min(2, R.length));
+      this.coAns = this.coItems.map(it => it.questions.map(() => ({ sel: null })));
+      this.ceAns = this.ceItems.map(it => it.questions.map(() => ({ sel: null })));
+      this.essay = ''; this.peScore = ''; this.poScore = ''; this.showModel = false;
+      this.startedAt = Date.now();
+      if (this.tick) clearInterval(this.tick);
+      this.tick = setInterval(() => { this.now = Date.now(); }, 1000);
+      this.goto('co');
+    },
+    goto(s) { this.step = s; if (this.canSpeak) speechSynthesis.cancel(); window.scrollTo({ top: 0, behavior: 'auto' }); },
+    restart() { if (this.tick) clearInterval(this.tick); this.step = 'intro'; },
+
+    // unified active set for the comprehension steps
+    get active() { return this.step === 'ce' ? { items: this.ceItems, ans: this.ceAns } : { items: this.coItems, ans: this.coAns }; },
+    choose(ii, qi, oi) { this.active.ans[ii][qi].sel = oi; },
+    optClass(ans, qi, oi, q, review) {
+      const sel = ans[qi].sel;
+      if (!review) return sel === oi ? 'border-blue-600 ring-1 ring-blue-600 bg-blue-50 text-slate-900' : 'border-slate-200 hover:border-blue-400 text-slate-800';
+      if (oi === q.answer) return 'border-green-500 bg-green-50 text-green-800';
+      if (oi === sel) return 'border-red-400 bg-red-50 text-red-700';
+      return 'border-slate-200 text-slate-400';
+    },
+
+    // scoring (mcq + tf only)
+    graded(items, ans) {
+      let correct = 0, total = 0;
+      items.forEach((it, ii) => it.questions.forEach((q, qi) => {
+        if (q.type === 'short') return;
+        total++;
+        if (ans[ii][qi].sel === q.answer) correct++;
+      }));
+      return { correct, total };
+    },
+    s25(x) { return x.total ? Math.round((x.correct / x.total) * 25) : 0 },
+    get co() { return this.graded(this.coItems, this.coAns); },
+    get ce() { return this.graded(this.ceItems, this.ceAns); },
+    get co25() { return this.s25(this.co); },
+    get ce25() { return this.s25(this.ce); },
+    clampScore(v) { const n = parseInt(v, 10); if (isNaN(n)) return 0; return Math.max(0, Math.min(25, n)); },
+    get pe25() { return this.clampScore(this.peScore); },
+    get po25() { return this.clampScore(this.poScore); },
+    get total() { return this.co25 + this.ce25 + this.pe25 + this.po25; },
+    get passed() { return this.total >= 50; },
+    get elapsed() {
+      const s = this.startedAt ? Math.floor((this.now - this.startedAt) / 1000) : 0;
+      const m = Math.floor(s / 60), ss = s % 60;
+      return m + ':' + String(ss).padStart(2, '0');
+    },
+    get wordCount() { return this.essay.trim() ? this.essay.trim().split(/\s+/).length : 0; },
+
+    // tutor deep-links (carry the user's work to an AI examiner)
+    peUrl(provider) {
+      const p = `Tu es examinateur de l'épreuve de production écrite du DELF B2. Voici le sujet : "${this.PE_SUBJECT}". Voici ma copie : "${this.essay || '(je vais la coller)'}". 1) Corrige mes erreurs dans un tableau : ma phrase | correction | pourquoi. 2) Note ma copie sur 25 selon la grille officielle du DELF B2 (respect de la consigne, cohérence et cohésion, étendue et maîtrise du vocabulaire, maîtrise de la grammaire). 3) Donne-moi 3 conseils concrets pour gagner des points. Réponds en français.`;
+      return (provider === 'chatgpt' ? 'https://chatgpt.com/?q=' : 'https://claude.ai/new?q=') + encodeURIComponent(p);
+    },
+    poUrl(provider) {
+      const p = `Agis comme l'examinateur de l'épreuve de production orale du DELF B2, en français. Voici le document déclencheur : "${this.PO_TRIGGER}". Demande-moi d'abord de présenter mon point de vue de façon structurée (introduction du thème, annonce d'un plan, arguments avec exemples, conclusion) — je répondrai par écrit. Ensuite, débats avec moi en posant 2 ou 3 questions qui me poussent à nuancer ma position. Enfin, note-moi sur 25 selon la grille du DELF B2 et donne-moi 3 améliorations concrètes. Commence maintenant.`;
+      return (provider === 'chatgpt' ? 'https://chatgpt.com/?q=' : 'https://claude.ai/new?q=') + encodeURIComponent(p);
+    },
+
+    // speech (listening)
+    initVoice() {
+      if (!this.canSpeak) return;
+      const pick = () => { const vs = speechSynthesis.getVoices(); this.frVoice = vs.find(v => /fr[-_]?fr/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null; };
+      pick(); speechSynthesis.addEventListener('voiceschanged', pick);
+    },
+    play(item) {
+      if (!this.canSpeak || !item) return;
+      const clean = String(item.text).replace(/—\s*/g, '').replace(/\s*\n+\s*/g, ' … ').replace(/\s+/g, ' ').trim();
+      try {
+        speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(clean);
+        u.lang = 'fr-FR'; if (this.frVoice) u.voice = this.frVoice; u.rate = 0.95;
+        this.speaking = true; u.onend = u.onerror = () => { this.speaking = false; };
+        speechSynthesis.speak(u);
+      } catch (e) { this.speaking = false; }
+    },
+    stop() { if (this.canSpeak) speechSynthesis.cancel(); this.speaking = false; },
+  }));
+});
+</script>
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+<!-- NAV -->
+<nav x-data="{ open: false }" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="flex items-center justify-between h-16">
+      <a href="./" class="flex items-center gap-2 font-extrabold text-slate-900 tracking-tight"><span>🇫🇷</span> coucou <span class="font-medium text-blue-600 hidden sm:inline">· learn French</span></a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="./lessons.html" class="text-sm text-slate-600 hover:text-slate-900">Lessons</a>
+        <a href="./practice.html" class="text-sm text-slate-600 hover:text-slate-900">Practice</a>
+        <a href="./train.html" class="text-sm text-slate-600 hover:text-slate-900">Read &amp; Listen</a>
+        <a href="./mock.html" class="text-sm font-medium text-blue-600">Mock exam 🎓</a>
+        <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
+        <a href="./#tracker" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors">Get the tracker</a>
+      </div>
+      <button @click="open = !open" class="md:hidden p-2 text-slate-600" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div x-show="open" x-cloak class="md:hidden pb-4 space-y-1">
+      <a href="./lessons.html" class="block py-2 text-sm text-slate-600">Lessons</a>
+      <a href="./practice.html" class="block py-2 text-sm text-slate-600">Practice</a>
+      <a href="./train.html" class="block py-2 text-sm text-slate-600">Read &amp; Listen</a>
+      <a href="./mock.html" class="block py-2 text-sm font-medium text-blue-600">Mock exam 🎓</a>
+      <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
+      <a href="./#tracker" class="block py-2 text-sm font-medium text-slate-900">Get the tracker →</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-3xl mx-auto px-5 py-10 md:py-14" x-data="mock()">
+
+  <p x-show="loading" class="text-slate-500">Loading…</p>
+  <div x-show="error" x-cloak class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-sm text-slate-600">
+    Couldn't load the exam content. View this on the live site or via the local server.
+  </div>
+
+  <!-- progress bar (during exam) -->
+  <div x-show="!loading && !error && step !== 'intro'" x-cloak class="mb-8">
+    <div class="flex items-center justify-between text-xs font-medium text-slate-500">
+      <div class="flex items-center gap-2 sm:gap-3 flex-wrap">
+        <template x-for="(s, i) in [['co','1 · Listening'],['ce','2 · Reading'],['pe','3 · Writing'],['po','4 · Speaking'],['results','Results']]" :key="i">
+          <span :class="step === s[0] ? 'text-blue-600 font-bold' : 'text-slate-400'" x-text="s[1]"></span>
+        </template>
+      </div>
+      <span class="text-slate-400">⏱ <span x-text="elapsed"></span></span>
+    </div>
+  </div>
+
+  <!-- ============ INTRO ============ -->
+  <div x-show="!loading && !error && step === 'intro'" x-cloak>
+    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-5">🎓 The real thing — out of 100</span>
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">DELF B2 mock exam</h1>
+    <p class="mt-4 text-lg text-slate-600">A full dry run of the four DELF B2 papers, scored like the real exam: <strong class="text-slate-900">100 points, pass mark 50</strong> — with a minimum of 5/25 needed in each paper. Listening and reading are marked automatically; writing and speaking open a one-click AI examiner that scores you on the official grid.</p>
+
+    <div class="mt-8 grid sm:grid-cols-2 gap-4">
+      <div class="rounded-xl border border-slate-200 p-5"><div class="text-2xl">🎧</div><h3 class="mt-2 font-semibold text-slate-900">1 · Compréhension de l'oral</h3><p class="mt-1 text-sm text-slate-600">Two recordings, comprehension questions. <span class="text-slate-400">/25 · auto-graded</span></p></div>
+      <div class="rounded-xl border border-slate-200 p-5"><div class="text-2xl">📖</div><h3 class="mt-2 font-semibold text-slate-900">2 · Compréhension des écrits</h3><p class="mt-1 text-sm text-slate-600">Two texts, comprehension questions. <span class="text-slate-400">/25 · auto-graded</span></p></div>
+      <div class="rounded-xl border border-slate-200 p-5"><div class="text-2xl">✍️</div><h3 class="mt-2 font-semibold text-slate-900">3 · Production écrite</h3><p class="mt-1 text-sm text-slate-600">A 250-word argued text. <span class="text-slate-400">/25 · AI examiner</span></p></div>
+      <div class="rounded-xl border border-slate-200 p-5"><div class="text-2xl">🎙️</div><h3 class="mt-2 font-semibold text-slate-900">4 · Production orale</h3><p class="mt-1 text-sm text-slate-600">Present &amp; defend a viewpoint. <span class="text-slate-400">/25 · AI examiner</span></p></div>
+    </div>
+
+    <div class="mt-6 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-5 text-sm text-slate-600">
+      ⏱ The real exam runs about <strong class="text-slate-700">2h30</strong> (≈30 min listening, 1h reading, 1h writing) plus a separate oral. Treat this as one sitting if you can — but you can stop and come back. Questions are picked at random, so each run is different.
+    </div>
+
+    <button @click="start()" class="mt-7 inline-flex items-center justify-center px-7 py-3.5 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-colors">▶ Start the mock exam</button>
+    <p class="mt-3 text-xs text-slate-400">Tip: for a realistic listening test, resist replaying the audio too many times.</p>
+  </div>
+
+  <!-- ============ COMPREHENSION (CO + CE share this block) ============ -->
+  <div x-show="step === 'co' || step === 'ce'" x-cloak>
+    <h2 class="text-2xl font-extrabold tracking-tight text-slate-900" x-text="step === 'co' ? 'Part 1 · Compréhension de l\'oral' : 'Part 2 · Compréhension des écrits'"></h2>
+    <p class="mt-1 text-sm text-slate-500" x-text="step === 'co' ? 'Listen to each recording, then answer. No transcript during the exam.' : 'Read each text, then answer. You can scroll back to the text.'"></p>
+
+    <template x-for="(it, ii) in active.items" :key="it.id">
+      <section class="mt-8">
+        <div class="flex items-center gap-2 text-xs font-medium text-slate-400">
+          <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-slate-900 text-white font-bold" x-text="'Document ' + (ii + 1)"></span>
+          <span x-text="it.theme"></span>
+          <span x-text="'· ' + it.source"></span>
+        </div>
+
+        <!-- listening player -->
+        <div x-show="it.skill === 'listening'" class="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+          <template x-if="canSpeak">
+            <div class="flex items-center gap-3">
+              <button @click="speaking ? stop() : play(it)" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800">
+                <span x-text="speaking ? '⏹ Stop' : '▶ Play recording'"></span>
+              </button>
+              <span class="text-xs text-slate-500">Real exam: heard once or twice.</span>
+            </div>
+          </template>
+          <template x-if="!canSpeak">
+            <p class="text-sm text-slate-600 whitespace-pre-line" x-text="it.text"></p>
+          </template>
+        </div>
+
+        <!-- reading text -->
+        <div x-show="it.skill === 'reading'" class="mt-3 rounded-xl border border-slate-200 bg-white p-5 whitespace-pre-line text-slate-800 leading-relaxed text-[15px]" x-text="it.text"></div>
+
+        <!-- questions (no feedback during exam) -->
+        <div class="mt-4 space-y-5">
+          <template x-for="(q, qi) in it.questions" :key="qi">
+            <div>
+              <p class="font-medium text-slate-900 text-[15px]"><span class="text-slate-400 mr-1.5" x-text="(qi + 1) + '.'"></span><span x-text="q.q"></span></p>
+              <div x-show="q.type !== 'short'" class="mt-2 grid gap-2">
+                <template x-for="(opt, oi) in q.options" :key="oi">
+                  <button @click="choose(ii, qi, oi)" :class="optClass(active.ans[ii], qi, oi, q, false)" class="text-left px-4 py-2.5 rounded-lg border text-sm font-medium transition-colors" x-text="opt"></button>
+                </template>
+              </div>
+              <p x-show="q.type === 'short'" class="mt-2 text-xs text-slate-400 italic">Open question — you'll compare with a model answer in the results.</p>
+            </div>
+          </template>
+        </div>
+      </section>
+    </template>
+
+    <div class="mt-10 flex justify-end">
+      <button @click="goto(step === 'co' ? 'ce' : 'pe')" class="inline-flex items-center px-6 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800" x-text="step === 'co' ? 'Continue to Reading →' : 'Continue to Writing →'"></button>
+    </div>
+  </div>
+
+  <!-- ============ PRODUCTION ÉCRITE ============ -->
+  <div x-show="step === 'pe'" x-cloak>
+    <h2 class="text-2xl font-extrabold tracking-tight text-slate-900">Part 3 · Production écrite</h2>
+    <p class="mt-1 text-sm text-slate-500">Write an argued text of about 250 words. ~1 hour in the real exam.</p>
+
+    <div class="mt-5 rounded-xl border border-blue-200 bg-blue-50 p-5">
+      <p class="text-xs font-semibold text-blue-700 uppercase tracking-wide">Sujet</p>
+      <p class="mt-1.5 text-slate-800" x-text="PE_SUBJECT"></p>
+    </div>
+
+    <details class="mt-4 group">
+      <summary class="cursor-pointer text-sm font-medium text-slate-600 hover:text-slate-900 select-none">✅ Checklist — what the examiner looks for</summary>
+      <ul class="mt-3 space-y-1.5 text-sm text-slate-600 list-disc pl-5">
+        <li>An introduction that presents the theme and your position (la problématique)</li>
+        <li>2–3 clear arguments, each with an example, linked by connectors (de plus, en revanche, par conséquent…)</li>
+        <li>A nuance or counter-argument (certes…, mais…)</li>
+        <li>A short conclusion that restates your view</li>
+        <li>~250 words · formal register · « vous » / impersonal</li>
+      </ul>
+    </details>
+
+    <textarea x-model="essay" rows="12" placeholder="Rédigez votre texte ici…" class="mt-4 w-full rounded-xl border border-slate-300 px-4 py-3 text-[15px] leading-relaxed focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"></textarea>
+    <div class="mt-1 flex items-center justify-between text-xs">
+      <span :class="wordCount >= 250 ? 'text-green-600' : 'text-slate-400'"><span x-text="wordCount"></span> words <span class="text-slate-400">· aim ~250</span></span>
+      <button @click="showModel = !showModel" class="font-medium text-blue-600 hover:underline" x-text="showModel ? 'Hide model answer' : 'Show a model answer'"></button>
+    </div>
+    <div x-show="showModel" x-cloak class="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-5 whitespace-pre-line text-[15px] text-slate-700 leading-relaxed" x-text="MODEL_ESSAY"></div>
+
+    <div class="mt-5 rounded-xl border border-slate-200 p-5">
+      <p class="font-semibold text-slate-900 text-sm">Get it marked /25 by an AI examiner</p>
+      <p class="mt-1 text-sm text-slate-600">Opens with your essay + the official grid. It returns corrections and a score — type that score below.</p>
+      <div class="mt-3 flex flex-wrap gap-3">
+        <a :href="peUrl('claude')" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800">▶ Mark in Claude</a>
+        <a :href="peUrl('chatgpt')" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50">▶ Mark in ChatGPT</a>
+        <label class="inline-flex items-center gap-2 text-sm text-slate-600">Score: <input type="number" min="0" max="25" x-model="peScore" class="w-20 rounded-lg border border-slate-300 px-2 py-1.5 text-sm" placeholder="/25"></label>
+      </div>
+    </div>
+
+    <div class="mt-8 flex justify-between">
+      <button @click="goto('ce')" class="text-sm font-medium text-slate-500 hover:text-slate-900">← Back</button>
+      <button @click="goto('po')" class="inline-flex items-center px-6 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800">Continue to Speaking →</button>
+    </div>
+  </div>
+
+  <!-- ============ PRODUCTION ORALE ============ -->
+  <div x-show="step === 'po'" x-cloak>
+    <h2 class="text-2xl font-extrabold tracking-tight text-slate-900">Part 4 · Production orale</h2>
+    <p class="mt-1 text-sm text-slate-500">Present a viewpoint from the document, then defend it in a debate. ~30 min prep + exam.</p>
+
+    <div class="mt-5 rounded-xl border border-blue-200 bg-blue-50 p-5">
+      <p class="text-xs font-semibold text-blue-700 uppercase tracking-wide">Document déclencheur</p>
+      <p class="mt-1.5 text-slate-800" x-text="PO_TRIGGER"></p>
+    </div>
+
+    <details class="mt-4 group">
+      <summary class="cursor-pointer text-sm font-medium text-slate-600 hover:text-slate-900 select-none">🗒️ How to structure your monologue</summary>
+      <ul class="mt-3 space-y-1.5 text-sm text-slate-600 list-disc pl-5">
+        <li>Introduce the theme: « Ce document soulève la question de… »</li>
+        <li>Announce a plan: « Je l'aborderai en deux parties… »</li>
+        <li>Develop with connectors and examples (d'une part… d'autre part, par exemple…)</li>
+        <li>Conclude with your position: « En somme, je suis convaincu(e) que… »</li>
+        <li>In the debate: agree-then-qualify, nuance, give concrete examples</li>
+      </ul>
+    </details>
+
+    <div class="mt-5 rounded-xl border border-slate-200 p-5">
+      <p class="font-semibold text-slate-900 text-sm">Run the oral with an AI examiner /25</p>
+      <p class="mt-1 text-sm text-slate-600">It gives you the topic, debates you, then scores you on the DELF grid. (In the ChatGPT app you can even do it by voice.) Type your score below.</p>
+      <div class="mt-3 flex flex-wrap gap-3">
+        <a :href="poUrl('claude')" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800">▶ Oral in Claude</a>
+        <a :href="poUrl('chatgpt')" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50">▶ Oral in ChatGPT</a>
+        <label class="inline-flex items-center gap-2 text-sm text-slate-600">Score: <input type="number" min="0" max="25" x-model="poScore" class="w-20 rounded-lg border border-slate-300 px-2 py-1.5 text-sm" placeholder="/25"></label>
+      </div>
+    </div>
+
+    <div class="mt-8 flex justify-between">
+      <button @click="goto('pe')" class="text-sm font-medium text-slate-500 hover:text-slate-900">← Back</button>
+      <button @click="goto('results')" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">See my results →</button>
+    </div>
+  </div>
+
+  <!-- ============ RESULTS ============ -->
+  <div x-show="step === 'results'" x-cloak>
+    <h2 class="text-2xl font-extrabold tracking-tight text-slate-900">Your DELF B2 mock result</h2>
+
+    <div class="mt-5 rounded-2xl border p-6 text-center" :class="passed ? 'border-green-300 bg-green-50' : 'border-amber-300 bg-amber-50'">
+      <p class="text-sm uppercase tracking-wide" :class="passed ? 'text-green-700' : 'text-amber-700'" x-text="passed ? 'Pass 🎉' : 'Not yet — keep going'"></p>
+      <div class="mt-1 text-5xl font-extrabold text-slate-900"><span x-text="total"></span> <span class="text-2xl text-slate-400">/ 100</span></div>
+      <p class="mt-2 text-sm text-slate-600">Pass mark is 50/100, with at least 5/25 in every paper. Writing &amp; speaking only count once you enter their AI-examiner scores.</p>
+    </div>
+
+    <div class="mt-6 overflow-hidden rounded-xl border border-slate-200">
+      <table class="w-full text-sm">
+        <tbody>
+          <tr class="border-b border-slate-100"><td class="px-4 py-3">🎧 Compréhension de l'oral</td><td class="px-4 py-3 text-right font-semibold text-slate-900"><span x-text="co25"></span> / 25 <span class="text-xs font-normal text-slate-400">(<span x-text="co.correct"></span>/<span x-text="co.total"></span>)</span></td></tr>
+          <tr class="border-b border-slate-100"><td class="px-4 py-3">📖 Compréhension des écrits</td><td class="px-4 py-3 text-right font-semibold text-slate-900"><span x-text="ce25"></span> / 25 <span class="text-xs font-normal text-slate-400">(<span x-text="ce.correct"></span>/<span x-text="ce.total"></span>)</span></td></tr>
+          <tr class="border-b border-slate-100"><td class="px-4 py-3">✍️ Production écrite <span class="text-xs text-slate-400" x-show="!peScore">— enter AI score</span></td><td class="px-4 py-3 text-right font-semibold text-slate-900"><span x-text="pe25"></span> / 25</td></tr>
+          <tr><td class="px-4 py-3">🎙️ Production orale <span class="text-xs text-slate-400" x-show="!poScore">— enter AI score</span></td><td class="px-4 py-3 text-right font-semibold text-slate-900"><span x-text="po25"></span> / 25</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-7 flex flex-wrap gap-3">
+      <button @click="start()" class="px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800">↻ New mock (fresh texts)</button>
+      <button @click="restart()" class="px-5 py-2.5 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50">Back to start</button>
+      <a href="./train.html" class="px-5 py-2.5 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50">Practise more →</a>
+    </div>
+
+    <!-- review: correct answers + explanations -->
+    <h3 class="mt-12 text-sm font-semibold text-slate-900 uppercase tracking-wide">Review · listening &amp; reading</h3>
+    <template x-for="(grp, gi) in [{label:'🎧 Listening', items: coItems, ans: coAns}, {label:'📖 Reading', items: ceItems, ans: ceAns}]" :key="gi">
+      <div class="mt-5">
+        <p class="font-semibold text-slate-700" x-text="grp.label"></p>
+        <template x-for="(it, ii) in grp.items" :key="it.id">
+          <div class="mt-3 rounded-xl border border-slate-200 p-5">
+            <p class="text-xs font-medium text-slate-400" x-text="it.title"></p>
+            <details class="mt-1">
+              <summary class="cursor-pointer text-xs font-medium text-blue-600 select-none">show text / transcript</summary>
+              <div class="mt-2 whitespace-pre-line text-sm text-slate-600 leading-relaxed" x-text="it.text"></div>
+            </details>
+            <div class="mt-3 space-y-4">
+              <template x-for="(q, qi) in it.questions" :key="qi">
+                <div>
+                  <p class="font-medium text-slate-900 text-sm"><span class="text-slate-400 mr-1.5" x-text="(qi + 1) + '.'"></span><span x-text="q.q"></span></p>
+                  <div x-show="q.type !== 'short'" class="mt-2 grid gap-1.5">
+                    <template x-for="(opt, oi) in q.options" :key="oi">
+                      <div :class="optClass(grp.ans[ii], qi, oi, q, true)" class="text-left px-3 py-2 rounded-lg border text-sm" x-text="opt"></div>
+                    </template>
+                    <p class="mt-1 text-xs text-slate-500" x-text="q.explain"></p>
+                  </div>
+                  <div x-show="q.type === 'short'" class="mt-2 text-sm rounded-lg bg-blue-50 px-3 py-2">
+                    <span class="font-medium text-slate-900">Model: </span><span class="text-slate-700" x-text="q.answer"></span>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+        </template>
+      </div>
+    </template>
+  </div>
+
+</main>
+
+<footer class="border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-5 py-10 text-center">
+    <p class="text-lg font-bold text-slate-900">Tu es prêt(e). Vas-y ! 🇫🇷</p>
+    <p class="mt-2 text-sm text-slate-500"><strong>Coucou</strong> · a free, open playbook · built with AI · 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>

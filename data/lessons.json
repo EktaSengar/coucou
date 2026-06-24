@@ -1084,5 +1084,525 @@
       "Explain politely that a document is missing from your dossier."
     ],
     "tutorPrompt": "Role-play French admin and apartment-hunting at B1. First be an estate agent showing me a flat — make me ask about the loyer, charges, caution and bail, and compare two options with the comparative and superlative. Then switch to a clerk at the préfecture handling my dossier. Keep it in French, help me when I'm stuck, and finish with the key housing/admin vocabulary plus five phrases to remember."
+  },
+  {
+    "id": "b2-01-argumenter",
+    "level": "B2",
+    "module": "Holding your own",
+    "title": "Building an argument",
+    "minutes": 35,
+    "goal": "Structure an opinion the way the DELF exam wants — introduce it, back it with reasons, weigh both sides, and conclude.",
+    "vocab": [
+      {
+        "fr": "à mon sens / selon moi",
+        "phonetic": "ah mohn SAHNS / suh-lohn MWAH",
+        "en": "in my view / according to me"
+      },
+      {
+        "fr": "d'une part… d'autre part",
+        "phonetic": "dewn PAR… doh-truh PAR",
+        "en": "on one hand… on the other"
+      },
+      {
+        "fr": "en effet",
+        "phonetic": "ahn neh-FEH",
+        "en": "indeed / as a matter of fact"
+      },
+      {
+        "fr": "par conséquent",
+        "phonetic": "par kohn-say-KAHN",
+        "en": "consequently"
+      },
+      {
+        "fr": "en revanche",
+        "phonetic": "ahn ruh-VAHNSH",
+        "en": "on the other hand / by contrast"
+      },
+      {
+        "fr": "néanmoins",
+        "phonetic": "nay-ahn-MWAN",
+        "en": "nevertheless"
+      },
+      {
+        "fr": "en ce qui concerne",
+        "phonetic": "ahn suh kee kohn-SEHRN",
+        "en": "as regards / when it comes to"
+      },
+      {
+        "fr": "pour conclure",
+        "phonetic": "poor kohn-KLEWR",
+        "en": "to conclude"
+      }
+    ],
+    "grammar": {
+      "point": "Structurer une argumentation",
+      "explain": "A B2 opinion follows a clear plan. Introduce the theme and your thesis (« De nos jours, on se demande si… À mon sens,… »). Then chain your arguments with logical connectors: add (« de plus », « par ailleurs »), give cause (« car », « étant donné que »), give consequence (« par conséquent », « c'est pourquoi »), and concede then counter (« certes…, mais… »). Weigh both sides with « d'une part… d'autre part » and « en revanche », then close with « pour conclure / en somme ». Connectors of addition and consequence take the indicative; concession with « bien que » takes the subjunctive."
+    },
+    "examples": [
+      "Certes, les réseaux sociaux nous rapprochent ; en revanche, ils nuisent parfois à la vie privée. (sehr-TESS, lay ray-zoh soh-syoh noo rah-PROSH ; ahn ruh-vahnsh, eel nwee-zuh par-FWAH ah lah vee pree-VAY)",
+      "Le télétravail se développe ; par conséquent, les villes se vident peu à peu. (luh tay-lay-trah-VAHY suh day-vuh-LOP ; par kohn-say-kahn, lay VEEL suh VEED puh ah PUH)"
+    ],
+    "practice": [
+      "Introduce a topic and state your thesis: « De nos jours, … À mon sens, … ».",
+      "Give one argument with a cause (« car / étant donné que ») and its consequence (« par conséquent »).",
+      "Concede, then counter: « Certes…, mais… ».",
+      "Write a two-sentence conclusion with « pour conclure » / « en somme »."
+    ],
+    "tutorPrompt": "Be my DELF B2 writing coach. Give me a topical question (society, technology, environment…) and have me argue a position in French. Push me to use a clear plan — thesis, arguments with logical connectors (par conséquent, en revanche, néanmoins, bien que), both sides, and a conclusion. After each answer, correct my connectors and structure, suggest one more sophisticated phrasing, and rate my argument out of 5 like a DELF examiner."
+  },
+  {
+    "id": "b2-02-subjonctif",
+    "level": "B2",
+    "module": "Holding your own",
+    "title": "Mastering the subjunctive",
+    "minutes": 35,
+    "goal": "Use the subjunctive with confidence — after feelings, doubt, will and the key conjunctions — and know when the indicative is right instead.",
+    "vocab": [
+      {
+        "fr": "bien que / quoique",
+        "phonetic": "byan KUH / kwah-KUH",
+        "en": "although / even though"
+      },
+      {
+        "fr": "pour que / afin que",
+        "phonetic": "poor KUH / ah-fan KUH",
+        "en": "so that"
+      },
+      {
+        "fr": "avant que",
+        "phonetic": "ah-vahn KUH",
+        "en": "before"
+      },
+      {
+        "fr": "à condition que",
+        "phonetic": "ah kohn-dee-syohn KUH",
+        "en": "provided that"
+      },
+      {
+        "fr": "jusqu'à ce que",
+        "phonetic": "zhew-skah suh KUH",
+        "en": "until"
+      },
+      {
+        "fr": "il vaut mieux que",
+        "phonetic": "eel voh myuh KUH",
+        "en": "it's better that"
+      },
+      {
+        "fr": "je doute que",
+        "phonetic": "zhuh doot KUH",
+        "en": "I doubt that"
+      },
+      {
+        "fr": "je crains que",
+        "phonetic": "zhuh kran KUH",
+        "en": "I'm afraid that"
+      }
+    ],
+    "grammar": {
+      "point": "Le subjonctif : déclencheurs et indicatif vs subjonctif",
+      "explain": "The subjunctive marks something not presented as a plain fact — will, necessity, emotion, doubt, and certain conjunctions. Triggers: wanting / necessity (« il faut que », « je veux que »), emotion (« je suis content / triste / surpris que »), doubt and denial (« je doute que », « je ne pense pas que »), and conjunctions (« bien que », « pour que », « avant que », « à condition que », « jusqu'à ce que »). But certainty and likelihood keep the indicative: « je pense que… », « il est certain / probable que… », « parce que… ». Compare: « bien qu'il soit tard » (subj.) vs « parce qu'il est tard » (ind.)."
+    },
+    "examples": [
+      "Bien que ce soit difficile, il faut que nous continuions à apprendre. (byan kuh suh swah dee-fee-SEEL, eel foh kuh noo kohn-tee-nwee-OHN ah ah-PRAHN-druh)",
+      "Je crains qu'il ne soit trop tard pour s'inscrire. (zhuh kran keel nuh swah troh TAR poor san-SKREER)"
+    ],
+    "practice": [
+      "Use « bien que » + subjunctive to concede a point in a debate.",
+      "Express a worry with « je crains que… » or a doubt with « je doute que… ».",
+      "Say what must happen with « il faut que » / « il vaut mieux que ».",
+      "Contrast the two: write « bien qu'il… » (subj.) then « parce qu'il… » (ind.) for the same idea."
+    ],
+    "tutorPrompt": "Be my B2 French tutor for the subjunctive. Drill me on the triggers — will, necessity, emotion, doubt, and conjunctions (bien que, pour que, avant que, à condition que, jusqu'à ce que). Mix in sentences that should stay in the indicative (je pense que, il est probable que, parce que) so I learn to tell them apart. Correct each choice with a one-line why, and finish with the five subjunctive triggers I get wrong most."
+  },
+  {
+    "id": "b2-03-hypotheses",
+    "level": "B2",
+    "module": "Holding your own",
+    "title": "Regret & « what could have been »",
+    "minutes": 35,
+    "goal": "Talk about the past that didn't happen — regrets, reproaches and hypotheses — with the pluperfect and the past conditional.",
+    "vocab": [
+      {
+        "fr": "si j'avais su",
+        "phonetic": "see zhah-veh SEW",
+        "en": "if I had known"
+      },
+      {
+        "fr": "j'aurais dû",
+        "phonetic": "zhoh-reh DEW",
+        "en": "I should have"
+      },
+      {
+        "fr": "j'aurais pu",
+        "phonetic": "zhoh-reh PEW",
+        "en": "I could have"
+      },
+      {
+        "fr": "j'aurais aimé",
+        "phonetic": "zhoh-reh eh-MAY",
+        "en": "I would have liked"
+      },
+      {
+        "fr": "à ta place, j'aurais…",
+        "phonetic": "ah tah PLASS, zhoh-REH",
+        "en": "if I were you, I would have…"
+      },
+      {
+        "fr": "regretter",
+        "phonetic": "ruh-greh-TAY",
+        "en": "to regret"
+      },
+      {
+        "fr": "sinon",
+        "phonetic": "see-NOHN",
+        "en": "otherwise / or else"
+      },
+      {
+        "fr": "au lieu de",
+        "phonetic": "oh lyuh DUH",
+        "en": "instead of"
+      }
+    ],
+    "grammar": {
+      "point": "Le plus-que-parfait & le conditionnel passé",
+      "explain": "The plus-que-parfait says what had already happened before another past moment: avoir / être in the imparfait + past participle (« j'avais fini », « elle était partie »). The conditionnel passé says what would have happened: avoir / être in the conditional + past participle (« j'aurais fait », « il serait venu »). Put them together for unreal past hypotheses — the regret pattern: si + plus-que-parfait → conditionnel passé. « Si j'avais étudié, j'aurais réussi » (If I had studied, I would have passed). Use « j'aurais dû / pu » + infinitive for regrets and reproaches."
+    },
+    "examples": [
+      "Si nous étions partis plus tôt, nous n'aurions pas raté le train. (see noo zay-tyohn par-TEE plew TOH, noo noh-ryohn pah rah-TAY luh TRAN)",
+      "Tu aurais dû me prévenir ; j'aurais pu t'aider. (tew oh-reh DEW muh pray-vuh-NEER ; zhoh-reh PEW teh-DAY)"
+    ],
+    "practice": [
+      "Finish the regret: « Si j'avais su, je… ».",
+      "Reproach gently: « Tu aurais dû… ».",
+      "Say what you would have done differently last year, using the conditionnel passé.",
+      "Chain it: « Si + plus-que-parfait, conditionnel passé » about a missed opportunity."
+    ],
+    "tutorPrompt": "Be my B2 French tutor for past hypotheses and regrets. Give me situations and have me react with « si + plus-que-parfait → conditionnel passé » and with « j'aurais dû / pu / aimé ». Make me express regrets, reproaches and alternative outcomes. Correct my auxiliaries and participle agreement, and end with five regret/hypothesis phrases worth memorising."
+  },
+  {
+    "id": "b2-04-discours-indirect",
+    "level": "B2",
+    "module": "Holding your own",
+    "title": "Reporting what others said",
+    "minutes": 30,
+    "goal": "Report conversations, news and instructions accurately — with the right tense shifts and time changes.",
+    "vocab": [
+      {
+        "fr": "il a dit que",
+        "phonetic": "eel ah dee KUH",
+        "en": "he said that"
+      },
+      {
+        "fr": "elle a demandé si",
+        "phonetic": "el ah duh-mahn-DAY SEE",
+        "en": "she asked if / whether"
+      },
+      {
+        "fr": "il a répondu que",
+        "phonetic": "eel ah ray-pohn-DEW KUH",
+        "en": "he replied that"
+      },
+      {
+        "fr": "elle a expliqué que",
+        "phonetic": "el ah ex-plee-KAY KUH",
+        "en": "she explained that"
+      },
+      {
+        "fr": "il m'a conseillé de",
+        "phonetic": "eel mah kohn-seh-YAY DUH",
+        "en": "he advised me to"
+      },
+      {
+        "fr": "selon lui / d'après elle",
+        "phonetic": "suh-lohn LWEE / dah-preh EL",
+        "en": "according to him / her"
+      },
+      {
+        "fr": "la veille / le lendemain",
+        "phonetic": "lah VEHY / luh lahn-duh-MAN",
+        "en": "the day before / the next day"
+      },
+      {
+        "fr": "ce jour-là",
+        "phonetic": "suh zhoor LAH",
+        "en": "that day"
+      }
+    ],
+    "grammar": {
+      "point": "Le discours indirect",
+      "explain": "To report speech, drop the quotation marks and link with « que » (a statement), « si » (a yes/no question) or « ce que / ce qui » (what…). If the reporting verb is in the past, shift the tense back: présent → imparfait, passé composé → plus-que-parfait, futur → conditionnel. « Je suis fatigué » → « Il a dit qu'il était fatigué. » « Je viendrai » → « Elle a dit qu'elle viendrait. » Pronouns and time words shift too: aujourd'hui → ce jour-là, hier → la veille, demain → le lendemain. For commands, use « de » + infinitive: « Pars ! » → « Il m'a dit de partir. »"
+    },
+    "examples": [
+      "Il a dit qu'il avait oublié son rendez-vous et qu'il rappellerait le lendemain. (eel ah dee keel ah-veh oo-blee-AY sohn rahn-day-VOO ay keel rah-pel-REH luh lahn-duh-MAN)",
+      "Elle m'a demandé si j'avais aimé le film. (el mah duh-mahn-DAY see zhah-veh eh-MAY luh FEELM)"
+    ],
+    "practice": [
+      "Report a statement in the past: « Je travaille demain » → « Il a dit que… ».",
+      "Report a yes/no question with « si »: « Tu viens ? » → « Elle a demandé… ».",
+      "Report a command with « de » + infinitive: « Appelle-moi ! » → « Il m'a dit… ».",
+      "Summarise a short piece of news in reported speech (« Selon le journal, … »)."
+    ],
+    "tutorPrompt": "Be my B2 French tutor for reported speech (le discours indirect). Say something to me, then have me report it accurately — shifting tenses (présent → imparfait, futur → conditionnel, passé composé → plus-que-parfait), pronouns and time words. Cover statements, questions and commands. Correct my tense shifts with a one-line why, and finish with the present → past shift table."
+  },
+  {
+    "id": "b2-05-passif-presse",
+    "level": "B2",
+    "module": "Holding your own",
+    "title": "The news & the passive voice",
+    "minutes": 30,
+    "goal": "Follow and discuss the news, and use the passive voice the way the French press does.",
+    "vocab": [
+      {
+        "fr": "un journal / les actualités",
+        "phonetic": "uhn zhoor-NAL / lay zak-tew-ah-lee-TAY",
+        "en": "a newspaper / the news"
+      },
+      {
+        "fr": "un article / un reportage",
+        "phonetic": "uhn ar-TEEKL / uhn ruh-por-TAZH",
+        "en": "an article / a report"
+      },
+      {
+        "fr": "une enquête",
+        "phonetic": "ewn ahn-KET",
+        "en": "an investigation / a survey"
+      },
+      {
+        "fr": "un fait divers",
+        "phonetic": "uhn feh dee-VEHR",
+        "en": "a news item (crime / accident)"
+      },
+      {
+        "fr": "selon une étude",
+        "phonetic": "suh-lohn ewn ay-TEWD",
+        "en": "according to a study"
+      },
+      {
+        "fr": "le gouvernement / une loi",
+        "phonetic": "luh goo-vehr-nuh-MAHN / ewn LWAH",
+        "en": "the government / a law"
+      },
+      {
+        "fr": "augmenter / diminuer",
+        "phonetic": "ohg-mahn-TAY / dee-mee-new-AY",
+        "en": "to rise / to fall"
+      },
+      {
+        "fr": "il paraît que / on dit que",
+        "phonetic": "eel pah-reh KUH / ohn dee KUH",
+        "en": "apparently / they say that"
+      }
+    ],
+    "grammar": {
+      "point": "La voix passive",
+      "explain": "The passive puts the receiver of the action first — common in news and formal writing. Form it with être (in the right tense) + past participle, and the participle agrees with the subject: « une nouvelle loi a été votée », « le suspect sera interrogé ». Name the doer with « par »: « le rapport a été rédigé par des experts ». Use the passive to stay impersonal or to foreground the result. When the doer is vague, French often prefers the active « on »: « on a annoncé une réforme » rather than « une réforme a été annoncée »."
+    },
+    "examples": [
+      "Une réforme du système de santé a été annoncée hier par le gouvernement. (ewn ray-FORM dew sees-tem duh sahn-TAY ah ay-tay ah-nohn-SAY ee-EHR par luh goo-vehr-nuh-MAHN)",
+      "Selon une étude, le prix des loyers a augmenté de 5 % en un an. (suh-lohn ewn ay-TEWD, luh pree day lwah-YAY ah ohg-mahn-TAY duh sank poor-SAHN ahn nuhn AHN)"
+    ],
+    "practice": [
+      "Turn an active sentence into the passive: « Le maire a inauguré le pont » → « Le pont… ».",
+      "Report a statistic with « selon une étude, … ».",
+      "Use « on » to stay impersonal: « On a annoncé que… ».",
+      "Summarise a headline you saw this week in one French sentence."
+    ],
+    "tutorPrompt": "Be my B2 French tutor for the news and the passive voice. Give me short French headlines or facts and have me (1) rephrase them in the passive (être + participe passé, with agreement) and (2) discuss them. Also drill the active « on » alternative and reporting with « selon ». Correct my participle agreement and register, and end with ten useful news/press words."
+  },
+  {
+    "id": "b2-06-societe",
+    "level": "B2",
+    "module": "Holding your own",
+    "title": "Debating big issues — lequel, auquel, duquel",
+    "minutes": 30,
+    "goal": "Discuss society and the environment, and connect complex ideas precisely with lequel, auquel and duquel.",
+    "vocab": [
+      {
+        "fr": "l'environnement",
+        "phonetic": "lahn-vee-rohn-MAHN",
+        "en": "the environment"
+      },
+      {
+        "fr": "le réchauffement climatique",
+        "phonetic": "luh ray-shoh-fuh-mahn klee-mah-TEEK",
+        "en": "global warming"
+      },
+      {
+        "fr": "le développement durable",
+        "phonetic": "luh day-vlohp-mahn dew-RAH-bluh",
+        "en": "sustainable development"
+      },
+      {
+        "fr": "les inégalités",
+        "phonetic": "lay zee-nay-gah-lee-TAY",
+        "en": "inequalities"
+      },
+      {
+        "fr": "la mondialisation",
+        "phonetic": "lah mohn-dyah-lee-zah-SYOHN",
+        "en": "globalisation"
+      },
+      {
+        "fr": "un enjeu",
+        "phonetic": "uhn ahn-ZHUH",
+        "en": "a stake / a key issue"
+      },
+      {
+        "fr": "lutter contre",
+        "phonetic": "lew-TAY KOHN-truh",
+        "en": "to fight against"
+      },
+      {
+        "fr": "prendre conscience de",
+        "phonetic": "prahn-druh kohn-SYAHNS duh",
+        "en": "to become aware of"
+      }
+    ],
+    "grammar": {
+      "point": "Les pronoms relatifs composés : lequel, auquel, duquel",
+      "explain": "After a preposition (à, de, avec, pour, sans, grâce à…), the relative pronoun becomes lequel / laquelle / lesquels / lesquelles, agreeing with the noun: « le projet pour lequel je travaille », « les raisons pour lesquelles… ». With « à » it contracts: à + lequel → auquel, à + lesquels → auxquels (« le problème auquel on pense »). With « de » (and « à côté de », « près de »…) it contracts: de + lequel → duquel (« l'entreprise au sein de laquelle je travaille »). For people you may use « qui » after a preposition: « la personne avec qui je parle »."
+    },
+    "examples": [
+      "Le réchauffement climatique est un enjeu auquel nous devons tous réfléchir. (luh ray-shoh-fuh-mahn klee-mah-teek eh tuhn ahn-ZHUH oh-kel noo duh-vohn toos ray-flay-SHEER)",
+      "Voici les raisons pour lesquelles je soutiens cette réforme. (vwah-see lay reh-ZOHN poor lay-KEL zhuh soo-tyan set ray-FORM)"
+    ],
+    "practice": [
+      "Complete with the right form: « C'est un sujet ___ je m'intéresse » (à → auquel).",
+      "Give « les raisons pour lesquelles… » you support or oppose an idea.",
+      "Make a sentence with « grâce auquel / à laquelle ».",
+      "State an environmental enjeu and one way to « lutter contre » it."
+    ],
+    "tutorPrompt": "Be my B2 French tutor on society and the environment, focusing on compound relative pronouns. Pick an issue (climate, inequality, globalisation) and debate it with me, pushing me to link ideas with lequel, auquel and duquel (and « pour lesquelles », « grâce auquel »). Correct the contractions and agreement, and finish with five « pour lesquelles… »-type phrases plus key vocabulary for the topic."
+  },
+  {
+    "id": "b2-07-lettre-formelle",
+    "level": "B2",
+    "module": "Holding your own",
+    "title": "Formal writing — letters & complaints",
+    "minutes": 35,
+    "goal": "Write a clear formal letter or email — a request, a complaint, an application — with the right register and set phrases.",
+    "vocab": [
+      {
+        "fr": "Madame, Monsieur,",
+        "phonetic": "mah-DAM, muh-SYUH",
+        "en": "Dear Sir or Madam,"
+      },
+      {
+        "fr": "Je me permets de vous écrire",
+        "phonetic": "zhuh muh pehr-meh duh voo zay-KREER",
+        "en": "I am writing to you"
+      },
+      {
+        "fr": "Je vous écris afin de",
+        "phonetic": "zhuh voo zay-kree ah-fan DUH",
+        "en": "I am writing in order to"
+      },
+      {
+        "fr": "suite à",
+        "phonetic": "swee-TAH",
+        "en": "further to / following"
+      },
+      {
+        "fr": "Je vous serais reconnaissant(e) de",
+        "phonetic": "zhuh voo suh-reh ruh-koh-neh-SAHN duh",
+        "en": "I would be grateful if you would"
+      },
+      {
+        "fr": "Veuillez trouver ci-joint",
+        "phonetic": "vuh-yay troo-vay see-ZHWAN",
+        "en": "Please find attached"
+      },
+      {
+        "fr": "dans l'attente de votre réponse",
+        "phonetic": "dahn lah-tahnt duh voh-truh ray-PONS",
+        "en": "looking forward to your reply"
+      },
+      {
+        "fr": "Je vous prie d'agréer mes salutations distinguées",
+        "phonetic": "zhuh voo pree dah-gray-AY may sah-lew-tah-syohn dees-tan-GAY",
+        "en": "Yours faithfully (formal closing)"
+      }
+    ],
+    "grammar": {
+      "point": "Le registre formel & le gérondif",
+      "explain": "Formal French uses « vous », avoids slang and shortcuts, and leans on set phrases (« je me permets de… », « je vous serais reconnaissant de… », « veuillez… »). Swap casual verbs for precise ones (demander → solliciter, dire → informer). A handy tool is the gérondif — « en » + present participle (the nous-form stem + -ant): it shows how, why or when, with the same subject as the main verb: « en attendant votre réponse », « j'ai appris le français en travaillant à Paris ». Don't confuse « en faisant » (while / by doing) with « pour faire » (in order to do)."
+    },
+    "examples": [
+      "Je me permets de vous écrire afin de solliciter un rendez-vous. (zhuh muh pehr-meh duh voo zay-kree ah-fan duh soh-lee-see-TAY uhn rahn-day-VOO)",
+      "En attendant votre réponse, je vous prie d'agréer mes salutations distinguées. (ahn nah-tahn-dahn voh-truh ray-PONS, zhuh voo pree dah-gray-AY may sah-lew-tah-syohn dees-tan-GAY)"
+    ],
+    "practice": [
+      "Open a formal email: greeting + « je me permets de vous écrire afin de… ».",
+      "Make a polite request with « je vous serais reconnaissant(e) de… ».",
+      "Write one complaint sentence with « suite à… » about a problem.",
+      "Use a gérondif: « En + participe présent, … » (e.g. how you learned something)."
+    ],
+    "tutorPrompt": "Be my DELF B2 formal-writing coach. Give me a realistic scenario (a complaint to a landlord, a request to the mairie, a job application) and have me write a short formal letter in French. Check my register, opening and closing formulas (« je me permets de… », « veuillez agréer… »), and push me to use the gérondif correctly. After each attempt, rewrite my weakest sentence more formally and rate it like an examiner."
+  },
+  {
+    "id": "b2-08-delf-oral",
+    "level": "B2",
+    "module": "Holding your own",
+    "title": "The DELF B2 oral exam",
+    "minutes": 35,
+    "goal": "Walk into the DELF B2 oral ready — present a viewpoint from a short text, structure it, and defend it in the debate.",
+    "vocab": [
+      {
+        "fr": "le document soulève la question de",
+        "phonetic": "luh doh-kew-mahn soo-lev lah kes-tyohn DUH",
+        "en": "the text raises the question of"
+      },
+      {
+        "fr": "il s'agit de",
+        "phonetic": "eel sah-zhee DUH",
+        "en": "it's about / it concerns"
+      },
+      {
+        "fr": "je l'aborderai en deux parties",
+        "phonetic": "zhuh lah-bor-duh-ray ahn duh par-TEE",
+        "en": "I'll cover it in two parts"
+      },
+      {
+        "fr": "tout d'abord / ensuite / pour finir",
+        "phonetic": "too dah-BOR / ahn-SWEET / poor fee-NEER",
+        "en": "first of all / then / to finish"
+      },
+      {
+        "fr": "je suis convaincu(e) que",
+        "phonetic": "zhuh swee kohn-van-KEW kuh",
+        "en": "I'm convinced that"
+      },
+      {
+        "fr": "je tiens à souligner que",
+        "phonetic": "zhuh tyan ah soo-lee-NYAY kuh",
+        "en": "I'd like to stress that"
+      },
+      {
+        "fr": "vous avez raison, cependant",
+        "phonetic": "voo zah-vay reh-ZOHN, suh-pahn-DAHN",
+        "en": "you're right, however"
+      },
+      {
+        "fr": "en somme / pour conclure",
+        "phonetic": "ahn SOM / poor kohn-KLEWR",
+        "en": "in short / to conclude"
+      }
+    ],
+    "grammar": {
+      "point": "Présenter et défendre un point de vue",
+      "explain": "The B2 oral has two stages: a monologue presenting a viewpoint on a short document, then a debate with the examiner. Structure the monologue: introduce the document (« Ce document, tiré de…, traite de… / soulève la question de… »), announce your plan (« Je l'aborderai en deux parties »), develop with connectors (« tout d'abord », « par ailleurs », « en revanche »), and conclude (« en somme, … »). In the debate, defend your view but stay flexible: agree-then-qualify (« vous avez raison, cependant… »), nuance (« cela dépend de… », « dans une certaine mesure ») and back claims with examples (« par exemple », « concrètement »)."
+    },
+    "examples": [
+      "Ce document soulève la question de la place des écrans dans l'éducation ; je l'aborderai en deux parties. (suh doh-kew-mahn soo-lev lah kes-tyohn duh lah plass day zay-KRAN dahn lay-dew-kah-SYOHN ; zhuh lah-bor-duh-ray ahn duh par-TEE)",
+      "Vous avez raison sur ce point, cependant il ne faut pas négliger les risques. (voo zah-vay reh-zohn sewr suh PWAN, suh-pahn-dahn eel nuh foh pah nay-glee-ZHAY lay REESK)"
+    ],
+    "practice": [
+      "Introduce a document: « Ce document traite de… et soulève la question de… ».",
+      "Announce a two-part plan and give your thesis.",
+      "Agree, then qualify in a debate: « Vous avez raison, cependant… ».",
+      "Give a 60-second spoken opinion on screen time, then defend it against one objection."
+    ],
+    "tutorPrompt": "Act as a DELF B2 oral examiner. Give me a short French text or statement on a societal topic; I'll take a minute, then present a structured viewpoint (introduce the document, announce a plan, develop with connectors, conclude). Then debate me with two or three challenging follow-ups and make me defend and nuance my position. Stay in French at B2, and at the end score me on the DELF oral grid (clarity, structure, argument, range, accuracy) with three concrete fixes."
   }
 ]

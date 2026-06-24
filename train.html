@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reading & Listening — Coucou</title>
+<meta name="description" content="Train your French reading and listening for DELF B2 — graded passages and audio with comprehension questions, instant feedback and explanations.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="French reading & listening practice — Coucou">
+<meta property="og:description" content="Graded reading and listening with comprehension questions — DELF B2 style, with answers explained.">
+<meta property="og:url" content="https://ektasengar.github.io/coucou/train.html">
+<meta property="og:image" content="https://ektasengar.github.io/coucou/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ektasengar.github.io/coucou/assets/og.png">
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('trainer', () => ({
+    all: [], loading: true, error: false,
+    skill: 'reading', level: 'all',
+    current: null, qstate: [], showTranscript: false, plays: 0,
+    done: {},
+    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: false,
+
+    async init() {
+      this.initVoice();
+      try {
+        const res = await fetch('./data/comprehension.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('http ' + res.status);
+        this.all = await res.json();
+      } catch (e) { this.error = true; this.loading = false; return; }
+      this.all.forEach(it => { this.done[it.id] = this.read(it.id); });
+      const q = new URLSearchParams(location.search);
+      const qskill = q.get('skill'); if (qskill === 'reading' || qskill === 'listening') this.skill = qskill;
+      const qlevel = q.get('level'); if (qlevel) this.level = qlevel;
+      this.loading = false;
+      const qid = q.get('id');
+      if (qid) { const it = this.all.find(x => x.id === qid); if (it) this.open(it); }
+    },
+    read(id) { try { return localStorage.getItem('lf-train-' + id) === '1'; } catch (e) { return false; } },
+
+    // catalogue
+    get skills() { return [...new Set(this.all.map(i => i.skill))]; },
+    get levels() { return [...new Set(this.all.filter(i => i.skill === this.skill).map(i => i.level))]; },
+    get list() { return this.all.filter(i => i.skill === this.skill && (this.level === 'all' || i.level === this.level)); },
+    setSkill(s) { this.skill = s; this.level = 'all'; this.close(); },
+    doneCount(arr) { return arr.filter(i => this.done[i.id]).length; },
+
+    // open / close an item
+    open(it) {
+      this.current = it;
+      this.qstate = it.questions.map(() => ({ answered: false, chosen: null, revealed: false, text: '' }));
+      this.showTranscript = false;
+      this.plays = 0;
+      if (this.canSpeak) speechSynthesis.cancel();
+      window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+    },
+    close() { if (this.canSpeak) speechSynthesis.cancel(); this.current = null; },
+
+    // grading (mcq + tf only)
+    get gradable() { return this.current ? this.current.questions.filter(q => q.type !== 'short') : []; },
+    get answeredCount() {
+      if (!this.current) return 0;
+      return this.current.questions.filter((q, i) => q.type !== 'short' && this.qstate[i].answered).length;
+    },
+    get score() {
+      if (!this.current) return 0;
+      return this.current.questions.filter((q, i) => q.type !== 'short' && this.qstate[i].answered && this.qstate[i].chosen === q.answer).length;
+    },
+    get allAnswered() { return this.gradable.length > 0 && this.answeredCount === this.gradable.length; },
+    get pct() { return this.gradable.length ? Math.round((this.score / this.gradable.length) * 100) : 0; },
+    get verdict() {
+      const p = this.pct;
+      if (p >= 90) return 'Excellent ! 🎉';
+      if (p >= 70) return 'Bien — solid comprehension.';
+      if (p >= 50) return 'Pas mal — re-read and try again.';
+      return 'Tough one — listen/read again, then retry.';
+    },
+
+    choose(qi, oi) {
+      const st = this.qstate[qi];
+      if (st.answered) return;
+      st.answered = true; st.chosen = oi;
+    },
+    reveal(qi) { this.qstate[qi].revealed = true; },
+    optClass(qi, oi) {
+      const st = this.qstate[qi];
+      if (!st.answered) return 'border-slate-200 hover:border-blue-400 text-slate-800';
+      const correct = this.current.questions[qi].answer;
+      if (oi === correct) return 'border-green-500 bg-green-50 text-green-800';
+      if (oi === st.chosen) return 'border-red-400 bg-red-50 text-red-700';
+      return 'border-slate-200 text-slate-400';
+    },
+    retry() { this.open(this.current); },
+
+    toggleDone() {
+      if (!this.current) return;
+      const id = this.current.id;
+      this.done[id] = !this.done[id];
+      try { localStorage.setItem('lf-train-' + id, this.done[id] ? '1' : '0'); } catch (e) {}
+    },
+
+    // speech
+    initVoice() {
+      if (!this.canSpeak) return;
+      const pick = () => { const vs = speechSynthesis.getVoices(); this.frVoice = vs.find(v => /fr[-_]?fr/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null; };
+      pick(); speechSynthesis.addEventListener('voiceschanged', pick);
+    },
+    // Read the whole passage/transcript aloud (strip dialogue dashes, flatten lines).
+    play() {
+      if (!this.canSpeak || !this.current) return;
+      const clean = String(this.current.text)
+        .replace(/—\s*/g, '')
+        .replace(/\s*\n+\s*/g, ' … ')
+        .replace(/\s+/g, ' ')
+        .trim();
+      try {
+        speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(clean);
+        u.lang = 'fr-FR'; if (this.frVoice) u.voice = this.frVoice; u.rate = 0.95;
+        this.speaking = true; this.plays++;
+        u.onend = u.onerror = () => { this.speaking = false; };
+        speechSynthesis.speak(u);
+      } catch (e) { this.speaking = false; }
+    },
+    stop() { if (this.canSpeak) speechSynthesis.cancel(); this.speaking = false; },
+  }));
+});
+</script>
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+<!-- NAV -->
+<nav x-data="{ open: false }" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="flex items-center justify-between h-16">
+      <a href="./" class="flex items-center gap-2 font-extrabold text-slate-900 tracking-tight"><span>🇫🇷</span> coucou <span class="font-medium text-blue-600 hidden sm:inline">· learn French</span></a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="./lessons.html" class="text-sm text-slate-600 hover:text-slate-900">Lessons</a>
+        <a href="./practice.html" class="text-sm text-slate-600 hover:text-slate-900">Practice</a>
+        <a href="./train.html" class="text-sm font-medium text-blue-600">Read &amp; Listen</a>
+        <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
+        <a href="./#tracker" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors">Get the tracker</a>
+      </div>
+      <button @click="open = !open" class="md:hidden p-2 text-slate-600" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div x-show="open" x-cloak class="md:hidden pb-4 space-y-1">
+      <a href="./lessons.html" class="block py-2 text-sm text-slate-600">Lessons</a>
+      <a href="./practice.html" class="block py-2 text-sm text-slate-600">Practice</a>
+      <a href="./train.html" class="block py-2 text-sm font-medium text-blue-600">Read &amp; Listen</a>
+      <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
+      <a href="./#tracker" class="block py-2 text-sm font-medium text-slate-900">Get the tracker →</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-3xl mx-auto px-5 py-10 md:py-14" x-data="trainer()">
+
+  <!-- header -->
+  <div x-show="!current" x-cloak>
+    <div class="max-w-2xl">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-5">🎧 Comprehension · DELF B2 style</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">Read &amp; Listen</h1>
+      <p class="mt-4 text-lg text-slate-600">The two skills you can't outsource to a chatbot. Read short texts and listen to real-style audio, then answer comprehension questions — with every answer explained. No phonetic crutches here: this is where you learn to decode French for real.</p>
+    </div>
+  </div>
+
+  <p x-show="loading" class="mt-10 text-slate-500">Loading…</p>
+  <div x-show="error" x-cloak class="mt-10 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-sm text-slate-600">
+    Couldn't load the content. View this on the live site or via the local server (<code class="bg-slate-200 px-1.5 py-0.5 rounded">node serve.js</code>).
+  </div>
+
+  <!-- ============ CATALOGUE ============ -->
+  <div x-show="!loading && !error && !current" x-cloak class="mt-8">
+
+    <!-- skill toggle -->
+    <div class="inline-flex rounded-xl border border-slate-200 p-1 bg-slate-50">
+      <button @click="setSkill('reading')" :class="skill === 'reading' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500 hover:text-slate-800'" class="px-5 py-2 rounded-lg text-sm font-semibold transition-colors">📖 Reading</button>
+      <button @click="setSkill('listening')" :class="skill === 'listening' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500 hover:text-slate-800'" class="px-5 py-2 rounded-lg text-sm font-semibold transition-colors">🎧 Listening</button>
+    </div>
+
+    <!-- level filter -->
+    <div class="mt-5 flex items-center gap-2">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wide mr-1">Level</span>
+      <button @click="level = 'all'" :class="level === 'all' ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'" class="px-3.5 py-1.5 rounded-full text-sm font-bold transition-colors">All</button>
+      <template x-for="lv in levels" :key="lv">
+        <button @click="level = lv" x-text="lv" :class="level === lv ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'" class="px-3.5 py-1.5 rounded-full text-sm font-bold transition-colors"></button>
+      </template>
+    </div>
+
+    <!-- cards -->
+    <div class="mt-6 grid sm:grid-cols-2 gap-4">
+      <template x-for="it in list" :key="it.id">
+        <button @click="open(it)" class="group text-left block rounded-xl border border-slate-200 p-5 hover:border-blue-400 hover:shadow-sm transition-all">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-center gap-2 text-xs font-medium text-slate-400">
+              <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-blue-600 text-white font-bold" x-text="it.level"></span>
+              <span x-text="it.theme"></span>
+            </div>
+            <span x-show="done[it.id]" x-cloak class="inline-flex items-center gap-1 text-xs font-medium text-green-600">✓ done</span>
+          </div>
+          <h3 class="mt-2 font-semibold text-slate-900 group-hover:text-blue-700" x-text="it.title"></h3>
+          <div class="mt-2 flex items-center gap-3 text-xs text-slate-400">
+            <span x-text="(it.skill === 'listening' ? '🎧 ' : '📖 ') + it.source"></span>
+            <span>· <span x-text="it.questions.length"></span> Q</span>
+            <span x-show="it.minutes">· <span x-text="it.minutes"></span> min</span>
+          </div>
+        </button>
+      </template>
+    </div>
+    <p x-show="!list.length" x-cloak class="mt-6 text-sm text-slate-500">No items at this level yet — try another level or skill.</p>
+  </div>
+
+  <!-- ============ ITEM VIEW ============ -->
+  <article x-show="current" x-cloak>
+    <template x-if="current">
+      <div>
+        <!-- breadcrumb -->
+        <div class="flex items-center gap-2 text-sm text-slate-500">
+          <button @click="close()" class="hover:text-slate-900">← All</button>
+          <span>/</span>
+          <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-blue-600 text-white text-xs font-bold" x-text="current.level"></span>
+          <span x-text="(current.skill === 'listening' ? '🎧 ' : '📖 ') + current.theme"></span>
+        </div>
+
+        <h1 class="mt-4 text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900" x-text="current.title"></h1>
+        <p class="mt-2 text-sm text-slate-400"><span x-text="current.source"></span><span x-show="current.minutes"> · about <span x-text="current.minutes"></span> min</span></p>
+        <p class="mt-4 text-slate-600" x-text="current.intro"></p>
+
+        <!-- LISTENING: audio player -->
+        <div x-show="current.skill === 'listening'" class="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+          <div x-show="!canSpeak" class="text-sm text-slate-600">Your browser has no French speech voice, so audio isn't available here. You can still read the transcript below and answer.</div>
+          <div x-show="canSpeak">
+            <div class="flex items-center gap-3">
+              <button @click="speaking ? stop() : play()" class="inline-flex items-center gap-2 px-5 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors">
+                <span x-text="speaking ? '⏹ Stop' : (plays === 0 ? '▶ Play' : '↻ Play again')"></span>
+              </button>
+              <span class="text-sm text-slate-500" x-text="plays === 0 ? 'Listen twice before you peek 👀' : ('Played ' + plays + (plays === 1 ? ' time' : ' times'))"></span>
+            </div>
+            <button @click="showTranscript = !showTranscript" class="mt-4 text-sm font-medium text-blue-600 hover:underline" x-text="showTranscript ? 'Hide transcript' : 'Show transcript'"></button>
+            <div x-show="showTranscript" x-cloak class="mt-3 whitespace-pre-line text-slate-800 leading-relaxed border-t border-slate-200 pt-3" x-text="current.text"></div>
+          </div>
+        </div>
+
+        <!-- READING: the passage -->
+        <div x-show="current.skill === 'reading'" class="mt-6 rounded-2xl border border-slate-200 bg-white p-5 md:p-6 whitespace-pre-line text-slate-800 leading-relaxed text-[15px]" x-text="current.text"></div>
+
+        <!-- glossary -->
+        <details x-show="current.glossary && current.glossary.length" class="mt-4 group">
+          <summary class="cursor-pointer text-sm font-medium text-slate-600 hover:text-slate-900 select-none">📔 Glossary (peek only if stuck)</summary>
+          <div class="mt-3 grid sm:grid-cols-2 gap-x-6 gap-y-1.5 text-sm">
+            <template x-for="(g, gi) in current.glossary" :key="gi">
+              <div class="flex justify-between gap-3 border-b border-slate-100 py-1">
+                <span class="font-medium text-slate-900" x-text="g.fr"></span>
+                <span class="text-slate-500 text-right" x-text="g.en"></span>
+              </div>
+            </template>
+          </div>
+        </details>
+
+        <!-- questions -->
+        <section class="mt-8">
+          <div class="flex items-center justify-between">
+            <h2 class="text-sm font-semibold text-slate-900 uppercase tracking-wide">Comprehension</h2>
+            <span class="text-xs text-slate-400"><span x-text="answeredCount"></span> / <span x-text="gradable.length"></span> answered</span>
+          </div>
+
+          <div class="mt-4 space-y-6">
+            <template x-for="(q, qi) in current.questions" :key="qi">
+              <div class="rounded-xl border border-slate-200 p-5">
+                <p class="font-medium text-slate-900"><span class="text-slate-400 mr-1.5" x-text="(qi + 1) + '.'"></span><span x-text="q.q"></span></p>
+
+                <!-- mcq / tf -->
+                <div x-show="q.type !== 'short'" class="mt-3 grid gap-2">
+                  <template x-for="(opt, oi) in q.options" :key="oi">
+                    <button @click="choose(qi, oi)" :disabled="qstate[qi].answered" :class="optClass(qi, oi)" class="text-left px-4 py-2.5 rounded-lg border text-sm font-medium transition-colors" x-text="opt"></button>
+                  </template>
+                  <div x-show="qstate[qi].answered" x-cloak class="mt-1 text-sm rounded-lg px-3 py-2"
+                       :class="qstate[qi].chosen === q.answer ? 'bg-green-50 text-green-800' : 'bg-amber-50 text-amber-800'">
+                    <span x-text="qstate[qi].chosen === q.answer ? '✓ Correct. ' : '✗ Not quite. '"></span><span x-text="q.explain"></span>
+                  </div>
+                </div>
+
+                <!-- short answer -->
+                <div x-show="q.type === 'short'" class="mt-3">
+                  <textarea x-model="qstate[qi].text" rows="2" placeholder="Write your answer in French…" class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                  <button @click="reveal(qi)" class="mt-2 text-sm font-medium text-blue-600 hover:underline" x-text="qstate[qi].revealed ? 'Model answer ↓' : 'Show model answer'"></button>
+                  <div x-show="qstate[qi].revealed" x-cloak class="mt-2 text-sm rounded-lg bg-blue-50 text-slate-700 px-3 py-2">
+                    <span class="font-medium text-slate-900" x-text="q.answer"></span>
+                    <span x-show="q.explain" x-cloak class="block mt-1 text-slate-500" x-text="q.explain"></span>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </section>
+
+        <!-- score -->
+        <div x-show="allAnswered" x-cloak class="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
+          <p class="text-sm text-slate-500 uppercase tracking-wide">Your score</p>
+          <div class="mt-1 text-4xl font-extrabold text-slate-900"><span x-text="score"></span> / <span x-text="gradable.length"></span></div>
+          <p class="mt-1 text-blue-600 font-medium" x-text="pct + '% · ' + verdict"></p>
+          <p x-show="current.questions.some(q => q.type === 'short')" x-cloak class="mt-2 text-xs text-slate-400">(Open questions are self-checked against the model answer.)</p>
+          <div class="mt-5 flex flex-wrap justify-center gap-3">
+            <button @click="retry()" class="px-5 py-2.5 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-white">↻ Try again</button>
+            <button @click="toggleDone()" class="px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800" x-text="done[current.id] ? '✓ Marked done' : 'Mark complete'"></button>
+            <button @click="close()" class="px-5 py-2.5 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-white">More texts →</button>
+          </div>
+        </div>
+
+        <!-- tutor follow-up -->
+        <div class="mt-6 rounded-xl border border-dashed border-slate-300 bg-white p-5 text-sm text-slate-600">
+          🎙️ <strong class="text-slate-900">Go deeper:</strong> open the <a href="./tutor.html" class="text-blue-600 hover:underline font-medium">24/7 tutor</a> and discuss this text — give your opinion on the topic and let it push back, just like the DELF B2 oral.
+        </div>
+
+        <p class="mt-8 text-center"><button @click="close()" class="text-sm font-medium text-blue-600 hover:underline">← Back to all texts</button></p>
+      </div>
+    </template>
+  </article>
+
+</main>
+
+<footer class="border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-5 py-10 text-center">
+    <p class="text-lg font-bold text-slate-900">Petit à petit, l'oiseau fait son nid. 🇫🇷</p>
+    <p class="mt-2 text-sm text-slate-500"><strong>Coucou</strong> · a free, open playbook · built with AI · 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>

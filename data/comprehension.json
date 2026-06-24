@@ -1,0 +1,1390 @@
+[
+  {
+    "id": "b2-read-fast-fashion",
+    "skill": "reading",
+    "level": "B2",
+    "theme": "Environment",
+    "title": "La fast fashion en question",
+    "minutes": 12,
+    "source": "Article d'opinion (adapté)",
+    "intro": "Read the opinion piece, then answer. Try not to look up every word — guess from context first, and check the glossary only if you're stuck.",
+    "text": "Chaque année, l'industrie textile produit des milliards de vêtements, souvent vendus à très bas prix. Ce modèle, que l'on appelle la « fast fashion », repose sur un principe simple : renouveler les collections le plus vite possible pour pousser les consommateurs à acheter toujours davantage. Résultat, certaines enseignes proposent désormais plusieurs nouveautés par semaine.\n\nSi ces vêtements bon marché séduisent, leur coût caché est considérable. La production de textile consomme énormément d'eau et rejette de grandes quantités de gaz à effet de serre. De plus, une part importante de ces habits, portés seulement quelques fois, finit à la poubelle au bout de quelques mois.\n\nFace à ce constat, de plus en plus de voix s'élèvent pour défendre une mode plus responsable. Certains proposent d'acheter moins, mais mieux : préférer des matières durables, réparer ses vêtements ou se tourner vers la seconde main. D'autres estiment que seule une réglementation stricte obligera réellement les marques à changer.\n\nUne chose est sûre : tant que nous continuerons à considérer nos vêtements comme jetables, le problème ne fera que s'aggraver.",
+    "glossary": [
+      {
+        "fr": "une enseigne",
+        "en": "a (retail) brand / store"
+      },
+      {
+        "fr": "bon marché",
+        "en": "cheap / inexpensive"
+      },
+      {
+        "fr": "un coût caché",
+        "en": "a hidden cost"
+      },
+      {
+        "fr": "jetable",
+        "en": "disposable"
+      },
+      {
+        "fr": "s'aggraver",
+        "en": "to get worse"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Sur quel principe repose la « fast fashion » ?",
+        "type": "mcq",
+        "options": [
+          "Vendre des vêtements de très grande qualité",
+          "Renouveler les collections très vite pour faire acheter davantage",
+          "Produire uniquement des matières durables",
+          "Limiter le nombre de collections par an"
+        ],
+        "answer": 1,
+        "explain": "« renouveler les collections le plus vite possible pour pousser les consommateurs à acheter toujours davantage »."
+      },
+      {
+        "q": "D'après le texte, les vêtements bon marché n'ont aucun impact sur l'environnement.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "Leur « coût caché est considérable » : eau, gaz à effet de serre, déchets."
+      },
+      {
+        "q": "Que proposent ceux qui défendent une mode responsable ?",
+        "type": "mcq",
+        "options": [
+          "Acheter plus souvent mais moins cher",
+          "Acheter moins, mais mieux : matières durables, réparation, seconde main",
+          "Arrêter complètement d'acheter des vêtements",
+          "Acheter uniquement en ligne"
+        ],
+        "answer": 1,
+        "explain": "« acheter moins, mais mieux : préférer des matières durables, réparer ses vêtements ou se tourner vers la seconde main »."
+      },
+      {
+        "q": "Quel est le ton de la conclusion ?",
+        "type": "mcq",
+        "options": [
+          "Optimiste : le problème se réglera tout seul",
+          "Neutre et purement descriptif",
+          "Préoccupé : la situation empirera si rien ne change",
+          "Amusé et ironique"
+        ],
+        "answer": 2,
+        "explain": "« le problème ne fera que s'aggraver » exprime une inquiétude."
+      },
+      {
+        "q": "Dans le texte, trouvez une expression qui signifie « acheter des vêtements d'occasion ».",
+        "type": "short",
+        "answer": "« se tourner vers la seconde main ».",
+        "explain": "« la seconde main » = l'occasion."
+      }
+    ]
+  },
+  {
+    "id": "b2-read-teletravail",
+    "skill": "reading",
+    "level": "B2",
+    "theme": "Work",
+    "title": "Le télétravail va-t-il durer ?",
+    "minutes": 12,
+    "source": "Article de presse (adapté)",
+    "intro": "A press article weighing both sides. Watch for the words that signal contrast (mais, cependant) — they often carry the answer.",
+    "text": "Longtemps réservé à quelques métiers, le télétravail s'est imposé massivement ces dernières années. Aujourd'hui, de nombreux salariés travaillent depuis chez eux au moins un ou deux jours par semaine, et beaucoup ne voudraient revenir en arrière pour rien au monde.\n\nLes avantages sont réels. En supprimant les trajets quotidiens, le télétravail fait gagner un temps précieux et réduit la fatigue. Il permet aussi de mieux concilier vie professionnelle et vie personnelle. Du côté des entreprises, certaines y voient une façon de réduire les coûts liés aux bureaux.\n\nCependant, tout n'est pas si simple. À distance, le lien entre collègues peut se distendre, et certains salariés se plaignent d'un sentiment d'isolement. La frontière entre le travail et la maison devient parfois floue : on répond à ses courriels tard le soir, sans jamais vraiment décrocher.\n\nPour beaucoup d'experts, l'avenir ne sera donc ni le tout-télétravail ni le retour total au bureau, mais un modèle « hybride », qui combine les deux. Reste à trouver le bon équilibre — et celui-ci dépendra sans doute de chaque entreprise.",
+    "glossary": [
+      {
+        "fr": "un salarié",
+        "en": "an employee"
+      },
+      {
+        "fr": "concilier",
+        "en": "to balance / reconcile"
+      },
+      {
+        "fr": "se distendre",
+        "en": "to loosen / weaken"
+      },
+      {
+        "fr": "flou(e)",
+        "en": "blurry / unclear"
+      },
+      {
+        "fr": "décrocher",
+        "en": "to switch off / disconnect"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Comment le télétravail a-t-il évolué ces dernières années ?",
+        "type": "mcq",
+        "options": [
+          "Il a presque disparu",
+          "Il s'est généralisé alors qu'il était rare avant",
+          "Il est resté réservé à quelques métiers",
+          "Il a été interdit dans les entreprises"
+        ],
+        "answer": 1,
+        "explain": "« Longtemps réservé à quelques métiers, le télétravail s'est imposé massivement »."
+      },
+      {
+        "q": "Quel avantage est cité pour les salariés ?",
+        "type": "mcq",
+        "options": [
+          "Un meilleur salaire",
+          "La suppression des trajets et un gain de temps",
+          "Davantage de réunions",
+          "Des bureaux plus grands"
+        ],
+        "answer": 1,
+        "explain": "« En supprimant les trajets quotidiens, le télétravail fait gagner un temps précieux »."
+      },
+      {
+        "q": "Selon le texte, le télétravail ne présente que des avantages.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« Cependant, tout n'est pas si simple » : isolement, frontière floue, etc."
+      },
+      {
+        "q": "Que signifie « décrocher » dans « sans jamais vraiment décrocher » ?",
+        "type": "mcq",
+        "options": [
+          "Téléphoner",
+          "Réussir",
+          "S'arrêter de travailler, se déconnecter",
+          "Tomber"
+        ],
+        "answer": 2,
+        "explain": "Ici « décrocher » = arrêter de travailler / se couper du travail."
+      },
+      {
+        "q": "Quel avenir les experts envisagent-ils ?",
+        "type": "mcq",
+        "options": [
+          "Le retour total au bureau",
+          "Le tout-télétravail",
+          "Un modèle hybride mêlant les deux",
+          "La fin du salariat"
+        ],
+        "answer": 2,
+        "explain": "« un modèle hybride, qui combine les deux »."
+      }
+    ]
+  },
+  {
+    "id": "b2-read-reseaux-info",
+    "skill": "reading",
+    "level": "B2",
+    "theme": "Media & technology",
+    "title": "S'informer à l'ère des réseaux sociaux",
+    "minutes": 12,
+    "source": "Tribune (adaptée)",
+    "intro": "An opinion column. As you read, ask yourself: what is the author FOR, and what are they warning against?",
+    "text": "Pour une grande partie des jeunes, les réseaux sociaux sont devenus la principale source d'information. En quelques secondes, une vidéo ou un message peut être vu par des millions de personnes. Cette rapidité a un avantage indéniable : elle permet à chacun de réagir et de s'exprimer, sans passer par les médias traditionnels.\n\nMais cette liberté a aussi sa face sombre. Sur ces plateformes, une fausse information se propage souvent plus vite qu'une vraie, car elle est plus surprenante, donc plus partagée. Or, peu d'utilisateurs prennent le temps de vérifier ce qu'ils lisent avant de le diffuser.\n\nÀ cela s'ajoute un autre problème : les algorithmes nous montrent surtout des contenus qui confortent nos opinions. Petit à petit, on finit par ne plus entendre que des avis semblables aux nôtres, ce qui rend le débat plus difficile.\n\nFaut-il pour autant rejeter les réseaux sociaux ? Sûrement pas. Mieux vaut apprendre à les utiliser de façon critique : croiser les sources, se méfier des titres trop spectaculaires et garder à l'esprit que tout ce qui circule n'est pas forcément vrai.",
+    "glossary": [
+      {
+        "fr": "se méfier de",
+        "en": "to be wary of"
+      },
+      {
+        "fr": "se propager",
+        "en": "to spread"
+      },
+      {
+        "fr": "conforter",
+        "en": "to reinforce / confirm"
+      },
+      {
+        "fr": "croiser les sources",
+        "en": "to cross-check sources"
+      },
+      {
+        "fr": "spectaculaire",
+        "en": "sensational / dramatic"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Pourquoi une fausse information se propage-t-elle souvent vite ?",
+        "type": "mcq",
+        "options": [
+          "Parce qu'elle est vérifiée",
+          "Parce qu'elle est plus surprenante, donc plus partagée",
+          "Parce que les médias traditionnels la diffusent",
+          "Parce qu'elle est ennuyeuse"
+        ],
+        "answer": 1,
+        "explain": "« une fausse information se propage souvent plus vite… car elle est plus surprenante, donc plus partagée »."
+      },
+      {
+        "q": "Quel effet ont les algorithmes selon le texte ?",
+        "type": "mcq",
+        "options": [
+          "Ils nous montrent des avis variés",
+          "Ils vérifient les informations",
+          "Ils nous montrent surtout des contenus qui confortent nos opinions",
+          "Ils suppriment les fausses informations"
+        ],
+        "answer": 2,
+        "explain": "« les algorithmes nous montrent surtout des contenus qui confortent nos opinions »."
+      },
+      {
+        "q": "L'auteur pense qu'il faut complètement rejeter les réseaux sociaux.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« Faut-il pour autant rejeter les réseaux sociaux ? Sûrement pas. »"
+      },
+      {
+        "q": "Que recommande l'auteur ?",
+        "type": "mcq",
+        "options": [
+          "Partager le plus vite possible",
+          "Les utiliser de façon critique et croiser les sources",
+          "Ne lire que les titres",
+          "Suivre uniquement ses amis"
+        ],
+        "answer": 1,
+        "explain": "« apprendre à les utiliser de façon critique : croiser les sources… »"
+      },
+      {
+        "q": "Selon l'auteur, quel est l'aspect positif des réseaux sociaux ?",
+        "type": "short",
+        "answer": "Ils permettent à chacun de réagir et de s'exprimer rapidement, sans passer par les médias traditionnels.",
+        "explain": "Voir le premier paragraphe."
+      }
+    ]
+  },
+  {
+    "id": "b1-read-sommeil",
+    "skill": "reading",
+    "level": "B1",
+    "theme": "Health & lifestyle",
+    "title": "Bien dormir, ça s'apprend",
+    "minutes": 8,
+    "source": "Article pratique (adapté)",
+    "intro": "An easier B1 text to warm up. Read it once for the gist, then answer.",
+    "text": "Nous passons environ un tiers de notre vie à dormir, et pourtant beaucoup de gens dorment mal. Or, le sommeil est essentiel : il permet au corps de récupérer et au cerveau de se reposer. Quand on dort trop peu, on est fatigué, de mauvaise humeur, et l'on a plus de mal à se concentrer.\n\nHeureusement, quelques habitudes simples peuvent aider. D'abord, il vaut mieux se coucher et se lever à des heures régulières, même le week-end. Ensuite, il est conseillé d'éviter le café et les écrans avant de dormir, car ils empêchent de trouver le sommeil. Enfin, une chambre calme, sombre et un peu fraîche favorise un bon repos.\n\nSi les problèmes de sommeil durent plusieurs semaines, il ne faut pas hésiter à en parler à un médecin. Bien dormir n'est pas un luxe : c'est la base d'une bonne santé.",
+    "glossary": [
+      {
+        "fr": "le sommeil",
+        "en": "sleep"
+      },
+      {
+        "fr": "récupérer",
+        "en": "to recover"
+      },
+      {
+        "fr": "empêcher",
+        "en": "to prevent"
+      },
+      {
+        "fr": "favoriser",
+        "en": "to encourage / promote"
+      },
+      {
+        "fr": "un luxe",
+        "en": "a luxury"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Pourquoi le sommeil est-il essentiel ?",
+        "type": "mcq",
+        "options": [
+          "Il fait grandir",
+          "Il permet au corps de récupérer et au cerveau de se reposer",
+          "Il fait maigrir",
+          "Il rend riche"
+        ],
+        "answer": 1,
+        "explain": "« il permet au corps de récupérer et au cerveau de se reposer »."
+      },
+      {
+        "q": "Selon le texte, il vaut mieux se coucher à une heure différente chaque jour.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« se coucher et se lever à des heures régulières, même le week-end »."
+      },
+      {
+        "q": "Que faut-il éviter avant de dormir ?",
+        "type": "mcq",
+        "options": [
+          "Une chambre fraîche",
+          "Le café et les écrans",
+          "Un livre",
+          "Le calme"
+        ],
+        "answer": 1,
+        "explain": "« éviter le café et les écrans avant de dormir »."
+      },
+      {
+        "q": "Que conseille le texte si les problèmes durent plusieurs semaines ?",
+        "type": "mcq",
+        "options": [
+          "Boire plus de café",
+          "En parler à un médecin",
+          "Dormir le jour",
+          "Ne rien faire"
+        ],
+        "answer": 1,
+        "explain": "« il ne faut pas hésiter à en parler à un médecin »."
+      }
+    ]
+  },
+  {
+    "id": "b1-listen-message",
+    "skill": "listening",
+    "level": "B1",
+    "theme": "Everyday life",
+    "title": "A voicemail: a change of plans",
+    "minutes": 6,
+    "source": "Message vocal",
+    "intro": "Press play and listen — ideally twice — BEFORE you reveal the transcript. It's a phone message from a friend.",
+    "text": "Salut, c'est Camille ! Je t'appelle parce qu'il y a un petit changement pour ce soir. En fait, je ne pourrai pas venir au restaurant à vingt heures, comme prévu : je dois rester au bureau plus tard que d'habitude. Du coup, est-ce qu'on pourrait décaler à vingt heures trente ? Si ça te va, on se retrouve directement devant le restaurant. Ah, et autre chose : j'ai réservé une table pour quatre, parce que Thomas et sa sœur veulent se joindre à nous. J'espère que ça ne te dérange pas ! Rappelle-moi quand tu as mon message. À tout à l'heure, bisous !",
+    "glossary": [
+      {
+        "fr": "comme prévu",
+        "en": "as planned"
+      },
+      {
+        "fr": "décaler",
+        "en": "to push back / move (a time)"
+      },
+      {
+        "fr": "se joindre à",
+        "en": "to join"
+      },
+      {
+        "fr": "ça ne te dérange pas",
+        "en": "you don't mind"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Pourquoi Camille appelle-t-elle ?",
+        "type": "mcq",
+        "options": [
+          "Pour annuler complètement la soirée",
+          "Pour changer l'heure du rendez-vous",
+          "Pour changer de restaurant",
+          "Pour inviter à déjeuner"
+        ],
+        "answer": 1,
+        "explain": "« il y a un petit changement… est-ce qu'on pourrait décaler à vingt heures trente ? »"
+      },
+      {
+        "q": "À quelle heure propose-t-elle de se retrouver finalement ?",
+        "type": "mcq",
+        "options": [
+          "20h00",
+          "20h15",
+          "20h30",
+          "21h00"
+        ],
+        "answer": 2,
+        "explain": "« est-ce qu'on pourrait décaler à vingt heures trente ? »"
+      },
+      {
+        "q": "Camille a réservé une table pour deux personnes.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« j'ai réservé une table pour quatre »."
+      },
+      {
+        "q": "Pourquoi y aura-t-il plus de personnes que prévu ?",
+        "type": "mcq",
+        "options": [
+          "Thomas et sa sœur se joignent à eux",
+          "Ses parents viennent",
+          "Des collègues viennent",
+          "Personne d'autre ne vient"
+        ],
+        "answer": 0,
+        "explain": "« Thomas et sa sœur veulent se joindre à nous »."
+      }
+    ]
+  },
+  {
+    "id": "b2-listen-interview-travail",
+    "skill": "listening",
+    "level": "B2",
+    "theme": "Work",
+    "title": "Interview: choosing to work from home",
+    "minutes": 8,
+    "source": "Interview radio",
+    "intro": "A short radio interview. Listen for the speaker's OPINION and reasons, not just the facts. Try two listens before reading.",
+    "text": "— Bonjour Marc, vous avez décidé, il y a deux ans, de travailler entièrement à domicile. Vous ne le regrettez pas ?\n— Pas du tout, au contraire. Avant, je passais presque deux heures par jour dans les transports. Aujourd'hui, ce temps-là, je le consacre à ma famille et au sport. Honnêtement, je me sens beaucoup moins stressé.\n— Pourtant, certains disent que le télétravail isole. Qu'en pensez-vous ?\n— C'est vrai que, les premiers mois, mes collègues me manquaient. Mais on s'organise : on s'appelle régulièrement, et je vais au bureau une fois par semaine pour garder le contact. Pour moi, le plus important, c'est la discipline. Si on ne fixe pas d'horaires clairs, on finit par travailler tout le temps.\n— Un dernier conseil pour ceux qui hésitent ?\n— Essayez progressivement. Commencez par un ou deux jours par semaine, et voyez si cela vous convient.",
+    "glossary": [
+      {
+        "fr": "à domicile",
+        "en": "from home"
+      },
+      {
+        "fr": "consacrer (du temps) à",
+        "en": "to devote (time) to"
+      },
+      {
+        "fr": "isoler",
+        "en": "to isolate"
+      },
+      {
+        "fr": "me manquaient",
+        "en": "I missed (them)"
+      },
+      {
+        "fr": "convenir",
+        "en": "to suit"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Que pense Marc du télétravail ?",
+        "type": "mcq",
+        "options": [
+          "Il le regrette",
+          "Il en est très satisfait",
+          "Il est indifférent",
+          "Il veut retourner au bureau à plein temps"
+        ],
+        "answer": 1,
+        "explain": "« Pas du tout, au contraire… je me sens beaucoup moins stressé »."
+      },
+      {
+        "q": "Que fait-il du temps gagné sur les transports ?",
+        "type": "mcq",
+        "options": [
+          "Il travaille davantage",
+          "Il le consacre à sa famille et au sport",
+          "Il dort",
+          "Il regarde la télévision"
+        ],
+        "answer": 1,
+        "explain": "« ce temps-là, je le consacre à ma famille et au sport »."
+      },
+      {
+        "q": "Marc affirme n'avoir jamais ressenti d'isolement.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« les premiers mois, mes collègues me manquaient »."
+      },
+      {
+        "q": "Selon lui, qu'est-ce qui est le plus important en télétravail ?",
+        "type": "mcq",
+        "options": [
+          "La discipline et des horaires clairs",
+          "Un grand bureau",
+          "Un bon salaire",
+          "Travailler la nuit"
+        ],
+        "answer": 0,
+        "explain": "« le plus important, c'est la discipline… fixer des horaires clairs »."
+      },
+      {
+        "q": "Quel conseil donne-t-il à ceux qui hésitent ?",
+        "type": "mcq",
+        "options": [
+          "Tout arrêter d'un coup",
+          "Commencer progressivement, un ou deux jours par semaine",
+          "Ne jamais aller au bureau",
+          "Changer de métier"
+        ],
+        "answer": 1,
+        "explain": "« Essayez progressivement. Commencez par un ou deux jours par semaine. »"
+      }
+    ]
+  },
+  {
+    "id": "b2-listen-info-ville",
+    "skill": "listening",
+    "level": "B2",
+    "theme": "Environment",
+    "title": "News report: a city cuts car traffic",
+    "minutes": 7,
+    "source": "Flash d'information",
+    "intro": "A short news bulletin. Listen for the figures and the different reactions. Two listens recommended.",
+    "text": "Et maintenant, l'actualité locale. À partir du mois prochain, le centre-ville sera interdit aux voitures les dimanches. La mairie souhaite ainsi réduire la pollution et encourager les habitants à se déplacer à pied ou à vélo. Selon une première étude, cette mesure pourrait diminuer le trafic de près de trente pour cent le week-end.\n\nDu côté des commerçants, les réactions sont partagées. Certains craignent une baisse de leur clientèle, tandis que d'autres espèrent au contraire que les rues piétonnes attireront davantage de promeneurs. Pour rassurer tout le monde, la municipalité a promis de renforcer les transports en commun ce jour-là, avec des bus plus fréquents et gratuits.\n\nUne réunion publique est prévue la semaine prochaine afin de répondre aux questions des riverains. Nous y reviendrons dans notre prochaine édition.",
+    "glossary": [
+      {
+        "fr": "la mairie / la municipalité",
+        "en": "the town hall / local council"
+      },
+      {
+        "fr": "partagé(es)",
+        "en": "divided (opinions)"
+      },
+      {
+        "fr": "craindre",
+        "en": "to fear"
+      },
+      {
+        "fr": "piéton(ne)",
+        "en": "pedestrian"
+      },
+      {
+        "fr": "un riverain",
+        "en": "a local resident"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Quelle mesure la mairie va-t-elle mettre en place ?",
+        "type": "mcq",
+        "options": [
+          "Interdire les vélos le dimanche",
+          "Interdire les voitures au centre-ville le dimanche",
+          "Fermer les commerces le dimanche",
+          "Augmenter le prix de l'essence"
+        ],
+        "answer": 1,
+        "explain": "« le centre-ville sera interdit aux voitures les dimanches »."
+      },
+      {
+        "q": "De combien le trafic pourrait-il diminuer le week-end ?",
+        "type": "mcq",
+        "options": [
+          "Environ 10 %",
+          "Environ 20 %",
+          "Près de 30 %",
+          "Environ 50 %"
+        ],
+        "answer": 2,
+        "explain": "« diminuer le trafic de près de trente pour cent le week-end »."
+      },
+      {
+        "q": "Tous les commerçants sont favorables à cette mesure.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« les réactions sont partagées » : certains craignent une baisse de clientèle."
+      },
+      {
+        "q": "Qu'a promis la municipalité pour rassurer les habitants ?",
+        "type": "mcq",
+        "options": [
+          "Des places de parking gratuites",
+          "Des bus plus fréquents et gratuits ce jour-là",
+          "De supprimer la mesure",
+          "De construire une nouvelle route"
+        ],
+        "answer": 1,
+        "explain": "« renforcer les transports en commun… avec des bus plus fréquents et gratuits »."
+      },
+      {
+        "q": "Qu'est-il prévu la semaine prochaine ?",
+        "type": "mcq",
+        "options": [
+          "Une réunion publique pour les riverains",
+          "Une manifestation",
+          "L'ouverture d'un parking",
+          "Une élection"
+        ],
+        "answer": 0,
+        "explain": "« Une réunion publique est prévue la semaine prochaine »."
+      }
+    ]
+  },
+  {
+    "id": "b2-listen-debat-ecrans",
+    "skill": "listening",
+    "level": "B2",
+    "theme": "Society & education",
+    "title": "A debate: children and screens",
+    "minutes": 8,
+    "source": "Débat",
+    "intro": "Two people disagree about children and screens. Identify each person's position, and where they end up agreeing.",
+    "text": "— Moi, je trouve qu'on exagère avec les écrans. Les enfants d'aujourd'hui passent des heures sur leur téléphone, et après, ils n'arrivent plus à se concentrer en classe.\n— Je comprends ton inquiétude, mais je ne suis pas entièrement d'accord. Tout dépend de l'usage qu'on en fait. Un enfant qui regarde un documentaire ou qui apprend à coder, ce n'est pas la même chose que celui qui joue sans arrêt.\n— Certes, mais soyons honnêtes : la plupart ne font pas ça pour apprendre.\n— C'est pour cela que le rôle des parents est essentiel. Plutôt que d'interdire complètement, il vaut mieux fixer des limites de temps et expliquer pourquoi.\n— Sur ce point, je te rejoins. Interdire ne sert souvent à rien ; ça les rend encore plus curieux.\n— Exactement. L'important, c'est d'accompagner, pas de surveiller.",
+    "glossary": [
+      {
+        "fr": "exagérer",
+        "en": "to exaggerate / overdo it"
+      },
+      {
+        "fr": "l'usage",
+        "en": "the use"
+      },
+      {
+        "fr": "fixer des limites",
+        "en": "to set limits"
+      },
+      {
+        "fr": "je te rejoins",
+        "en": "I agree with you (here)"
+      },
+      {
+        "fr": "accompagner",
+        "en": "to guide / support"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Quelle est l'opinion de la première personne ?",
+        "type": "mcq",
+        "options": [
+          "Les écrans sont totalement sans danger",
+          "On exagère le problème des écrans",
+          "Les enfants passent trop de temps sur les écrans",
+          "Il faut acheter plus de téléphones"
+        ],
+        "answer": 2,
+        "explain": "« les enfants passent des heures sur leur téléphone, et après, ils n'arrivent plus à se concentrer »."
+      },
+      {
+        "q": "Que répond la deuxième personne ?",
+        "type": "mcq",
+        "options": [
+          "Elle est tout à fait d'accord",
+          "Tout dépend de l'usage que l'on fait des écrans",
+          "Les écrans n'ont aucun intérêt",
+          "Il faut tout interdire"
+        ],
+        "answer": 1,
+        "explain": "« Tout dépend de l'usage qu'on en fait. »"
+      },
+      {
+        "q": "Les deux personnes pensent qu'il faut interdire complètement les écrans.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« Plutôt que d'interdire complètement, il vaut mieux fixer des limites »."
+      },
+      {
+        "q": "Sur quoi finissent-elles par être d'accord ?",
+        "type": "mcq",
+        "options": [
+          "Interdire est la meilleure solution",
+          "Le rôle des parents est essentiel : fixer des limites et accompagner",
+          "Les écrans doivent être réservés à l'école",
+          "Il ne faut rien faire"
+        ],
+        "answer": 1,
+        "explain": "« le rôle des parents est essentiel… accompagner, pas surveiller »."
+      },
+      {
+        "q": "Que signifie « je te rejoins » dans ce dialogue ?",
+        "type": "mcq",
+        "options": [
+          "Je te retrouve quelque part",
+          "Je suis d'accord avec toi",
+          "Je m'en vais",
+          "Je ne comprends pas"
+        ],
+        "answer": 1,
+        "explain": "Ici « je te rejoins » = je partage ton avis."
+      }
+    ]
+  },
+  {
+    "id": "b2-read-ia-emploi",
+    "skill": "reading",
+    "level": "B2",
+    "theme": "Technology & work",
+    "title": "L'intelligence artificielle va-t-elle nous remplacer ?",
+    "minutes": 12,
+    "source": "Article de magazine (adapté)",
+    "intro": "An article about AI and jobs. Separate what's already happening from what the author only predicts.",
+    "text": "Depuis quelques années, l'intelligence artificielle progresse à une vitesse impressionnante. Elle est désormais capable de traduire des textes, de rédiger des courriels ou même de créer des images en quelques secondes. Beaucoup s'inquiètent : ces machines vont-elles finir par remplacer les travailleurs ?\n\nLa crainte n'est pas nouvelle. À chaque révolution technologique, on a annoncé la disparition de millions d'emplois. Pourtant, l'histoire montre que si certains métiers disparaissent, d'autres apparaissent. L'imprimerie, l'électricité ou l'ordinateur ont transformé le travail sans faire disparaître le travail lui-même.\n\nSelon de nombreux experts, l'intelligence artificielle ne supprimera pas la plupart des emplois, mais elle les modifiera profondément. Les tâches répétitives seront automatisées, tandis que les compétences proprement humaines — la créativité, l'esprit critique, le contact avec les autres — deviendront encore plus précieuses.\n\nLe véritable enjeu n'est donc pas de lutter contre la machine, mais d'apprendre à travailler avec elle. Cela suppose de se former tout au long de la vie. Car une chose est sûre : ceux qui sauront utiliser ces outils auront un avantage sur ceux qui les ignorent.",
+    "glossary": [
+      {
+        "fr": "rédiger",
+        "en": "to write / draft"
+      },
+      {
+        "fr": "une crainte",
+        "en": "a fear"
+      },
+      {
+        "fr": "supprimer",
+        "en": "to remove / eliminate"
+      },
+      {
+        "fr": "une tâche",
+        "en": "a task"
+      },
+      {
+        "fr": "se former",
+        "en": "to train / build skills"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Que sait déjà faire l'intelligence artificielle, d'après le texte ?",
+        "type": "mcq",
+        "options": [
+          "Traduire des textes, rédiger des courriels, créer des images",
+          "Remplacer tous les travailleurs",
+          "Rien d'utile pour l'instant",
+          "Uniquement jouer aux échecs"
+        ],
+        "answer": 0,
+        "explain": "« capable de traduire des textes, de rédiger des courriels ou même de créer des images »."
+      },
+      {
+        "q": "Selon le texte, c'est la première fois dans l'histoire qu'une technologie inquiète les travailleurs.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« La crainte n'est pas nouvelle. À chaque révolution technologique… »"
+      },
+      {
+        "q": "Que prévoient de nombreux experts ?",
+        "type": "mcq",
+        "options": [
+          "L'IA supprimera la plupart des emplois",
+          "L'IA ne changera rien au travail",
+          "L'IA modifiera les emplois plutôt que de les supprimer",
+          "L'IA disparaîtra bientôt"
+        ],
+        "answer": 2,
+        "explain": "« elle ne supprimera pas la plupart des emplois, mais elle les modifiera profondément »."
+      },
+      {
+        "q": "Quelles compétences deviendront plus précieuses ?",
+        "type": "mcq",
+        "options": [
+          "Les tâches répétitives",
+          "La créativité, l'esprit critique et le contact humain",
+          "La rapidité de calcul",
+          "La mémoire"
+        ],
+        "answer": 1,
+        "explain": "« la créativité, l'esprit critique, le contact avec les autres »."
+      },
+      {
+        "q": "Quel conseil l'auteur donne-t-il face à l'IA ?",
+        "type": "short",
+        "answer": "Apprendre à travailler avec elle et se former tout au long de la vie.",
+        "explain": "Voir le dernier paragraphe."
+      }
+    ]
+  },
+  {
+    "id": "b1-read-lecture",
+    "skill": "reading",
+    "level": "B1",
+    "theme": "Culture & leisure",
+    "title": "Pourquoi lire encore des livres ?",
+    "minutes": 8,
+    "source": "Article (adapté)",
+    "intro": "An easier B1 text. Read for the main reasons the author gives.",
+    "text": "À l'heure des écrans et des vidéos courtes, certains pensent que le livre va disparaître. Pourtant, la lecture garde de nombreux avantages. D'abord, lire permet de se concentrer longtemps sur une seule histoire, ce qui devient rare aujourd'hui. Ensuite, un bon roman nous fait voyager, ressentir des émotions et découvrir d'autres façons de penser.\n\nLire est aussi excellent pour le vocabulaire. Plus on lit, plus on rencontre de mots nouveaux, et plus il devient facile de s'exprimer. C'est d'ailleurs un très bon moyen d'apprendre une langue étrangère.\n\nBien sûr, il n'est pas nécessaire de lire des livres difficiles. L'important, c'est de choisir des sujets qui nous plaisent et de prendre le temps, même quelques minutes par jour. Car la lecture, comme beaucoup de plaisirs, s'apprend petit à petit.",
+    "glossary": [
+      {
+        "fr": "la lecture",
+        "en": "reading"
+      },
+      {
+        "fr": "un roman",
+        "en": "a novel"
+      },
+      {
+        "fr": "ressentir",
+        "en": "to feel"
+      },
+      {
+        "fr": "s'exprimer",
+        "en": "to express oneself"
+      },
+      {
+        "fr": "petit à petit",
+        "en": "little by little"
+      }
+    ],
+    "questions": [
+      {
+        "q": "D'après le texte, qu'est-ce que la lecture permet de faire ?",
+        "type": "mcq",
+        "options": [
+          "Gagner de l'argent",
+          "Se concentrer longtemps sur une seule histoire",
+          "Éviter de penser",
+          "Regarder des vidéos"
+        ],
+        "answer": 1,
+        "explain": "« lire permet de se concentrer longtemps sur une seule histoire »."
+      },
+      {
+        "q": "Pourquoi lire est-il bon pour le vocabulaire ?",
+        "type": "mcq",
+        "options": [
+          "Parce qu'on rencontre des mots nouveaux",
+          "Parce que c'est rapide",
+          "Parce que c'est gratuit",
+          "Parce qu'on parle beaucoup"
+        ],
+        "answer": 0,
+        "explain": "« on rencontre de mots nouveaux… plus facile de s'exprimer »."
+      },
+      {
+        "q": "Selon le texte, il faut absolument lire des livres difficiles.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« il n'est pas nécessaire de lire des livres difficiles »."
+      },
+      {
+        "q": "Quel conseil donne le texte pour s'y mettre ?",
+        "type": "mcq",
+        "options": [
+          "Lire toute la journée",
+          "Choisir des sujets qui plaisent et lire un peu chaque jour",
+          "Lire seulement en français",
+          "Acheter beaucoup de livres"
+        ],
+        "answer": 1,
+        "explain": "« choisir des sujets qui nous plaisent… quelques minutes par jour »."
+      }
+    ]
+  },
+  {
+    "id": "b2-read-benevolat",
+    "skill": "reading",
+    "level": "B2",
+    "theme": "Society",
+    "title": "Le bénévolat, bon pour les autres et pour soi",
+    "minutes": 11,
+    "source": "Article associatif (adapté)",
+    "intro": "An article on volunteering. Notice the claim the author is arguing against.",
+    "text": "Chaque année, des millions de personnes donnent de leur temps gratuitement pour aider les autres : c'est ce qu'on appelle le bénévolat. On imagine souvent que le bénévole est quelqu'un qui se sacrifie pour les autres. En réalité, il y gagne lui aussi beaucoup.\n\nD'abord, s'engager dans une association permet de se sentir utile et de donner du sens à son temps libre. De nombreux bénévoles déclarent être plus heureux depuis qu'ils aident les autres. Ensuite, c'est une excellente occasion de rencontrer des gens que l'on n'aurait jamais croisés autrement, et de développer de nouvelles compétences.\n\nLe bénévolat est aussi précieux pour la société tout entière. Sans les bénévoles, beaucoup d'associations sportives, culturelles ou humanitaires ne pourraient tout simplement pas fonctionner.\n\nPourtant, le nombre de bénévoles diminue chez les plus jeunes, souvent par manque de temps. Pour les associations, le défi est donc de proposer des engagements plus souples, par exemple quelques heures de temps en temps, plutôt qu'une présence régulière. Car aider, même un peu, vaut toujours mieux que de ne rien faire.",
+    "glossary": [
+      {
+        "fr": "le bénévolat / un bénévole",
+        "en": "volunteering / a volunteer"
+      },
+      {
+        "fr": "s'engager",
+        "en": "to get involved / commit"
+      },
+      {
+        "fr": "donner du sens à",
+        "en": "to give meaning to"
+      },
+      {
+        "fr": "souple",
+        "en": "flexible"
+      },
+      {
+        "fr": "un défi",
+        "en": "a challenge"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Quelle idée reçue le texte conteste-t-il ?",
+        "type": "mcq",
+        "options": [
+          "Que le bénévolat est payé",
+          "Que le bénévole ne fait que se sacrifier sans rien gagner",
+          "Que les associations sont inutiles",
+          "Que les jeunes sont trop nombreux"
+        ],
+        "answer": 1,
+        "explain": "« On imagine souvent que le bénévole se sacrifie… En réalité, il y gagne lui aussi beaucoup »."
+      },
+      {
+        "q": "Quel bénéfice personnel le bénévolat apporte-t-il ?",
+        "type": "mcq",
+        "options": [
+          "Le sentiment d'être utile et de rencontrer des gens",
+          "Un meilleur salaire",
+          "Des vacances gratuites",
+          "Moins de travail"
+        ],
+        "answer": 0,
+        "explain": "« se sentir utile… rencontrer des gens… développer de nouvelles compétences »."
+      },
+      {
+        "q": "D'après le texte, les associations pourraient fonctionner sans bénévoles.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« Sans les bénévoles, beaucoup d'associations ne pourraient pas fonctionner »."
+      },
+      {
+        "q": "Pourquoi le nombre de jeunes bénévoles diminue-t-il ?",
+        "type": "mcq",
+        "options": [
+          "Par manque d'argent",
+          "Par manque de temps",
+          "Par manque d'associations",
+          "Parce que c'est interdit"
+        ],
+        "answer": 1,
+        "explain": "« le nombre de bénévoles diminue chez les plus jeunes, souvent par manque de temps »."
+      },
+      {
+        "q": "Quelle solution les associations pourraient-elles proposer aux jeunes ?",
+        "type": "short",
+        "answer": "Des engagements plus souples : quelques heures de temps en temps plutôt qu'une présence régulière.",
+        "explain": "Voir le dernier paragraphe."
+      }
+    ]
+  },
+  {
+    "id": "b1-read-voyage",
+    "skill": "reading",
+    "level": "B1",
+    "theme": "Travel",
+    "title": "Voyager autrement",
+    "minutes": 8,
+    "source": "Blog de voyage (adapté)",
+    "intro": "A B1 travel blog post about a slower way to travel.",
+    "text": "Pendant longtemps, voyager signifiait prendre l'avion et visiter le plus de pays possible. Aujourd'hui, de plus en plus de gens préfèrent voyager autrement : moins loin, moins vite, mais mieux.\n\nCe nouveau type de voyage, qu'on appelle parfois le « voyage lent », consiste à rester plus longtemps au même endroit. Au lieu de courir d'un monument à l'autre, on prend le temps de se promener, de discuter avec les habitants et de goûter la cuisine locale. Beaucoup choisissent aussi le train plutôt que l'avion, car il est plus écologique et permet de profiter du paysage.\n\nVoyager ainsi coûte souvent moins cher et fatigue moins. Surtout, on en garde de meilleurs souvenirs. Comme le dit un proverbe, l'important n'est pas la destination, mais le voyage lui-même.",
+    "glossary": [
+      {
+        "fr": "autrement",
+        "en": "differently"
+      },
+      {
+        "fr": "se promener",
+        "en": "to stroll / walk around"
+      },
+      {
+        "fr": "les habitants",
+        "en": "the locals"
+      },
+      {
+        "fr": "écologique",
+        "en": "eco-friendly"
+      },
+      {
+        "fr": "un souvenir",
+        "en": "a memory"
+      }
+    ],
+    "questions": [
+      {
+        "q": "En quoi consiste le « voyage lent » ?",
+        "type": "mcq",
+        "options": [
+          "Visiter le plus de pays possible",
+          "Rester plus longtemps au même endroit",
+          "Voyager uniquement en avion",
+          "Ne jamais sortir de chez soi"
+        ],
+        "answer": 1,
+        "explain": "« rester plus longtemps au même endroit »."
+      },
+      {
+        "q": "Pourquoi certains choisissent-ils le train ?",
+        "type": "mcq",
+        "options": [
+          "Parce qu'il est plus rapide que l'avion",
+          "Parce qu'il est plus écologique et permet de voir le paysage",
+          "Parce qu'il est gratuit",
+          "Parce qu'il est plus dangereux"
+        ],
+        "answer": 1,
+        "explain": "« le train… plus écologique et permet de profiter du paysage »."
+      },
+      {
+        "q": "Selon le texte, voyager lentement coûte généralement plus cher.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« Voyager ainsi coûte souvent moins cher »."
+      },
+      {
+        "q": "Quelle est l'idée du proverbe à la fin ?",
+        "type": "mcq",
+        "options": [
+          "La destination est la seule chose importante",
+          "Le voyage compte autant que la destination",
+          "Il ne faut pas voyager",
+          "Il faut voyager le plus vite possible"
+        ],
+        "answer": 1,
+        "explain": "« l'important n'est pas la destination, mais le voyage lui-même »."
+      }
+    ]
+  },
+  {
+    "id": "b1-listen-annonce-gare",
+    "skill": "listening",
+    "level": "B1",
+    "theme": "Travel",
+    "title": "Station announcement: a delay",
+    "minutes": 5,
+    "source": "Annonce en gare",
+    "intro": "A train station announcement. Listen for the train, the delay, the platform and what to do.",
+    "text": "Mesdames et messieurs, votre attention s'il vous plaît. Le train numéro 8412 à destination de Marseille, prévu à quatorze heures dix, partira avec un retard d'environ vingt minutes. Nous vous prions de nous excuser pour la gêne occasionnée. Ce train partira désormais de la voie B, et non de la voie 5 comme initialement prévu. Les voyageurs munis d'un billet sont invités à se présenter sur le quai dix minutes avant le départ. Pour toute information, vous pouvez vous adresser au guichet situé dans le hall principal. Nous vous souhaitons un agréable voyage.",
+    "glossary": [
+      {
+        "fr": "un retard",
+        "en": "a delay"
+      },
+      {
+        "fr": "la voie / le quai",
+        "en": "the track / the platform"
+      },
+      {
+        "fr": "la gêne occasionnée",
+        "en": "the inconvenience caused"
+      },
+      {
+        "fr": "muni de",
+        "en": "holding / equipped with"
+      },
+      {
+        "fr": "le guichet",
+        "en": "the ticket counter"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Quelle est la destination du train numéro 8412 ?",
+        "type": "mcq",
+        "options": [
+          "Paris",
+          "Marseille",
+          "Lyon",
+          "Nice"
+        ],
+        "answer": 1,
+        "explain": "« à destination de Marseille »."
+      },
+      {
+        "q": "Quel est le retard annoncé ?",
+        "type": "mcq",
+        "options": [
+          "Environ 10 minutes",
+          "Environ 20 minutes",
+          "Environ 40 minutes",
+          "Une heure"
+        ],
+        "answer": 1,
+        "explain": "« un retard d'environ vingt minutes »."
+      },
+      {
+        "q": "Le train partira de la voie 5, comme prévu au départ.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« partira désormais de la voie B, et non de la voie 5 »."
+      },
+      {
+        "q": "Où peut-on obtenir des informations ?",
+        "type": "mcq",
+        "options": [
+          "Au guichet, dans le hall principal",
+          "Sur le quai",
+          "Dans le train",
+          "Sur Internet"
+        ],
+        "answer": 0,
+        "explain": "« vous adresser au guichet situé dans le hall principal »."
+      }
+    ]
+  },
+  {
+    "id": "b2-listen-anti-gaspi",
+    "skill": "listening",
+    "level": "B2",
+    "theme": "Environment & food",
+    "title": "Report: the fight against food waste",
+    "minutes": 7,
+    "source": "Reportage radio",
+    "intro": "A radio report on food waste. Note the solutions for shops and for individuals.",
+    "text": "Chaque année en France, des millions de tonnes de nourriture encore consommable sont jetées à la poubelle. Cela représente un gaspillage énorme, à la fois pour l'environnement et pour le portefeuille des ménages. Mais les choses commencent à changer.\n\nDe plus en plus de supermarchés vendent à prix réduit les produits dont la date approche, au lieu de les jeter. Des applications permettent même de récupérer, pour quelques euros, les invendus des boulangeries et des restaurants en fin de journée.\n\nDu côté des particuliers, quelques gestes simples suffisent souvent : faire une liste avant de faire ses courses, mieux conserver les aliments, et cuisiner les restes plutôt que de les jeter.\n\nSelon les associations, si chacun y mettait du sien, on pourrait réduire de moitié le gaspillage alimentaire en quelques années. Un effort modeste, pour un résultat considérable.",
+    "glossary": [
+      {
+        "fr": "le gaspillage / gaspiller",
+        "en": "waste / to waste"
+      },
+      {
+        "fr": "consommable",
+        "en": "edible / fit to eat"
+      },
+      {
+        "fr": "les invendus",
+        "en": "unsold goods"
+      },
+      {
+        "fr": "les restes",
+        "en": "leftovers"
+      },
+      {
+        "fr": "y mettre du sien",
+        "en": "to do one's part"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Quel est le sujet du reportage ?",
+        "type": "mcq",
+        "options": [
+          "Le prix des supermarchés",
+          "Le gaspillage alimentaire",
+          "La cuisine française",
+          "Les applications mobiles"
+        ],
+        "answer": 1,
+        "explain": "« des millions de tonnes de nourriture… sont jetées… un gaspillage énorme »."
+      },
+      {
+        "q": "Que font de plus en plus de supermarchés ?",
+        "type": "mcq",
+        "options": [
+          "Ils jettent davantage de produits",
+          "Ils vendent à prix réduit les produits dont la date approche",
+          "Ils ferment plus tôt",
+          "Ils augmentent les prix"
+        ],
+        "answer": 1,
+        "explain": "« vendent à prix réduit les produits dont la date approche, au lieu de les jeter »."
+      },
+      {
+        "q": "Quel geste simple est conseillé aux particuliers ?",
+        "type": "mcq",
+        "options": [
+          "Acheter davantage",
+          "Faire une liste avant les courses et cuisiner les restes",
+          "Manger plus souvent au restaurant",
+          "Jeter les restes"
+        ],
+        "answer": 1,
+        "explain": "« faire une liste… cuisiner les restes plutôt que de les jeter »."
+      },
+      {
+        "q": "Selon les associations, il est impossible de réduire le gaspillage.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« on pourrait réduire de moitié le gaspillage… en quelques années »."
+      },
+      {
+        "q": "Quel est le ton de la conclusion ?",
+        "type": "mcq",
+        "options": [
+          "Pessimiste",
+          "Encourageant : un petit effort pour un grand résultat",
+          "Indifférent",
+          "En colère"
+        ],
+        "answer": 1,
+        "explain": "« Un effort modeste, pour un résultat considérable »."
+      }
+    ]
+  },
+  {
+    "id": "b2-listen-etudes-etranger",
+    "skill": "listening",
+    "level": "B2",
+    "theme": "Education",
+    "title": "Interview: a year studying abroad",
+    "minutes": 8,
+    "source": "Interview",
+    "intro": "A student talks about her year abroad. Listen for both the difficulties and what she gained.",
+    "text": "— Léa, vous venez de passer un an à étudier en Espagne. Comment s'est passée cette expérience ?\n— Franchement, c'était l'une des meilleures années de ma vie, même si le début a été difficile.\n— Difficile, c'est-à-dire ?\n— Les premières semaines, je ne comprenais presque rien en cours. L'espagnol des professeurs allait beaucoup trop vite pour moi. J'ai même pensé à rentrer.\n— Et qu'est-ce qui vous a aidée à tenir ?\n— Mes colocataires, surtout. Ils m'ont encouragée et m'ont obligée à parler espagnol au quotidien. Au bout de deux mois, je me suis sentie beaucoup plus à l'aise.\n— Que retenez-vous de cette année ?\n— Énormément de choses. J'ai progressé en langue, bien sûr, mais j'ai aussi gagné en autonomie et en confiance. À tous ceux qui hésitent, je dis : foncez, vous ne le regretterez pas.",
+    "glossary": [
+      {
+        "fr": "un colocataire",
+        "en": "a flatmate / roommate"
+      },
+      {
+        "fr": "tenir",
+        "en": "to hold on / cope"
+      },
+      {
+        "fr": "à l'aise",
+        "en": "at ease / comfortable"
+      },
+      {
+        "fr": "l'autonomie",
+        "en": "independence"
+      },
+      {
+        "fr": "foncer",
+        "en": "to go for it"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Comment Léa juge-t-elle son année globalement ?",
+        "type": "mcq",
+        "options": [
+          "Une perte de temps",
+          "L'une des meilleures années de sa vie",
+          "Une année ordinaire",
+          "Un échec"
+        ],
+        "answer": 1,
+        "explain": "« l'une des meilleures années de ma vie »."
+      },
+      {
+        "q": "Quelle difficulté a-t-elle rencontrée au début ?",
+        "type": "mcq",
+        "options": [
+          "Elle n'avait pas d'argent",
+          "Elle ne comprenait presque rien en cours",
+          "Elle n'avait pas de logement",
+          "Elle était malade"
+        ],
+        "answer": 1,
+        "explain": "« je ne comprenais presque rien en cours… trop vite »."
+      },
+      {
+        "q": "Qui l'a surtout aidée à tenir ?",
+        "type": "mcq",
+        "options": [
+          "Ses professeurs",
+          "Ses parents",
+          "Ses colocataires",
+          "Personne"
+        ],
+        "answer": 2,
+        "explain": "« Mes colocataires, surtout… m'ont obligée à parler espagnol »."
+      },
+      {
+        "q": "Léa conseille aux autres de ne pas partir étudier à l'étranger.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 1,
+        "explain": "« foncez, vous ne le regretterez pas »."
+      },
+      {
+        "q": "Qu'a-t-elle gagné, en plus du progrès en langue ?",
+        "type": "mcq",
+        "options": [
+          "De l'argent",
+          "De l'autonomie et de la confiance",
+          "Un diplôme supplémentaire",
+          "Un emploi"
+        ],
+        "answer": 1,
+        "explain": "« j'ai aussi gagné en autonomie et en confiance »."
+      }
+    ]
+  },
+  {
+    "id": "b1-listen-medecin",
+    "skill": "listening",
+    "level": "B1",
+    "theme": "Health",
+    "title": "Phone call: booking a doctor's appointment",
+    "minutes": 6,
+    "source": "Conversation téléphonique",
+    "intro": "A phone call to a doctor's office. Listen for the reason, and the final day and time.",
+    "text": "— Cabinet du docteur Martin, bonjour.\n— Bonjour, je voudrais prendre rendez-vous, s'il vous plaît. J'ai mal à la gorge depuis trois jours et un peu de fièvre.\n— Très bien. Êtes-vous déjà patient chez nous ?\n— Oui, je m'appelle Paul Lefèvre.\n— Parfait, monsieur Lefèvre. Le docteur peut vous recevoir demain à onze heures. Est-ce que cela vous convient ?\n— Demain matin, c'est un peu compliqué pour moi à cause du travail. Auriez-vous quelque chose dans l'après-midi ?\n— Alors… il me reste un créneau à dix-sept heures.\n— C'est parfait, je le prends. Merci beaucoup.\n— Je vous en prie. N'oubliez pas votre carte Vitale. À demain !",
+    "glossary": [
+      {
+        "fr": "prendre rendez-vous",
+        "en": "to make an appointment"
+      },
+      {
+        "fr": "avoir mal à la gorge",
+        "en": "to have a sore throat"
+      },
+      {
+        "fr": "la fièvre",
+        "en": "fever"
+      },
+      {
+        "fr": "un créneau",
+        "en": "a time slot"
+      },
+      {
+        "fr": "convenir",
+        "en": "to suit"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Pourquoi Paul appelle-t-il ?",
+        "type": "mcq",
+        "options": [
+          "Pour annuler un rendez-vous",
+          "Pour prendre rendez-vous car il est malade",
+          "Pour parler à un ami",
+          "Pour commander des médicaments"
+        ],
+        "answer": 1,
+        "explain": "« je voudrais prendre rendez-vous… mal à la gorge… fièvre »."
+      },
+      {
+        "q": "Pourquoi le matin ne convient-il pas à Paul ?",
+        "type": "mcq",
+        "options": [
+          "Il dort",
+          "À cause de son travail",
+          "Il a un autre rendez-vous",
+          "Il habite trop loin"
+        ],
+        "answer": 1,
+        "explain": "« c'est un peu compliqué pour moi à cause du travail »."
+      },
+      {
+        "q": "À quelle heure est finalement fixé le rendez-vous ?",
+        "type": "mcq",
+        "options": [
+          "11h00",
+          "15h00",
+          "17h00",
+          "18h00"
+        ],
+        "answer": 2,
+        "explain": "« il me reste un créneau à dix-sept heures… je le prends »."
+      },
+      {
+        "q": "La secrétaire lui rappelle d'apporter sa carte Vitale.",
+        "type": "tf",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "answer": 0,
+        "explain": "« N'oubliez pas votre carte Vitale »."
+      }
+    ]
+  }
+]

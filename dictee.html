@@ -28,7 +28,7 @@ document.addEventListener('alpine:init', () => {
     level: 'all',
     current: null, idx: 0, typed: '', checked: false, revealed: false, result: null,
     results: [], finished: false, done: {},
-    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: false,
+    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: false, audioEl: null,
 
     async init() {
       this.initVoice();
@@ -126,18 +126,40 @@ document.addEventListener('alpine:init', () => {
       const pick = () => { const vs = speechSynthesis.getVoices(); this.frVoice = vs.find(v => /fr[-_]?fr/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null; };
       pick(); speechSynthesis.addEventListener('voiceschanged', pick);
     },
-    play(rate) {
-      if (!this.canSpeak || !this.sentence) return;
-      try {
-        speechSynthesis.cancel();
-        const u = new SpeechSynthesisUtterance(this.sentence.fr);
-        u.lang = 'fr-FR'; if (this.frVoice) u.voice = this.frVoice; u.rate = rate || 1;
-        this.speaking = true;
-        u.onend = u.onerror = () => { this.speaking = false; };
-        speechSynthesis.speak(u);
-      } catch (e) { this.speaking = false; }
+    // Hosted neural audio first (assets/audio/tts), browser TTS as fallback.
+    playHosted(url, rate) {
+      return new Promise((resolve, reject) => {
+        const a = this.audioEl || (this.audioEl = new Audio());
+        const cleanup = () => { a.removeEventListener('ended', ok); a.removeEventListener('error', bad); };
+        const ok = () => { cleanup(); resolve(); };
+        const bad = () => { cleanup(); reject(new Error('audio')); };
+        a.addEventListener('ended', ok); a.addEventListener('error', bad);
+        try { a.pause(); a.src = url; a.defaultPlaybackRate = rate; a.playbackRate = rate; a.currentTime = 0; a.play().catch(bad); }
+        catch (e) { cleanup(); reject(e); }
+      });
     },
-    stop() { if (this.canSpeak) speechSynthesis.cancel(); this.speaking = false; },
+    play(rate) {
+      if (!this.sentence) return;
+      this.stop();
+      this.speaking = true;
+      const done = () => { this.speaking = false; };
+      const url = './assets/audio/tts/dictee/' + this.current.id + '-' + this.idx + '.mp3';
+      this.playHosted(url, rate || 1).then(done).catch(() => {
+        if (!this.canSpeak) return done();
+        try {
+          speechSynthesis.cancel();
+          const u = new SpeechSynthesisUtterance(this.sentence.fr);
+          u.lang = 'fr-FR'; if (this.frVoice) u.voice = this.frVoice; u.rate = rate || 1;
+          u.onend = u.onerror = done;
+          speechSynthesis.speak(u);
+        } catch (e) { done(); }
+      });
+    },
+    stop() {
+      if (this.canSpeak) speechSynthesis.cancel();
+      if (this.audioEl) { try { this.audioEl.pause(); } catch (e) {} }
+      this.speaking = false;
+    },
   }));
 });
 </script>
@@ -157,7 +179,8 @@ document.addEventListener('alpine:init', () => {
         <a href="./watch.html" class="text-sm text-slate-600 hover:text-slate-900">Watch 🎬</a>
         <a href="./dictee.html" class="text-sm font-medium text-blue-600">Dictée ✍️</a>
         <a href="./shadow.html" class="text-sm text-slate-600 hover:text-slate-900">Shadow 🗣️</a>
-        <a href="./mock.html" class="text-sm text-slate-600 hover:text-slate-900">Mock exam 🎓</a>
+        <a href="./oral.html" class="text-sm text-slate-600 hover:text-slate-900">Oral 🎤</a>
+        <a href="./mock.html" class="text-sm text-slate-600 hover:text-slate-900">Mock 🎓</a>
         <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
       </div>
       <button @click="open = !open" class="lg:hidden p-2 text-slate-600" aria-label="Menu">
@@ -171,7 +194,8 @@ document.addEventListener('alpine:init', () => {
       <a href="./watch.html" class="block py-2 text-sm text-slate-600">Watch 🎬</a>
       <a href="./dictee.html" class="block py-2 text-sm font-medium text-blue-600">Dictée ✍️</a>
       <a href="./shadow.html" class="block py-2 text-sm text-slate-600">Shadow 🗣️</a>
-      <a href="./mock.html" class="block py-2 text-sm text-slate-600">Mock exam 🎓</a>
+      <a href="./oral.html" class="block py-2 text-sm text-slate-600">Oral 🎤</a>
+      <a href="./mock.html" class="block py-2 text-sm text-slate-600">Mock 🎓</a>
       <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
       <a href="./#tracker" class="block py-2 text-sm font-medium text-slate-900">Get the tracker →</a>
     </div>
@@ -195,9 +219,6 @@ document.addEventListener('alpine:init', () => {
   <p x-show="loading" class="mt-10 text-slate-500">Loading…</p>
   <div x-show="error" x-cloak class="mt-10 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-sm text-slate-600">
     Couldn't load the dictations. View this on the live site or via the local server (<code class="bg-slate-200 px-1.5 py-0.5 rounded">node serve.js</code>).
-  </div>
-  <div x-show="!loading && !error && !canSpeak && !current" x-cloak class="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
-    Your browser has no French speech voice, so the audio won't play here. Try Chrome or Safari.
   </div>
 
   <!-- ============ CATALOGUE ============ -->
@@ -251,8 +272,8 @@ document.addEventListener('alpine:init', () => {
         <div class="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-5 text-center">
           <p class="text-sm text-slate-500">Listen and type what you hear 👂</p>
           <div class="mt-3 flex items-center justify-center gap-3">
-            <button @click="play(1)" :disabled="!canSpeak" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors disabled:opacity-40">▶ Play</button>
-            <button @click="play(0.65)" :disabled="!canSpeak" class="inline-flex items-center gap-2 px-4 py-3 border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-white transition-colors disabled:opacity-40">🐢 Slow</button>
+            <button @click="play(1)" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors">▶ Play</button>
+            <button @click="play(0.65)" class="inline-flex items-center gap-2 px-4 py-3 border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-white transition-colors">🐢 Slow</button>
           </div>
         </div>
 

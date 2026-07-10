@@ -1,0 +1,56 @@
+[
+  {
+    "id": "b1-vie-sans-voiture",
+    "level": "B1",
+    "theme": "Ville & environnement",
+    "title": "Vivre sans voiture, c'est possible ?",
+    "text": "De plus en plus de jeunes citadins renoncent à passer le permis de conduire. Entre les transports en commun, le vélo et les trottinettes en libre-service, la voiture ne semble plus indispensable en ville. Pourtant, dès qu'on s'éloigne des grandes agglomérations, s'en passer devient un vrai casse-tête : horaires de bus rares, distances longues, services publics éloignés. La voiture, liberté ou fardeau ? La réponse dépend visiblement de l'endroit où l'on vit.",
+    "consigne": "Dégagez le thème soulevé par ce document, puis présentez votre opinion de façon organisée (3 à 5 minutes). Vous en discuterez ensuite avec l'examinateur.",
+    "hints": ["Votre expérience à Paris vs ailleurs", "Écologie, budget, liberté", "Et pour les familles ? les personnes âgées ?"]
+  },
+  {
+    "id": "b1-manger-local",
+    "level": "B1",
+    "theme": "Consommation",
+    "title": "Faut-il manger local ?",
+    "text": "Acheter ses légumes au marché, connaître le producteur, réduire les transports : le « manger local » séduit de plus en plus de Français. Mais ses détracteurs rappellent que les produits locaux sont souvent plus chers, que le choix est limité en hiver, et qu'une tomate locale cultivée sous serre chauffée peut polluer davantage qu'une tomate venue d'Espagne. Bien manger, oui — mais à quel prix, et selon quels critères ?",
+    "consigne": "Dégagez le thème soulevé par ce document, puis présentez votre opinion de façon organisée (3 à 5 minutes). Vous en discuterez ensuite avec l'examinateur.",
+    "hints": ["Prix vs qualité", "Habitudes alimentaires de votre pays d'origine", "Que faites-vous, concrètement ?"]
+  },
+  {
+    "id": "b2-semaine-4-jours",
+    "level": "B2",
+    "theme": "Travail",
+    "title": "La semaine de quatre jours",
+    "text": "Travailler quatre jours au lieu de cinq, sans perte de salaire : l'idée fait son chemin en Europe. Les entreprises qui l'ont testée décrivent des salariés moins fatigués, plus concentrés et plus fidèles. Les sceptiques, eux, dénoncent une fausse bonne idée : des journées rallongées et une intensité de travail accrue, difficilement soutenables dans la santé, la restauration ou l'éducation. Derrière ce débat se cache une question plus profonde : le travail doit-il rester au centre de nos vies ?",
+    "consigne": "Vous dégagerez le problème soulevé par ce document, puis vous présenterez votre opinion sous la forme d'un exposé personnel de 5 à 10 minutes, que vous défendrez ensuite dans le débat avec l'examinateur.",
+    "hints": ["Productivité vs présence", "Quels métiers sont oubliés dans ce débat ?", "La place du travail dans la vie"]
+  },
+  {
+    "id": "b2-transports-gratuits",
+    "level": "B2",
+    "theme": "Ville & environnement",
+    "title": "Faut-il rendre les transports publics gratuits ?",
+    "text": "Une centaine de villes dans le monde, dont plusieurs en France, ont rendu leurs bus gratuits. Les partisans y voient une mesure sociale et écologique : moins de voitures, plus de pouvoir d'achat, une ville apaisée. Les opposants répliquent que la gratuité n'existe pas — quelqu'un paie toujours, en l'occurrence le contribuable — et que l'argent serait mieux investi dans la fréquence et la qualité du réseau. Faut-il faire payer l'usager ou le citoyen ?",
+    "consigne": "Vous dégagerez le problème soulevé par ce document, puis vous présenterez votre opinion sous la forme d'un exposé personnel de 5 à 10 minutes, que vous défendrez ensuite dans le débat avec l'examinateur.",
+    "hints": ["Qui paie vraiment ?", "Gratuité ou qualité de service ?", "Comparez avec les transports que vous connaissez"]
+  },
+  {
+    "id": "b2-ia-ecole",
+    "level": "B2",
+    "theme": "Éducation & technologie",
+    "title": "L'intelligence artificielle à l'école",
+    "text": "Des élèves qui font rédiger leurs devoirs par une intelligence artificielle, des enseignants qui s'en servent pour préparer leurs cours : l'IA s'est invitée à l'école sans y avoir été conviée. Certains établissements l'interdisent, d'autres l'intègrent dans leur pédagogie, estimant qu'il vaut mieux apprendre à s'en servir qu'à s'en cacher. Entre l'outil qui libère du temps et la béquille qui empêche d'apprendre, où placer la frontière ?",
+    "consigne": "Vous dégagerez le problème soulevé par ce document, puis vous présenterez votre opinion sous la forme d'un exposé personnel de 5 à 10 minutes, que vous défendrez ensuite dans le débat avec l'examinateur.",
+    "hints": ["Interdire, encadrer ou encourager ?", "Qu'est-ce qu'« apprendre », au fond ?", "Votre propre usage de l'IA"]
+  },
+  {
+    "id": "b2-smartphone-15ans",
+    "level": "B2",
+    "theme": "Société & famille",
+    "title": "Pas de smartphone avant 15 ans ?",
+    "text": "Face à l'explosion du temps d'écran chez les adolescents, des voix s'élèvent pour interdire le smartphone avant 15 ans, comme le recommande un rapport remis au gouvernement. Sommeil dégradé, harcèlement en ligne, difficultés de concentration : les arguments sanitaires ne manquent pas. Mais les opposants rappellent qu'une interdiction est illusoire quand toute la vie sociale des jeunes passe par ces appareils, et que le rôle des parents ne peut pas être délégué à la loi. Protéger ou responsabiliser ?",
+    "consigne": "Vous dégagerez le problème soulevé par ce document, puis vous présenterez votre opinion sous la forme d'un exposé personnel de 5 à 10 minutes, que vous défendrez ensuite dans le débat avec l'examinateur.",
+    "hints": ["Loi vs éducation parentale", "Votre adolescence sans/avec écrans", "Interdire rend-il plus désirable ?"]
+  }
+]

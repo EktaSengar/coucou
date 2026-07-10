@@ -28,7 +28,7 @@ document.addEventListener('alpine:init', () => {
     skill: 'reading', level: 'all',
     current: null, qstate: [], showTranscript: false, plays: 0,
     done: {},
-    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: false,
+    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: false, audioEl: null,
 
     async init() {
       this.initVoice();
@@ -114,24 +114,46 @@ document.addEventListener('alpine:init', () => {
       const pick = () => { const vs = speechSynthesis.getVoices(); this.frVoice = vs.find(v => /fr[-_]?fr/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null; };
       pick(); speechSynthesis.addEventListener('voiceschanged', pick);
     },
-    // Read the whole passage/transcript aloud (strip dialogue dashes, flatten lines).
-    play() {
-      if (!this.canSpeak || !this.current) return;
-      const clean = String(this.current.text)
-        .replace(/—\s*/g, '')
-        .replace(/\s*\n+\s*/g, ' … ')
-        .replace(/\s+/g, ' ')
-        .trim();
-      try {
-        speechSynthesis.cancel();
-        const u = new SpeechSynthesisUtterance(clean);
-        u.lang = 'fr-FR'; if (this.frVoice) u.voice = this.frVoice; u.rate = 0.95;
-        this.speaking = true; this.plays++;
-        u.onend = u.onerror = () => { this.speaking = false; };
-        speechSynthesis.speak(u);
-      } catch (e) { this.speaking = false; }
+    // Hosted neural audio first (assets/audio/tts/listen — two-voice dialogues
+    // for interviews), browser TTS as fallback for items without a recording.
+    playHosted(url, rate) {
+      return new Promise((resolve, reject) => {
+        const a = this.audioEl || (this.audioEl = new Audio());
+        const cleanup = () => { a.removeEventListener('ended', ok); a.removeEventListener('error', bad); };
+        const ok = () => { cleanup(); resolve(); };
+        const bad = () => { cleanup(); reject(new Error('audio')); };
+        a.addEventListener('ended', ok); a.addEventListener('error', bad);
+        try { a.pause(); a.src = url; a.defaultPlaybackRate = rate; a.playbackRate = rate; a.currentTime = 0; a.play().catch(bad); }
+        catch (e) { cleanup(); reject(e); }
+      });
     },
-    stop() { if (this.canSpeak) speechSynthesis.cancel(); this.speaking = false; },
+    play() {
+      if (!this.current) return;
+      this.stop();
+      this.speaking = true; this.plays++;
+      const done = () => { this.speaking = false; };
+      const url = './assets/audio/tts/listen/' + this.current.id + '.mp3';
+      this.playHosted(url, 1).then(done).catch(() => {
+        if (!this.canSpeak) return done();
+        const clean = String(this.current.text)
+          .replace(/—\s*/g, '')
+          .replace(/\s*\n+\s*/g, ' … ')
+          .replace(/\s+/g, ' ')
+          .trim();
+        try {
+          speechSynthesis.cancel();
+          const u = new SpeechSynthesisUtterance(clean);
+          u.lang = 'fr-FR'; if (this.frVoice) u.voice = this.frVoice; u.rate = 0.95;
+          u.onend = u.onerror = done;
+          speechSynthesis.speak(u);
+        } catch (e) { done(); }
+      });
+    },
+    stop() {
+      if (this.canSpeak) speechSynthesis.cancel();
+      if (this.audioEl) { try { this.audioEl.pause(); } catch (e) {} }
+      this.speaking = false;
+    },
   }));
 });
 </script>
@@ -151,7 +173,8 @@ document.addEventListener('alpine:init', () => {
         <a href="./watch.html" class="text-sm text-slate-600 hover:text-slate-900">Watch 🎬</a>
         <a href="./dictee.html" class="text-sm text-slate-600 hover:text-slate-900">Dictée ✍️</a>
         <a href="./shadow.html" class="text-sm text-slate-600 hover:text-slate-900">Shadow 🗣️</a>
-        <a href="./mock.html" class="text-sm text-slate-600 hover:text-slate-900">Mock exam 🎓</a>
+        <a href="./oral.html" class="text-sm text-slate-600 hover:text-slate-900">Oral 🎤</a>
+        <a href="./mock.html" class="text-sm text-slate-600 hover:text-slate-900">Mock 🎓</a>
         <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
       </div>
       <button @click="open = !open" class="lg:hidden p-2 text-slate-600" aria-label="Menu">
@@ -165,7 +188,8 @@ document.addEventListener('alpine:init', () => {
       <a href="./watch.html" class="block py-2 text-sm text-slate-600">Watch 🎬</a>
       <a href="./dictee.html" class="block py-2 text-sm text-slate-600">Dictée ✍️</a>
       <a href="./shadow.html" class="block py-2 text-sm text-slate-600">Shadow 🗣️</a>
-      <a href="./mock.html" class="block py-2 text-sm text-slate-600">Mock exam 🎓</a>
+      <a href="./oral.html" class="block py-2 text-sm text-slate-600">Oral 🎤</a>
+      <a href="./mock.html" class="block py-2 text-sm text-slate-600">Mock 🎓</a>
       <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
       <a href="./#tracker" class="block py-2 text-sm font-medium text-slate-900">Get the tracker →</a>
     </div>
@@ -256,15 +280,14 @@ document.addEventListener('alpine:init', () => {
 
         <!-- LISTENING: audio player -->
         <div x-show="current.skill === 'listening'" class="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">
-          <div x-show="!canSpeak" class="text-sm text-slate-600">Your browser has no French speech voice, so audio isn't available here. You can still read the transcript below and answer.</div>
-          <div x-show="canSpeak">
+          <div>
             <div class="flex items-center gap-3">
               <button @click="speaking ? stop() : play()" class="inline-flex items-center gap-2 px-5 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors">
                 <span x-text="speaking ? '⏹ Stop' : (plays === 0 ? '▶ Play' : '↻ Play again')"></span>
               </button>
               <span class="text-sm text-slate-500" x-text="plays === 0 ? 'Listen twice before you peek 👀' : ('Played ' + plays + (plays === 1 ? ' time' : ' times'))"></span>
             </div>
-            <p class="mt-3 text-xs text-slate-400">🤖 This is a computer voice, for practice. For <strong class="text-slate-500">real</strong> French at real speed — cartoons, interviews, news — head to <a href="./watch.html" class="text-blue-600 hover:underline">Watch 🎬</a>.</p>
+            <p class="mt-3 text-xs text-slate-400">🎧 Studio voices — interviews play as a real two-person dialogue, like the exam. For French at street speed, head to <a href="./watch.html" class="text-blue-600 hover:underline">Watch 🎬</a>.</p>
             <button @click="showTranscript = !showTranscript" class="mt-4 text-sm font-medium text-blue-600 hover:underline" x-text="showTranscript ? 'Hide transcript' : 'Show transcript'"></button>
             <div x-show="showTranscript" x-cloak class="mt-3 whitespace-pre-line text-slate-800 leading-relaxed border-t border-slate-200 pt-3" x-text="current.text"></div>
           </div>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oral exam trainer — Coucou</title>
+<meta name="description" content="Train the DELF oral exam: pick a real-style document déclencheur, prepare against the clock, then defend your position with an AI examiner.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DELF oral exam trainer — Coucou">
+<meta property="og:description" content="Timed prep, a plan scaffold, and an AI examiner who debates you and grades you on the DELF grid.">
+<meta property="og:url" content="https://ektasengar.github.io/coucou/oral.html">
+<meta property="og:image" content="https://ektasengar.github.io/coucou/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ektasengar.github.io/coucou/assets/og.png">
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('oralSim', () => ({
+    sujets: [], loading: true, error: false, done: {},
+    current: null, phase: 'pick',        // pick | prep | go
+    remaining: 0, total: 0, timer: null,
+    notes: { probleme: '', plan: '', args: '', conclusion: '' },
+
+    async init() {
+      try {
+        const res = await fetch('./data/oral.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('http ' + res.status);
+        this.sujets = await res.json();
+      } catch (e) { this.error = true; this.loading = false; return; }
+      this.sujets.forEach(s => { this.done[s.id] = this.read(s.id); });
+      this.loading = false;
+    },
+    read(id) { try { return localStorage.getItem('lf-oral-' + id) === '1'; } catch (e) { return false; } },
+
+    open(s, secs) {
+      this.current = s; this.total = secs; this.remaining = secs; this.phase = 'prep';
+      // restore any saved plan for this sujet
+      try { const n = JSON.parse(localStorage.getItem('lf-oral-notes-' + s.id) || 'null'); if (n) this.notes = n; else this.notes = { probleme: '', plan: '', args: '', conclusion: '' }; } catch (e) {}
+      this.startTimer();
+      window.scrollTo({ top: 0 });
+    },
+    startTimer() {
+      this.stopTimer();
+      this.timer = setInterval(() => {
+        if (this.remaining > 0) this.remaining--;
+        else { this.stopTimer(); this.goExam(); }
+      }, 1000);
+    },
+    stopTimer() { if (this.timer) { clearInterval(this.timer); this.timer = null; } },
+    saveNotes() { try { localStorage.setItem('lf-oral-notes-' + this.current.id, JSON.stringify(this.notes)); } catch (e) {} },
+    goExam() { this.saveNotes(); this.stopTimer(); this.phase = 'go'; window.scrollTo({ top: 0 }); },
+    quit() { this.stopTimer(); this.saveNotes && this.current && this.saveNotes(); this.current = null; this.phase = 'pick'; },
+    toggleDone() {
+      if (!this.current) return;
+      this.done[this.current.id] = !this.done[this.current.id];
+      try { localStorage.setItem('lf-oral-' + this.current.id, this.done[this.current.id] ? '1' : '0'); } catch (e) {}
+    },
+
+    get clock() {
+      const m = Math.floor(this.remaining / 60), s = this.remaining % 60;
+      return m + ':' + String(s).padStart(2, '0');
+    },
+    get urgent() { return this.remaining <= 120; },
+    get pct() { return this.total ? (this.remaining / this.total * 100) : 0; },
+
+    get planText() {
+      const n = this.notes, parts = [];
+      if (n.probleme) parts.push('Problématique : ' + n.probleme);
+      if (n.plan) parts.push('Plan : ' + n.plan);
+      if (n.args) parts.push('Arguments et exemples : ' + n.args);
+      if (n.conclusion) parts.push('Conclusion : ' + n.conclusion);
+      return parts.join('\n');
+    },
+    examPrompt() {
+      const s = this.current;
+      let p = `Agis comme l'examinateur de l'épreuve de production orale du DELF ${s.level}, en français. Voici le document déclencheur que j'ai préparé :\n\n« ${s.text} »\n\nConsigne : ${s.consigne}\n\nDéroulé : (1) Invite-moi à faire mon exposé, puis laisse-moi le dérouler sans m'interrompre — si j'utilise le mode vocal, écoute jusqu'au bout. (2) Ensuite, joue vraiment le débat : conteste mes arguments avec 3 ou 4 questions, une à la fois, en t'appuyant sur mes réponses. (3) Enfin, note-moi sur 25 selon la grille du DELF ${s.level} (contenu et langue, avec le détail), signale mes erreurs de grammaire et de prononciation récurrentes, et donne-moi 3 priorités de progression plus 5 expressions qui auraient enrichi mon exposé.`;
+      if (this.planText) p += `\n\nMon plan préparé (en ${Math.round((this.total - this.remaining) / 60)} min) :\n${this.planText}`;
+      p += `\n\nCommence maintenant.`;
+      return p;
+    },
+    examUrl(provider) {
+      return (provider === 'chatgpt' ? 'https://chatgpt.com/?q=' : 'https://claude.ai/new?q=') + encodeURIComponent(this.examPrompt());
+    },
+  }));
+});
+</script>
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+<!-- NAV -->
+<nav x-data="{ open: false }" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="flex items-center justify-between h-16">
+      <a href="./" class="flex items-center gap-2 font-extrabold text-slate-900 tracking-tight"><span>🇫🇷</span> coucou <span class="font-medium text-blue-600 hidden sm:inline">· learn French</span></a>
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="./lessons.html" class="text-sm text-slate-600 hover:text-slate-900">Lessons</a>
+        <a href="./practice.html" class="text-sm text-slate-600 hover:text-slate-900">Practice</a>
+        <a href="./train.html" class="text-sm text-slate-600 hover:text-slate-900">Read &amp; Listen</a>
+        <a href="./watch.html" class="text-sm text-slate-600 hover:text-slate-900">Watch 🎬</a>
+        <a href="./dictee.html" class="text-sm text-slate-600 hover:text-slate-900">Dictée ✍️</a>
+        <a href="./shadow.html" class="text-sm text-slate-600 hover:text-slate-900">Shadow 🗣️</a>
+        <a href="./oral.html" class="text-sm font-medium text-blue-600">Oral 🎤</a>
+        <a href="./mock.html" class="text-sm text-slate-600 hover:text-slate-900">Mock 🎓</a>
+        <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
+      </div>
+      <button @click="open = !open" class="lg:hidden p-2 text-slate-600" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div x-show="open" x-cloak class="lg:hidden pb-4 space-y-1">
+      <a href="./lessons.html" class="block py-2 text-sm text-slate-600">Lessons</a>
+      <a href="./practice.html" class="block py-2 text-sm text-slate-600">Practice</a>
+      <a href="./train.html" class="block py-2 text-sm text-slate-600">Read &amp; Listen</a>
+      <a href="./watch.html" class="block py-2 text-sm text-slate-600">Watch 🎬</a>
+      <a href="./dictee.html" class="block py-2 text-sm text-slate-600">Dictée ✍️</a>
+      <a href="./shadow.html" class="block py-2 text-sm text-slate-600">Shadow 🗣️</a>
+      <a href="./oral.html" class="block py-2 text-sm font-medium text-blue-600">Oral 🎤</a>
+      <a href="./mock.html" class="block py-2 text-sm text-slate-600">Mock 🎓</a>
+      <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-3xl mx-auto px-5 py-12 md:py-16" x-data="oralSim()">
+
+  <!-- ======== PICK ======== -->
+  <template x-if="phase === 'pick'">
+    <div>
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-5">🎤 Production orale · the DELF speaking exam</span>
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">Oral exam trainer</h1>
+      <p class="mt-4 text-lg text-slate-600">The real B2 oral: you draw a short text, get <strong class="text-slate-800">30 minutes to prepare</strong>, then face the jury — a structured exposé, followed by a debate where they push back. Train the whole thing here: timed prep, a plan scaffold, and an AI examiner who debates you and grades you on the DELF grid.</p>
+
+      <div class="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5 text-sm text-slate-600">
+        <p class="font-semibold text-slate-900">How a good exposé is built</p>
+        <ol class="mt-2 space-y-1 list-decimal list-inside">
+          <li><strong class="text-slate-800">Intro</strong> — present the document and dégager la problématique (« Ce document soulève la question de… »)</li>
+          <li><strong class="text-slate-800">Annonce du plan</strong> — « Dans un premier temps…, puis…, enfin… »</li>
+          <li><strong class="text-slate-800">2–3 arguments</strong>, each with a concrete example</li>
+          <li><strong class="text-slate-800">Conclusion</strong> — your position, clearly nuanced</li>
+        </ol>
+        <p class="mt-3">📱 Tip: open the examiner link on your phone in the Claude app and use <strong class="text-slate-800">voice mode</strong> — then you're actually speaking, like on exam day.</p>
+      </div>
+
+      <p x-show="loading" class="mt-10 text-slate-500">Loading sujets…</p>
+      <div x-show="error" x-cloak class="mt-10 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-sm text-slate-600">Couldn't load the sujets. If you opened this file directly, run it through the local server or view it on the live site.</div>
+
+      <div class="mt-10 space-y-4">
+        <template x-for="s in sujets" :key="s.id">
+          <div class="rounded-xl border border-slate-200 p-5 hover:border-blue-300 transition-colors">
+            <div class="flex items-start justify-between gap-3">
+              <div class="flex items-center gap-2 text-xs font-medium">
+                <span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-blue-600 text-white font-bold" x-text="s.level"></span>
+                <span class="text-slate-400" x-text="s.theme"></span>
+              </div>
+              <span x-show="done[s.id]" x-cloak class="text-xs font-medium text-green-600">✓ done</span>
+            </div>
+            <h2 class="mt-2 font-semibold text-slate-900" x-text="s.title"></h2>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <button @click="open(s, 600)" class="px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800">▶ Train — 10 min prep</button>
+              <button @click="open(s, 1800)" class="px-4 py-2 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50">🎓 Exam — 30 min prep</button>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </template>
+
+  <!-- ======== PREP ======== -->
+  <template x-if="phase === 'prep'">
+    <div>
+      <div class="flex items-center justify-between">
+        <button @click="quit()" class="text-sm text-slate-500 hover:text-slate-700">← Quit</button>
+        <div class="flex items-center gap-3">
+          <div class="h-2 w-28 rounded-full bg-slate-100 overflow-hidden"><div class="h-full transition-all duration-1000" :class="urgent ? 'bg-red-500' : 'bg-blue-600'" :style="`width:${pct}%`"></div></div>
+          <span class="font-mono text-lg font-bold tabular-nums" :class="urgent ? 'text-red-600' : 'text-slate-900'" x-text="clock"></span>
+        </div>
+      </div>
+
+      <h1 class="mt-6 text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900" x-text="current.title"></h1>
+      <div class="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-5 text-slate-800 leading-relaxed" x-text="current.text"></div>
+      <p class="mt-3 text-sm text-slate-500 italic" x-text="current.consigne"></p>
+
+      <details class="mt-3">
+        <summary class="cursor-pointer text-sm font-medium text-blue-600 select-none">Stuck? 3 angles to consider</summary>
+        <ul class="mt-2 space-y-1 text-sm text-slate-600 list-disc list-inside">
+          <template x-for="h in current.hints" :key="h"><li x-text="h"></li></template>
+        </ul>
+      </details>
+
+      <div class="mt-8 space-y-4">
+        <div>
+          <label class="text-sm font-semibold text-slate-900">1 · Problématique</label>
+          <input x-model="notes.probleme" @input="saveNotes()" type="text" placeholder="Ce document soulève la question de…" class="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none" />
+        </div>
+        <div>
+          <label class="text-sm font-semibold text-slate-900">2 · Plan</label>
+          <input x-model="notes.plan" @input="saveNotes()" type="text" placeholder="D'abord… ensuite… enfin…" class="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none" />
+        </div>
+        <div>
+          <label class="text-sm font-semibold text-slate-900">3 · Arguments + exemples</label>
+          <textarea x-model="notes.args" @input="saveNotes()" rows="5" placeholder="Un argument par ligne, chacun avec un exemple concret." class="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none"></textarea>
+        </div>
+        <div>
+          <label class="text-sm font-semibold text-slate-900">4 · Conclusion</label>
+          <input x-model="notes.conclusion" @input="saveNotes()" type="text" placeholder="Votre position, nuancée." class="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none" />
+        </div>
+      </div>
+
+      <button @click="goExam()" class="mt-8 w-full px-6 py-3.5 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors">I'm ready — face the examiner →</button>
+    </div>
+  </template>
+
+  <!-- ======== GO ======== -->
+  <template x-if="phase === 'go'">
+    <div>
+      <button @click="quit()" class="text-sm text-slate-500 hover:text-slate-700">← Back to sujets</button>
+      <h1 class="mt-6 text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900">Face the examiner 🎤</h1>
+      <p class="mt-3 text-slate-600">Your document and your plan go with you. The examiner will hear your exposé without interrupting, then debate you, then grade you <strong class="text-slate-800">/25 on the DELF grid</strong> with your recurring mistakes and 3 priorities.</p>
+
+      <div class="mt-6 rounded-xl border border-blue-200 bg-blue-50 p-5">
+        <p class="text-sm font-semibold text-slate-900">📱 Speak, don't type</p>
+        <p class="mt-1 text-sm text-slate-600">On your phone, open the link in the Claude app and tap the <strong>voice mode</strong> icon — do the whole exposé out loud, exactly like exam day. Typing works too, but speaking is the point.</p>
+      </div>
+
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a :href="examUrl('claude')" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3">Start with Claude →</a>
+        <a :href="examUrl('chatgpt')" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-lg border border-slate-300 hover:border-slate-400 text-slate-700 font-medium px-6 py-3">Start with ChatGPT →</a>
+      </div>
+
+      <div class="mt-8 rounded-xl border border-slate-200 p-5">
+        <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Your plan (also sent to the examiner)</p>
+        <p class="mt-2 whitespace-pre-line text-sm text-slate-700" x-text="planText || '— no notes taken —'"></p>
+      </div>
+
+      <div class="mt-8 flex items-center justify-between border-t border-slate-200 pt-5">
+        <button @click="toggleDone()" class="text-sm font-medium" :class="done[current.id] ? 'text-green-600' : 'text-slate-500 hover:text-slate-700'" x-text="done[current.id] ? '✓ Done — well played' : 'Mark this sujet done ✓'"></button>
+        <button @click="quit()" class="text-sm font-medium text-blue-600 hover:text-blue-700">Try another sujet →</button>
+      </div>
+    </div>
+  </template>
+
+</main>
+
+<footer class="border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-5 py-10 text-center">
+    <p class="text-lg font-bold text-slate-900">Un pas à la fois. 🇫🇷</p>
+    <p class="mt-2 text-sm text-slate-500"><strong>Coucou</strong> · a free, open playbook · built with AI · 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>

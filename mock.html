@@ -29,7 +29,7 @@ document.addEventListener('alpine:init', () => {
     coItems: [], ceItems: [], coAns: [], ceAns: [],
     essay: '', peScore: '', poScore: '', showModel: false,
     startedAt: null, now: Date.now(), tick: null,
-    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: false,
+    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: false, audioEl: null,
 
     PE_SUBJECT: "Un magazine francophone organise un débat : « Faut-il limiter le temps passé sur les réseaux sociaux ? » Rédigez une contribution argumentée d'environ 250 mots pour donner votre point de vue, en illustrant vos arguments par des exemples.",
     PO_TRIGGER: "De plus en plus de villes envisagent d'interdire la publicité pour la « malbouffe » (produits trop gras ou trop sucrés) à proximité des écoles. Pour les uns, c'est une mesure de santé publique nécessaire ; pour les autres, une atteinte à la liberté de choix.",
@@ -118,18 +118,41 @@ document.addEventListener('alpine:init', () => {
       const pick = () => { const vs = speechSynthesis.getVoices(); this.frVoice = vs.find(v => /fr[-_]?fr/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null; };
       pick(); speechSynthesis.addEventListener('voiceschanged', pick);
     },
-    play(item) {
-      if (!this.canSpeak || !item) return;
-      const clean = String(item.text).replace(/—\s*/g, '').replace(/\s*\n+\s*/g, ' … ').replace(/\s+/g, ' ').trim();
-      try {
-        speechSynthesis.cancel();
-        const u = new SpeechSynthesisUtterance(clean);
-        u.lang = 'fr-FR'; if (this.frVoice) u.voice = this.frVoice; u.rate = 0.95;
-        this.speaking = true; u.onend = u.onerror = () => { this.speaking = false; };
-        speechSynthesis.speak(u);
-      } catch (e) { this.speaking = false; }
+    // Hosted neural audio first (assets/audio/tts/listen), browser TTS as fallback.
+    playHosted(url, rate) {
+      return new Promise((resolve, reject) => {
+        const a = this.audioEl || (this.audioEl = new Audio());
+        const cleanup = () => { a.removeEventListener('ended', ok); a.removeEventListener('error', bad); };
+        const ok = () => { cleanup(); resolve(); };
+        const bad = () => { cleanup(); reject(new Error('audio')); };
+        a.addEventListener('ended', ok); a.addEventListener('error', bad);
+        try { a.pause(); a.src = url; a.defaultPlaybackRate = rate; a.playbackRate = rate; a.currentTime = 0; a.play().catch(bad); }
+        catch (e) { cleanup(); reject(e); }
+      });
     },
-    stop() { if (this.canSpeak) speechSynthesis.cancel(); this.speaking = false; },
+    play(item) {
+      if (!item) return;
+      this.stop();
+      this.speaking = true;
+      const done = () => { this.speaking = false; };
+      const url = './assets/audio/tts/listen/' + item.id + '.mp3';
+      this.playHosted(url, 1).then(done).catch(() => {
+        if (!this.canSpeak) return done();
+        const clean = String(item.text).replace(/—\s*/g, '').replace(/\s*\n+\s*/g, ' … ').replace(/\s+/g, ' ').trim();
+        try {
+          speechSynthesis.cancel();
+          const u = new SpeechSynthesisUtterance(clean);
+          u.lang = 'fr-FR'; if (this.frVoice) u.voice = this.frVoice; u.rate = 0.95;
+          u.onend = u.onerror = done;
+          speechSynthesis.speak(u);
+        } catch (e) { done(); }
+      });
+    },
+    stop() {
+      if (this.canSpeak) speechSynthesis.cancel();
+      if (this.audioEl) { try { this.audioEl.pause(); } catch (e) {} }
+      this.speaking = false;
+    },
   }));
 });
 </script>
@@ -149,7 +172,8 @@ document.addEventListener('alpine:init', () => {
         <a href="./watch.html" class="text-sm text-slate-600 hover:text-slate-900">Watch 🎬</a>
         <a href="./dictee.html" class="text-sm text-slate-600 hover:text-slate-900">Dictée ✍️</a>
         <a href="./shadow.html" class="text-sm text-slate-600 hover:text-slate-900">Shadow 🗣️</a>
-        <a href="./mock.html" class="text-sm font-medium text-blue-600">Mock exam 🎓</a>
+        <a href="./oral.html" class="text-sm text-slate-600 hover:text-slate-900">Oral 🎤</a>
+        <a href="./mock.html" class="text-sm font-medium text-blue-600">Mock 🎓</a>
         <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
       </div>
       <button @click="open = !open" class="lg:hidden p-2 text-slate-600" aria-label="Menu">
@@ -163,7 +187,8 @@ document.addEventListener('alpine:init', () => {
       <a href="./watch.html" class="block py-2 text-sm text-slate-600">Watch 🎬</a>
       <a href="./dictee.html" class="block py-2 text-sm text-slate-600">Dictée ✍️</a>
       <a href="./shadow.html" class="block py-2 text-sm text-slate-600">Shadow 🗣️</a>
-      <a href="./mock.html" class="block py-2 text-sm font-medium text-blue-600">Mock exam 🎓</a>
+      <a href="./oral.html" class="block py-2 text-sm text-slate-600">Oral 🎤</a>
+      <a href="./mock.html" class="block py-2 text-sm font-medium text-blue-600">Mock 🎓</a>
       <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
       <a href="./#tracker" class="block py-2 text-sm font-medium text-slate-900">Get the tracker →</a>
     </div>
@@ -225,17 +250,12 @@ document.addEventListener('alpine:init', () => {
 
         <!-- listening player -->
         <div x-show="it.skill === 'listening'" class="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
-          <template x-if="canSpeak">
-            <div class="flex items-center gap-3">
-              <button @click="speaking ? stop() : play(it)" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800">
-                <span x-text="speaking ? '⏹ Stop' : '▶ Play recording'"></span>
-              </button>
-              <span class="text-xs text-slate-500">Real exam: heard once or twice.</span>
-            </div>
-          </template>
-          <template x-if="!canSpeak">
-            <p class="text-sm text-slate-600 whitespace-pre-line" x-text="it.text"></p>
-          </template>
+          <div class="flex items-center gap-3">
+            <button @click="speaking ? stop() : play(it)" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800">
+              <span x-text="speaking ? '⏹ Stop' : '▶ Play recording'"></span>
+            </button>
+            <span class="text-xs text-slate-500">Real exam: heard once or twice.</span>
+          </div>
         </div>
 
         <!-- reading text -->
@@ -310,7 +330,7 @@ document.addEventListener('alpine:init', () => {
   <!-- ============ PRODUCTION ORALE ============ -->
   <div x-show="step === 'po'" x-cloak>
     <h2 class="text-2xl font-extrabold tracking-tight text-slate-900">Part 4 · Production orale</h2>
-    <p class="mt-1 text-sm text-slate-500">Present a viewpoint from the document, then defend it in a debate. ~30 min prep + exam.</p>
+    <p class="mt-1 text-sm text-slate-500">Present a viewpoint from the document, then defend it in a debate. ~30 min prep + exam. Want to drill this paper on more sujets, with a prep timer? Use the <a href="./oral.html" class="text-blue-600 hover:underline font-medium">Oral trainer 🎤</a>.</p>
 
     <div class="mt-5 rounded-xl border border-blue-200 bg-blue-50 p-5">
       <p class="text-xs font-semibold text-blue-700 uppercase tracking-wide">Document déclencheur</p>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The French alphabet — Coucou</title>
+<meta name="description" content="Learn the French alphabet with a native recording, tap-to-hear letters, and a spell-aloud drill — so you can spell your name and address out loud in France.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The French alphabet — Coucou">
+<meta property="og:description" content="Native audio, tap-to-hear letters, and a spell-aloud drill for real life in France.">
+<meta property="og:url" content="https://ektasengar.github.io/coucou/alphabet.html">
+<meta property="og:image" content="https://ektasengar.github.io/coucou/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ektasengar.github.io/coucou/assets/og.png">
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+<script>
+document.addEventListener('alpine:init', () => {
+  // letter = the printed letter · resp = English-style respelling (from your class booklet)
+  // · fr = the French letter-name spelled so a French voice says it correctly.
+  const LETTERS = [
+    { l:'A', resp:'ah',           fr:'a' },
+    { l:'B', resp:'bé',           fr:'bé' },
+    { l:'C', resp:'sé',           fr:'cé' },
+    { l:'D', resp:'dé',           fr:'dé' },
+    { l:'E', resp:'euh',          fr:'euh' },
+    { l:'F', resp:'eff',          fr:'effe' },
+    { l:'G', resp:'gé',           fr:'gé' },
+    { l:'H', resp:'ash',          fr:'ache' },
+    { l:'I', resp:'ee',           fr:'i' },
+    { l:'J', resp:'jee',          fr:'ji' },
+    { l:'K', resp:'kah',          fr:'ka' },
+    { l:'L', resp:'ell',          fr:'elle' },
+    { l:'M', resp:'emm',          fr:'emme' },
+    { l:'N', resp:'enn',          fr:'enne' },
+    { l:'O', resp:'oh',           fr:'o' },
+    { l:'P', resp:'pé',           fr:'pé' },
+    { l:'Q', resp:'kü',           fr:'ku' },
+    { l:'R', resp:'air',          fr:'erre' },
+    { l:'S', resp:'ess',          fr:'esse' },
+    { l:'T', resp:'té',           fr:'té' },
+    { l:'U', resp:'ü',            fr:'u' },
+    { l:'V', resp:'vé',           fr:'vé' },
+    { l:'W', resp:'doo-bleuh-vé', fr:'double vé' },
+    { l:'X', resp:'eeks',         fr:'ixe' },
+    { l:'Y', resp:'ee-grek',      fr:'i grec' },
+    { l:'Z', resp:'zed',          fr:'zède' },
+  ];
+
+  Alpine.data('alphabet', () => ({
+    letters: LETTERS,
+    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window),
+    frVoice: null, active: null,      // active letter tile
+    word: '', chips: [], spelling: -1,// spell-aloud drill state
+    presets: ['Ekta', 'Kartik', 'Paris', 'sengar.ekta'],
+    audioEl: null, seq: 0,            // native-clip player + cancel token
+
+    init() { this.initVoice(); this.audioEl = new Audio(); this.audioEl.preload = 'auto'; },
+
+    initVoice() {
+      if (!this.canSpeak) return;
+      const pick = () => {
+        const vs = speechSynthesis.getVoices();
+        this.frVoice = vs.find(v => /fr[-_]?fr/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null;
+      };
+      pick();
+      speechSynthesis.addEventListener('voiceschanged', pick);
+    },
+
+    // Speak one bit of French with the device's French voice.
+    utter(text, opts = {}) {
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'fr-FR';
+      if (this.frVoice) u.voice = this.frVoice;
+      u.rate = opts.rate || 0.9;
+      if (opts.onstart) u.onstart = opts.onstart;
+      if (opts.onend) u.onend = opts.onend;
+      speechSynthesis.speak(u);
+      return u;
+    },
+
+    // Native recording of one letter, sliced from the class alphabet mp3.
+    clipUrl(item) { return './assets/audio/letters/' + item.l.toLowerCase() + '.mp3'; },
+
+    // Play a native clip; resolve when it finishes, reject if it can't play.
+    playClip(url) {
+      return new Promise((resolve, reject) => {
+        const a = this.audioEl;
+        if (!a) return reject(new Error('no-audio'));
+        const cleanup = () => { a.removeEventListener('ended', onEnd); a.removeEventListener('error', onErr); };
+        const onEnd = () => { cleanup(); resolve(); };
+        const onErr = () => { cleanup(); reject(new Error('audio')); };
+        a.addEventListener('ended', onEnd);
+        a.addEventListener('error', onErr);
+        try { a.pause(); a.src = url; a.currentTime = 0; a.play().catch(onErr); }
+        catch (e) { cleanup(); reject(e); }
+      });
+    },
+
+    // Play a letter — native voice first, browser TTS as fallback. Resolves when done.
+    playLetter(item, token) {
+      return this.playClip(this.clipUrl(item)).catch(() => new Promise(res => {
+        if (this.seq !== token || !this.canSpeak) return res();
+        this.utter(item.fr, { rate: 0.85, onend: res });
+        setTimeout(res, 1600); // safety net if onend never fires
+      }));
+    },
+
+    // Tap a single letter tile.
+    async say(item) {
+      this.stop();
+      const token = ++this.seq;
+      this.active = item.l;
+      await this.playLetter(item, token);
+      if (this.seq === token) this.active = null;
+    },
+
+    // Play the whole A→Z once, highlighting each tile as it sounds.
+    async playAll() {
+      this.stop();
+      const token = ++this.seq;
+      for (const item of this.letters) {
+        if (this.seq !== token) return;
+        this.active = item.l;
+        await this.playLetter(item, token);
+      }
+      if (this.seq === token) this.active = null;
+    },
+
+    // ——— Spell-aloud drill: hear a name/word spelled out in the native voice ———
+    async spell(text) {
+      const src = (text ?? this.word) || '';
+      this.stop();
+      const token = ++this.seq;
+      // Keep only A–Z (accents folded) and spaces.
+      const clean = src.toUpperCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+      const chips = [];
+      for (const ch of clean.split('')) {
+        if (ch === ' ') { chips.push({ space: true }); continue; }
+        const item = this.letters.find(a => a.l === ch);
+        if (item) chips.push({ l: item.l, resp: item.resp, item });
+      }
+      this.chips = chips;
+      this.spelling = -1;
+      for (let i = 0; i < chips.length; i++) {
+        if (this.seq !== token) return;
+        const c = chips[i];
+        if (c.space) { await new Promise(r => setTimeout(r, 180)); continue; }
+        this.spelling = i;
+        await this.playLetter(c.item, token);
+      }
+      if (this.seq === token) this.spelling = -1;
+    },
+
+    // Cancel anything playing (bumps the token so running sequences bail out).
+    stop() {
+      this.seq++;
+      if (this.canSpeak) speechSynthesis.cancel();
+      if (this.audioEl) { try { this.audioEl.pause(); } catch (e) {} }
+      this.active = null; this.spelling = -1;
+    },
+
+    tutorPrompt: "Be my French pronunciation coach at A1, in English with French examples. First, quiz me on the French alphabet: say a letter's English respelling and ask me to give the French name (a, bé, cé…). Then help me spell my name, my city and my email address out loud in French, letter by letter, correcting my pronunciation. Keep it short and encouraging.",
+    get claudeUrl() { return 'https://claude.ai/new?q=' + encodeURIComponent(this.tutorPrompt); },
+    get chatgptUrl() { return 'https://chatgpt.com/?q=' + encodeURIComponent(this.tutorPrompt); },
+  }));
+});
+</script>
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+<!-- NAV -->
+<nav x-data="{ open: false }" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="flex items-center justify-between h-16">
+      <a href="./" class="flex items-center gap-2 font-extrabold text-slate-900 tracking-tight"><span>🇫🇷</span> coucou <span class="font-medium text-blue-600 hidden sm:inline">· learn French</span></a>
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="./#how" class="text-sm text-slate-600 hover:text-slate-900">How it works</a>
+        <a href="./lessons.html" class="text-sm text-slate-600 hover:text-slate-900">Lessons</a>
+        <a href="./practice.html" class="text-sm text-slate-600 hover:text-slate-900">Practice</a>
+        <a href="./train.html" class="text-sm text-slate-600 hover:text-slate-900">Read &amp; Listen</a>
+        <a href="./watch.html" class="text-sm text-slate-600 hover:text-slate-900">Watch 🎬</a>
+        <a href="./dictee.html" class="text-sm text-slate-600 hover:text-slate-900">Dictée ✍️</a>
+        <a href="./shadow.html" class="text-sm text-slate-600 hover:text-slate-900">Shadow 🗣️</a>
+        <a href="./mock.html" class="text-sm text-slate-600 hover:text-slate-900">Mock exam 🎓</a>
+        <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
+      </div>
+      <button @click="open = !open" class="lg:hidden p-2 text-slate-600" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div x-show="open" x-cloak class="lg:hidden pb-4 space-y-1">
+      <a href="./#how" class="block py-2 text-sm text-slate-600">How it works</a>
+      <a href="./lessons.html" class="block py-2 text-sm text-slate-600">Lessons</a>
+      <a href="./practice.html" class="block py-2 text-sm text-slate-600">Practice</a>
+      <a href="./train.html" class="block py-2 text-sm text-slate-600">Read &amp; Listen</a>
+      <a href="./watch.html" class="block py-2 text-sm text-slate-600">Watch 🎬</a>
+      <a href="./dictee.html" class="block py-2 text-sm text-slate-600">Dictée ✍️</a>
+      <a href="./shadow.html" class="block py-2 text-sm text-slate-600">Shadow 🗣️</a>
+      <a href="./mock.html" class="block py-2 text-sm text-slate-600">Mock exam 🎓</a>
+      <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-5xl mx-auto px-5 py-12 md:py-16" x-data="alphabet()">
+
+  <!-- header -->
+  <div class="max-w-2xl">
+    <a href="./lessons.html" class="text-sm text-slate-500 hover:text-slate-700">← Lessons</a>
+    <span class="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium">🔤 A1 · Class 1 · Alphabet</span>
+    <h1 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">L'alphabet français</h1>
+    <p class="mt-4 text-lg text-slate-600">The 26 letters have their own French names — and you'll use them constantly: spelling your name at the préfecture, giving your address on the phone, reading out your email. Tap any letter to hear it, then practise spelling your own name out loud.</p>
+  </div>
+
+  <!-- native recording -->
+  <section class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+    <p class="font-semibold text-slate-900">🎧 The native recording from your class</p>
+    <p class="mt-1 text-sm text-slate-600">The whole alphabet, read aloud by a native speaker. Listen once, then say it back.</p>
+    <audio class="mt-4 w-full" controls preload="none" src="./assets/audio/alphabet.mp3">
+      Your browser doesn't support audio playback.
+    </audio>
+  </section>
+
+  <!-- interactive grid -->
+  <section class="mt-10">
+    <div class="flex items-center justify-between gap-3">
+      <h2 class="text-xl font-bold text-slate-900">Tap a letter to hear it</h2>
+      <div class="flex items-center gap-2">
+        <button @click="playAll()" class="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg px-3 py-1.5">▶ Play A–Z</button>
+        <button @click="stop()" class="text-sm font-medium text-slate-600 hover:text-slate-900 rounded-lg px-3 py-1.5 border border-slate-200">■ Stop</button>
+      </div>
+    </div>
+    <div class="mt-5 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+      <template x-for="item in letters" :key="item.l">
+        <button @click="say(item)"
+          class="group rounded-xl border p-3 text-center transition-all hover:border-blue-400 hover:shadow-sm"
+          :class="active === item.l ? 'border-blue-500 bg-blue-50 ring-2 ring-blue-200' : 'border-slate-200 bg-white'">
+          <div class="text-2xl font-extrabold text-slate-900" x-text="item.l"></div>
+          <div class="mt-0.5 text-sm text-blue-600" x-text="item.resp"></div>
+          <div class="mt-1 text-slate-300 group-hover:text-blue-500 text-xs">🔊</div>
+        </button>
+      </template>
+    </div>
+    <p class="mt-3 text-xs text-slate-400">The blue text is an English-style respelling, straight from your class booklet.</p>
+  </section>
+
+  <!-- spell-aloud drill -->
+  <section class="mt-12 rounded-2xl border border-blue-200 bg-blue-50 p-5 md:p-6">
+    <h2 class="text-xl font-bold text-slate-900">✍️ Épeler — spell it out loud</h2>
+    <p class="mt-1 text-sm text-slate-600">Type your name, your city, or your email and hear it spelled letter by letter, the French way. This is the exact skill you need when someone asks <em>« Vous pouvez épeler ? »</em></p>
+    <div class="mt-4 flex flex-col sm:flex-row gap-2">
+      <input x-model="word" @keydown.enter="spell()" type="text" placeholder="e.g. Ekta"
+        class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-slate-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none" />
+      <button @click="spell()" class="rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5">Spell it 🔊</button>
+    </div>
+    <div class="mt-3 flex flex-wrap gap-2">
+      <template x-for="p in presets" :key="p">
+        <button @click="word = p; spell(p)" class="text-xs font-medium text-blue-700 bg-white border border-blue-200 rounded-full px-3 py-1 hover:border-blue-400" x-text="'try “' + p + '”'"></button>
+      </template>
+    </div>
+    <!-- spelled-out chips -->
+    <div x-show="chips.length" x-cloak class="mt-5 flex flex-wrap gap-2">
+      <template x-for="(c, i) in chips" :key="i">
+        <template x-if="!c.space">
+          <div class="rounded-lg border px-3 py-2 text-center transition-all"
+            :class="spelling === i ? 'border-blue-500 bg-blue-600 text-white ring-2 ring-blue-200' : 'border-slate-200 bg-white text-slate-900'">
+            <div class="text-lg font-bold leading-none" x-text="c.l"></div>
+            <div class="text-xs" :class="spelling === i ? 'text-blue-100' : 'text-blue-600'" x-text="c.resp"></div>
+          </div>
+        </template>
+      </template>
+    </div>
+  </section>
+
+  <!-- where next -->
+  <section class="mt-12 grid sm:grid-cols-2 gap-3">
+    <a href="./lesson.html?id=a1-00-sounds" class="flex items-center justify-between gap-3 rounded-xl border border-slate-200 p-5 hover:border-blue-400 hover:shadow-sm transition-all">
+      <div>
+        <p class="font-semibold text-slate-900">🔡 Letter-combination rules</p>
+        <p class="mt-1 text-sm text-slate-600">ou, oi, ch, gn, é/è, nasals — all in the pronunciation lesson.</p>
+      </div>
+      <span class="shrink-0 text-sm font-medium text-blue-600">Open →</span>
+    </a>
+    <a href="./watch.html" class="flex items-center justify-between gap-3 rounded-xl border border-slate-200 p-5 hover:border-blue-400 hover:shadow-sm transition-all">
+      <div>
+        <p class="font-semibold text-slate-900">🎬 Greetings &amp; « se présenter »</p>
+        <p class="mt-1 text-sm text-slate-600">Your two Class 1 videos live on the Watch page.</p>
+      </div>
+      <span class="shrink-0 text-sm font-medium text-blue-600">Watch →</span>
+    </a>
+  </section>
+
+  <!-- tutor CTA -->
+  <section class="mt-12 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+    <p class="font-semibold text-slate-900">✨ Practise it out loud with your tutor</p>
+    <p class="mt-1 text-sm text-slate-600">Get quizzed on the alphabet, then spell your name, city and email — with instant correction.</p>
+    <div class="mt-4 flex flex-wrap gap-3">
+      <a :href="claudeUrl" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 text-sm">Open in Claude →</a>
+      <a :href="chatgptUrl" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-lg border border-slate-300 hover:border-slate-400 text-slate-700 font-medium px-5 py-2.5 text-sm">Open in ChatGPT →</a>
+    </div>
+  </section>
+
+  <!-- next -->
+  <div class="mt-12 flex items-center justify-between border-t border-slate-200 pt-6">
+    <a href="./lessons.html" class="text-sm text-slate-500 hover:text-slate-700">← All lessons</a>
+    <a href="./lesson.html?id=a1-00-sounds" class="text-sm font-medium text-blue-600 hover:text-blue-700">Next: pronunciation rules →</a>
+  </div>
+
+</main>
+
+<footer class="border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-5 py-10 text-center">
+    <p class="text-lg font-bold text-slate-900">Un pas à la fois. 🇫🇷</p>
+    <p class="mt-2 text-sm text-slate-500"><strong>Coucou</strong> · a free, open playbook · built with AI · 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>

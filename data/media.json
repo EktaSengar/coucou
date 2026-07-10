@@ -15,11 +15,26 @@
       "Say out loud, in French, what you think is happening."
     ],
     "watchFor": [
-      { "fr": "bonjour / au revoir", "en": "hello / goodbye" },
-      { "fr": "l'école", "en": "school" },
-      { "fr": "le doudou", "en": "comfort toy" },
-      { "fr": "jouer", "en": "to play" },
-      { "fr": "dormir", "en": "to sleep" }
+      {
+        "fr": "bonjour / au revoir",
+        "en": "hello / goodbye"
+      },
+      {
+        "fr": "l'école",
+        "en": "school"
+      },
+      {
+        "fr": "le doudou",
+        "en": "comfort toy"
+      },
+      {
+        "fr": "jouer",
+        "en": "to play"
+      },
+      {
+        "fr": "dormir",
+        "en": "to sleep"
+      }
     ]
   },
   {
@@ -33,41 +48,147 @@
     "title": "French greetings every beginner needs (Super Easy French)",
     "why": "Real French, spoken slowly, with French + English subtitles. The greetings you'll use on day one in Paris.",
     "watchFor": [
-      { "fr": "Salut", "en": "Hi (informal)" },
-      { "fr": "Coucou", "en": "Hey (very informal)" },
-      { "fr": "Bonsoir", "en": "Good evening" },
-      { "fr": "Enchanté(e)", "en": "Nice to meet you" },
-      { "fr": "Ça va ?", "en": "How's it going?" }
+      {
+        "fr": "Salut",
+        "en": "Hi (informal)"
+      },
+      {
+        "fr": "Coucou",
+        "en": "Hey (very informal)"
+      },
+      {
+        "fr": "Bonsoir",
+        "en": "Good evening"
+      },
+      {
+        "fr": "Enchanté(e)",
+        "en": "Nice to meet you"
+      },
+      {
+        "fr": "Ça va ?",
+        "en": "How's it going?"
+      }
     ],
     "questions": [
       {
         "type": "mcq",
         "q": "« Salut ! » — when do you use it?",
-        "options": ["With friends and people your age", "In a formal email to a stranger", "Only on the phone"],
+        "options": [
+          "With friends and people your age",
+          "In a formal email to a stranger",
+          "Only on the phone"
+        ],
         "answer": 0,
         "explain": "« Salut » is informal — great with friends, but not with your boss on day one."
       },
       {
         "type": "mcq",
         "q": "Which greeting do you use in the evening?",
-        "options": ["Bonjour", "Bonsoir", "Bonne nuit"],
+        "options": [
+          "Bonjour",
+          "Bonsoir",
+          "Bonne nuit"
+        ],
         "answer": 1,
         "explain": "« Bonsoir » = good evening. « Bonne nuit » is only when you leave to go to sleep."
       },
       {
         "type": "tf",
         "q": "« Enchanté(e) » means « nice to meet you ».",
-        "options": ["Vrai", "Faux"],
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
         "answer": 0,
         "explain": "Yes — you say it the first time you meet someone."
       },
       {
         "type": "mcq",
         "q": "« Coucou » is…",
-        "options": ["A formal greeting for work", "A very informal, friendly « hi »", "A way to say goodbye only"],
+        "options": [
+          "A formal greeting for work",
+          "A very informal, friendly « hi »",
+          "A way to say goodbye only"
+        ],
         "answer": 1,
         "explain": "« Coucou » is warm and casual — exactly why this site is called Coucou. 😊"
       }
+    ]
+  },
+  {
+    "id": "a1-salutations-politesse",
+    "level": "A1",
+    "theme": "Greetings · Class 1",
+    "kind": "embed",
+    "source": "FLE video",
+    "youtube": "6okxdnFSxTY",
+    "minutes": 6,
+    "title": "Les salutations et les formules de politesse",
+    "why": "The greetings and polite words straight from your Class 1 booklet — bonjour, bonsoir, salut, merci, pardon. Slow and clear.",
+    "watchFor": [
+      {
+        "fr": "Bonjour / Bonsoir",
+        "en": "Hello / Good evening"
+      },
+      {
+        "fr": "Salut",
+        "en": "Hi (informal)"
+      },
+      {
+        "fr": "Merci beaucoup",
+        "en": "Thank you very much"
+      },
+      {
+        "fr": "De rien",
+        "en": "You're welcome"
+      },
+      {
+        "fr": "Pardon",
+        "en": "Sorry / excuse me"
+      }
+    ],
+    "mission": [
+      "Watch once and just listen to the melody of each greeting.",
+      "Watch again and say each one out loud after the speaker.",
+      "Note which greeting fits morning, evening and casual moments."
+    ]
+  },
+  {
+    "id": "a1-se-presenter-fledoc",
+    "level": "A1",
+    "theme": "Se présenter · Class 1",
+    "kind": "embed",
+    "source": "FLE d'OC",
+    "youtube": "_E3RRvOLesY",
+    "minutes": 5,
+    "title": "Se présenter en français (A1)",
+    "why": "Introducing yourself — je m'appelle…, j'habite à…, quelle est ta nationalité ? Exactly the « se présenter » section from your Class 1.",
+    "watchFor": [
+      {
+        "fr": "Je m'appelle…",
+        "en": "My name is…"
+      },
+      {
+        "fr": "J'habite à…",
+        "en": "I live in…"
+      },
+      {
+        "fr": "Je suis indien / indienne",
+        "en": "I am Indian"
+      },
+      {
+        "fr": "J'apprends le français",
+        "en": "I'm learning French"
+      },
+      {
+        "fr": "Quel est ton métier ?",
+        "en": "What's your job?"
+      }
+    ],
+    "mission": [
+      "Watch once for the whole flow of a self-introduction.",
+      "Watch again and pause to build your own version out loud.",
+      "Record yourself introducing you and Kartik in 4 sentences."
     ]
   },
   {

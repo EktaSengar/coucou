@@ -19,7 +19,7 @@
 document.addEventListener('alpine:init', () => {
   Alpine.data('lessonView', () => ({
     all: [], lesson: null, idx: -1, loading: true, error: false, done: false, copied: false,
-    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: null,
+    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: null, audioEl: null,
     async init() {
       this.initVoice();
       const id = new URLSearchParams(location.search).get('id');
@@ -60,21 +60,41 @@ document.addEventListener('alpine:init', () => {
       pick();
       speechSynthesis.addEventListener('voiceschanged', pick);
     },
-    // Read French aloud with the device's French voice. Strips English-only
+    // djb2 over the cleaned text — must match build_audio.py's say_hash().
+    sayHash(s) { let h = 5381; for (let k = 0; k < s.length; k++) h = ((Math.imul(h, 33) >>> 0) ^ s.charCodeAt(k)) >>> 0; return h.toString(36); },
+    playHosted(url) {
+      return new Promise((resolve, reject) => {
+        const a = this.audioEl || (this.audioEl = new Audio());
+        const cleanup = () => { a.removeEventListener('ended', ok); a.removeEventListener('error', bad); };
+        const ok = () => { cleanup(); resolve(); };
+        const bad = () => { cleanup(); reject(new Error('audio')); };
+        a.addEventListener('ended', ok); a.addEventListener('error', bad);
+        try { a.pause(); a.src = url; a.currentTime = 0; a.play().catch(bad); }
+        catch (e) { cleanup(); reject(e); }
+      });
+    },
+    // Read French aloud — hosted studio clip first (content-addressed by
+    // hash of the cleaned text), device TTS as fallback. Strips English-only
     // parentheticals and turns "/" into a pause so lists read naturally.
     speak(text, key) {
-      if (!this.canSpeak || !text) return;
+      if (!text) return;
       const clean = String(text).replace(/\([^)]*\)/g, '').replace(/\s*\/\s*/g, ', ').replace(/\s+/g, ' ').trim();
-      try {
-        speechSynthesis.cancel();
-        const u = new SpeechSynthesisUtterance(clean);
-        u.lang = 'fr-FR';
-        if (this.frVoice) u.voice = this.frVoice;
-        u.rate = 0.9;
-        this.speaking = key;
-        u.onend = u.onerror = () => { if (this.speaking === key) this.speaking = null; };
-        speechSynthesis.speak(u);
-      } catch (e) { this.speaking = null; }
+      if (!clean) return;
+      if (this.canSpeak) speechSynthesis.cancel();
+      if (this.audioEl) { try { this.audioEl.pause(); } catch (e) {} }
+      this.speaking = key;
+      const done = () => { if (this.speaking === key) this.speaking = null; };
+      this.playHosted('./assets/audio/tts/say/' + this.sayHash(clean) + '.mp3').then(done).catch(() => {
+        if (!this.canSpeak) return done();
+        try {
+          const u = new SpeechSynthesisUtterance(clean);
+          u.lang = 'fr-FR';
+          if (this.frVoice) u.voice = this.frVoice;
+          u.rate = 0.9;
+          u.onend = u.onerror = done;
+          speechSynthesis.speak(u);
+        } catch (e) { done(); }
+      });
     },
   }));
 });
@@ -150,7 +170,7 @@ document.addEventListener('alpine:init', () => {
     <section class="mt-10" x-show="lesson.phonics && lesson.phonics.length" x-cloak>
       <div class="flex items-center justify-between gap-3">
         <h2 class="text-sm font-semibold text-slate-900 uppercase tracking-wide">Sound rules</h2>
-        <span x-show="canSpeak" class="text-xs text-slate-400">🔊 tap any word</span>
+        <span class="text-xs text-slate-400">🔊 tap any word</span>
       </div>
       <div class="mt-3 space-y-3">
         <template x-for="(r, i) in lesson.phonics" :key="i">
@@ -164,7 +184,7 @@ document.addEventListener('alpine:init', () => {
                 <button @click="speak(ex, 'p' + i + '-' + j)" type="button"
                         :class="speaking === ('p' + i + '-' + j) ? 'border-blue-400 text-blue-700 bg-blue-50' : 'border-slate-200 text-slate-700 hover:border-blue-300'"
                         class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-sm transition-colors">
-                  <span x-show="canSpeak" aria-hidden="true">🔊</span><span x-text="ex"></span>
+                  <span aria-hidden="true">🔊</span><span x-text="ex"></span>
                 </button>
               </template>
             </div>
@@ -177,7 +197,7 @@ document.addEventListener('alpine:init', () => {
     <section class="mt-10">
       <div class="flex items-center justify-between gap-3">
         <h2 class="text-sm font-semibold text-slate-900 uppercase tracking-wide">Key words</h2>
-        <span x-show="canSpeak" x-cloak class="text-xs text-slate-400">🔊 tap to hear</span>
+        <span class="text-xs text-slate-400">🔊 tap to hear</span>
       </div>
       <div class="mt-3 overflow-hidden rounded-xl border border-slate-200">
         <table class="w-full text-sm">
@@ -186,7 +206,7 @@ document.addEventListener('alpine:init', () => {
               <tr :class="i % 2 ? 'bg-slate-50' : 'bg-white'" class="border-b border-slate-100 last:border-0">
                 <td class="px-4 py-2.5 align-top">
                   <span class="inline-flex items-start gap-2">
-                    <button x-show="canSpeak" @click="speak(v.fr, 'v' + i)" type="button"
+                    <button @click="speak(v.fr, 'v' + i)" type="button"
                             :class="speaking === ('v' + i) ? 'text-blue-600' : 'text-slate-400 hover:text-blue-600'"
                             class="shrink-0 leading-6 transition-colors" :aria-label="'Listen: ' + v.fr">🔊</button>
                     <span>
@@ -222,7 +242,7 @@ document.addEventListener('alpine:init', () => {
       <ul class="mt-3 space-y-2">
         <template x-for="(ex, i) in lesson.examples" :key="i">
           <li class="flex items-start gap-3 rounded-lg border border-slate-200 px-4 py-3">
-            <button x-show="canSpeak" @click="speak(ex, 'e' + i)" type="button"
+            <button @click="speak(ex, 'e' + i)" type="button"
                     :class="speaking === ('e' + i) ? 'text-blue-600' : 'text-slate-400 hover:text-blue-600'"
                     class="shrink-0 mt-0.5 transition-colors" aria-label="Listen to example">🔊</button>
             <span class="text-slate-800 italic" x-text="ex"></span>

@@ -23,7 +23,7 @@ document.addEventListener('alpine:init', () => {
     scope: 'all', mode: 'flashcards', started: false,
     pool: [], deck: [], i: 0, flipped: false, dir: 'fr-en',
     options: [], answered: false, chosen: null, correct: 0, missed: [], finished: false,
-    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: null,
+    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: null, audioEl: null,
 
     async init() {
       this.initVoice();
@@ -107,16 +107,37 @@ document.addEventListener('alpine:init', () => {
       const pick = () => { const vs = speechSynthesis.getVoices(); this.frVoice = vs.find(v => /fr[-_]?fr/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null; };
       pick(); speechSynthesis.addEventListener('voiceschanged', pick);
     },
+    // djb2 over the cleaned text — must match build_audio.py's say_hash().
+    sayHash(s) { let h = 5381; for (let k = 0; k < s.length; k++) h = ((Math.imul(h, 33) >>> 0) ^ s.charCodeAt(k)) >>> 0; return h.toString(36); },
+    playHosted(url) {
+      return new Promise((resolve, reject) => {
+        const a = this.audioEl || (this.audioEl = new Audio());
+        const cleanup = () => { a.removeEventListener('ended', ok); a.removeEventListener('error', bad); };
+        const ok = () => { cleanup(); resolve(); };
+        const bad = () => { cleanup(); reject(new Error('audio')); };
+        a.addEventListener('ended', ok); a.addEventListener('error', bad);
+        try { a.pause(); a.src = url; a.currentTime = 0; a.play().catch(bad); }
+        catch (e) { cleanup(); reject(e); }
+      });
+    },
+    // Hosted studio clip first (content-addressed), device TTS as fallback.
     speak(text, key) {
-      if (!this.canSpeak || !text) return;
+      if (!text) return;
       const clean = String(text).replace(/\([^)]*\)/g, '').replace(/\s*\/\s*/g, ', ').replace(/\s+/g, ' ').trim();
-      try {
-        speechSynthesis.cancel();
-        const u = new SpeechSynthesisUtterance(clean);
-        u.lang = 'fr-FR'; if (this.frVoice) u.voice = this.frVoice; u.rate = 0.9;
-        this.speaking = key; u.onend = u.onerror = () => { if (this.speaking === key) this.speaking = null; };
-        speechSynthesis.speak(u);
-      } catch (e) { this.speaking = null; }
+      if (!clean) return;
+      if (this.canSpeak) speechSynthesis.cancel();
+      if (this.audioEl) { try { this.audioEl.pause(); } catch (e) {} }
+      this.speaking = key;
+      const done = () => { if (this.speaking === key) this.speaking = null; };
+      this.playHosted('./assets/audio/tts/say/' + this.sayHash(clean) + '.mp3').then(done).catch(() => {
+        if (!this.canSpeak) return done();
+        try {
+          const u = new SpeechSynthesisUtterance(clean);
+          u.lang = 'fr-FR'; if (this.frVoice) u.voice = this.frVoice; u.rate = 0.9;
+          u.onend = u.onerror = done;
+          speechSynthesis.speak(u);
+        } catch (e) { done(); }
+      });
     },
   }));
 });
@@ -240,7 +261,7 @@ document.addEventListener('alpine:init', () => {
       <div x-show="dir === 'fr-en'">
         <div class="text-3xl font-bold text-slate-900" x-text="card.fr"></div>
         <div x-show="card.phonetic" class="mt-1 text-sm italic text-slate-400" x-text="card.phonetic"></div>
-        <button x-show="canSpeak" @click.stop="speak(card.fr, 'c')" class="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-sm text-slate-600 hover:border-blue-300">🔊 listen</button>
+        <button @click.stop="speak(card.fr, 'c')" class="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-sm text-slate-600 hover:border-blue-300">🔊 listen</button>
       </div>
       <div x-show="dir === 'en-fr'" class="text-2xl font-semibold text-slate-900" x-text="card.en"></div>
 
@@ -250,7 +271,7 @@ document.addEventListener('alpine:init', () => {
         <div x-show="dir === 'en-fr'">
           <div class="text-3xl font-bold text-slate-900" x-text="card.fr"></div>
           <div x-show="card.phonetic" class="mt-1 text-sm italic text-slate-400" x-text="card.phonetic"></div>
-          <button x-show="canSpeak" @click.stop="speak(card.fr, 'c')" class="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-sm text-slate-600 hover:border-blue-300">🔊 listen</button>
+          <button @click.stop="speak(card.fr, 'c')" class="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-sm text-slate-600 hover:border-blue-300">🔊 listen</button>
         </div>
       </div>
 
@@ -281,7 +302,7 @@ document.addEventListener('alpine:init', () => {
       <p class="text-xs text-slate-400 uppercase tracking-wide">What does this mean?</p>
       <div class="mt-2 text-3xl font-bold text-slate-900" x-text="card.fr"></div>
       <div x-show="card.phonetic" class="mt-1 text-sm italic text-slate-400" x-text="card.phonetic"></div>
-      <button x-show="canSpeak" @click="speak(card.fr, 'q')" class="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-sm text-slate-600 hover:border-blue-300">🔊 listen</button>
+      <button @click="speak(card.fr, 'q')" class="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-sm text-slate-600 hover:border-blue-300">🔊 listen</button>
     </div>
 
     <div class="mt-4 grid gap-2.5">
@@ -310,7 +331,7 @@ document.addEventListener('alpine:init', () => {
         <template x-for="(m, mi) in missed" :key="mi">
           <li class="flex items-center justify-between gap-3 rounded-lg border border-slate-200 px-4 py-2.5">
             <span><span class="font-medium text-slate-900" x-text="m.fr"></span> <span class="text-slate-500">— <span x-text="m.en"></span></span></span>
-            <button x-show="canSpeak" @click="speak(m.fr, 'm' + mi)" class="shrink-0 text-slate-400 hover:text-blue-600" aria-label="Listen">🔊</button>
+            <button @click="speak(m.fr, 'm' + mi)" class="shrink-0 text-slate-400 hover:text-blue-600" aria-label="Listen">🔊</button>
           </li>
         </template>
       </ul>

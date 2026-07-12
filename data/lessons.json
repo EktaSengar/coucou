@@ -127,8 +127,10 @@
     "minutes": 20,
     "goal": "Count 0–69, and say or ask someone's age and phone number.",
     "vocab": [
-      { "fr": "un, deux, trois, quatre, cinq", "phonetic": "uhn, duh, trwah, KAT-ruh, sank", "en": "1, 2, 3, 4, 5" },
+      { "fr": "zéro, un, deux, trois, quatre, cinq", "phonetic": "zay-ROH, uhn, duh, trwah, KAT-ruh, sank", "en": "0, 1, 2, 3, 4, 5" },
       { "fr": "six, sept, huit, neuf, dix", "phonetic": "seess, set, weet, nuhf, deess", "en": "6, 7, 8, 9, 10" },
+      { "fr": "onze, douze, treize, quatorze, quinze", "phonetic": "ohnz, dooz, trez, ka-TORZ, kanz", "en": "11, 12, 13, 14, 15" },
+      { "fr": "seize, dix-sept, dix-huit, dix-neuf", "phonetic": "sez, dee-SET, deez-WEET, deez-NUHF", "en": "16, 17, 18, 19" },
       { "fr": "vingt / trente / quarante", "phonetic": "van / trahnt / ka-RAHNT", "en": "20 / 30 / 40" },
       { "fr": "cinquante / soixante", "phonetic": "san-KAHNT / swah-SAHNT", "en": "50 / 60" },
       { "fr": "J'ai trente ans", "phonetic": "zhay trahnt AHN", "en": "I'm thirty (years old)" },
@@ -146,10 +148,48 @@
     ],
     "practice": [
       "Say your age, then ask someone else theirs.",
-      "Count out loud from 1 to 20.",
+      "Count out loud from 0 to 20.",
+      "Drill the sound-alike traps: treize / trente, quatorze / quarante, quinze / cinquante, seize / soixante.",
       "Read your phone number in French, in pairs of digits."
     ],
     "tutorPrompt": "A1 French tutor. Drill numbers 0–69 and age with me. Ask my age, give me small numbers to say in French, and ask me to read a couple of phone numbers. Correct me each time and keep it light. End with five numbers I should practise that I got wrong."
+  },
+  {
+    "id": "a1-questions",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Asking questions — the question words",
+    "minutes": 15,
+    "goal": "Master the seven question words and build simple everyday questions with them.",
+    "vocab": [
+      { "fr": "Comment ?", "phonetic": "koh-MAHN", "en": "How?" },
+      { "fr": "Pourquoi ?", "phonetic": "poor-KWAH", "en": "Why?" },
+      { "fr": "Où ?", "phonetic": "oo", "en": "Where?" },
+      { "fr": "Quand ?", "phonetic": "kahn", "en": "When?" },
+      { "fr": "Qui ?", "phonetic": "kee", "en": "Who?" },
+      { "fr": "Quoi ? / Quel ? / Quelle ?", "phonetic": "kwah / kel / kel", "en": "What? / Which? (quel with masculine, quelle with feminine)" },
+      { "fr": "Combien ?", "phonetic": "kohn-BYAN", "en": "How much? / How many?" },
+      { "fr": "Est-ce que… ?", "phonetic": "ess-kuh", "en": "turns any statement into a question" }
+    ],
+    "grammar": {
+      "point": "Three ways to ask the same question",
+      "explain": "Everyday spoken French mostly asks questions with plain word order: put the question word at the end and let your voice rise — « Tu habites où ? », « C'est quoi ? ». Slightly more careful: start with « Est-ce que » (or « Où est-ce que ») and keep normal word order — « Où est-ce que tu habites ? ». The formal, written way inverts the verb and subject — « Où habites-tu ? ». At A1, the first two are all you need — and note that quel agrees: quel âge (M) but quelle heure (F)."
+    },
+    "examples": [
+      "Où est le métro ? (oo eh luh may-TROH)",
+      "Combien ça coûte ? (kohn-BYAN sah KOOT)",
+      "Pourquoi tu apprends le français ? (poor-KWAH tew ah-PRAHN luh frahn-SEH)",
+      "Quand est-ce qu'on mange ? (kahn ess kohn MAHNZH)",
+      "Qui est-ce ? (kee ess)",
+      "C'est quoi, ça ? (seh KWAH sah)"
+    ],
+    "practice": [
+      "Your class homework: build one question with each word — comment, pourquoi, où, quand, qui, quoi/quel, combien.",
+      "Take a statement you know (« Tu habites à Paris ») and turn it into a question three ways: intonation, est-ce que, inversion.",
+      "Ask three real questions about your day in Paris: where, when, how much.",
+      "Say the pairs out loud and feel the difference: quel âge ? / quelle heure ?"
+    ],
+    "tutorPrompt": "A1 French tutor. My homework is to build simple questions using the interrogative words: comment, pourquoi, où, quand, qui, quoi/quel/quelle, and combien. For each word, ask me to make one everyday question in French (about life in Paris — métro, café, work, time). Correct my word order and gently show the est-ce que version when it sounds off. At the end, quiz me the other way: ask me your own 7 questions, one per question word, and I answer. Keep it light and end with the 3 question patterns I should review."
   },
   {
     "id": "a1-04-cafe",

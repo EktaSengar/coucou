@@ -1,5 +1,14 @@
 [
   {
+    "id": "a1-alphabet",
+    "level": "A1",
+    "module": "Sounds & spelling",
+    "title": "L'alphabet — spell your name out loud",
+    "minutes": 15,
+    "goal": "Hear all 26 letters in a native voice, then spell your name, email and city the French way.",
+    "href": "./alphabet.html"
+  },
+  {
     "id": "a1-00-sounds",
     "level": "A1",
     "module": "Sounds & spelling",

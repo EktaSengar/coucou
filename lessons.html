@@ -48,6 +48,8 @@ document.addEventListener('alpine:init', () => {
     doneCount(items) { return items.filter(i => this.done[i.id]).length; },
     get total() { return this.lessons.length; },
     get totalDone() { return this.lessons.filter(l => this.done[l.id]).length; },
+    // First lesson (in curriculum order) not yet marked done — drives the Continue card.
+    get nextUp() { return this.lessons.find(l => !this.done[l.id]) || null; },
   }));
 });
 </script>
@@ -60,16 +62,29 @@ document.addEventListener('alpine:init', () => {
   <div class="max-w-5xl mx-auto px-5">
     <div class="flex items-center justify-between h-16">
       <a href="./" class="flex items-center gap-2 font-extrabold text-slate-900 tracking-tight"><span>🇫🇷</span> coucou <span class="font-medium text-blue-600 hidden sm:inline">· learn French</span></a>
-      <div class="hidden lg:flex items-center gap-6">
-        <a href="./#how" class="text-sm text-slate-600 hover:text-slate-900">How it works</a>
+      <div class="hidden lg:flex items-center gap-7">
         <a href="./lessons.html" class="text-sm font-medium text-blue-600">Lessons</a>
-        <a href="./practice.html" class="text-sm text-slate-600 hover:text-slate-900">Practice</a>
-        <a href="./train.html" class="text-sm text-slate-600 hover:text-slate-900">Read &amp; Listen</a>
-        <a href="./watch.html" class="text-sm text-slate-600 hover:text-slate-900">Watch 🎬</a>
-        <a href="./dictee.html" class="text-sm text-slate-600 hover:text-slate-900">Dictée ✍️</a>
-        <a href="./shadow.html" class="text-sm text-slate-600 hover:text-slate-900">Shadow 🗣️</a>
-        <a href="./oral.html" class="text-sm text-slate-600 hover:text-slate-900">Oral 🎤</a>
-        <a href="./mock.html" class="text-sm text-slate-600 hover:text-slate-900">Mock 🎓</a>
+        <div x-data="{ po: false }" class="relative" @mouseenter="po = true" @mouseleave="po = false" @click.outside="po = false">
+          <button @click="po = !po" class="flex items-center gap-1 text-sm text-slate-600 hover:text-slate-900">Practise <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+          <div x-show="po" x-cloak class="absolute left-0 top-full pt-2 w-56 z-50">
+            <div class="rounded-xl border border-slate-200 bg-white shadow-lg py-2">
+              <a href="./practice.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎴 Flashcards &amp; quiz</a>
+              <a href="./dictee.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">✍️ Dictée</a>
+              <a href="./shadow.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🗣️ Shadow speaking</a>
+              <a href="./train.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎧 Read &amp; Listen</a>
+              <a href="./watch.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎬 Watch real French</a>
+            </div>
+          </div>
+        </div>
+        <div x-data="{ eo: false }" class="relative" @mouseenter="eo = true" @mouseleave="eo = false" @click.outside="eo = false">
+          <button @click="eo = !eo" class="flex items-center gap-1 text-sm text-slate-600 hover:text-slate-900">Exam prep <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+          <div x-show="eo" x-cloak class="absolute left-0 top-full pt-2 w-56 z-50">
+            <div class="rounded-xl border border-slate-200 bg-white shadow-lg py-2">
+              <a href="./oral.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎤 Oral trainer</a>
+              <a href="./mock.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎓 Mock exam (B2)</a>
+            </div>
+          </div>
+        </div>
         <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
       </div>
       <button @click="open = !open" class="lg:hidden p-2 text-slate-600" aria-label="Menu">
@@ -77,17 +92,18 @@ document.addEventListener('alpine:init', () => {
       </button>
     </div>
     <div x-show="open" x-cloak class="lg:hidden pb-4 space-y-1">
-      <a href="./#how" class="block py-2 text-sm text-slate-600">How it works</a>
       <a href="./lessons.html" class="block py-2 text-sm font-medium text-blue-600">Lessons</a>
-      <a href="./practice.html" class="block py-2 text-sm text-slate-600">Practice</a>
-      <a href="./train.html" class="block py-2 text-sm text-slate-600">Read &amp; Listen</a>
-      <a href="./watch.html" class="block py-2 text-sm text-slate-600">Watch 🎬</a>
-      <a href="./dictee.html" class="block py-2 text-sm text-slate-600">Dictée ✍️</a>
-      <a href="./shadow.html" class="block py-2 text-sm text-slate-600">Shadow 🗣️</a>
-      <a href="./oral.html" class="block py-2 text-sm text-slate-600">Oral 🎤</a>
-      <a href="./mock.html" class="block py-2 text-sm text-slate-600">Mock 🎓</a>
+      <p class="pt-3 pb-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Practise</p>
+      <a href="./practice.html" class="block py-2 text-sm text-slate-600">🎴 Flashcards &amp; quiz</a>
+      <a href="./dictee.html" class="block py-2 text-sm text-slate-600">✍️ Dictée</a>
+      <a href="./shadow.html" class="block py-2 text-sm text-slate-600">🗣️ Shadow speaking</a>
+      <a href="./train.html" class="block py-2 text-sm text-slate-600">🎧 Read &amp; Listen</a>
+      <a href="./watch.html" class="block py-2 text-sm text-slate-600">🎬 Watch real French</a>
+      <p class="pt-3 pb-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Exam prep</p>
+      <a href="./oral.html" class="block py-2 text-sm text-slate-600">🎤 Oral trainer</a>
+      <a href="./mock.html" class="block py-2 text-sm text-slate-600">🎓 Mock exam (B2)</a>
+      <div class="pt-2"></div>
       <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
-      <a href="./#tracker" class="block py-2 text-sm font-medium text-slate-900">Get the tracker →</a>
     </div>
   </div>
 </nav>
@@ -109,32 +125,26 @@ document.addEventListener('alpine:init', () => {
     <span><strong class="text-slate-900" x-text="totalDone"></strong> / <span x-text="total"></span> lessons done</span>
   </div>
 
-  <!-- start here: alphabet -->
-  <a href="./alphabet.html" class="mt-6 flex items-center justify-between gap-4 rounded-xl border-2 border-blue-300 bg-blue-50 px-5 py-4 hover:border-blue-500 transition-colors">
-    <div>
-      <p class="font-semibold text-slate-900">🔤 Start here — the French alphabet</p>
-      <p class="text-sm text-slate-600">Hear every letter, learn to spell your name out loud, plus greetings &amp; « se présenter ». From your Class 1.</p>
-    </div>
-    <span class="shrink-0 text-sm font-medium text-blue-600">Open →</span>
-  </a>
-
-  <!-- practice banner -->
-  <a href="./practice.html" class="mt-3 flex items-center justify-between gap-4 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4 hover:border-blue-400 transition-colors">
-    <div>
-      <p class="font-semibold text-slate-900">🎴 Review with flashcards &amp; quiz</p>
-      <p class="text-sm text-slate-600">Drill the vocabulary from any lesson — with audio.</p>
-    </div>
-    <span class="shrink-0 text-sm font-medium text-blue-600">Practise →</span>
-  </a>
-
-  <!-- read & listen banner -->
-  <a href="./train.html" class="mt-3 flex items-center justify-between gap-4 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4 hover:border-blue-400 transition-colors">
-    <div>
-      <p class="font-semibold text-slate-900">🎧 Train reading &amp; listening</p>
-      <p class="text-sm text-slate-600">DELF-style passages and audio with comprehension questions — every answer explained.</p>
-    </div>
-    <span class="shrink-0 text-sm font-medium text-blue-600">Open →</span>
-  </a>
+  <!-- continue / start here -->
+  <div x-show="!loading && !error" x-cloak class="mt-6">
+    <template x-if="nextUp">
+      <a :href="nextUp.href || ('./lesson.html?id=' + nextUp.id)" class="flex items-center justify-between gap-4 rounded-2xl border-2 border-blue-400 bg-blue-50 px-6 py-5 hover:border-blue-600 hover:shadow-sm transition-all">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-blue-600" x-text="totalDone ? '▶ Continue where you left off' : '▶ Start here'"></p>
+          <p class="mt-1 text-lg font-bold text-slate-900"><span class="text-slate-400 font-semibold" x-text="nextUp.level + ' · '"></span><span x-text="nextUp.title"></span></p>
+          <p class="mt-0.5 text-sm text-slate-600" x-text="nextUp.goal"></p>
+        </div>
+        <span class="shrink-0 text-sm font-medium text-blue-600">Open →</span>
+      </a>
+    </template>
+    <template x-if="!nextUp">
+      <div class="rounded-2xl border-2 border-green-300 bg-green-50 px-6 py-5">
+        <p class="font-bold text-slate-900">🎉 Every lesson done — félicitations !</p>
+        <p class="mt-0.5 text-sm text-slate-600">Keep sharp with the <a href="./oral.html" class="text-blue-600 hover:underline font-medium">oral trainer</a> or sit the <a href="./mock.html" class="text-blue-600 hover:underline font-medium">mock exam</a>.</p>
+      </div>
+    </template>
+    <p class="mt-3 text-sm text-slate-500">Make it stick after each lesson: <a href="./practice.html" class="text-blue-600 hover:underline">flashcards</a> · <a href="./dictee.html" class="text-blue-600 hover:underline">dictée</a> · <a href="./train.html" class="text-blue-600 hover:underline">read &amp; listen</a></p>
+  </div>
 
   <!-- loading / error -->
   <p x-show="loading" class="mt-12 text-slate-500">Loading lessons…</p>
@@ -154,7 +164,7 @@ document.addEventListener('alpine:init', () => {
       </div>
       <div class="mt-5 grid sm:grid-cols-2 gap-4">
         <template x-for="(l, i) in g.items" :key="l.id">
-          <a :href="'./lesson.html?id=' + l.id"
+          <a :href="l.href || ('./lesson.html?id=' + l.id)"
              class="group block rounded-xl border border-slate-200 p-5 hover:border-blue-400 hover:shadow-sm transition-all">
             <div class="flex items-start justify-between gap-3">
               <div class="flex items-center gap-2 text-xs font-medium text-slate-400">

@@ -160,15 +160,29 @@ document.addEventListener('alpine:init', () => {
   <div class="max-w-5xl mx-auto px-5">
     <div class="flex items-center justify-between h-16">
       <a href="./" class="flex items-center gap-2 font-extrabold text-slate-900 tracking-tight"><span>🇫🇷</span> coucou <span class="font-medium text-blue-600 hidden sm:inline">· learn French</span></a>
-      <div class="hidden lg:flex items-center gap-6">
+      <div class="hidden lg:flex items-center gap-7">
         <a href="./lessons.html" class="text-sm text-slate-600 hover:text-slate-900">Lessons</a>
-        <a href="./practice.html" class="text-sm text-slate-600 hover:text-slate-900">Practice</a>
-        <a href="./train.html" class="text-sm text-slate-600 hover:text-slate-900">Read &amp; Listen</a>
-        <a href="./watch.html" class="text-sm text-slate-600 hover:text-slate-900">Watch 🎬</a>
-        <a href="./dictee.html" class="text-sm text-slate-600 hover:text-slate-900">Dictée ✍️</a>
-        <a href="./shadow.html" class="text-sm font-medium text-blue-600">Shadow 🗣️</a>
-        <a href="./oral.html" class="text-sm text-slate-600 hover:text-slate-900">Oral 🎤</a>
-        <a href="./mock.html" class="text-sm text-slate-600 hover:text-slate-900">Mock 🎓</a>
+        <div x-data="{ po: false }" class="relative" @mouseenter="po = true" @mouseleave="po = false" @click.outside="po = false">
+          <button @click="po = !po" class="flex items-center gap-1 text-sm font-medium text-blue-600">Practise <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+          <div x-show="po" x-cloak class="absolute left-0 top-full pt-2 w-56 z-50">
+            <div class="rounded-xl border border-slate-200 bg-white shadow-lg py-2">
+              <a href="./practice.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎴 Flashcards &amp; quiz</a>
+              <a href="./dictee.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">✍️ Dictée</a>
+              <a href="./shadow.html" class="block px-4 py-2 text-sm font-medium text-blue-600">🗣️ Shadow speaking</a>
+              <a href="./train.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎧 Read &amp; Listen</a>
+              <a href="./watch.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎬 Watch real French</a>
+            </div>
+          </div>
+        </div>
+        <div x-data="{ eo: false }" class="relative" @mouseenter="eo = true" @mouseleave="eo = false" @click.outside="eo = false">
+          <button @click="eo = !eo" class="flex items-center gap-1 text-sm text-slate-600 hover:text-slate-900">Exam prep <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+          <div x-show="eo" x-cloak class="absolute left-0 top-full pt-2 w-56 z-50">
+            <div class="rounded-xl border border-slate-200 bg-white shadow-lg py-2">
+              <a href="./oral.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎤 Oral trainer</a>
+              <a href="./mock.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎓 Mock exam (B2)</a>
+            </div>
+          </div>
+        </div>
         <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
       </div>
       <button @click="open = !open" class="lg:hidden p-2 text-slate-600" aria-label="Menu">
@@ -177,15 +191,17 @@ document.addEventListener('alpine:init', () => {
     </div>
     <div x-show="open" x-cloak class="lg:hidden pb-4 space-y-1">
       <a href="./lessons.html" class="block py-2 text-sm text-slate-600">Lessons</a>
-      <a href="./practice.html" class="block py-2 text-sm text-slate-600">Practice</a>
-      <a href="./train.html" class="block py-2 text-sm text-slate-600">Read &amp; Listen</a>
-      <a href="./watch.html" class="block py-2 text-sm text-slate-600">Watch 🎬</a>
-      <a href="./dictee.html" class="block py-2 text-sm text-slate-600">Dictée ✍️</a>
-      <a href="./shadow.html" class="block py-2 text-sm font-medium text-blue-600">Shadow 🗣️</a>
-      <a href="./oral.html" class="block py-2 text-sm text-slate-600">Oral 🎤</a>
-      <a href="./mock.html" class="block py-2 text-sm text-slate-600">Mock 🎓</a>
+      <p class="pt-3 pb-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Practise</p>
+      <a href="./practice.html" class="block py-2 text-sm text-slate-600">🎴 Flashcards &amp; quiz</a>
+      <a href="./dictee.html" class="block py-2 text-sm text-slate-600">✍️ Dictée</a>
+      <a href="./shadow.html" class="block py-2 text-sm font-medium text-blue-600">🗣️ Shadow speaking</a>
+      <a href="./train.html" class="block py-2 text-sm text-slate-600">🎧 Read &amp; Listen</a>
+      <a href="./watch.html" class="block py-2 text-sm text-slate-600">🎬 Watch real French</a>
+      <p class="pt-3 pb-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Exam prep</p>
+      <a href="./oral.html" class="block py-2 text-sm text-slate-600">🎤 Oral trainer</a>
+      <a href="./mock.html" class="block py-2 text-sm text-slate-600">🎓 Mock exam (B2)</a>
+      <div class="pt-2"></div>
       <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
-      <a href="./#tracker" class="block py-2 text-sm font-medium text-slate-900">Get the tracker →</a>
     </div>
   </div>
 </nav>

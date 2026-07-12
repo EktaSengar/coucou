@@ -880,6 +880,77 @@
     "tutorPrompt": "Be my B1 French tutor for object pronouns plus y and en. Give me short questions and make me answer without repeating the noun — using le/la/les, lui/leur, y and en correctly, including in the passé composé and the negative. Correct my pronoun choice and word order each time, and finish with a quick recap of when to use y vs en."
   },
   {
+    "id": "b1-imperatif",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "Giving orders & advice — the imperative",
+    "minutes": 20,
+    "goal": "Tell people what to do — instructions, advice, invitations — and attach pronouns with the hyphen.",
+    "vocab": [
+      { "fr": "Écoute ! / Écoutez !", "phonetic": "ay-KOOT / ay-koo-TAY", "en": "Listen! (tu / vous)" },
+      { "fr": "Attends ! / Attendez !", "phonetic": "ah-TAHN / ah-tahn-DAY", "en": "Wait!" },
+      { "fr": "Allons-y !", "phonetic": "ah-lohn-ZEE", "en": "Let's go! (nous)" },
+      { "fr": "Ne t'inquiète pas", "phonetic": "nuh tan-kee-EHT pah", "en": "Don't worry" },
+      { "fr": "Donnez-moi…", "phonetic": "doh-nay MWAH", "en": "Give me…" },
+      { "fr": "Asseyez-vous", "phonetic": "ah-say-yay VOO", "en": "Sit down (formal)" },
+      { "fr": "Prends soin de toi", "phonetic": "prahn swan duh TWAH", "en": "Take care of yourself" }
+    ],
+    "grammar": {
+      "point": "Forming the imperative (and hooking on pronouns)",
+      "explain": "The imperative uses the present tense with no subject pronoun, in three persons: tu, nous, vous. « Tu parles » → « Parle ! », « Nous parlons » → « Parlons ! », « Vous parlez » → « Parlez ! ». Careful: -er verbs (and « aller ») drop the final -s in the tu form — « Parle ! », « Mange ! », « Va ! » — but the -s comes back before y or en for sound: « Vas-y ! », « Manges-en ! ». Four verbs are irregular: être → sois/soyons/soyez, avoir → aie/ayons/ayez, savoir → sache/sachons/sachez, vouloir → veuille/veuillez. To make it negative, wrap it: « Ne parle pas », « N'aie pas peur ». When you add an object pronoun, the affirmative attaches it after the verb with a hyphen — « Donne-le ! », « Levez-vous ! » — and me/te become moi/toi: « Donne-moi ! », « Assieds-toi ! ». In the negative, the pronoun goes back in front and the hyphen disappears: « Ne me le donne pas »."
+    },
+    "examples": [
+      "Tournez à gauche, puis continuez tout droit. (toor-NAY ah GOHSH)",
+      "Prends un parapluie, il va pleuvoir. (prahn zuhn pah-rah-PLWEE)",
+      "Vas-y, n'aie pas peur ! (vah-ZEE nay pah PUHR)",
+      "Passez-moi le sel, s'il vous plaît. (pah-say MWAH luh SEL)",
+      "Ne t'inquiète pas, tout va bien. (nuh tan-kee-EHT PAH)",
+      "Asseyons-nous ici. (ah-say-yohn NOO ee-SEE)"
+    ],
+    "practice": [
+      "Give three instructions to a lost tourist: turn, continue, cross (tournez, continuez, traversez).",
+      "Turn each into the tu imperative: « Tu manges » → « … », « Tu vas » → « … » (watch the dropped -s, and « Vas-y »).",
+      "Attach the pronoun: « me donner le livre » → « Donne-moi le livre » → then make it negative.",
+      "Give a friend two pieces of advice with « Ne… pas » (ne fais pas ça, ne t'inquiète pas)."
+    ],
+    "tutorPrompt": "Be my B1 French tutor for the imperative. Drill all three forms (tu, nous, vous), the -er verbs that drop the -s (and « vas-y »), the four irregulars (sois, aie, sache, veuille), the negative, and attaching object pronouns with the hyphen (donne-le, donne-moi, assieds-toi) plus how it flips in the negative. Give me real Paris situations — giving directions, advice, café requests — and correct my form and my hyphens each time. End with the 3 mistakes I made most."
+  },
+  {
+    "id": "b1-inversion",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "Formal questions — inversion & the hyphen",
+    "minutes": 20,
+    "goal": "Ask questions the formal way with verb-subject inversion — and know exactly when French needs a hyphen.",
+    "vocab": [
+      { "fr": "Parlez-vous français ?", "phonetic": "par-lay VOO frahn-SEH", "en": "Do you speak French?" },
+      { "fr": "Avez-vous une réservation ?", "phonetic": "ah-vay VOO ewn ray-zair-vah-SYOHN", "en": "Do you have a reservation?" },
+      { "fr": "Puis-je vous aider ?", "phonetic": "pweezh voo zay-DAY", "en": "May I help you?" },
+      { "fr": "Où se trouve… ?", "phonetic": "oo suh TROOV", "en": "Where is…?" },
+      { "fr": "A-t-il compris ?", "phonetic": "ah-TEEL kohn-PREE", "en": "Did he understand?" },
+      { "fr": "Que pensez-vous de… ?", "phonetic": "kuh pahn-say VOO duh", "en": "What do you think of…?" }
+    ],
+    "grammar": {
+      "point": "Inversion, the euphonic -t-, and when the hyphen appears",
+      "explain": "Formal and written French asks questions by inverting the verb and its subject pronoun, joined by a hyphen: « Vous allez » → « Allez-vous ? », « Vous avez » → « Avez-vous ? », « Il est prêt » → « Est-il prêt ? ». Three things to master. (1) The euphonic -t-: when the verb ends in a vowel and the subject is il / elle / on, French slips in -t- for sound — « A-t-il compris ? », « Va-t-elle venir ? », « Parlera-t-on ? » (never « a-il » or « va-elle »). (2) Noun subjects: keep the noun, then invert with the matching pronoun — « Marie vient-elle ? », « Ton frère parle-t-il anglais ? ». (3) « je »: inversion is rare and stiff, except a few fixed forms — « Puis-je… ? », « Suis-je… ? ». The hyphen belongs to inversion and to the imperative-plus-pronoun — not to ordinary statements: « Vous allez à Paris » (no hyphen) vs « Allez-vous à Paris ? » (hyphen). In everyday speech you can still use est-ce que or intonation; save inversion for the DELF oral, formal emails and polite requests."
+    },
+    "examples": [
+      "Pouvez-vous m'aider, s'il vous plaît ? (poo-vay VOO may-DAY)",
+      "Où est-ce que vous habitez ? → Où habitez-vous ? (oo ah-bee-tay VOO)",
+      "Va-t-elle venir ce soir ? (vah-TEL vuh-NEER)",
+      "Vos amis parlent-ils français ? (voh za-MEE parl-TEEL)",
+      "Puis-je vous poser une question ? (pweezh voo poh-ZAY)",
+      "Que pensez-vous de cette idée ? (kuh pahn-say VOO)"
+    ],
+    "practice": [
+      "Turn these into inversion questions: « Vous travaillez ici » → « … ? », « Tu as faim » → « … ? ».",
+      "Add the -t- where it's needed: « Aime-il » → « … », « Mange-elle » → « … », « Parlera-on » → « … ».",
+      "Ask formally with a noun subject: « Le train part à midi » → « Le train part-il à midi ? ».",
+      "Rewrite one est-ce que question from the café as inversion, for a polite email."
+    ],
+    "tutorPrompt": "Be my B1 French tutor for formal questions with inversion. Drill turning statements into inversion questions (allez-vous, avez-vous, est-il), the euphonic -t- with il/elle/on (a-t-il, va-t-elle), noun-subject inversion (Marie vient-elle ?), and the fixed « puis-je ». Make me rewrite est-ce que questions as inversion for a polite email or the DELF B1 oral, and correct my hyphens and my -t- each time. Remind me when inversion sounds too formal for everyday speech. End with a 3-line recap of when French uses the hyphen."
+  },
+  {
     "id": "b1-05-relative-pronouns",
     "level": "B1",
     "module": "Finding your voice",

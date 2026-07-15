@@ -130,7 +130,8 @@
     ],
     "grammar": {
       "point": "S'appeler & venir de",
-      "explain": "To say your name: je m'appelle, tu t'appelles, il/elle s'appelle. To say where you're from, use venir de + place: je viens de Paris, but je viens d'Inde — « de » becomes « d' » before a vowel."
+      "table": {"cols": ["", "reflexive", "form"], "rows": [{"label": "je", "cells": ["me → m'", "je m'appelle"]}, {"label": "tu", "cells": ["te → t'", "tu t'appelles"]}, {"label": "il / elle", "cells": ["se → s'", "il s'appelle"]}], "highlight": ["me → m'", "te → t'", "se → s'"], "note": "The reflexive pronoun elides before the vowel of « appelle ». For where you're from: venir de + place — « je viens de Paris », « je viens d'Inde » (d' before a vowel)."},
+      "explain": "« S'appeler » is reflexive — the little pronoun changes with the person (see grid) and elides before the vowel: je m'appelle. To say where you're from, use « venir de » + place."
     },
     "examples": [
       "— Bonjour ! Je m'appelle Ekta. Et vous ? — Enchanté, moi c'est Marc.",
@@ -290,7 +291,8 @@
     ],
     "grammar": {
       "point": "« Avoir » for age",
-      "explain": "French uses avoir (to have), not être: j'ai trente ans literally means « I have thirty years ». Forms: j'ai, tu as, il/elle a. Never drop the word « ans »."
+      "table": {"cols": ["subject", "avoir (to have)"], "rows": [{"label": "je", "cells": ["ai → j'ai"]}, {"label": "tu", "cells": ["as"]}, {"label": "il / elle", "cells": ["a"]}, {"label": "nous", "cells": ["avons"]}, {"label": "vous", "cells": ["avez"]}, {"label": "ils / elles", "cells": ["ont"]}], "note": "For age, French HAS years: « j'ai trente ans » = literally 'I have thirty years'. Never drop « ans »."},
+      "explain": "French uses avoir (to have), not être, for age — « j'ai trente ans » literally means 'I have thirty years'. Learn the forms (grid) and never drop the word « ans »."
     },
     "examples": [
       "— Quel âge as-tu ? — J'ai vingt-cinq ans.",
@@ -323,7 +325,8 @@
     ],
     "grammar": {
       "point": "Three ways to ask the same question",
-      "explain": "Everyday spoken French mostly asks questions with plain word order: put the question word at the end and let your voice rise — « Tu habites où ? », « C'est quoi ? ». Slightly more careful: start with « Est-ce que » (or « Où est-ce que ») and keep normal word order — « Où est-ce que tu habites ? ». The formal, written way inverts the verb and subject — « Où habites-tu ? ». At A1, the first two are all you need — and note that quel agrees: quel âge (M) but quelle heure (F)."
+      "table": {"cols": ["register", "how", "example"], "rows": [{"label": "casual (spoken)", "cells": ["question word at the end, voice rises", "Tu habites où ?"]}, {"label": "neutral", "cells": ["Est-ce que + normal order", "Où est-ce que tu habites ?"]}, {"label": "formal (written)", "cells": ["invert the verb + subject", "Où habites-tu ?"]}], "note": "At A1 the first two carry you everywhere; inversion is drilled in the B1 lesson. « quel » agrees: quel âge (M) but quelle heure (F)."},
+      "explain": "There are three ways to ask the same question, from casual to formal — see the grid. In everyday speech the first two are all you need."
     },
     "examples": [
       "Où est le métro ? (oo eh luh may-TROH)",
@@ -558,7 +561,8 @@
     ],
     "grammar": {
       "point": "Passé composé with être",
-      "explain": "A small set of movement verbs use être, not avoir: aller, venir, partir, arriver, rester, entrer, sortir, monter, descendre, naître, mourir. With être the participle agrees with the subject: « je suis allé » (m.) / « je suis allée » (f.); « nous sommes allés »."
+      "table": {"cols": ["subject", "allé + agreement"], "rows": [{"label": "il (m. sing.)", "cells": ["allé"]}, {"label": "elle (f. sing.)", "cells": ["allée"]}, {"label": "ils (m. pl.)", "cells": ["allés"]}, {"label": "elles (f. pl.)", "cells": ["allées"]}], "highlight": ["allée", "allés", "allées"], "note": "être verbs are movement / state-change: aller, venir, partir, arriver, entrer, sortir, monter, descendre, rester, naître, mourir (+ compounds). All others use avoir."},
+      "explain": "A small set of movement / state-change verbs use être in the passé composé, not avoir (see note). With être, the past participle agrees with the subject like an adjective — see grid: « je suis allé » (m.) / « allée » (f.) / « nous sommes allés »."
     },
     "examples": [
       "Le week-end dernier, je suis allé(e) à Lyon en train. (luh week-end dehr-NYAY, zhuh swee a-LAY ah lee-OHN ahn TRAN)",
@@ -590,7 +594,8 @@
     ],
     "grammar": {
       "point": "Le futur proche: aller + infinitive",
-      "explain": "For the near future, use aller (present) + an infinitive — just like English « going to »: je vais, tu vas, il/elle va, nous allons, vous allez, ils vont, then + manger / voir / faire. « Demain, je vais travailler » = Tomorrow I'm going to work."
+      "table": {"cols": ["subject", "aller (present)"], "rows": [{"label": "je", "cells": ["vais"]}, {"label": "tu", "cells": ["vas"]}, {"label": "il / elle", "cells": ["va"]}, {"label": "nous", "cells": ["allons"]}, {"label": "vous", "cells": ["allez"]}, {"label": "ils / elles", "cells": ["vont"]}], "note": "Le futur proche = this + an infinitive, exactly like « going to »: « Demain, je vais travailler » = Tomorrow I'm going to work."},
+      "explain": "For the near future, use aller in the present (grid) + an infinitive — just like English 'going to': « je vais manger », « on va voir ». It's quick and everywhere in speech."
     },
     "examples": [
       "Ce soir, on va voir un film. (suh swahr, ohn va vwahr uhn FEELM)",
@@ -1348,7 +1353,8 @@
     ],
     "grammar": {
       "point": "Comparer : le comparatif et le superlatif",
-      "explain": "To compare, frame the adjective with plus / moins / aussi … que: « cet appartement est plus grand que l'autre », « il est moins cher que le premier », « aussi lumineux que… ». For the superlative (the most / least), add le/la/les: « l'appartement le plus lumineux », « le quartier le moins cher ». Two irregulars to know: bon → meilleur (better / best, an adjective) and bien → mieux (better, an adverb): « c'est le meilleur quartier » vs « ici on mange mieux »."
+      "table": {"cols": ["", "comparative (… que)", "superlative (the most)"], "rows": [{"label": "more", "cells": ["plus … que", "le plus …"]}, {"label": "less", "cells": ["moins … que", "le moins …"]}, {"label": "as / equal", "cells": ["aussi … que", "—"]}], "note": "Two irregulars: bon → meilleur (adjective: better/best) and bien → mieux (adverb: better). « le meilleur quartier » vs « on mange mieux »."},
+      "explain": "Frame the adjective with plus / moins / aussi … que to compare, and add le/la/les for the superlative — see grid: « plus grand que », « le plus lumineux ». Watch the two irregulars: bon → meilleur (adjective) and bien → mieux (adverb)."
     },
     "examples": [
       "Cet appartement est plus cher, mais il est mieux situé que l'autre. (set ah-par-tuh-mahn eh plew SHEHR, meh eel eh myuh see-tew-AY kuh LOH-truh)",
@@ -1478,7 +1484,8 @@
     ],
     "grammar": {
       "point": "Le subjonctif : déclencheurs et indicatif vs subjonctif",
-      "explain": "The subjunctive marks something not presented as a plain fact — will, necessity, emotion, doubt, and certain conjunctions. Triggers: wanting / necessity (« il faut que », « je veux que »), emotion (« je suis content / triste / surpris que »), doubt and denial (« je doute que », « je ne pense pas que »), and conjunctions (« bien que », « pour que », « avant que », « à condition que », « jusqu'à ce que »). But certainty and likelihood keep the indicative: « je pense que… », « il est certain / probable que… », « parce que… ». Compare: « bien qu'il soit tard » (subj.) vs « parce qu'il est tard » (ind.)."
+      "table": {"cols": ["trigger", "→ subjonctif", "→ indicatif"], "rows": [{"label": "will / need", "cells": ["il faut que, je veux que", "—"]}, {"label": "emotion", "cells": ["je suis content / surpris que", "—"]}, {"label": "doubt / denial", "cells": ["je doute que, je ne pense pas que", "—"]}, {"label": "certainty", "cells": ["—", "je pense que, il est certain que"]}, {"label": "conjunctions", "cells": ["bien que, pour que, avant que", "parce que, pendant que"]}], "note": "Form: ils-stem + -e/-es/-e/-ions/-iez/-ent (que je parle). Compare « bien qu'il soit tard » (subj.) vs « parce qu'il est tard » (ind.)."},
+      "explain": "The subjunctive marks something not stated as a plain fact — will, necessity, emotion, doubt. Learn it by its triggers (grid): certainty and cause keep the indicative instead."
     },
     "examples": [
       "Bien que ce soit difficile, il faut que nous continuions à apprendre. (byan kuh suh swah dee-fee-SEEL, eel foh kuh noo kohn-tee-nwee-OHN ah ah-PRAHN-druh)",
@@ -1543,7 +1550,8 @@
     ],
     "grammar": {
       "point": "Le plus-que-parfait & le conditionnel passé",
-      "explain": "The plus-que-parfait says what had already happened before another past moment: avoir / être in the imparfait + past participle (« j'avais fini », « elle était partie »). The conditionnel passé says what would have happened: avoir / être in the conditional + past participle (« j'aurais fait », « il serait venu »). Put them together for unreal past hypotheses — the regret pattern: si + plus-que-parfait → conditionnel passé. « Si j'avais étudié, j'aurais réussi » (If I had studied, I would have passed). Use « j'aurais dû / pu » + infinitive for regrets and reproaches."
+      "table": {"cols": ["si + …", "→ result", "meaning"], "rows": [{"label": "présent", "cells": ["futur", "real / likely"]}, {"label": "imparfait", "cells": ["conditionnel présent", "unreal (present)"]}, {"label": "plus-que-parfait", "cells": ["conditionnel passé", "unreal past (regret)"]}], "highlight": ["futur", "conditionnel présent", "conditionnel passé"], "note": "Si j'ai le temps, je viendrai. · Si j'avais le temps, je viendrais. · Si j'avais eu le temps, je serais venu. Regrets: « j'aurais dû / pu » + infinitive."},
+      "explain": "This lesson completes the si-clause system with the past-unreal (regret) type — the grid shows all three together. Form the plus-que-parfait with avoir/être in the imparfait + participle (« j'avais fini »), and the conditionnel passé with avoir/être in the conditional + participle (« j'aurais fait »)."
     },
     "examples": [
       "Si nous étions partis plus tôt, nous n'aurions pas raté le train. (see noo zay-tyohn par-TEE plew TOH, noo noh-ryohn pah rah-TAY luh TRAN)",
@@ -1674,7 +1682,8 @@
     ],
     "grammar": {
       "point": "La voix passive",
-      "explain": "The passive puts the receiver of the action first — common in news and formal writing. Form it with être (in the right tense) + past participle, and the participle agrees with the subject: « une nouvelle loi a été votée », « le suspect sera interrogé ». Name the doer with « par »: « le rapport a été rédigé par des experts ». Use the passive to stay impersonal or to foreground the result. When the doer is vague, French often prefers the active « on »: « on a annoncé une réforme » rather than « une réforme a été annoncée »."
+      "table": {"cols": ["tense", "passive = être + past participle"], "rows": [{"label": "présent", "cells": ["est voté(e)"]}, {"label": "passé composé", "cells": ["a été voté(e)"]}, {"label": "futur", "cells": ["sera voté(e)"]}], "note": "être carries the tense; the participle agrees with the subject. Name the doer with « par ». When the doer is vague, French prefers active « on »: « on a annoncé une réforme »."},
+      "explain": "The passive puts the receiver of the action first — common in news and formal writing. Form: être (in the right tense) + past participle, agreeing with the subject (grid): « une loi a été votée », « le suspect sera interrogé ». Name the doer with « par »."
     },
     "examples": [
       "Une réforme du système de santé a été annoncée hier par le gouvernement. (ewn ray-FORM dew sees-tem duh sahn-TAY ah ay-tay ah-nohn-SAY ee-EHR par luh goo-vehr-nuh-MAHN)",

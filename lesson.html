@@ -44,6 +44,28 @@ document.addEventListener('alpine:init', () => {
     },
     get prev() { return this.idx > 0 ? this.all[this.idx - 1] : null; },
     get next() { return (this.idx >= 0 && this.idx < this.all.length - 1) ? this.all[this.idx + 1] : null; },
+    // Flatten a grammar table into a single ordered cell list (header row, then
+    // each body row = label + cells) so the grid renders with one x-for — nested
+    // <template x-for> inside a grid mis-orders rows.
+    get gridCells() {
+      const t = this.lesson && this.lesson.grammar && this.lesson.grammar.table;
+      if (!t) return [];
+      const hi = t.highlight || [];
+      const out = [];
+      t.cols.forEach((c, i) => out.push({ text: c, kind: i === 0 ? 'corner' : 'head' }));
+      t.rows.forEach(r => {
+        out.push({ text: r.label, kind: 'label' });
+        (r.cells || []).forEach(c => out.push({ text: c, kind: hi.includes(c) ? 'hot' : 'cell' }));
+      });
+      return out;
+    },
+    cellClass(kind) {
+      if (kind === 'corner') return 'text-slate-400 font-medium border-b border-slate-200';
+      if (kind === 'head') return 'text-center font-semibold text-slate-900 bg-slate-50 border-b border-slate-200';
+      if (kind === 'label') return 'font-bold text-slate-900 bg-slate-50 border-b border-slate-100';
+      if (kind === 'hot') return 'text-center font-bold bg-blue-100 text-blue-800 border-b border-slate-100';
+      return 'text-center text-slate-700 border-b border-slate-100';
+    },
     get claudeUrl() { return 'https://claude.ai/new?q=' + encodeURIComponent(this.lesson.tutorPrompt); },
     get chatgptUrl() { return 'https://chatgpt.com/?q=' + encodeURIComponent(this.lesson.tutorPrompt); },
     copy() {
@@ -250,7 +272,23 @@ document.addEventListener('alpine:init', () => {
       <h2 class="text-sm font-semibold text-slate-900 uppercase tracking-wide">One grammar point</h2>
       <div class="mt-3 rounded-xl border border-blue-200 bg-blue-50 p-5">
         <h3 class="font-semibold text-slate-900" x-text="lesson.grammar.point"></h3>
-        <p class="mt-1.5 text-sm text-slate-700 leading-relaxed" x-text="lesson.grammar.explain"></p>
+
+        <!-- visual grid (optional): shows the pattern spatially, highlighted cells carry the key forms -->
+        <template x-if="lesson.grammar.table">
+          <div class="mt-4">
+            <div class="overflow-x-auto -mx-1 px-1">
+              <div class="grid text-sm bg-white rounded-lg ring-1 ring-slate-200 overflow-hidden"
+                   :style="`grid-template-columns: auto repeat(${lesson.grammar.table.cols.length - 1}, minmax(4.5rem, 1fr))`">
+                <template x-for="(cell, i) in gridCells" :key="i">
+                  <div class="px-3 py-2 whitespace-nowrap" :class="cellClass(cell.kind)" x-text="cell.text"></div>
+                </template>
+              </div>
+            </div>
+            <p x-show="lesson.grammar.table.note" x-cloak class="mt-2 text-xs text-slate-500 leading-relaxed" x-text="lesson.grammar.table.note"></p>
+          </div>
+        </template>
+
+        <p class="mt-4 text-sm text-slate-700 leading-relaxed" x-text="lesson.grammar.explain"></p>
       </div>
     </section>
 

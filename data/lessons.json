@@ -77,7 +77,20 @@
     ],
     "grammar": {
       "point": "Drop the vowel, add an apostrophe",
-      "explain": "When a short word ending in a vowel meets a word starting with a vowel — or a silent h — French drops that final vowel and replaces it with an apostrophe. This is called l'élision, and it keeps two vowels from clashing: « le ami » is wrong, you say « l'ami »; « je ai » becomes « j'ai »; « de eau » becomes « d'eau ». It happens with a small, fixed set of words: the monosyllables le, la, de, je, me, te, se, ce, ne, que — plus jusque, lorsque, puisque, quoique and parce que. Two special cases: « que » elides in all its forms (« qu'il », « qu'elle », « qu'on »), and « si » elides only before il / ils — « s'il », « s'ils » — but never before elle (« si elle »). Note it does NOT happen before an aspirate h (« le héros », « le hibou » keep the vowel), only before a mute h (« l'homme », « l'heure »). In speech you already do this naturally; the lesson is really about hearing it and writing the apostrophe."
+      "table": {
+        "cols": ["word", "becomes", "example"],
+        "rows": [
+          { "label": "le / la", "cells": ["l'", "l'ami, l'eau"] },
+          { "label": "je", "cells": ["j'", "j'ai"] },
+          { "label": "de", "cells": ["d'", "d'accord"] },
+          { "label": "ne", "cells": ["n'", "je n'ai pas"] },
+          { "label": "que", "cells": ["qu'", "qu'il, qu'elle"] },
+          { "label": "si + il", "cells": ["s'il", "s'il vous plaît"] }
+        ],
+        "highlight": ["l'", "j'", "d'", "n'", "qu'", "s'il"],
+        "note": "Also me, te, se, ce and jusque, lorsque, puisque, parce que. Two traps: « si » elides only before il/ils — never « si elle »; and not before an aspirate h — « l'homme » ✓ but « le héros » ✗."
+      },
+      "explain": "When a short word ending in a vowel bumps into a word starting with a vowel — or a mute h — French drops that vowel and adds an apostrophe, so the two don't clash: « le ami » → « l'ami », « je ai » → « j'ai ». You already do this when you speak; the lesson is about seeing it and writing the apostrophe."
     },
     "examples": [
       "J'habite à Paris, mais je n'ai pas de voiture. (zhah-BEET)",
@@ -183,7 +196,16 @@
     ],
     "grammar": {
       "point": "Definite (le/la/les) vs indefinite (un/une/des)",
-      "explain": "Every French noun has a gender — masculine or feminine — and its article must match. Use the definite article for something specific or already known, like « the »: le (M), la (F), les (plural for both) — « le café est bon » (the coffee is good). Use the indefinite article for one thing, not specified, like « a / some »: un (M), une (F), des (plural, = « some ») — « je voudrais un café » (I'd like a coffee). Two things English speakers forget: (1) French almost never drops the article — you say « j'aime le café » and « des enfants jouent », where English uses no word at all. (2) For an uncountable quantity (« some bread », « some water ») French uses the partitive du (M), de la (F), de l' (before a vowel): « du pain », « de la limonade », « de l'eau ». And after a negative, un/une/des/du all become de: « je n'ai pas de voiture », « pas de pain ». Gender is rarely guessable, so learn each noun with its article — « une table », not just « table »."
+      "table": {
+        "cols": ["", "the  (definite)", "a  (indefinite)", "some  (partitive)"],
+        "rows": [
+          { "label": "masc.", "cells": ["le", "un", "du"] },
+          { "label": "fem.", "cells": ["la", "une", "de la"] },
+          { "label": "plural", "cells": ["les", "des", "des"] }
+        ],
+        "note": "Before a vowel, le/la → l' (l'ami). After a negative, un/une/des/du all become de: « pas de café »."
+      },
+      "explain": "Every noun is masculine or feminine, and its article must match — so learn each noun with its article (« une table », not just « table »). Read the grid across: « the » (specific/known) vs « a » (one, unspecified) vs « some » (an uncountable amount — du pain, de l'eau). And French keeps the article where English drops it: « j'aime le café », « des enfants jouent »."
     },
     "examples": [
       "Le restaurant est fermé, mais un café est ouvert. (luh… uhn…)",
@@ -218,7 +240,18 @@
     ],
     "grammar": {
       "point": "à + le = au, de + le = du (and the whole table)",
-      "explain": "Two tiny words do a lot of work. À means at, to or in a place — « je suis à Paris », « je vais à la maison ». De means of, from or belonging to — « je viens de Lyon », « la voiture de Pierre » (Pierre's car — French has no 's, it flips it: the car of Pierre). The catch: when à or de meets the definite articles le and les, they MUST contract. à + le = au, à + les = aux; de + le = du, de + les = des. But à la, à l', de la, de l' do NOT contract — they stay as they are. So: « au restaurant » (à + le), « aux toilettes » (à + les), « du marché » (de + le), « des Alpes » (de + les) — yet « à la plage », « de l'aéroport ». A good rule of thumb: à points toward a place (going), de points away from it (coming from) — « Je vais au marché, puis je reviens du marché. » And « du / de la / des » you already met as the partitive for « some » — same little words, doing double duty."
+      "table": {
+        "cols": ["+", "à  (to / at)", "de  (from / of)"],
+        "rows": [
+          { "label": "le", "cells": ["au", "du"] },
+          { "label": "la", "cells": ["à la", "de la"] },
+          { "label": "l'", "cells": ["à l'", "de l'"] },
+          { "label": "les", "cells": ["aux", "des"] }
+        ],
+        "highlight": ["au", "du", "aux", "des"],
+        "note": "Only le and les merge — the blue forms. à la / à l' / de la / de l' stay apart. Memory hook: à = going to · de = coming from."
+      },
+      "explain": "À means to, at or in a place; de means from or of — and also belonging: « la voiture de Pierre » = Pierre's car (French flips it: the car of Pierre, no apostrophe-s). The one trap is in the table: à and de must merge with le and les, but never with la or l'. And du / de la / des are the same little words you met as the partitive « some »."
     },
     "examples": [
       "Je vais au travail, puis à la boulangerie. (oh tra-VYE)",

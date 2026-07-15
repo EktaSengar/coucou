@@ -493,7 +493,8 @@
     ],
     "grammar": {
       "point": "Present tense of -er verbs",
-      "explain": "Most French verbs end in -er. Drop -er and add: je -e, tu -es, il/elle -e, nous -ons, vous -ez, ils/elles -ent. So parler → je parle, tu parles, il parle, nous parlons, vous parlez, ils parlent."
+      "table": {"cols": ["", "ending", "parler →"], "rows": [{"label": "je", "cells": ["-e", "parle"]}, {"label": "tu", "cells": ["-es", "parles"]}, {"label": "il / elle", "cells": ["-e", "parle"]}, {"label": "nous", "cells": ["-ons", "parlons"]}, {"label": "vous", "cells": ["-ez", "parlez"]}, {"label": "ils / elles", "cells": ["-ent", "parlent"]}], "highlight": ["-e", "-es", "-ons", "-ez", "-ent"], "note": "Drop -er, add the ending. -e / -es / -ent are all silent — « je parle », « tu parles », « ils parlent » sound identical; only nous and vous are heard."},
+      "explain": "Most French verbs end in -er. Drop the -er and add the ending for each person (see grid). The quirk to remember: the -e, -es and -ent endings are silent, so three of the six forms sound exactly the same."
     },
     "examples": [
       "J'habite à Paris avec mon mari. Je parle anglais et un peu français.",
@@ -621,7 +622,8 @@
     ],
     "grammar": {
       "point": "Adjective agreement & position",
-      "explain": "Adjectives agree with the noun: add -e for feminine (grand → grande) and -s for plural (grands). Most go after the noun (une maison blanche), but a few short common ones go before (un grand homme, une belle ville). Comparisons: plus / moins / aussi + adjective + que."
+      "table": {"cols": ["", "singular", "plural"], "rows": [{"label": "masculine", "cells": ["grand", "grands"]}, {"label": "feminine", "cells": ["grande", "grandes"]}], "highlight": ["grande", "grands", "grandes"], "note": "Add -e for feminine, -s for plural (so feminine plural gets both). Most adjectives follow the noun (une voiture rouge); a few short ones go before (un grand homme)."},
+      "explain": "Adjectives agree with their noun in gender and number — see the grid. Position: most go after the noun, but a few short common ones go before (un grand homme, une belle ville). Comparisons: plus / moins / aussi + adjective + que."
     },
     "examples": [
       "Ma sœur est grande et très gentille. (mah sur eh grahnd ay treh zhahn-TEEY)",
@@ -685,7 +687,8 @@
     ],
     "grammar": {
       "point": "« Ce / cette / ces » (this / these)",
-      "explain": "Demonstratives point at things: ce (masc.) — ce pantalon; cette (fem.) — cette robe; ces (plural) — ces chaussures; and cet before a masculine vowel — cet imperméable. Object pronouns avoid repetition: « Je le prends » (I'll take it), « Je les essaie » (I'll try them)."
+      "table": {"cols": ["", "form", "example"], "rows": [{"label": "masc.", "cells": ["ce", "ce pantalon"]}, {"label": "masc. + vowel", "cells": ["cet", "cet imperméable"]}, {"label": "fem.", "cells": ["cette", "cette robe"]}, {"label": "plural", "cells": ["ces", "ces chaussures"]}], "highlight": ["ce", "cet", "cette", "ces"], "note": "« cet » only before a masculine word starting with a vowel or mute h — cet ami, cet hôtel."},
+      "explain": "Demonstratives point at things — « this / these ». Choose by gender and number (see grid). The one to remember is « cet », which replaces « ce » before a masculine word starting with a vowel."
     },
     "examples": [
       "Bonjour, je cherche une veste. Je peux l'essayer ? (… zhuh shersh ewn VEST. zhuh puh leh-say-YAY ?)",
@@ -813,7 +816,8 @@
     ],
     "grammar": {
       "point": "Imparfait vs passé composé",
-      "explain": "The imparfait sets the scene and describes how things were or used to be — habits, ongoing background, age, weather, feelings: « je jouais au foot tous les samedis », « il faisait beau ». Form it from the nous form of the present (nous parlons → parl-) plus the endings -ais, -ais, -ait, -ions, -iez, -aient (être is the only irregular stem: ét-). The passé composé is for the single, completed events that move the story forward: « j'ai marqué un but ». Rule of thumb: imparfait = the backdrop, passé composé = what happened."
+      "table": {"cols": ["", "imparfait", "passé composé"], "rows": [{"label": "use for", "cells": ["the backdrop, habits, how things were", "single completed events"]}, {"label": "signal words", "cells": ["souvent, toujours, tous les jours", "soudain, une fois, hier"]}, {"label": "example", "cells": ["je jouais au foot", "j'ai marqué un but"]}], "note": "Form the imparfait: nous-form stem (nous parlons → parl-) + -ais/-ais/-ait/-ions/-iez/-aient. Only être is irregular (ét-)."},
+      "explain": "The imparfait paints the backdrop — habits, ongoing background, how things were; the passé composé is the single completed events that move the story forward. One sentence often needs both: « je dormais quand le téléphone a sonné » (backdrop + event)."
     },
     "examples": [
       "Quand j'étais jeune, je jouais du piano tous les jours. (kahn zhay-teh ZHUHN, zhuh zhoo-EH dew pee-ah-NOH too lay ZHOOR)",
@@ -878,7 +882,8 @@
     ],
     "grammar": {
       "point": "Le futur simple",
-      "explain": "For most verbs, take the infinitive and add -ai, -as, -a, -ons, -ez, -ont: « je parlerai, tu finiras, il prendra » (drop the final -e of -re verbs). A handful are irregular but very common: être → ser-, avoir → aur-, aller → ir-, faire → fer-, pouvoir → pourr-, vouloir → voudr-, voir → verr-. Use it for plans and predictions further off than the near future. After « quand » and « dès que », French uses the future too: « quand j'aurai le temps, je t'appellerai »."
+      "table": {"cols": ["", "ending", "parler →"], "rows": [{"label": "je", "cells": ["-ai", "parlerai"]}, {"label": "tu", "cells": ["-as", "parleras"]}, {"label": "il / elle", "cells": ["-a", "parlera"]}, {"label": "nous", "cells": ["-ons", "parlerons"]}, {"label": "vous", "cells": ["-ez", "parlerez"]}, {"label": "ils / elles", "cells": ["-ont", "parleront"]}], "highlight": ["-ai", "-as", "-a", "-ons", "-ez", "-ont"], "note": "Stem = the infinitive (drop the final -e of -re verbs). The endings are just the present of avoir. Irregular stems: être→ser-, avoir→aur-, aller→ir-, faire→fer-, pouvoir→pourr-, vouloir→voudr-, voir→verr-."},
+      "explain": "Take the infinitive as the stem and add the endings in the grid: « je parlerai, tu finiras, il prendra ». Use it for plans and predictions beyond the near future. Note: after « quand » and « dès que », French also uses the future — « quand j'aurai le temps, je t'appellerai »."
     },
     "examples": [
       "L'année prochaine, nous irons vivre à Lyon. (lah-nay proh-shen, noo zee-ROHN vee-vruh ah lee-OHN)",
@@ -943,7 +948,8 @@
     ],
     "grammar": {
       "point": "Le conditionnel & les phrases avec « si »",
-      "explain": "Build the conditional on the same stem as the futur simple, but add the imparfait endings (-ais, -ais, -ait, -ions, -iez, -aient): « je voudrais, tu pourrais, il serait ». Use it to be polite (« je voudrais un café »), to give advice (« tu devrais te reposer ») and for hypotheticals. The key pattern is si + imparfait → conditionnel: « Si j'avais le temps, je voyagerais plus » (If I had time, I would travel more). Careful: never put the conditional directly after « si »."
+      "table": {"cols": ["condition — si …", "result"], "rows": [{"label": "si + présent", "cells": ["futur (or présent)"]}, {"label": "si + imparfait", "cells": ["conditionnel"]}], "highlight": ["conditionnel"], "note": "Si j'ai le temps, je viendrai. · Si j'avais le temps, je viendrais. ⚠ The conditional never comes right after « si » — never « si je voudrais »."},
+      "explain": "Build the conditional on the futur-simple stem but with the imparfait endings (-ais, -ais, -ait, -ions, -iez, -aient): « je voudrais, tu pourrais, il serait ». Use it to be polite (« je voudrais… »), to give advice (« tu devrais… ») and for hypotheticals — which follow the si-pattern in the grid."
     },
     "examples": [
       "Si j'étais riche, j'achèterais un appartement à Paris. (see zhay-teh REESH, zhash-tuh-REH uhn ah-par-tuh-MAHN ah pa-REE)",
@@ -1008,7 +1014,8 @@
     ],
     "grammar": {
       "point": "Les pronoms : le/la/les, lui/leur, y et en",
-      "explain": "Object pronouns go before the verb. Direct objects (the thing) → le, la, les: « Tu vois le film ? — Oui, je le vois. » Indirect objects (à + a person) → lui, leur: « Je téléphone à Marie → je lui téléphone. » Use y to replace à + a place or thing: « Je vais à Paris → j'y vais. » Use en to replace de + something or a quantity: « Tu veux du café ? — Oui, j'en veux. » In the passé composé and the negative they still sit before the verb: « Je ne l'ai pas vu. »"
+      "table": {"cols": ["replaces", "pronoun", "example"], "rows": [{"label": "direct object (the thing)", "cells": ["le / la / les", "je le vois"]}, {"label": "à + a person", "cells": ["lui / leur", "je lui parle"]}, {"label": "à + place / thing", "cells": ["y", "j'y vais"]}, {"label": "de + thing / quantity", "cells": ["en", "j'en veux"]}], "highlight": ["le / la / les", "lui / leur", "y", "en"], "note": "All sit before the verb — even in the negative and passé composé: « je ne l'ai pas vu »."},
+      "explain": "Object pronouns go before the verb and save you repeating the noun. Pick by what they replace (see grid): the direct thing (le/la/les), the person after à (lui/leur), a place or à-thing (y), or a de-thing or quantity (en)."
     },
     "examples": [
       "Tu connais ce restaurant ? — Oui, je le connais, j'y vais souvent. (tew koh-neh suh res-toh-RAHN ? wee, zhuh luh koh-NEH, zhee veh soo-VAHN)",
@@ -1144,7 +1151,8 @@
     ],
     "grammar": {
       "point": "Les pronoms relatifs : qui, que, où, dont",
-      "explain": "Relative pronouns glue two ideas into one sentence. Qui replaces the subject (the doer): « le train qui part à 8h ». Que replaces the object: « le livre que je lis ». Où means where or when: « la ville où j'habite », « le jour où on s'est rencontrés ». Dont replaces de + something — it covers whose and verbs/expressions built with de (parler de, avoir besoin de): « le film dont tout le monde parle », « l'ami dont la sœur habite à Nice »."
+      "table": {"cols": ["pronoun", "replaces", "example"], "rows": [{"label": "qui", "cells": ["the subject (doer)", "le train qui part"]}, {"label": "que", "cells": ["the object", "le livre que je lis"]}, {"label": "où", "cells": ["place / time", "la ville où j'habite"]}, {"label": "dont", "cells": ["de + something", "le film dont on parle"]}], "note": "dont covers « whose » and any verb built with de (parler de, avoir besoin de): « l'ami dont la sœur habite à Nice »."},
+      "explain": "Relative pronouns glue two ideas into one sentence — pick by the role the shared word plays (see grid). The tricky one is dont, which stands in for anything with de."
     },
     "examples": [
       "C'est un quartier que j'adore et où il y a beaucoup de cafés. (seh tuhn kar-tee-AY kuh zhah-DOR ay oo eel yah boh-koo duh ka-FAY)",
@@ -1274,7 +1282,8 @@
     ],
     "grammar": {
       "point": "Parler de la durée : depuis, pendant, il y a",
-      "explain": "To say how long, French uses three time words. Depuis = since / for an action that is still going — and it takes the present tense: « je travaille ici depuis trois ans » (I've worked here for three years, and still do). Pendant = for a finished, measured duration: « j'ai vécu à Londres pendant deux ans ». Il y a = ago: « j'ai commencé il y a un mois ». Watch the trap: English uses the perfect (I have worked), but with depuis French stays in the present."
+      "table": {"cols": ["word", "meaning", "tense · example"], "rows": [{"label": "depuis", "cells": ["since / for (still going)", "présent — je travaille ici depuis 3 ans"]}, {"label": "pendant", "cells": ["for (finished duration)", "j'ai vécu à Londres pendant 2 ans"]}, {"label": "il y a", "cells": ["ago", "j'ai commencé il y a un mois"]}], "note": "The trap: with depuis, French uses the PRESENT where English uses the perfect — « je travaille ici depuis 3 ans » = I have worked here for 3 years (and still do)."},
+      "explain": "Three words for duration — pick by the grid. The one that trips English speakers is depuis: for an action still going, French stays in the present, where English uses « have worked »."
     },
     "examples": [
       "Je travaille dans le marketing depuis cinq ans. (zhuh trah-vahy dahn luh mar-kuh-TING duh-pwee sank AHN)",
@@ -1599,7 +1608,8 @@
     ],
     "grammar": {
       "point": "Le discours indirect",
-      "explain": "To report speech, drop the quotation marks and link with « que » (a statement), « si » (a yes/no question) or « ce que / ce qui » (what…). If the reporting verb is in the past, shift the tense back: présent → imparfait, passé composé → plus-que-parfait, futur → conditionnel. « Je suis fatigué » → « Il a dit qu'il était fatigué. » « Je viendrai » → « Elle a dit qu'elle viendrait. » Pronouns and time words shift too: aujourd'hui → ce jour-là, hier → la veille, demain → le lendemain. For commands, use « de » + infinitive: « Pars ! » → « Il m'a dit de partir. »"
+      "table": {"cols": ["direct speech →", "reported (past)"], "rows": [{"label": "présent", "cells": ["imparfait"]}, {"label": "passé composé", "cells": ["plus-que-parfait"]}, {"label": "futur", "cells": ["conditionnel"]}, {"label": "futur proche", "cells": ["allait + infinitif"]}], "highlight": ["imparfait", "plus-que-parfait", "conditionnel", "allait + infinitif"], "note": "Time words shift too: aujourd'hui → ce jour-là, hier → la veille, demain → le lendemain. Commands → de + infinitif: « Pars ! » → « Il m'a dit de partir »."},
+      "explain": "To report speech, drop the quotes and link with que (a statement), si (a yes/no question) or ce que / ce qui (what…). If the reporting verb is in the past, shift the tense back one step — see grid: « Je suis fatigué » → « Il a dit qu'il était fatigué »."
     },
     "examples": [
       "Il a dit qu'il avait oublié son rendez-vous et qu'il rappellerait le lendemain. (eel ah dee keel ah-veh oo-blee-AY sohn rahn-day-VOO ay keel rah-pel-REH luh lahn-duh-MAN)",
@@ -1729,7 +1739,8 @@
     ],
     "grammar": {
       "point": "Les pronoms relatifs composés : lequel, auquel, duquel",
-      "explain": "After a preposition (à, de, avec, pour, sans, grâce à…), the relative pronoun becomes lequel / laquelle / lesquels / lesquelles, agreeing with the noun: « le projet pour lequel je travaille », « les raisons pour lesquelles… ». With « à » it contracts: à + lequel → auquel, à + lesquels → auxquels (« le problème auquel on pense »). With « de » (and « à côté de », « près de »…) it contracts: de + lequel → duquel (« l'entreprise au sein de laquelle je travaille »). For people you may use « qui » after a preposition: « la personne avec qui je parle »."
+      "table": {"cols": ["", "masc. sing.", "fem. sing.", "masc. pl.", "fem. pl."], "rows": [{"label": "base", "cells": ["lequel", "laquelle", "lesquels", "lesquelles"]}, {"label": "à +", "cells": ["auquel", "à laquelle", "auxquels", "auxquelles"]}, {"label": "de +", "cells": ["duquel", "de laquelle", "desquels", "desquelles"]}], "highlight": ["auquel", "auxquels", "auxquelles", "duquel", "desquels", "desquelles"], "note": "Use after a preposition (pour lequel, avec lesquelles). à and de contract just like the articles. Shortcut: for a person, « qui » works — « la personne avec qui je parle »."},
+      "explain": "After a preposition (pour, avec, sans, grâce à…), the relative pronoun becomes lequel and agrees with its noun — see grid. With à and de it contracts exactly like the articles (à + lequel = auquel, de + lequel = duquel)."
     },
     "examples": [
       "Le réchauffement climatique est un enjeu auquel nous devons tous réfléchir. (luh ray-shoh-fuh-mahn klee-mah-teek eh tuhn ahn-ZHUH oh-kel noo duh-vohn toos ray-flay-SHEER)",
@@ -1794,7 +1805,8 @@
     ],
     "grammar": {
       "point": "Le registre formel & le gérondif",
-      "explain": "Formal French uses « vous », avoids slang and shortcuts, and leans on set phrases (« je me permets de… », « je vous serais reconnaissant de… », « veuillez… »). Swap casual verbs for precise ones (demander → solliciter, dire → informer). A handy tool is the gérondif — « en » + present participle (the nous-form stem + -ant): it shows how, why or when, with the same subject as the main verb: « en attendant votre réponse », « j'ai appris le français en travaillant à Paris ». Don't confuse « en faisant » (while / by doing) with « pour faire » (in order to do)."
+      "table": {"cols": ["", "informal", "formal"], "rows": [{"label": "address", "cells": ["tu", "vous"]}, {"label": "greeting", "cells": ["Salut", "Bonjour Madame, Monsieur"]}, {"label": "ask", "cells": ["demander", "solliciter"]}, {"label": "say", "cells": ["dire", "informer"]}, {"label": "sign off", "cells": ["À plus !", "Veuillez agréer…"]}], "highlight": ["vous", "Bonjour Madame, Monsieur", "solliciter", "informer", "Veuillez agréer…"], "note": "Set phrases: « je me permets de… », « je vous serais reconnaissant de… ». Plus the gérondif (en + -ant): « en attendant votre réponse »."},
+      "explain": "Formal French uses vous, avoids slang, and leans on set phrases and precise verbs — see the register grid. A useful tool is the gérondif (« en » + present participle, the nous-stem + -ant) for how/why/when with the same subject: « en attendant votre réponse », « j'ai appris le français en travaillant »."
     },
     "examples": [
       "Je me permets de vous écrire afin de solliciter un rendez-vous. (zhuh muh pehr-meh duh voo zay-kree ah-fan duh soh-lee-see-TAY uhn rahn-day-VOO)",

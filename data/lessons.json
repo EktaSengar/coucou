@@ -66,12 +66,14 @@
     "minutes": 12,
     "goal": "Know why French writes « j'ai » and « l'eau », and do the vowel-dropping automatically.",
     "vocab": [
-      { "fr": "je → j'  ·  j'ai, j'habite", "phonetic": "zhay, zhah-BEET", "en": "I have, I live" },
-      { "fr": "le / la → l'  ·  l'ami, l'eau", "phonetic": "lah-MEE, loh", "en": "the friend, the water" },
-      { "fr": "de → d'  ·  d'accord, pas d'eau", "phonetic": "dah-KOR, pah doh", "en": "OK, no water" },
-      { "fr": "ne → n'  ·  je n'ai pas", "phonetic": "zhuh nay PAH", "en": "I don't have" },
-      { "fr": "que → qu'  ·  qu'est-ce que", "phonetic": "kess kuh", "en": "what" },
-      { "fr": "si + il → s'il  ·  s'il vous plaît", "phonetic": "seel voo PLEH", "en": "please (if it pleases you)" }
+      { "fr": "j'ai", "phonetic": "zhay", "en": "I have (je + ai)" },
+      { "fr": "j'habite", "phonetic": "zhah-BEET", "en": "I live (je + habite, mute h)" },
+      { "fr": "l'ami", "phonetic": "lah-MEE", "en": "the friend (le + ami)" },
+      { "fr": "l'eau", "phonetic": "loh", "en": "the water (la + eau)" },
+      { "fr": "d'accord", "phonetic": "dah-KOR", "en": "OK (de + accord)" },
+      { "fr": "je n'ai pas", "phonetic": "zhuh nay PAH", "en": "I don't have (ne + ai)" },
+      { "fr": "qu'est-ce que", "phonetic": "kess kuh", "en": "what (que + est-ce)" },
+      { "fr": "s'il vous plaît", "phonetic": "seel voo PLEH", "en": "please (si + il)" }
     ],
     "grammar": {
       "point": "Drop the vowel, add an apostrophe",

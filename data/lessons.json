@@ -59,6 +59,41 @@
     "tutorPrompt": "Be my French pronunciation coach at A1, in English with French examples. Give me eight short, common words to read aloud, one at a time. Focus on: silent final letters, the « ay » sound (é, -er, -ez), the u vs ou difference, and nasal vowels (on, an, in, un). After each word, give me an English-style respelling and a quick tip. Keep it light and encouraging, and end with the three sounds I should drill most."
   },
   {
+    "id": "a1-elision",
+    "level": "A1",
+    "module": "Sounds & spelling",
+    "title": "The apostrophe — l'élision",
+    "minutes": 12,
+    "goal": "Know why French writes « j'ai » and « l'eau », and do the vowel-dropping automatically.",
+    "vocab": [
+      { "fr": "je → j'  ·  j'ai, j'habite", "phonetic": "zhay, zhah-BEET", "en": "I have, I live" },
+      { "fr": "le / la → l'  ·  l'ami, l'eau", "phonetic": "lah-MEE, loh", "en": "the friend, the water" },
+      { "fr": "de → d'  ·  d'accord, pas d'eau", "phonetic": "dah-KOR, pah doh", "en": "OK, no water" },
+      { "fr": "ne → n'  ·  je n'ai pas", "phonetic": "zhuh nay PAH", "en": "I don't have" },
+      { "fr": "que → qu'  ·  qu'est-ce que", "phonetic": "kess kuh", "en": "what" },
+      { "fr": "si + il → s'il  ·  s'il vous plaît", "phonetic": "seel voo PLEH", "en": "please (if it pleases you)" }
+    ],
+    "grammar": {
+      "point": "Drop the vowel, add an apostrophe",
+      "explain": "When a short word ending in a vowel meets a word starting with a vowel — or a silent h — French drops that final vowel and replaces it with an apostrophe. This is called l'élision, and it keeps two vowels from clashing: « le ami » is wrong, you say « l'ami »; « je ai » becomes « j'ai »; « de eau » becomes « d'eau ». It happens with a small, fixed set of words: the monosyllables le, la, de, je, me, te, se, ce, ne, que — plus jusque, lorsque, puisque, quoique and parce que. Two special cases: « que » elides in all its forms (« qu'il », « qu'elle », « qu'on »), and « si » elides only before il / ils — « s'il », « s'ils » — but never before elle (« si elle »). Note it does NOT happen before an aspirate h (« le héros », « le hibou » keep the vowel), only before a mute h (« l'homme », « l'heure »). In speech you already do this naturally; the lesson is really about hearing it and writing the apostrophe."
+    },
+    "examples": [
+      "J'habite à Paris, mais je n'ai pas de voiture. (zhah-BEET)",
+      "L'ami de Marie arrive à l'heure. (lah-MEE)",
+      "Je pense qu'il a raison. (kee lah)",
+      "S'il vous plaît, un verre d'eau. (seel voo PLEH)",
+      "Il n'y a pas d'école aujourd'hui. (nyah pah day-KOL)",
+      "C'est l'homme qu'elle aime. (seh LOM kel EM)"
+    ],
+    "practice": [
+      "Fix the clash: « le + eau » → « … », « je + aime » → « … », « de + Italie » → « … ».",
+      "Elide or not? « si + il » → « … » but « si + elle » → « … » (careful!).",
+      "Say these smoothly: j'ai, j'habite, l'ami, l'heure, d'accord, qu'est-ce que.",
+      "Mute vs aspirate h: « l'homme » ✓ but « le héros » ✗ — read both aloud."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for l'élision (the apostrophe). Give me pairs like « je + ai » or « le + ami » and make me write the elided form (j'ai, l'ami), then use it in a short sentence. Cover the monosyllables (le, la, de, je, me, te, se, ce, ne, que), « qu' » in all forms, « s'il/s'ils » but never « si elle », and the mute vs aspirate h (l'homme but le héros). Correct my apostrophes each time and end with the 3 cases I should remember."
+  },
+  {
     "id": "a1-01-greetings",
     "level": "A1",
     "module": "Survival basics",
@@ -127,6 +162,77 @@
       "Make three sentences negative using ne … pas."
     ],
     "tutorPrompt": "Be my French tutor at A1. Speak only simple French, and deliberately use a few phrases I might not know so I have to say « je ne comprends pas » or ask you to repeat. Coach me to stay polite (merci, s'il vous plaît, pardon). After six exchanges, summarise the polite phrases I should memorise."
+  },
+  {
+    "id": "a1-articles",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "A, the, some — French articles",
+    "minutes": 18,
+    "goal": "Put the right little word before every noun — le/la/les or un/une/des — and know which to pick.",
+    "vocab": [
+      { "fr": "le café (M)", "phonetic": "luh ka-FAY", "en": "the coffee (specific)" },
+      { "fr": "la table (F)", "phonetic": "lah TAH-bluh", "en": "the table (specific)" },
+      { "fr": "les enfants", "phonetic": "lay zahn-FAHN", "en": "the children (plural)" },
+      { "fr": "un café", "phonetic": "uhn ka-FAY", "en": "a coffee (one, unspecified)" },
+      { "fr": "une table", "phonetic": "ewn TAH-bluh", "en": "a table" },
+      { "fr": "des enfants", "phonetic": "day zahn-FAHN", "en": "some children" },
+      { "fr": "du pain / de l'eau", "phonetic": "dew PAN / duh LOH", "en": "some bread / some water" }
+    ],
+    "grammar": {
+      "point": "Definite (le/la/les) vs indefinite (un/une/des)",
+      "explain": "Every French noun has a gender — masculine or feminine — and its article must match. Use the definite article for something specific or already known, like « the »: le (M), la (F), les (plural for both) — « le café est bon » (the coffee is good). Use the indefinite article for one thing, not specified, like « a / some »: un (M), une (F), des (plural, = « some ») — « je voudrais un café » (I'd like a coffee). Two things English speakers forget: (1) French almost never drops the article — you say « j'aime le café » and « des enfants jouent », where English uses no word at all. (2) For an uncountable quantity (« some bread », « some water ») French uses the partitive du (M), de la (F), de l' (before a vowel): « du pain », « de la limonade », « de l'eau ». And after a negative, un/une/des/du all become de: « je n'ai pas de voiture », « pas de pain ». Gender is rarely guessable, so learn each noun with its article — « une table », not just « table »."
+    },
+    "examples": [
+      "Le restaurant est fermé, mais un café est ouvert. (luh… uhn…)",
+      "Je voudrais une baguette et des croissants. (ewn… day…)",
+      "J'aime le chocolat et la musique française. (luh… lah…)",
+      "Tu veux du café ou de l'eau ? (dew… duh loh)",
+      "Il n'y a pas de place ici. (pah duh PLASS)",
+      "Les enfants regardent des photos. (lay… day…)"
+    ],
+    "practice": [
+      "Definite or indefinite? « J'adore ___ café » (in general) vs « Je prends ___ café » (one now).",
+      "Add the right article: ___ table, ___ ami, ___ maison, ___ hôtel (watch gender + elision).",
+      "Say « some »: ___ pain, ___ eau, ___ frites, ___ limonade (du / de la / de l' / des).",
+      "Make it negative: « J'ai une voiture » → « Je n'ai pas ___ voiture »."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for articles. Drill definite (le, la, les) vs indefinite (un, une, des), the partitive for 'some' (du, de la, de l', des), and how they all become 'de' after a negative. Give me nouns and short situations and make me choose the right article, correcting my gender and my choice each time. Point out that French keeps the article where English drops it. End with 5 nouns whose gender I should memorise."
+  },
+  {
+    "id": "a1-prepositions-a-de",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "À and de — going, coming & belonging",
+    "minutes": 18,
+    "goal": "Say you're going to or coming from a place, and show possession — with the contractions au, du, aux, des.",
+    "vocab": [
+      { "fr": "à Paris / à la maison", "phonetic": "ah pah-REE / ah lah may-ZOHN", "en": "in/to Paris / at home" },
+      { "fr": "au restaurant", "phonetic": "oh res-toh-RAHN", "en": "at/to the restaurant (à + le)" },
+      { "fr": "aux toilettes", "phonetic": "oh twah-LET", "en": "to the toilets (à + les)" },
+      { "fr": "du pain / du marché", "phonetic": "dew PAN / dew mar-SHAY", "en": "of/from the bread / the market (de + le)" },
+      { "fr": "de la boulangerie", "phonetic": "duh lah boo-lahn-zhuh-REE", "en": "from the bakery" },
+      { "fr": "la voiture de mon mari", "phonetic": "lah vwah-TEWR duh mohn ma-REE", "en": "my husband's car" }
+    ],
+    "grammar": {
+      "point": "à + le = au, de + le = du (and the whole table)",
+      "explain": "Two tiny words do a lot of work. À means at, to or in a place — « je suis à Paris », « je vais à la maison ». De means of, from or belonging to — « je viens de Lyon », « la voiture de Pierre » (Pierre's car — French has no 's, it flips it: the car of Pierre). The catch: when à or de meets the definite articles le and les, they MUST contract. à + le = au, à + les = aux; de + le = du, de + les = des. But à la, à l', de la, de l' do NOT contract — they stay as they are. So: « au restaurant » (à + le), « aux toilettes » (à + les), « du marché » (de + le), « des Alpes » (de + les) — yet « à la plage », « de l'aéroport ». A good rule of thumb: à points toward a place (going), de points away from it (coming from) — « Je vais au marché, puis je reviens du marché. » And « du / de la / des » you already met as the partitive for « some » — same little words, doing double duty."
+    },
+    "examples": [
+      "Je vais au travail, puis à la boulangerie. (oh tra-VYE)",
+      "Elle revient du bureau à six heures. (dew bew-ROH)",
+      "C'est la maison de mes parents. (duh may pah-RAHN)",
+      "On va aux Champs-Élysées ? (oh shahn-zay-lee-ZAY)",
+      "Le train part de la gare de Lyon. (duh lah GAR)",
+      "Il parle du film et de l'acteur. (dew… duh lak-TUHR)"
+    ],
+    "practice": [
+      "Contract if needed: à + le musée → « … », à + la piscine → « … », à + les magasins → « … ».",
+      "Same with de: de + le parc → « … », de + les enfants → « … », de + l'hôtel → « … ».",
+      "Going or coming? « Je vais ___ marché » vs « Je reviens ___ marché ».",
+      "Show possession: the dog of my neighbour → « le chien ___ mon voisin »."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for the prepositions à and de and their contractions. Drill à + le = au, à + les = aux, de + le = du, de + les = des — and the à la / à l' / de la / de l' forms that don't contract. Give me places and make me say I'm going there (à/au) and coming back (de/du), plus possession with de (la voiture de Pierre). Correct my contractions each time and finish with the contraction table as a quick recap."
   },
   {
     "id": "a1-03-numbers",
@@ -209,9 +315,11 @@
     "goal": "Order a drink or snack politely and ask for the bill.",
     "vocab": [
       { "fr": "Je voudrais…", "phonetic": "zhuh voo-DREH", "en": "I would like…" },
+      { "fr": "Vous désirez ? / Qu'est-ce que je vous sers ?", "phonetic": "voo day-zee-RAY / kess kuh zhuh voo SAIR", "en": "What would you like? (the waiter)" },
       { "fr": "un café / un café au lait", "phonetic": "uhn ka-FAY / uhn ka-fay oh LEH", "en": "an espresso / a coffee with milk" },
       { "fr": "un thé / une eau", "phonetic": "uhn TAY / ewn OH", "en": "a tea / a water" },
       { "fr": "un croissant", "phonetic": "uhn krwah-SAHN", "en": "a croissant" },
+      { "fr": "une boulangerie / une pâtisserie", "phonetic": "ewn boo-lahn-zhuh-REE / ewn pah-tee-suh-REE", "en": "a bakery / a pastry shop" },
       { "fr": "L'addition, s'il vous plaît", "phonetic": "la-dee-SYOHN, seel voo PLEH", "en": "The bill, please" },
       { "fr": "Vous avez… ?", "phonetic": "voo-za-VAY", "en": "Do you have…?" },
       { "fr": "C'est combien ?", "phonetic": "seh kohn-BYAN", "en": "How much is it?" },

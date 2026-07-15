@@ -15,6 +15,7 @@
   tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
 </script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+<script src="./js/streak.js"></script>
 <script>
 document.addEventListener('alpine:init', () => {
   Alpine.data('lessonView', () => ({
@@ -35,6 +36,8 @@ document.addEventListener('alpine:init', () => {
       if (this.lesson) {
         document.title = this.lesson.title + ' — Coucou';
         try { this.done = localStorage.getItem('lf-lesson-' + this.lesson.id) === '1'; } catch (e) {}
+        // Opening a lesson counts as activity for the daily streak.
+        try { if (window.CoucouStreak) CoucouStreak.touch(); } catch (e) {}
       }
       this.loading = false;
     },

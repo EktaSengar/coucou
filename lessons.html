@@ -21,11 +21,18 @@
   tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
 </script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+<script src="./js/streak.js"></script>
 <script>
 document.addEventListener('alpine:init', () => {
   Alpine.data('catalog', () => ({
-    lessons: [], done: {}, loading: true, error: false,
+    lessons: [], done: {}, loading: true, error: false, streak: 0,
+    // taste player (same engine as lesson.html's speak())
+    tasteWords: ['bonjour', 'coucou', 'merci'], tastePlayed: false,
+    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: null, audioEl: null,
     async init() {
+      this.initVoice();
+      // Any visit to Lessons counts as activity for the daily streak.
+      try { if (window.CoucouStreak) this.streak = CoucouStreak.touch(); } catch (e) {}
       try {
         const res = await fetch('./data/lessons.json', { cache: 'no-cache' });
         if (!res.ok) throw new Error('http ' + res.status);
@@ -33,6 +40,55 @@ document.addEventListener('alpine:init', () => {
       } catch (e) { this.error = true; this.loading = false; return; }
       this.lessons.forEach(l => { this.done[l.id] = this.read(l.id); });
       this.loading = false;
+    },
+    playTaste(word, key) {
+      this.tastePlayed = true;
+      try { if (window.CoucouStreak) this.streak = CoucouStreak.touch(); } catch (e) {}
+      this.speak(word, key);
+    },
+    initVoice() {
+      if (!this.canSpeak) return;
+      const pick = () => {
+        const vs = speechSynthesis.getVoices();
+        this.frVoice = vs.find(v => /fr[-_]?fr/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null;
+      };
+      pick();
+      speechSynthesis.addEventListener('voiceschanged', pick);
+    },
+    // djb2 over the cleaned text — must match build_audio.py's say_hash().
+    sayHash(s) { let h = 5381; for (let k = 0; k < s.length; k++) h = ((Math.imul(h, 33) >>> 0) ^ s.charCodeAt(k)) >>> 0; return h.toString(36); },
+    playHosted(url) {
+      return new Promise((resolve, reject) => {
+        const a = this.audioEl || (this.audioEl = new Audio());
+        const cleanup = () => { a.removeEventListener('ended', ok); a.removeEventListener('error', bad); };
+        const ok = () => { cleanup(); resolve(); };
+        const bad = () => { cleanup(); reject(new Error('audio')); };
+        a.addEventListener('ended', ok); a.addEventListener('error', bad);
+        try { a.pause(); a.src = url; a.currentTime = 0; a.play().catch(bad); }
+        catch (e) { cleanup(); reject(e); }
+      });
+    },
+    // Hosted studio clip first (content-addressed by hash of cleaned text),
+    // device TTS as fallback — so a taste word plays even without its mp3.
+    speak(text, key) {
+      if (!text) return;
+      const clean = String(text).replace(/\([^)]*\)/g, '').replace(/\s*\/\s*/g, ', ').replace(/\s+/g, ' ').trim();
+      if (!clean) return;
+      if (this.canSpeak) speechSynthesis.cancel();
+      if (this.audioEl) { try { this.audioEl.pause(); } catch (e) {} }
+      this.speaking = key;
+      const done = () => { if (this.speaking === key) this.speaking = null; };
+      this.playHosted('./assets/audio/tts/say/' + this.sayHash(clean) + '.mp3').then(done).catch(() => {
+        if (!this.canSpeak) return done();
+        try {
+          const u = new SpeechSynthesisUtterance(clean);
+          u.lang = 'fr-FR';
+          if (this.frVoice) u.voice = this.frVoice;
+          u.rate = 0.9;
+          u.onend = u.onerror = done;
+          speechSynthesis.speak(u);
+        } catch (e) { done(); }
+      });
     },
     read(id) { try { return localStorage.getItem('lf-lesson-' + id) === '1'; } catch (e) { return false; } },
     // Group lessons by level + module, preserving file order.
@@ -116,23 +172,42 @@ document.addEventListener('alpine:init', () => {
   <div class="max-w-2xl">
     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-5">📚 Free · self-paced · practise each one with your AI tutor</span>
     <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">Lessons</h1>
-    <p class="mt-4 text-lg text-slate-600">Short, practical lessons that build from your first « bonjour » toward DELF&nbsp;B2. Each one gives you the words, one grammar point, examples, things to practise — and a one-click tutor to try it out loud.</p>
+    <p class="mt-4 text-lg text-slate-600">Short, practical lessons that build from your first « bonjour » toward DELF&nbsp;B2. Each one gives you the words, one grammar point, examples, things to practise, and a one-click tutor to try it out loud.</p>
+    <p class="mt-3 text-slate-500">We're learning French in Paris ourselves, working toward the B2 for citizenship. These are the exact lessons we use.</p>
   </div>
 
-  <!-- overall progress -->
-  <div x-show="!loading && !error" x-cloak class="mt-8 flex items-center gap-3 text-sm text-slate-600">
-    <div class="h-2 w-40 rounded-full bg-slate-100 overflow-hidden">
-      <div class="h-full bg-blue-600 transition-all duration-500" :style="`width:${total ? (totalDone/total*100) : 0}%`"></div>
+  <!-- taste: hear your first French word, no commitment -->
+  <div class="mt-6 flex flex-wrap items-center gap-2">
+    <span class="text-sm font-medium text-slate-500 mr-1">Try it right now:</span>
+    <template x-for="w in tasteWords" :key="w">
+      <button type="button" @click="playTaste(w, w)"
+              :class="speaking === w ? 'border-blue-400 bg-blue-50 text-blue-700' : 'border-slate-200 text-slate-700 hover:border-blue-300 hover:text-blue-700'"
+              class="inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-medium transition-all">
+        <span aria-hidden="true">🔊</span> « <span x-text="w"></span> »
+      </button>
+    </template>
+    <span x-show="tastePlayed" x-cloak class="ml-1 text-sm font-medium text-green-600">✓ You just spoke your first French.</span>
+  </div>
+
+  <!-- overall progress + streak -->
+  <div x-show="!loading && !error" x-cloak class="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-600">
+    <div x-show="totalDone > 0" class="flex items-center gap-3">
+      <div class="h-2 w-40 rounded-full bg-slate-100 overflow-hidden">
+        <div class="h-full bg-blue-600 transition-all duration-500" :style="`width:${total ? (totalDone/total*100) : 0}%`"></div>
+      </div>
+      <span><strong class="text-slate-900" x-text="totalDone"></strong> / <span x-text="total"></span> lessons done</span>
     </div>
-    <span><strong class="text-slate-900" x-text="totalDone"></strong> / <span x-text="total"></span> lessons done</span>
+    <span x-show="streak > 0" class="inline-flex items-center gap-1.5 rounded-full bg-orange-50 px-3 py-1 font-medium text-orange-700">
+      🔥 <span x-text="streak === 1 ? 'Day 1 — come back tomorrow to keep it going' : streak + '-day streak — keep it going'"></span>
+    </span>
   </div>
 
-  <!-- continue / start here -->
+  <!-- today's lesson / continue -->
   <div x-show="!loading && !error" x-cloak class="mt-6">
     <template x-if="nextUp">
       <a :href="nextUp.href || ('./lesson.html?id=' + nextUp.id)" class="flex items-center justify-between gap-4 rounded-2xl border-2 border-blue-400 bg-blue-50 px-6 py-5 hover:border-blue-600 hover:shadow-sm transition-all">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-wide text-blue-600" x-text="totalDone ? '▶ Continue where you left off' : '▶ Start here'"></p>
+          <p class="text-xs font-semibold uppercase tracking-wide text-blue-600" x-text="(totalDone ? '▶ Continue where you left off' : '▶ Today’s lesson — just one step') + (nextUp.minutes ? ' · ' + nextUp.minutes + ' min' : '')"></p>
           <p class="mt-1 text-lg font-bold text-slate-900"><span class="text-slate-400 font-semibold" x-text="nextUp.level + ' · '"></span><span x-text="nextUp.title"></span></p>
           <p class="mt-0.5 text-sm text-slate-600" x-text="nextUp.goal"></p>
         </div>

@@ -180,6 +180,56 @@
     "tutorPrompt": "Be my French tutor at A1. Speak only simple French, and deliberately use a few phrases I might not know so I have to say « je ne comprends pas » or ask you to repeat. Coach me to stay polite (merci, s'il vous plaît, pardon). After six exchanges, summarise the polite phrases I should memorise."
   },
   {
+    "id": "a1-pronouns-subject-tonic",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Subject & stress pronouns — je, moi, tu, toi, eux",
+    "minutes": 16,
+    "goal": "Tell apart the subject pronouns (je, tu, il…) that drive the verb from the stress pronouns (moi, toi, lui, eux) you use after c'est, after prepositions, and to say « me too ».",
+    "vocab": [
+      { "fr": "je → moi", "phonetic": "zhuh → mwah", "en": "I → me" },
+      { "fr": "tu → toi", "phonetic": "tew → twah", "en": "you → you (informal)" },
+      { "fr": "il → lui", "phonetic": "eel → lwee", "en": "he → him" },
+      { "fr": "elle → elle", "phonetic": "el → el", "en": "she → her (no change)" },
+      { "fr": "nous → nous", "phonetic": "noo → noo", "en": "we → us (no change)" },
+      { "fr": "vous → vous", "phonetic": "voo → voo", "en": "you → you (formal/plural, no change)" },
+      { "fr": "ils → eux", "phonetic": "eel → uh", "en": "they → them (m or mixed)" },
+      { "fr": "elles → elles", "phonetic": "el → el", "en": "they → them (all female)" }
+    ],
+    "grammar": {
+      "point": "Two sets: subject pronouns do the verb, stress pronouns stand alone",
+      "table": {
+        "cols": ["subject (before the verb)", "stress form (stands alone)"],
+        "rows": [
+          { "label": "je", "cells": ["moi"] },
+          { "label": "tu", "cells": ["toi"] },
+          { "label": "il / elle / on", "cells": ["lui / elle"] },
+          { "label": "nous", "cells": ["nous"] },
+          { "label": "vous", "cells": ["vous"] },
+          { "label": "ils / elles", "cells": ["eux / elles"] }
+        ],
+        "highlight": ["moi", "toi", "lui / elle", "eux / elles"],
+        "note": "nous and vous never change. The four to really learn are je → moi, tu → toi, il → lui, ils → eux."
+      },
+      "explain": "French has two pronoun sets. The subject pronoun sits right before the verb and makes it happen: « je mange », « tu travailles », « il vient ». The stress (tonic) pronoun stands on its own — you use it after c'est (« C'est moi »), after a preposition (« avec toi », « chez eux », « à moi »), when there is no verb (« — Qui veut du café ? — Moi ! »), and for emphasis or « me too » (« Moi, je préfère le thé »). nous and vous look the same in both jobs; the ones to memorise are je→moi, tu→toi, il→lui, ils→eux."
+    },
+    "examples": [
+      "Je mange une pomme, et toi ? (zhuh… ay twah)",
+      "— Qui veut du chocolat ? — Moi ! (mwah)",
+      "C'est lui, le professeur. (say LWEE)",
+      "On dîne chez eux ce soir. (shay UH)",
+      "Elle vient avec nous samedi. (a-vek NOO)",
+      "Moi, je préfère le thé ; lui, il aime le café. (mwah… lwee)"
+    ],
+    "practice": [
+      "Answer with a stress pronoun: « Qui parle français ? — ___ ! » (you).",
+      "Fill the stress form: « C'est ___ » (he), « avec ___ » (them, m), « chez ___ » (you, informal).",
+      "Add emphasis: « ___, je travaille à Paris » (as for me).",
+      "Subject or stress? « ___ manges » vs « C'est ___ » — for tu."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for the two pronoun sets: subject (je, tu, il, elle, on, nous, vous, ils, elles) and stress/tonic (moi, toi, lui, elle, nous, vous, eux, elles). Drill when to use each: subject right before a verb; stress after c'est, after prepositions (avec, chez, pour, à), when standing alone to answer « Qui ? », and for emphasis (« Moi, je… »). Give me quick prompts like « Qui veut… ? » and « C'est … » and make me choose the right form, focusing on je→moi, tu→toi, il→lui, ils→eux. Correct me each time and finish with the two-column table."
+  },
+  {
     "id": "a1-articles",
     "level": "A1",
     "module": "Survival basics",
@@ -230,14 +280,16 @@
     "module": "Survival basics",
     "title": "À and de — going, coming & belonging",
     "minutes": 18,
-    "goal": "Say you're going to or coming from a place, and show possession — with the contractions au, du, aux, des.",
+    "goal": "Use à and de for the three jobs they really do — going & coming (place), showing who owns something, and saying what a dish is made of — plus the contractions au, du, aux, des.",
     "vocab": [
-      { "fr": "à Paris / à la maison", "phonetic": "ah pah-REE / ah lah may-ZOHN", "en": "in/to Paris / at home" },
+      { "fr": "à Paris / à la maison", "phonetic": "ah pah-REE / ah lah may-ZOHN", "en": "in/to Paris / at home (place)" },
       { "fr": "au restaurant", "phonetic": "oh res-toh-RAHN", "en": "at/to the restaurant (à + le)" },
       { "fr": "aux toilettes", "phonetic": "oh twah-LET", "en": "to the toilets (à + les)" },
-      { "fr": "du pain / du marché", "phonetic": "dew PAN / dew mar-SHAY", "en": "of/from the bread / the market (de + le)" },
+      { "fr": "du marché", "phonetic": "dew mar-SHAY", "en": "from the market (de + le)" },
       { "fr": "de la boulangerie", "phonetic": "duh lah boo-lahn-zhuh-REE", "en": "from the bakery" },
-      { "fr": "la voiture de mon mari", "phonetic": "lah vwah-TEWR duh mohn ma-REE", "en": "my husband's car" }
+      { "fr": "la voiture de mon mari", "phonetic": "lah vwah-TEWR duh mohn ma-REE", "en": "my husband's car (whose? → de)" },
+      { "fr": "C'est à moi", "phonetic": "say tah MWAH", "en": "it's mine (belonging → à + me)" },
+      { "fr": "un gâteau au chocolat", "phonetic": "uhn gah-TOH oh sho-ko-LAH", "en": "a chocolate cake (one ingredient of several → à + le)" }
     ],
     "grammar": {
       "point": "à + le = au, de + le = du (and the whole table)",
@@ -252,31 +304,32 @@
         "highlight": ["au", "du", "aux", "des"],
         "note": "Only le and les merge — the blue forms. à la / à l' / de la / de l' stay apart. Memory hook: à = going to · de = coming from."
       },
-      "explain": "À means to, at or in a place; de means from or of — and also belonging: « la voiture de Pierre » = Pierre's car (French flips it: the car of Pierre, no apostrophe-s). The one trap is in the table: à and de must merge with le and les, but never with la or l'. And du / de la / des are the same little words you met as the partitive « some »."
+      "explain": "à and de do three everyday jobs. ① Place — à = to/at/in (je vais à Lyon, à la maison), de = from (je viens de Paris). ② Belonging — French flips it: « la voiture de mon mari » = my husband's car (the car OF…, no apostrophe-s); and to answer « À qui ? » you say « C'est à moi » = it's mine. ③ What it's made of — de for a single material (un château de sable — a sandcastle), but au / à la / aux when it's one ingredient among several (un gâteau au chocolat, un yaourt à la vanille, une pizza aux fruits de mer). The one trap, shown in the table: à and de merge with le and les (→ au, du, aux, des) but never with la or l'."
     },
     "examples": [
       "Je vais au travail, puis à la boulangerie. (oh tra-VYE)",
       "Elle revient du bureau à six heures. (dew bew-ROH)",
-      "C'est la maison de mes parents. (duh may pah-RAHN)",
-      "On va aux Champs-Élysées ? (oh shahn-zay-lee-ZAY)",
-      "Le train part de la gare de Lyon. (duh lah GAR)",
-      "Il parle du film et de l'acteur. (dew… duh lak-TUHR)"
+      "C'est la voiture de mon mari. (duh mohn ma-REE)",
+      "— À qui est ce livre ? — C'est à moi. (say tah MWAH)",
+      "Un gâteau au chocolat et un yaourt à la vanille. (oh sho-ko-LAH)",
+      "On va aux Champs-Élysées ? (oh shahn-zay-lee-ZAY)"
     ],
     "practice": [
       "Contract if needed: à + le musée → « … », à + la piscine → « … », à + les magasins → « … ».",
       "Same with de: de + le parc → « … », de + les enfants → « … », de + l'hôtel → « … ».",
-      "Going or coming? « Je vais ___ marché » vs « Je reviens ___ marché ».",
-      "Show possession: the dog of my neighbour → « le chien ___ mon voisin »."
+      "Place — going or coming? « Je vais ___ marché » vs « Je reviens ___ marché ».",
+      "Belonging: « À qui est ce sac ? — C'est ___ moi. », then « C'est le sac ___ ma sœur. »",
+      "What's it made of? a chocolate cake → « un gâteau ___ chocolat », a strawberry yoghurt → « un yaourt ___ fraise »."
     ],
-    "tutorPrompt": "Be my A1 French tutor for the prepositions à and de and their contractions. Drill à + le = au, à + les = aux, de + le = du, de + les = des — and the à la / à l' / de la / de l' forms that don't contract. Give me places and make me say I'm going there (à/au) and coming back (de/du), plus possession with de (la voiture de Pierre). Correct my contractions each time and finish with the contraction table as a quick recap."
+    "tutorPrompt": "Be my A1 French tutor for à and de, and stay strictly within these three uses: (1) place — going to (à/au) and coming from (de/du); (2) belonging — « la voiture de mon mari », « c'est à moi »; (3) what a dish is made of — un gâteau au chocolat, un yaourt à la vanille, une pizza aux fruits de mer. Drill the contractions à+le=au, à+les=aux, de+le=du, de+les=des, and the à la / à l' / de la / de l' forms that don't contract. Do NOT bring in the partitive « some », verbs like parler de, or any other use — keep it to these three. Correct my contractions every time and finish with the contraction table as a quick recap."
   },
   {
     "id": "a1-03-numbers",
     "level": "A1",
     "module": "Survival basics",
-    "title": "Numbers & saying your age",
-    "minutes": 20,
-    "goal": "Count 0–69, and say or ask someone's age and phone number.",
+    "title": "Numbers 0–1 000 & your age",
+    "minutes": 22,
+    "goal": "Count from zero to a thousand — including the tricky 70, 80 and 90 — and say or ask someone's age and phone number.",
     "vocab": [
       { "fr": "zéro, un, deux, trois, quatre, cinq", "phonetic": "zay-ROH, uhn, duh, trwah, KAT-ruh, sank", "en": "0, 1, 2, 3, 4, 5" },
       { "fr": "six, sept, huit, neuf, dix", "phonetic": "seess, set, weet, nuhf, deess", "en": "6, 7, 8, 9, 10" },
@@ -284,27 +337,45 @@
       { "fr": "seize, dix-sept, dix-huit, dix-neuf", "phonetic": "sez, dee-SET, deez-WEET, deez-NUHF", "en": "16, 17, 18, 19" },
       { "fr": "vingt / trente / quarante", "phonetic": "van / trahnt / ka-RAHNT", "en": "20 / 30 / 40" },
       { "fr": "cinquante / soixante", "phonetic": "san-KAHNT / swah-SAHNT", "en": "50 / 60" },
+      { "fr": "soixante-dix / quatre-vingts / quatre-vingt-dix", "phonetic": "swah-sahnt-DEESS / kat-ruh-VAN / kat-ruh-van-DEESS", "en": "70 (60+10) / 80 (4×20) / 90 (4×20+10)" },
+      { "fr": "cent / mille", "phonetic": "sahn / meel", "en": "100 / 1000 (never 'un mille')" },
       { "fr": "J'ai trente ans", "phonetic": "zhay trahnt AHN", "en": "I'm thirty (years old)" },
       { "fr": "Quel âge avez-vous ?", "phonetic": "kel ahzh a-vay VOO", "en": "How old are you? (formal)" },
       { "fr": "Quel âge as-tu ?", "phonetic": "kel ahzh ah TEW", "en": "How old are you? (informal)" },
       { "fr": "un numéro de téléphone", "phonetic": "uhn new-may-ROH duh tay-lay-FON", "en": "a phone number" }
     ],
     "grammar": {
-      "point": "« Avoir » for age",
-      "table": {"cols": ["subject", "avoir (to have)"], "rows": [{"label": "je", "cells": ["ai → j'ai"]}, {"label": "tu", "cells": ["as"]}, {"label": "il / elle", "cells": ["a"]}, {"label": "nous", "cells": ["avons"]}, {"label": "vous", "cells": ["avez"]}, {"label": "ils / elles", "cells": ["ont"]}], "note": "For age, French HAS years: « j'ai trente ans » = literally 'I have thirty years'. Never drop « ans »."},
-      "explain": "French uses avoir (to have), not être, for age — « j'ai trente ans » literally means 'I have thirty years'. Learn the forms (grid) and never drop the word « ans »."
+      "point": "Big numbers do maths — and age uses « avoir », not « être »",
+      "table": {
+        "cols": ["number", "built from", "French"],
+        "rows": [
+          { "label": "70", "cells": ["60 + 10", "soixante-dix"] },
+          { "label": "71", "cells": ["60 + 11", "soixante et onze"] },
+          { "label": "80", "cells": ["4 × 20", "quatre-vingts"] },
+          { "label": "90", "cells": ["4 × 20 + 10", "quatre-vingt-dix"] },
+          { "label": "91", "cells": ["4 × 20 + 11", "quatre-vingt-onze"] },
+          { "label": "100", "cells": ["—", "cent"] }
+        ],
+        "highlight": ["soixante-dix", "quatre-vingts", "quatre-vingt-dix"],
+        "note": "No new words for 70/80/90 — you reuse dix, onze… and vingt. 71–79 count the teens onto soixante; 91–99 count onto quatre-vingt."
+      },
+      "explain": "Two things to nail here. ① Big numbers: from 70, French stops inventing words and does arithmetic — 70 = soixante-dix (60+10), 80 = quatre-vingts (4×20), 90 = quatre-vingt-dix (4×20+10). The -s on quatre-vingts drops the moment another number follows (quatre-vingt-un). Then cent (100), deux cents, and mille (1 000) — never « un mille ». ② Age: French HAS years — « j'ai trente ans » literally means 'I have thirty years' — so you use avoir (j'ai, tu as, il a, nous avons, vous avez, ils ont), and you never drop « ans »."
     },
     "examples": [
       "— Quel âge as-tu ? — J'ai vingt-cinq ans.",
-      "— Ton numéro ? — Zéro six, douze, trente-quatre…"
+      "Ma grand-mère a quatre-vingt-douze ans. (kat-ruh-van-DOOZ)",
+      "Ça fait quatre-vingts euros. (kat-ruh-VAN)",
+      "Le livre coûte cent cinquante euros. (sahn san-KAHNT)",
+      "— Ton numéro ? — Zéro six, douze, trente-quatre… (zay-ro seess…)"
     ],
     "practice": [
-      "Say your age, then ask someone else theirs.",
-      "Count out loud from 0 to 20.",
-      "Drill the sound-alike traps: treize / trente, quatorze / quarante, quinze / cinquante, seize / soixante.",
+      "Count out loud 0→20, then the tens: 30, 40… all the way to 100.",
+      "The 70/80/90 trick: 71 = 60 + ? , 91 = 80 + ? , 80 = ? × 20.",
+      "Sound-alike traps: treize / trente, quatorze / quarante, quinze / cinquante, seize / soixante.",
+      "Say your age, then ask someone else theirs (tu and vous).",
       "Read your phone number in French, in pairs of digits."
     ],
-    "tutorPrompt": "A1 French tutor. Drill numbers 0–69 and age with me. Ask my age, give me small numbers to say in French, and ask me to read a couple of phone numbers. Correct me each time and keep it light. End with five numbers I should practise that I got wrong."
+    "tutorPrompt": "A1 French tutor. Drill numbers 0–1000 and age with me. Cover the tricky ones — soixante-dix (70), quatre-vingts (80) and its disappearing -s, quatre-vingt-dix (90) and 91–99, then cent and mille. Ask my age (tu and vous), give me numbers and prices to say in French, and have me read a couple of phone numbers. Correct me each time and keep it light. End with five numbers I should practise that I got wrong."
   },
   {
     "id": "a1-questions",
@@ -411,6 +482,57 @@
       "Say something is too expensive, then say you'll pay by card."
     ],
     "tutorPrompt": "Role-play at A1: you're a market vendor in France and I'm shopping for fruit and bread. Tell me prices (in euros and cents), ask « et avec ceci ? », and total it up. Stay in French and help me with the numbers. At the end, quiz me on five of the prices you said."
+  },
+  {
+    "id": "a1-food-aliments",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Food & drink — les aliments",
+    "minutes": 18,
+    "goal": "Name everyday food and drink — fruit, veg, meat, dairy and drinks — so you can shop, order and read a menu.",
+    "vocab": [
+      { "fr": "une tomate / une carotte", "phonetic": "ewn toh-MAT / ewn ka-ROT", "en": "a tomato / a carrot (des légumes)" },
+      { "fr": "une pomme de terre / un oignon", "phonetic": "ewn pom duh TAIR / uhn oh-NYOHN", "en": "a potato / an onion" },
+      { "fr": "une pomme / une banane", "phonetic": "ewn POM / ewn ba-NAN", "en": "an apple / a banana (des fruits)" },
+      { "fr": "une orange / une fraise", "phonetic": "ewn oh-RAHNZH / ewn FREZ", "en": "an orange / a strawberry" },
+      { "fr": "le poulet / le bœuf", "phonetic": "luh poo-LEH / luh BUHF", "en": "chicken / beef (la viande)" },
+      { "fr": "le poisson / un œuf", "phonetic": "luh pwah-SOHN / uhn UHF", "en": "fish / an egg" },
+      { "fr": "le pain / le riz", "phonetic": "luh PAN / luh REE", "en": "bread / rice" },
+      { "fr": "le fromage / le beurre", "phonetic": "luh fro-MAZH / luh BUHR", "en": "cheese / butter (les produits laitiers)" },
+      { "fr": "le lait", "phonetic": "luh LEH", "en": "milk" },
+      { "fr": "l'eau (f) / le jus", "phonetic": "loh / luh ZHEW", "en": "water / juice (les boissons)" },
+      { "fr": "le vin / la bière", "phonetic": "luh VAN / lah bee-AIR", "en": "wine / beer" },
+      { "fr": "le café / le thé", "phonetic": "luh ka-FAY / luh TAY", "en": "coffee / tea" }
+    ],
+    "grammar": {
+      "point": "Talk about food: j'aime, je voudrais, je ne mange pas de…",
+      "table": {
+        "cols": ["to say…", "frame", "example"],
+        "rows": [
+          { "label": "I like", "cells": ["j'aime + le / la…", "j'aime le fromage"] },
+          { "label": "I'd like", "cells": ["je voudrais + du / de la…", "je voudrais du café"] },
+          { "label": "I don't eat", "cells": ["je ne mange pas de…", "pas de viande"] }
+        ],
+        "highlight": ["j'aime le fromage", "je voudrais du café", "pas de viande"],
+        "note": "After « pas », du / de la / des all shrink to just « de »: « pas de viande », « pas de sucre ». (Full du / de la story is in the Articles lesson.)"
+      },
+      "explain": "Learn each food word with its article — le or la — because you'll need it constantly: « j'aime le chocolat », « je voudrais une baguette ». Three frames get you through any meal: « j'aime… » for what you like in general (with le/la/les), « je voudrais… » to order (with du/de la/des = some), and « je ne mange pas de… » for what you avoid — where du/de la/des all become just de. Meat, fish and cheese are usually uncountable, so you ask for « du poulet », « de la viande », not « un poulet »."
+    },
+    "examples": [
+      "J'aime beaucoup le fromage et le pain. (luh fro-MAZH)",
+      "Je voudrais un café et une eau, s'il vous plaît. (uhn ka-FAY)",
+      "Elle ne mange pas de viande, elle est végétarienne. (pah duh vee-AHND)",
+      "Au marché, j'achète des tomates et des fraises. (day toh-MAT)",
+      "Le matin, je bois du thé avec du lait. (dew tay… dew LEH)",
+      "Un gâteau au chocolat, c'est mon dessert préféré. (oh sho-ko-LAH)"
+    ],
+    "practice": [
+      "le or la? « ___ tomate », « ___ pain », « ___ fromage », « ___ pomme ».",
+      "Order three things: « Je voudrais ___, ___ et ___. »",
+      "Say two foods you like and one you avoid: « J'aime… mais je ne mange pas de… ».",
+      "Sort into fruits / légumes / boissons: pomme, carotte, jus, banane, eau."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for food and drink vocabulary (les aliments): fruits, légumes, viandes, produits laitiers and boissons. Quiz me on the words with their article (le/la/un/une), then make me use three frames — « j'aime le/la… », « je voudrais du/de la… » to order, and « je ne mange pas de… ». Play the waiter or the market seller for a short back-and-forth. Correct my gender and my du/de la/de each time, and finish with a few words I should keep practising."
   },
   {
     "id": "a1-06-directions",

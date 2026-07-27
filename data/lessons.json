@@ -617,7 +617,7 @@
     "goal": "Stop someone politely, ask the way in four different ways, and actually follow the instructions you get back — tournez, prenez, traversez, faites demi-tour.",
     "figures": [
       {
-        "src": "./assets/img/directions.svg",
+        "src": "./assets/img/directions.svg?v=2",
         "alt": "Eight arrow diagrams: allez tout droit, tournez à droite, tournez à gauche, faites demi-tour, passez devant, traversez, prenez la deuxième à droite, prenez la deuxième à gauche",
         "caption": "The eight instructions you'll actually hear. The pale grey stub is the turning you let go past."
       }
@@ -681,7 +681,7 @@
     "goal": "Build any ordinal from premier to vingtième, and say which floor you live on — without landing one storey off.",
     "figures": [
       {
-        "src": "./assets/img/etages.svg",
+        "src": "./assets/img/etages.svg?v=1",
         "alt": "A cutaway of a French building labelled sous-sol, rez-de-chaussée, premier étage, deuxième étage, troisième étage and dernier étage, with the matching lift buttons -1, RDC, 1er, 2e, 3e, 4e",
         "caption": "The French ground floor is the rez-de-chaussée, not the first — so « le premier étage » is one flight up."
       }

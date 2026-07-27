@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 500" width="640" height="500" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="The floors of a French building, from the basement up to the top floor, with the button you press in the lift">
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#7c3aed"/></marker>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#2563eb"/></marker>
+    <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#16a34a"/></marker>
+    <marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#ea580c"/></marker>
+    <marker id="a5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#dc2626"/></marker>
+    <marker id="a6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#334155"/></marker>
+  </defs>
+  <style>
+    .name  { font-size: 14px; font-weight: 700; }
+    .trans { font-size: 11.5px; font-style: italic; fill: #64748b; }
+    .badge { font-size: 13px; font-weight: 800; fill: #ffffff; }
+    .win   { fill: #dbeafe; stroke: #94a3b8; stroke-width: 1.5; }
+  </style>
+
+  <rect width="640" height="500" fill="#ffffff"/>
+  <text x="320" y="26" text-anchor="middle" font-size="17" font-weight="800" fill="#0f172a">Les étages d'un immeuble</text>
+
+  <!-- roof -->
+  <path d="M292,80 L324,48 L500,48 L532,80 Z" fill="#475569"/>
+
+  <!-- floor bands, top to bottom -->
+  <g stroke="#94a3b8" stroke-width="1.5">
+    <rect x="292" y="80"  width="240" height="62" fill="#f1f5f9"/>
+    <rect x="292" y="142" width="240" height="62" fill="#f8fafc"/>
+    <rect x="292" y="204" width="240" height="62" fill="#f1f5f9"/>
+    <rect x="292" y="266" width="240" height="62" fill="#f8fafc"/>
+    <rect x="292" y="328" width="240" height="62" fill="#f1f5f9"/>
+    <rect x="292" y="390" width="240" height="62" fill="#e2e8f0"/>
+  </g>
+
+  <!-- windows; the ground floor gets the front door -->
+  <g class="win">
+    <rect x="318" y="96"  width="42" height="30" rx="2"/><rect x="464" y="96"  width="42" height="30" rx="2"/>
+    <rect x="318" y="158" width="42" height="30" rx="2"/><rect x="464" y="158" width="42" height="30" rx="2"/>
+    <rect x="318" y="220" width="42" height="30" rx="2"/><rect x="464" y="220" width="42" height="30" rx="2"/>
+    <rect x="318" y="282" width="42" height="30" rx="2"/><rect x="464" y="282" width="42" height="30" rx="2"/>
+    <rect x="318" y="344" width="42" height="30" rx="2"/><rect x="464" y="344" width="42" height="30" rx="2"/>
+    <rect x="318" y="410" width="42" height="24" rx="2" fill="#cbd5e1"/><rect x="464" y="410" width="42" height="24" rx="2" fill="#cbd5e1"/>
+  </g>
+  <rect x="392" y="336" width="40" height="54" rx="2" fill="#1e3a8a" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- street level -->
+  <path d="M264,390 H556" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+
+  <!-- names, left, with a pointer into the band -->
+  <g text-anchor="end">
+    <g fill="#7c3aed">
+      <text class="name"  x="240" y="106">Le dernier étage</text>
+      <path d="M248,106 H286" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#a1)"/>
+      <text class="trans" x="240" y="123">the top floor — here, the 4e</text>
+    </g>
+    <g fill="#2563eb">
+      <text class="name"  x="240" y="168">Le troisième étage</text>
+      <path d="M248,168 H286" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a2)"/>
+      <text class="trans" x="240" y="185">the third floor</text>
+    </g>
+    <g fill="#16a34a">
+      <text class="name"  x="240" y="230">Le deuxième étage</text>
+      <path d="M248,230 H286" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a3)"/>
+      <text class="trans" x="240" y="247">the second floor</text>
+    </g>
+    <g fill="#ea580c">
+      <text class="name"  x="240" y="292">Le premier étage</text>
+      <path d="M248,292 H286" stroke="#ea580c" stroke-width="2.5" marker-end="url(#a4)"/>
+      <text class="trans" x="240" y="309">the first floor</text>
+    </g>
+    <g fill="#dc2626">
+      <text class="name"  x="240" y="354">Le rez-de-chaussée</text>
+      <path d="M248,354 H286" stroke="#dc2626" stroke-width="2.5" marker-end="url(#a5)"/>
+      <text class="trans" x="240" y="371">the ground floor — not the 1st!</text>
+    </g>
+    <g fill="#334155">
+      <text class="name"  x="240" y="416">Le sous-sol</text>
+      <path d="M248,416 H286" stroke="#334155" stroke-width="2.5" marker-end="url(#a6)"/>
+      <text class="trans" x="240" y="433">the basement</text>
+    </g>
+  </g>
+
+  <!-- the button you press in the lift -->
+  <text x="588" y="70" text-anchor="middle" font-size="10.5" font-weight="700" fill="#94a3b8" letter-spacing="0.5">L'ASCENSEUR</text>
+  <g text-anchor="middle">
+    <rect x="562" y="100" width="52" height="22" rx="11" fill="#7c3aed"/><text class="badge" x="588" y="115">4e</text>
+    <rect x="562" y="162" width="52" height="22" rx="11" fill="#2563eb"/><text class="badge" x="588" y="177">3e</text>
+    <rect x="562" y="224" width="52" height="22" rx="11" fill="#16a34a"/><text class="badge" x="588" y="239">2e</text>
+    <rect x="562" y="286" width="52" height="22" rx="11" fill="#ea580c"/><text class="badge" x="588" y="301">1er</text>
+    <rect x="562" y="348" width="52" height="22" rx="11" fill="#dc2626"/><text class="badge" x="588" y="363">RDC</text>
+    <rect x="562" y="410" width="52" height="22" rx="11" fill="#334155"/><text class="badge" x="588" y="425">-1</text>
+  </g>
+</svg>

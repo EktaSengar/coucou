@@ -349,17 +349,19 @@
       "table": {
         "cols": ["number", "built from", "French"],
         "rows": [
+          { "label": "21", "cells": ["20 + 1", "vingt et un"] },
           { "label": "70", "cells": ["60 + 10", "soixante-dix"] },
           { "label": "71", "cells": ["60 + 11", "soixante et onze"] },
           { "label": "80", "cells": ["4 × 20", "quatre-vingts"] },
+          { "label": "81", "cells": ["4 × 20 + 1", "quatre-vingt-un"] },
           { "label": "90", "cells": ["4 × 20 + 10", "quatre-vingt-dix"] },
           { "label": "91", "cells": ["4 × 20 + 11", "quatre-vingt-onze"] },
           { "label": "100", "cells": ["—", "cent"] }
         ],
-        "highlight": ["soixante-dix", "quatre-vingts", "quatre-vingt-dix"],
-        "note": "No new words for 70/80/90 — you reuse dix, onze… and vingt. 71–79 count the teens onto soixante; 91–99 count onto quatre-vingt."
+        "highlight": ["vingt et un", "soixante et onze", "quatre-vingt-un", "quatre-vingt-onze"],
+        "note": "No new words for 70/80/90 — you reuse dix, onze… and vingt. The « et » rule: 21, 31, 41, 51, 61 and 71 take et — but 81 and 91 never do."
       },
-      "explain": "Two things to nail here. ① Big numbers: from 70, French stops inventing words and does arithmetic — 70 = soixante-dix (60+10), 80 = quatre-vingts (4×20), 90 = quatre-vingt-dix (4×20+10). The -s on quatre-vingts drops the moment another number follows (quatre-vingt-un). Then cent (100), deux cents, and mille (1 000) — never « un mille ». ② Age: French HAS years — « j'ai trente ans » literally means 'I have thirty years' — so you use avoir (j'ai, tu as, il a, nous avons, vous avez, ils ont), and you never drop « ans »."
+      "explain": "Three things to nail here. ① Big numbers: from 70, French stops inventing words and does arithmetic — 70 = soixante-dix (60+10), 80 = quatre-vingts (4×20), 90 = quatre-vingt-dix (4×20+10). The -s on quatre-vingts drops the moment another number follows (quatre-vingt-un). Then cent (100), deux cents, and mille (1 000) — never « un mille ». ② The « et »: the tens ending in 1 slip an et in — vingt et un, trente et un, quarante et un, cinquante et un, soixante et un, and soixante et onze for 71. But the quatre-vingt family never does: it's quatre-vingt-un and quatre-vingt-onze, hyphens only. ③ Age: French HAS years — « j'ai trente ans » literally means 'I have thirty years' — so you use avoir (j'ai, tu as, il a, nous avons, vous avez, ils ont), and you never drop « ans »."
     },
     "examples": [
       "— Quel âge as-tu ? — J'ai vingt-cinq ans.",
@@ -371,6 +373,7 @@
     "practice": [
       "Count out loud 0→20, then the tens: 30, 40… all the way to 100.",
       "The 70/80/90 trick: 71 = 60 + ? , 91 = 80 + ? , 80 = ? × 20.",
+      "« et » or not? 21, 31, 61, 71, 81, 91 — say each one and check which take et.",
       "Sound-alike traps: treize / trente, quatorze / quarante, quinze / cinquante, seize / soixante.",
       "Say your age, then ask someone else theirs (tu and vous).",
       "Read your phone number in French, in pairs of digits."
@@ -535,37 +538,206 @@
     "tutorPrompt": "Be my A1 French tutor for food and drink vocabulary (les aliments): fruits, légumes, viandes, produits laitiers and boissons. Quiz me on the words with their article (le/la/un/une), then make me use three frames — « j'aime le/la… », « je voudrais du/de la… » to order, and « je ne mange pas de… ». Play the waiter or the market seller for a short back-and-forth. Correct my gender and my du/de la/de each time, and finish with a few words I should keep practising."
   },
   {
+    "id": "a1-lieux-ville",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Around town — places & city words",
+    "minutes": 20,
+    "goal": "Name the places you actually need in a French town, plus the street words in between — so you can say where you're going and understand where you're being sent.",
+    "vocab": [
+      { "fr": "le centre-ville", "phonetic": "luh sahn-truh-VEEL", "en": "the town centre", "emoji": "🌆" },
+      { "fr": "le quartier", "phonetic": "luh kar-tee-AY", "en": "the neighbourhood", "emoji": "🏘️" },
+      { "fr": "l'arrondissement", "phonetic": "lah-rohn-deess-MAHN", "en": "the district (Paris has 20 of them)", "emoji": "🗺️" },
+      { "fr": "la banlieue", "phonetic": "lah bahn-lee-UH", "en": "the suburbs", "emoji": "🏡" },
+      { "fr": "le bâtiment", "phonetic": "luh bah-tee-MAHN", "en": "the building", "emoji": "🏢" },
+      { "fr": "le gratte-ciel", "phonetic": "luh grat-see-EL", "en": "the skyscraper (literally « scrape-sky »)", "emoji": "🏙️" },
+      { "fr": "la rue / le boulevard / l'avenue", "phonetic": "lah REW / luh bool-VAR / lah-vuh-NEW", "en": "the street / boulevard / avenue (small → big)", "emoji": "🛣️" },
+      { "fr": "le trottoir", "phonetic": "luh tro-TWAHR", "en": "the pavement / sidewalk", "emoji": "🚶" },
+      { "fr": "le passage clouté", "phonetic": "luh pa-SAHZH kloo-TAY", "en": "the zebra crossing", "emoji": "🦓" },
+      { "fr": "la piste cyclable", "phonetic": "lah peest see-KLAH-bluh", "en": "the cycle lane", "emoji": "🚲" },
+      { "fr": "le rond-point", "phonetic": "luh rohn-PWAN", "en": "the roundabout", "emoji": "🔄" },
+      { "fr": "le pont", "phonetic": "luh pohn", "en": "the bridge", "emoji": "🌉" },
+      { "fr": "l'arrêt de bus", "phonetic": "lah-REH duh BEWSS", "en": "the bus stop", "emoji": "🚏" },
+      { "fr": "une gare", "phonetic": "ewn GAR", "en": "a train station", "emoji": "🚉" },
+      { "fr": "une station de métro", "phonetic": "ewn sta-see-OHN duh may-TROH", "en": "a métro station", "emoji": "🚇" },
+      { "fr": "un aéroport", "phonetic": "uhn ah-ay-ro-POR", "en": "an airport", "emoji": "✈️" },
+      { "fr": "la poste", "phonetic": "lah POST", "en": "the post office", "emoji": "📮" },
+      { "fr": "un poste de police", "phonetic": "uhn post duh po-LEESS", "en": "a police station", "emoji": "👮" },
+      { "fr": "une caserne de pompiers", "phonetic": "ewn ka-ZERN duh pohn-pee-AY", "en": "a fire station", "emoji": "🚒" },
+      { "fr": "un hôpital", "phonetic": "uhn oh-pee-TAL", "en": "a hospital", "emoji": "🏥" },
+      { "fr": "une école", "phonetic": "ewn ay-KOL", "en": "a school", "emoji": "🏫" },
+      { "fr": "une bibliothèque", "phonetic": "ewn bee-blee-o-TEK", "en": "a library", "emoji": "📚" },
+      { "fr": "un musée", "phonetic": "uhn mew-ZAY", "en": "a museum", "emoji": "🖼️" },
+      { "fr": "un cinéma", "phonetic": "uhn see-nay-MAH", "en": "a cinema", "emoji": "🎬" },
+      { "fr": "une discothèque", "phonetic": "ewn dees-ko-TEK", "en": "a nightclub", "emoji": "🪩" },
+      { "fr": "une piscine", "phonetic": "ewn pee-SEEN", "en": "a swimming pool", "emoji": "🏊" },
+      { "fr": "un hôtel", "phonetic": "uhn oh-TEL", "en": "a hotel", "emoji": "🏨" },
+      { "fr": "l'hôtel de ville / la mairie", "phonetic": "loh-tel duh VEEL / lah may-REE", "en": "the city hall / the town hall", "emoji": "🏛️" }
+    ],
+    "grammar": {
+      "point": "Same-looking words, different places — the traps to watch",
+      "table": {
+        "cols": ["you say", "and it means"],
+        "rows": [
+          { "label": "un hôtel", "cells": ["a hotel — where you sleep"] },
+          { "label": "l'hôtel de ville", "cells": ["the town hall (= la mairie)"] },
+          { "label": "la poste", "cells": ["the post office"] },
+          { "label": "un poste de police", "cells": ["a police station"] },
+          { "label": "une gare", "cells": ["a station for trains"] },
+          { "label": "une station", "cells": ["a stop for the métro"] }
+        ],
+        "highlight": ["the town hall (= la mairie)", "a police station", "a stop for the métro"],
+        "note": "la poste (feminine) delivers your letters; le poste (masculine) is a post or station. Trains leave from une gare — never « une station de train »."
+      },
+      "explain": "Four traps live in this vocabulary. ① « hôtel » on its own is a hotel, but « l'hôtel de ville » is the town hall — the everyday word for it is la mairie, and it's where you'll go for paperwork. ② la poste is the post office; le poste de police is the police station — the article tells you which. ③ Trains use une gare, the métro uses une station, and buses use un arrêt. ④ Paris, Lyon and Marseille are divided into arrondissements, and locals name them with ordinals: « j'habite dans le 11e » (le onzième). Everything else here is just vocabulary — learn each word with its le or la attached, because that's what you'll need the moment you say « je vais au musée » or « je vais à la piscine »."
+    },
+    "examples": [
+      "Le musée est en face de la gare. (ahn FAHSS)",
+      "J'habite dans le 11e arrondissement. (dahn luh onz-YEM)",
+      "Il y a une piste cyclable sur le boulevard. (sewr luh bool-VAR)",
+      "Traversez au passage clouté, c'est plus sûr. (oh pa-SAHZH kloo-TAY)",
+      "Ma sœur habite en banlieue, pas dans le centre-ville. (ahn bahn-lee-UH)",
+      "— Pardon, il y a une pharmacie dans le quartier ? — Oui, à côté de la poste."
+    ],
+    "practice": [
+      "Name five places in your own quartier, with le or la in front.",
+      "Which one? For a stamp → ___ . For a passport → ___ . For a train → ___ .",
+      "le or la? « ___ pont », « ___ mairie », « ___ trottoir », « ___ piscine », « ___ gare ».",
+      "Say where you live: « J'habite dans le… / en banlieue / dans le centre-ville. »",
+      "Describe the walk from your flat to the nearest métro, naming three things you pass."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for town and city vocabulary. Drill these two sets with me: the street words (le centre-ville, le quartier, l'arrondissement, la banlieue, le bâtiment, le gratte-ciel, la rue, le boulevard, l'avenue, le trottoir, le passage clouté, la piste cyclable, le rond-point, le pont, l'arrêt de bus) and the places (une gare, une station de métro, un aéroport, la poste, un poste de police, une caserne de pompiers, un hôpital, une école, une bibliothèque, un musée, un cinéma, une discothèque, une piscine, un hôtel, l'hôtel de ville / la mairie). Always make me give the word with its article. Test me on the four traps: hôtel vs hôtel de ville, la poste vs le poste de police, gare vs station, and arrondissement. Then ask me questions like « Où est-ce qu'on achète des timbres ? » so I answer with a place. Correct my gender each time and end with the words I keep getting wrong."
+  },
+  {
     "id": "a1-06-directions",
     "level": "A1",
     "module": "Survival basics",
-    "title": "Asking for directions",
-    "minutes": 20,
-    "goal": "Ask where something is and understand simple directions.",
+    "title": "Asking for directions — and understanding the answer",
+    "minutes": 22,
+    "goal": "Stop someone politely, ask the way in four different ways, and actually follow the instructions you get back — tournez, prenez, traversez, faites demi-tour.",
+    "figures": [
+      {
+        "src": "./assets/img/directions.svg",
+        "alt": "Eight arrow diagrams: allez tout droit, tournez à droite, tournez à gauche, faites demi-tour, passez devant, traversez, prenez la deuxième à droite, prenez la deuxième à gauche",
+        "caption": "The eight instructions you'll actually hear. The pale grey stub is the turning you let go past."
+      }
+    ],
     "vocab": [
-      { "fr": "Où est… ?", "phonetic": "oo EH", "en": "Where is…?" },
-      { "fr": "Où sont les toilettes ?", "phonetic": "oo sohn lay twah-LET", "en": "Where are the toilets?" },
-      { "fr": "Pardon, je cherche…", "phonetic": "par-DOHN, zhuh SHERSH", "en": "Excuse me, I'm looking for…" },
-      { "fr": "la gare / la rue", "phonetic": "lah GAR / lah REW", "en": "the station / the street" },
-      { "fr": "à droite / à gauche", "phonetic": "ah DRWAHT / ah GOHSH", "en": "on the right / on the left" },
-      { "fr": "tout droit", "phonetic": "too DRWAH", "en": "straight ahead" },
-      { "fr": "à côté de / en face de", "phonetic": "ah koh-TAY duh / ahn FAHSS duh", "en": "next to / opposite" },
-      { "fr": "loin / près", "phonetic": "lwan / preh", "en": "far / near" },
-      { "fr": "C'est loin ?", "phonetic": "seh LWAN", "en": "Is it far?" }
+      { "fr": "Excusez-moi. Pouvez-vous m'aider ?", "phonetic": "eks-kew-zay-MWAH. poo-vay-voo may-DAY", "en": "Excuse me. Can you help me?", "emoji": "🙋" },
+      { "fr": "Je cherche la poste.", "phonetic": "zhuh SHERSH lah POST", "en": "I'm looking for the post office.", "emoji": "🔎" },
+      { "fr": "J'aimerais aller à la piscine.", "phonetic": "zhem-REH a-LAY ah lah pee-SEEN", "en": "I'd like to go to the swimming pool.", "emoji": "🎯" },
+      { "fr": "Comment aller à la poste ?", "phonetic": "ko-MAHN a-LAY ah lah POST", "en": "How do I get to the post office?", "emoji": "❓" },
+      { "fr": "Comment je fais pour aller à la gare ?", "phonetic": "ko-MAHN zhuh FEH poor a-LAY ah lah GAR", "en": "How do I go about getting to the station?", "emoji": "❓" },
+      { "fr": "Où est… ? / Où sont… ?", "phonetic": "oo EH / oo SOHN", "en": "Where is…? / Where are…?", "emoji": "📍" },
+      { "fr": "C'est loin ? / C'est près ?", "phonetic": "seh LWAN / seh PREH", "en": "Is it far? / Is it near?", "emoji": "📏" },
+      { "fr": "Allez tout droit.", "phonetic": "a-LAY too DRWAH", "en": "Go straight ahead.", "emoji": "⬆️" },
+      { "fr": "Tournez à droite / à gauche.", "phonetic": "toor-NAY ah DRWAHT / ah GOHSH", "en": "Turn right / left.", "emoji": "↪️" },
+      { "fr": "Prenez la deuxième à droite.", "phonetic": "pruh-NAY lah duh-zee-EM ah DRWAHT", "en": "Take the second right.", "emoji": "2️⃣" },
+      { "fr": "Faites demi-tour.", "phonetic": "fet duh-mee-TOOR", "en": "Turn around / make a U-turn.", "emoji": "🔃" },
+      { "fr": "Traversez la rue.", "phonetic": "tra-ver-SAY lah REW", "en": "Cross the street.", "emoji": "🚸" },
+      { "fr": "Passez devant l'église.", "phonetic": "pa-SAY duh-VAHN lay-GLEEZ", "en": "Go past the church.", "emoji": "➡️" },
+      { "fr": "à côté de / en face de", "phonetic": "ah koh-TAY duh / ahn FAHSS duh", "en": "next to / opposite", "emoji": "🧭" },
+      { "fr": "loin / près", "phonetic": "lwan / preh", "en": "far / near", "emoji": "📐" }
     ],
     "grammar": {
-      "point": "« Où est » vs « Où sont »",
-      "explain": "Use Où est le/la… for one thing, Où sont les… for plural. Careful: à droite (on the right) is not the same as tout droit (straight ahead)!"
+      "point": "Directions come as commands — it's just the « vous » form, minus the vous",
+      "table": {
+        "cols": ["verb", "what you hear", "meaning"],
+        "rows": [
+          { "label": "aller", "cells": ["Allez tout droit", "Go straight"] },
+          { "label": "tourner", "cells": ["Tournez à droite", "Turn right"] },
+          { "label": "prendre", "cells": ["Prenez la deuxième", "Take the second"] },
+          { "label": "faire", "cells": ["Faites demi-tour", "Turn around"] },
+          { "label": "traverser", "cells": ["Traversez la rue", "Cross the street"] },
+          { "label": "passer", "cells": ["Passez devant…", "Go past…"] }
+        ],
+        "highlight": ["Allez tout droit", "Tournez à droite", "Prenez la deuxième", "Faites demi-tour"],
+        "note": "Take vous allez, vous tournez, vous prenez, vous faites — drop the « vous » and you have the instruction. Nothing else changes."
+      },
+      "explain": "Two halves to this lesson. ① Asking. Open with « Excusez-moi » or « Pardon », then pick any of these — « Je cherche la poste », « J'aimerais aller à la piscine », « Comment aller à la gare ? », « Comment je fais pour aller à la gare ? ». They all work; the last one is the most casual. Use Où est le/la… for one thing and Où sont les… for plural (Où sont les toilettes ?). ② Understanding. The answer comes back as commands, which in French is simply the vous form with the pronoun dropped: vous tournez → Tournez. Learn the six above as whole chunks and you'll follow almost any answer. One trap worth burning in: à droite means on the right, tout droit means straight ahead — same word « droit », opposite instructions."
     },
     "examples": [
-      "— Pardon, où est la gare, s'il vous plaît ? — Tout droit, puis à gauche. C'est à côté de la poste.",
-      "— C'est loin ? — Non, c'est tout près."
+      "— Excusez-moi, je cherche la gare. — Allez tout droit, puis prenez la deuxième à gauche.",
+      "— Comment je fais pour aller à la piscine ? — Traversez le pont et c'est en face de la mairie.",
+      "— C'est loin ? — Non, c'est tout près, à cinq minutes à pied. (ah SANK mee-NEWT ah pee-AY)",
+      "Vous êtes allé trop loin — faites demi-tour. (fet duh-mee-TOOR)",
+      "Passez devant la boulangerie, l'arrêt de bus est juste après. (zhewst a-PREH)"
     ],
     "practice": [
-      "Ask where the station is, politely.",
-      "Ask where the toilets are and whether it's far.",
-      "Give simple directions to someone: straight ahead, then right."
+      "Stop a stranger and ask for the post office — three different ways.",
+      "à droite or tout droit? Say which one means « straight ahead ».",
+      "Turn these into instructions: vous tournez → ___ , vous prenez → ___ , vous faites → ___ .",
+      "Give someone directions from your front door to the nearest métro, using at least four of the commands.",
+      "Someone has walked past it. Tell them to turn around and take the second on the right."
     ],
-    "tutorPrompt": "A1 French role-play: I'm a tourist lost in a French town and you're a friendly local. I'll ask for directions (la gare, les toilettes, un restaurant) and you answer with simple directions (à droite, à gauche, tout droit, en face de). Keep it slow and simple. At the end, recap the direction words I should remember."
+    "tutorPrompt": "A1 French role-play: I'm lost in a French town and you're a friendly local. First make me ask properly — I should practise « Excusez-moi, pouvez-vous m'aider ? », « Je cherche… », « J'aimerais aller à… », « Comment aller à… ? » and « Comment je fais pour aller à… ? », plus « C'est loin ? / C'est près ? ». Then answer me with real instructions built from allez tout droit, tournez à droite/à gauche, prenez la première/deuxième à droite, faites demi-tour, traversez, passez devant, à côté de, en face de. Keep it slow and short. Then swap roles and make me give you the directions. Correct me each time, and watch for me confusing à droite with tout droit. Finish with a recap of the command forms."
+  },
+  {
+    "id": "a1-ordinaux-etages",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Ordinal numbers & the floors of a building",
+    "minutes": 18,
+    "goal": "Build any ordinal from premier to vingtième, and say which floor you live on — without landing one storey off.",
+    "figures": [
+      {
+        "src": "./assets/img/etages.svg",
+        "alt": "A cutaway of a French building labelled sous-sol, rez-de-chaussée, premier étage, deuxième étage, troisième étage and dernier étage, with the matching lift buttons -1, RDC, 1er, 2e, 3e, 4e",
+        "caption": "The French ground floor is the rez-de-chaussée, not the first — so « le premier étage » is one flight up."
+      }
+    ],
+    "vocab": [
+      { "fr": "premier / première", "phonetic": "pruh-mee-AY / pruh-mee-EHR", "en": "first (the only irregular one)", "emoji": "1️⃣" },
+      { "fr": "deuxième", "phonetic": "duh-zee-EM", "en": "second", "emoji": "2️⃣" },
+      { "fr": "troisième", "phonetic": "trwah-zee-EM", "en": "third", "emoji": "3️⃣" },
+      { "fr": "quatrième", "phonetic": "ka-tree-EM", "en": "fourth", "emoji": "4️⃣" },
+      { "fr": "cinquième", "phonetic": "san-kee-EM", "en": "fifth (cinq gains a u)", "emoji": "5️⃣" },
+      { "fr": "neuvième", "phonetic": "nuh-vee-EM", "en": "ninth (neuf swaps f for v)", "emoji": "9️⃣" },
+      { "fr": "onzième", "phonetic": "onz-YEM", "en": "eleventh", "emoji": "🔢" },
+      { "fr": "vingtième", "phonetic": "van-tee-EM", "en": "twentieth", "emoji": "🔢" },
+      { "fr": "dernier / dernière", "phonetic": "der-nee-AY / der-nee-EHR", "en": "last", "emoji": "🔚" },
+      { "fr": "un immeuble", "phonetic": "uhn ee-MUH-bluh", "en": "an apartment block", "emoji": "🏢" },
+      { "fr": "un étage", "phonetic": "uhn ay-TAHZH", "en": "a floor / storey", "emoji": "🪟" },
+      { "fr": "le rez-de-chaussée (RDC)", "phonetic": "luh ray-duh-shoh-SAY", "en": "the ground floor", "emoji": "🚪" },
+      { "fr": "le sous-sol", "phonetic": "luh soo-SOL", "en": "the basement", "emoji": "⬇️" },
+      { "fr": "l'ascenseur", "phonetic": "la-sahn-SUR", "en": "the lift / elevator", "emoji": "🛗" },
+      { "fr": "l'escalier", "phonetic": "les-ka-lee-AY", "en": "the stairs", "emoji": "🪜" }
+    ],
+    "grammar": {
+      "point": "Every ordinal is number + -ième — premier is the one exception",
+      "table": {
+        "cols": ["number", "ordinal", "written short"],
+        "rows": [
+          { "label": "un", "cells": ["premier / première", "1er / 1re"] },
+          { "label": "deux", "cells": ["deuxième", "2e"] },
+          { "label": "trois", "cells": ["troisième", "3e"] },
+          { "label": "quatre", "cells": ["quatrième", "4e"] },
+          { "label": "cinq", "cells": ["cinquième", "5e"] },
+          { "label": "neuf", "cells": ["neuvième", "9e"] },
+          { "label": "onze", "cells": ["onzième", "11e"] },
+          { "label": "vingt", "cells": ["vingtième", "20e"] }
+        ],
+        "highlight": ["premier / première", "cinquième", "neuvième"],
+        "note": "Drop a final -e before adding -ième (quatre → quatrième, onze → onzième). Only three surprises: premier, cinq gains a u, neuf swaps its f for a v."
+      },
+      "explain": "The rule is almost free: take the number and add -ième. quatre → quatrième, onze → onzième (drop the final -e first), vingt → vingtième. Three exceptions and you're done — premier/première is its own word, cinq picks up a u (cinquième) so the sound stays hard, and neuf turns its f into a v (neuvième). Only premier agrees with gender; every -ième form is the same for both. Now the part that catches every English speaker: the floor at street level is le rez-de-chaussée, not le premier. So « le premier étage » is one flight up — the English second floor — and a lift panel reads -1, RDC, 1, 2, 3. Say « J'habite au troisième » (au + ordinal) and drop « étage » if you like; everyone understands. The same ordinals name Paris districts: « dans le 11e » = dans le onzième."
+    },
+    "examples": [
+      "J'habite au quatrième étage. (oh ka-tree-EM ay-TAHZH)",
+      "L'ascenseur est en panne — prenez l'escalier. (ahn PAN)",
+      "C'est au rez-de-chaussée, à droite. (oh ray-duh-shoh-SAY)",
+      "Les caves sont au sous-sol. (oh soo-SOL)",
+      "C'est la première fois que je viens ici. (lah pruh-mee-EHR FWAH)",
+      "Il habite dans le 11e, près de République. (dahn luh onz-YEM)"
+    ],
+    "practice": [
+      "Build the ordinal: deux → ___ , quatre → ___ , cinq → ___ , neuf → ___ , onze → ___ .",
+      "Which floor? You're on the English 3rd floor — in French you say « au ___ étage ».",
+      "Read the lift panel out loud, bottom to top: -1, RDC, 1er, 2e, 3e, 4e.",
+      "premier or première? « C'est la ___ fois » · « le ___ étage ».",
+      "Say which floor you live on, and which arrondissement or quartier you're in."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for ordinal numbers and the floors of a building. Drill the rule (number + -ième) and the three exceptions: premier/première, cinquième (cinq + u), neuvième (neuf → neuv-). Give me numbers to turn into ordinals, including quatre, onze and vingt where the final -e drops. Then work the floors: le sous-sol, le rez-de-chaussée, le premier étage, le deuxième, le dernier étage — and check I understand that the French premier étage is the English second floor. Ask me « Vous habitez à quel étage ? » and make me answer with « au + ordinal ». Finish with Paris arrondissements (dans le 11e, dans le 16e). Correct my pronunciation of -ième each time."
   },
   {
     "id": "a1-07-time-days",

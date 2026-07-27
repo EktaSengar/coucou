@@ -1,6 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 620" width="640" height="620" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="The eight direction phrases, each with an arrow diagram">
   <defs>
-    <marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="2.2" markerHeight="2.2" orient="auto-start-reverse">
+    <!-- refX=0 puts the head's base exactly on the path's end, so the flat
+         stroke end mates with it instead of poking through the tip. -->
+    <marker id="ah" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="2.2" markerHeight="2.2" orient="auto">
       <path d="M0,0 L10,5 L0,10 Z" fill="#2563eb"/>
     </marker>
   </defs>
@@ -15,41 +17,47 @@
 
   <!-- row 1 -->
   <g transform="translate(0,10)">
-    <g transform="translate(124,10)"><path class="arrow" d="M36,64 L36,10"/></g>
+    <g transform="translate(124,10)"><path class="arrow" d="M36,64 L36,28"/></g>
     <text class="fr" x="160" y="104" text-anchor="middle">Allez tout droit</text>
     <text class="en" x="160" y="122" text-anchor="middle">Go straight</text>
   </g>
   <g transform="translate(320,10)">
-    <g transform="translate(124,10)"><path class="arrow" d="M18,64 L18,24 L58,24"/></g>
+    <g transform="translate(124,10)"><path class="arrow" d="M18,64 L18,24 L40,24"/></g>
     <text class="fr" x="160" y="104" text-anchor="middle">Tournez à droite</text>
     <text class="en" x="160" y="122" text-anchor="middle">Turn right</text>
   </g>
 
   <!-- row 2 -->
   <g transform="translate(0,160)">
-    <g transform="translate(124,10)"><path class="arrow" d="M54,64 L54,24 L14,24"/></g>
+    <g transform="translate(124,10)"><path class="arrow" d="M54,64 L54,24 L32,24"/></g>
     <text class="fr" x="160" y="104" text-anchor="middle">Tournez à gauche</text>
     <text class="en" x="160" y="122" text-anchor="middle">Turn left</text>
   </g>
   <g transform="translate(320,160)">
-    <g transform="translate(124,10)"><path class="arrow" d="M20,64 L20,34 A16,16 0 0 1 52,34 L52,58"/></g>
+    <g transform="translate(124,10)"><path class="arrow" d="M20,64 L20,36 A16,16 0 0 1 52,36 L52,42"/></g>
     <text class="fr" x="160" y="104" text-anchor="middle">Faites demi-tour</text>
     <text class="en" x="160" y="122" text-anchor="middle">Turn around / make a U-turn</text>
   </g>
 
-  <!-- row 3 -->
+  <!-- row 3 — a landmark to walk past, and a crossing to walk over -->
   <g transform="translate(0,310)">
     <g transform="translate(124,10)">
-      <rect x="10" y="30" width="13" height="13" rx="2" fill="#dc2626"/>
-      <path class="arrow" d="M42,64 L42,10"/>
+      <path d="M6,36 L20,25 L34,36 Z" fill="#dc2626"/>
+      <rect x="9" y="36" width="22" height="22" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+      <rect x="16" y="44" width="8" height="14" fill="#94a3b8"/>
+      <path class="arrow" d="M50,64 L50,26"/>
     </g>
     <text class="fr" x="160" y="104" text-anchor="middle">Passez devant</text>
     <text class="en" x="160" y="122" text-anchor="middle">Go past</text>
   </g>
   <g transform="translate(320,310)">
     <g transform="translate(124,10)">
-      <path d="M6,26 H66 M6,46 H66" stroke="#0f172a" stroke-width="5" stroke-linecap="round"/>
-      <path class="arrow" d="M36,64 L36,8"/>
+      <rect x="2" y="26" width="68" height="26" rx="1" fill="#64748b"/>
+      <g fill="#ffffff">
+        <rect x="7" y="29" width="9" height="20"/><rect x="22" y="29" width="9" height="20"/>
+        <rect x="41" y="29" width="9" height="20"/><rect x="56" y="29" width="9" height="20"/>
+      </g>
+      <path class="arrow" d="M36,66 L36,26"/>
     </g>
     <text class="fr" x="160" y="104" text-anchor="middle">Traversez</text>
     <text class="en" x="160" y="122" text-anchor="middle">Cross</text>
@@ -58,16 +66,16 @@
   <!-- row 4 — the pale stub is the turning you let go past -->
   <g transform="translate(0,460)">
     <g transform="translate(124,10)">
-      <path class="skip" d="M18,48 L44,48"/>
-      <path class="arrow" d="M18,64 L18,22 L58,22"/>
+      <path class="skip" d="M18,46 L36,46"/>
+      <path class="arrow" d="M18,64 L18,22 L40,22"/>
     </g>
     <text class="fr" x="160" y="104" text-anchor="middle">Prenez la deuxième à droite</text>
     <text class="en" x="160" y="122" text-anchor="middle">Take the second right</text>
   </g>
   <g transform="translate(320,460)">
     <g transform="translate(124,10)">
-      <path class="skip" d="M54,48 L28,48"/>
-      <path class="arrow" d="M54,64 L54,22 L14,22"/>
+      <path class="skip" d="M54,46 L36,46"/>
+      <path class="arrow" d="M54,64 L54,22 L32,22"/>
     </g>
     <text class="fr" x="160" y="104" text-anchor="middle">Prenez la deuxième à gauche</text>
     <text class="en" x="160" y="122" text-anchor="middle">Take the second left</text>

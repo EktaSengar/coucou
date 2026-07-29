@@ -1047,8 +1047,8 @@
     "goal": "Look at any infinitive and know which of the three groups it belongs to — so you know whether its endings are predictable or need learning by heart.",
     "figures": [
       {
-        "src": "./assets/img/verbes-groupes.svg?v=1",
-        "alt": "A decision tree: does the infinitive end in -er? If yes and it is not aller, first group. Otherwise, does nous take -issons? If yes, second group. If no, third group.",
+        "src": "./assets/img/verbes-groupes.svg?v=2",
+        "alt": "A decision tree in English: does the infinitive end in -er? If yes and it is not aller, first group. Otherwise, with nous does it end in -issons? If yes, second group. If no, third group.",
         "caption": "Two questions sort every French verb. The « nous » form is the test that matters — the infinitive alone can't tell you."
       }
     ],

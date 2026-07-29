@@ -279,8 +279,8 @@
     "level": "A1",
     "module": "Survival basics",
     "title": "À and de — going, coming & belonging",
-    "minutes": 18,
-    "goal": "Use à and de for the three jobs they really do — going & coming (place), showing who owns something, and saying what a dish is made of — plus the contractions au, du, aux, des.",
+    "minutes": 24,
+    "goal": "Use à and de for the jobs they really do — going & coming (place), showing who owns something, saying what a dish is made of, and naming countries — plus the contractions au, du, aux, des.",
     "vocab": [
       { "fr": "à Paris / à la maison", "phonetic": "ah pah-REE / ah lah may-ZOHN", "en": "in/to Paris / at home (place)" },
       { "fr": "au restaurant", "phonetic": "oh res-toh-RAHN", "en": "at/to the restaurant (à + le)" },
@@ -289,7 +289,13 @@
       { "fr": "de la boulangerie", "phonetic": "duh lah boo-lahn-zhuh-REE", "en": "from the bakery" },
       { "fr": "la voiture de mon mari", "phonetic": "lah vwah-TEWR duh mohn ma-REE", "en": "my husband's car (whose? → de)" },
       { "fr": "C'est à moi", "phonetic": "say tah MWAH", "en": "it's mine (belonging → à + me)" },
-      { "fr": "un gâteau au chocolat", "phonetic": "uhn gah-TOH oh sho-ko-LAH", "en": "a chocolate cake (one ingredient of several → à + le)" }
+      { "fr": "un gâteau au chocolat", "phonetic": "uhn gah-TOH oh sho-ko-LAH", "en": "a chocolate cake (one ingredient of several → à + le)" },
+      { "fr": "Je viens de France", "phonetic": "zhuh vyan duh FRAHNSS", "en": "I'm from France (feminine country → no article, never « de la France »)" },
+      { "fr": "Je viens d'Inde", "phonetic": "zhuh vyan DAND", "en": "I'm from India (feminine + vowel → d')" },
+      { "fr": "Je viens du Canada", "phonetic": "zhuh vyan dew ka-na-DAH", "en": "I'm from Canada (masculine → de + le)" },
+      { "fr": "Je viens des États-Unis", "phonetic": "zhuh vyan day-zay-ta-zew-NEE", "en": "I'm from the US (plural → de + les)" },
+      { "fr": "Je vais en France", "phonetic": "zhuh vay ahn FRAHNSS", "en": "I'm going to France (feminine → en, not à la)" },
+      { "fr": "Je vais au Japon", "phonetic": "zhuh vay oh zha-POHN", "en": "I'm going to Japan (masculine → au)" }
     ],
     "grammar": {
       "point": "à + le = au, de + le = du (and the whole table)",
@@ -304,24 +310,48 @@
         "highlight": ["au", "du", "aux", "des"],
         "note": "Only le and les merge — the blue forms. à la / à l' / de la / de l' stay apart. Memory hook: à = going to · de = coming from."
       },
-      "explain": "à and de do three everyday jobs. ① Place — à = to/at/in (je vais à Lyon, à la maison), de = from (je viens de Paris). ② Belonging — French flips it: « la voiture de mon mari » = my husband's car (the car OF…, no apostrophe-s); and to answer « À qui ? » you say « C'est à moi » = it's mine. ③ What it's made of — de for a single material (un château de sable — a sandcastle), but au / à la / aux when it's one ingredient among several (un gâteau au chocolat, un yaourt à la vanille, une pizza aux fruits de mer). The one trap, shown in the table: à and de merge with le and les (→ au, du, aux, des) but never with la or l'."
+      "table2": {
+        "title": "Countries — to and from",
+        "cols": ["+", "masculine", "feminine", "plural"],
+        "rows": [
+          { "label": "to", "cells": ["au Japon", "en France", "aux États-Unis"] },
+          { "label": "from", "cells": ["du Japon", "de France", "des États-Unis"] }
+        ],
+        "highlight": ["en France", "de France"],
+        "note": "Feminine countries are the odd ones out: en to go, and no article at all to come from — « je viens de France », never « de la France » (d' before a vowel: d'Inde). Masculine and plural are normal: du Japon, des États-Unis."
+      },
+      "explain": "à and de do four jobs. ① Place — à = to/at (je vais à Lyon, à la maison), de = from (je viens de Paris). ② Belonging — la voiture de mon mari = my husband's car; « À qui ? » → « C'est à moi » = it's mine. ③ Made of — un gâteau au chocolat, un yaourt à la vanille, une pizza aux fruits de mer. ④ Countries — the second table; learn it by heart, it isn't something you can work out. The one trap: à and de merge with le and les (→ au, du, aux, des) but never with la or l'."
     },
+    "notes": [
+      { "title": "à or en?", "body": "à for cities and everyday places: à Paris, à la maison, au bureau. en for feminine countries and regions: en France, en Normandie. Never « à la France »." },
+      { "title": "Names never take « the »", "body": "French adds the article to countries (la France, le Japon) where English doesn't. But names behave like English: la voiture de Kartik, le sac de Marie — plain de, no contraction. Compare le vélo du voisin, where voisin is an ordinary noun." },
+      { "title": "Cities vs countries", "body": "Cities have no article, so nothing contracts: à Paris, de Paris. Countries do have one, which is why they contract. The few cities with an article follow the country pattern: Le Havre → au Havre, du Havre." }
+    ],
     "examples": [
       "Je vais au travail, puis à la boulangerie. (oh tra-VYE)",
       "Elle revient du bureau à six heures. (dew bew-ROH)",
       "C'est la voiture de mon mari. (duh mohn ma-REE)",
       "— À qui est ce livre ? — C'est à moi. (say tah MWAH)",
       "Un gâteau au chocolat et un yaourt à la vanille. (oh sho-ko-LAH)",
-      "On va aux Champs-Élysées ? (oh shahn-zay-lee-ZAY)"
+      "On va aux Champs-Élysées ? (oh shahn-zay-lee-ZAY)",
+      "— Vous venez d'où ? — Je viens d'Inde. (zhuh vyan DAND)",
+      "Elle vient de France et lui, du Canada. (duh FRAHNSS / dew ka-na-DAH)",
+      "En août on va en France, puis au Japon. (ahn FRAHNSS / oh zha-POHN)",
+      "Ils reviennent des États-Unis demain. (day-zay-ta-zew-NEE)",
+      "Elle habite à Lyon, mais elle est née au Havre. (oh AVR)",
+      "C'est le sac de Marie, pas le vélo du voisin. (duh ma-REE / dew vwah-ZAN)"
     ],
     "practice": [
       "Contract if needed: à + le musée → « … », à + la piscine → « … », à + les magasins → « … ».",
       "Same with de: de + le parc → « … », de + les enfants → « … », de + l'hôtel → « … ».",
       "Place — going or coming? « Je vais ___ marché » vs « Je reviens ___ marché ».",
       "Belonging: « À qui est ce sac ? — C'est ___ moi. », then « C'est le sac ___ ma sœur. »",
-      "What's it made of? a chocolate cake → « un gâteau ___ chocolat », a strawberry yoghurt → « un yaourt ___ fraise »."
+      "What's it made of? a chocolate cake → « un gâteau ___ chocolat », a strawberry yoghurt → « un yaourt ___ fraise ».",
+      "Countries, coming from: « Je viens ___ France », « ___ Inde », « ___ Canada », « ___ États-Unis ». Which one drops the article?",
+      "Countries, going to: « Je vais ___ France », « ___ Japon », « ___ États-Unis ». Then say out loud where you're from and the next country you want to visit.",
+      "à or en? « Je vais ___ Paris », « ___ France », « ___ Japon », « ___ Normandie ». Then with a name: « le vélo ___ Kartik » vs « le vélo ___ voisin »."
     ],
-    "tutorPrompt": "Be my A1 French tutor for à and de, and stay strictly within these three uses: (1) place — going to (à/au) and coming from (de/du); (2) belonging — « la voiture de mon mari », « c'est à moi »; (3) what a dish is made of — un gâteau au chocolat, un yaourt à la vanille, une pizza aux fruits de mer. Drill the contractions à+le=au, à+les=aux, de+le=du, de+les=des, and the à la / à l' / de la / de l' forms that don't contract. Do NOT bring in the partitive « some », verbs like parler de, or any other use — keep it to these three. Correct my contractions every time and finish with the contraction table as a quick recap."
+    "tutorPrompt": "Be my A1 French tutor for à and de, and stay strictly within these four uses: (1) place — going to (à/au) and coming from (de/du); (2) belonging — « la voiture de mon mari », « c'est à moi »; (3) what a dish is made of — un gâteau au chocolat, un yaourt à la vanille; (4) countries and cities — je vais à Paris / en France / au Japon / aux États-Unis, and je viens de Paris / de France / d'Inde / du Canada / des États-Unis. Drill the contractions à+le=au, à+les=aux, de+le=du, de+les=des, and the à la / à l' / de la / de l' forms that don't contract. Watch for three mistakes in particular: « à la France » (should be en France), « je viens de la France » (should be de France — feminine countries drop the article), and adding an article to a name (« la voiture de Kartik », never « de le Kartik »). Keep asking me where I'm from and where I'm going. Do NOT bring in the partitive « some », verbs like parler de, or any other use. Keep your explanations to one or two short sentences."
   },
   {
     "id": "a1-03-numbers",

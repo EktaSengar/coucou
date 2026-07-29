@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="Two panels contrasting en with closed transport, where you sit inside, and à with open transport, where you sit on it">
+  <style>
+    .h    { font-size: 15px; font-weight: 800; }
+    .sub  { font-size: 11.5px; font-style: italic; fill: #64748b; }
+    .word { font-size: 14px; font-weight: 600; }
+    .rule { font-size: 12.5px; fill: #334155; }
+  </style>
+
+  <rect width="640" height="420" fill="#ffffff"/>
+  <text x="320" y="26" text-anchor="middle" font-size="16" font-weight="800" fill="#0f172a">Comment tu y vas ?</text>
+
+  <!-- ── EN: closed transport, you're inside ───────────────────────────── -->
+  <g>
+    <rect x="16" y="44" width="292" height="322" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <text class="h" x="162" y="72" text-anchor="middle" fill="#1d4ed8">EN + transport fermé</text>
+    <text class="sub" x="162" y="90" text-anchor="middle">you get in and close a door</text>
+
+    <!-- a bus body with a passenger inside -->
+    <g transform="translate(92,104)">
+      <rect x="0" y="6" width="140" height="66" rx="10" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+      <rect x="12" y="18" width="34" height="26" rx="3" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+      <rect x="94" y="18" width="34" height="26" rx="3" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+      <!-- passenger, clearly enclosed -->
+      <circle cx="70" cy="30" r="9" fill="#1d4ed8"/>
+      <path d="M56,58 a14,16 0 0 1 28,0 Z" fill="#1d4ed8"/>
+      <circle cx="30" cy="78" r="9" fill="#334155"/>
+      <circle cx="110" cy="78" r="9" fill="#334155"/>
+    </g>
+
+    <g fill="#1d4ed8">
+      <text class="word" x="46" y="222">en bus</text>
+      <text class="word" x="46" y="250">en métro</text>
+      <text class="word" x="46" y="278">en voiture</text>
+      <text class="word" x="46" y="306">en train</text>
+      <text class="word" x="46" y="334">en avion</text>
+    </g>
+    <g fill="#93c5fd">
+      <circle cx="32" cy="217" r="4"/><circle cx="32" cy="245" r="4"/><circle cx="32" cy="273" r="4"/>
+      <circle cx="32" cy="301" r="4"/><circle cx="32" cy="329" r="4"/>
+    </g>
+    <g class="sub" text-anchor="end">
+      <text x="292" y="222">by bus</text>
+      <text x="292" y="250">by underground</text>
+      <text x="292" y="278">by car</text>
+      <text x="292" y="306">by train</text>
+      <text x="292" y="334">by plane</text>
+    </g>
+  </g>
+
+  <!-- ── À: open transport, you're on it ──────────────────────────────── -->
+  <g>
+    <rect x="332" y="44" width="292" height="322" rx="14" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+    <text class="h" x="478" y="72" text-anchor="middle" fill="#c2410c">À + transport ouvert</text>
+    <text class="sub" x="478" y="90" text-anchor="middle">you sit on it, out in the open</text>
+
+    <!-- a bike with the rider on top, nothing around them -->
+    <g transform="translate(408,104)">
+      <circle cx="22" cy="60" r="17" fill="none" stroke="#c2410c" stroke-width="3.5"/>
+      <circle cx="118" cy="60" r="17" fill="none" stroke="#c2410c" stroke-width="3.5"/>
+      <path d="M22,60 L54,60 L74,30 L96,60 L118,60 M54,60 L74,60 M74,30 L64,22" fill="none" stroke="#c2410c" stroke-width="3.5" stroke-linecap="round"/>
+      <!-- rider, clearly on top and exposed -->
+      <circle cx="82" cy="10" r="9" fill="#c2410c"/>
+      <path d="M82,20 L82,38 M82,26 L62,22 M82,26 L98,32 M82,38 L70,54 M82,38 L94,54" fill="none" stroke="#c2410c" stroke-width="3.5" stroke-linecap="round"/>
+    </g>
+
+    <g fill="#c2410c">
+      <text class="word" x="362" y="222">à vélo</text>
+      <text class="word" x="362" y="250">à moto</text>
+      <text class="word" x="362" y="278">à pied</text>
+    </g>
+    <g fill="#fdba74">
+      <circle cx="348" cy="217" r="4"/><circle cx="348" cy="245" r="4"/><circle cx="348" cy="273" r="4"/>
+    </g>
+    <g class="sub" text-anchor="end">
+      <text x="608" y="222">by bike</text>
+      <text x="608" y="250">by motorbike</text>
+      <text x="608" y="278">on foot</text>
+    </g>
+
+    <rect x="352" y="298" width="252" height="50" rx="9" fill="#ffedd5"/>
+    <text class="rule" x="478" y="318" text-anchor="middle">à pied has no vehicle at all —</text>
+    <text class="rule" x="478" y="336" text-anchor="middle">which is exactly why it takes à.</text>
+  </g>
+
+  <text class="rule" x="320" y="390" text-anchor="middle" font-weight="600">Never an article: « en bus », not « en le bus ».</text>
+  <text class="rule" x="320" y="408" text-anchor="middle">Want the article? Use prendre — « je prends le bus ».</text>
+</svg>

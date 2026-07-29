@@ -639,6 +639,100 @@
     "tutorPrompt": "Be my A1 French tutor for town and city vocabulary. Drill these two sets with me: the street words (le centre-ville, le quartier, l'arrondissement, la banlieue, le bâtiment, le gratte-ciel, la rue, le boulevard, l'avenue, le trottoir, le passage clouté, la piste cyclable, le rond-point, le pont, l'arrêt de bus) and the places (une gare, une station de métro, un aéroport, la poste, un poste de police, une caserne de pompiers, un hôpital, une école, une bibliothèque, un musée, un cinéma, une discothèque, une piscine, un hôtel, l'hôtel de ville / la mairie). Always make me give the word with its article. Test me on the four traps: hôtel vs hôtel de ville, la poste vs le poste de police, gare vs station, and arrondissement. Then ask me questions like « Où est-ce qu'on achète des timbres ? » so I answer with a place. Correct my gender each time and end with the words I keep getting wrong."
   },
   {
+    "id": "a1-lieux-commerces",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Shops, services & landmarks",
+    "minutes": 20,
+    "goal": "Name the shop you need, the landmark you're meeting at, and the building you're walking past — and know when to say chez instead of à.",
+    "vocab": [
+      { "fr": "la boulangerie", "phonetic": "lah boo-lahn-zhuh-REE", "en": "the bakery (bread)", "emoji": "🥖" },
+      { "fr": "la pâtisserie", "phonetic": "lah pah-tees-REE", "en": "the cake shop", "emoji": "🍰" },
+      { "fr": "l'épicerie", "phonetic": "lay-pees-REE", "en": "the corner shop / grocer's", "emoji": "🛒" },
+      { "fr": "la boucherie", "phonetic": "lah boosh-REE", "en": "the butcher's", "emoji": "🥩" },
+      { "fr": "la pharmacie", "phonetic": "lah far-ma-SEE", "en": "the pharmacy (green cross)", "emoji": "💊" },
+      { "fr": "la laverie", "phonetic": "lah lav-REE", "en": "the launderette", "emoji": "🧺" },
+      { "fr": "le supermarché", "phonetic": "luh sew-per-mar-SHAY", "en": "the supermarket", "emoji": "🏪" },
+      { "fr": "le café", "phonetic": "luh ka-FAY", "en": "the café", "emoji": "☕" },
+      { "fr": "le bar", "phonetic": "luh bar", "en": "the bar", "emoji": "🍸" },
+      { "fr": "la brasserie", "phonetic": "lah bras-REE", "en": "the brasserie (all-day food)", "emoji": "🍽️" },
+      { "fr": "le restaurant", "phonetic": "luh res-toh-RAHN", "en": "the restaurant", "emoji": "🍴" },
+      { "fr": "la banque", "phonetic": "lah bahnk", "en": "the bank", "emoji": "🏦" },
+      { "fr": "l'office de tourisme", "phonetic": "lo-FEESS duh too-REEZM", "en": "the tourist office", "emoji": "ℹ️" },
+      { "fr": "la place", "phonetic": "lah plahss", "en": "the square", "emoji": "⛲" },
+      { "fr": "le parc", "phonetic": "luh park", "en": "the park", "emoji": "🌳" },
+      { "fr": "le parking", "phonetic": "luh par-KEENG", "en": "the car park", "emoji": "🅿️" },
+      { "fr": "le stade", "phonetic": "luh stahd", "en": "the stadium", "emoji": "🏟️" },
+      { "fr": "le théâtre", "phonetic": "luh tay-AH-truh", "en": "the theatre", "emoji": "🎭" },
+      { "fr": "le commissariat", "phonetic": "luh ko-mee-sa-ree-AH", "en": "the police station (in town)", "emoji": "🚓" },
+      { "fr": "le feu tricolore", "phonetic": "luh fuh tree-ko-LOR", "en": "the traffic light", "emoji": "🚦" },
+      { "fr": "l'église", "phonetic": "lay-GLEEZ", "en": "the church (feminine)", "emoji": "⛪" },
+      { "fr": "la cathédrale", "phonetic": "lah ka-tay-DRAHL", "en": "the cathedral", "emoji": "🏰" },
+      { "fr": "la mosquée", "phonetic": "lah mos-KAY", "en": "the mosque", "emoji": "🕌" },
+      { "fr": "la synagogue", "phonetic": "lah see-na-GOG", "en": "the synagogue", "emoji": "🕍" },
+      { "fr": "le temple", "phonetic": "luh TAHN-pluh", "en": "the temple", "emoji": "🛕" }
+    ],
+    "grammar": {
+      "point": "Shops are built from the trade — and take chez when you name the person",
+      "table": {
+        "title": "the trade + -erie = the shop",
+        "cols": ["the person", "the shop"],
+        "rows": [
+          { "label": "le boulanger", "cells": ["la boulangerie"] },
+          { "label": "le pâtissier", "cells": ["la pâtisserie"] },
+          { "label": "l'épicier", "cells": ["l'épicerie"] },
+          { "label": "le boucher", "cells": ["la boucherie"] },
+          { "label": "le pharmacien", "cells": ["la pharmacie"] }
+        ],
+        "highlight": ["la pharmacie"],
+        "note": "Every -erie shop is feminine, so it's always la. pharmacie is the odd one — the trade is pharmacien but the shop drops the -erie."
+      },
+      "table2": {
+        "title": "going there: à the place, chez the person",
+        "cols": ["you mean", "you say"],
+        "rows": [
+          { "label": "the shop", "cells": ["à la boulangerie"] },
+          { "label": "the person", "cells": ["chez le boulanger"] },
+          { "label": "the doctor", "cells": ["chez le médecin"] },
+          { "label": "your own place", "cells": ["chez moi"] }
+        ],
+        "highlight": ["chez le boulanger", "chez moi"],
+        "note": "chez takes a person, never a building — « chez la boulangerie » is wrong."
+      },
+      "explain": "Two patterns carry most of this vocabulary. ① French builds the shop out of the trade: boulanger → boulangerie, pâtissier → pâtisserie, boucher → boucherie. All of them are feminine. ② When you name the *person* rather than the shop, you switch from à to chez: « je vais à la boulangerie » and « je vais chez le boulanger » both work, but chez only ever takes a person — including yourself (chez moi, chez nous)."
+    },
+    "notes": [
+      {
+        "title": "Two words for the police",
+        "body": "In a town you go to le commissariat; out in the countryside and on the motorways it's la gendarmerie, and the officers are les gendarmes. Same job, different force — and the word depends on where you are."
+      },
+      {
+        "title": "Bar, café, brasserie — they're not interchangeable",
+        "body": "A café serves coffee and simple food, a bar leans towards drinks, and a brasserie serves proper meals all day long — which is why it's the safe bet when you're hungry at 3pm and the restaurants have closed their kitchens."
+      },
+      {
+        "title": "l'église is feminine",
+        "body": "The elided l' hides the gender, so it's easy to guess wrong: it's une église, la grande église. Same trap as l'épicerie (feminine) and l'hôpital (masculine) — when a word starts with a vowel, learn the gender separately."
+      }
+    ],
+    "examples": [
+      "Je vais à la boulangerie acheter une baguette. (ash-TAY ewn ba-GET)",
+      "Il y a une pharmacie en face du parc. (ahn FAHSS dew PARK)",
+      "On se retrouve place Marie Curie, près du feu tricolore. (ohn suh ruh-TROOV)",
+      "Tournez à gauche après l'église. (a-PREH lay-GLEEZ)",
+      "Je dois passer chez le boucher avant de rentrer. (shay luh boo-SHAY)",
+      "La laverie est ouverte le dimanche. (oo-VERT luh dee-MAHNSH)"
+    ],
+    "practice": [
+      "Which shop? For bread → ___ . For a cake → ___ . For aspirin → ___ . For washing → ___ .",
+      "Build the shop from the trade: boulanger → ___ , pâtissier → ___ , boucher → ___ .",
+      "à or chez? « Je vais ___ la pharmacie » · « Je vais ___ le médecin » · « On mange ___ moi ».",
+      "le or la? « ___ église », « ___ épicerie », « ___ stade », « ___ place », « ___ théâtre ».",
+      "Name three shops within walking distance of your flat, with their articles."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for shops, services and landmarks. Drill this vocabulary with articles: la boulangerie, la pâtisserie, l'épicerie, la boucherie, la pharmacie, la laverie, le supermarché, le café, le bar, la brasserie, le restaurant, la banque, l'office de tourisme, la place, le parc, le parking, le stade, le théâtre, le commissariat, le feu tricolore, and the religious buildings l'église, la cathédrale, la mosquée, la synagogue, le temple. Make me build shops from trades (boulanger → boulangerie) and drill à + place versus chez + person, correcting me when I say « chez la boulangerie ». Ask me « Où est-ce qu'on achète… ? » questions. Watch my genders, especially l'église and l'épicerie which are feminine. Finish with the words I keep getting wrong."
+  },
+  {
     "id": "a1-06-directions",
     "level": "A1",
     "module": "Survival basics",
@@ -658,6 +752,8 @@
       { "fr": "J'aimerais aller à la piscine.", "phonetic": "zhem-REH a-LAY ah lah pee-SEEN", "en": "I'd like to go to the swimming pool.", "emoji": "🎯" },
       { "fr": "Comment aller à la poste ?", "phonetic": "ko-MAHN a-LAY ah lah POST", "en": "How do I get to the post office?", "emoji": "❓" },
       { "fr": "Comment je fais pour aller à la gare ?", "phonetic": "ko-MAHN zhuh FEH poor a-LAY ah lah GAR", "en": "How do I go about getting to the station?", "emoji": "❓" },
+      { "fr": "Comment je vais à la poste ?", "phonetic": "ko-MAHN zhuh VEH ah lah POST", "en": "How do I get to the post office? (simplest form)", "emoji": "❓" },
+      { "fr": "Je cherche la direction pour aller au musée.", "phonetic": "lah dee-rek-see-OHN poor a-LAY oh mew-ZAY", "en": "I'm looking for the way to the museum.", "emoji": "🧭" },
       { "fr": "Où est… ? / Où sont… ?", "phonetic": "oo EH / oo SOHN", "en": "Where is…? / Where are…?", "emoji": "📍" },
       { "fr": "C'est loin ? / C'est près ?", "phonetic": "seh LWAN / seh PREH", "en": "Is it far? / Is it near?", "emoji": "📏" },
       { "fr": "Allez tout droit.", "phonetic": "a-LAY too DRWAH", "en": "Go straight ahead.", "emoji": "⬆️" },
@@ -758,7 +854,13 @@
       "C'est au rez-de-chaussée, à droite. (oh ray-duh-shoh-SAY)",
       "Les caves sont au sous-sol. (oh soo-SOL)",
       "C'est la première fois que je viens ici. (lah pruh-mee-EHR FWAH)",
-      "Il habite dans le 11e, près de République. (dahn luh onz-YEM)"
+      "Il habite dans le 11e, près de République. (dahn luh onz-YEM)",
+      "À quel étage tu habites ? (ah kel ay-TAHZH)",
+      "Le cinéma est au cinquième étage de cet immeuble. (oh san-kee-EM ay-TAHZH)",
+      "J'ai une maison de trois étages. (ewn meh-ZOHN duh trwah zay-TAHZH)",
+      "Mon appartement est bruyant, j'habite au rez-de-chaussée. (brew-YAHN)",
+      "Il y a une cave au sous-sol. (ewn KAHV oh soo-SOL)",
+      "Au dernier étage, sous les toits. (soo lay TWAH)"
     ],
     "practice": [
       "Build the ordinal: deux → ___ , quatre → ___ , cinq → ___ , neuf → ___ , onze → ___ .",
@@ -768,6 +870,96 @@
       "Say which floor you live on, and which arrondissement or quartier you're in."
     ],
     "tutorPrompt": "Be my A1 French tutor for ordinal numbers and the floors of a building. Drill the rule (number + -ième) and the three exceptions: premier/première, cinquième (cinq + u), neuvième (neuf → neuv-). Give me numbers to turn into ordinals, including quatre, onze and vingt where the final -e drops. Then work the floors: le sous-sol, le rez-de-chaussée, le premier étage, le deuxième, le dernier étage — and check I understand that the French premier étage is the English second floor. Ask me « Vous habitez à quel étage ? » and make me answer with « au + ordinal ». Finish with Paris arrondissements (dans le 11e, dans le 16e). Correct my pronunciation of -ième each time."
+  },
+  {
+    "id": "a1-transport",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Getting around — transport & en vs à",
+    "minutes": 20,
+    "goal": "Name every way of getting around, and pick the right preposition without thinking — en when you get inside it, à when you get on it.",
+    "figures": [
+      {
+        "src": "./assets/img/transport-en-a.svg?v=1",
+        "alt": "Two panels: en + closed transport, where you sit inside a vehicle (en bus, en métro, en voiture, en train, en avion); and à + open transport, where you sit on it (à vélo, à moto, à pied)",
+        "caption": "Get inside it and it's en. Sit on it — or use your own legs — and it's à."
+      }
+    ],
+    "vocab": [
+      { "fr": "la voiture", "phonetic": "lah vwah-TEWR", "en": "the car", "emoji": "🚗" },
+      { "fr": "le bus", "phonetic": "luh bewss", "en": "the bus", "emoji": "🚌" },
+      { "fr": "le métro", "phonetic": "luh may-TROH", "en": "the underground", "emoji": "🚇" },
+      { "fr": "le tramway (le tram)", "phonetic": "luh tram-WAY", "en": "the tram", "emoji": "🚊" },
+      { "fr": "le train", "phonetic": "luh tran", "en": "the train", "emoji": "🚆" },
+      { "fr": "le taxi", "phonetic": "luh tak-SEE", "en": "the taxi", "emoji": "🚕" },
+      { "fr": "l'avion", "phonetic": "la-vee-OHN", "en": "the plane", "emoji": "✈️" },
+      { "fr": "le bateau", "phonetic": "luh ba-TOH", "en": "the boat", "emoji": "🚤" },
+      { "fr": "le ferry", "phonetic": "luh fay-REE", "en": "the ferry", "emoji": "⛴️" },
+      { "fr": "le vélo", "phonetic": "luh vay-LOH", "en": "the bike (everyday word)", "emoji": "🚲" },
+      { "fr": "la bicyclette", "phonetic": "lah bee-see-KLET", "en": "the bicycle (fuller, older word)", "emoji": "🚲" },
+      { "fr": "la moto", "phonetic": "lah mo-TOH", "en": "the motorbike", "emoji": "🏍️" },
+      { "fr": "le scooter", "phonetic": "luh skoo-TEHR", "en": "the scooter", "emoji": "🛵" },
+      { "fr": "le camion", "phonetic": "luh ka-mee-OHN", "en": "the lorry / truck", "emoji": "🚚" },
+      { "fr": "à pied", "phonetic": "ah pee-AY", "en": "on foot", "emoji": "🚶" }
+    ],
+    "grammar": {
+      "point": "en for transport you get inside, à for transport you get on",
+      "table": {
+        "title": "en + transport fermé (you're inside)",
+        "cols": ["you say", "meaning"],
+        "rows": [
+          { "label": "en bus", "cells": ["by bus"] },
+          { "label": "en métro", "cells": ["by underground"] },
+          { "label": "en voiture", "cells": ["by car"] },
+          { "label": "en train", "cells": ["by train"] },
+          { "label": "en avion", "cells": ["by plane"] }
+        ],
+        "highlight": ["by car"],
+        "note": "The test: could you close a door behind you? Then it's en."
+      },
+      "table2": {
+        "title": "à + transport ouvert (you're on it)",
+        "cols": ["you say", "meaning"],
+        "rows": [
+          { "label": "à vélo", "cells": ["by bike"] },
+          { "label": "à moto", "cells": ["by motorbike"] },
+          { "label": "à pied", "cells": ["on foot"] }
+        ],
+        "highlight": ["on foot"],
+        "note": "You sit astride it, out in the open — or you have no vehicle at all, which is why à pied joins this group."
+      },
+      "explain": "Say how you travel with one of two prepositions, and the choice is physical rather than arbitrary. If you climb inside and could shut a door — bus, métro, voiture, train, avion — use en. If you sit on it with nothing around you — vélo, moto — use à, and à pied comes along because there's no vehicle to get into. Note that the preposition takes no article: « en bus », never « en le bus ». One useful alternative is the verb prendre, which does take the article: « je prends le bus », « je prends le métro »."
+    },
+    "notes": [
+      {
+        "title": "No article after en or à",
+        "body": "It's « je vais en bus », never « en le bus ». If you want the article, switch verbs: « je prends le bus » — prendre is how you name a specific service, which is why it's the phrase you'll actually use most in Paris."
+      },
+      {
+        "title": "vélo or bicyclette?",
+        "body": "Both mean bicycle, but vélo is what everyone says. bicyclette sounds slightly formal or old-fashioned, a bit like saying « velocipede » — fine to recognise, but reach for vélo when you speak."
+      },
+      {
+        "title": "en avion, but à l'aéroport",
+        "body": "The preposition describes the vehicle, not the building. You travel en avion and you arrive à l'aéroport; you go en train and you wait à la gare. Don't let one pull the other along."
+      }
+    ],
+    "examples": [
+      "Je vais au travail en bus. (oh tra-VIE ahn BEWSS)",
+      "Elle vient en voiture. (el vee-AN ahn vwah-TEWR)",
+      "Nous allons à l'université à vélo. (ah vay-LOH)",
+      "Tu rentres à pied ? (tew RAHN-truh ah pee-AY)",
+      "Je prends le métro tous les matins. (zhuh prahn luh may-TROH)",
+      "Pour aller à Londres, on peut prendre le train ou le ferry. (luh fay-REE)"
+    ],
+    "practice": [
+      "en or à? « ___ métro » · « ___ vélo » · « ___ pied » · « ___ avion » · « ___ moto ».",
+      "Say how you got to your last three destinations, using en or à each time.",
+      "Rewrite with prendre: « je vais en bus » → « je ___ le bus ».",
+      "Which of these could you close a door on: le vélo, le train, la moto, le taxi?",
+      "Answer out loud: « Comment tu vas au travail ? »"
+    ],
+    "tutorPrompt": "Be my A1 French tutor for transport vocabulary and its prepositions. Drill the words with their articles: la voiture, le bus, le métro, le tramway, le train, le taxi, l'avion, le bateau, le ferry, le vélo, la bicyclette, la moto, le scooter, le camion, and à pied. Then drill the rule hard: en + closed transport (en bus, en métro, en voiture, en train, en avion) versus à + open or individual transport (à vélo, à moto, à pied). Correct me instantly if I say « en le bus » or « en vélo ». Also make me rephrase with prendre, which does take the article (je prends le bus). Ask me « Comment tu vas au travail ? » and « Comment tu es venu ? » so I answer naturally. Finish by listing the ones I got wrong."
   },
   {
     "id": "a1-07-time-days",
@@ -790,9 +982,21 @@
       "point": "Telling the time with « il est »",
       "explain": "Il est + number + heure(s): il est une heure, il est deux heures. Add et demie (:30), et quart (:15), moins le quart (:45). Days are not capitalised in French, and « le lundi » means « on Mondays »."
     },
+    "notes": [
+      {
+        "title": "The days are named after planets",
+        "body": "Five of them wear it openly: lundi is la Lune, mardi is Mars, mercredi is Mercure, jeudi is Jupiter, vendredi is Vénus, samedi is Saturne. Only dimanche broke the pattern — it was the sun's day, then Latin renamed it dies Dominicus, the Lord's day. Spot the -di and you can rebuild the whole week."
+      },
+      {
+        "title": "« lundi » vs « le lundi »",
+        "body": "Without the article it means this coming Monday: « on se voit lundi ». With it, it means every Monday: « le lundi, je travaille à la maison ». One small word, completely different plan."
+      }
+    ],
     "examples": [
       "— Quelle heure est-il ? — Il est sept heures et demie.",
-      "— On se voit demain à midi ? — D'accord, à demain !"
+      "— On se voit demain à midi ? — D'accord, à demain !",
+      "Le lundi, je ne travaille pas. (luh luhn-DEE)",
+      "Mercredi est le jour de Mercure. (mer-kruh-DEE)"
     ],
     "practice": [
       "Say three times in French: 9:00, 10:30, 6:45.",
@@ -833,6 +1037,179 @@
       "Describe your morning in three sentences using -er verbs."
     ],
     "tutorPrompt": "A1 French conversation. Ask me about my family and my daily routine, one simple question at a time (where I live, who I live with, what I do in a day). Stay in easy French and gently correct my -er verb conjugations. After about eight questions, give me feedback and five words to remember."
+  },
+  {
+    "id": "a1-verbes-groupes",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "The three verb groups — how French verbs sort themselves",
+    "minutes": 20,
+    "goal": "Look at any infinitive and know which of the three groups it belongs to — so you know whether its endings are predictable or need learning by heart.",
+    "figures": [
+      {
+        "src": "./assets/img/verbes-groupes.svg?v=1",
+        "alt": "A decision tree: does the infinitive end in -er? If yes and it is not aller, first group. Otherwise, does nous take -issons? If yes, second group. If no, third group.",
+        "caption": "Two questions sort every French verb. The « nous » form is the test that matters — the infinitive alone can't tell you."
+      }
+    ],
+    "vocab": [
+      { "fr": "parler → nous parlons", "phonetic": "par-LAY, noo par-LOHN", "en": "to speak — 1st group", "emoji": "1️⃣" },
+      { "fr": "manger → nous mangeons", "phonetic": "mahn-ZHAY, noo mahn-ZHOHN", "en": "to eat — 1st group", "emoji": "1️⃣" },
+      { "fr": "aimer → nous aimons", "phonetic": "eh-MAY, noo zeh-MOHN", "en": "to like / love — 1st group", "emoji": "1️⃣" },
+      { "fr": "regarder → nous regardons", "phonetic": "ruh-gar-DAY, noo ruh-gar-DOHN", "en": "to watch — 1st group", "emoji": "1️⃣" },
+      { "fr": "finir → nous finissons", "phonetic": "fee-NEER, noo fee-nee-SOHN", "en": "to finish — 2nd group", "emoji": "2️⃣" },
+      { "fr": "choisir → nous choisissons", "phonetic": "shwah-ZEER, noo shwah-zee-SOHN", "en": "to choose — 2nd group", "emoji": "2️⃣" },
+      { "fr": "grandir → nous grandissons", "phonetic": "grahn-DEER, noo grahn-dee-SOHN", "en": "to grow up — 2nd group", "emoji": "2️⃣" },
+      { "fr": "partir → nous partons", "phonetic": "par-TEER, noo par-TOHN", "en": "to leave — 3rd group, not 2nd!", "emoji": "3️⃣" },
+      { "fr": "courir → nous courons", "phonetic": "koo-REER, noo koo-ROHN", "en": "to run — 3rd group, not 2nd!", "emoji": "3️⃣" },
+      { "fr": "venir → nous venons", "phonetic": "vuh-NEER, noo vuh-NOHN", "en": "to come — 3rd group", "emoji": "3️⃣" },
+      { "fr": "prendre → nous prenons", "phonetic": "PRAHN-druh, noo pruh-NOHN", "en": "to take — 3rd group", "emoji": "3️⃣" },
+      { "fr": "voir → nous voyons", "phonetic": "vwahr, noo vwah-YOHN", "en": "to see — 3rd group", "emoji": "3️⃣" },
+      { "fr": "faire → nous faisons", "phonetic": "fehr, noo fuh-ZOHN", "en": "to do / make — 3rd group", "emoji": "3️⃣" },
+      { "fr": "aller → nous allons", "phonetic": "a-LAY, noo za-LOHN", "en": "to go — 3rd group despite the -er", "emoji": "⚠️" }
+    ],
+    "grammar": {
+      "point": "Ask two questions and every verb lands in a group",
+      "table": {
+        "title": "the three groups",
+        "cols": ["group", "what it is", "example"],
+        "rows": [
+          { "label": "1er", "cells": ["ends in -er (except aller)", "parler → nous parlons"] },
+          { "label": "2e", "cells": ["-ir that makes -issons at nous", "finir → nous finissons"] },
+          { "label": "3e", "cells": ["everything else, irregular", "prendre → nous prenons"] }
+        ],
+        "highlight": ["ends in -er (except aller)", "-ir that makes -issons at nous"],
+        "note": "The 1st group is by far the biggest — about 90% of French verbs — and it's fully predictable. The 3rd group is small but contains the verbs you use every day."
+      },
+      "table2": {
+        "title": "the -ir trap: only -issons counts",
+        "cols": ["infinitive", "nous form", "group"],
+        "rows": [
+          { "label": "finir", "cells": ["nous finissons", "2e"] },
+          { "label": "choisir", "cells": ["nous choisissons", "2e"] },
+          { "label": "partir", "cells": ["nous partons", "3e"] },
+          { "label": "courir", "cells": ["nous courons", "3e"] },
+          { "label": "venir", "cells": ["nous venons", "3e"] }
+        ],
+        "highlight": ["nous partons", "nous courons", "nous venons"],
+        "note": "Same -ir ending, different groups. You cannot tell from the infinitive — you have to know the nous form."
+      },
+      "explain": "French sorts its verbs into three groups, and the group tells you whether the endings are predictable. ① 1st group: the infinitive ends in -er. Drop -er, add -e, -es, -e, -ons, -ez, -ent. This is the huge, safe group — and aller is its single deserter. ② 2nd group: the infinitive ends in -ir and the nous form ends in -issons. finir → nous finissons, choisir → nous choisissons. ③ 3rd group: everything else — the remaining -ir verbs, all the -oir and -re verbs, and aller. These are irregular and learnt one at a time. The whole system turns on the nous form, which is why it's worth learning a new verb as a pair: the infinitive and its nous."
+    },
+    "notes": [
+      {
+        "title": "Not every -ir verb is 2nd group",
+        "body": "This is the mistake the classification exists to catch. finir makes nous finissons, so it's 2nd group. But partir makes nous partons, courir makes nous courons, and venir makes nous venons — no -issons, so all three are 3rd group and irregular. The infinitive looks identical; only the nous form tells you."
+      },
+      {
+        "title": "aller ends in -er and still isn't 1st group",
+        "body": "It's the one exception to the -er rule, and a big one: je vais, tu vas, il va, nous allons, vous allez, ils vont. Nothing about that follows the parler pattern, which is why aller is filed with the irregulars."
+      },
+      {
+        "title": "nous mangeons keeps its e",
+        "body": "A spelling detail inside the 1st group: verbs in -ger keep the e before -ons (nous mangeons, nous voyageons) and verbs in -cer take a cedilla (nous commençons). Without it, the g and c would harden and the word would sound wrong."
+      }
+    ],
+    "examples": [
+      "Nous parlons français à la maison. (noo par-LOHN frahn-SEH)",
+      "Nous finissons le travail à six heures. (noo fee-nee-SOHN)",
+      "Nous partons demain matin. (noo par-TOHN duh-MAN)",
+      "Nous prenons le métro ensemble. (noo pruh-NOHN)",
+      "Nous allons au marché le samedi. (noo za-LOHN oh mar-SHAY)",
+      "Attention : tous les verbes en -ir ne sont pas du deuxième groupe. (dew duh-zee-EM GROOP)"
+    ],
+    "practice": [
+      "Which group? parler · finir · prendre · aller · choisir · partir · voir.",
+      "Give the nous form, then the group: grandir → ___ , courir → ___ , regarder → ___ .",
+      "Why is aller not in the 1st group? Say it in one sentence.",
+      "Spell the nous form: manger → nous ___ , commencer → nous ___ .",
+      "Pick five verbs you use often and sort them into the three groups."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for the three French verb groups. Teach and drill the system: 1st group = -er verbs except aller; 2nd group = -ir verbs whose nous form ends in -issons (finir → nous finissons); 3rd group = everything else, including the -ir verbs that don't make -issons, all -oir and -re verbs, and aller. Give me infinitives one at a time and make me say the group AND the nous form — that's the test. Push hard on the trap: partir, courir, venir, mourir, dormir, sortir all look like 2nd group but are 3rd. Also check I know why aller is an exception. Include the spelling quirks nous mangeons and nous commençons. Correct me each time and end with a short summary of the ones I misclassified."
+  },
+  {
+    "id": "a1-verbes-essentiels",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "The four verbs you can't avoid — être, avoir, faire, prendre",
+    "minutes": 25,
+    "goal": "Conjugate the four verbs that turn up in almost every French sentence, and spot the endings they share so there's less to memorise.",
+    "vocab": [
+      { "fr": "je suis / tu es / il est", "phonetic": "zhuh SWEE / tew EH / eel EH", "en": "I am / you are / he is", "emoji": "🟦" },
+      { "fr": "nous sommes / vous êtes / ils sont", "phonetic": "noo SOM / voo ZET / eel SOHN", "en": "we are / you are / they are", "emoji": "🟦" },
+      { "fr": "j'ai / tu as / il a", "phonetic": "zhay / tew AH / eel AH", "en": "I have / you have / he has", "emoji": "🟩" },
+      { "fr": "nous avons / vous avez / ils ont", "phonetic": "noo za-VOHN / voo za-VAY / eel ZOHN", "en": "we have / you have / they have", "emoji": "🟩" },
+      { "fr": "je fais / tu fais / il fait", "phonetic": "zhuh FEH / tew FEH / eel FEH", "en": "I do / you do / he does", "emoji": "🟧" },
+      { "fr": "nous faisons / vous faites / ils font", "phonetic": "noo fuh-ZOHN / voo FET / eel FOHN", "en": "we do / you do / they do", "emoji": "🟧" },
+      { "fr": "je prends / tu prends / il prend", "phonetic": "zhuh PRAHN / tew PRAHN / eel PRAHN", "en": "I take / you take / he takes", "emoji": "🟪" },
+      { "fr": "nous prenons / vous prenez / ils prennent", "phonetic": "noo pruh-NOHN / voo pruh-NAY / eel PREN", "en": "we take / you take / they take", "emoji": "🟪" },
+      { "fr": "J'ai trente ans.", "phonetic": "zhay TRAHNT ahn", "en": "I'm thirty. (avoir, not être)", "emoji": "🎂" },
+      { "fr": "Je suis en retard.", "phonetic": "zhuh swee zahn ruh-TAR", "en": "I'm late.", "emoji": "⏰" },
+      { "fr": "Il fait froid.", "phonetic": "eel feh FRWAH", "en": "It's cold. (faire for weather)", "emoji": "🥶" },
+      { "fr": "Je prends le bus.", "phonetic": "zhuh prahn luh BEWSS", "en": "I take the bus.", "emoji": "🚌" }
+    ],
+    "grammar": {
+      "point": "Four irregular verbs — but the endings rhyme more than they look",
+      "table": {
+        "title": "être & avoir",
+        "cols": ["", "être (be)", "avoir (have)"],
+        "rows": [
+          { "label": "je", "cells": ["suis", "ai"] },
+          { "label": "tu", "cells": ["es", "as"] },
+          { "label": "il / elle / on", "cells": ["est", "a"] },
+          { "label": "nous", "cells": ["sommes", "avons"] },
+          { "label": "vous", "cells": ["êtes", "avez"] },
+          { "label": "ils / elles", "cells": ["sont", "ont"] }
+        ],
+        "highlight": ["sommes", "êtes", "sont", "ont"],
+        "note": "être and avoir are the two most irregular verbs in the language — and the two you need first, because they also build the past tense."
+      },
+      "table2": {
+        "title": "faire & prendre",
+        "cols": ["", "faire (do/make)", "prendre (take)"],
+        "rows": [
+          { "label": "je", "cells": ["fais", "prends"] },
+          { "label": "tu", "cells": ["fais", "prends"] },
+          { "label": "il / elle / on", "cells": ["fait", "prend"] },
+          { "label": "nous", "cells": ["faisons", "prenons"] },
+          { "label": "vous", "cells": ["faites", "prenez"] },
+          { "label": "ils / elles", "cells": ["font", "prennent"] }
+        ],
+        "highlight": ["faisons", "faites", "font", "prennent"],
+        "note": "je fais, tu fais, il fait all sound the same, and so do the three singular forms of prendre — the difference is only on the page."
+      },
+      "explain": "These four carry an enormous share of everyday French, and all four are 3rd group. Look for the pattern rather than memorising thirty forms: nous almost always ends -ons and vous almost always -ez, so the forms worth real attention are the handful that break it — vous êtes, vous faites, ils sont, ils ont, ils font. Notice too that the singular forms of faire and prendre are pronounced identically across je, tu and il, so listening won't tell you which one you heard; the sentence around it will. And « nous faisons » is a pronunciation trap: written ai, spoken « fuh-ZOHN »."
+    },
+    "notes": [
+      {
+        "title": "Age uses avoir, not être",
+        "body": "« J'ai trente ans », literally « I have thirty years ». « Je suis trente ans » is the classic English-speaker error. The same goes for hunger and cold as bodily states: j'ai faim, j'ai froid — but « il fait froid » with faire when you mean the weather."
+      },
+      {
+        "title": "Only three verbs end -es at vous",
+        "body": "vous êtes, vous faites and vous dites are the whole list — everything else in the language takes vous -ez. Learn those three together and you'll never write « vous faisez »."
+      },
+      {
+        "title": "faire does the weather and the chores",
+        "body": "French reaches for faire where English uses other verbs: il fait beau (the weather is nice), faire les courses (do the shopping), faire la cuisine (cook), faire du vélo (go cycling). If an activity has no obvious verb, faire is usually the answer."
+      }
+    ],
+    "examples": [
+      "Nous sommes en France depuis six mois. (noo SOM ahn FRAHNSS)",
+      "Vous êtes prêts ? (voo ZET PREH)",
+      "Ils ont deux enfants. (eel ZOHN duh zahn-FAHN)",
+      "Qu'est-ce que vous faites ce soir ? (kess kuh voo FET suh SWAHR)",
+      "Nous faisons les courses le samedi. (noo fuh-ZOHN lay KOORSS)",
+      "Ils prennent le train de huit heures. (eel PREN luh tran)"
+    ],
+    "practice": [
+      "Conjugate être out loud, all six forms, then avoir.",
+      "être or avoir? « Je ___ trente ans » · « Je ___ français » · « J'___ froid » · « Il ___ en retard ».",
+      "Fill in: nous ___ (faire) du vélo · vous ___ (faire) la cuisine · ils ___ (prendre) le métro.",
+      "Which three verbs take vous -es instead of -ez?",
+      "Say three true sentences about today using faire, and two using prendre."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for the four essential irregular verbs in the present tense: être, avoir, faire and prendre. Drill all six forms of each, then mix them in sentences. Test the traps specifically: age and bodily states take avoir (j'ai trente ans, j'ai faim, j'ai froid) while weather takes faire (il fait froid, il fait beau); vous êtes / vous faites are the -es exceptions, not « vous faisez »; nous faisons is pronounced « fuh-ZOHN » not « feh-ZOHN »; and the singular forms of faire and prendre sound identical so I need context. Also drill the faire expressions: faire les courses, faire la cuisine, faire du vélo. Ask me questions that force each verb out of me and correct every form. Finish with the forms I keep missing."
   },
   {
     "id": "a2-01-past-avoir",

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600" width="640" height="600" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="A decision tree sorting French verbs into three groups: -er verbs except aller are first group, -ir verbs whose nous form takes -issons are second group, everything else is third group">
+  <defs>
+    <marker id="t" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="3" markerHeight="3" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <style>
+    .q     { font-size: 14px; font-weight: 700; fill: #0f172a; }
+    .grp   { font-size: 15px; font-weight: 800; }
+    .ex    { font-size: 11.5px; font-style: italic; }
+    .yn    { font-size: 11px; font-weight: 800; }
+    .flow  { fill: none; stroke: #94a3b8; stroke-width: 2; marker-end: url(#t); }
+    .start { font-size: 13px; font-weight: 700; fill: #334155; }
+  </style>
+
+  <rect width="640" height="600" fill="#ffffff"/>
+
+  <!-- start -->
+  <rect x="216" y="16" width="208" height="38" rx="19" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text class="start" x="320" y="40" text-anchor="middle">un verbe à l'infinitif</text>
+  <path class="flow" d="M320,54 L320,74"/>
+
+  <!-- question 1 -->
+  <rect x="150" y="82" width="340" height="46" rx="10" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text class="q" x="320" y="111" text-anchor="middle">Ça finit en -ER ?</text>
+
+  <!-- q1 → OUI, left into group 1 -->
+  <path class="flow" d="M150,105 L96,105 L96,150"/>
+  <text class="yn" x="122" y="98" text-anchor="middle" fill="#16a34a">OUI</text>
+
+  <!-- group 1 -->
+  <rect x="16" y="158" width="272" height="88" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+  <text class="grp" x="152" y="184" text-anchor="middle" fill="#15803d">1er groupe</text>
+  <text class="ex" x="152" y="206" text-anchor="middle" fill="#166534">parler → nous parlons</text>
+  <text class="ex" x="152" y="223" text-anchor="middle" fill="#166534">manger, aimer, regarder…</text>
+  <text class="ex" x="152" y="240" text-anchor="middle" fill="#166534">about 90% of all French verbs</text>
+
+  <!-- the one deserter, hanging under group 1 and clear of the spine -->
+  <path d="M152,246 L152,258" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 3"/>
+  <rect x="16" y="258" width="272" height="48" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+  <text x="152" y="278" text-anchor="middle" font-size="12" font-weight="800" fill="#b45309">sauf ALLER</text>
+  <text class="ex" x="152" y="295" text-anchor="middle" fill="#92400e">-er, but irregular → 3e groupe</text>
+
+  <!-- q1 → NON, straight down the spine -->
+  <path class="flow" d="M320,128 L320,330"/>
+  <text class="yn" x="344" y="152" text-anchor="middle" fill="#dc2626">NON</text>
+
+  <!-- question 2 -->
+  <rect x="122" y="338" width="396" height="60" rx="10" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text class="q" x="320" y="362" text-anchor="middle">Avec « nous », ça fait -ISSONS ?</text>
+  <text class="ex" x="320" y="384" text-anchor="middle" fill="#64748b">the only test that works — the infinitive won't tell you</text>
+
+  <!-- q2 → OUI, left into group 2 -->
+  <path class="flow" d="M122,368 L84,368 L84,428"/>
+  <text class="yn" x="103" y="360" text-anchor="middle" fill="#16a34a">OUI</text>
+
+  <!-- group 2 -->
+  <rect x="16" y="436" width="272" height="92" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text class="grp" x="152" y="462" text-anchor="middle" fill="#1d4ed8">2e groupe</text>
+  <text class="ex" x="152" y="484" text-anchor="middle" fill="#1e40af">finir → nous finissons</text>
+  <text class="ex" x="152" y="501" text-anchor="middle" fill="#1e40af">choisir → nous choisissons</text>
+  <text class="ex" x="152" y="518" text-anchor="middle" fill="#1e40af">grandir → nous grandissons</text>
+
+  <!-- q2 → NON, right into group 3 -->
+  <path class="flow" d="M518,368 L556,368 L556,428"/>
+  <text class="yn" x="537" y="360" text-anchor="middle" fill="#dc2626">NON</text>
+
+  <!-- group 3 -->
+  <rect x="320" y="436" width="304" height="92" rx="12" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="2"/>
+  <text class="grp" x="472" y="462" text-anchor="middle" fill="#7c3aed">3e groupe</text>
+  <text class="ex" x="472" y="484" text-anchor="middle" fill="#6b21a8">partir → nous partons</text>
+  <text class="ex" x="472" y="501" text-anchor="middle" fill="#6b21a8">courir, venir, prendre,</text>
+  <text class="ex" x="472" y="518" text-anchor="middle" fill="#6b21a8">voir, faire, aller…</text>
+
+  <!-- footer -->
+  <rect x="16" y="544" width="608" height="44" rx="10" fill="#fef2f2"/>
+  <text x="320" y="564" text-anchor="middle" font-size="12.5" font-weight="700" fill="#991b1b">Attention : tous les verbes en -IR ne sont pas du 2e groupe.</text>
+  <text x="320" y="580" text-anchor="middle" font-size="12" fill="#7f1d1d">finir → nous finissons (2e) · partir → nous partons (3e). Same ending, different group.</text>
+</svg>

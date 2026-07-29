@@ -1017,26 +1017,72 @@
       { "fr": "mon mari / ma femme", "phonetic": "mohn ma-REE / mah FAM", "en": "my husband / my wife" },
       { "fr": "mon père / ma mère", "phonetic": "mohn PEHR / mah MEHR", "en": "my father / my mother" },
       { "fr": "mon frère / ma sœur", "phonetic": "mohn FREHR / mah SUR", "en": "my brother / my sister" },
+      { "fr": "mes parents / mes enfants", "phonetic": "may pa-RAHN / may zahn-FAHN", "en": "my parents / my children" },
+      { "fr": "mon amie", "phonetic": "mohn na-MEE", "en": "my friend (f.) — mon, not ma" },
       { "fr": "J'habite à Paris", "phonetic": "zha-BEET ah pa-REE", "en": "I live in Paris" },
       { "fr": "je travaille / je parle", "phonetic": "zhuh tra-VYE / zhuh PARL", "en": "I work / I speak" },
       { "fr": "je me lève", "phonetic": "zhuh muh LEV", "en": "I get up" },
       { "fr": "tous les jours / souvent", "phonetic": "too lay ZHOOR / soo-VAHN", "en": "every day / often" }
     ],
     "grammar": {
-      "point": "Present tense of -er verbs",
-      "table": {"cols": ["", "ending", "parler →"], "rows": [{"label": "je", "cells": ["-e", "parle"]}, {"label": "tu", "cells": ["-es", "parles"]}, {"label": "il / elle", "cells": ["-e", "parle"]}, {"label": "nous", "cells": ["-ons", "parlons"]}, {"label": "vous", "cells": ["-ez", "parlez"]}, {"label": "ils / elles", "cells": ["-ent", "parlent"]}], "highlight": ["-e", "-es", "-ons", "-ez", "-ent"], "note": "Drop -er, add the ending. -e / -es / -ent are all silent — « je parle », « tu parles », « ils parlent » sound identical; only nous and vous are heard."},
-      "explain": "Most French verbs end in -er. Drop the -er and add the ending for each person (see grid). The quirk to remember: the -e, -es and -ent endings are silent, so three of the six forms sound exactly the same."
+      "point": "mon, ma, mes — possessives agree with the thing owned, not the owner",
+      "table": {
+        "title": "picking between mon, ma and mes",
+        "cols": ["the thing owned", "you say", "example"],
+        "rows": [
+          { "label": "masculine", "cells": ["mon", "mon frère"] },
+          { "label": "feminine", "cells": ["ma", "ma sœur"] },
+          { "label": "plural (either)", "cells": ["mes", "mes parents"] },
+          { "label": "feminine, starts with a vowel", "cells": ["mon", "mon amie"] }
+        ],
+        "highlight": ["mon amie"],
+        "note": "The last row is the surprise: amie is feminine, but « ma amie » is unsayable, so French switches to mon for the liaison. Same for mon école, mon adresse."
+      },
+      "table2": {
+        "title": "the whole set",
+        "cols": ["", "masc.", "fem.", "plural"],
+        "rows": [
+          { "label": "my", "cells": ["mon", "ma", "mes"] },
+          { "label": "your (tu)", "cells": ["ton", "ta", "tes"] },
+          { "label": "his / her", "cells": ["son", "sa", "ses"] },
+          { "label": "our", "cells": ["notre", "notre", "nos"] },
+          { "label": "your (vous)", "cells": ["votre", "votre", "vos"] },
+          { "label": "their", "cells": ["leur", "leur", "leurs"] }
+        ],
+        "highlight": ["son", "sa", "ses"],
+        "note": "notre, votre and leur don't bother with gender — one form for masculine and feminine, and only the plural changes."
+      },
+      "explain": "The rule that catches every English speaker: a French possessive agrees with the thing being owned, not with the person who owns it. « mon frère » and « ma sœur » both mean my — the word changed because frère is masculine and sœur is feminine, not because of anything about me. Plural is mes for both genders. One extra wrinkle: a feminine word starting with a vowel takes mon rather than ma, purely so the two words can run together — mon amie, mon école. For the verbs in this lesson (habiter, travailler, parler), the -er endings are laid out in « The two patterns you can predict »."
     },
+    "notes": [
+      {
+        "title": "« sa femme » doesn't tell you whose",
+        "body": "Because the possessive agrees with the thing owned, son and sa carry no information about the owner. « sa femme » is his wife or her wife; « son mari » is her husband or his husband. If it genuinely matters, French adds « à lui » or « à elle » — but usually the context has already settled it."
+      },
+      {
+        "title": "mon / ton / son before a vowel",
+        "body": "It's not just mon. Any feminine word starting with a vowel takes the masculine-looking form: mon amie, ton école, son adresse. The word is still feminine — « mon amie est gentille », with the feminine adjective — only the possessive changed shape."
+      },
+      {
+        "title": "Where the verb endings live",
+        "body": "This lesson uses habiter, travailler and parler, all 1st group. If the endings aren't automatic yet, the full pattern for both regular groups is in « The two patterns you can predict — conjugating -er and -ir verbs », two lessons further on."
+      }
+    ],
     "examples": [
       "J'habite à Paris avec mon mari. Je parle anglais et un peu français.",
-      "Le matin, je me lève à sept heures et je travaille à la maison."
+      "Le matin, je me lève à sept heures et je travaille à la maison.",
+      "Ma sœur habite à Londres avec ses deux enfants. (say duh zahn-FAHN)",
+      "Mon amie Claire travaille à la mairie. (mohn na-MEE)",
+      "Nos parents viennent nous voir en août. (noh pa-RAHN)"
     ],
     "practice": [
-      "Introduce two members of your family.",
-      "Conjugate « parler » and « habiter » (je, tu, il, nous, vous, ils).",
-      "Describe your morning in three sentences using -er verbs."
+      "Introduce two members of your family, with the right possessive each time.",
+      "mon, ma or mes? « ___ père » · « ___ mère » · « ___ enfants » · « ___ amie » · « ___ famille ».",
+      "Say it in French: his sister, her sister. What do you notice?",
+      "Swap to « your (tu) »: mon frère → ___ , ma sœur → ___ , mes parents → ___ .",
+      "Describe your morning in three sentences, then say who else is in the house."
     ],
-    "tutorPrompt": "A1 French conversation. Ask me about my family and my daily routine, one simple question at a time (where I live, who I live with, what I do in a day). Stay in easy French and gently correct my -er verb conjugations. After about eight questions, give me feedback and five words to remember."
+    "tutorPrompt": "A1 French conversation about family and daily routine. Ask me about my family and my day, one simple question at a time (where I live, who I live with, what I do in a day). Drill the possessives hard while we talk: mon/ma/mes, ton/ta/tes, son/sa/ses, notre/nos, votre/vos, leur/leurs. Check I understand that the possessive agrees with the thing owned and not the owner — so « sa femme » can be his wife or her wife — and that feminine words starting with a vowel take mon/ton/son (mon amie, son école). Correct me every time I pick the wrong one. After about eight questions, give me feedback and five words to remember."
   },
   {
     "id": "a1-verbes-groupes",

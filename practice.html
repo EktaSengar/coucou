@@ -43,7 +43,9 @@ document.addEventListener('alpine:init', () => {
       if (q.get('go') === '1') this.start();
     },
 
-    get lessonsForLevel() { return this.all.filter(l => l.level === this.level); },
+    // Entries with no vocab of their own (the alphabet, which lives on its own
+    // page) would offer an empty deck, so they're not worth listing here.
+    get lessonsForLevel() { return this.all.filter(l => l.level === this.level && (l.vocab || []).length); },
     vocabOf(lesson) { return (lesson.vocab || []).map(v => ({ fr: v.fr, phonetic: v.phonetic || '', en: v.en, lessonTitle: lesson.title })); },
     get levelPool() { return this.lessonsForLevel.flatMap(l => this.vocabOf(l)); },
     buildPool() {

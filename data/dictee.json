@@ -28,6 +28,62 @@
     ]
   },
   {
+    "id": "a1-en-ville",
+    "level": "A1",
+    "theme": "Around town",
+    "title": "En ville",
+    "intro": "Places, shops and directions. Most of the marks here are in the little words — the article, and whether de merges with le.",
+    "sentences": [
+      { "fr": "La boulangerie est en face de la poste.", "en": "The bakery is opposite the post office.", "tip": "Every -erie shop is feminine, so « la boulangerie ». « en face de » stays separate before la." },
+      { "fr": "Tournez à gauche après l'église.", "en": "Turn left after the church.", "tip": "« à » takes the accent grave. église hides its gender behind l' — it's feminine." },
+      { "fr": "Il y a une pharmacie près du parc.", "en": "There's a pharmacy near the park.", "tip": "« près du » is près de + le, merged. Three separate words in « il y a »." },
+      { "fr": "Je vais à la mairie pour mes papiers.", "en": "I'm going to the town hall for my paperwork.", "tip": "à la, not au — mairie is feminine. mes because papiers is plural." },
+      { "fr": "Le musée est au troisième étage.", "en": "The museum is on the third floor.", "tip": "Ordinals end in -ième. « au » = à + le, and étage takes an accent aigu." }
+    ]
+  },
+  {
+    "id": "a1-transports",
+    "level": "A1",
+    "theme": "Getting around",
+    "title": "Les transports",
+    "intro": "The preposition is the whole game: en for transport you get inside, à for transport you sit on — and never an article after either.",
+    "sentences": [
+      { "fr": "Je vais au travail en bus.", "en": "I go to work by bus.", "tip": "« en bus » — no article. « en le bus » does not exist." },
+      { "fr": "Elle vient en voiture.", "en": "She's coming by car.", "tip": "vient ends in a silent -t. voiture has no circumflex." },
+      { "fr": "Nous allons à l'université à vélo.", "en": "We go to university by bike.", "tip": "Two different à in one sentence: « à l'université » is the place, « à vélo » is the transport." },
+      { "fr": "Tu rentres à pied ?", "en": "Are you walking home?", "tip": "The -es of rentres is silent but must be written. « à pied » stays singular." },
+      { "fr": "Ils prennent le tramway tous les matins.", "en": "They take the tram every morning.", "tip": "prennent — double n, and -ent is silent. With prendre the article comes back: le tramway." }
+    ]
+  },
+  {
+    "id": "a1-verbes-present",
+    "level": "A1",
+    "theme": "Verbs",
+    "title": "Le présent — les terminaisons muettes",
+    "intro": "The hardest dictation in French: endings you cannot hear but have to write. « il regarde » and « ils regardent » sound identical — only the sentence tells you which.",
+    "sentences": [
+      { "fr": "Je mange une pomme.", "en": "I'm eating an apple.", "tip": "The -e of mange is silent and still compulsory. 1st group." },
+      { "fr": "Ils regardent la télévision.", "en": "They're watching television.", "tip": "The classic trap: -ent is completely silent, so « regardent » sounds exactly like « regarde ». Only ils tells you." },
+      { "fr": "Nous finissons nos devoirs.", "en": "We're finishing our homework.", "tip": "2nd group: the -iss- shows up in the plural. nos, because devoirs is plural." },
+      { "fr": "Vous choisissez toujours la meilleure place.", "en": "You always choose the best seat.", "tip": "choisissez — the -iss- then -ez. meilleure takes two l and an -eure." },
+      { "fr": "Elle va à l'école tous les jours.", "en": "She goes to school every day.", "tip": "va has no -s. « tous les jours » — the s of tous is silent here." }
+    ]
+  },
+  {
+    "id": "a1-famille-possessifs",
+    "level": "A1",
+    "theme": "Family",
+    "title": "Ma famille",
+    "intro": "Possessives are chosen by the thing owned, not the owner — so listen to the noun, not to who's speaking.",
+    "sentences": [
+      { "fr": "Mon frère habite à Lyon avec sa femme.", "en": "My brother lives in Lyon with his wife.", "tip": "sa agrees with femme, not with the brother. That's why « sa femme » can be his or her wife." },
+      { "fr": "Ma sœur travaille à l'hôpital.", "en": "My sister works at the hospital.", "tip": "sœur uses the œ ligature. hôpital keeps its circumflex." },
+      { "fr": "Mes parents viennent nous voir en août.", "en": "My parents are coming to see us in August.", "tip": "mes for plural. viennent — double n and a silent -ent." },
+      { "fr": "Mon amie Claire est très gentille.", "en": "My friend Claire is very kind.", "tip": "mon amie, not ma amie — a feminine word starting with a vowel takes mon. But gentille stays feminine." },
+      { "fr": "Nos enfants vont à l'école du quartier.", "en": "Our children go to the local school.", "tip": "nos for plural. vont has no -ent. « du quartier » is de + le." }
+    ]
+  },
+  {
     "id": "a2-quotidien",
     "level": "A2",
     "theme": "Daily life",

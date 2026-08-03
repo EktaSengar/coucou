@@ -14,6 +14,34 @@
     ]
   },
   {
+    "id": "a1-directions",
+    "level": "A1",
+    "focus": "Asking the way & following instructions",
+    "title": "Demander son chemin",
+    "intro": "Directions come back at you as short commands. Copy them as whole chunks — that's how you'll recognise them in the street.",
+    "phrases": [
+      { "fr": "Excusez-moi, je cherche la gare.", "en": "Excuse me, I'm looking for the station.", "hint": "Excusez-moi runs together as one word: « eks-kew-zay-MWAH ». Stress lands on the last syllable, as always in French." },
+      { "fr": "Allez tout droit, puis tournez à droite.", "en": "Go straight ahead, then turn right.", "hint": "Two chunks with a small pause at the comma. The t of « tout » is silent before droit." },
+      { "fr": "Prenez la deuxième à gauche.", "en": "Take the second on the left.", "hint": "Give deuxième its full three beats — « duh-zee-EM ». Rushing the -ième is what makes it unintelligible." },
+      { "fr": "C'est loin ? Non, c'est tout près.", "en": "Is it far? No, it's very close.", "hint": "Rise on the question, fall on the answer. « près » ends on an open eh with a silent s." },
+      { "fr": "Traversez au passage clouté.", "en": "Cross at the zebra crossing.", "hint": "Traversez is three even syllables, « tra-ver-SAY ». Keep the r soft and at the back." }
+    ]
+  },
+  {
+    "id": "a1-verbes-liaisons",
+    "level": "A1",
+    "focus": "Liaisons in the present tense",
+    "title": "Les liaisons du présent",
+    "intro": "The plural verb forms are full of liaisons — and a silent ending right after. Get these five and « nous » and « vous » stop sounding foreign.",
+    "phrases": [
+      { "fr": "Nous allons au marché.", "en": "We're going to the market.", "hint": "nous‿allons — the s links across and turns into a z: « noo za-LOHN ». Never « noo a-LOHN »." },
+      { "fr": "Vous êtes prêts ?", "en": "Are you ready?", "hint": "vous‿êtes gives another z: « voo ZET ». One of the most common liaisons in the language." },
+      { "fr": "Ils ont deux enfants.", "en": "They have two children.", "hint": "Two liaisons in a row: ils‿ont and deux‿enfants — « eel ZOHN duh zahn-FAHN »." },
+      { "fr": "Nous faisons les courses.", "en": "We're doing the shopping.", "hint": "The odd one out: faisons is written with ai but said « fuh-ZOHN ». Never « feh-ZOHN »." },
+      { "fr": "Elles finissent à six heures.", "en": "They finish at six.", "hint": "The -ent is silent, so the word ends on the -iss sound. Then six‿heures links: « see ZUR »." }
+    ]
+  },
+  {
     "id": "a2-liaisons",
     "level": "A2",
     "focus": "Liaisons",

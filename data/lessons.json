@@ -1191,7 +1191,10 @@
       { "fr": "nous finissons / vous finissez / ils finissent", "phonetic": "noo fee-nee-SOHN / voo fee-nee-SAY / eel fee-NEESS", "en": "we / you / they finish", "emoji": "2️⃣" },
       { "fr": "je choisis / nous choisissons", "phonetic": "zhuh shwah-ZEE / noo shwah-zee-SOHN", "en": "I choose / we choose", "emoji": "✅" },
       { "fr": "je grandis / nous grandissons", "phonetic": "zhuh grahn-DEE / noo grahn-dee-SOHN", "en": "I grow / we grow", "emoji": "📏" },
-      { "fr": "je réussis / nous réussissons", "phonetic": "zhuh ray-ew-SEE / noo ray-ew-see-SOHN", "en": "I succeed / we succeed", "emoji": "🏆" }
+      { "fr": "je réussis / nous réussissons", "phonetic": "zhuh ray-ew-SEE / noo ray-ew-see-SOHN", "en": "I succeed / we succeed", "emoji": "🏆" },
+      { "fr": "j'obéis / nous obéissons", "phonetic": "zho-bay-EE / noo zo-bay-ee-SOHN", "en": "I obey / we obey (obéir à)", "emoji": "🙇" },
+      { "fr": "mes devoirs", "phonetic": "may duh-VWAHR", "en": "my homework", "emoji": "📓" },
+      { "fr": "les élèves", "phonetic": "lay zay-LEV", "en": "the pupils", "emoji": "🎒" }
     ],
     "grammar": {
       "point": "Two sets of endings — learn them once and they never change",
@@ -1237,6 +1240,10 @@
       {
         "title": "Two spelling guards in the 1st group",
         "body": "Verbs in -ger keep the e before -ons (nous mangeons, nous voyageons) and verbs in -cer take a cedilla (nous commençons, nous avançons). Without them the g and c would harden into « gons » and « kons » and the word would sound wrong."
+      },
+      {
+        "title": "obéir takes à",
+        "body": "You obey *to* someone in French: « il n'obéit pas à ses parents ». The verb is a perfectly regular 2nd-group verb — j'obéis, nous obéissons — but the à is not optional, and English speakers drop it constantly. Same shape as répondre à and téléphoner à."
       }
     ],
     "examples": [
@@ -1245,7 +1252,10 @@
       "Nous commençons le cours à neuf heures. (noo ko-mahn-SOHN)",
       "Ils choisissent toujours le même restaurant. (eel shwah-ZEESS)",
       "Nous finissons le travail à dix-huit heures. (noo fee-nee-SOHN)",
-      "Tu grandis vite ! (tew grahn-DEE VEET)"
+      "Tu grandis vite ! (tew grahn-DEE VEET)",
+      "Les élèves finissent l'exercice de mathématiques. (lay zay-LEV fee-NEESS)",
+      "Il n'obéit pas à ses parents. (eel no-bay-EE pah ah say pa-RAHN)",
+      "Ma fille grandit de cinq centimètres par an ! (grahn-DEE duh sank sahn-tee-METR)"
     ],
     "practice": [
       "Conjugate regarder out loud, all six forms, then choisir.",
@@ -1260,14 +1270,16 @@
     "id": "a1-verbes-essentiels",
     "level": "A1",
     "module": "Survival basics",
-    "title": "The four verbs you can't avoid — être, avoir, faire, prendre",
-    "minutes": 25,
-    "goal": "Conjugate the four verbs that turn up in almost every French sentence, and spot the endings they share so there's less to memorise.",
+    "title": "The five verbs you can't avoid — être, avoir, aller, faire, prendre",
+    "minutes": 28,
+    "goal": "Conjugate the five verbs that turn up in almost every French sentence, and spot the endings they share so there's less to memorise.",
     "vocab": [
       { "fr": "je suis / tu es / il est", "phonetic": "zhuh SWEE / tew EH / eel EH", "en": "I am / you are / he is", "emoji": "🟦" },
       { "fr": "nous sommes / vous êtes / ils sont", "phonetic": "noo SOM / voo ZET / eel SOHN", "en": "we are / you are / they are", "emoji": "🟦" },
       { "fr": "j'ai / tu as / il a", "phonetic": "zhay / tew AH / eel AH", "en": "I have / you have / he has", "emoji": "🟩" },
       { "fr": "nous avons / vous avez / ils ont", "phonetic": "noo za-VOHN / voo za-VAY / eel ZOHN", "en": "we have / you have / they have", "emoji": "🟩" },
+      { "fr": "je vais / tu vas / il va", "phonetic": "zhuh VEH / tew VAH / eel VAH", "en": "I go / you go / he goes", "emoji": "🟨" },
+      { "fr": "nous allons / vous allez / ils vont", "phonetic": "noo za-LOHN / voo za-LAY / eel VOHN", "en": "we go / you go / they go", "emoji": "🟨" },
       { "fr": "je fais / tu fais / il fait", "phonetic": "zhuh FEH / tew FEH / eel FEH", "en": "I do / you do / he does", "emoji": "🟧" },
       { "fr": "nous faisons / vous faites / ils font", "phonetic": "noo fuh-ZOHN / voo FET / eel FOHN", "en": "we do / you do / they do", "emoji": "🟧" },
       { "fr": "je prends / tu prends / il prend", "phonetic": "zhuh PRAHN / tew PRAHN / eel PRAHN", "en": "I take / you take / he takes", "emoji": "🟪" },
@@ -1275,23 +1287,26 @@
       { "fr": "J'ai trente ans.", "phonetic": "zhay TRAHNT ahn", "en": "I'm thirty. (avoir, not être)", "emoji": "🎂" },
       { "fr": "Je suis en retard.", "phonetic": "zhuh swee zahn ruh-TAR", "en": "I'm late.", "emoji": "⏰" },
       { "fr": "Il fait froid.", "phonetic": "eel feh FRWAH", "en": "It's cold. (faire for weather)", "emoji": "🥶" },
-      { "fr": "Je prends le bus.", "phonetic": "zhuh prahn luh BEWSS", "en": "I take the bus.", "emoji": "🚌" }
+      { "fr": "Je prends le bus.", "phonetic": "zhuh prahn luh BEWSS", "en": "I take the bus.", "emoji": "🚌" },
+      { "fr": "Elle va à l'école.", "phonetic": "el vah ah lay-KOL", "en": "She goes to school.", "emoji": "🏫" },
+      { "fr": "Je vais manger.", "phonetic": "zhuh veh mahn-ZHAY", "en": "I'm going to eat. (aller + infinitive)", "emoji": "🔜" },
+      { "fr": "Il est en train de travailler.", "phonetic": "eel eh tahn tran duh tra-va-YAY", "en": "He's in the middle of working.", "emoji": "⏳" }
     ],
     "grammar": {
-      "point": "Four irregular verbs — but the endings rhyme more than they look",
+      "point": "Five irregular verbs — but the endings rhyme more than they look",
       "table": {
-        "title": "être & avoir",
-        "cols": ["", "être (be)", "avoir (have)"],
+        "title": "être, avoir & aller — the three that build other tenses",
+        "cols": ["", "être (be)", "avoir (have)", "aller (go)"],
         "rows": [
-          { "label": "je", "cells": ["suis", "ai"] },
-          { "label": "tu", "cells": ["es", "as"] },
-          { "label": "il / elle / on", "cells": ["est", "a"] },
-          { "label": "nous", "cells": ["sommes", "avons"] },
-          { "label": "vous", "cells": ["êtes", "avez"] },
-          { "label": "ils / elles", "cells": ["sont", "ont"] }
+          { "label": "je", "cells": ["suis", "ai", "vais"] },
+          { "label": "tu", "cells": ["es", "as", "vas"] },
+          { "label": "il / elle / on", "cells": ["est", "a", "va"] },
+          { "label": "nous", "cells": ["sommes", "avons", "allons"] },
+          { "label": "vous", "cells": ["êtes", "avez", "allez"] },
+          { "label": "ils / elles", "cells": ["sont", "ont", "vont"] }
         ],
-        "highlight": ["sommes", "êtes", "sont", "ont"],
-        "note": "être and avoir are the two most irregular verbs in the language — and the two you need first, because they also build the past tense."
+        "highlight": ["sommes", "êtes", "sont", "ont", "vont"],
+        "note": "These three carry the rest of the language: être and avoir build the passé composé, and aller builds the near future. Learn them before anything else."
       },
       "table2": {
         "title": "faire & prendre",
@@ -1307,7 +1322,7 @@
         "highlight": ["faisons", "faites", "font", "prennent"],
         "note": "je fais, tu fais, il fait all sound the same, and so do the three singular forms of prendre — the difference is only on the page."
       },
-      "explain": "These four carry an enormous share of everyday French, and all four are 3rd group. Look for the pattern rather than memorising thirty forms: nous almost always ends -ons and vous almost always -ez, so the forms worth real attention are the handful that break it — vous êtes, vous faites, ils sont, ils ont, ils font. Notice too that the singular forms of faire and prendre are pronounced identically across je, tu and il, so listening won't tell you which one you heard; the sentence around it will. And « nous faisons » is a pronunciation trap: written ai, spoken « fuh-ZOHN »."
+      "explain": "These five carry an enormous share of everyday French, and all five are 3rd group. Look for the pattern rather than memorising thirty-odd forms: nous almost always ends -ons and vous almost always -ez, so the forms worth real attention are the handful that break it — vous êtes, vous faites, ils sont, ils ont, ils font, ils vont. Notice too that the singular forms of faire and prendre are pronounced identically across je, tu and il, so listening won't tell you which one you heard; the sentence around it will. Two pronunciation traps: « nous faisons » is written with ai but spoken « fuh-ZOHN », and aller's nous and vous forms take a liaison — « nous allons » is « noo za-LOHN »."
     },
     "notes": [
       {
@@ -1321,6 +1336,14 @@
       {
         "title": "faire does the weather and the chores",
         "body": "French reaches for faire where English uses other verbs: il fait beau (the weather is nice), faire les courses (do the shopping), faire la cuisine (cook), faire du vélo (go cycling). If an activity has no obvious verb, faire is usually the answer."
+      },
+      {
+        "title": "aller has two jobs",
+        "body": "It means go — « elle va à l'école » — and it also builds the near future when you put an infinitive after it: « je vais manger », I'm going to eat. Exactly like English. It's also the verb that ends in -er and still isn't 1st group, which is why it turns up as the exception in the verb-groups lesson."
+      },
+      {
+        "title": "« être en train de » = right now",
+        "body": "French has no separate « I am working » form — « je travaille » covers both I work and I am working. When you need to stress that it's happening at this moment, use être en train de + infinitive: « il est en train de travailler », he's in the middle of working. Useful, but don't overuse it — the plain present is normally enough."
       }
     ],
     "examples": [
@@ -1329,16 +1352,19 @@
       "Ils ont deux enfants. (eel ZOHN duh zahn-FAHN)",
       "Qu'est-ce que vous faites ce soir ? (kess kuh voo FET suh SWAHR)",
       "Nous faisons les courses le samedi. (noo fuh-ZOHN lay KOORSS)",
-      "Ils prennent le train de huit heures. (eel PREN luh tran)"
+      "Ils prennent le train de huit heures. (eel PREN luh tran)",
+      "Nous allons chez nos parents ce week-end. (noo za-LOHN shay noh pa-RAHN)",
+      "Qu'est-ce que tu vas faire demain ? (kess kuh tew vah FEHR duh-MAN)"
     ],
     "practice": [
-      "Conjugate être out loud, all six forms, then avoir.",
+      "Conjugate être out loud, all six forms, then avoir, then aller.",
       "être or avoir? « Je ___ trente ans » · « Je ___ français » · « J'___ froid » · « Il ___ en retard ».",
-      "Fill in: nous ___ (faire) du vélo · vous ___ (faire) la cuisine · ils ___ (prendre) le métro.",
+      "Fill in: nous ___ (faire) du vélo · vous ___ (faire) la cuisine · ils ___ (prendre) le métro · elle ___ (aller) à l'école.",
       "Which three verbs take vous -es instead of -ez?",
-      "Say three true sentences about today using faire, and two using prendre."
+      "Turn these into the near future with aller: « je mange » → ___ · « nous partons » → ___ .",
+      "Say three true sentences about today using faire, and two about tomorrow using aller."
     ],
-    "tutorPrompt": "Be my A1 French tutor for the four essential irregular verbs in the present tense: être, avoir, faire and prendre. Drill all six forms of each, then mix them in sentences. Test the traps specifically: age and bodily states take avoir (j'ai trente ans, j'ai faim, j'ai froid) while weather takes faire (il fait froid, il fait beau); vous êtes / vous faites are the -es exceptions, not « vous faisez »; nous faisons is pronounced « fuh-ZOHN » not « feh-ZOHN »; and the singular forms of faire and prendre sound identical so I need context. Also drill the faire expressions: faire les courses, faire la cuisine, faire du vélo. Ask me questions that force each verb out of me and correct every form. Finish with the forms I keep missing."
+    "tutorPrompt": "Be my A1 French tutor for the five essential irregular verbs in the present tense: être, avoir, aller, faire and prendre. Drill all six forms of each, then mix them in sentences. Test the traps specifically: age and bodily states take avoir (j'ai trente ans, j'ai faim, j'ai froid) while weather takes faire (il fait froid, il fait beau); vous êtes / vous faites are the -es exceptions, not « vous faisez »; nous faisons is pronounced « fuh-ZOHN » not « feh-ZOHN »; nous allons and vous allez take a liaison, « noo za-LOHN »; and the singular forms of faire and prendre sound identical so I need context. Make me use aller both ways — to go somewhere (elle va à l'école) and to build the near future (je vais manger). Also drill the faire expressions: faire les courses, faire la cuisine, faire du vélo, and « être en train de » for something happening right now. Ask me questions that force each verb out of me and correct every form. Finish with the forms I keep missing."
   },
   {
     "id": "a2-01-past-avoir",
@@ -1424,8 +1450,21 @@
     ],
     "grammar": {
       "point": "Le futur proche: aller + infinitive",
-      "table": {"cols": ["subject", "aller (present)"], "rows": [{"label": "je", "cells": ["vais"]}, {"label": "tu", "cells": ["vas"]}, {"label": "il / elle", "cells": ["va"]}, {"label": "nous", "cells": ["allons"]}, {"label": "vous", "cells": ["allez"]}, {"label": "ils / elles", "cells": ["vont"]}], "note": "Le futur proche = this + an infinitive, exactly like « going to »: « Demain, je vais travailler » = Tomorrow I'm going to work."},
-      "explain": "For the near future, use aller in the present (grid) + an infinitive — just like English 'going to': « je vais manger », « on va voir ». It's quick and everywhere in speech."
+      "table": {
+        "title": "aller in the present, then the infinitive",
+        "cols": ["", "aller + infinitive"],
+        "rows": [
+          { "label": "je", "cells": ["vais travailler"] },
+          { "label": "tu", "cells": ["vas travailler"] },
+          { "label": "il / elle / on", "cells": ["va travailler"] },
+          { "label": "nous", "cells": ["allons travailler"] },
+          { "label": "vous", "cells": ["allez travailler"] },
+          { "label": "ils / elles", "cells": ["vont travailler"] }
+        ],
+        "highlight": ["vont travailler"],
+        "note": "Only aller changes — the second verb stays in the infinitive every time. « Demain, je vais travailler » = Tomorrow I'm going to work."
+      },
+      "explain": "For the near future, use aller in the present + an infinitive — just like English 'going to': « je vais manger », « on va voir ». It's quick and everywhere in speech. Note that only the first verb moves; the second never changes. To make it negative, wrap the ne… pas around aller alone: « je ne vais pas travailler ». If aller's own forms aren't automatic yet, they're drilled in « The five verbs you can't avoid » back in A1."
     },
     "examples": [
       "Ce soir, on va voir un film. (suh swahr, ohn va vwahr uhn FEELM)",
@@ -1433,7 +1472,7 @@
     ],
     "practice": [
       "Say three things you're going to do tomorrow with « je vais… ».",
-      "Conjugate « aller »: je, tu, il, nous, vous, ils.",
+      "Make them negative: « je vais sortir » → « je ne ___ ___ sortir ».",
       "Ask « Qu'est-ce que tu vas faire ce week-end ? » and answer it."
     ],
     "tutorPrompt": "Be my A2 French tutor on the futur proche (aller + infinitive). Ask me about my plans for tomorrow, this weekend and next week, one simple question at a time. Correct my use of aller + infinitive. After eight exchanges, list useful time expressions (demain, ce soir, la semaine prochaine…)."

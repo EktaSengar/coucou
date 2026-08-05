@@ -42,6 +42,20 @@
     ]
   },
   {
+    "id": "a1-negation-parlee",
+    "level": "A1",
+    "focus": "Negation as people actually say it",
+    "title": "Dire non à l'oral",
+    "intro": "In speech the ne almost vanishes. Copy the spoken version here — but keep writing the ne everywhere else.",
+    "phrases": [
+      { "fr": "Je ne sais pas.", "en": "I don't know.", "hint": "Said in full it's « zhuh nuh seh PAH ». At speed it collapses to « shay PAH » — both are worth being able to say." },
+      { "fr": "Ce n'est pas grave.", "en": "It doesn't matter.", "hint": "Very common, very fast: « seh pah GRAHV ». The n' disappears completely in casual speech." },
+      { "fr": "Je n'ai plus faim, merci.", "en": "I'm not hungry anymore, thanks.", "hint": "The s of plus is silent here — « plew », not « plewss ». Getting that wrong changes the meaning." },
+      { "fr": "Ne t'inquiète pas.", "en": "Don't worry.", "hint": "Four syllables run together: « nuh tan-kee-ET pah ». The nasal in -quiète is the tricky bit." },
+      { "fr": "Plus maintenant.", "en": "Not anymore.", "hint": "A whole answer in two words. Falling tone, and again the silent s: « plew mant-NAHN »." }
+    ]
+  },
+  {
     "id": "a2-liaisons",
     "level": "A2",
     "focus": "Liaisons",

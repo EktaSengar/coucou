@@ -84,6 +84,34 @@
     ]
   },
   {
+    "id": "a1-negation",
+    "level": "A1",
+    "theme": "Negation",
+    "title": "Dire non",
+    "intro": "The ne is barely audible in normal speech — but it always has to be written. That's the whole exercise.",
+    "sentences": [
+      { "fr": "Je ne veux pas aller là-bas.", "en": "I don't want to go there.", "tip": "Both halves: ne before the verb, pas after. « là-bas » takes a hyphen and an accent grave." },
+      { "fr": "Ne pas marcher sur le gazon.", "en": "Do not walk on the grass.", "tip": "No conjugated verb, so ne and pas stay together in front of the infinitive. The sign form." },
+      { "fr": "Elle n'a plus faim.", "en": "She isn't hungry anymore.", "tip": "ne shortens to n' before a vowel. plus for « anymore » — and no article before faim." },
+      { "fr": "Je ne mange pas de fromage.", "en": "I don't eat cheese.", "tip": "After a negative, du collapses to a bare de. Never « pas du fromage » here." },
+      { "fr": "Il n'y a personne dans la rue.", "en": "There's nobody in the street.", "tip": "personne replaces pas as the second half. « il n'y a » — three little words, easy to run together." }
+    ]
+  },
+  {
+    "id": "a1-visage",
+    "level": "A1",
+    "theme": "The face",
+    "title": "Le visage",
+    "intro": "Describing a face, and the article traps that come with it. Listen for whether the noun is singular or plural — the sound often won't tell you.",
+    "sentences": [
+      { "fr": "Elle a les yeux bleus et les cheveux courts.", "en": "She has blue eyes and short hair.", "tip": "les, not ses — French uses the definite article for body parts. bleus and courts both take the plural -s." },
+      { "fr": "J'entends la musique mais je n'écoute pas.", "en": "I can hear the music but I'm not listening.", "tip": "entends ends in a silent -s. n'écoute — the apostrophe replaces the e of ne." },
+      { "fr": "Il a mal à la tête depuis ce matin.", "en": "He's had a headache since this morning.", "tip": "« à la tête », never « à sa tête ». depuis, not depuit." },
+      { "fr": "Nous voyons la mer depuis la fenêtre.", "en": "We can see the sea from the window.", "tip": "voir becomes voy- at nous. « la mer » — the sea, not la mère." },
+      { "fr": "Ça sent bon dans la cuisine.", "en": "It smells good in the kitchen.", "tip": "sent with a silent -t. bon stays masculine singular here — it's describing the smell, not the kitchen." }
+    ]
+  },
+  {
     "id": "a2-quotidien",
     "level": "A2",
     "theme": "Daily life",

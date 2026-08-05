@@ -165,9 +165,32 @@
       { "fr": "D'accord", "phonetic": "da-KOR", "en": "OK / agreed" }
     ],
     "grammar": {
-      "point": "Negation: ne … pas",
-      "explain": "Wrap ne … pas around the verb: je comprends → je ne comprends pas; je sais → je ne sais pas. In everyday speech people often drop the « ne »: « je sais pas »."
+      "point": "vous or tu — choosing wrong is the mistake people notice",
+      "table": {
+        "title": "who gets which",
+        "cols": ["you're talking to", "use", "example"],
+        "rows": [
+          { "label": "a stranger, a shopkeeper", "cells": ["vous", "Vous parlez anglais ?"] },
+          { "label": "someone older, a boss", "cells": ["vous", "Vous avez l'heure ?"] },
+          { "label": "a friend, family", "cells": ["tu", "Tu parles anglais ?"] },
+          { "label": "a child", "cells": ["tu", "Tu t'appelles comment ?"] },
+          { "label": "more than one person", "cells": ["vous", "Vous venez ?"] }
+        ],
+        "highlight": ["vous"],
+        "note": "vous does two jobs — polite singular and plural — so a group always takes vous, however well you know them. With any adult you don't know, start with vous."
+      },
+      "explain": "French makes you choose how formal to be every time you say « you ». vous is polite and also plural; tu is for friends, family, children and animals. Getting it wrong is noticeable in both directions: tu to a stranger sounds over-familiar, and vous to a close friend sounds cold. The safe default with an adult you don't know is vous — they will tell you when to switch. Note the verb changes with it: « vous parlez » but « tu parles »."
     },
+    "notes": [
+      {
+        "title": "How the switch happens",
+        "body": "Someone will usually offer: « On peut se tutoyer ? » or just « On se tutoie ». Say « oui, avec plaisir » and you're on tu from then on. Let the older person, or the one in charge, make the offer — and don't switch back."
+      },
+      {
+        "title": "Saying no lives in its own lesson",
+        "body": "« Je ne comprends pas » and « je ne sais pas » both use ne … pas. The full pattern — including the version on every French sign, « Ne pas marcher sur le gazon » — is in « Saying no », the next lesson."
+      }
+    ],
     "examples": [
       "— Excusez-moi, vous pouvez répéter, s'il vous plaît ? — Bien sûr !",
       "— Merci beaucoup ! — De rien."
@@ -177,7 +200,88 @@
       "Say you don't understand, then ask if they speak English.",
       "Make three sentences negative using ne … pas."
     ],
-    "tutorPrompt": "Be my French tutor at A1. Speak only simple French, and deliberately use a few phrases I might not know so I have to say « je ne comprends pas » or ask you to repeat. Coach me to stay polite (merci, s'il vous plaît, pardon). After six exchanges, summarise the polite phrases I should memorise."
+    "tutorPrompt": "Be my French tutor at A1. Speak only simple French, and deliberately use a few phrases I might not know so I have to say « je ne comprends pas » or ask you to repeat. Coach me to stay polite (merci, s'il vous plaît, pardon). After six exchanges, summarise the polite phrases I should memorise. Also correct me whenever I mix up tu and vous — I should default to vous with anyone I don't know."
+  },
+  {
+    "id": "a1-negation",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Saying no — ne… pas and ne… plus",
+    "minutes": 20,
+    "goal": "Make any sentence negative, read the « Ne pas… » signs that are everywhere in France, and say « not anymore » with one word swap.",
+    "vocab": [
+      { "fr": "Je ne veux pas.", "phonetic": "zhuh nuh vuh PAH", "en": "I don't want to.", "emoji": "🙅" },
+      { "fr": "Je ne sais pas.", "phonetic": "zhuh nuh seh PAH", "en": "I don't know.", "emoji": "🤷" },
+      { "fr": "Je ne comprends pas.", "phonetic": "zhuh nuh kohn-prahn PAH", "en": "I don't understand.", "emoji": "❓" },
+      { "fr": "Ce n'est pas grave.", "phonetic": "suh neh pah GRAHV", "en": "It doesn't matter. / No worries.", "emoji": "👌" },
+      { "fr": "Ne pas marcher sur le gazon.", "phonetic": "nuh pah mar-SHAY sewr luh ga-ZOHN", "en": "Do not walk on the grass. (a sign)", "emoji": "🚫" },
+      { "fr": "Ne marche pas !", "phonetic": "nuh MARSH pah", "en": "Don't walk! (to tu)", "emoji": "✋" },
+      { "fr": "Ne marchez pas !", "phonetic": "nuh mar-SHAY pah", "en": "Don't walk! (to vous)", "emoji": "✋" },
+      { "fr": "Je ne veux plus.", "phonetic": "zhuh nuh vuh PLEW", "en": "I don't want to anymore.", "emoji": "🔚" },
+      { "fr": "Je n'ai plus faim.", "phonetic": "zhuh nay plew FAN", "en": "I'm not hungry anymore.", "emoji": "🍽️" },
+      { "fr": "Plus maintenant.", "phonetic": "plew mant-NAHN", "en": "Not anymore. (on its own)", "emoji": "⏹️" },
+      { "fr": "ne… jamais", "phonetic": "nuh… zha-MEH", "en": "never", "emoji": "🚷" },
+      { "fr": "ne… rien / ne… personne", "phonetic": "nuh… ree-AN / nuh… per-SON", "en": "nothing / nobody", "emoji": "🕳️" }
+    ],
+    "grammar": {
+      "point": "ne … pas wraps around the verb — unless there's no conjugated verb to wrap",
+      "table": {
+        "title": "the three places it turns up",
+        "cols": ["where", "you say", "meaning"],
+        "rows": [
+          { "label": "an ordinary sentence", "cells": ["Je ne veux pas.", "I don't want to."] },
+          { "label": "an infinitive (signs, notices)", "cells": ["Ne pas marcher sur le gazon.", "Do not walk on the grass."] },
+          { "label": "an order, to tu", "cells": ["Ne marche pas !", "Don't walk!"] },
+          { "label": "an order, to vous", "cells": ["Ne marchez pas !", "Don't walk!"] },
+          { "label": "an order, to nous", "cells": ["Ne marchons pas !", "Let's not walk."] }
+        ],
+        "highlight": ["Ne pas marcher sur le gazon."],
+        "note": "With a conjugated verb the two halves split around it. With an infinitive they stay glued together in front — which is why every sign in France reads « Ne pas… »."
+      },
+      "table2": {
+        "title": "swap one word and « not » becomes « not anymore »",
+        "cols": ["", "ne… pas", "ne… plus"],
+        "rows": [
+          { "label": "ordinary", "cells": ["Je ne veux pas.", "Je ne veux plus."] },
+          { "label": "infinitive", "cells": ["Ne pas jeter.", "Ne plus jeter."] },
+          { "label": "on its own", "cells": ["Pas du tout.", "Plus maintenant."] }
+        ],
+        "highlight": ["Je ne veux plus.", "Plus maintenant."],
+        "note": "Everything stays exactly where it was — only pas changes to plus. Careful with the sound: the s of plus is silent here, « plew »."
+      },
+      "explain": "French negation comes in two pieces, ne and pas, and they go either side of the verb: « je veux » → « je ne veux pas ». Before a vowel ne shortens to n' — « je n'ai pas ». Two situations change the shape. ① If there is no conjugated verb, only an infinitive, the two pieces stay together in front of it: « Ne pas marcher sur le gazon », « Ne pas fumer ». This is the form on notices and instructions, so you will read it far more often than you say it. ② In an order there is no subject, but the verb is still conjugated, so it splits as normal: « Ne marche pas ! ». Finally, swapping pas for plus turns « not » into « not anymore » in every one of those shapes."
+    },
+    "notes": [
+      {
+        "title": "The « ne » disappears when people speak",
+        "body": "In conversation the ne is usually dropped: « je sais pas », « j'ai pas faim », « c'est pas grave ». Understand it, and feel free to say it — but always write the ne. Leaving it out in the DELF written paper costs marks."
+      },
+      {
+        "title": "After a negative, du/de la/des becomes de",
+        "body": "« Je mange du pain » → « Je ne mange pas de pain ». « J'ai des frères » → « Je n'ai pas de frères ». The article collapses to a bare de, and this catches people out constantly. It's drilled in the food lesson."
+      },
+      {
+        "title": "Same frame, other words",
+        "body": "The ne … ___ frame takes more than pas and plus: ne… jamais (never), ne… rien (nothing), ne… personne (nobody), ne… que (only). « Je ne mange jamais de viande », « il n'y a personne ». Learn the frame once and these come free."
+      }
+    ],
+    "examples": [
+      "Je ne veux pas aller là-bas. (zhuh nuh vuh pah za-LAY lah-BAH)",
+      "Ne pas marcher sur le gazon. (nuh pah mar-SHAY sewr luh ga-ZOHN)",
+      "Merci de ne plus jeter vos déchets dans la poubelle jaune. (duh nuh plew zhuh-TAY)",
+      "— Tu es énervé ? — Plus maintenant. (plew mant-NAHN)",
+      "Ne t'inquiète pas, ce n'est pas grave. (nuh tan-kee-ET pah)",
+      "Il n'y a personne dans la rue. (eel nee ah per-SON)"
+    ],
+    "practice": [
+      "Make these negative: « Je comprends » · « Elle vient » · « Nous allons au marché ».",
+      "Write the sign: do not smoke here → « ___ fumer ici ».",
+      "Same order, three people: « Ne marche pas ! » → to vous ___ , to nous ___ .",
+      "Swap to « not anymore »: « Je ne travaille pas ici » → ___ .",
+      "Answer with one phrase: « Tu as encore faim ? » → ___ .",
+      "Careful with de: « Je mange du fromage » → negative → ___ ."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for negation. Drill ne … pas in all three shapes: an ordinary sentence (je ne veux pas), an infinitive as on a sign (Ne pas marcher sur le gazon, Ne pas fumer), and an order (Ne marche pas ! / Ne marchez pas ! / Ne marchons pas !). Then drill ne … plus for « not anymore », including « Plus maintenant » as a standalone answer, and check I know the s of plus is silent there. Test two traps hard: after a negative, du/de la/des collapses to de (je ne mange pas de pain), and ne shortens to n' before a vowel. Also mention that the ne is dropped in speech but must be written. Give me affirmative sentences to turn negative, and read me signs to translate. Correct every attempt and finish with what I keep getting wrong."
   },
   {
     "id": "a1-pronouns-subject-tonic",
@@ -1365,6 +1469,107 @@
       "Say three true sentences about today using faire, and two about tomorrow using aller."
     ],
     "tutorPrompt": "Be my A1 French tutor for the five essential irregular verbs in the present tense: être, avoir, aller, faire and prendre. Drill all six forms of each, then mix them in sentences. Test the traps specifically: age and bodily states take avoir (j'ai trente ans, j'ai faim, j'ai froid) while weather takes faire (il fait froid, il fait beau); vous êtes / vous faites are the -es exceptions, not « vous faisez »; nous faisons is pronounced « fuh-ZOHN » not « feh-ZOHN »; nous allons and vous allez take a liaison, « noo za-LOHN »; and the singular forms of faire and prendre sound identical so I need context. Make me use aller both ways — to go somewhere (elle va à l'école) and to build the near future (je vais manger). Also drill the faire expressions: faire les courses, faire la cuisine, faire du vélo, and « être en train de » for something happening right now. Ask me questions that force each verb out of me and correct every form. Finish with the forms I keep missing."
+  },
+  {
+    "id": "a1-visage",
+    "level": "A1",
+    "module": "Survival basics",
+    "title": "Le visage — the face & the verbs of the senses",
+    "minutes": 22,
+    "goal": "Name every part of a face, describe someone so they'd be recognised, and use the five verbs of perception — including the pairs French keeps apart that English doesn't.",
+    "figures": [
+      {
+        "src": "./assets/img/visage.svg?v=1",
+        "alt": "A labelled face showing les cheveux, le crâne, le front, le sourcil, l'œil, le nez, l'oreille, la narine, la joue, les lèvres, la bouche, le menton and le cou",
+        "caption": "Thirteen labels, and one completely irregular plural: un œil becomes des yeux — no other word in the lesson changes shape like that."
+      }
+    ],
+    "vocab": [
+      { "fr": "le visage", "phonetic": "luh vee-ZAHZH", "en": "the face", "emoji": "🙂" },
+      { "fr": "les cheveux", "phonetic": "lay shuh-VUH", "en": "the hair (always plural)", "emoji": "💇" },
+      { "fr": "le crâne", "phonetic": "luh KRAHN", "en": "the skull", "emoji": "💀" },
+      { "fr": "le front", "phonetic": "luh FROHN", "en": "the forehead", "emoji": "🧑" },
+      { "fr": "le sourcil", "phonetic": "luh soor-SEE", "en": "the eyebrow (the l is silent)", "emoji": "🤨" },
+      { "fr": "un œil / des yeux", "phonetic": "uhn UY / day ZYUH", "en": "an eye / eyes — fully irregular", "emoji": "👁️" },
+      { "fr": "l'oreille", "phonetic": "lo-REY", "en": "the ear", "emoji": "👂" },
+      { "fr": "le nez", "phonetic": "luh NAY", "en": "the nose (the z is silent)", "emoji": "👃" },
+      { "fr": "la narine", "phonetic": "lah na-REEN", "en": "the nostril", "emoji": "👃" },
+      { "fr": "la joue", "phonetic": "lah ZHOO", "en": "the cheek", "emoji": "😊" },
+      { "fr": "la pommette", "phonetic": "lah po-MET", "en": "the cheekbone", "emoji": "😊" },
+      { "fr": "la bouche", "phonetic": "lah BOOSH", "en": "the mouth", "emoji": "👄" },
+      { "fr": "les lèvres", "phonetic": "lay LEV-ruh", "en": "the lips", "emoji": "💋" },
+      { "fr": "le menton", "phonetic": "luh mahn-TOHN", "en": "the chin", "emoji": "🧔" },
+      { "fr": "le cou", "phonetic": "luh KOO", "en": "the neck", "emoji": "🧣" },
+      { "fr": "la nuque", "phonetic": "lah NEWK", "en": "the nape of the neck", "emoji": "🧣" },
+      { "fr": "la barbe / la moustache", "phonetic": "lah BARB / lah moo-STASH", "en": "the beard / the moustache", "emoji": "🧔" },
+      { "fr": "j'entends / je sens / je vois", "phonetic": "zhahn-TAHN / zhuh SAHN / zhuh VWAH", "en": "I hear / I smell / I see", "emoji": "🖐️" }
+    ],
+    "grammar": {
+      "point": "Five senses, five body parts, five verbs",
+      "table": {
+        "title": "the sense, the part, the verb",
+        "cols": ["sense", "the part", "the verb"],
+        "rows": [
+          { "label": "la vue", "cells": ["les yeux", "voir"] },
+          { "label": "l'ouïe", "cells": ["les oreilles", "entendre"] },
+          { "label": "l'odorat", "cells": ["le nez", "sentir"] },
+          { "label": "le goût", "cells": ["la bouche", "goûter"] },
+          { "label": "le toucher", "cells": ["la main", "toucher"] }
+        ],
+        "highlight": ["voir", "entendre", "sentir"],
+        "note": "The three highlighted verbs are 3rd group and irregular — they get their own table below. goûter and toucher are ordinary 1st group, so they already follow a pattern you know."
+      },
+      "table2": {
+        "title": "the three irregular ones",
+        "cols": ["", "entendre (hear)", "sentir (smell)", "voir (see)"],
+        "rows": [
+          { "label": "je / j'", "cells": ["entends", "sens", "vois"] },
+          { "label": "tu", "cells": ["entends", "sens", "vois"] },
+          { "label": "il / elle / on", "cells": ["entend", "sent", "voit"] },
+          { "label": "nous", "cells": ["entendons", "sentons", "voyons"] },
+          { "label": "vous", "cells": ["entendez", "sentez", "voyez"] },
+          { "label": "ils / elles", "cells": ["entendent", "sentent", "voient"] }
+        ],
+        "highlight": ["voyons", "voyez", "voient"],
+        "note": "entendre and sentir keep one stem throughout. voir switches to voy- at nous and vous, then to voi- again at ils. All three sound identical across je, tu and il."
+      },
+      "explain": "A face is mostly vocabulary, but three things are worth real attention. ① un œil → des yeux is the most irregular plural in everyday French; nothing about the singular predicts the plural, so learn them as two separate words. ② The senses each pair a body part with a verb, and two of those verbs come in pairs English merges: entendre is to hear (it reaches your ears) while écouter is to listen (you chose to); voir is to see while regarder is to watch. Mixing them up is one of the clearest markers of a beginner. ③ French describes bodies with le, la, les — not with mon, ma, mes. « J'ai mal à la tête », not « à ma tête »."
+    },
+    "notes": [
+      {
+        "title": "Body parts take le, not mon",
+        "body": "This is the flip side of the possessives you just learned. French says « j'ai mal à la tête », « elle a les yeux bleus », « il se lave les mains » — the definite article, where English insists on my, her, his. Using the possessive isn't wrong so much as odd, and it marks you out immediately."
+      },
+      {
+        "title": "entendre vs écouter, voir vs regarder",
+        "body": "The first of each pair just happens to you; the second is something you do on purpose. « J'entends la musique » — I can hear it, whether I like it or not. « J'écoute la musique » — I'm listening. Same with « je vois la mer » (it's in front of me) and « je regarde la mer » (I'm watching it)."
+      },
+      {
+        "title": "sentir does three jobs",
+        "body": "« Je sens une odeur » — I smell something. « Ça sent bon » — it smells good. And with a reflexive, « je me sens bien » — I feel well. One verb, three uses, and context tells them apart."
+      },
+      {
+        "title": "les cheveux is always plural",
+        "body": "Hair on your head is les cheveux — « elle a les cheveux courts ». Un cheveu is one single strand, the kind you find in your soup. Same shape as un œil / des yeux: the singular exists but almost never comes up."
+      }
+    ],
+    "examples": [
+      "Elle a les yeux bleus et les cheveux courts. (lay ZYUH BLUH)",
+      "J'entends la musique mais je n'écoute pas. (zhahn-TAHN lah mew-ZEEK)",
+      "Ça sent bon dans la cuisine ! (sah sahn BOHN)",
+      "Il a mal à la tête depuis ce matin. (eel ah mal ah lah TET)",
+      "Nous voyons la mer depuis la fenêtre. (noo vwah-YOHN lah MEHR)",
+      "Tu veux goûter ce fromage ? (tew vuh goo-TAY)"
+    ],
+    "practice": [
+      "Point at your own face and name eight parts out loud, with le or la.",
+      "Singular to plural: un œil → ___ · un cheveu → ___ .",
+      "entendre or écouter? « Je ___ la radio tous les matins » · « Tu ___ ce bruit ? »",
+      "voir or regarder? « Je ___ un film ce soir » · « D'ici on ___ la tour Eiffel ».",
+      "Fill in: nous ___ (voir) · ils ___ (entendre) · vous ___ (sentir).",
+      "Describe someone in your family in three sentences — eyes, hair, and one more feature."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for the face and the senses. Drill the vocabulary with articles: le visage, les cheveux, le crâne, le front, le sourcil, l'œil, l'oreille, le nez, la narine, la joue, la pommette, la bouche, les lèvres, le menton, le cou, la nuque, la barbe, la moustache. Test un œil → des yeux and un cheveu → les cheveux specifically. Then conjugate entendre, sentir and voir with me — watch for voir changing to voy- at nous and vous. Drill the two pairs English merges: entendre (hear) vs écouter (listen), voir (see) vs regarder (watch), giving me sentences where I have to pick. Also check I use the definite article for body parts — « j'ai mal à la tête », not « à ma tête ». Finish by having me describe a person's face, and correct my genders."
   },
   {
     "id": "a2-01-past-avoir",

@@ -5,7 +5,7 @@
 // playing a taste word. touch() records today; call it once per meaningful
 // action (it dedupes to the first call of each calendar day).
 window.CoucouStreak = (function () {
-  var KEY_C = 'lf-streak-count', KEY_D = 'lf-streak-last';
+  var KEY_C = 'lf-streak-count', KEY_D = 'lf-streak-last', KEY_F = 'lf-first-day';
   function ymd(d) { return d.toISOString().slice(0, 10); }
   function today() { return ymd(new Date()); }
   function yesterday() { var d = new Date(); d.setDate(d.getDate() - 1); return ymd(d); }
@@ -21,6 +21,10 @@ window.CoucouStreak = (function () {
   // Same day → unchanged; picking up from yesterday → +1; any longer gap
   // (or first ever) → the streak starts fresh at 1.
   function touch() {
+    // Stamp day one at the first meaningful action anywhere on the site, not
+    // wherever the day number first happens to be read — otherwise a week of
+    // lessons followed by a first visit to the home page reads "Day 1".
+    try { if (!localStorage.getItem(KEY_F)) localStorage.setItem(KEY_F, today()); } catch (e) {}
     var s = get();
     if (s.last === today()) return s.count;              // already counted today
     var next = (s.last === yesterday()) ? s.count + 1 : 1;
@@ -57,8 +61,8 @@ window.CoucouStreak = (function () {
   // a streak that resets, because it never punishes a missed day.
   function dayNumber() {
     try {
-      var first = localStorage.getItem('lf-first-day');
-      if (!first) { localStorage.setItem('lf-first-day', today()); first = today(); }
+      var first = localStorage.getItem(KEY_F);
+      if (!first) { localStorage.setItem(KEY_F, today()); first = today(); }
       var ms = new Date(today()) - new Date(first);
       return Math.floor(ms / 86400000) + 1;
     } catch (e) { return 1; }

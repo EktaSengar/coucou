@@ -37,5 +37,31 @@ window.CoucouStreak = (function () {
     if (s.last === today() || s.last === yesterday()) return s.count;
     return 0;
   }
-  return { touch: touch, current: current, get: get };
+  // ── today's habits ───────────────────────────────────────────────────
+  // lf-day-YYYY-MM-DD : JSON map of habit → 1, e.g. {"learn":1,"speak":1}
+  // The Today card on the home page reads this to know what's left in the
+  // hour. Kept here rather than in its own module so every page shares one
+  // idea of what "today" means.
+  var DAY_PREFIX = 'lf-day-';
+  function doneToday() {
+    try { return JSON.parse(localStorage.getItem(DAY_PREFIX + today()) || '{}') || {}; }
+    catch (e) { return {}; }
+  }
+  function mark(habit, on) {
+    var d = doneToday();
+    if (on === false) { delete d[habit]; } else { d[habit] = 1; touch(); }
+    try { localStorage.setItem(DAY_PREFIX + today(), JSON.stringify(d)); } catch (e) {}
+    return d;
+  }
+  // Days since the very first recorded activity — "Day 12" reads better than
+  // a streak that resets, because it never punishes a missed day.
+  function dayNumber() {
+    try {
+      var first = localStorage.getItem('lf-first-day');
+      if (!first) { localStorage.setItem('lf-first-day', today()); first = today(); }
+      var ms = new Date(today()) - new Date(first);
+      return Math.floor(ms / 86400000) + 1;
+    } catch (e) { return 1; }
+  }
+  return { touch: touch, current: current, get: get, doneToday: doneToday, mark: mark, dayNumber: dayNumber };
 })();

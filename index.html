@@ -24,6 +24,80 @@
 <script>
   tailwind.config = { safelist: ['bg-green-600'], theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
 </script>
+<script src="./js/streak.js"></script>
+<script>
+// Today — assembles the hour the home page has always promised.
+// Three habits, each resolved to one specific thing so there's nothing to
+// decide: the next unfinished lesson, that lesson's own tutor prompt, and a
+// listening drill at your level rotated by the day so it isn't the same one.
+document.addEventListener('alpine:init', () => {
+  Alpine.data('today', () => ({
+    returning: false, streak: 0, dayNumber: 1, lessons: [], cards: [], done: {},
+    get greeting() {
+      const h = new Date().getHours();
+      return h < 12 ? 'Bonjour' : h < 18 ? 'Bon après-midi' : 'Bonsoir';
+    },
+    get doneCount() { return this.cards.filter(c => this.isDone(c.kind)).length; },
+    get remainingMinutes() { return this.cards.filter(c => !this.isDone(c.kind)).reduce((n, c) => n + c.minutes, 0); },
+    isDone(k) { return !!this.done[k]; },
+    mark(k) { this.done = CoucouStreak.mark(k); },
+    toggle(k) { this.done = CoucouStreak.mark(k, !this.isDone(k)); },
+    async load() {
+      try { this.streak = CoucouStreak.current(); this.done = CoucouStreak.doneToday(); } catch (e) {}
+      let lessonsDone = 0;
+      try {
+        this.lessons = await (await fetch('./data/lessons.json', { cache: 'no-cache' })).json();
+        lessonsDone = this.lessons.filter(l => localStorage.getItem('lf-lesson-' + l.id) === '1').length;
+      } catch (e) { return; }
+      // A stranger keeps the pitch; anyone who has started gets Today.
+      this.returning = lessonsDone > 0 || this.streak > 0;
+      if (!this.returning) return;
+      this.dayNumber = CoucouStreak.dayNumber();
+
+      const next = this.lessons.find(l => localStorage.getItem('lf-lesson-' + l.id) !== '1') || this.lessons[this.lessons.length - 1];
+      const level = next.level;
+      // The lesson you're on is also what you should be saying out loud.
+      const speakFrom = this.lessons.filter(l => localStorage.getItem('lf-lesson-' + l.id) === '1').pop() || next;
+
+      this.cards = [
+        { kind: 'learn', habit: 'Learn', icon: '📖', tint: 'bg-blue-50 text-blue-600',
+          title: next.title, blurb: next.goal, minutes: next.minutes || 20,
+          href: next.href || ('./lesson.html?id=' + next.id), cta: 'Open the lesson' },
+        { kind: 'speak', habit: 'Speak', icon: '🗣️', tint: 'bg-rose-50 text-rose-600',
+          title: 'Out loud: ' + speakFrom.title.split(' — ')[0],
+          blurb: 'Ten minutes with the tutor on what you just learned. This is the habit everyone skips.',
+          minutes: 15, external: true,
+          href: 'https://claude.ai/new?q=' + encodeURIComponent(speakFrom.tutorPrompt || ''), cta: 'Start talking' },
+        await this.absorbCard(level)
+      ];
+    },
+    // Rotate the listening drill by the day so it varies without a choice to make.
+    async absorbCard(level) {
+      const day = Math.floor(Date.now() / 86400000);
+      const opts = [
+        { file: 'dictee.json', key: 'sentences', page: './dictee.html', habit: 'Absorb', label: 'Dictée', minutes: 10, cta: 'Start the dictée' },
+        { file: 'shadow.json', key: 'phrases', page: './shadow.html', habit: 'Absorb', label: 'Shadowing', minutes: 10, cta: 'Start shadowing' },
+        { file: 'media.json', key: null, page: './watch.html', habit: 'Absorb', label: 'Watch', minutes: 20, cta: 'Watch it' }
+      ];
+      const pick = opts[day % opts.length];
+      const base = { kind: 'absorb', habit: 'Absorb', icon: '👂', tint: 'bg-amber-50 text-amber-600',
+                     minutes: pick.minutes, href: pick.page, cta: pick.cta,
+                     title: pick.label, blurb: 'Train your ear for a few minutes.' };
+      try {
+        const sets = await (await fetch('./data/' + pick.file, { cache: 'no-cache' })).json();
+        const atLevel = sets.filter(s => s.level === level);
+        const s = (atLevel.length ? atLevel : sets)[day % (atLevel.length || sets.length)];
+        if (s) {
+          base.title = pick.label + ': ' + s.title;
+          base.blurb = s.intro || s.why || base.blurb;
+          base.href = pick.page + '?id=' + s.id;
+        }
+      } catch (e) {}
+      return base;
+    }
+  }));
+});
+</script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
 <link rel="stylesheet" href="./css/custom.css">
 </head>
@@ -90,8 +164,66 @@
 
 <main id="top">
 
-<!-- HERO -->
-<section class="max-w-5xl mx-auto px-5 py-20 md:py-28 text-center">
+<!-- ── HOME, WHEN IT KNOWS YOU ──────────────────────────────────────────
+     One URL, two states. A stranger gets the pitch below; anyone who has
+     started gets today's hour, already assembled. -->
+<div x-data="today()" x-init="load()">
+<section x-show="returning" x-cloak class="max-w-5xl mx-auto px-5 pt-12 pb-10">
+
+  <div class="flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <p class="text-sm font-medium text-slate-500">
+        <span x-text="greeting"></span> · Day <span x-text="dayNumber"></span>
+        <span x-show="streak > 1" x-cloak> · 🔥 <span x-text="streak"></span>-day streak</span>
+      </p>
+      <h1 class="mt-1 text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">Today</h1>
+    </div>
+    <div class="text-right">
+      <p class="text-sm text-slate-500"><span class="font-bold text-slate-900" x-text="doneCount"></span> of 3 done · about <span x-text="remainingMinutes"></span> min left</p>
+      <div class="mt-2 h-2 w-44 rounded-full bg-slate-100 overflow-hidden">
+        <div class="h-full bg-green-500 transition-all duration-700" :style="`width:${doneCount/3*100}%`"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- the three habits, each already pointed at a specific thing -->
+  <div class="mt-7 grid md:grid-cols-3 gap-4">
+    <template x-for="c in cards" :key="c.kind">
+      <div class="flex flex-col rounded-2xl border p-5 transition-all"
+           :class="isDone(c.kind) ? 'border-green-200 bg-green-50/60' : 'border-slate-200 bg-white hover:border-slate-300 hover:shadow-sm'">
+        <div class="flex items-start justify-between gap-3">
+          <span class="flex h-11 w-11 items-center justify-center rounded-xl text-xl" :class="c.tint" x-text="c.icon" aria-hidden="true"></span>
+          <button type="button" @click="toggle(c.kind)"
+                  :aria-label="(isDone(c.kind) ? 'Mark not done: ' : 'Mark done: ') + c.habit"
+                  :class="isDone(c.kind) ? 'bg-green-500 border-green-500 text-white' : 'border-slate-300 text-transparent hover:border-green-400'"
+                  class="h-6 w-6 shrink-0 rounded-full border-2 text-xs font-bold leading-none transition-colors">✓</button>
+        </div>
+        <p class="mt-4 text-xs font-bold uppercase tracking-wide text-slate-400" x-text="c.habit"></p>
+        <h2 class="mt-1 font-bold text-slate-900 leading-snug" x-text="c.title"></h2>
+        <p class="mt-1 text-sm text-slate-500 leading-snug flex-1" x-text="c.blurb"></p>
+        <div class="mt-4 flex items-center justify-between">
+          <a :href="c.href" :target="c.external ? '_blank' : '_self'" @click="mark(c.kind)"
+             class="text-sm font-semibold text-blue-600 hover:underline" x-text="c.cta + ' →'"></a>
+          <span class="text-xs text-slate-400"><span x-text="c.minutes"></span> min</span>
+        </div>
+      </div>
+    </template>
+  </div>
+
+  <div x-show="doneCount === 3" x-cloak class="mt-5 rounded-xl border border-green-300 bg-green-50 px-5 py-4">
+    <p class="font-bold text-slate-900">🎉 That's the hour. À demain !</p>
+    <p class="mt-0.5 text-sm text-slate-600">Anything more today is a bonus — <a href="./practice.html" class="text-blue-600 hover:underline font-medium">flashcards</a> are the cheapest one.</p>
+  </div>
+
+  <p class="mt-5 text-sm text-slate-500">
+    <a href="./lessons.html" class="text-blue-600 hover:underline font-medium">All lessons</a> ·
+    <a href="#how" class="text-blue-600 hover:underline">the method</a> ·
+    <a href="#tracker" class="text-blue-600 hover:underline">your timeline</a>
+  </p>
+</section>
+
+<!-- HERO — first visit only -->
+<section x-show="!returning" class="max-w-5xl mx-auto px-5 py-20 md:py-28 text-center">
   <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-6">👋 Coucou — that's French for "hi"</span>
   <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">Learn French,<br>the smart way.</h1>
   <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">A free, AI-powered playbook that takes English speakers from zero to confident — in about an hour a day. Three habits, the right tools, no overwhelm.</p>
@@ -106,6 +238,7 @@
     <span class="ml-2">· the level for citizenship</span>
   </div>
 </section>
+</div>
 
 <!-- HOW IT WORKS -->
 <section id="how" class="bg-slate-50 border-y border-slate-200">

@@ -120,6 +120,28 @@ document.addEventListener('alpine:init', () => {
     isCurrent(g) { const n = this.nextUp; return !!n && n.level === g.level && n.module === g.module; },
     pct(items) { return items.length ? Math.round(this.doneCount(items) / items.length * 100) : 0; },
     minutes(items) { return items.reduce((n, i) => n + (i.minutes || 0), 0); },
+    // A face for each module, so the grid reads as places rather than rows of text.
+    moduleIcon(m) {
+      return {
+        'Sounds & spelling': '🔤', 'First conversations': '👋', 'How French fits together': '🧩',
+        'Eating & shopping': '🥐', 'Out and about': '🗺️', 'People & daily life': '👥',
+        'How verbs work': '⚙️', 'Everyday life': '☀️', 'Finding your voice': '🗣️', 'Holding your own': '🎓'
+      }[m] || '📘';
+    },
+    // Full class strings, not interpolated — the Tailwind CDN only generates
+    // classes it can actually see in the markup.
+    accents: [
+      'bg-blue-50 text-blue-600', 'bg-emerald-50 text-emerald-600', 'bg-amber-50 text-amber-600',
+      'bg-violet-50 text-violet-600', 'bg-rose-50 text-rose-600', 'bg-cyan-50 text-cyan-600',
+      'bg-indigo-50 text-indigo-600'
+    ],
+    accent(i) { return this.accents[i % this.accents.length]; },
+    // The first few lesson names, shortened at the em dash — enough to tell
+    // what's inside without unfolding it.
+    preview(items) {
+      const names = items.slice(0, 3).map(l => l.title.split(' — ')[0]);
+      return names.join(' · ') + (items.length > 3 ? ' · …' : '');
+    },
     get total() { return this.lessons.length; },
     get totalDone() { return this.lessons.filter(l => this.done[l.id]).length; },
     // First lesson (in curriculum order) not yet marked done — drives the Continue card.
@@ -262,33 +284,43 @@ document.addEventListener('alpine:init', () => {
             class="rounded-full border px-4 py-1.5 text-sm font-semibold transition-all">All <span class="text-xs font-normal opacity-60" x-text="total"></span></button>
   </div>
 
-  <!-- modules: folded by default, so the level reads as a short outline -->
-  <div x-show="!loading && !error" x-cloak class="mt-6 space-y-3">
-    <template x-for="g in shownGroups" :key="g.level + g.module">
-      <section class="rounded-xl border border-slate-200 overflow-hidden" :class="isOpen(g) ? 'border-slate-300' : ''">
+  <!-- modules: a card each, two across — the open one takes the full width -->
+  <div x-show="!loading && !error" x-cloak class="mt-6 grid sm:grid-cols-2 gap-4">
+    <template x-for="(g, gi) in shownGroups" :key="g.level + g.module">
+      <section class="flex flex-col rounded-2xl border bg-white overflow-hidden transition-all"
+               :class="isOpen(g) ? 'sm:col-span-2 border-slate-300 shadow-sm' : 'border-slate-200 hover:border-slate-300 hover:shadow-sm'">
 
-        <!-- header: doubles as the fold toggle -->
+        <!-- header: doubles as the fold toggle. flex-col + mt-auto keeps the
+             footer strip on the baseline so side-by-side cards line up. -->
         <button type="button" @click="toggle(g)" :aria-expanded="isOpen(g)"
-                class="w-full flex items-center gap-4 px-5 py-4 text-left hover:bg-slate-50 transition-colors">
-          <svg class="h-4 w-4 shrink-0 text-slate-400 transition-transform" :class="isOpen(g) ? 'rotate-90' : ''"
-               fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-          </svg>
-          <div class="min-w-0 flex-1">
-            <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <h2 class="font-bold text-slate-900" x-text="g.module"></h2>
-              <span x-show="isCurrent(g)" x-cloak class="rounded-full bg-blue-50 px-2 py-0.5 text-xs font-semibold text-blue-700">you're here</span>
+                class="group flex w-full flex-1 flex-col px-5 py-5 text-left transition-colors hover:bg-slate-50/70">
+          <div class="flex items-start gap-4">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-xl" :class="accent(gi)" aria-hidden="true"
+                  x-text="moduleIcon(g.module)"></span>
+            <div class="min-w-0 flex-1">
+              <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                <h2 class="text-lg font-bold text-slate-900 group-hover:text-blue-700 transition-colors" x-text="g.module"></h2>
+                <span x-show="isCurrent(g)" x-cloak class="rounded-full bg-blue-600 px-2 py-0.5 text-xs font-semibold text-white">you're here</span>
+                <span x-show="pct(g.items) === 100" x-cloak class="text-sm text-green-600" title="Module complete">✓</span>
+              </div>
+              <p class="mt-1 text-sm text-slate-500 leading-snug" x-show="!isOpen(g)" x-text="preview(g.items)"></p>
             </div>
-            <p class="mt-0.5 text-xs text-slate-500">
-              <span x-text="g.items.length"></span> lessons · <span x-text="minutes(g.items)"></span> min
-              <span x-show="doneCount(g.items)"> · <span class="font-medium text-green-600" x-text="doneCount(g.items) + ' done'"></span></span>
-            </p>
+            <svg class="mt-1 h-5 w-5 shrink-0 text-slate-300 transition-transform group-hover:text-slate-500"
+                 :class="isOpen(g) ? 'rotate-90' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
           </div>
-          <!-- only once there's something to show, so an untouched module stays clean -->
-          <div x-show="doneCount(g.items)" x-cloak class="hidden sm:block w-24 shrink-0">
-            <div class="h-1.5 rounded-full bg-slate-100 overflow-hidden">
-              <div class="h-full bg-green-500 transition-all duration-500" :style="`width:${pct(g.items)}%`"></div>
+
+          <!-- footer strip: the numbers, and progress once there is any -->
+          <div class="mt-auto pt-4 flex items-center gap-3">
+            <span class="text-xs font-medium text-slate-500 whitespace-nowrap">
+              <span x-text="g.items.length"></span> lessons · <span x-text="minutes(g.items)"></span> min
+            </span>
+            <div class="h-1.5 flex-1 rounded-full bg-slate-100 overflow-hidden">
+              <div class="h-full rounded-full bg-green-500 transition-all duration-700" :style="`width:${pct(g.items)}%`"></div>
             </div>
+            <span class="text-xs font-semibold whitespace-nowrap" :class="doneCount(g.items) ? 'text-green-600' : 'text-slate-400'"
+                  x-text="doneCount(g.items) + '/' + g.items.length"></span>
           </div>
         </button>
 
@@ -296,15 +328,15 @@ document.addEventListener('alpine:init', () => {
         <div x-show="isOpen(g)" x-cloak class="border-t border-slate-200 divide-y divide-slate-100">
           <template x-for="(l, i) in g.items" :key="l.id">
             <a :href="l.href || ('./lesson.html?id=' + l.id)"
-               class="group flex items-start gap-4 px-5 py-3.5 hover:bg-blue-50/50 transition-colors">
-              <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold"
-                    :class="done[l.id] ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-500'"
+               class="group flex items-start gap-4 px-5 py-4 hover:bg-blue-50/60 transition-colors">
+              <span class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold"
+                    :class="done[l.id] ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-500 group-hover:bg-blue-100 group-hover:text-blue-700'"
                     x-text="done[l.id] ? '✓' : (i + 1)"></span>
               <div class="min-w-0 flex-1">
-                <h3 class="text-sm font-semibold text-slate-900 group-hover:text-blue-700" x-text="l.title"></h3>
+                <h3 class="font-semibold text-slate-900 group-hover:text-blue-700" x-text="l.title"></h3>
                 <p class="mt-0.5 text-sm text-slate-500 leading-snug" x-text="l.goal"></p>
               </div>
-              <span class="mt-0.5 shrink-0 text-xs text-slate-400" x-show="l.minutes"><span x-text="l.minutes"></span> min</span>
+              <span class="mt-1 shrink-0 text-xs text-slate-400" x-show="l.minutes"><span x-text="l.minutes"></span> min</span>
             </a>
           </template>
         </div>

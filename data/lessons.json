@@ -1502,7 +1502,9 @@
       { "fr": "le cou", "phonetic": "luh KOO", "en": "the neck", "emoji": "🧣" },
       { "fr": "la nuque", "phonetic": "lah NEWK", "en": "the nape of the neck", "emoji": "🧣" },
       { "fr": "la barbe / la moustache", "phonetic": "lah BARB / lah moo-STASH", "en": "the beard / the moustache", "emoji": "🧔" },
-      { "fr": "j'entends / je sens / je vois", "phonetic": "zhahn-TAHN / zhuh SAHN / zhuh VWAH", "en": "I hear / I smell / I see", "emoji": "🖐️" }
+      { "fr": "j'entends / je sens / je vois", "phonetic": "zhahn-TAHN / zhuh SAHN / zhuh VWAH", "en": "I hear / I smell / I see — they just happen", "emoji": "👁️" },
+      { "fr": "j'écoute / je regarde", "phonetic": "zhay-KOOT / zhuh ruh-GARD", "en": "I listen / I watch — on purpose", "emoji": "🎧" },
+      { "fr": "je goûte / je touche", "phonetic": "zhuh GOOT / zhuh TOOSH", "en": "I taste / I touch", "emoji": "🤏" }
     ],
     "grammar": {
       "point": "Five senses, five body parts, five verbs",

@@ -62,9 +62,18 @@ window.CoucouStreak = (function () {
   function dayNumber() {
     try {
       var first = localStorage.getItem(KEY_F);
-      if (!first) { localStorage.setItem(KEY_F, today()); first = today(); }
+      if (!first) {
+        // Nothing stamped: someone who was already using the site before the
+        // stamp existed. Work backwards from the streak so their history isn't
+        // thrown away — a 4-day streak means day one was at least 3 days ago.
+        var s = get();
+        var back = Math.max(0, (s.count || 1) - 1);
+        var d = new Date(s.last || today()); d.setDate(d.getDate() - back);
+        first = ymd(d);
+        localStorage.setItem(KEY_F, first);
+      }
       var ms = new Date(today()) - new Date(first);
-      return Math.floor(ms / 86400000) + 1;
+      return Math.max(1, Math.floor(ms / 86400000) + 1);
     } catch (e) { return 1; }
   }
   return { touch: touch, current: current, get: get, doneToday: doneToday, mark: mark, dayNumber: dayNumber };

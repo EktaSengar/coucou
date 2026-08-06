@@ -46,6 +46,9 @@ document.addEventListener('alpine:init', () => {
       // Land where the learner actually is: their level, their module, open.
       const n = this.nextUp;
       if (n) { this.levelFilter = n.level; this.open[n.level + '|' + n.module] = true; }
+      // …unless a level was asked for by name (the journey rows on the home page).
+      const want = new URLSearchParams(location.search).get('level');
+      if (want && (want === 'all' || this.levels.includes(want))) this.levelFilter = want;
       this.loading = false;
     },
     playTaste(word, key) {

@@ -1110,6 +1110,180 @@
     "tutorPrompt": "A1 French tutor. Practise time and days with me. Ask me « quelle heure est-il ? » with different clock times, ask what day it is, and try to arrange a time to meet. Correct my answers gently. End by listing the time phrases I should review."
   },
   {
+    "id": "a1-se-reperer-temps",
+    "level": "A1",
+    "module": "People & daily life",
+    "title": "Se repérer dans le temps — hier, maintenant, demain",
+    "minutes": 20,
+    "goal": "Place what you say in the past, the present or the future with the words French actually uses — and stop saying « actuellement » when you mean « actually ».",
+    "figures": [
+      { "src": "./assets/img/temps.svg?v=1", "alt": "A timeline in three zones: passé on the left with il y a dix ans, le mois dernier, la semaine dernière, avant-hier and hier; présent in the middle with maintenant, aujourd'hui, en ce moment and actuellement; futur on the right with demain, après-demain, bientôt, la semaine prochaine and dans cinq ans. Below, an arrow shows « il y a » pointing back and « dans » pointing forward from the same present moment.", "caption": "Three zones and one present moment. The middle column is where English speakers slip: actuellement means currently, and « actually » is en fait." }
+    ],
+    "vocab": [
+      { "fr": "hier", "phonetic": "ee-YEHR", "en": "yesterday", "emoji": "🌙" },
+      { "fr": "avant-hier", "phonetic": "ah-vahn-tee-YEHR", "en": "the day before yesterday", "emoji": "⏪" },
+      { "fr": "la semaine dernière", "phonetic": "lah suh-men dehr-NYEHR", "en": "last week", "emoji": "📅" },
+      { "fr": "le mois dernier", "phonetic": "luh mwah dehr-NYAY", "en": "last month", "emoji": "🗓️" },
+      { "fr": "il y a dix ans", "phonetic": "eel ee ah dee ZAHN", "en": "ten years ago", "emoji": "⌛" },
+      { "fr": "maintenant", "phonetic": "mant-NAHN", "en": "now", "emoji": "⏱️" },
+      { "fr": "aujourd'hui", "phonetic": "oh-zhoor-DWEE", "en": "today", "emoji": "☀️" },
+      { "fr": "en ce moment", "phonetic": "ahn suh mo-MAHN", "en": "at the moment", "emoji": "🎯" },
+      { "fr": "actuellement", "phonetic": "ak-tew-el-MAHN", "en": "currently (never « actually »)", "emoji": "⚠️" },
+      { "fr": "demain", "phonetic": "duh-MAN", "en": "tomorrow", "emoji": "🌅" },
+      { "fr": "après-demain", "phonetic": "ah-preh-duh-MAN", "en": "the day after tomorrow", "emoji": "⏩" },
+      { "fr": "bientôt", "phonetic": "byan-TOH", "en": "soon", "emoji": "🔜" },
+      { "fr": "la semaine prochaine", "phonetic": "lah suh-men pro-SHEN", "en": "next week", "emoji": "📆" },
+      { "fr": "dans cinq ans", "phonetic": "dahn sank AHN", "en": "in five years", "emoji": "🔮" }
+    ],
+    "grammar": {
+      "point": "« Il y a » looks back, « dans » looks forward",
+      "table": {
+        "title": "every distance has a mirror image",
+        "cols": ["how far", "passé ⬅", "futur ➡"],
+        "rows": [
+          { "label": "one day", "cells": ["hier", "demain"] },
+          { "label": "two days", "cells": ["avant-hier", "après-demain"] },
+          { "label": "a week", "cells": ["la semaine dernière", "la semaine prochaine"] },
+          { "label": "a month", "cells": ["le mois dernier", "le mois prochain"] },
+          { "label": "a year", "cells": ["l'année dernière", "l'année prochaine"] },
+          { "label": "further out", "cells": ["il y a dix ans", "dans cinq ans"] }
+        ],
+        "highlight": ["il y a dix ans", "dans cinq ans"],
+        "note": "Read across each row and only the last word moves: dernière → prochaine, il y a → dans. The middle of the timeline needs no mirror — maintenant, aujourd'hui, en ce moment and actuellement all sit on the present moment itself."
+      },
+      "table2": {
+        "title": "the two little words that set the direction",
+        "cols": ["", "French", "English"],
+        "rows": [
+          { "label": "looking back", "cells": ["il y a trois jours", "three days ago"] },
+          { "label": "looking forward", "cells": ["dans trois jours", "in three days"] },
+          { "label": "the other « il y a »", "cells": ["il y a du pain", "there is some bread"] }
+        ],
+        "highlight": ["il y a trois jours", "dans trois jours"],
+        "note": "Both go in front of the amount of time, where English puts « ago » behind it: « il y a trois jours », never « trois jours il y a ». And « il y a » does two jobs — followed by a length of time it means ago, followed by a thing it means there is / there are."
+      },
+      "explain": "These words do the work a tense can't: they say when. French sorts them into three zones. ① Le passé: hier, avant-hier, la semaine dernière, le mois dernier, and « il y a + a length of time » for anything further back. ② Le présent: maintenant, aujourd'hui, en ce moment, actuellement — the last two both mean « right now, these days », and they're what you use for the situation you're living in. ③ Le futur: demain, après-demain, bientôt, la semaine prochaine, and « dans + a length of time » for anything further ahead. Two habits to build. Dernier and prochain come after the noun — « la semaine prochaine », not « la prochaine semaine ». And il y a / dans both come before the number, unlike English « ago ». Drop any of these at the front of a sentence, add a comma, and the rest of the sentence stays exactly as it was: « Demain, je travaille. »"
+    },
+    "notes": [
+      {
+        "title": "« Actuellement » does not mean « actually »",
+        "body": "It means currently. « Actuellement, j'habite à Paris » = right now, these days, I live in Paris. English « actually » is « en fait » or « en réalité »: « En fait, je ne suis pas d'accord. » The whole family behaves this way — actuel means current, and l'actualité is the news. One more from the same trap: éventuellement means possibly, not eventually (that's finalement)."
+      },
+      {
+        "title": "dernier and prochain sit after the noun",
+        "body": "La semaine dernière, le mois prochain, l'année dernière, le week-end prochain — French puts them where English can't. Put them in front and the meaning shifts: « la dernière semaine de janvier » is the final week of January, not last week."
+      },
+      {
+        "title": "French builds two days out with one word",
+        "body": "avant + hier = avant-hier, après + demain = après-demain. Both keep the hyphen, and the -s of après stays silent. English needs five words for each, which is why they feel so satisfying to say."
+      },
+      {
+        "title": "You'll need these before you need the past tense",
+        "body": "The past tense itself is A2 — passé composé, two lessons away. But the markers come first, because they're what makes a past sentence legible: hear « il y a huit mois » or « la semaine dernière » and you already know where in time the story sits, whatever the verb is doing."
+      }
+    ],
+    "examples": [
+      "Actuellement, j'habite à Paris. (ak-tew-el-MAHN, zha-BEET ah pa-REE)",
+      "En ce moment, je cherche un appartement. (ahn suh mo-MAHN, zhuh SHEHRSH uhn na-par-tuh-MAHN)",
+      "Nous sommes arrivés il y a huit mois. (noo som za-ree-VAY eel ee ah wee MWAH)",
+      "Après-demain, je vais voir un ami. (ah-preh-duh-MAN, zhuh veh vwahr uhn na-MEE)",
+      "La semaine prochaine, on va déménager. (lah suh-men pro-SHEN, ohn va day-may-na-ZHAY)",
+      "— Tu pars quand ? — Bientôt, dans deux jours. (byan-TOH, dahn duh ZHOOR)"
+    ],
+    "practice": [
+      "Sort these into passé / présent / futur: bientôt · avant-hier · en ce moment · le mois dernier · dans deux jours.",
+      "Say three true sentences about yourself: one with hier, one with maintenant, one with demain.",
+      "Fill both gaps: « ___ trois ans » (three years ago) · « ___ trois ans » (in three years).",
+      "Translate carefully: « Actually, I'm not French. » — and not with actuellement.",
+      "Flip them forward: la semaine dernière → ___ , le mois dernier → ___ , avant-hier → ___ .",
+      "Answer out loud: « Tu es arrivé en France quand ? »"
+    ],
+    "tutorPrompt": "Be my A1 French tutor for placing things in time. Drill the three zones: passé (hier, avant-hier, la semaine dernière, le mois dernier, il y a + durée), présent (maintenant, aujourd'hui, en ce moment, actuellement) and futur (demain, après-demain, bientôt, la semaine prochaine, dans + durée). Test two traps hard: « il y a » versus « dans » for the same distance in opposite directions, and « actuellement » = currently, never « actually » (which is en fait / en réalité). Also check that I put dernier and prochain after the noun. Ask me simple questions about when I do things, one at a time, and correct every answer. Finish with the markers I still get wrong."
+  },
+  {
+    "id": "a1-mois-date",
+    "level": "A1",
+    "module": "People & daily life",
+    "title": "Les mois & la date — quelle est la date d'aujourd'hui ?",
+    "minutes": 20,
+    "goal": "Name the twelve months, say today's date the way people really say it, and read the dd/mm dates on every French form and ticket.",
+    "vocab": [
+      { "fr": "janvier, février, mars", "phonetic": "zhahn-vee-AY, fay-vree-AY, MARSS", "en": "January, February, March", "emoji": "❄️" },
+      { "fr": "avril, mai, juin", "phonetic": "ah-VREEL, MEH, zhwan", "en": "April, May, June", "emoji": "🌷" },
+      { "fr": "juillet, août, septembre", "phonetic": "zhwee-YEH, OOT, sep-TAHM-bruh", "en": "July, August, September", "emoji": "☀️" },
+      { "fr": "octobre, novembre, décembre", "phonetic": "ok-TOH-bruh, no-VAHM-bruh, day-SAHM-bruh", "en": "October, November, December", "emoji": "🍂" },
+      { "fr": "Quelle est la date d'aujourd'hui ?", "phonetic": "kel eh lah dat doh-zhoor-DWEE", "en": "What's today's date?", "emoji": "❓" },
+      { "fr": "On est le six août.", "phonetic": "ohn eh luh see-ZOOT", "en": "It's the sixth of August. (the everyday answer)", "emoji": "🗓️" },
+      { "fr": "C'est le six août deux mille vingt-six.", "phonetic": "seh luh see-zoot duh meel vant-SEESS", "en": "It's 6 August 2026.", "emoji": "📅" },
+      { "fr": "le premier mai", "phonetic": "luh pruh-mee-AY MEH", "en": "the first of May (the only ordinal)", "emoji": "1️⃣" },
+      { "fr": "en mai / au mois de mai", "phonetic": "ahn MEH / oh mwah duh MEH", "en": "in May", "emoji": "📍" },
+      { "fr": "Mon anniversaire, c'est le douze mars.", "phonetic": "mo na-nee-vehr-SEHR, seh luh dooz MARSS", "en": "My birthday is the twelfth of March.", "emoji": "🎂" },
+      { "fr": "le quatorze juillet", "phonetic": "luh ka-TORZ zhwee-YEH", "en": "the 14th of July (the national holiday)", "emoji": "🎆" },
+      { "fr": "un mois / une année", "phonetic": "uhn MWAH / ewn ah-NAY", "en": "a month / a year", "emoji": "🔁" }
+    ],
+    "grammar": {
+      "point": "The date is one formula: le + a plain number + the month",
+      "table": {
+        "title": "everything you need for a date",
+        "cols": ["", "French", "English"],
+        "rows": [
+          { "label": "the question", "cells": ["On est le combien ?", "What's the date?"] },
+          { "label": "the answer", "cells": ["On est le six août.", "It's 6 August."] },
+          { "label": "also correct", "cells": ["C'est le six août.", "It's 6 August."] },
+          { "label": "the 1st", "cells": ["le premier mai", "1 May — written 1er"] },
+          { "label": "any other day", "cells": ["le deux mai", "2 May"] },
+          { "label": "in a month", "cells": ["en mai", "in May"] },
+          { "label": "with the year", "cells": ["le six août 2026", "6 August 2026"] }
+        ],
+        "highlight": ["le premier mai", "en mai"],
+        "note": "English says « the sixth of August ». French throws away both the ordinal and the « of »: « le six août ». Only the 1st resists — le premier, written 1er. The longer question « Quelle est la date d'aujourd'hui ? » works too, and « au mois de mai » is a longer way of saying « en mai »."
+      },
+      "table2": {
+        "title": "saying the year out loud",
+        "cols": ["", "you write", "you say"],
+        "rows": [
+          { "label": "this year", "cells": ["2026", "deux mille vingt-six"] },
+          { "label": "a round one", "cells": ["2000", "deux mille"] },
+          { "label": "and back a bit", "cells": ["2007", "deux mille sept"] }
+        ],
+        "highlight": ["deux mille vingt-six"],
+        "note": "French counts the year as one whole number — never « vingt vingt-six » the way English says twenty twenty-six. And mille stays bare: deux mille, never « deux milles ». Years before 2000 keep the same logic, they're just longer: 1990 is « mille neuf cent quatre-vingt-dix »."
+      },
+      "explain": "Three things and the date is yours. ① The months are never capitalised: janvier, février, mars… Writing « Janvier » is one of the most visible English habits in a French text. ② The formula is le + number + month, with no ordinal and no de: « le six août », « le vingt-cinq décembre ». The single exception is the 1st, which takes premier — « le premier mai », written « le 1er mai ». ③ For « in » a month, use en or au mois de: « en août », « au mois d'août » — never dans, which is for the future (« dans deux mois » = in two months' time). Add the year on the end as one long number and you have the full date: « le premier mai deux mille vingt-six ». To ask, « Quelle est la date d'aujourd'hui ? » and to answer, either « On est le… » or « C'est le… » — both are everywhere."
+    },
+    "notes": [
+      {
+        "title": "06/08/2026 is the sixth of August",
+        "body": "France writes dates day/month/year, on every form, ticket, prescription and appointment card. Read 06/08 the American way and you'll turn up two months early — or miss a flight. When it matters, write the month in letters: 6 août 2026."
+      },
+      {
+        "title": "The three months that trip everyone up",
+        "body": "août looks like three vowels and comes out as « oot » — often just « oo ». juin is one syllable, « zhwan », and juillet is two, « zhwee-yeh »; mixing them up moves your appointment by a month. And the -s of mars is pronounced, unlike most final consonants: « marss »."
+      },
+      {
+        "title": "En août, la France ferme",
+        "body": "August is when the country goes on holiday — bakeries, doctors, your local boulangerie all put a note on the door: « Fermeture annuelle du 1er au 31 août ». Worth being able to read that sentence before you need it. Note the liaison too: « en août » runs together as « ah-NOOT »."
+      }
+    ],
+    "examples": [
+      "— Quelle est la date d'aujourd'hui ? — On est le six août. (ohn eh luh see-ZOOT)",
+      "Mon anniversaire, c'est le premier mai. (mo na-nee-vehr-SEHR, seh luh pruh-mee-AY MEH)",
+      "Je suis arrivée en France en décembre. (zhuh swee za-ree-VAY ahn frahnss ahn day-SAHM-bruh)",
+      "Le rendez-vous est le douze mars à quatorze heures. (luh dooz marss ah ka-torz UR)",
+      "En août, beaucoup de magasins sont fermés. (ah-NOOT, boh-koo duh ma-ga-ZAN sohn fehr-MAY)",
+      "Nous sommes en deux mille vingt-six. (noo som ahn duh meel vant-SEESS)"
+    ],
+    "practice": [
+      "Say today's date out loud, both ways: « On est le… » and « C'est le… ».",
+      "Say your birthday, then the birthdays of two people you know.",
+      "Read these aloud in full: 01/01 · 14/07 · 25/12.",
+      "Name the month before février and the month after septembre.",
+      "Say the month and the year you arrived in France.",
+      "Careful with the 1st: « le ___ janvier », and with « in »: « ___ janvier »."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for months and dates. Drill the twelve months, especially the pronunciation of août, juin, juillet and mars. Ask me « Quelle est la date d'aujourd'hui ? » and make me answer with both « On est le… » and « C'est le… ». Test that I use premier for the 1st and plain numbers for every other day, that I don't capitalise months, that I say « en août » and not « dans août », and that I read years as one number (deux mille vingt-six). Give me dd/mm dates like 06/08 and 14/07 to read out in full, and ask me for birthdays and appointment dates. Correct each attempt and end with what to review."
+  },
+  {
     "id": "a1-08-family-routine",
     "level": "A1",
     "module": "People & daily life",
@@ -1673,9 +1847,20 @@
       },
       "explain": "For the near future, use aller in the present + an infinitive — just like English 'going to': « je vais manger », « on va voir ». It's quick and everywhere in speech. Note that only the first verb moves; the second never changes. To make it negative, wrap the ne… pas around aller alone: « je ne vais pas travailler ». If aller's own forms aren't automatic yet, they're drilled in « The five verbs you can't avoid » back in A1."
     },
+    "notes": [
+      {
+        "title": "« Je vais aller » vs « j'irai »",
+        "body": "Both are the future, but they sit at different distances. « Je vais aller au cinéma » is soon and more or less settled — tonight, this week, bientôt. « J'irai au cinéma » pushes it out to some unfixed day. In speech the near future wins almost every time for anything you can already see coming; the other one, the futur simple, is waiting for you in B1."
+      },
+      {
+        "title": "The marker does half the work",
+        "body": "Aller + infinitive says it's coming; a time marker says how soon. Pair it with demain, après-demain, ce soir, bientôt, la semaine prochaine or « dans deux jours » and the sentence dates itself — « Dans deux jours, on va déménager ». Those markers are all collected in « Se repérer dans le temps » back in A1."
+      }
+    ],
     "examples": [
       "Ce soir, on va voir un film. (suh swahr, ohn va vwahr uhn FEELM)",
-      "— Qu'est-ce que tu vas faire demain ? — Je vais visiter le musée. (kess-kuh tew va fehr duh-MAN ? zhuh veh vee-zee-TAY luh mew-ZAY)"
+      "— Qu'est-ce que tu vas faire demain ? — Je vais visiter le musée. (kess-kuh tew va fehr duh-MAN ? zhuh veh vee-zee-TAY luh mew-ZAY)",
+      "Je vais aller au cinéma bientôt. (zhuh veh za-LAY oh see-nay-MAH byan-TOH)"
     ],
     "practice": [
       "Say three things you're going to do tomorrow with « je vais… ».",

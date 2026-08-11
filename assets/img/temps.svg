@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 456" width="640" height="456" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="A timeline in three zones: passé with il y a dix ans, le mois dernier, la semaine dernière, avant-hier and hier; présent with maintenant, aujourd'hui, en ce moment and actuellement; futur with demain, après-demain, bientôt, la semaine prochaine and dans cinq ans. Below, an arrow points back from now for il y a and forward for dans.">
+  <defs>
+    <marker id="back" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#7c3aed"/></marker>
+    <marker id="fwd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#2563eb"/></marker>
+    <marker id="axis" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#94a3b8"/></marker>
+  </defs>
+  <style>
+    .h    { font-size: 15px; font-weight: 800; letter-spacing: 0.5px; }
+    .word { font-size: 13.5px; font-weight: 700; }
+    .gl   { font-size: 10.5px; font-style: italic; fill: #64748b; font-weight: 400; }
+    .lab  { font-size: 13px; font-weight: 700; }
+    .rule { font-size: 11.5px; fill: #475569; }
+  </style>
+
+  <rect width="640" height="456" fill="#ffffff"/>
+  <text x="320" y="28" text-anchor="middle" font-size="17" font-weight="800" fill="#0f172a">Se repérer dans le temps</text>
+
+  <!-- ── PASSÉ: furthest back at the top, closest to now at the bottom ─── -->
+  <g>
+    <rect x="12" y="46" width="196" height="248" rx="14" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+    <text class="h" x="110" y="76" text-anchor="middle" fill="#7c3aed">PASSÉ</text>
+    <g fill="#312e81" text-anchor="middle">
+      <text class="word" x="110" y="110">il y a dix ans</text>
+      <text class="gl"   x="110" y="124">ten years ago</text>
+      <text class="word" x="110" y="148">le mois dernier</text>
+      <text class="gl"   x="110" y="162">last month</text>
+      <text class="word" x="110" y="186">la semaine dernière</text>
+      <text class="gl"   x="110" y="200">last week</text>
+      <text class="word" x="110" y="224">avant-hier</text>
+      <text class="gl"   x="110" y="238">the day before yesterday</text>
+      <text class="word" x="110" y="262">hier</text>
+      <text class="gl"   x="110" y="276">yesterday</text>
+    </g>
+  </g>
+
+  <!-- ── PRÉSENT ───────────────────────────────────────────────────────── -->
+  <g>
+    <rect x="222" y="46" width="196" height="248" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+    <text class="h" x="320" y="76" text-anchor="middle" fill="#16a34a">PRÉSENT</text>
+    <g fill="#14532d" text-anchor="middle">
+      <text class="word" x="320" y="110">maintenant</text>
+      <text class="gl"   x="320" y="124">now</text>
+      <text class="word" x="320" y="148">aujourd'hui</text>
+      <text class="gl"   x="320" y="162">today</text>
+      <text class="word" x="320" y="186">en ce moment</text>
+      <text class="gl"   x="320" y="200">at the moment</text>
+      <text class="word" x="320" y="224">actuellement</text>
+      <text class="gl"   x="320" y="238">currently</text>
+    </g>
+    <text x="320" y="264" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b91c1c">actuellement ≠ actually</text>
+    <text class="gl" x="320" y="278" text-anchor="middle" fill="#b91c1c">actually = en fait, en réalité</text>
+  </g>
+
+  <!-- ── FUTUR: closest to now at the top, furthest ahead at the bottom ── -->
+  <g>
+    <rect x="432" y="46" width="196" height="248" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <text class="h" x="530" y="76" text-anchor="middle" fill="#2563eb">FUTUR</text>
+    <g fill="#1e3a8a" text-anchor="middle">
+      <text class="word" x="530" y="110">demain</text>
+      <text class="gl"   x="530" y="124">tomorrow</text>
+      <text class="word" x="530" y="148">après-demain</text>
+      <text class="gl"   x="530" y="162">the day after tomorrow</text>
+      <text class="word" x="530" y="186">bientôt</text>
+      <text class="gl"   x="530" y="200">soon</text>
+      <text class="word" x="530" y="224">la semaine prochaine</text>
+      <text class="gl"   x="530" y="238">next week</text>
+      <text class="word" x="530" y="262">dans cinq ans</text>
+      <text class="gl"   x="530" y="276">in five years</text>
+    </g>
+  </g>
+
+  <!-- ── the axis: one present moment, two directions ──────────────────── -->
+  <path d="M40,342 H600" stroke="#cbd5e1" stroke-width="2" marker-end="url(#axis)"/>
+  <circle cx="320" cy="342" r="7" fill="#16a34a"/>
+  <text class="lab" x="320" y="366" text-anchor="middle" fill="#16a34a">maintenant</text>
+
+  <!-- il y a: back from now -->
+  <path d="M306,342 H150" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#back)"/>
+  <text class="lab" x="212" y="328" text-anchor="middle" fill="#7c3aed">il y a trois jours</text>
+  <text class="gl"  x="212" y="366" text-anchor="middle">three days ago</text>
+
+  <!-- dans: forward from now -->
+  <path d="M334,342 H490" stroke="#2563eb" stroke-width="2.5" marker-end="url(#fwd)"/>
+  <text class="lab" x="428" y="328" text-anchor="middle" fill="#2563eb">dans trois jours</text>
+  <text class="gl"  x="428" y="366" text-anchor="middle">in three days</text>
+
+  <!-- the rule underneath -->
+  <rect x="12" y="388" width="616" height="54" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text class="rule" x="320" y="411" text-anchor="middle">Same distance, opposite directions — and both words come <tspan font-weight="700">before</tspan> the amount of time.</text>
+  <text class="rule" x="320" y="429" text-anchor="middle" fill="#64748b">English puts « ago » after it; French never does. « Il y a trois jours », never « trois jours il y a ».</text>
+</svg>

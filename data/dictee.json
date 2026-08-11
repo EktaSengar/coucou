@@ -112,6 +112,34 @@
     ]
   },
   {
+    "id": "a1-reperes-temps",
+    "level": "A1",
+    "theme": "Time markers",
+    "title": "Hier, maintenant, demain",
+    "intro": "Five sentences that place themselves in time. Listen for whether it's « il y a » or « dans » — one small word sends the sentence backwards or forwards.",
+    "sentences": [
+      { "fr": "Maintenant, j'habite à Paris.", "en": "Now I live in Paris.", "tip": "The h of habiter is silent, so the apostrophe is compulsory: j'habite, never « je habite »." },
+      { "fr": "Nous sommes arrivés il y a huit mois.", "en": "We arrived eight months ago.", "tip": "« il y a » is three separate words. mois keeps its -s even in the singular." },
+      { "fr": "Après-demain, je vais voir un ami.", "en": "The day after tomorrow, I'm going to see a friend.", "tip": "Après-demain takes a hyphen and an accent grave; the -s of après stays silent." },
+      { "fr": "La semaine prochaine, on va déménager.", "en": "Next week we're going to move house.", "tip": "prochaine agrees with the feminine semaine, so the -e. déménager: two accents aigus, both é." },
+      { "fr": "Actuellement, je cherche un appartement.", "en": "I'm currently looking for a flat.", "tip": "Two l's in actuellement — and it means currently, not « actually ». appartement doubles the p, not the t." }
+    ]
+  },
+  {
+    "id": "a1-date",
+    "level": "A1",
+    "theme": "Dates",
+    "title": "Les mois et la date",
+    "intro": "Months in lower case, days as plain numbers, and years written as one long word-chain. The dictation is where the capital letters give you away.",
+    "sentences": [
+      { "fr": "Aujourd'hui, on est le six août.", "en": "Today is the sixth of August.", "tip": "No capital on août, and no de: « le six août », never « le sixième d'août »." },
+      { "fr": "Mon anniversaire, c'est le premier mai.", "en": "My birthday is the first of May.", "tip": "premier is the only ordinal a date ever takes. anniversaire: two n's, one s in the middle." },
+      { "fr": "Nous sommes arrivés en décembre deux mille vingt-cinq.", "en": "We arrived in December 2025.", "tip": "en before the month. The year is one number: deux mille vingt-cinq, with a hyphen only in vingt-cinq." },
+      { "fr": "Le rendez-vous est le douze mars à quatorze heures.", "en": "The appointment is on the twelfth of March at two p.m.", "tip": "rendez-vous is hyphenated. The -s of mars is pronounced, and quatorze‿heures links into one sound." },
+      { "fr": "En juillet et en août, beaucoup de magasins sont fermés.", "en": "In July and August, a lot of shops are closed.", "tip": "juillet has a double l. août keeps its circumflex, and « en août » runs together as « ah-noot »." }
+    ]
+  },
+  {
     "id": "a2-quotidien",
     "level": "A2",
     "theme": "Daily life",

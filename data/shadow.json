@@ -56,6 +56,20 @@
     ]
   },
   {
+    "id": "a1-dates-parlees",
+    "level": "A1",
+    "focus": "Dates & time markers",
+    "title": "Dire la date",
+    "intro": "Dates are where French links words together hardest — the number runs straight into the month. Copy the joins, not the spelling.",
+    "phrases": [
+      { "fr": "On est le six août.", "en": "It's the sixth of August.", "hint": "six‿août links into « see-ZOOT »: the x turns into a z, and août is just « oot »." },
+      { "fr": "Mon anniversaire, c'est le premier avril.", "en": "My birthday is the first of April.", "hint": "premier‿avril runs together as « pruh-mee-ay-ra-VREEL ». One breath, no gap before the month." },
+      { "fr": "Il y a deux ans, en janvier.", "en": "Two years ago, in January.", "hint": "« il y a » collapses to « ya » at speed, and deux‿ans links with a z: « ya duh-ZAHN »." },
+      { "fr": "On se voit après-demain ?", "en": "Shall we meet the day after tomorrow?", "hint": "Four syllables in one piece, « ah-preh-duh-MAN », with the voice rising at the end to make it a question." },
+      { "fr": "Je suis en France depuis six mois.", "en": "I've been in France for six months.", "hint": "Here the x of six is silent: « see MWAH ». Compare « six‿ans », where it sounds like a z — the following letter decides." }
+    ]
+  },
+  {
     "id": "a2-liaisons",
     "level": "A2",
     "focus": "Liaisons",

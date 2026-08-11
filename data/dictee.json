@@ -140,6 +140,20 @@
     ]
   },
   {
+    "id": "a1-pronominaux",
+    "level": "A1",
+    "theme": "Reflexive verbs",
+    "title": "Je me lève, nous nous levons",
+    "intro": "These verbs are mostly a spelling problem. Listen for whether the little pronoun is there, and count the l's before you write appeler.",
+    "sentences": [
+      { "fr": "Je me lève à sept heures tous les matins.", "en": "I get up at seven every morning.", "tip": "Two words before the verb: je, then me. lève takes an accent grave — you can hear it, « LEV »." },
+      { "fr": "Nous nous levons tôt le dimanche.", "en": "We get up early on Sundays.", "tip": "nous really is written twice: the subject, then the pronoun. And levons has no accent — « luh-VOHN »." },
+      { "fr": "Comment vous appelez-vous ?", "en": "What's your name?", "tip": "One l in appelez, and the second vous is hyphenated onto the verb in this question form." },
+      { "fr": "Ils s'appellent Marc et Julie.", "en": "They're called Marc and Julie.", "tip": "Two l's here, because you hear « a-PEL ». The apostrophe replaces the e of se." },
+      { "fr": "Je ne me couche pas avant minuit.", "en": "I don't go to bed before midnight.", "tip": "The ne comes before me, not before the verb: ne me couche pas. minuit ends in a silent -t." }
+    ]
+  },
+  {
     "id": "a2-quotidien",
     "level": "A2",
     "theme": "Daily life",

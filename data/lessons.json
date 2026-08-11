@@ -1748,6 +1748,99 @@
     "tutorPrompt": "Be my A1 French tutor for the five essential irregular verbs in the present tense: être, avoir, aller, faire and prendre. Drill all six forms of each, then mix them in sentences. Test the traps specifically: age and bodily states take avoir (j'ai trente ans, j'ai faim, j'ai froid) while weather takes faire (il fait froid, il fait beau); vous êtes / vous faites are the -es exceptions, not « vous faisez »; nous faisons is pronounced « fuh-ZOHN » not « feh-ZOHN »; nous allons and vous allez take a liaison, « noo za-LOHN »; and the singular forms of faire and prendre sound identical so I need context. Make me use aller both ways — to go somewhere (elle va à l'école) and to build the near future (je vais manger). Also drill the faire expressions: faire les courses, faire la cuisine, faire du vélo, and « être en train de » for something happening right now. Ask me questions that force each verb out of me and correct every form. Finish with the forms I keep missing."
   },
   {
+    "id": "a1-verbes-pronominaux",
+    "level": "A1",
+    "module": "How verbs work",
+    "title": "Verbs that come with a pronoun — je me lève, tu t'appelles",
+    "minutes": 22,
+    "goal": "Conjugate the everyday reflexive verbs in all six persons — including « nous nous levons », which is not a typo — and know why appelle has two l's but appelons has one.",
+    "vocab": [
+      { "fr": "s'appeler", "phonetic": "sa-puh-LAY", "en": "to be called", "emoji": "📛" },
+      { "fr": "se lever", "phonetic": "suh luh-VAY", "en": "to get up", "emoji": "⏰" },
+      { "fr": "se réveiller", "phonetic": "suh ray-vay-YAY", "en": "to wake up", "emoji": "😴" },
+      { "fr": "se coucher", "phonetic": "suh koo-SHAY", "en": "to go to bed", "emoji": "🛏️" },
+      { "fr": "s'habiller", "phonetic": "sa-bee-YAY", "en": "to get dressed", "emoji": "👕" },
+      { "fr": "se dépêcher", "phonetic": "suh day-pay-SHAY", "en": "to hurry", "emoji": "🏃" },
+      { "fr": "se reposer", "phonetic": "suh ruh-poh-ZAY", "en": "to rest", "emoji": "🛋️" },
+      { "fr": "Je me lève à sept heures.", "phonetic": "zhuh muh lev ah set UR", "en": "I get up at seven.", "emoji": "🌅" },
+      { "fr": "Tu te couches tard ?", "phonetic": "tew tuh koosh TAR", "en": "Do you go to bed late?", "emoji": "🌙" },
+      { "fr": "Nous nous levons tôt.", "phonetic": "noo noo luh-VOHN TOH", "en": "We get up early.", "emoji": "👥" },
+      { "fr": "Vous vous appelez comment ?", "phonetic": "voo voo za-puh-lay koh-MAHN", "en": "What are you called? (vous)", "emoji": "🙋" },
+      { "fr": "Ils s'appellent Marc et Julie.", "phonetic": "eel sa-pel mark ay zhew-LEE", "en": "They're called Marc and Julie.", "emoji": "👨‍👩‍👧" },
+      { "fr": "Je me sens bien.", "phonetic": "zhuh muh sahn BYAN", "en": "I feel well.", "emoji": "🙂" },
+      { "fr": "Dépêche-toi !", "phonetic": "day-pesh TWAH", "en": "Hurry up! (to tu)", "emoji": "⚡" },
+      { "fr": "Asseyez-vous !", "phonetic": "ah-say-yay VOO", "en": "Sit down! (to vous)", "emoji": "🪑" }
+    ],
+    "grammar": {
+      "point": "The pronoun changes with the subject — and nous and vous say it twice",
+      "table": {
+        "title": "se lever, all six persons",
+        "cols": ["", "pronoun", "se lever"],
+        "rows": [
+          { "label": "je", "cells": ["me", "je me lève"] },
+          { "label": "tu", "cells": ["te", "tu te lèves"] },
+          { "label": "il / elle / on", "cells": ["se", "il se lève"] },
+          { "label": "nous", "cells": ["nous", "nous nous levons"] },
+          { "label": "vous", "cells": ["vous", "vous vous levez"] },
+          { "label": "ils / elles", "cells": ["se", "ils se lèvent"] }
+        ],
+        "highlight": ["nous nous levons", "vous vous levez"],
+        "note": "The verb is an ordinary -er verb doing nothing unusual — lève, lèves, lève, levons, levez, lèvent. The little pronoun in front is the only new part, and it has to match the subject. For nous and vous the two words happen to be identical, which is why « nous nous levons » looks wrong and is right."
+      },
+      "table2": {
+        "title": "s'appeler — count the l's",
+        "cols": ["", "s'appeler", "sound"],
+        "rows": [
+          { "label": "je", "cells": ["je m'appelle", "a-PEL"] },
+          { "label": "tu", "cells": ["tu t'appelles", "a-PEL"] },
+          { "label": "il / elle", "cells": ["il s'appelle", "a-PEL"] },
+          { "label": "nous", "cells": ["nous nous appelons", "za-puh-LOHN"] },
+          { "label": "vous", "cells": ["vous vous appelez", "za-puh-LAY"] },
+          { "label": "ils / elles", "cells": ["ils s'appellent", "a-PEL"] }
+        ],
+        "highlight": ["nous nous appelons", "vous vous appelez"],
+        "note": "Four forms double the l, two don't — and the sound tells you which. Where you hear « pel », write ll; where you hear a weak « puh », write a single l. It's the same reason se lever grows an accent: « je me lève » (LEV) but « nous nous levons » (luh-VOHN). Nous and vous are the odd ones out in both verbs."
+      },
+      "explain": "Some French verbs come with a small pronoun attached, and the dictionary shows it: se lever, s'appeler, se coucher. The pronoun means the action comes back to the subject — se lever is literally to raise oneself — and it changes with the person: me, te, se, nous, vous, se. Three things to get right. ① Before a vowel it elides: je m'appelle, tu t'habilles, il s'appelle. ② The verb itself conjugates completely normally; you're only adding a word in front. ③ Negation wraps around the pair, with ne in front of the little pronoun: « je ne me lève pas », never « je me ne lève pas ». Where English simply says get up, go to bed, hurry, be called, French keeps the pronoun — and leaving it out changes the meaning: « j'appelle Marc » is I'm phoning Marc, « je m'appelle Marc » is my name is Marc."
+    },
+    "notes": [
+      {
+        "title": "« Nous nous levons » is not a typo",
+        "body": "Everywhere else the subject and the reflexive pronoun are different words — je/me, tu/te, il/se. For nous and vous they're the same word, so it lands on the page twice in a row: nous nous levons, vous vous couchez, nous nous appelons. Write it twice. Missing one is the single most common mistake with these verbs."
+      },
+      {
+        "title": "The ne goes in front of the pronoun",
+        "body": "« Je ne me lève pas avant huit heures. » The ne comes before me, not before the verb, because the pronoun and the verb are treated as one block. Same everywhere: « il ne se couche pas tard », « nous ne nous dépêchons pas ». The rest of the negation frame — ne… plus, ne… jamais — behaves exactly the same way."
+      },
+      {
+        "title": "Drop the pronoun and you change the verb",
+        "body": "« Il appelle sa mère » is he's phoning his mother. « Il s'appelle Marc » is his name is Marc. Same for lever: « je lève la main » is I raise my hand, « je me lève » is I get up. The pronoun is not decoration — it's what tells you the action lands back on the subject."
+      },
+      {
+        "title": "In an order, the pronoun moves behind",
+        "body": "« Dépêche-toi ! », « Assieds-toi ! », « Asseyez-vous ! », « Reposez-vous bien ! » — after the verb, joined by a hyphen, and te turns into toi. You'll hear these long before you learn the imperative properly, so learn them as fixed phrases now."
+      }
+    ],
+    "examples": [
+      "Le matin, je me réveille à six heures et je me lève à sept heures. (zhuh muh ray-VEY … zhuh muh LEV)",
+      "— Comment tu t'appelles ? — Je m'appelle Ekta. (koh-mahn tew ta-PEL)",
+      "Nous nous levons tôt, même le dimanche. (noo noo luh-VOHN toh, mem luh dee-MAHNSH)",
+      "Ils s'appellent Marc et Julie, et ils habitent à Lyon. (eel sa-PEL mark ay zhew-LEE)",
+      "Je ne me couche pas avant minuit. (zhuh nuh muh koosh pah ah-vahn mee-NWEE)",
+      "Dépêche-toi, on va être en retard ! (day-pesh TWAH, ohn va eh-truh ahn ruh-TAR)"
+    ],
+    "practice": [
+      "Say se coucher through all six persons out loud, then se dépêcher.",
+      "Describe your morning in three steps: je me réveille… je me lève… je m'habille…",
+      "Fill the doubles: « nous ___ levons à six heures » · « vous ___ couchez tard ».",
+      "How many l's? « nous nous appel___ons » · « ils s'appel___ent » · « je m'appel___e ».",
+      "Make it negative: « je me lève tôt » → ___ · « il se dépêche » → ___ .",
+      "Two orders: tell a friend to hurry (___-toi !), then a room of people to sit down (___-vous !).",
+      "Same verb, two meanings: say « I'm phoning Julie » and « my name is Julie »."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for reflexive verbs (les verbes pronominaux). Drill se lever, se coucher, se réveiller, s'habiller, se dépêcher, se reposer and s'appeler through all six persons. Push hard on the two things I get wrong: the doubled nous and vous forms (« nous nous levons », « vous vous appelez ») where the word appears twice, and the spelling of s'appeler — two l's for m'appelle, t'appelles, s'appelle and s'appellent, one l for nous appelons and vous appelez. Check I put ne in front of the little pronoun in the negative (« je ne me lève pas », not « je me ne lève pas »), and that I know « j'appelle Marc » means I'm phoning Marc while « je m'appelle Marc » means my name is Marc. Ask me about my daily routine one question at a time so the verbs come out naturally, and throw in the imperative forms « Dépêche-toi ! » and « Asseyez-vous ! ». Correct every attempt and end with what I still need to review."
+  },
+  {
     "id": "a2-01-past-avoir",
     "level": "A2",
     "module": "Everyday life",

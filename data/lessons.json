@@ -1466,6 +1466,90 @@
     "tutorPrompt": "Be my A1 French tutor for the face and the senses. Drill the vocabulary with articles: le visage, les cheveux, le crâne, le front, le sourcil, l'œil, l'oreille, le nez, la narine, la joue, la pommette, la bouche, les lèvres, le menton, le cou, la nuque, la barbe, la moustache. Test un œil → des yeux and un cheveu → les cheveux specifically. Then conjugate entendre, sentir and voir with me — watch for voir changing to voy- at nous and vous. Drill the two pairs English merges: entendre (hear) vs écouter (listen), voir (see) vs regarder (watch), giving me sentences where I have to pick. Also check I use the definite article for body parts — « j'ai mal à la tête », not « à ma tête ». Finish by having me describe a person's face, and correct my genders."
   },
   {
+    "id": "a1-verbes-carte",
+    "level": "A1",
+    "module": "How verbs work",
+    "title": "The map — every French tense on one line",
+    "minutes": 12,
+    "goal": "See the whole verb system at once, learn the three shortcuts that need no new conjugation at all, and find out how few tenses you actually need to hold a conversation.",
+    "figures": [
+      { "src": "./assets/img/verbes-timeline.svg?v=1", "alt": "The verb manger in ten tenses down a single rail, grouped into le passé, le présent and le futur, each with its French form, its English meaning, and a badge showing the level at which you meet it", "caption": "Ten shapes of one verb, in time order. The filled badges are the ones you meet in A1 and A2 — four of the ten. Everything else can wait." }
+    ],
+    "vocab": [
+      { "fr": "je mange", "phonetic": "zhuh MAHNZH", "en": "I eat / I'm eating — le présent", "emoji": "🍽️" },
+      { "fr": "je suis en train de manger", "phonetic": "zhuh swee zahn tran duh mahn-ZHAY", "en": "I'm eating right this minute", "emoji": "⏳" },
+      { "fr": "je viens de manger", "phonetic": "zhuh vyan duh mahn-ZHAY", "en": "I've just eaten — le passé récent", "emoji": "✅" },
+      { "fr": "je vais manger", "phonetic": "zhuh veh mahn-ZHAY", "en": "I'm going to eat — le futur proche", "emoji": "🔜" },
+      { "fr": "j'ai mangé", "phonetic": "zhay mahn-ZHAY", "en": "I ate / I have eaten — le passé composé", "emoji": "⏪" },
+      { "fr": "je mangeais", "phonetic": "zhuh mahn-ZHEH", "en": "I used to eat — l'imparfait", "emoji": "🔁" },
+      { "fr": "je mangerai", "phonetic": "zhuh mahnzh-RAY", "en": "I will eat — le futur simple", "emoji": "🔮" },
+      { "fr": "Mange ! / Mangez !", "phonetic": "MAHNZH / mahn-ZHAY", "en": "Eat! (to tu / to vous) — l'impératif", "emoji": "❗" },
+      { "fr": "je viens d'arriver", "phonetic": "zhuh vyan da-ree-VAY", "en": "I've just arrived", "emoji": "🚪" },
+      { "fr": "je vais partir", "phonetic": "zhuh veh par-TEER", "en": "I'm going to leave", "emoji": "🚶" }
+    ],
+    "grammar": {
+      "point": "Three of them need no new conjugation — a verb you know, plus the infinitive",
+      "table": {
+        "title": "one small verb + manger, and you have three more tenses",
+        "cols": ["", "French", "what it means"],
+        "rows": [
+          { "label": "venir de", "cells": ["je viens de manger", "I've just eaten"] },
+          { "label": "être en train de", "cells": ["je suis en train de manger", "I'm eating right now"] },
+          { "label": "aller", "cells": ["je vais manger", "I'm going to eat"] }
+        ],
+        "highlight": ["je viens de manger", "je vais manger"],
+        "note": "Venir, être and aller are verbs you already know, and manger never changes — it stays in the infinitive. So these three cost you nothing new, and between them they cover the recent past, the live present and the near future. « Je viens d'arriver », « je vais partir », « je suis en train de travailler »: swap the infinitive and the pattern holds for every verb in French."
+      },
+      "table2": {
+        "title": "the three that carry a conversation",
+        "cols": ["", "French", "covers"],
+        "rows": [
+          { "label": "now", "cells": ["je mange", "I eat, I'm eating"] },
+          { "label": "the past", "cells": ["j'ai mangé", "I ate, I have eaten"] },
+          { "label": "the future", "cells": ["je vais manger", "I'm going to eat"] }
+        ],
+        "highlight": ["je mange", "j'ai mangé", "je vais manger"],
+        "note": "Everything else on the map is refinement. With these three, plus « je viens de » for something that just happened, you can already say what you did yesterday, what you're doing now and what you'll do tomorrow — which is most of what anyone says."
+      },
+      "explain": "French verbs look like a long list of tenses, and the list is what makes them feel heavy. The map turns the list back into what it really is: one verb, seen from different distances in time. Read it top to bottom and you're walking from the deep past to the far future. Three things are worth noticing. ① You need very few of them. Four of the ten are A1–A2, and three of those four do almost all the work. ② Three of them aren't really new tenses at all — venir de, être en train de and aller each take a verb you already have and bolt an infinitive on the end, so you can talk about just-now, right-now and soon before you've conjugated a single past or future. ③ The heavy-looking ones at the two ends — plus-que-parfait, futur antérieur — are for writing and for B2. Nobody is going to stop you in the street with « j'aurai mangé »."
+    },
+    "notes": [
+      {
+        "title": "You can talk about the past before you learn a past tense",
+        "body": "« Je viens de » + infinitive means it happened a moment ago: « je viens de manger », « je viens d'arriver », « on vient de rentrer ». That's the whole rule. It only works for the very recent past — for yesterday you need the passé composé — but for the first months it fills the gap beautifully."
+      },
+      {
+        "title": "French has one présent where English has two",
+        "body": "« Je mange » is both I eat and I am eating. There's no separate continuous tense, so don't go looking for one. If you really need to stress that it's happening this second — someone rings while you're at the table — say « je suis en train de manger »."
+      },
+      {
+        "title": "Why the past has two entries",
+        "body": "English uses one past for both; French splits the job. Passé composé is for a finished event: « hier, j'ai mangé au restaurant ». Imparfait is for a background or a habit: « quand j'étais petite, je mangeais beaucoup de riz ». You don't have to choose between them yet — but knowing the split is coming makes it much less of a shock at B1."
+      },
+      {
+        "title": "Where each one lives on this site",
+        "body": "Le présent is the next two lessons in this module. Le passé composé and le futur proche are in A2, Everyday life. L'imparfait, le futur simple and l'impératif are in B1, Finding your voice. Le plus-que-parfait waits until B2. Come back to this map whenever a new tense turns up and put it in its place."
+      }
+    ],
+    "examples": [
+      "Je mange à midi tous les jours. (zhuh mahnzh ah mee-DEE too lay ZHOOR)",
+      "— Tu as faim ? — Non merci, je viens de manger. (zhuh vyan duh mahn-ZHAY)",
+      "Je suis en train de travailler, je te rappelle. (zhuh swee zahn tran duh tra-va-YAY)",
+      "Ce soir, je vais manger avec des amis. (suh SWAHR, zhuh veh mahn-ZHAY)",
+      "Hier, j'ai mangé au restaurant. (ee-YEHR, zhay mahn-ZHAY oh res-toh-RAHN)",
+      "Nous venons d'arriver en France. (noo vuh-nohn da-ree-VAY ahn FRAHNSS)"
+    ],
+    "practice": [
+      "Say the same meal four ways: je mange · je viens de… · je vais… · j'ai…",
+      "Put these on the map — past, present or future? « je vais partir » · « j'ai fini » · « je viens d'arriver » · « je mangeais ».",
+      "Answer out loud: « Tu as faim ? » using « je viens de… ».",
+      "Someone phones at a bad moment. Tell them what you're doing right now.",
+      "Take a verb you already know — parler, travailler, sortir — and build its three core forms: now, just now, soon.",
+      "Without looking: which three tenses do you actually need this month?"
+    ],
+    "tutorPrompt": "Be my A1 French tutor for the shape of the French verb system. Don't drill conjugations — drill placement. Give me a French sentence and ask me where it sits in time (passé, présent, futur) and which form it uses: je mange, je viens de manger, je suis en train de manger, je vais manger, j'ai mangé, je mangeais, je mangerai. Then reverse it: give me a moment in time (« hier », « tout de suite », « ce soir », « quand tu étais petite ») and ask me which form fits. Drill the three no-conjugation shortcuts hardest — venir de + infinitif, être en train de + infinitif, aller + infinitif — with several different verbs, since they let me talk about the past and the future before I've learned either tense. Remind me that « je mange » covers both I eat and I am eating. Keep it to eight exchanges and finish by telling me which three forms to focus on first."
+  },
+  {
     "id": "a1-verbes-groupes",
     "level": "A1",
     "module": "How verbs work",

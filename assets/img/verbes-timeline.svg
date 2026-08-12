@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 592" width="640" height="592" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="The verb manger in every tense, arranged in time order down a single rail. Le passé: plus-que-parfait j'avais mangé (B2), imparfait je mangeais (B1), passé composé j'ai mangé (A2), passé récent je viens de manger (A1). Le présent: présent je mange (A1), présent progressif je suis en train de manger (A1), impératif mange, mangez (B1). Le futur: futur proche je vais manger (A2), futur simple je mangerai (B1), futur antérieur j'aurai mangé (B2). A filled badge means you meet it in A1 or A2; an outline badge means later.">
+  <style>
+    .zone  { font-size: 12px; font-weight: 800; letter-spacing: 1px; }
+    .tense { font-size: 12px; font-weight: 700; }
+    .form  { font-size: 13.5px; font-weight: 700; fill: #0f172a; }
+    .gloss { font-size: 10.5px; font-style: italic; fill: #64748b; }
+    .badge { font-size: 9.5px; font-weight: 800; }
+    .foot  { font-size: 11px; fill: #475569; }
+  </style>
+
+  <rect width="640" height="592" fill="#ffffff"/>
+  <text x="320" y="28" text-anchor="middle" font-size="18" font-weight="800" fill="#0f172a">MANGER — d'avant-hier à après-demain</text>
+  <text x="320" y="46" text-anchor="middle" font-size="11.5" font-style="italic" fill="#64748b">one verb, ten shapes, in the order they sit in time</text>
+
+  <!-- ── LE PASSÉ ──────────────────────────────────────────────────────── -->
+  <rect x="14" y="60" width="612" height="182" rx="14" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+  <text class="zone" x="34" y="84" fill="#7c3aed">LE PASSÉ</text>
+  <path d="M96,96 V236" stroke="#c4b5fd" stroke-width="3" stroke-linecap="round"/>
+
+  <g>
+    <circle cx="96" cy="110" r="5.5" fill="#7c3aed"/>
+    <text class="tense" x="112" y="114" fill="#7c3aed">plus-que-parfait</text>
+    <text class="form"  x="248" y="114">j'avais mangé</text>
+    <text class="gloss" x="360" y="114">I had eaten</text>
+    <rect x="566" y="102" width="30" height="16" rx="8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text class="badge" x="581" y="113.5" text-anchor="middle" fill="#94a3b8">B2</text>
+  </g>
+  <g>
+    <circle cx="96" cy="152" r="5.5" fill="#7c3aed"/>
+    <text class="tense" x="112" y="156" fill="#7c3aed">imparfait</text>
+    <text class="form"  x="248" y="156">je mangeais</text>
+    <text class="gloss" x="360" y="156">I used to eat, I was eating</text>
+    <rect x="566" y="144" width="30" height="16" rx="8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text class="badge" x="581" y="155.5" text-anchor="middle" fill="#94a3b8">B1</text>
+  </g>
+  <g>
+    <circle cx="96" cy="194" r="5.5" fill="#7c3aed"/>
+    <text class="tense" x="112" y="198" fill="#7c3aed">passé composé</text>
+    <text class="form"  x="248" y="198">j'ai mangé</text>
+    <text class="gloss" x="360" y="198">I ate, I have eaten</text>
+    <rect x="566" y="186" width="30" height="16" rx="8" fill="#0f172a"/>
+    <text class="badge" x="581" y="197.5" text-anchor="middle" fill="#ffffff">A2</text>
+  </g>
+  <g>
+    <circle cx="96" cy="222" r="5.5" fill="#7c3aed"/>
+    <text class="tense" x="112" y="226" fill="#7c3aed">passé récent</text>
+    <text class="form"  x="248" y="226">je viens de manger</text>
+    <text class="gloss" x="392" y="226">I've just eaten</text>
+    <rect x="566" y="214" width="30" height="16" rx="8" fill="#0f172a"/>
+    <text class="badge" x="581" y="225.5" text-anchor="middle" fill="#ffffff">A1</text>
+  </g>
+
+  <!-- ── LE PRÉSENT ────────────────────────────────────────────────────── -->
+  <rect x="14" y="252" width="612" height="150" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text class="zone" x="34" y="276" fill="#16a34a">LE PRÉSENT</text>
+  <text x="142" y="276" font-size="10.5" font-style="italic" fill="#16a34a">— you are here</text>
+  <path d="M96,288 V386" stroke="#86efac" stroke-width="3" stroke-linecap="round"/>
+
+  <g>
+    <circle cx="96" cy="302" r="6.5" fill="#16a34a"/>
+    <text class="tense" x="112" y="306" fill="#16a34a">présent</text>
+    <text class="form"  x="248" y="306">je mange</text>
+    <text class="gloss" x="360" y="306">I eat, I'm eating</text>
+    <rect x="566" y="294" width="30" height="16" rx="8" fill="#0f172a"/>
+    <text class="badge" x="581" y="305.5" text-anchor="middle" fill="#ffffff">A1</text>
+  </g>
+  <g>
+    <circle cx="96" cy="344" r="5.5" fill="#16a34a"/>
+    <text class="tense" x="112" y="348" fill="#16a34a">présent progressif</text>
+    <text class="form"  x="248" y="348">je suis en train de manger</text>
+    <text class="gloss" x="248" y="362">I'm eating right this minute</text>
+    <rect x="566" y="336" width="30" height="16" rx="8" fill="#0f172a"/>
+    <text class="badge" x="581" y="347.5" text-anchor="middle" fill="#ffffff">A1</text>
+  </g>
+  <g>
+    <circle cx="96" cy="382" r="5.5" fill="#16a34a"/>
+    <text class="tense" x="112" y="386" fill="#16a34a">impératif</text>
+    <text class="form"  x="248" y="386">Mange ! Mangez !</text>
+    <text class="gloss" x="392" y="386">Eat! (tu / vous)</text>
+    <rect x="566" y="374" width="30" height="16" rx="8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text class="badge" x="581" y="385.5" text-anchor="middle" fill="#94a3b8">B1</text>
+  </g>
+
+  <!-- ── LE FUTUR ──────────────────────────────────────────────────────── -->
+  <rect x="14" y="412" width="612" height="140" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text class="zone" x="34" y="436" fill="#2563eb">LE FUTUR</text>
+  <path d="M96,448 V536" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
+
+  <g>
+    <circle cx="96" cy="462" r="5.5" fill="#2563eb"/>
+    <text class="tense" x="112" y="466" fill="#2563eb">futur proche</text>
+    <text class="form"  x="248" y="466">je vais manger</text>
+    <text class="gloss" x="360" y="466">I'm going to eat</text>
+    <rect x="566" y="454" width="30" height="16" rx="8" fill="#0f172a"/>
+    <text class="badge" x="581" y="465.5" text-anchor="middle" fill="#ffffff">A2</text>
+  </g>
+  <g>
+    <circle cx="96" cy="500" r="5.5" fill="#2563eb"/>
+    <text class="tense" x="112" y="504" fill="#2563eb">futur simple</text>
+    <text class="form"  x="248" y="504">je mangerai</text>
+    <text class="gloss" x="360" y="504">I will eat</text>
+    <rect x="566" y="492" width="30" height="16" rx="8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text class="badge" x="581" y="503.5" text-anchor="middle" fill="#94a3b8">B1</text>
+  </g>
+  <g>
+    <circle cx="96" cy="532" r="5.5" fill="#2563eb"/>
+    <text class="tense" x="112" y="536" fill="#2563eb">futur antérieur</text>
+    <text class="form"  x="248" y="536">j'aurai mangé</text>
+    <text class="gloss" x="360" y="536">I will have eaten</text>
+    <rect x="566" y="524" width="30" height="16" rx="8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text class="badge" x="581" y="535.5" text-anchor="middle" fill="#94a3b8">B2</text>
+  </g>
+
+  <!-- ── legend ────────────────────────────────────────────────────────── -->
+  <rect x="180" y="562" width="30" height="16" rx="8" fill="#0f172a"/>
+  <text class="badge" x="195" y="573.5" text-anchor="middle" fill="#ffffff">A1</text>
+  <text class="foot" x="218" y="574">you meet it now</text>
+  <rect x="336" y="562" width="30" height="16" rx="8" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text class="badge" x="351" y="573.5" text-anchor="middle" fill="#94a3b8">B1</text>
+  <text class="foot" x="374" y="574">waiting for you later</text>
+</svg>

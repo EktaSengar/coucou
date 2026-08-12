@@ -303,8 +303,12 @@ document.addEventListener('alpine:init', () => {
           <div class="mt-4">
             <p x-show="t.title" x-cloak class="mb-1.5 text-xs font-semibold text-slate-600 uppercase tracking-wide" x-text="t.title"></p>
             <div class="overflow-x-auto -mx-1 px-1">
-              <div class="grid text-sm bg-white rounded-lg ring-1 ring-slate-200 overflow-hidden"
-                   :style="`grid-template-columns: auto repeat(${t.cols.length - 1}, minmax(4.5rem, 1fr))`">
+              <!-- Columns size to their widest cell, and the grid is allowed to grow past
+                   the wrapper — otherwise 1fr caps each column at the container width and the
+                   nowrap text spills over its neighbour instead of scrolling. Matters on phones,
+                   where a three-column table rarely fits. -->
+              <div class="grid text-sm bg-white rounded-lg ring-1 ring-slate-200 overflow-hidden min-w-max"
+                   :style="`grid-template-columns: auto repeat(${t.cols.length - 1}, minmax(max-content, 1fr))`">
                 <template x-for="(cell, i) in gridCells(t)" :key="i">
                   <div class="px-3 py-2 whitespace-nowrap" :class="cellClass(cell.kind)" x-text="cell.text"></div>
                 </template>

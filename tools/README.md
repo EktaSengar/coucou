@@ -38,3 +38,25 @@ If the copies drift, nothing errors. The browser just requests a hash that was
 never generated, and the audio silently stops working for the affected strings.
 After changing it, rerun `build_audio.py` — old clips are orphaned rather than
 overwritten, so also check that every string still resolves before committing.
+
+## When the voice says it wrong: the `say` field
+
+A vocab entry may carry an optional `say`, which is handed to the voice instead
+of `fr`. The page still displays `fr`, and the filename is still hashed from
+`fr`, so nothing the browser does changes — only the sound inside the file.
+
+```json
+{ "fr": "de temps en temps", "say": "de tan zan tan", "phonetic": "duh tahn zahn TAHN" }
+```
+
+That one exists because the voice drops the liaison in `temps‿en` and says
+« duh tahn ahn tahn ». It handles liaison fine everywhere else on the site —
+`les enfants`, `nous allons`, `six août`, `je suis allé` all come out linked —
+so this is a per-string escape hatch, not a general fix. Reach for it only with
+evidence, and keep `fr` correct: it's what the learner reads.
+
+To check a suspect clip, synthesise the phrase twice, once spelled so the
+liaison is unavoidable (`de tan zan tan`) and once so it can't happen
+(`de tan an tan`), and compare the three files. A missing liaison shows up as
+near-perfect correlation with the second and a fricative-count gap against the
+first — /z/ puts energy above 3 kHz that a nasal vowel doesn't.

@@ -1564,7 +1564,7 @@
       { "fr": "toujours", "phonetic": "too-ZHOOR", "en": "always — 100%", "emoji": "💯" },
       { "fr": "souvent", "phonetic": "soo-VAHN", "en": "often — 75%", "emoji": "🔁" },
       { "fr": "parfois / quelquefois", "phonetic": "par-FWAH / kel-kuh-FWAH", "en": "sometimes — 50%", "emoji": "🤷" },
-      { "fr": "de temps en temps", "phonetic": "duh tahn zahn TAHN", "en": "from time to time", "emoji": "🕰️" },
+      { "fr": "de temps en temps", "say": "de tan zan tan", "phonetic": "duh tahn zahn TAHN", "en": "from time to time", "emoji": "🕰️" },
       { "fr": "rarement", "phonetic": "rar-MAHN", "en": "rarely — 25%", "emoji": "🌘" },
       { "fr": "ne… jamais", "phonetic": "nuh… zha-MEH", "en": "never — 0%", "emoji": "🚫" },
       { "fr": "tous les jours", "phonetic": "too lay ZHOOR", "en": "every day", "emoji": "📅" },
@@ -2241,11 +2241,11 @@
     "minutes": 25,
     "goal": "Say where you went and came from, using the passé composé with être (with agreement).",
     "vocab": [
-      { "fr": "Je suis allé(e)", "phonetic": "zhuh swee a-LAY", "en": "I went" },
+      { "fr": "Je suis allé(e)", "phonetic": "zhuh swee za-LAY", "en": "I went" },
       { "fr": "Je suis venu(e)", "phonetic": "zhuh swee vuh-NEW", "en": "I came" },
       { "fr": "Je suis parti(e)", "phonetic": "zhuh swee par-TEE", "en": "I left" },
       { "fr": "Je suis resté(e)", "phonetic": "zhuh swee res-TAY", "en": "I stayed" },
-      { "fr": "Je suis arrivé(e)", "phonetic": "zhuh swee a-ree-VAY", "en": "I arrived" },
+      { "fr": "Je suis arrivé(e)", "phonetic": "zhuh swee za-ree-VAY", "en": "I arrived" },
       { "fr": "né(e)", "phonetic": "NAY", "en": "born" },
       { "fr": "en train / en bus / en voiture", "phonetic": "ahn TRAN / ahn BEWSS / ahn vwah-TEWR", "en": "by train / by bus / by car" },
       { "fr": "le week-end dernier", "phonetic": "luh week-end dehr-NYAY", "en": "last weekend" }

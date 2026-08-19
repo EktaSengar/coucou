@@ -82,16 +82,21 @@ for k, it in enumerate(listen):
 # Lesson strings → content-addressed clips (vocab, examples, phonics examples).
 os.makedirs(f"{ROOT}/say", exist_ok=True)
 seen = set()
-def add_say(text):
+def add_say(text, spoken=None):
+    """`text` is what the page shows and what the filename hashes from; `spoken`
+    optionally overrides what the voice is actually given. The two come apart
+    when the voice mispronounces a correctly-spelled string — see the note on
+    « say » in tools/README.md. Never let `spoken` touch the hash, or the browser
+    will ask for a file that was never made."""
     c = clean(text)
     if not c: return
     h = say_hash(c)
     if h in seen: return
     seen.add(h)
-    specs.append((c, DENISE, f"{ROOT}/say/{h}.mp3", "-5%"))
+    specs.append((clean(spoken) if spoken else c, DENISE, f"{ROOT}/say/{h}.mp3", "-5%"))
 
 for l in load('lessons.json'):
-    for v in l.get('vocab', []): add_say(v['fr'])
+    for v in l.get('vocab', []): add_say(v['fr'], v.get('say'))
     for ex in l.get('examples', []): add_say(ex)
     for ph in l.get('phonics', []):
         for ex in ph.get('examples', []): add_say(ex)

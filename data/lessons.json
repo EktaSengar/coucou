@@ -166,7 +166,7 @@
       { "fr": "Je travaille dans une banque.", "phonetic": "zhuh tra-VYE dahn zewn BAHNK", "en": "I work in a bank.", "emoji": "🏦" },
       { "fr": "Je travaille chez Renault.", "phonetic": "zhuh tra-VYE shay ruh-NOH", "en": "I work at Renault. (chez + a company)", "emoji": "🏢" },
       { "fr": "Je cherche un travail.", "phonetic": "zhuh shersh uhn tra-VYE", "en": "I'm looking for a job.", "emoji": "🔍" },
-      { "fr": "Je suis à la retraite.", "phonetic": "zhuh swee zah lah ruh-TRET", "en": "I'm retired.", "emoji": "🌴" },
+      { "fr": "Je suis à la retraite.", "phonetic": "zhuh swee ah lah ruh-TRET", "en": "I'm retired.", "emoji": "🌴" },
       { "fr": "un travail / un boulot", "phonetic": "uhn tra-VYE / uhn boo-LOH", "en": "a job / a job (casual)", "emoji": "💼" }
     ],
     "grammar": {
@@ -254,7 +254,7 @@
       { "fr": "Vous pouvez répéter, s'il vous plaît ?", "phonetic": "voo poo-vay ray-pay-TAY, seel voo PLEH", "en": "Can you repeat, please?" },
       { "fr": "Vous parlez anglais ?", "phonetic": "voo par-lay ahn-GLEH", "en": "Do you speak English?" },
       { "fr": "Je ne sais pas", "phonetic": "zhuh nuh seh PAH", "en": "I don't know" },
-      { "fr": "D'accord", "phonetic": "da-KOR", "en": "OK / agreed" }
+      { "fr": "D'accord", "phonetic": "dah-KOR", "en": "OK / agreed" }
     ],
     "grammar": {
       "point": "vous or tu — choosing wrong is the mistake people notice",
@@ -1177,10 +1177,10 @@
       { "fr": "les États-Unis / les Pays-Bas", "phonetic": "lay zay-ta-zew-NEE / lay pay-ee-BAH", "en": "the United States / the Netherlands — plural", "emoji": "🇺🇸" },
       { "fr": "Je suis indien / indienne.", "phonetic": "zhuh swee an-dee-AN / an-dee-EN", "en": "I'm Indian. (m / f)", "emoji": "🙋" },
       { "fr": "Quelle est ta nationalité ?", "phonetic": "kel eh ta na-syo-na-lee-TAY", "en": "What's your nationality?", "emoji": "❓" },
-      { "fr": "Je vais à Paris.", "phonetic": "zhuh veh za pa-REE", "en": "I'm going to Paris. (a city → à)", "emoji": "🏙️" },
-      { "fr": "Je vais en France.", "phonetic": "zhuh veh zahn FRAHNSS", "en": "I'm going to France. (feminine → en)", "emoji": "➡️" },
-      { "fr": "Je vais au Japon.", "phonetic": "zhuh veh zoh zha-POHN", "en": "I'm going to Japan. (masculine → au)", "emoji": "➡️" },
-      { "fr": "Je vais aux États-Unis.", "phonetic": "zhuh veh zoh zay-ta-zew-NEE", "en": "I'm going to the US. (plural → aux)", "emoji": "➡️" },
+      { "fr": "Je vais à Paris.", "phonetic": "zhuh veh ah pa-REE", "en": "I'm going to Paris. (a city → à)", "emoji": "🏙️" },
+      { "fr": "Je vais en France.", "phonetic": "zhuh vay ahn FRAHNSS", "en": "I'm going to France. (feminine → en)", "emoji": "➡️" },
+      { "fr": "Je vais au Japon.", "phonetic": "zhuh vay oh zha-POHN", "en": "I'm going to Japan. (masculine → au)", "emoji": "➡️" },
+      { "fr": "Je vais aux États-Unis.", "phonetic": "zhuh vay oh zay-ta-zew-NEE", "en": "I'm going to the US. (plural → aux)", "emoji": "➡️" },
       { "fr": "Je viens d'Inde.", "phonetic": "zhuh vyan DAND", "en": "I'm from India.", "emoji": "🛬" },
       { "fr": "un pays / une ville / à l'étranger", "phonetic": "uhn pay-EE / ewn VEEL / ah lay-trahn-ZHAY", "en": "a country / a town / abroad", "emoji": "🌍" },
       { "fr": "J'apprends le français.", "phonetic": "zha-PRAHN luh frahn-SEH", "en": "I'm learning French. (the language)", "emoji": "📘" }
@@ -2026,7 +2026,7 @@
       { "fr": "nous faisons / vous faites / ils font", "phonetic": "noo fuh-ZOHN / voo FET / eel FOHN", "en": "we do / you do / they do", "emoji": "🟧" },
       { "fr": "je prends / tu prends / il prend", "phonetic": "zhuh PRAHN / tew PRAHN / eel PRAHN", "en": "I take / you take / he takes", "emoji": "🟪" },
       { "fr": "nous prenons / vous prenez / ils prennent", "phonetic": "noo pruh-NOHN / voo pruh-NAY / eel PREN", "en": "we take / you take / they take", "emoji": "🟪" },
-      { "fr": "J'ai trente ans.", "phonetic": "zhay TRAHNT ahn", "en": "I'm thirty. (avoir, not être)", "emoji": "🎂" },
+      { "fr": "J'ai trente ans.", "phonetic": "zhay trahnt AHN", "en": "I'm thirty. (avoir, not être)", "emoji": "🎂" },
       { "fr": "Je suis en retard.", "phonetic": "zhuh swee zahn ruh-TAR", "en": "I'm late.", "emoji": "⏰" },
       { "fr": "Il fait froid.", "phonetic": "eel feh FRWAH", "en": "It's cold. (faire for weather)", "emoji": "🥶" },
       { "fr": "Je prends le bus.", "phonetic": "zhuh prahn luh BEWSS", "en": "I take the bus.", "emoji": "🚌" },
@@ -2209,7 +2209,7 @@
     "minutes": 25,
     "goal": "Talk about what you did, using the passé composé with avoir.",
     "vocab": [
-      { "fr": "hier", "phonetic": "ee-EHR", "en": "yesterday" },
+      { "fr": "hier", "phonetic": "ee-YEHR", "en": "yesterday" },
       { "fr": "J'ai mangé", "phonetic": "zhay mahn-ZHAY", "en": "I ate / I have eaten" },
       { "fr": "J'ai fait", "phonetic": "zhay FEH", "en": "I did / I made" },
       { "fr": "J'ai vu", "phonetic": "zhay VEW", "en": "I saw" },
@@ -2223,7 +2223,7 @@
       "explain": "For most past actions: avoir (present) + a past participle. -er verbs → -é (parler → parlé), -ir verbs → -i (finir → fini), and learn the key irregulars: fait (faire), vu (voir), eu (avoir), été (être). So « j'ai mangé » means both I ate and I have eaten."
     },
     "examples": [
-      "Hier, j'ai mangé au restaurant et j'ai vu un film. (ee-EHR, zhay mahn-ZHAY oh res-toh-RAHN ay zhay vew uhn FEELM)",
+      "Hier, j'ai mangé au restaurant et j'ai vu un film. (ee-YEHR, zhay mahn-ZHAY oh res-toh-RAHN ay zhay vew uhn FEELM)",
       "— Qu'est-ce que tu as fait ce week-end ? — J'ai travaillé. (kess-kuh tew ah feh suh week-END ? zhay tra-va-YAY)"
     ],
     "practice": [
@@ -3465,7 +3465,7 @@
       "explain": "The passive puts the receiver of the action first — common in news and formal writing. Form: être (in the right tense) + past participle, agreeing with the subject (grid): « une loi a été votée », « le suspect sera interrogé ». Name the doer with « par »."
     },
     "examples": [
-      "Une réforme du système de santé a été annoncée hier par le gouvernement. (ewn ray-FORM dew sees-tem duh sahn-TAY ah ay-tay ah-nohn-SAY ee-EHR par luh goo-vehr-nuh-MAHN)",
+      "Une réforme du système de santé a été annoncée hier par le gouvernement. (ewn ray-FORM dew sees-tem duh sahn-TAY ah ay-tay ah-nohn-SAY ee-YEHR par luh goo-vehr-nuh-MAHN)",
       "Selon une étude, le prix des loyers a augmenté de 5 % en un an. (suh-lohn ewn ay-TEWD, luh pree day lwah-YAY ah ohg-mahn-TAY duh sank poor-SAHN ahn nuhn AHN)"
     ],
     "practice": [

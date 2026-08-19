@@ -145,6 +145,98 @@
     "tutorPrompt": "Let's role-play a first meeting, in French, at A1 level. Greet me and ask my name and where I'm from, one simple question at a time. Keep your French very simple. If I'm stuck, give me the phrase. After about six exchanges, list my three most useful corrections and three phrases to remember."
   },
   {
+    "id": "a1-metiers",
+    "level": "A1",
+    "module": "First conversations",
+    "title": "Le travail & les métiers — qu'est-ce que tu fais dans la vie ?",
+    "minutes": 20,
+    "goal": "Answer the question that follows your name in every first conversation — say what you do, where you work, and do it without the little word English can't leave out.",
+    "vocab": [
+      { "fr": "Qu'est-ce que tu fais dans la vie ?", "phonetic": "kess-kuh tew feh dahn lah VEE", "en": "What do you do? (the everyday one)", "emoji": "💬" },
+      { "fr": "Quel est ton métier ?", "phonetic": "kel eh tohn may-tee-AY", "en": "What's your job? (a little more formal)", "emoji": "❓" },
+      { "fr": "Je suis médecin.", "phonetic": "zhuh swee mayd-SAN", "en": "I'm a doctor. (no article!)", "emoji": "🩺" },
+      { "fr": "Je suis ingénieur / ingénieure.", "phonetic": "zhuh swee zan-zhay-nee-UR", "en": "I'm an engineer.", "emoji": "⚙️" },
+      { "fr": "Je suis professeur / professeure.", "phonetic": "zhuh swee pro-fuh-SUR", "en": "I'm a teacher.", "emoji": "📚" },
+      { "fr": "Je suis étudiant / étudiante.", "phonetic": "zhuh swee zay-tew-dee-AHN / -AHNT", "en": "I'm a student.", "emoji": "🎓" },
+      { "fr": "un serveur / une serveuse", "phonetic": "uhn ser-VUR / ewn ser-VUZ", "en": "a waiter / a waitress", "emoji": "🍽️" },
+      { "fr": "un infirmier / une infirmière", "phonetic": "uhn an-feer-mee-AY / ewn an-feer-mee-EHR", "en": "a nurse", "emoji": "💉" },
+      { "fr": "un boulanger / une boulangère", "phonetic": "uhn boo-lahn-ZHAY / ewn boo-lahn-ZHEHR", "en": "a baker", "emoji": "🥖" },
+      { "fr": "un avocat / une avocate", "phonetic": "uhn a-vo-KAH / ewn a-vo-KAT", "en": "a lawyer", "emoji": "⚖️" },
+      { "fr": "un acteur / une actrice", "phonetic": "uhn ak-TUR / ewn ak-TREESS", "en": "an actor", "emoji": "🎭" },
+      { "fr": "Je travaille dans une banque.", "phonetic": "zhuh tra-VYE dahn zewn BAHNK", "en": "I work in a bank.", "emoji": "🏦" },
+      { "fr": "Je travaille chez Renault.", "phonetic": "zhuh tra-VYE shay ruh-NOH", "en": "I work at Renault. (chez + a company)", "emoji": "🏢" },
+      { "fr": "Je cherche un travail.", "phonetic": "zhuh shersh uhn tra-VYE", "en": "I'm looking for a job.", "emoji": "🔍" },
+      { "fr": "Je suis à la retraite.", "phonetic": "zhuh swee zah lah ruh-TRET", "en": "I'm retired.", "emoji": "🌴" },
+      { "fr": "un travail / un boulot", "phonetic": "uhn tra-VYE / uhn boo-LOH", "en": "a job / a job (casual)", "emoji": "💼" }
+    ],
+    "grammar": {
+      "point": "After « je suis », the job loses its article",
+      "table": {
+        "title": "the same job, two sentences",
+        "cols": ["", "French", "English"],
+        "rows": [
+          { "label": "with être", "cells": ["je suis médecin", "I'm a doctor"] },
+          { "label": "with être", "cells": ["elle est avocate", "she's a lawyer"] },
+          { "label": "with c'est", "cells": ["c'est un médecin", "he's a doctor"] },
+          { "label": "with c'est", "cells": ["c'est une avocate", "she's a lawyer"] },
+          { "label": "+ adjective", "cells": ["je suis un bon médecin", "I'm a good doctor"] }
+        ],
+        "highlight": ["je suis médecin", "c'est un médecin"],
+        "note": "The verb decides, not the job. Être takes the bare noun — « je suis professeur », « il est boulanger ». C'est hands the article straight back — « c'est un professeur ». And the moment you add an adjective, the article returns even after être: « je suis un bon médecin »."
+      },
+      "table2": {
+        "title": "making the job feminine",
+        "cols": ["pattern", "masculine", "feminine"],
+        "rows": [
+          { "label": "add -e", "cells": ["un avocat", "une avocate"] },
+          { "label": "-er → -ère", "cells": ["un boulanger", "une boulangère"] },
+          { "label": "-ier → -ière", "cells": ["un infirmier", "une infirmière"] },
+          { "label": "-eur → -euse", "cells": ["un serveur", "une serveuse"] },
+          { "label": "-teur → -trice", "cells": ["un acteur", "une actrice"] },
+          { "label": "no change", "cells": ["un médecin", "une médecin"] }
+        ],
+        "highlight": ["une serveuse", "une actrice"],
+        "note": "The same machinery as the nationalities: a silent consonant that the -e finally makes audible, plus two endings with lives of their own. The -eur family splits — a job built on a verb goes -euse (servir → serveuse), while -teur usually goes -trice (acteur → actrice)."
+      },
+      "explain": "French asks this question two ways. « Quel est ton métier ? » is the tidy one you'll see written down; « qu'est-ce que tu fais dans la vie ? » is the one you'll actually hear, and « vous faites quoi comme travail ? » is its casual cousin. The answer holds the one rule worth taking away: after être, a profession drops its article. « Je suis médecin », « elle est avocate », « il est boulanger » — no un, no une. English can't do this, which is exactly why « je suis un médecin » keeps slipping out. Switch to c'est and the article comes straight back, because c'est needs a noun phrase to point at: « c'est un médecin ». Then there's where you work: dans for a place or a sector (dans une banque, dans l'informatique), chez for a company or a person (chez Renault, chez Google), pour for an organisation you serve (pour une association), and en tant que for the role itself (en tant que consultante)."
+    },
+    "notes": [
+      {
+        "title": "« Je suis médecin », never « je suis un médecin »",
+        "body": "This is the whole lesson in one line. After être the job is treated like an adjective — a description of you, not a thing you are one of. The article only comes back in two cases: after c'est (« c'est un médecin ») and when an adjective joins in (« je suis un bon médecin », « c'est une avocate brillante »)."
+      },
+      {
+        "title": "The feminine endings are the ones you already know",
+        "body": "-er → -ère, -ier → -ière, -eur → -euse, -teur → -trice, or just add -e. It's the same set that turns français into française and italien into italienne. A few titles were invariable for a long time — médecin, professeur, ingénieur, auteur — but une professeure, une ingénieure and une autrice are now standard in France and normal in writing."
+      },
+      {
+        "title": "dans, chez or pour ?",
+        "body": "dans + a place or a field: « je travaille dans une banque », « dans l'informatique », « dans la santé ». chez + a company or a person: « chez Renault », « chez Google » — the same chez as « chez moi », which is why « je vais chez le médecin » means to the doctor's, not to be a doctor. pour + an organisation you work on behalf of: « pour une association »."
+      },
+      {
+        "title": "travail, boulot, emploi",
+        "body": "un travail is the neutral word. un boulot is the casual one and you'll hear it constantly — « j'ai trouvé un boulot ». un emploi is the administrative one, which is why the job centre is called Pôle emploi. Three more states worth having ready: « je suis au chômage » (unemployed), « je suis à la retraite » (retired), « je suis à mon compte » (self-employed)."
+      }
+    ],
+    "examples": [
+      "— Qu'est-ce que tu fais dans la vie ? — Je suis ingénieure. (kess-kuh tew feh dahn lah VEE)",
+      "Mon mari est professeur, il travaille dans un lycée. (mohn ma-REE eh pro-fuh-SUR)",
+      "Elle est avocate. C'est une avocate très connue. (el eh ta-vo-KAT. seh tewn a-vo-KAT)",
+      "Je travaille chez Renault depuis trois ans. (zhuh tra-VYE shay ruh-NOH)",
+      "Je cherche un travail dans l'informatique. (zhuh shersh uhn tra-VYE dahn lan-for-ma-TEEK)",
+      "Ma mère est à la retraite depuis l'année dernière. (mah mehr eh ta lah ruh-TRET)"
+    ],
+    "practice": [
+      "Say your own job, with nothing between « je suis » and the word.",
+      "Same job, two sentences: « je suis ___ » and « c'est ___ ».",
+      "Make them feminine: un boulanger → ___ · un serveur → ___ · un acteur → ___ · un avocat → ___ .",
+      "dans, chez or pour? « je travaille ___ une banque » · « ___ Google » · « ___ une association ».",
+      "Answer out loud, twice: « Quel est ton métier ? » then « Qu'est-ce que tu fais dans la vie ? »",
+      "Say what two people in your family do, and where."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for jobs and work. Ask me « qu'est-ce que tu fais dans la vie ? », « quel est ton métier ? » and « tu travailles où ? », and make me answer naturally. Drill one rule above all: after être a profession takes no article — « je suis médecin », never « je suis un médecin » — and correct me instantly every time I slip. Then show me the two cases where the article comes back: after c'est (« c'est un médecin ») and with an adjective (« je suis un bon médecin »). Drill the feminine forms too: -er → -ère (boulangère), -ier → -ière (infirmière), -eur → -euse (serveuse), -teur → -trice (actrice), plus the ones that just add -e (avocate, étudiante). Check I pick the right preposition — dans une banque, chez Renault, pour une association. Ask me about my work, my family's work, and a job I'd like to do. Finish with the forms I got wrong."
+  },
+  {
     "id": "a1-02-politeness",
     "level": "A1",
     "module": "First conversations",

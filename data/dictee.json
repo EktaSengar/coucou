@@ -168,6 +168,20 @@
     ]
   },
   {
+    "id": "a1-metiers",
+    "level": "A1",
+    "theme": "Work",
+    "title": "Les métiers",
+    "intro": "Two things to watch: whether the job takes an article at all, and the feminine ending, which is often the only part you can hear.",
+    "sentences": [
+      { "fr": "Ma sœur est infirmière dans un hôpital.", "en": "My sister is a nurse in a hospital.", "tip": "No article after est. infirmière takes an accent grave, and hôpital keeps its circumflex." },
+      { "fr": "Il est boulanger et sa femme est boulangère.", "en": "He's a baker and his wife is a baker.", "tip": "The -ère ending is the only audible difference between them. Still no article, either time." },
+      { "fr": "C'est une avocate très connue.", "en": "She's a very well-known lawyer.", "tip": "After c'est the article comes back: une. Both avocate and connue take the feminine -e." },
+      { "fr": "Je cherche un travail dans l'informatique.", "en": "I'm looking for a job in IT.", "tip": "travail ends in -ail with no -e. l'informatique is feminine, and the article elides before the vowel." },
+      { "fr": "Je travaille chez Renault depuis trois ans.", "en": "I've been working at Renault for three years.", "tip": "chez never changes and its -z is silent. depuis ends in a silent -s, and « trois ans » links with a z." }
+    ]
+  },
+  {
     "id": "a1-frequence",
     "level": "A1",
     "theme": "Frequency",

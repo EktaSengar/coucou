@@ -27,7 +27,7 @@ document.addEventListener('alpine:init', () => {
   Alpine.data('catalog', () => ({
     lessons: [], done: {}, loading: true, error: false, streak: 0,
     // Catalogue navigation: which level is on show, and which modules are unfolded.
-    // 57 lessons is too many to meet at once, so we open on the learner's own
+    // 58 lessons is too many to meet at once, so we open on the learner's own
     // level with only their current module expanded.
     levelFilter: 'A1', open: {},
     // taste player (same engine as lesson.html's speak())
@@ -272,7 +272,7 @@ document.addEventListener('alpine:init', () => {
     Couldn't load the lessons. If you opened this file directly, run it through the local server (<code class="bg-slate-200 px-1.5 py-0.5 rounded">node serve.js</code>) or view it on the live site.
   </div>
 
-  <!-- level filter — 57 lessons across four levels, so show one level at a time -->
+  <!-- level filter — 58 lessons across four levels, so show one level at a time -->
   <div x-show="!loading && !error" x-cloak class="mt-12 flex flex-wrap items-center gap-2">
     <template x-for="lv in levels" :key="lv">
       <button type="button" @click="levelFilter = lv"

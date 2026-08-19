@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="A scale of frequency from 100 percent to 0 percent: toujours at 100 percent, souvent at 75, parfois or quelquefois at 50, rarement at 25, and ne jamais at 0. Below, the placement rule: the adverb comes straight after the conjugated verb, as in je vais souvent au cinéma, never je souvent vais.">
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .pct  { font-size: 13px; font-weight: 800; fill: #1e3a8a; }
+    .word { font-size: 17px; font-weight: 800; }
+    .gl   { font-size: 11px; font-style: italic; fill: #64748b; }
+    .rule { font-size: 12.5px; fill: #334155; }
+  </style>
+
+  <rect width="640" height="420" fill="#ffffff"/>
+  <text x="320" y="30" text-anchor="middle" font-size="18" font-weight="800" fill="#0f172a">À quelle fréquence ?</text>
+
+  <!-- the funnel: wide at 100%, a point at 0% -->
+  <path d="M196,58 L444,58 L320,300 Z" fill="url(#fade)"/>
+
+  <!-- 100% -->
+  <text class="pct"  x="180" y="76" text-anchor="end">100 %</text>
+  <text class="word" x="460" y="78" fill="#1d4ed8">toujours</text>
+  <text class="gl"   x="460" y="94">always</text>
+
+  <!-- 75% -->
+  <text class="pct"  x="180" y="132" text-anchor="end">75 %</text>
+  <text class="word" x="460" y="134" fill="#2563eb">souvent</text>
+  <text class="gl"   x="460" y="150">often</text>
+
+  <!-- 50% -->
+  <text class="pct"  x="180" y="188" text-anchor="end">50 %</text>
+  <text class="word" x="460" y="190" fill="#3b82f6">parfois</text>
+  <text class="gl"   x="460" y="206">sometimes — or quelquefois</text>
+
+  <!-- 25% -->
+  <text class="pct"  x="180" y="244" text-anchor="end">25 %</text>
+  <text class="word" x="460" y="246" fill="#60a5fa">rarement</text>
+  <text class="gl"   x="460" y="262">rarely</text>
+
+  <!-- 0% -->
+  <text class="pct"  x="180" y="300" text-anchor="end">0 %</text>
+  <text class="word" x="460" y="302" fill="#b91c1c">ne… jamais</text>
+  <text class="gl"   x="460" y="318" fill="#b91c1c">never — brings « ne » with it</text>
+
+  <!-- tick marks meeting the funnel -->
+  <g stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3 4">
+    <path d="M188,72 H452"/>
+    <path d="M188,128 H452"/>
+    <path d="M188,184 H452"/>
+    <path d="M188,240 H452"/>
+    <path d="M188,296 H452"/>
+  </g>
+
+  <!-- the placement rule -->
+  <rect x="16" y="336" width="608" height="70" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="36" y="360" font-size="12" font-weight="800" letter-spacing="0.6" fill="#0f172a">WHERE DOES THE WORD GO?</text>
+  <text class="rule" x="36" y="382">Straight after the conjugated verb — <tspan font-weight="700" fill="#16a34a">je vais souvent au cinéma</tspan>, not <tspan font-weight="700" fill="#b91c1c">je souvent vais</tspan>.</text>
+  <text class="rule" x="36" y="400" fill="#64748b">English puts it before the verb; French puts it after. That gap is the whole exercise.</text>
+</svg>

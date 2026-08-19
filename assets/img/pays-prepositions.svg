@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 468" width="640" height="468" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="Which word goes in front of a place after aller: à for a city (à Paris, à Tokyo, à Mumbai), en for a feminine country (en France, en Inde, en Italie), au for a masculine country (au Japon, au Canada, au Portugal), aux for a plural country (aux États-Unis, aux Pays-Bas). A very small country such as Monaco or Oman also takes à. Below, the test for the gender: a country ending in -e is feminine, except le Mexique and le Cambodge.">
+  <style>
+    .chip  { font-size: 26px; font-weight: 800; fill: #ffffff; }
+    .kind  { font-size: 13px; font-weight: 700; fill: #0f172a; }
+    .ex    { font-size: 13px; fill: #334155; }
+    .small { font-size: 11px; font-style: italic; fill: #64748b; }
+    .rule  { font-size: 12.5px; fill: #334155; }
+  </style>
+
+  <rect width="640" height="468" fill="#ffffff"/>
+  <text x="320" y="30" text-anchor="middle" font-size="18" font-weight="800" fill="#0f172a">Je vais… où ?</text>
+  <text x="320" y="49" text-anchor="middle" font-size="11.5" font-style="italic" fill="#64748b">the place decides the little word in front of it</text>
+
+  <!-- à + city -->
+  <g>
+    <rect x="16" y="66" width="608" height="66" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="30" y="80" width="72" height="38" rx="10" fill="#475569"/>
+    <text class="chip" x="66" y="107" text-anchor="middle">à</text>
+    <text class="kind" x="120" y="94">une ville</text>
+    <text class="small" x="196" y="94">a town or city</text>
+    <text class="ex"   x="120" y="115">à Paris · à Tokyo · à Mumbai</text>
+  </g>
+
+  <!-- en + feminine -->
+  <g>
+    <rect x="16" y="142" width="608" height="66" rx="14" fill="#fdf2f8" stroke="#fbcfe8" stroke-width="1.5"/>
+    <rect x="30" y="156" width="72" height="38" rx="10" fill="#db2777"/>
+    <text class="chip" x="66" y="183" text-anchor="middle">en</text>
+    <text class="kind" x="120" y="170">un pays féminin</text>
+    <text class="small" x="238" y="170">ends in -e</text>
+    <text class="ex"   x="120" y="191">en France · en Inde · en Italie · en Chine</text>
+  </g>
+
+  <!-- au + masculine -->
+  <g>
+    <rect x="16" y="218" width="608" height="66" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <rect x="30" y="232" width="72" height="38" rx="10" fill="#2563eb"/>
+    <text class="chip" x="66" y="259" text-anchor="middle">au</text>
+    <text class="kind" x="120" y="246">un pays masculin</text>
+    <text class="small" x="248" y="246">everything else</text>
+    <text class="ex"   x="120" y="267">au Japon · au Canada · au Portugal · au Maroc</text>
+  </g>
+
+  <!-- aux + plural -->
+  <g>
+    <rect x="16" y="294" width="608" height="66" rx="14" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+    <rect x="30" y="308" width="72" height="38" rx="10" fill="#7c3aed"/>
+    <text class="chip" x="66" y="335" text-anchor="middle">aux</text>
+    <text class="kind" x="120" y="322">un pays pluriel</text>
+    <text class="small" x="234" y="322">the name is plural</text>
+    <text class="ex"   x="120" y="343">aux États-Unis · aux Pays-Bas · aux Philippines</text>
+  </g>
+
+  <!-- the gender test -->
+  <rect x="16" y="374" width="608" height="78" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="36" y="398" font-size="12" font-weight="800" letter-spacing="0.6" fill="#16a34a">HOW DO I KNOW IF IT'S FEMININE?</text>
+  <text class="rule" x="36" y="420">A country ending in <tspan font-weight="700">-e</tspan> is feminine: la France, l'Italie, la Chine, la Russie, l'Inde, la Belgique.</text>
+  <text class="rule" x="36" y="440">Everything else is masculine — and two liars end in -e anyway: <tspan font-weight="700">le Mexique</tspan>, <tspan font-weight="700">le Cambodge</tspan>.</text>
+
+  <!-- the tiny-country footnote -->
+  <text class="small" x="320" y="464" text-anchor="middle">A very small country behaves like a city and takes plain à: à Monaco, à Oman, à Bahreïn.</text>
+</svg>

@@ -126,6 +126,20 @@
     ]
   },
   {
+    "id": "b1-futur-parle",
+    "level": "B1",
+    "focus": "The future tense out loud",
+    "title": "Mon voyage de rêve",
+    "intro": "One consonant separates « je voyage » from « je voyagerai », and it's the r. Say these until the r survives at full speed.",
+    "phrases": [
+      { "fr": "L'année prochaine, je voyagerai au Japon.", "en": "Next year, I'll travel to Japan.", "hint": "« vwa-ya-zhuh-RAY » — the stress lands on the final -rai. Swallow the r and you've said the present tense instead." },
+      { "fr": "J'irai à Tokyo avec mes amis.", "en": "I'll go to Tokyo with my friends.", "hint": "j'irai is two syllables, « zhee-RAY ». mes‿amis links with a z: « may-za-MEE »." },
+      { "fr": "Nous irons vivre à Lyon.", "en": "We'll go and live in Lyon.", "hint": "nous‿irons links straight through: « noo-zee-ROHN ». No pause between the two words." },
+      { "fr": "Quand j'aurai le temps, je t'appellerai.", "en": "When I have time, I'll call you.", "hint": "Both halves are future in French. « zhoh-RAY » … « ta-pel-RAY » — two -rai endings in one sentence." },
+      { "fr": "Est-ce que les robots travailleront avec nous ?", "en": "Will robots work with us?", "hint": "-eront is one sound, « ROHN », with nothing after it. Let the voice rise at the end to make it a question." }
+    ]
+  },
+  {
     "id": "b2-opinion",
     "level": "B2",
     "focus": "Giving an opinion",

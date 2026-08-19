@@ -1066,6 +1066,102 @@
     "tutorPrompt": "Be my A1 French tutor for transport vocabulary and its prepositions. Drill the words with their articles: la voiture, le bus, le métro, le tramway, le train, le taxi, l'avion, le bateau, le ferry, le vélo, la bicyclette, la moto, le scooter, le camion, and à pied. Then drill the rule hard: en + closed transport (en bus, en métro, en voiture, en train, en avion) versus à + open or individual transport (à vélo, à moto, à pied). Correct me instantly if I say « en le bus » or « en vélo ». Also make me rephrase with prendre, which does take the article (je prends le bus). Ask me « Comment tu vas au travail ? » and « Comment tu es venu ? » so I answer naturally. Finish by listing the ones I got wrong."
   },
   {
+    "id": "a1-pays-nationalites",
+    "level": "A1",
+    "module": "Out and about",
+    "title": "Les pays & les nationalités — voyager à l'étranger",
+    "minutes": 24,
+    "goal": "Name the countries, build the nationality from the country name, and pick the right little word in front of it — à, en, au or aux — every time.",
+    "figures": [
+      { "src": "./assets/img/pays-prepositions.svg?v=1", "alt": "Four cards showing which word goes in front of a place after aller: à for a city (à Paris, à Tokyo), en for a feminine country (en France, en Inde), au for a masculine country (au Japon, au Canada), aux for a plural country (aux États-Unis, aux Pays-Bas). Underneath, the rule for telling the gender: a country ending in -e is feminine, apart from le Mexique and le Cambodge.", "caption": "One question decides it: is the country feminine, masculine or plural? A country ending in -e is feminine — that single test gets you the right word almost every time." }
+    ],
+    "vocab": [
+      { "fr": "la France / la Belgique / la Suisse", "phonetic": "lah FRAHNSS / lah bel-ZHEEK / lah SWEESS", "en": "France / Belgium / Switzerland — feminine", "emoji": "🇫🇷" },
+      { "fr": "l'Allemagne / l'Angleterre / l'Italie", "phonetic": "lal-MAN-yuh / lahn-gluh-TEHR / lee-ta-LEE", "en": "Germany / England / Italy — feminine", "emoji": "🇩🇪" },
+      { "fr": "l'Espagne / la Chine / la Russie", "phonetic": "les-PAN-yuh / lah SHEEN / lah rew-SEE", "en": "Spain / China / Russia — feminine", "emoji": "🇪🇸" },
+      { "fr": "l'Inde", "phonetic": "LAND", "en": "India — feminine", "emoji": "🇮🇳" },
+      { "fr": "le Japon / le Portugal / le Maroc", "phonetic": "luh zha-POHN / luh por-tew-GAL / luh ma-ROK", "en": "Japan / Portugal / Morocco — masculine", "emoji": "🇯🇵" },
+      { "fr": "le Canada / le Brésil / le Sénégal", "phonetic": "luh ka-na-DAH / luh bray-ZEEL / luh say-nay-GAL", "en": "Canada / Brazil / Senegal — masculine", "emoji": "🇨🇦" },
+      { "fr": "les États-Unis / les Pays-Bas", "phonetic": "lay zay-ta-zew-NEE / lay pay-ee-BAH", "en": "the United States / the Netherlands — plural", "emoji": "🇺🇸" },
+      { "fr": "Je suis indien / indienne.", "phonetic": "zhuh swee an-dee-AN / an-dee-EN", "en": "I'm Indian. (m / f)", "emoji": "🙋" },
+      { "fr": "Quelle est ta nationalité ?", "phonetic": "kel eh ta na-syo-na-lee-TAY", "en": "What's your nationality?", "emoji": "❓" },
+      { "fr": "Je vais à Paris.", "phonetic": "zhuh veh za pa-REE", "en": "I'm going to Paris. (a city → à)", "emoji": "🏙️" },
+      { "fr": "Je vais en France.", "phonetic": "zhuh veh zahn FRAHNSS", "en": "I'm going to France. (feminine → en)", "emoji": "➡️" },
+      { "fr": "Je vais au Japon.", "phonetic": "zhuh veh zoh zha-POHN", "en": "I'm going to Japan. (masculine → au)", "emoji": "➡️" },
+      { "fr": "Je vais aux États-Unis.", "phonetic": "zhuh veh zoh zay-ta-zew-NEE", "en": "I'm going to the US. (plural → aux)", "emoji": "➡️" },
+      { "fr": "Je viens d'Inde.", "phonetic": "zhuh vyan DAND", "en": "I'm from India.", "emoji": "🛬" },
+      { "fr": "un pays / une ville / à l'étranger", "phonetic": "uhn pay-EE / ewn VEEL / ah lay-trahn-ZHAY", "en": "a country / a town / abroad", "emoji": "🌍" },
+      { "fr": "J'apprends le français.", "phonetic": "zha-PRAHN luh frahn-SEH", "en": "I'm learning French. (the language)", "emoji": "📘" }
+    ],
+    "grammar": {
+      "point": "The country gives you the nationality — and its gender gives you the preposition",
+      "table": {
+        "title": "building the nationality out of the country",
+        "cols": ["country", "masculine", "feminine"],
+        "rows": [
+          { "label": "la France", "cells": ["français", "française"] },
+          { "label": "le Japon", "cells": ["japonais", "japonaise"] },
+          { "label": "la Chine", "cells": ["chinois", "chinoise"] },
+          { "label": "l'Espagne", "cells": ["espagnol", "espagnole"] },
+          { "label": "le Maroc", "cells": ["marocain", "marocaine"] },
+          { "label": "l'Inde", "cells": ["indien", "indienne"] },
+          { "label": "l'Allemagne", "cells": ["allemand", "allemande"] }
+        ],
+        "highlight": ["indien", "indienne"],
+        "note": "Six endings cover almost everything: -ais/-aise, -ois/-oise, -ol/-ole, -ain/-aine, -ien/-ienne, -and/-ande. The feminine is the masculine plus -e — except -ien, which doubles its n first. A handful never change because they already end in -e: suisse, belge, russe, and two odd ones, grec → grecque and turc → turque."
+      },
+      "table2": {
+        "title": "aller + where?",
+        "cols": ["the place", "you say", "example"],
+        "rows": [
+          { "label": "a city", "cells": ["à", "à Paris"] },
+          { "label": "feminine country", "cells": ["en", "en France"] },
+          { "label": "masculine country", "cells": ["au", "au Japon"] },
+          { "label": "plural country", "cells": ["aux", "aux États-Unis"] },
+          { "label": "a tiny country", "cells": ["à", "à Monaco"] }
+        ],
+        "highlight": ["en", "au", "aux"],
+        "note": "How do you know the gender? A country ending in -e is feminine — la France, l'Italie, la Chine, la Russie, l'Inde. Almost everything else is masculine — le Japon, le Portugal, le Canada, le Maroc. The famous exceptions are le Mexique and le Cambodge, masculine despite the -e. Coming back the other way: de France, du Japon, des États-Unis, d'Inde."
+      },
+      "explain": "Two jobs here, and they share one piece of information: the country's gender. ① The nationality. Take the country, swap the ending, and you have the word for a person from there — la France gives français, l'Inde gives indien. The feminine adds -e on the end, which is what finally makes the consonant audible: français sounds like « frahn-SEH », française like « frahn-SEZ ». ② The preposition after aller. A city takes à. A feminine country takes en. A masculine country takes au. A plural country takes aux. And a very small country — Monaco, Oman, Bahreïn — takes plain à, like a city. Learn the country with its article the day you learn the country, and both jobs are already done: once you know it's « le Japon », you know it's « au Japon » and you're on your way to « japonais »."
+    },
+    "notes": [
+      {
+        "title": "The capital letter changes what the word means",
+        "body": "« Je suis française » — the nationality, an adjective, lower case. « J'apprends le français » — the language, also lower case. « C'est une Française » — a French person, a noun, capital F. Same word, three jobs, and only the person gets the capital. English capitalises all three, so this is worth a second look every time you write it."
+      },
+      {
+        "title": "Add the -e and the silent consonant wakes up",
+        "body": "français → française, anglais → anglaise, allemand → allemande, chinois → chinoise. In the masculine the final consonant is silent; the -e of the feminine makes you say it. Often that's the only audible difference — « il est allemand » (al-MAHN) versus « elle est allemande » (al-MAHND)."
+      },
+      {
+        "title": "-ien doubles its n, and changes its sound",
+        "body": "indien → indienne, italien → italienne, canadien → canadienne, australien → australienne, brésilien → brésilienne. Two n's in writing, and in speech the nasal « an-dee-AN » opens out into a clear « an-dee-EN ». It's the biggest sound change in the whole set, so it's the easiest one to hear yourself getting right."
+      },
+      {
+        "title": "en for going, de for coming from",
+        "body": "« Je vais en Inde » but « je viens d'Inde ». « Je vais au Japon » but « je viens du Japon ». « Je vais aux États-Unis » but « je viens des États-Unis ». Feminine countries drop the article entirely with de — « je viens de France », never « de la France ». The full à/de contraction table is in « À and de — going, coming & belonging »."
+      }
+    ],
+    "examples": [
+      "Je suis indienne et j'habite en France. (zhuh swee an-dee-EN ay zha-BEET ahn FRAHNSS)",
+      "— Quelle est ta nationalité ? — Je suis marocain. (kel eh ta na-syo-na-lee-TAY)",
+      "L'année prochaine, on va voyager au Japon. (ohn va vwa-ya-ZHAY oh zha-POHN)",
+      "Mon mari vient du Canada, et sa mère est italienne. (vyan dew ka-na-DAH … ee-ta-lee-EN)",
+      "Nous allons aux Pays-Bas en train. (noo za-LOHN oh pay-ee-BAH ahn TRAN)",
+      "J'apprends le français, mais je parle anglais à la maison. (zha-PRAHN luh frahn-SEH)"
+    ],
+    "practice": [
+      "Say your own nationality, in both the masculine and the feminine form.",
+      "à, en, au or aux? « Je vais ___ Portugal » · « ___ Espagne » · « ___ Londres » · « ___ États-Unis » · « ___ Inde ».",
+      "Build the feminine: japonais → ___ · allemand → ___ · italien → ___ · espagnol → ___ .",
+      "Capital letter or not? « je suis ___rançaise » · « j'apprends le ___rançais » · « c'est une ___rançaise ».",
+      "Say where you're from and where you live, in one sentence.",
+      "Name three countries you'd like to visit, each with the right little word in front."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for countries and nationalities. Drill three things. ① Country names with their articles — la France, l'Italie, l'Espagne, l'Inde, la Chine, le Japon, le Portugal, le Maroc, le Canada, le Brésil, les États-Unis, les Pays-Bas — and make me say whether each is feminine, masculine or plural. ② The nationality endings: -ais/-aise, -ois/-oise, -ol/-ole, -ain/-aine, -ien/-ienne, -and/-ande. Give me a country and ask for both forms, and correct the doubled n in indienne, italienne, canadienne. ③ The preposition after aller: à + city, en + feminine country, au + masculine country, aux + plural country, à + tiny country like Monaco. Then reverse it with venir de: de France, du Japon, des États-Unis, d'Inde. Also check I know that only the person takes a capital letter (une Française) while the adjective and the language don't. Ask me about trips I've taken and want to take. Correct every attempt and finish with what to review."
+  },
+  {
     "id": "a1-07-time-days",
     "level": "A1",
     "module": "People & daily life",
@@ -1361,6 +1457,95 @@
       "Describe your morning in three sentences, then say who else is in the house."
     ],
     "tutorPrompt": "A1 French conversation about family and daily routine. Ask me about my family and my day, one simple question at a time (where I live, who I live with, what I do in a day). Drill the possessives hard while we talk: mon/ma/mes, ton/ta/tes, son/sa/ses, notre/nos, votre/vos, leur/leurs. Check I understand that the possessive agrees with the thing owned and not the owner — so « sa femme » can be his wife or her wife — and that feminine words starting with a vowel take mon/ton/son (mon amie, son école). Correct me every time I pick the wrong one. After about eight questions, give me feedback and five words to remember."
+  },
+  {
+    "id": "a1-adverbes-frequence",
+    "level": "A1",
+    "module": "People & daily life",
+    "title": "Les adverbes de fréquence — toujours, souvent, jamais",
+    "minutes": 18,
+    "goal": "Say how often you do something, from every single time down to never — and put the word in the place French wants it, which is not where English puts it.",
+    "figures": [
+      { "src": "./assets/img/frequence.svg?v=1", "alt": "A scale from 100 percent down to 0 percent with five French adverbs beside it: toujours at 100 percent, souvent at 75, parfois at 50, rarement at 25 and ne… jamais at 0. Below, the placement rule: the adverb goes after the conjugated verb, as in je vais souvent au cinéma.", "caption": "Five words cover the whole scale. Only the bottom one needs help: jamais brings « ne » with it, because zero is a negative." }
+    ],
+    "vocab": [
+      { "fr": "toujours", "phonetic": "too-ZHOOR", "en": "always — 100%", "emoji": "💯" },
+      { "fr": "souvent", "phonetic": "soo-VAHN", "en": "often — 75%", "emoji": "🔁" },
+      { "fr": "parfois / quelquefois", "phonetic": "par-FWAH / kel-kuh-FWAH", "en": "sometimes — 50%", "emoji": "🤷" },
+      { "fr": "de temps en temps", "phonetic": "duh tahn zahn TAHN", "en": "from time to time", "emoji": "🕰️" },
+      { "fr": "rarement", "phonetic": "rar-MAHN", "en": "rarely — 25%", "emoji": "🌘" },
+      { "fr": "ne… jamais", "phonetic": "nuh… zha-MEH", "en": "never — 0%", "emoji": "🚫" },
+      { "fr": "tous les jours", "phonetic": "too lay ZHOOR", "en": "every day", "emoji": "📅" },
+      { "fr": "une fois par semaine", "phonetic": "ewn fwah par suh-MEN", "en": "once a week", "emoji": "1️⃣" },
+      { "fr": "deux fois par mois", "phonetic": "duh fwah par MWAH", "en": "twice a month", "emoji": "2️⃣" },
+      { "fr": "Je vais souvent au cinéma.", "phonetic": "zhuh veh soo-vahn oh see-nay-MAH", "en": "I often go to the cinema.", "emoji": "🎬" },
+      { "fr": "Je ne bois jamais de café.", "phonetic": "zhuh nuh bwah zha-meh duh ka-FAY", "en": "I never drink coffee.", "emoji": "☕" },
+      { "fr": "Tu fais souvent du sport ?", "phonetic": "tew feh soo-vahn dew SPOR", "en": "Do you often do sport?", "emoji": "🏃" }
+    ],
+    "grammar": {
+      "point": "The adverb goes after the verb, not in front of it",
+      "table": {
+        "title": "the scale, top to bottom",
+        "cols": ["how often", "French", "example"],
+        "rows": [
+          { "label": "100%", "cells": ["toujours", "je suis toujours en retard"] },
+          { "label": "75%", "cells": ["souvent", "je vais souvent au marché"] },
+          { "label": "50%", "cells": ["parfois", "je prends parfois le bus"] },
+          { "label": "25%", "cells": ["rarement", "je mange rarement de la viande"] },
+          { "label": "0%", "cells": ["ne… jamais", "je ne mange jamais de viande"] }
+        ],
+        "highlight": ["ne… jamais"],
+        "note": "Notice where the word sits in every single example: straight after the conjugated verb. English says « I often go », French says « je vais souvent ». Putting it between the subject and the verb — « je souvent vais » — is the one placement that's simply wrong."
+      },
+      "table2": {
+        "title": "how the negative one behaves",
+        "cols": ["", "French", "English"],
+        "rows": [
+          { "label": "positive", "cells": ["je bois du café", "I drink coffee"] },
+          { "label": "not", "cells": ["je ne bois pas de café", "I don't drink coffee"] },
+          { "label": "never", "cells": ["je ne bois jamais de café", "I never drink coffee"] },
+          { "label": "on its own", "cells": ["— Jamais !", "— Never!"] }
+        ],
+        "highlight": ["je ne bois jamais de café"],
+        "note": "jamais simply takes the place of pas in the frame you already know: ne … pas becomes ne … jamais. And the du/de la/des → de rule still applies, because it's still a negative: « du café » becomes « de café »."
+      },
+      "explain": "Five words carry the whole scale from every time to no times: toujours, souvent, parfois, rarement, jamais. Two things to get right. ① Placement. In a simple sentence the adverb comes immediately after the conjugated verb — « je vais souvent au cinéma », « il est toujours en retard », « nous prenons rarement le train ». Longer expressions of frequency behave differently: tous les jours, une fois par semaine and de temps en temps prefer the beginning or the end of the sentence — « tous les jours, je me lève à sept heures ». ② Jamais is a negative, so it needs ne in front of the verb, exactly like pas: « je ne fais jamais la cuisine ». Answering a question with a bare « Jamais ! » is fine, because there's no verb left to negate."
+    },
+    "notes": [
+      {
+        "title": "Not where English puts it",
+        "body": "English slips the adverb in before the verb — I always eat, I often go. French puts it after: « je mange toujours », « je vais souvent ». Say a few out loud in the French order until it stops sounding wrong, because word order is the part that gives you away long after the vocabulary is solid."
+      },
+      {
+        "title": "« toujours » has a second meaning",
+        "body": "Most of the time it means always. But with a present tense and the right context it means still: « tu es toujours là ? » is are you still there?, not are you always there. Context settles it, and « encore » is the word to use when you really need to say still: « tu es encore là ? »"
+      },
+      {
+        "title": "jamais keeps the whole negative frame",
+        "body": "The ne is compulsory in writing, and it drops out in speech just like it does with pas: « je vais jamais au gym ». The article rule survives too — « je ne bois jamais de vin », never « du vin ». Everything you learned in « Saying no » applies unchanged; only the second word swaps."
+      },
+      {
+        "title": "Counting is a different shape",
+        "body": "For an exact count, French uses fois: une fois par jour, deux fois par semaine, trois fois par mois, plusieurs fois par an. These aren't adverbs, so they don't sit after the verb — they go at the start or the end: « je fais du sport deux fois par semaine »."
+      }
+    ],
+    "examples": [
+      "Je vais souvent au marché le samedi. (zhuh veh soo-vahn oh mar-SHAY luh sam-DEE)",
+      "Il est toujours en retard. (ee leh too-zhoor ahn ruh-TAR)",
+      "Je ne bois jamais de café après midi. (zhuh nuh bwah zha-meh duh ka-FAY)",
+      "Nous allons rarement au restaurant. (noo za-lohn rar-mahn oh res-toh-RAHN)",
+      "De temps en temps, on prend le train pour Lyon. (duh tahn zahn TAHN)",
+      "Je fais du sport deux fois par semaine. (duh fwah par suh-MEN)"
+    ],
+    "practice": [
+      "Put them in order, 100% to 0%: rarement · toujours · jamais · souvent · parfois.",
+      "Fix the word order: « je souvent vais au cinéma » → ___ .",
+      "Say three true sentences about yourself with souvent, rarement and jamais.",
+      "Make it never: « je bois du vin » → ___ (careful with du).",
+      "Answer out loud: « Tu fais souvent la cuisine ? »",
+      "Say how often you do two things, using « fois par semaine »."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for adverbs of frequency. Drill the scale — toujours (100%), souvent (75%), parfois / quelquefois (50%), rarement (25%), ne… jamais (0%) — plus de temps en temps and the fois expressions (une fois par semaine, deux fois par mois). Test placement hard: in French the adverb goes immediately after the conjugated verb (« je vais souvent au cinéma »), never between subject and verb, while the longer expressions go at the start or the end of the sentence. Check that I use ne with jamais and that I turn du/de la/des into de after it (« je ne bois jamais de café »). Ask me how often I do everyday things — sport, cooking, the cinema, speaking French — one question at a time, and make me answer with a different adverb each time. Correct every answer and finish with the ones I placed wrongly."
   },
   {
     "id": "a1-visage",
@@ -2279,8 +2464,8 @@
     "level": "B1",
     "module": "Finding your voice",
     "title": "Talking about the future",
-    "minutes": 25,
-    "goal": "Make plans, predictions and promises with the real future tense — beyond « je vais ».",
+    "minutes": 30,
+    "goal": "Make plans, predictions and promises with the real future tense — beyond « je vais » — including the dozen verbs that build it on a stem of their own.",
     "vocab": [
       {
         "fr": "demain / bientôt",
@@ -2298,6 +2483,31 @@
         "en": "one day / someday"
       },
       {
+        "fr": "je voyagerai",
+        "phonetic": "zhuh vwa-ya-zhuh-RAY",
+        "en": "I will travel — the regular pattern"
+      },
+      {
+        "fr": "j'irai / je serai / j'aurai",
+        "phonetic": "zhee-RAY / zhuh suh-RAY / zhoh-RAY",
+        "en": "I'll go / I'll be / I'll have"
+      },
+      {
+        "fr": "je ferai / je pourrai",
+        "phonetic": "zhuh fuh-RAY / zhuh poo-RAY",
+        "en": "I'll do / I'll be able to"
+      },
+      {
+        "fr": "je verrai / je saurai",
+        "phonetic": "zhuh veh-RAY / zhuh soh-RAY",
+        "en": "I'll see / I'll know"
+      },
+      {
+        "fr": "je viendrai / je devrai",
+        "phonetic": "zhuh vyan-DRAY / zhuh duh-VRAY",
+        "en": "I'll come / I'll have to"
+      },
+      {
         "fr": "j'espère que",
         "phonetic": "zhes-PEHR kuh",
         "en": "I hope that"
@@ -2313,11 +2523,6 @@
         "en": "a plan / project"
       },
       {
-        "fr": "réussir",
-        "phonetic": "ray-ew-SEER",
-        "en": "to succeed"
-      },
-      {
         "fr": "peut-être",
         "phonetic": "puh-TEH-truh",
         "en": "maybe"
@@ -2325,20 +2530,64 @@
     ],
     "grammar": {
       "point": "Le futur simple",
-      "table": {"cols": ["", "ending", "parler →"], "rows": [{"label": "je", "cells": ["-ai", "parlerai"]}, {"label": "tu", "cells": ["-as", "parleras"]}, {"label": "il / elle", "cells": ["-a", "parlera"]}, {"label": "nous", "cells": ["-ons", "parlerons"]}, {"label": "vous", "cells": ["-ez", "parlerez"]}, {"label": "ils / elles", "cells": ["-ont", "parleront"]}], "highlight": ["-ai", "-as", "-a", "-ons", "-ez", "-ont"], "note": "Stem = the infinitive (drop the final -e of -re verbs). The endings are just the present of avoir. Irregular stems: être→ser-, avoir→aur-, aller→ir-, faire→fer-, pouvoir→pourr-, vouloir→voudr-, voir→verr-."},
-      "explain": "Take the infinitive as the stem and add the endings in the grid: « je parlerai, tu finiras, il prendra ». Use it for plans and predictions beyond the near future. Note: after « quand » and « dès que », French also uses the future — « quand j'aurai le temps, je t'appellerai »."
+      "table": {"cols": ["", "ending", "parler →"], "rows": [{"label": "je", "cells": ["-ai", "parlerai"]}, {"label": "tu", "cells": ["-as", "parleras"]}, {"label": "il / elle", "cells": ["-a", "parlera"]}, {"label": "nous", "cells": ["-ons", "parlerons"]}, {"label": "vous", "cells": ["-ez", "parlerez"]}, {"label": "ils / elles", "cells": ["-ont", "parleront"]}], "highlight": ["-ai", "-as", "-a", "-ons", "-ez", "-ont"], "note": "Stem = the whole infinitive, kept intact — only -re verbs drop their final -e (prendre → prendra). The endings are the present tense of avoir, with nous and vous trimmed to -ons and -ez."},
+      "table2": {
+        "title": "the twelve that build a stem of their own",
+        "cols": ["verb", "stem", "je form"],
+        "rows": [
+          { "label": "aller", "cells": ["ir-", "j'irai"] },
+          { "label": "être", "cells": ["ser-", "je serai"] },
+          { "label": "avoir", "cells": ["aur-", "j'aurai"] },
+          { "label": "faire", "cells": ["fer-", "je ferai"] },
+          { "label": "voir", "cells": ["verr-", "je verrai"] },
+          { "label": "savoir", "cells": ["saur-", "je saurai"] },
+          { "label": "venir", "cells": ["viendr-", "je viendrai"] },
+          { "label": "devoir", "cells": ["devr-", "je devrai"] },
+          { "label": "pouvoir", "cells": ["pourr-", "je pourrai"] },
+          { "label": "vouloir", "cells": ["voudr-", "je voudrai"] },
+          { "label": "envoyer", "cells": ["enverr-", "j'enverrai"] },
+          { "label": "recevoir", "cells": ["recevr-", "je recevrai"] }
+        ],
+        "highlight": ["ir-", "ser-", "aur-", "fer-"],
+        "note": "Only the stem changes — the endings are the same six for every verb in French, without exception. Every stem still ends in -r, and four of them double it: verrai, pourrai, enverrai, and courir → courrai. Learn this list once and the conditionnel comes free, because it uses exactly these stems: j'irais, je serais, je pourrais, je voudrais."
+      },
+      "explain": "Take the infinitive as the stem and add the endings in the grid: « je parlerai, tu finiras, il prendra ». What every future form has in common is an -r- just before the ending — that sound is the tense. Twelve common verbs swap the infinitive for a stem of their own (second table), but they keep the -r- and take the same endings, so there's nothing new to learn about the ending itself. Use the futur simple for anything further off than tonight: plans, predictions, promises. Two habits worth building. After « quand » and « dès que », French uses the future where English uses the present — « quand j'aurai le temps, je t'appellerai ». And after « si », French uses the present, never the future — « si j'ai le temps, je viendrai »."
     },
+    "notes": [
+      {
+        "title": "Listen for the r — it is the whole tense",
+        "body": "je parle / je parlerai · tu finis / tu finiras · il prend / il prendra. One consonant separates present from future, and it's the -r-. In fast speech it's often all you get, so it's what to listen for, and what to make audible when it's your turn to speak."
+      },
+      {
+        "title": "« Je vais partir » or « je partirai » ?",
+        "body": "Both are the future. The near future feels close and settled — tonight, this weekend, something already in motion. The futur simple pushes further out, or makes it more formal, or turns it into a promise: « l'année prochaine, je voyagerai au Japon ». Spoken French leans much more on « je vais + infinitif »; written French does the opposite."
+      },
+      {
+        "title": "After quand, the future — but after si, the present",
+        "body": "English says when I have time, I'll call you. French puts both halves in the future: « quand j'aurai le temps, je t'appellerai », and the same after « dès que ». But si is the exception that catches everyone: « si j'ai le temps, je viendrai » — present after si, always."
+      },
+      {
+        "title": "These twelve stems come back later",
+        "body": "They aren't only for the future. The conditionnel takes the same stems with different endings — je serais, j'aurais, je pourrais, je voudrais — and « je voudrais » is a phrase you've been using since your first café order. So this table pays for itself twice."
+      }
+    ],
     "examples": [
+      "L'année prochaine, je voyagerai au Japon. (lah-nay proh-SHEN, zhuh vwa-ya-zhuh-RAY oh zha-POHN)",
+      "J'irai à Tokyo et je visiterai les temples. (zhee-RAY ah toh-kee-OH ay zhuh vee-zee-tuh-RAY lay TAHM-pluh)",
       "L'année prochaine, nous irons vivre à Lyon. (lah-nay proh-shen, noo zee-ROHN vee-vruh ah lee-OHN)",
-      "Quand tu arriveras, on dînera ensemble. (kahn tew ah-reev-RAH, ohn dee-nuh-RAH ahn-SAHM-bluh)"
+      "Quand tu arriveras, on dînera ensemble. (kahn tew ah-reev-RAH, ohn dee-nuh-RAH ahn-SAHM-bluh)",
+      "Est-ce que les robots travailleront avec nous ? (es-kuh lay roh-BOH tra-va-yuh-ROHN ah-vek NOO)",
+      "Je pense qu'on utilisera encore des voitures. (zhuh pahns kohn ew-tee-lee-zuh-RAH)"
     ],
     "practice": [
-      "Say three things you'll do next weekend using the futur simple.",
-      "Make a prediction about 2030 with « je pense que… ».",
-      "Complete: « Quand j'aurai le temps, je… ».",
-      "Turn a « je vais + infinitif » plan into the futur simple."
+      "Plan a dream trip in six sentences, all in the futur simple: où tu iras, avec qui tu partiras, ce que tu visiteras, ce que tu mangeras, combien de temps tu resteras.",
+      "Regular or irregular? Give the je form of: voyager · aller · finir · être · prendre · pouvoir · venir.",
+      "Answer in a short paragraph: « Comment seront les villes dans le futur ? Où habiterons-nous ? »",
+      "Complete: « Quand j'aurai le temps, je… » and « Dès que nous arriverons, nous… ».",
+      "Careful with si: « ___ (avoir) le temps, je viendrai » — which tense goes in the gap?",
+      "Turn a « je vais + infinitif » plan into the futur simple, then say which of the two you'd actually use out loud."
     ],
-    "tutorPrompt": "Be my B1 French tutor for the futur simple. Ask me about my plans, hopes and predictions for the future. Make me use the real future tense (not just « je vais + infinitif »), including after « quand » and « dès que ». Correct my conjugations, especially the irregular stems (ser-, aur-, ir-, fer-, pourr-…), and finish with five future-tense sentences to remember."
+    "tutorPrompt": "Be my B1 French tutor for the futur simple. Start with the regular pattern — the infinitive plus -ai, -as, -a, -ons, -ez, -ont — then drill the irregular stems hard: aller→ir-, être→ser-, avoir→aur-, faire→fer-, voir→verr-, savoir→saur-, venir→viendr-, devoir→devr-, pouvoir→pourr-, vouloir→voudr-, envoyer→enverr-, recevoir→recevr-. Give me infinitives and ask for the future form, mixing regular and irregular so I can't guess from the pattern. Then put it to work in conversation: my plans for next year, a dream trip (where I'll go, who I'll travel with, what I'll visit, what I'll eat, how long I'll stay), and predictions — how cities will look, whether robots will work with us, whether we'll still use cars. Correct three things specifically: the -r- has to be audible, the future after « quand » and « dès que », and the present after « si ». Tell me when the near future would have sounded more natural than what I said. Finish with five sentences to remember."
   },
   {
     "id": "b1-03-conditionnel",

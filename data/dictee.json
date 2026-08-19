@@ -154,6 +154,34 @@
     ]
   },
   {
+    "id": "a1-pays",
+    "level": "A1",
+    "theme": "Countries & nationalities",
+    "title": "Les pays et les nationalités",
+    "intro": "Countries take a capital letter, nationalities don't, and the feminine ending is often the only part you can actually hear. All three get tested here.",
+    "sentences": [
+      { "fr": "Je suis indienne et j'habite en France.", "en": "I'm Indian and I live in France.", "tip": "indienne doubles the n in the feminine, with no capital. France is feminine, so « en France » — never « à la France »." },
+      { "fr": "Mon mari vient du Canada.", "en": "My husband comes from Canada.", "tip": "Canada is masculine, so de + le contracts to du. The country keeps its capital C." },
+      { "fr": "Nous allons aux États-Unis en septembre.", "en": "We're going to the United States in September.", "tip": "aux for a plural country. États-Unis: capital É, capital U, and a hyphen between them." },
+      { "fr": "Elle est allemande, mais elle parle très bien français.", "en": "She's German, but she speaks French very well.", "tip": "allemande — the -e is what makes the d audible. After parler the language takes no article: « parle français »." },
+      { "fr": "Il y a beaucoup de touristes japonais à Paris.", "en": "There are a lot of Japanese tourists in Paris.", "tip": "japonais already ends in -s, so the masculine plural adds nothing. A city takes plain à." }
+    ]
+  },
+  {
+    "id": "a1-frequence",
+    "level": "A1",
+    "theme": "Frequency",
+    "title": "Toujours, souvent, jamais",
+    "intro": "Listen for where the little word lands — it comes after the verb, not before it. And every one of these hides a silent letter at the end.",
+    "sentences": [
+      { "fr": "Je vais souvent au marché le samedi.", "en": "I often go to the market on Saturdays.", "tip": "souvent sits after the verb, and its final -t is silent. « le samedi » means every Saturday." },
+      { "fr": "Elle ne mange jamais de viande.", "en": "She never eats meat.", "tip": "ne … jamais wraps the verb like ne … pas, and « de la viande » collapses to a bare de after a negative." },
+      { "fr": "Nous prenons rarement le train.", "en": "We rarely take the train.", "tip": "rarement is built on the feminine rare plus -ment, so the e in the middle stays." },
+      { "fr": "De temps en temps, je fais la cuisine.", "en": "From time to time, I do the cooking.", "tip": "Three separate words, no hyphens — and temps keeps both its silent p and its silent s, twice." },
+      { "fr": "Il est toujours en retard.", "en": "He's always late." , "tip": "toujours always ends in -s, even about one person. « en retard » is two words." }
+    ]
+  },
+  {
     "id": "a2-quotidien",
     "level": "A2",
     "theme": "Daily life",

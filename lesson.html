@@ -237,6 +237,9 @@ document.addEventListener('alpine:init', () => {
                 </button>
               </template>
             </div>
+            <p x-show="r.note" x-cloak class="mt-2.5 text-sm text-amber-800 bg-amber-50 border border-amber-100 rounded-lg px-3 py-2">
+              <span aria-hidden="true">⚠️</span> <span x-text="r.note"></span>
+            </p>
           </div>
         </template>
       </div>

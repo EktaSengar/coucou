@@ -13,23 +13,30 @@
     "level": "A1",
     "module": "Sounds & spelling",
     "title": "Pronunciation basics — French sounds",
-    "minutes": 20,
-    "goal": "Learn the handful of rules that make French spelling finally click, and read common words aloud with confidence.",
+    "minutes": 25,
+    "goal": "Learn the rules that make French spelling finally click, and read common words aloud with confidence.",
     "phonics": [
-      { "sound": "Silent final consonants", "say": "usually don't say the last letter", "examples": ["Paris (pa-REE)", "trois (trwah)", "petit (puh-TEE)", "français (frahn-SEH)"] },
-      { "sound": "…but C, R, F, L are often said", "say": "remember the word « CaReFuL »", "examples": ["avec (a-VEK)", "bonjour (bohn-ZHOOR)", "neuf (nuhf)", "il (eel)"] },
-      { "sound": "Final -e and -ent are silent", "say": "they just soften the word", "examples": ["France (frahnss)", "elle parle (el PARL)", "ils parlent (eel PARL)"] },
-      { "sound": "é, -er, -ez = « ay »", "say": "like the « ay » in day", "examples": ["café (ka-FAY)", "parler (par-LAY)", "vous parlez (voo par-LAY)"] },
-      { "sound": "è, ê, ai = « eh »", "say": "an open « eh », like in bed", "examples": ["mère (mehr)", "être (EH-truh)", "mais (meh)"] },
-      { "sound": "ou = « oo », u = tight « ew »", "say": "for u, round your lips and say « ee »", "examples": ["vous (voo)", "tu (tew)", "rue (rew)"] },
-      { "sound": "oi = « wa »", "say": "always sounds like « wa »", "examples": ["moi (mwah)", "trois (trwah)", "voiture (vwah-TEWR)"] },
-      { "sound": "Nasal an, am, en, em = « ahn » (/ɑ̃/)", "say": "the open one — jaw dropped, no real « n ». French writes m before p/b, so an=am and en=em — exactly the same sound", "examples": ["enfant (ahn-FAHN)", "chambre (SHAHN-bruh)", "temps (tahn)", "blanc (blahn)"] },
-      { "sound": "Nasal on, om = « ohn » (/ɔ̃/)", "say": "the deep, round one — lips forward (om before p/b is the same sound)", "examples": ["bonjour (bohn-ZHOOR)", "non (nohn)", "nombre (NOHN-bruh)", "pont (pohn)"] },
-      { "sound": "Nasal in, ain, ein, un, um = « an » (/ɛ̃/)", "say": "the bright one — lips pulled back (im before p/b is the same sound); « un » is just a touch rounder", "examples": ["vin (van)", "pain (pan)", "timbre (TAN-bruh)", "un (uhn)"] },
-      { "sound": "ch = « sh », gn = « ny »", "say": "like « sh » in shoe and « ny » in canyon", "examples": ["chat (sha)", "chercher (sher-SHAY)", "Espagne (es-PAHN-yuh)"] },
-      { "sound": "h is silent, qu = « k »", "say": "never say the h; qu is a hard k", "examples": ["homme (om)", "heure (ur)", "quatre (KAT-ruh)"] },
-      { "sound": "The French « r »", "say": "a soft sound from the back of the throat, like a gentle gargle", "examples": ["rouge (roozh)", "merci (mehr-SEE)", "Paris (pa-REE)"] },
-      { "sound": "Liaison — link to the next vowel", "say": "a silent final consonant wakes up before a vowel", "examples": ["vous avez (voo-za-VAY)", "les amis (lay-za-MEE)", "un ami (uhn-na-MEE)"] }
+      { "sound": "Silent final consonants", "say": "usually don't say the last letter", "examples": ["Paris (pa-REE)", "trois (trwah)", "petit (puh-TEE)", "français (frahn-SEH)"], "note": "Add a final -e and the consonant wakes up again — that's how you hear the feminine: petit → petite (puh-TEET), français → française (frahn-SEHZ)." },
+      { "sound": "…but C, R, F, L are often said", "say": "remember the word « CaReFuL »", "examples": ["avec (a-VEK)", "bonjour (bohn-ZHOOR)", "neuf (nuhf)", "il (eel)"], "note": "A good bet, not a law. The regular leaks: the -er of infinitives (parler, boulanger), and blanc, estomac, gentil, outil, clef." },
+      { "sound": "Final -e and -ent are silent", "say": "they just soften the word", "examples": ["France (frahnss)", "elle parle (el PARL)", "ils parlent (eel PARL)"], "note": "-ent is silent only as a verb ending. In any other word it is the nasal « ahn »: comment, souvent, argent, vraiment. And where a respelling here ends in « -ruh » (chambre, quatre), that last bit is a faint release, not a second syllable." },
+      { "sound": "é, -er, -ez = « ay »", "say": "like the « ay » in day", "examples": ["café (ka-FAY)", "parler (par-LAY)", "vous parlez (voo par-LAY)", "nez (nay)"], "note": "Cut it short — French é is one pure sound, without the English glide of « day-ee ». Short -er words keep their r: mer, hier, cher, fer." },
+      { "sound": "è, ê, ai, ei = « eh »", "say": "an open « eh », like in bed", "examples": ["mère (mehr)", "être (EH-truh)", "mais (meh)", "neige (nehzh)"], "note": "An e in front of a double consonant does the same thing: elle, cette, terre, belle." },
+      { "sound": "ou = « oo », u = tight « ew »", "say": "for u, round your lips and say « ee »", "examples": ["vous (voo)", "tu (tew)", "rue (rew)", "tout (too)"], "note": "No y-glide. tu is « tew » with the tongue right forward, never the English « tyoo » of tune." },
+      { "sound": "au, eau, ô = « oh »", "say": "one long, round « oh »", "examples": ["beaucoup (boh-KOO)", "eau (oh)", "bateau (ba-TOH)", "hôtel (oh-TEL)"], "note": "A plain o closed in by a consonant stays more open: notre, porte, école." },
+      { "sound": "eu, œu = a rounded « uh »", "say": "say « ay », then round your lips without moving your tongue", "examples": ["deux (duh)", "neuf (nuhf)", "sœur (sur)", "heure (ur)"], "note": "The little -e of je, le, de, que is this same sound — which is why they come out « zhuh, luh, duh, kuh »." },
+      { "sound": "oi = « wa »", "say": "almost always sounds like « wa »", "examples": ["moi (mwah)", "trois (trwah)", "voiture (vwah-TEWR)"], "note": "The one twist is oin, which is « wan »: loin, point, besoin (« buh-ZWAN »)." },
+      { "sound": "Nasal an, am, en, em = « ahn » (/ɑ̃/)", "say": "the open one — jaw dropped, no real « n ». French writes m before p/b, so an=am and en=em — exactly the same sound", "examples": ["enfant (ahn-FAHN)", "chambre (SHAHN-bruh)", "temps (tahn)", "blanc (blahn)"], "note": "en breaks this rule after i, é or y, and at the end of a word — there it is the bright nasal instead: bien, rien, chien, italien, examen." },
+      { "sound": "Nasal on, om = « ohn » (/ɔ̃/)", "say": "the deep, round one — lips forward (om before p/b is the same sound)", "examples": ["bonjour (bohn-ZHOOR)", "non (nohn)", "nombre (NOHN-bruh)", "pont (pohn)"], "note": "monsieur ignores all of it — « muh-SYUH », no nasal anywhere." },
+      { "sound": "Nasal in, ain, ein, un, um, -ien = « an » (/ɛ̃/)", "say": "the bright one — lips pulled back (im before p/b is the same sound); « un » is just a touch rounder", "examples": ["vin (van)", "pain (pan)", "bien (byan)", "timbre (TAN-bruh)", "un (uhn)"], "note": "In these respellings a single letter separates the three: « ahn » (blanc) · « ohn » (bon) · « an » (vin). Latin borrowings keep a plain « om »: album, forum, maximum." },
+      { "sound": "The nasal switches off before a vowel or a double n/m", "say": "then it's an ordinary vowel plus a real « n »", "examples": ["année (a-NAY)", "bonne (bon)", "italienne (ee-ta-LYEN)", "une (ewn)"], "note": "It is the whole difference between bon and bonne, un and une. Two oddities: femme is « fam », and -emment says « a-mahn » (évidemment)." },
+      { "sound": "c and g go soft before e, i, y", "say": "c = « s » and g = « zh »; anywhere else they are a hard « k » and « g »", "examples": ["merci (mehr-SEE)", "rouge (roozh)", "garçon (gar-SOHN)", "gâteau (ga-TOH)"], "note": "The cedilla ç exists only to force a soft c in front of a, o or u: ça, garçon, reçu, français." },
+      { "sound": "One s between two vowels = « z »", "say": "a double ss stays « s »", "examples": ["maison (meh-ZOHN)", "chose (shohz)", "poisson (pwah-SOHN)", "désert (day-ZEHR)"], "note": "It is the only thing separating poison (pwah-ZOHN) from poisson (pwah-SOHN)." },
+      { "sound": "ch = « sh », gn = « ny »", "say": "like « sh » in shoe and « ny » in canyon", "examples": ["chat (sha)", "chercher (sher-SHAY)", "Espagne (es-PA-nyuh)"], "note": "In words built from Greek, ch is a hard « k »: technique, orchestre, écho, psychologie." },
+      { "sound": "ill = « y »", "say": "the l melts into a « y » sound", "examples": ["famille (fa-MEEY)", "travailler (tra-va-YAY)", "fille (feey)", "ville (veel)"], "note": "Three common words keep a real l and simply have to be learnt: ville, mille, tranquille." },
+      { "sound": "h is silent, qu = « k »", "say": "never say the h; qu is a hard k", "examples": ["homme (om)", "heure (ur)", "quatre (KAT-ruh)"], "note": "Some h's still block linking — the h aspiré: le héros, les haricots (« lay ah-ree-KOH »), en haut. Nothing in the spelling shows it; the dictionary marks them." },
+      { "sound": "The French « r »", "say": "a soft sound from the back of the throat, like a gentle gargle", "examples": ["rouge (roozh)", "merci (mehr-SEE)", "Paris (pa-REE)"], "note": "It never rolls like a Spanish r and never curls back like an English one. Start from a soft « kh » and take the scrape out of it." },
+      { "sound": "Liaison — link to the next vowel", "say": "a silent final consonant wakes up before a vowel: s and x say « z », d says « t », f says « v »", "examples": ["vous avez (voo-za-VAY)", "les amis (lay-za-MEE)", "un ami (uhn-na-MEE)", "un grand ami (uhn grahn-ta-MEE)", "neuf ans (nuh-VAHN)"], "note": "Two places you never link: after « et » (et un = « ay UHN »), and before an h aspiré (les héros = « lay ay-ROH »)." },
+      { "sound": "The rhythm — French has no word stress", "say": "syllables come out even, with a small lift on the last one of the group", "examples": ["un chocolat chaud (uhn sho-ko-la SHOH)", "Comment allez-vous ? (koh-mahn ta-lay VOO)"], "note": "The CAPITALS in these respellings mark that end-of-group lift, not an English stressed syllable — everything before it stays flat and equal." }
     ],
     "vocab": [
       { "fr": "Bonjour", "phonetic": "bohn-ZHOOR", "en": "Hello / good morning" },
@@ -43,7 +50,7 @@
     ],
     "grammar": {
       "point": "The golden rule: silent endings",
-      "explain": "French words are usually shorter than they look. The final consonant and a final -e are normally silent — petit sounds like « puh-TEE » and ils parlent sounds like « eel PARL ». The big exceptions are C, R, F, L (think « CaReFuL »), which you usually do pronounce: avec, bonjour, neuf, il."
+      "explain": "French words are usually shorter than they look. The final consonant and a final -e are normally silent — petit sounds like « puh-TEE » and ils parlent sounds like « eel PARL ». Two things bring the ending back. C, R, F, L (think « CaReFuL ») are usually pronounced: avec, bonjour, neuf, il. And a final -e wakes up the consonant in front of it, which is exactly how petite, française and grande sound different from their masculine forms. Watch the trap in -ent: it is silent only as a verb ending, so comment, souvent and argent all finish on the nasal « ahn »."
     },
     "examples": [
       "Bonjour ! Comment ça va ? (bohn-ZHOOR, koh-mahn sah VAH)",
@@ -54,9 +61,12 @@
       "Practise the « ay » sound: café, parler, vous parlez, nez.",
       "Say the u vs ou pairs out loud: tu / tout, rue / roue, vu / vous.",
       "Hear the three nasals side by side and feel the difference: blanc (ahn) · bon (ohn) · vin (an).",
+      "Now the trap — these take the vin nasal, not the blanc one: bien, rien, italien, examen.",
+      "Switch the nasal off: bon / bonne, un / une, italien / italienne.",
+      "One s or two: poison / poisson, désert / dessert.",
       "Two more combos: oi = « wa » (moi, trois) and è = « eh » (mère, mais)."
     ],
-    "tutorPrompt": "Be my French pronunciation coach at A1, in English with French examples. Give me eight short, common words to read aloud, one at a time. Focus on: silent final letters, the « ay » sound (é, -er, -ez), the u vs ou difference, and nasal vowels (on, an, in, un). After each word, give me an English-style respelling and a quick tip. Keep it light and encouraging, and end with the three sounds I should drill most."
+    "tutorPrompt": "Be my French pronunciation coach at A1, in English with French examples. Give me eight short, common words to read aloud, one at a time. Focus on: silent final letters, the « ay » sound (é, -er, -ez), the u vs ou difference, and the nasals — including the three-way contrast blanc / bon / vin and the words where en is really the vin nasal (bien, italien). After each word, give me an English-style respelling and a quick tip. Keep it light and encouraging, and end with the three sounds I should drill most."
   },
   {
     "id": "a1-elision",

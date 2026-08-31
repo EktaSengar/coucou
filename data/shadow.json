@@ -70,6 +70,20 @@
     ]
   },
   {
+    "id": "a1-heure-parlee",
+    "level": "A1",
+    "focus": "Telling the time out loud",
+    "title": "Quelle heure est-il ?",
+    "intro": "The clock is where French links hardest — every hour runs straight into « heures » with no gap at all. Copy the join, not the spelling.",
+    "phrases": [
+      { "fr": "Il est deux heures et quart.", "en": "It's a quarter past two.", "hint": "deux‿heures links with a z — « duh-ZUR ». And « il est » collapses to « ee-LEH », one piece, no pause." },
+      { "fr": "Il est neuf heures moins le quart.", "en": "It's a quarter to nine.", "hint": "neuf‿heures is the odd one out: the f turns into a v, « nuh-VUR ». It only does that before heures and ans." },
+      { "fr": "On se voit à midi et demi ?", "en": "Shall we meet at half past twelve?", "hint": "« à midi » runs together as « a-mee-DEE », and the whole question is made by the voice rising on the last syllable." },
+      { "fr": "Le train part à dix-huit heures quarante-cinq.", "en": "The train leaves at 18:45.", "hint": "dix-huit‿heures comes out as one long piece, « dee-zweet-UR »: the x of dix says z and the t of huit links straight on." },
+      { "fr": "Je serai là dans un quart d'heure.", "en": "I'll be there in a quarter of an hour.", "hint": "Two joins in a row: dans‿un is « dahn-ZUHN », and « quart d'heure » is « kar-DUR »." }
+    ]
+  },
+  {
     "id": "a2-liaisons",
     "level": "A2",
     "focus": "Liaisons",
@@ -95,6 +109,34 @@
       { "fr": "Pourquoi est-ce que c'est fermé ?", "en": "Why is it closed?", "hint": "A 'why' question falls at the end instead of rising." },
       { "fr": "On se voit à quelle heure ?", "en": "What time are we meeting?", "hint": "quelle‿heure links to 'kel-eur'." },
       { "fr": "Ça te dit d'aller au ciné ?", "en": "Fancy going to the movies?", "hint": "Casual: « ça te dit » = do you feel like…?" }
+    ]
+  },
+  {
+    "id": "a2-passe-compose-parle",
+    "level": "A2",
+    "focus": "The past tense out loud",
+    "title": "Raconter sa journée",
+    "intro": "In speech the passé composé shrinks. The auxiliary goes light, the « ne » disappears completely, and the weight lands on the participle.",
+    "phrases": [
+      { "fr": "J'ai pris le métro ce matin.", "en": "I took the metro this morning.", "hint": "« j'ai » is one light syllable, « zhay », gone almost before you hear it. The weight of the sentence lands on PRIS." },
+      { "fr": "Je n'ai pas compris, tu peux répéter ?", "en": "I didn't understand, can you repeat?", "hint": "Out loud the ne vanishes: « zhay pa kohn-PREE ». Everyone drops it in speech; only the writing keeps it." },
+      { "fr": "J'ai eu une longue journée.", "en": "I've had a long day.", "hint": "« j'ai eu » is « zhay EW » — two syllables, not three. The e of eu makes no sound at all." },
+      { "fr": "On est allés au cinéma hier soir.", "en": "We went to the cinema last night.", "hint": "Two liaisons in a row melt into one piece: « ohn-neh-ta-LAY ». On stands in for nous, but the participle still goes plural." },
+      { "fr": "Elle est morte il y a deux ans.", "en": "She died two years ago.", "hint": "morte is the one participle whose agreement you can actually hear — the t sounds. And « il y a » collapses to « ya duh-ZAHN »." }
+    ]
+  },
+  {
+    "id": "a2-chez-le-medecin",
+    "level": "A2",
+    "focus": "At the doctor",
+    "title": "Chez le médecin",
+    "intro": "A consultation is a script both people already know. Shadow both halves — the questions you'll hear, and the answers you'll have to give.",
+    "phrases": [
+      { "fr": "Bonjour docteur, je ne me sens pas bien.", "en": "Hello doctor, I don't feel well.", "hint": "« je ne me sens pas » flattens into one run, « zhuhn-muh-sahn-PA ». sens ends in a silent s." },
+      { "fr": "Qu'est-ce qui vous arrive ?", "en": "What's the matter?", "hint": "Five words that come out as one piece: « kess-kee-voo-za-REEV ». vous‿arrive links with a z." },
+      { "fr": "J'ai mal à la gorge depuis trois jours.", "en": "I've had a sore throat for three days.", "hint": "« mal à la » runs together as « ma-la-la ». Keep it flat and save the lift for GORGE." },
+      { "fr": "Je vais vous ausculter, respirez fort.", "en": "I'm going to listen to your chest, breathe deeply.", "hint": "vous‿ausculter links with a z — « voo-zoh-skewl-TAY ». respirez ends in the « ay » sound, with no z at all." },
+      { "fr": "Vous avez votre carte Vitale ?", "en": "Do you have your carte Vitale?", "hint": "vous‿avez links with a z. Nothing else marks the question — the voice alone rises, on vee-TAL." }
     ]
   },
   {

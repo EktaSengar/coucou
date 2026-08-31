@@ -28,6 +28,20 @@
     ]
   },
   {
+    "id": "a1-heure",
+    "level": "A1",
+    "theme": "Telling the time",
+    "title": "Quelle heure est-il ?",
+    "intro": "The clock is full of endings you can hear perfectly and still write wrong. Listen especially for whether « demi » takes an -e — it depends on the word in front of it.",
+    "sentences": [
+      { "fr": "Quelle heure est-il ? Il est bientôt minuit.", "en": "What time is it? It's nearly midnight.", "tip": "« quelle » agrees with the feminine heure — two l's and an -e. est-il takes a hyphen, and minuit hides a silent t." },
+      { "fr": "Il est midi et demi, on déjeune ?", "en": "It's half past twelve, shall we have lunch?", "tip": "No -e on demi here: midi is masculine. Same for « minuit et demi »." },
+      { "fr": "Le film dure une heure et demie.", "en": "The film lasts an hour and a half.", "tip": "Now demie takes the -e, because it agrees with the feminine heure. dure, not dur — it's the verb." },
+      { "fr": "Je serai là dans un quart d'heure.", "en": "I'll be there in a quarter of an hour.", "tip": "« un quart d'heure » is a length of time: three words and an apostrophe. Don't confuse it with « et quart » on the clock." },
+      { "fr": "Le train part à dix-huit heures quarante-cinq.", "en": "The train leaves at 18:45.", "tip": "Both numbers keep their hyphens, and quarante has a single t. The 24-hour clock never says « moins le quart »." }
+    ]
+  },
+  {
     "id": "a1-en-ville",
     "level": "A1",
     "theme": "Around town",
@@ -112,6 +126,20 @@
     ]
   },
   {
+    "id": "a1-corps",
+    "level": "A1",
+    "theme": "The body",
+    "title": "Le corps et « avoir mal »",
+    "intro": "Saying what hurts, and the little words that come with it. Listen for whether the body part is singular or plural — au or aux sound almost the same, and only one of them is right.",
+    "sentences": [
+      { "fr": "J'ai mal au dos depuis trois jours.", "en": "My back has hurt for three days.", "tip": "à + le contracts to au, one word. dos ends in a silent -s even in the singular." },
+      { "fr": "Le médecin regarde mon épaule gauche.", "en": "The doctor is looking at my left shoulder.", "tip": "épaule is feminine, but it takes mon, not ma — French uses the masculine form before a vowel. gauche agrees with it." },
+      { "fr": "Elle a mal aux jambes et aux pieds.", "en": "Her legs and feet hurt.", "tip": "aux is the plural of au, and both nouns carry an -s you cannot hear." },
+      { "fr": "Lave-toi les mains avant de manger.", "en": "Wash your hands before eating.", "tip": "The hyphen is compulsory in the imperative. And « les mains », never « tes mains » — French uses the plain article for your own body." },
+      { "fr": "J'ai mal au cœur en voiture.", "en": "I feel sick in the car.", "tip": "cœur is written with the ligature œ. And it means to feel nauseous — nothing to do with the heart." }
+    ]
+  },
+  {
     "id": "a1-reperes-temps",
     "level": "A1",
     "theme": "Time markers",
@@ -123,6 +151,20 @@
       { "fr": "Après-demain, je vais voir un ami.", "en": "The day after tomorrow, I'm going to see a friend.", "tip": "Après-demain takes a hyphen and an accent grave; the -s of après stays silent." },
       { "fr": "La semaine prochaine, on va déménager.", "en": "Next week we're going to move house.", "tip": "prochaine agrees with the feminine semaine, so the -e. déménager: two accents aigus, both é." },
       { "fr": "Actuellement, je cherche un appartement.", "en": "I'm currently looking for a flat.", "tip": "Two l's in actuellement — and it means currently, not « actually ». appartement doubles the p, not the t." }
+    ]
+  },
+  {
+    "id": "a1-duree",
+    "level": "A1",
+    "theme": "Duration",
+    "title": "Depuis, pendant, il y a",
+    "intro": "Five sentences that say how long. Listen for which word arrives — depuis, pendant, il y a or dans — because each one drags a different tense along with it.",
+    "sentences": [
+      { "fr": "J'habite en France depuis huit mois.", "en": "I've been living in France for eight months.", "tip": "depuis always ends in a silent -s. The verb stays in the present, because you still live there — no past tense here." },
+      { "fr": "J'ai travaillé pendant trois ans à Delhi.", "en": "I worked for three years in Delhi.", "tip": "pendant ends in a silent -t. travaillé is the participle, so -é and not -er." },
+      { "fr": "Ça fait deux heures que je t'attends !", "en": "I've been waiting for you for two hours!", "tip": "« Ça » takes a cedilla. t'attends has the apostrophe and a silent -s you must still write." },
+      { "fr": "Nous partons en vacances dans une semaine.", "en": "We're going on holiday in a week.", "tip": "dans, not « d'en ». And « en vacances » is always written in the plural." },
+      { "fr": "Je n'ai pas vu mes parents depuis Noël.", "en": "I haven't seen my parents since Christmas.", "tip": "n'ai — the apostrophe replaces the e of ne. Noël keeps its tréma on the e." }
     ]
   },
   {
@@ -207,6 +249,20 @@
       { "fr": "Nous avons acheté une nouvelle voiture.", "en": "We bought a new car.", "tip": "« acheté » here ends in -é (past participle), not -er." },
       { "fr": "Elle est allée au marché ce week-end.", "en": "She went to the market this weekend.", "tip": "« allée » — with être, the participle agrees: extra -e for « elle »." },
       { "fr": "Tu as oublié tes clés sur la table.", "en": "You left your keys on the table.", "tip": "« tes clés » — both are plural, both take a silent -s." }
+    ]
+  },
+  {
+    "id": "a2-passe-compose",
+    "level": "A2",
+    "theme": "The past tense",
+    "title": "Le passé composé",
+    "intro": "The tense where French hides most of its spelling. Almost none of the agreements can be heard — you have to work them out from the auxiliary and the subject.",
+    "sentences": [
+      { "fr": "Hier, j'ai pris le métro et j'ai lu mon livre.", "en": "Yesterday I took the metro and read my book.", "tip": "pris ends in -s, lu in -u. Neither ending is audible; both simply have to be learnt." },
+      { "fr": "Elle est allée au marché et elle est rentrée tard.", "en": "She went to the market and came home late.", "tip": "Both verbs take être, so both participles agree with elle — two silent extra e's." },
+      { "fr": "Nous n'avons pas compris la question.", "en": "We didn't understand the question.", "tip": "The ne … pas wraps the auxiliary alone: « n'avons pas compris », never « n'avons compris pas »." },
+      { "fr": "Ils sont nés en Inde et ils sont arrivés en 2025.", "en": "They were born in India and arrived in 2025.", "tip": "être again, so both participles take the plural -s. nés keeps its accent aigu." },
+      { "fr": "J'ai dû partir avant la fin.", "en": "I had to leave before the end.", "tip": "dû wears its circumflex only in the masculine singular — it is there to keep it apart from « du »." }
     ]
   },
   {

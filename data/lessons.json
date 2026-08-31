@@ -1264,25 +1264,141 @@
     "tutorPrompt": "Be my A1 French tutor for countries and nationalities. Drill three things. ① Country names with their articles — la France, l'Italie, l'Espagne, l'Inde, la Chine, le Japon, le Portugal, le Maroc, le Canada, le Brésil, les États-Unis, les Pays-Bas — and make me say whether each is feminine, masculine or plural. ② The nationality endings: -ais/-aise, -ois/-oise, -ol/-ole, -ain/-aine, -ien/-ienne, -and/-ande. Give me a country and ask for both forms, and correct the doubled n in indienne, italienne, canadienne. ③ The preposition after aller: à + city, en + feminine country, au + masculine country, aux + plural country, à + tiny country like Monaco. Then reverse it with venir de: de France, du Japon, des États-Unis, d'Inde. Also check I know that only the person takes a capital letter (une Française) while the adjective and the language don't. Ask me about trips I've taken and want to take. Correct every attempt and finish with what to review."
   },
   {
+    "id": "a1-heure",
+    "level": "A1",
+    "module": "People & daily life",
+    "title": "Lire l'heure — reading the clock",
+    "minutes": 20,
+    "goal": "Ask the time, say any clock face out loud, and follow the 24-hour time France actually prints on tickets and appointment cards.",
+    "figures": [
+      {
+        "src": "./assets/img/horloge.svg?v=1",
+        "alt": "A clock face split in two. The right half, from twelve down to six, counts forward with « et » — et quart at fifteen minutes, et demie at thirty. The left half, from six back up to twelve, counts backwards from the next hour with « moins » — moins le quart at forty-five, moins dix at fifty. Beside the clock, the five positions written out, and a reminder that the twenty-four-hour clock never uses et quart, et demie or moins.",
+        "caption": "One clock, two directions. Past the half hour French stops counting up and starts counting down from the next hour — which is exactly what English does with « to »."
+      }
+    ],
+    "vocab": [
+      { "fr": "Quelle heure est-il ?", "phonetic": "kel ur eh-TEEL", "en": "What time is it? (formal)", "emoji": "🕐" },
+      { "fr": "Il est quelle heure ?", "phonetic": "eel eh kel UR", "en": "What time is it? (what you'll actually hear)", "emoji": "💬" },
+      { "fr": "Il est une heure", "phonetic": "eel eh ewn UR", "en": "It's one o'clock", "emoji": "1️⃣" },
+      { "fr": "Il est deux heures", "phonetic": "eel eh duh ZUR", "en": "It's two o'clock — hear the z", "emoji": "2️⃣" },
+      { "fr": "et quart", "phonetic": "ay KAR", "en": "quarter past (:15)", "emoji": "🔵" },
+      { "fr": "et demie", "phonetic": "ay duh-MEE", "en": "half past (:30)", "emoji": "🟣" },
+      { "fr": "moins le quart", "phonetic": "mwan luh KAR", "en": "quarter to (:45)", "emoji": "🟠" },
+      { "fr": "moins dix", "phonetic": "mwan DEESS", "en": "ten to (:50)", "emoji": "🟡" },
+      { "fr": "midi / minuit", "phonetic": "mee-DEE / mee-NWEE", "en": "midday / midnight", "emoji": "🌞" },
+      { "fr": "du matin / de l'après-midi / du soir", "phonetic": "dew ma-TAN / duh la-preh-mee-DEE / dew SWAHR", "en": "a.m. / in the afternoon / in the evening", "emoji": "🌗" },
+      { "fr": "À quelle heure ?", "phonetic": "ah kel UR", "en": "At what time?", "emoji": "📌" },
+      { "fr": "un quart d'heure", "phonetic": "uhn kar DUR", "en": "a quarter of an hour — 15 minutes", "emoji": "⏳" },
+      { "fr": "une demi-heure", "phonetic": "ewn duh-mee-UR", "en": "half an hour — 30 minutes", "emoji": "⏲️" },
+      { "fr": "Il est quatorze heures trente", "phonetic": "eel eh ka-TORZ ur TRAHNT", "en": "It's 14:30 — the official clock", "emoji": "🚆" }
+    ],
+    "grammar": {
+      "point": "« Il est » + the hour — then either « et » or « moins »",
+      "table": {
+        "title": "the clock has a forward half and a backward half",
+        "cols": ["clock", "what you say", "English"],
+        "rows": [
+          { "label": "3:00", "cells": ["Il est trois heures", "It's three o'clock"] },
+          { "label": "3:10", "cells": ["Il est trois heures dix", "ten past three"] },
+          { "label": "3:15", "cells": ["Il est trois heures et quart", "quarter past three"] },
+          { "label": "3:30", "cells": ["Il est trois heures et demie", "half past three"] },
+          { "label": "3:45", "cells": ["Il est quatre heures moins le quart", "quarter to four"] },
+          { "label": "3:50", "cells": ["Il est quatre heures moins dix", "ten to four"] }
+        ],
+        "highlight": ["Il est quatre heures moins le quart", "Il est quatre heures moins dix"],
+        "note": "Read down and watch the hour change at 3:45. Once you're past the half hour French abandons the hour you're in and counts backwards from the next one — « quatre heures moins le quart » is 3:45, not 4:45. English does the same thing with « to »; the only new habit is remembering to move the number up."
+      },
+      "table2": {
+        "title": "the spoken clock and the printed one are different clocks",
+        "cols": ["", "spoken (12h)", "printed (24h)"],
+        "rows": [
+          { "label": "14:30", "cells": ["deux heures et demie de l'après-midi", "quatorze heures trente"] },
+          { "label": "18:45", "cells": ["sept heures moins le quart du soir", "dix-huit heures quarante-cinq"] },
+          { "label": "12:00", "cells": ["midi", "douze heures"] },
+          { "label": "00:00", "cells": ["minuit", "zéro heure"] }
+        ],
+        "highlight": ["quatorze heures trente", "dix-huit heures quarante-cinq"],
+        "note": "The 24-hour clock is what your train ticket, your cinema listing and your rendez-vous card will say — and it takes plain minutes only. No et quart, no et demie, no moins. Say « quinze heures quarante-cinq », never « quinze heures moins le quart »."
+      },
+      "explain": "The frame never changes: « il est » + the number + heure(s). One o'clock is « il est une heure » — heure is feminine, so it's une, not un — and from two o'clock on it takes an s you don't pronounce: deux heures, trois heures. What follows depends on which half of the clock you're in. ① Up to :30, add the minutes straight on: trois heures dix, trois heures et quart, trois heures et demie. ② After :30, jump to the next hour and subtract: quatre heures moins vingt, quatre heures moins le quart. Note the little asymmetry — you say « et quart » and « et demie » with et, but « moins le quart » with le. Midday and midnight get their own words, midi and minuit, and neither takes heures: « il est midi et demi ». To pin an event to a time you swap il est for à: « Le train part à huit heures. » And keep positions apart from lengths: « à huit heures et quart » is when something starts, « un quart d'heure » is how long it lasts."
+    },
+    "notes": [
+      {
+        "title": "« et demie » drops its -e after midi and minuit",
+        "body": "Demie is an adjective agreeing with heure, which is feminine: « trois heures et demie ». But midi and minuit are masculine, so the -e goes: « midi et demi », « minuit et demi ». Written in front of a noun and hyphenated it never agrees at all — une demi-heure, une demi-journée, trois demi-litres."
+      },
+      {
+        "title": "The liaison into « heures » is not optional",
+        "body": "Heure begins with a silent h, so the number before it links straight in: deux‿heures sounds « duh-ZUR », trois‿heures « trwah-ZUR », six‿heures « see-ZUR », dix‿heures « dee-ZUR », neuf heures « nuh-VUR » — the f turns into a v, one of only two words that does that to neuf (the other is neuf ans). Say « duh UR » and you sound like you're reading, not speaking."
+      },
+      {
+        "title": "A position, or a length?",
+        "body": "« et quart » sits on the clock; « un quart d'heure » is a quantity of time. « Le film commence à huit heures et quart, il dure une heure et demie, et je suis arrivé un quart d'heure en retard. » Same three words, three different jobs — and only the middle one, une heure et demie, takes both."
+      },
+      {
+        "title": "Nobody asks « quelle heure est-il ? » in a café",
+        "body": "It's correct, and it's what exams want. In the street you'll hear « Il est quelle heure ? » or « Vous avez l'heure ? » — literally, do you have the time. Both are polite; the second is the one to use on a stranger."
+      },
+      {
+        "title": "Pile, environ, and the quarter-hour habit",
+        "body": "« Il est huit heures pile » is eight o'clock sharp. « Vers huit heures » or « huit heures environ » is around eight. And French really does think in quarter-hours — arrangements land on et quart, et demie and moins le quart far more often than on :10 or :20."
+      }
+    ],
+    "examples": [
+      "— Quelle heure est-il ? — Il est trois heures et quart. (kel ur eh-TEEL ? eel eh trwah zur ay KAR)",
+      "Il est huit heures moins le quart, je suis en retard ! (eel eh weet ur mwan luh KAR)",
+      "Le train part à dix-huit heures quarante-cinq. (luh tran par ah dee-zweet ur ka-rahnt-SANK)",
+      "On déjeune à midi et demi ? (ohn day-ZHUN ah mee-dee ay duh-MEE)",
+      "J'ai rendez-vous chez le médecin à quatorze heures trente. (zhay rahn-day-VOO shay luh mayd-SAN ah ka-torz ur TRAHNT)",
+      "Le cours dure une heure et demie. (luh koor dewr ewn ur ay duh-MEE)",
+      "Je serai là dans un quart d'heure. (zhuh suh-ray lah dahn zuhn kar DUR)"
+    ],
+    "practice": [
+      "Say these out loud: 1:00 · 2:15 · 6:30 · 9:45 · 11:50.",
+      "Careful with the hour: what is 7:45 in French? (not sept heures…)",
+      "Say the same three times twice — once spoken, once official: 14:15 · 19:30 · 21:45.",
+      "Fill in: « Il est midi ___ » and « Il est une heure ___ » (half past, both).",
+      "Position or length? Translate: « The class starts at half past nine and lasts an hour and a half. »",
+      "Answer out loud: « Tu te lèves à quelle heure ? » — then « Tu déjeunes à quelle heure ? »"
+    ],
+    "tutorPrompt": "Be my A1 French tutor for telling the time. Give me clock times one at a time — mix them, including plenty past the half hour — and have me say them in French. Correct three things hard: that after :30 I move to the next hour with « moins » (3:45 = quatre heures moins le quart), that « et demie » loses its -e after midi and minuit, and that I make the liaison in deux‿heures, trois‿heures, six‿heures, dix‿heures. Then switch to the 24-hour clock and check I stop using et quart / moins. Finish by asking me at what time I do four everyday things, and list the times I still got wrong."
+  },
+  {
     "id": "a1-07-time-days",
     "level": "A1",
     "module": "People & daily life",
-    "title": "Time, days & making plans",
+    "title": "Days, the week & making plans",
     "minutes": 20,
-    "goal": "Tell the time, name the days, and arrange to meet someone.",
+    "goal": "Name the days, split the day into its parts, and arrange to meet someone — the diary half of talking about time.",
     "vocab": [
-      { "fr": "Quelle heure est-il ?", "phonetic": "kel ur eh-TEEL", "en": "What time is it?" },
-      { "fr": "Il est huit heures", "phonetic": "eel eh weet UR", "en": "It's eight o'clock" },
-      { "fr": "et demie / et quart / moins le quart", "phonetic": "ay duh-MEE / ay KAR / mwan luh KAR", "en": "half past / quarter past / quarter to" },
-      { "fr": "lundi, mardi, mercredi, jeudi", "phonetic": "luhn-DEE, mar-DEE, mehr-kruh-DEE, zhuh-DEE", "en": "Mon, Tue, Wed, Thu" },
-      { "fr": "vendredi, samedi, dimanche", "phonetic": "vahn-druh-DEE, sam-DEE, dee-MAHNSH", "en": "Fri, Sat, Sun" },
-      { "fr": "aujourd'hui / demain", "phonetic": "oh-zhoor-DWEE / duh-MAN", "en": "today / tomorrow" },
-      { "fr": "le matin / l'après-midi / le soir", "phonetic": "luh ma-TAN / la-preh-mee-DEE / luh SWAHR", "en": "morning / afternoon / evening" },
-      { "fr": "On se voit à… ?", "phonetic": "ohn suh vwah ah", "en": "Shall we meet at…?" }
+      { "fr": "lundi, mardi, mercredi, jeudi", "phonetic": "luhn-DEE, mar-DEE, mehr-kruh-DEE, zhuh-DEE", "en": "Mon, Tue, Wed, Thu", "emoji": "📅" },
+      { "fr": "vendredi, samedi, dimanche", "phonetic": "vahn-druh-DEE, sam-DEE, dee-MAHNSH", "en": "Fri, Sat, Sun", "emoji": "🗓️" },
+      { "fr": "la semaine / le week-end", "phonetic": "lah suh-MEN / luh week-END", "en": "the week / the weekend", "emoji": "📆" },
+      { "fr": "aujourd'hui / demain", "phonetic": "oh-zhoor-DWEE / duh-MAN", "en": "today / tomorrow", "emoji": "☀️" },
+      { "fr": "le matin / l'après-midi / le soir", "phonetic": "luh ma-TAN / la-preh-mee-DEE / luh SWAHR", "en": "morning / afternoon / evening", "emoji": "🌗" },
+      { "fr": "ce soir", "phonetic": "suh SWAHR", "en": "tonight", "emoji": "🌙" },
+      { "fr": "On se voit à… ?", "phonetic": "ohn suh vwah ah", "en": "Shall we meet at…?", "emoji": "🤝" },
+      { "fr": "Tu es libre jeudi ?", "phonetic": "tew eh LEE-bruh zhuh-DEE", "en": "Are you free on Thursday?", "emoji": "❓" },
+      { "fr": "Ça te va ?", "phonetic": "sa tuh VAH", "en": "Does that work for you?", "emoji": "👍" },
+      { "fr": "On se dit à jeudi", "phonetic": "ohn suh dee ah zhuh-DEE", "en": "See you Thursday then", "emoji": "✅" }
     ],
     "grammar": {
-      "point": "Telling the time with « il est »",
-      "explain": "Il est + number + heure(s): il est une heure, il est deux heures. Add et demie (:30), et quart (:15), moins le quart (:45). Days are not capitalised in French, and « le lundi » means « on Mondays »."
+      "point": "« lundi » or « le lundi » — one word, two different diaries",
+      "table": {
+        "title": "the article changes the appointment",
+        "cols": ["what you say", "what it means"],
+        "rows": [
+          { "label": "lundi", "cells": ["this coming Monday — one specific day"] },
+          { "label": "le lundi", "cells": ["on Mondays — every week"] },
+          { "label": "lundi matin", "cells": ["Monday morning — no preposition needed"] },
+          { "label": "lundi prochain", "cells": ["next Monday, said to remove all doubt"] },
+          { "label": "tous les lundis", "cells": ["every Monday — the emphatic version of « le lundi »"] }
+        ],
+        "highlight": ["le lundi", "lundi"],
+        "note": "French needs no « on »: « je travaille lundi », not « je travaille sur lundi ». And days are never capitalised — lundi, janvier, français all stay lowercase, which will look wrong for months."
+      },
+      "explain": "Two habits. ① The bare day is a date, the day with « le » is a habit: « on se voit lundi » is an appointment, « le lundi, je travaille à la maison » is my week. ② Parts of the day attach straight onto the day with nothing in between: lundi matin, samedi soir, dimanche après-midi. Then, to fix a time, you need « à » and the clock — « on se voit jeudi à dix-neuf heures » — which the clock lesson before this one covers in full. Note also the pairs jour / journée, matin / matinée, soir / soirée and an / année: the short one is the point on the calendar, the long one is the stretch of time you lived through it. « Bonne journée » wishes someone a good day ahead; « bonjour » just says hello."
     },
     "notes": [
       {
@@ -1292,20 +1408,33 @@
       {
         "title": "« lundi » vs « le lundi »",
         "body": "Without the article it means this coming Monday: « on se voit lundi ». With it, it means every Monday: « le lundi, je travaille à la maison ». One small word, completely different plan."
+      },
+      {
+        "title": "jour or journée? an or année?",
+        "body": "The -ée forms measure the thing from the inside: « toute la journée » is all day long, « j'ai passé une bonne soirée » is I had a good evening. The short forms count: « trois jours », « deux ans », « ce soir ». So « bonne journée » as someone leaves, but « à demain, bonne soirée » if it's evening — and « j'ai vingt-cinq ans », never « années », when you give your age."
+      },
+      {
+        "title": "Fixing the time itself",
+        "body": "Arranging to meet needs a clock as well as a day, and French speakers will give it to you on the 24-hour clock as often as not: « jeudi à dix-neuf heures trente ». That whole half — et quart, et demie, moins le quart, and the official times on your ticket — has its own lesson just before this one."
       }
     ],
     "examples": [
-      "— Quelle heure est-il ? — Il est sept heures et demie.",
-      "— On se voit demain à midi ? — D'accord, à demain !",
-      "Le lundi, je ne travaille pas. (luh luhn-DEE)",
-      "Mercredi est le jour de Mercure. (mer-kruh-DEE)"
+      "— Tu es libre jeudi soir ? — Oui, ça me va. (tew eh LEE-bruh zhuh-dee SWAHR)",
+      "On se voit demain à midi ? — D'accord, à demain ! (ohn suh vwah duh-MAN ah mee-DEE)",
+      "Le lundi, je ne travaille pas. (luh luhn-DEE, zhuh nuh tra-VYE pa)",
+      "Samedi matin, je vais au marché. (sam-dee ma-TAN, zhuh veh oh mar-SHAY)",
+      "Mercredi est le jour de Mercure. (mer-kruh-DEE ay luh zhoor duh mer-KEWR)",
+      "Bonne journée ! — Merci, à vous aussi. (bon zhoor-NAY)"
     ],
     "practice": [
-      "Say three times in French: 9:00, 10:30, 6:45.",
-      "Say what day it is today and what day it is tomorrow.",
-      "Invite someone to meet tomorrow morning."
+      "Say the seven days in order, out loud, without looking.",
+      "Say what day it is today, what day it was yesterday, and what day it is tomorrow.",
+      "Which one means every week: « je joue au tennis mardi » or « le mardi » ?",
+      "Invite someone out for Saturday evening and propose a time.",
+      "Jour or journée? — « J'ai travaillé toute la ___ » · « Il reste trois ___ ».",
+      "Say three things you do « le week-end »."
     ],
-    "tutorPrompt": "A1 French tutor. Practise time and days with me. Ask me « quelle heure est-il ? » with different clock times, ask what day it is, and try to arrange a time to meet. Correct my answers gently. End by listing the time phrases I should review."
+    "tutorPrompt": "Be my A1 French tutor for the days and making plans. Drill the seven days until they're automatic, then test the difference that costs people marks: « lundi » (this Monday) versus « le lundi » (every Monday). Check I never put a preposition in front of the day and never capitalise it. Then role-play arranging to meet: propose days and times, ask if I'm free, and make me counter-propose and confirm — « tu es libre jeudi ? », « ça te va ? », « on se dit à jeudi ». Slip in jour/journée and an/année at least once. Finish with what I should review."
   },
   {
     "id": "a1-se-reperer-temps",
@@ -1397,6 +1526,102 @@
       "Answer out loud: « Tu es arrivé en France quand ? »"
     ],
     "tutorPrompt": "Be my A1 French tutor for placing things in time. Drill the three zones: passé (hier, avant-hier, la semaine dernière, le mois dernier, il y a + durée), présent (maintenant, aujourd'hui, en ce moment, actuellement) and futur (demain, après-demain, bientôt, la semaine prochaine, dans + durée). Test two traps hard: « il y a » versus « dans » for the same distance in opposite directions, and « actuellement » = currently, never « actually » (which is en fait / en réalité). Also check that I put dernier and prochain after the noun. Ask me simple questions about when I do things, one at a time, and correct every answer. Finish with the markers I still get wrong."
+  },
+  {
+    "id": "a1-depuis-pendant",
+    "level": "A1",
+    "module": "People & daily life",
+    "title": "Depuis, pendant, il y a, dans — how long, and when",
+    "minutes": 20,
+    "goal": "Say how long something has been going on, how long it lasted, and when it happened — with the four little words French sorts this with, and the tense each one demands.",
+    "figures": [
+      {
+        "src": "./assets/img/duree-temps.svg?v=1",
+        "alt": "A timeline with « maintenant » marked in the middle. « Il y a » points back to a single dot in the past. « Depuis » is a solid bar running from a dot in the past right up to now and continuing past it. « Pendant » is a closed block sitting entirely inside the past, with a start and an end. « Dans » points forward to a single dot in the future. Below, the tense rule: depuis takes the present, pendant takes the passé composé.",
+        "caption": "Two of them mark a point — il y a behind you, dans ahead of you. Two of them measure a stretch — depuis is still running, pendant is finished."
+      }
+    ],
+    "vocab": [
+      { "fr": "depuis", "phonetic": "duh-PWEE", "en": "since / for — and still going", "emoji": "🟢" },
+      { "fr": "pendant", "phonetic": "pahn-DAHN", "en": "for / during — a finished stretch", "emoji": "🟪" },
+      { "fr": "il y a", "phonetic": "eel ee AH", "en": "ago", "emoji": "⬅️" },
+      { "fr": "dans", "phonetic": "DAHN", "en": "in — from now forward", "emoji": "➡️" },
+      { "fr": "Ça fait deux ans que…", "phonetic": "sa feh duh zahn kuh", "en": "It's been two years that… (spoken « depuis »)", "emoji": "🗣️" },
+      { "fr": "Depuis combien de temps ?", "phonetic": "duh-pwee kohn-byan duh TAHN", "en": "For how long? (and still?)", "emoji": "❓" },
+      { "fr": "Pendant combien de temps ?", "phonetic": "pahn-dahn kohn-byan duh TAHN", "en": "For how long? (all told)", "emoji": "❔" },
+      { "fr": "depuis 2025 / depuis lundi", "phonetic": "duh-pwee duh-meel-vant-SANK / duh-pwee luhn-DEE", "en": "since 2025 / since Monday", "emoji": "📅" },
+      { "fr": "toute la journée", "phonetic": "toot lah zhoor-NAY", "en": "all day long", "emoji": "☀️" },
+      { "fr": "pour deux semaines", "phonetic": "poor duh suh-MEN", "en": "for two weeks (planned ahead)", "emoji": "🧳" }
+    ],
+    "grammar": {
+      "point": "Four words, four shapes on the timeline",
+      "table": {
+        "title": "what each one actually marks",
+        "cols": ["word", "what it marks", "example"],
+        "rows": [
+          { "label": "il y a", "cells": ["a point behind you", "J'ai rencontré Pierre il y a dix ans."] },
+          { "label": "depuis", "cells": ["a stretch still running", "J'habite à Paris depuis dix ans."] },
+          { "label": "pendant", "cells": ["a stretch that ended", "Hier, il a plu pendant cinq heures."] },
+          { "label": "dans", "cells": ["a point ahead of you", "Je pars en vacances dans une semaine."] }
+        ],
+        "highlight": ["J'habite à Paris depuis dix ans.", "Hier, il a plu pendant cinq heures."],
+        "note": "Depuis and pendant both translate as English « for », which is why they get mixed up. The test is whether it's over. Still true now → depuis. Finished → pendant."
+      },
+      "table2": {
+        "title": "each word drags a tense along with it",
+        "cols": ["", "tense", "example"],
+        "rows": [
+          { "label": "depuis", "cells": ["présent", "Je travaille ici depuis trois ans."] },
+          { "label": "pendant", "cells": ["passé composé", "J'ai travaillé ici pendant trois ans."] },
+          { "label": "il y a", "cells": ["passé composé", "J'ai commencé il y a trois ans."] },
+          { "label": "dans", "cells": ["futur", "Je commencerai dans trois ans."] }
+        ],
+        "highlight": ["Je travaille ici depuis trois ans."],
+        "note": "The first row is the one to burn in. English says « I have been working here for three years » with a past-shaped verb; French says « je travaille » in the plain present, because you're still working there. Swap to the past and you've quit."
+      },
+      "explain": "All four answer a « when » or a « how long », and French keeps their jobs strictly apart. ① Il y a + a length of time = ago. It goes in front of the amount, where English puts « ago » behind it: « il y a dix ans », never « dix ans il y a ». ② Dans + a length of time = in, counting forward from now: « dans une semaine ». ③ Depuis = the action started back then and hasn't stopped, so the verb stays in the present: « j'habite à Paris depuis dix ans » — I have been living in Paris for ten years, and I still do. Depuis also takes a starting point rather than a length: depuis 2025, depuis lundi, depuis mon arrivée. ④ Pendant = a measured stretch, opened and closed, so the verb goes into the past: « j'ai habité à Paris pendant dix ans » — and I don't any more. Two things worth knowing beyond the four. Pendant is often simply dropped when the duration follows the verb — « j'ai attendu deux heures » is perfectly normal French. And « pour » looks like pendant but points forward at a plan: « je pars à Nice pour une semaine » is how long I intend to stay, not how long I stayed."
+    },
+    "notes": [
+      {
+        "title": "« Ça fait… que » is what people actually say",
+        "body": "« Ça fait dix ans que j'habite à Paris » means exactly « j'habite à Paris depuis dix ans » — it just moves the duration to the front of the sentence, which is where the emphasis wants to be. The verb still stays in the present. There's a formal cousin too, « Il y a dix ans que j'habite à Paris », where il y a for once does not mean ago."
+      },
+      {
+        "title": "Two questions that look identical in English",
+        "body": "« Depuis combien de temps tu apprends le français ? » asks how long you've been at it and still are — answer with the present: « depuis huit mois ». « Pendant combien de temps as-tu appris le français ? » asks about a finished period — answer in the past: « pendant deux ans ». The English is « how long » both times. The French chooses for you, and the tense you answer in has to match."
+      },
+      {
+        "title": "Depuis with a negative flips into « not since »",
+        "body": "« Je n'ai pas vu Marie depuis trois mois » — I haven't seen Marie for three months. This is the one place depuis takes the passé composé rather than the present, because the verb is negative: nothing has been happening. « Je ne fume plus depuis 2020. »"
+      },
+      {
+        "title": "Il y a does two completely different jobs",
+        "body": "Followed by a length of time it means ago: « il y a trois jours ». Followed by a thing it means there is / there are: « il y a du pain sur la table ». Same three words. Only what comes next tells you which one you're hearing — and it's almost never ambiguous in practice."
+      },
+      {
+        "title": "Where you'll need this first",
+        "body": "The very first questions anyone asks a newcomer: « Vous êtes en France depuis combien de temps ? » and « Vous êtes arrivés quand ? ». One wants depuis and the present, the other wants il y a and the passé composé. Have both answers ready and the conversation moves on to something more interesting."
+      }
+    ],
+    "examples": [
+      "J'habite à Paris depuis huit mois. (zha-BEET ah pa-REE duh-pwee wee MWAH)",
+      "Nous sommes arrivés il y a huit mois. (noo som za-ree-VAY eel ee ah wee MWAH)",
+      "J'ai étudié le français pendant deux ans à Delhi. (zhay ay-tew-dee-AY luh frahn-SEH pahn-dahn duh ZAHN)",
+      "Ça fait deux heures que je t'attends ! (sa feh duh zur kuh zhuh ta-TAHN)",
+      "— Depuis combien de temps tu apprends le français ? — Depuis un an. (duh-pwee kohn-byan duh TAHN)",
+      "Je pars en Inde dans trois semaines, pour un mois. (zhuh par ahn AND dahn trwah suh-MEN, poor uhn MWAH)",
+      "Je n'ai pas vu mes parents depuis Noël. (zhuh nay pa vew may pa-RAHN duh-pwee no-EL)"
+    ],
+    "practice": [
+      "Choose: « J'apprends le français ___ six mois » — depuis or pendant?",
+      "Now change one word so it means you've stopped. What else has to change?",
+      "Fill both: « Je suis arrivé ___ un an » (a year ago) · « Je repars ___ un an » (in a year).",
+      "Answer for real, out loud: « Vous êtes en France depuis combien de temps ? »",
+      "Rewrite with « ça fait… que »: « Je travaille ici depuis trois ans. »",
+      "Translate carefully: « I haven't spoken French since Monday. » (mind the tense)",
+      "Say one true sentence with each of the four: il y a, depuis, pendant, dans."
+    ],
+    "tutorPrompt": "Be my A1 French tutor for depuis, pendant, il y a and dans. Drill the split that English hides: depuis = still going, so the verb stays in the PRESENT; pendant = finished, so the verb goes into the passé composé. Ask me « depuis combien de temps… ? » and « pendant combien de temps… ? » questions alternately and correct my tense every single time, not just my word choice. Also check I put il y a and dans before the amount of time, and test « ça fait… que » as a rewrite. Ask about my life in France, my French learning, and my last holiday. Finish by listing which of the four I still misuse."
   },
   {
     "id": "a1-mois-date",
@@ -1751,6 +1976,107 @@
       "Describe someone in your family in three sentences — eyes, hair, and one more feature."
     ],
     "tutorPrompt": "Be my A1 French tutor for the face and the senses. Drill the vocabulary with articles: le visage, les cheveux, le crâne, le front, le sourcil, l'œil, l'oreille, le nez, la narine, la joue, la pommette, la bouche, les lèvres, le menton, le cou, la nuque, la barbe, la moustache. Test un œil → des yeux and un cheveu → les cheveux specifically. Then conjugate entendre, sentir and voir with me — watch for voir changing to voy- at nous and vous. Drill the two pairs English merges: entendre (hear) vs écouter (listen), voir (see) vs regarder (watch), giving me sentences where I have to pick. Also check I use the definite article for body parts — « j'ai mal à la tête », not « à ma tête ». Finish by having me describe a person's face, and correct my genders."
+  },
+  {
+    "id": "a1-corps",
+    "level": "A1",
+    "module": "People & daily life",
+    "title": "Le corps — from head to toe",
+    "minutes": 20,
+    "goal": "Name the body from head to foot, and say what hurts — the sentence you'll need before you need any other.",
+    "figures": [
+      {
+        "src": "./assets/img/corps.svg?v=1",
+        "alt": "A labelled body: la tête, le cou, l'épaule, le bras, la main, le doigt, le dos, le ventre, la jambe, le genou and le pied. Below, the phrase they all feed into: j'ai mal au dos, à la tête, aux jambes.",
+        "caption": "The face has its own lesson. This is everything below it — and the red line at the bottom is what you'll actually do with the list."
+      }
+    ],
+    "vocab": [
+      { "fr": "le corps", "phonetic": "luh KOR", "en": "the body — silent p and s", "emoji": "🧍" },
+      { "fr": "la tête", "phonetic": "lah TET", "en": "the head", "emoji": "🙂" },
+      { "fr": "le cou", "phonetic": "luh KOO", "en": "the neck", "emoji": "🧣" },
+      { "fr": "l'épaule", "phonetic": "lay-POHL", "en": "the shoulder (f.)", "emoji": "💪" },
+      { "fr": "le bras", "phonetic": "luh BRAH", "en": "the arm — silent s", "emoji": "🦾" },
+      { "fr": "la main", "phonetic": "lah MAN", "en": "the hand", "emoji": "✋" },
+      { "fr": "le doigt", "phonetic": "luh DWAH", "en": "the finger — silent gt", "emoji": "👆" },
+      { "fr": "le dos", "phonetic": "luh DOH", "en": "the back", "emoji": "🔙" },
+      { "fr": "le ventre", "phonetic": "luh VAHN-truh", "en": "the stomach, the belly", "emoji": "🫃" },
+      { "fr": "la jambe", "phonetic": "lah ZHAHMB", "en": "the leg", "emoji": "🦵" },
+      { "fr": "le genou", "phonetic": "luh zhuh-NOO", "en": "the knee — des genoux", "emoji": "🦿" },
+      { "fr": "le pied", "phonetic": "luh PYAY", "en": "the foot — silent d", "emoji": "🦶" },
+      { "fr": "le cœur", "phonetic": "luh KUR", "en": "the heart", "emoji": "❤️" },
+      { "fr": "J'ai mal au dos", "phonetic": "zhay mal oh DOH", "en": "My back hurts", "emoji": "😣" },
+      { "fr": "Où avez-vous mal ?", "phonetic": "oo a-vay voo MAL", "en": "Where does it hurt?", "emoji": "🩺" }
+    ],
+    "grammar": {
+      "point": "« avoir mal à » — and what à does to the article",
+      "table": {
+        "title": "à + the article, which is where this goes wrong",
+        "cols": ["body part", "what you say", "English"],
+        "rows": [
+          { "label": "le dos (m.)", "cells": ["j'ai mal au dos", "my back hurts"] },
+          { "label": "le ventre (m.)", "cells": ["j'ai mal au ventre", "my stomach hurts"] },
+          { "label": "la tête (f.)", "cells": ["j'ai mal à la tête", "I have a headache"] },
+          { "label": "l'épaule (vowel)", "cells": ["j'ai mal à l'épaule", "my shoulder hurts"] },
+          { "label": "les jambes (pl.)", "cells": ["j'ai mal aux jambes", "my legs hurt"] }
+        ],
+        "highlight": ["j'ai mal au dos", "j'ai mal aux jambes"],
+        "note": "Only two of the five change shape: à + le becomes au, à + les becomes aux. À la and à l' stay exactly as they are. Get the gender of the body part right and the rest is automatic."
+      },
+      "table2": {
+        "title": "French says « the », where English says « my »",
+        "cols": ["", "English", "French"],
+        "rows": [
+          { "label": "pain", "cells": ["my head hurts", "j'ai mal à la tête"] },
+          { "label": "injury", "cells": ["I broke my arm", "je me suis cassé le bras"] },
+          { "label": "gesture", "cells": ["she raised her hand", "elle a levé la main"] },
+          { "label": "washing", "cells": ["I wash my hands", "je me lave les mains"] }
+        ],
+        "highlight": ["je me suis cassé le bras", "je me lave les mains"],
+        "note": "With your own body French uses the plain article. It can afford to: « j'ai » or the reflexive « me » has already said whose body it is, so « mon » would be saying it twice. « Je me lave mes mains » is the giveaway of an English speaker."
+      },
+      "explain": "One frame does nearly all the work: avoir mal à + the body part. It is avoir, not être — « j'ai mal », never « je suis mal », which means something closer to I'm unwell in myself. Then à collides with the article: à + le = au (j'ai mal au dos, au ventre, au genou, au pied), à + la stays à la (à la tête, à la jambe, à la main, à la gorge), à + l' before a vowel (à l'épaule, à l'oreille), à + les = aux (aux jambes, aux dents, aux pieds). So the only thing you really have to memorise per word is its gender — the contraction follows on its own. Two ways to intensify it: « j'ai très mal » and « j'ai un peu mal ». And when the doctor asks, the question is « Où avez-vous mal ? » or « Qu'est-ce qui ne va pas ? » — answer with the same frame and you're understood."
+    },
+    "notes": [
+      {
+        "title": "The silent endings are the whole difficulty",
+        "body": "le corps (« kor »), le bras (« brah »), le dos (« doh »), le pied (« pyay »), le doigt (« dwah »). Five common words, five endings you write and never say. The plural changes nothing you can hear either: le bras / les bras is the same sound twice, and only the article tells you how many."
+      },
+      {
+        "title": "le genou → les genoux",
+        "body": "Genou is one of the seven -ou nouns that take -x instead of -s in the plural: bijou, caillou, chou, genou, hibou, joujou, pou — jewel, pebble, cabbage, knee, owl, toy, louse. French children learn them as a nonsense sentence and so can you; it's the whole list, there are no others."
+      },
+      {
+        "title": "« avoir mal à » vs « faire mal »",
+        "body": "« J'ai mal au dos » — I have a sore back, said from the inside. « Mon dos me fait mal » — my back is hurting me, said about the back. And « se faire mal » is to hurt yourself: « je me suis fait mal au genou ». All three are common; the first is the one to reach for by default."
+      },
+      {
+        "title": "l'épaule is feminine, le cœur isn't",
+        "body": "Hearing l' tells you nothing about gender, so these two are worth fixing early: une épaule, à l'épaule, mais aussi « j'ai mal aux épaules ». Le cœur is masculine — au cœur — and it turns up in more idioms than anatomy: avoir mal au cœur means to feel sick, not to have heart trouble. That one has caught out a lot of tourists."
+      },
+      {
+        "title": "A hand's worth of extras",
+        "body": "Below the ones on the diagram: le poignet (wrist), le coude (elbow), la cheville (ankle), l'orteil (toe), la peau (skin), le sang (blood), l'os (bone — « oss » in the singular, but « oh » in the plural, les os). You won't need them today. You'll want them at the pharmacie."
+      }
+    ],
+    "examples": [
+      "J'ai mal à la tête depuis ce matin. (zhay mal ah lah TET duh-pwee suh ma-TAN)",
+      "— Où avez-vous mal ? — J'ai mal au dos, docteur. (oo a-vay voo MAL ? zhay mal oh DOH)",
+      "Il a mal aux jambes après le marathon. (eel ah mal oh ZHAHMB)",
+      "Je me suis fait mal au genou. (zhuh muh swee feh mal oh zhuh-NOO)",
+      "Elle s'est cassé le bras en tombant. (el seh ka-SAY luh BRAH ahn tohn-BAHN)",
+      "Lave-toi les mains avant de manger. (lav-twah lay MAN a-vahn duh mahn-ZHAY)",
+      "J'ai mal au cœur en voiture. (zhay mal oh KUR ahn vwah-TEWR)"
+    ],
+    "practice": [
+      "Point at five parts of yourself and name them out loud with the article.",
+      "Au, à la, à l' or aux? — ___ dos · ___ tête · ___ épaule · ___ pieds · ___ ventre.",
+      "Say three things that hurt after a long flight.",
+      "Translate without « mon »: « I washed my hands and I broke my leg. »",
+      "Give the plural: le genou → ___ , le bras → ___ , l'œil → ___ .",
+      "Answer the doctor out loud: « Bonjour, qu'est-ce qui ne va pas ? »"
+    ],
+    "tutorPrompt": "Be my A1 French tutor for the body and « avoir mal à ». Name body parts and have me give them with the right article, then have me build « j'ai mal… » sentences. Correct two things every time: the contraction (au / à la / à l' / aux — which depends on the gender I have to know), and any « mon / ma » where French wants the plain article, as in « je me lave les mains ». Include the trap « avoir mal au cœur » = to feel sick. Then role-play a doctor asking me where it hurts and for how long, so I have to use depuis too. Finish with the body words whose gender I got wrong."
   },
   {
     "id": "a1-verbes-carte",
@@ -2217,7 +2543,7 @@
     "module": "Everyday life",
     "title": "The past tense — passé composé with avoir",
     "minutes": 25,
-    "goal": "Talk about what you did, using the passé composé with avoir.",
+    "goal": "Talk about what you did — how the passé composé is built with avoir, and the four jobs French gives it.",
     "vocab": [
       { "fr": "hier", "phonetic": "ee-YEHR", "en": "yesterday" },
       { "fr": "J'ai mangé", "phonetic": "zhay mahn-ZHAY", "en": "I ate / I have eaten" },
@@ -2229,8 +2555,34 @@
       { "fr": "déjà / pas encore", "phonetic": "day-ZHA / pa-zahn-KOR", "en": "already / not yet" }
     ],
     "grammar": {
-      "point": "Passé composé with avoir",
-      "explain": "For most past actions: avoir (present) + a past participle. -er verbs → -é (parler → parlé), -ir verbs → -i (finir → fini), and learn the key irregulars: fait (faire), vu (voir), eu (avoir), été (être). So « j'ai mangé » means both I ate and I have eaten."
+      "point": "avoir (present) + past participle",
+      "table": {
+        "title": "two pieces, and only the first one is conjugated",
+        "cols": ["auxiliaire", "participe", "le passé composé"],
+        "rows": [
+          { "label": "j'ai", "cells": ["mangé", "j'ai mangé"] },
+          { "label": "tu as", "cells": ["parlé", "tu as parlé"] },
+          { "label": "il / elle / on a", "cells": ["fini", "elle a fini"] },
+          { "label": "nous avons", "cells": ["vu", "nous avons vu"] },
+          { "label": "vous avez", "cells": ["fait", "vous avez fait"] },
+          { "label": "ils / elles ont", "cells": ["pris", "ils ont pris"] }
+        ],
+        "highlight": ["j'ai mangé", "ils ont pris"],
+        "note": "The participle never changes with avoir — mangé for everyone, whoever is speaking. Only the auxiliary moves. (Agreement does exist with avoir, but only when the object comes first, which is a B1 problem.) In the negative the ne… pas wraps the auxiliary alone: « je n'ai pas mangé », never « je n'ai mangé pas »."
+      },
+      "table2": {
+        "title": "the four jobs it does",
+        "cols": ["job", "example"],
+        "rows": [
+          { "label": "a finished action, pinned to a moment", "cells": ["J'ai acheté une voiture hier."] },
+          { "label": "a chain of actions in a story", "cells": ["Je suis rentré, j'ai mangé et je me suis couché."] },
+          { "label": "a past act still felt now", "cells": ["J'ai cassé mon téléphone. — et il l'est toujours."] },
+          { "label": "an experience of a lifetime", "cells": ["Nous avons visité le Japon."] }
+        ],
+        "highlight": ["J'ai cassé mon téléphone. — et il l'est toujours."],
+        "note": "What unites all four: the action is over and it has edges. That's the whole contrast with the imparfait, which describes a past with no edges — what things were like, what you used to do. That tense comes at B1; until then, if it happened and it finished, use this one."
+      },
+      "explain": "The passé composé does the work of two English tenses at once: « j'ai mangé » is both I ate and I have eaten, and French never distinguishes them. It is built from avoir in the present plus a past participle — and avoir covers almost every verb, the exception being the movement verbs that take être, which have their own lesson. The participle follows a rule for the first two groups: -er verbs give -é (parler → parlé, manger → mangé), -ir verbs that go -issons give -i (finir → fini). The third group has no rule and has to be learnt — fait, vu, pris, dit, eu, été to begin with, and the full working list in the lesson that follows this one. Two mechanics to get right from day one. Negation clamps around the auxiliary only: je n'ai pas compris. And the question keeps the two pieces welded together: « Qu'est-ce que tu as fait ? », « Tu as mangé ? », « As-tu compris ? »."
     },
     "examples": [
       "Hier, j'ai mangé au restaurant et j'ai vu un film. (ee-YEHR, zhay mahn-ZHAY oh res-toh-RAHN ay zhay vew uhn FEELM)",
@@ -2238,10 +2590,132 @@
     ],
     "practice": [
       "Say three things you did yesterday using « j'ai… ».",
-      "Form the passé composé of: parler, manger, regarder, finir.",
-      "Ask « Qu'est-ce que tu as fait hier ? » and then answer it."
+      "Form the passé composé of: parler, manger, regarder, finir, choisir.",
+      "Put it in the negative: « J'ai compris » → ___ . (mind where pas goes)",
+      "Slide the adverb in: « J'ai mangé » + déjà → ___ .",
+      "Ask « Qu'est-ce que tu as fait hier ? » and then answer it in three sentences.",
+      "Which job is this doing? — « J'ai perdu mes clés. »"
     ],
-    "tutorPrompt": "Be my A2 French tutor focused on the passé composé with avoir. Ask me what I did yesterday and last weekend, one question at a time, in simple French. Gently correct my past participles and my use of avoir. After about eight exchanges, list the participles I should memorise."
+    "tutorPrompt": "Be my A2 French tutor focused on the passé composé with avoir. Ask me what I did yesterday and last weekend, one question at a time, in simple French. Gently correct my past participles and my use of avoir. After about eight exchanges, list the participles I should memorise.",
+    "notes": [
+      {
+        "title": "« Déjà » and « jamais » go inside, not after",
+        "body": "Short adverbs slide between the auxiliary and the participle: « j'ai déjà mangé », « je n'ai jamais vu ce film », « il a beaucoup travaillé », « tu as bien dormi ? ». Longer ones stay outside: « j'ai travaillé sérieusement ». Getting déjà into the middle is one of the fastest ways to stop sounding like a beginner."
+      },
+      {
+        "title": "The tense is called « composé » because it has two parts",
+        "body": "Un temps composé is any tense built from an auxiliary plus a participle — passé composé, plus-que-parfait, futur antérieur. Un temps simple is one word: je mange, je mangeais, je mangerai. Once you see the split, half of French grammar sorts itself: learn the auxiliaries once and every compound tense becomes the same trick at a different setting."
+      },
+      {
+        "title": "Which auxiliary? Almost always avoir",
+        "body": "Avoir takes everything except a short list of movement and change-of-state verbs (aller, venir, partir, arriver, entrer, sortir, monter, descendre, rester, naître, mourir, tomber, passer, retourner) and every reflexive verb — « je me suis levé ». Those are the next lesson. If a verb isn't on that list, it takes avoir, and that includes verbs that feel like movement: j'ai marché, j'ai couru, j'ai voyagé, j'ai nagé."
+      }
+    ]
+  },
+  {
+    "id": "a2-participes-passes",
+    "level": "A2",
+    "module": "Everyday life",
+    "title": "The past participles — two you can predict, twenty you can't",
+    "minutes": 25,
+    "goal": "Build the past participle of any verb: the two endings that follow a rule, and the short irregular list that carries most French conversation.",
+    "vocab": [
+      { "fr": "j'ai pris", "phonetic": "zhay PREE", "en": "I took — prendre", "emoji": "🚇" },
+      { "fr": "j'ai compris", "phonetic": "zhay kohn-PREE", "en": "I understood — comprendre", "emoji": "💡" },
+      { "fr": "j'ai appris", "phonetic": "zhay a-PREE", "en": "I learnt — apprendre", "emoji": "📚" },
+      { "fr": "j'ai mis", "phonetic": "zhay MEE", "en": "I put / I put on — mettre", "emoji": "🧥" },
+      { "fr": "j'ai dit", "phonetic": "zhay DEE", "en": "I said — dire", "emoji": "💬" },
+      { "fr": "j'ai écrit", "phonetic": "zhay ay-KREE", "en": "I wrote — écrire", "emoji": "✍️" },
+      { "fr": "j'ai lu", "phonetic": "zhay LEW", "en": "I read — lire", "emoji": "📖" },
+      { "fr": "j'ai vu", "phonetic": "zhay VEW", "en": "I saw — voir", "emoji": "👀" },
+      { "fr": "j'ai bu", "phonetic": "zhay BEW", "en": "I drank — boire", "emoji": "🥤" },
+      { "fr": "j'ai reçu", "phonetic": "zhay ruh-SEW", "en": "I received — recevoir", "emoji": "📨" },
+      { "fr": "j'ai pu", "phonetic": "zhay PEW", "en": "I was able to — pouvoir", "emoji": "✅" },
+      { "fr": "j'ai voulu", "phonetic": "zhay voo-LEW", "en": "I wanted — vouloir", "emoji": "🎯" },
+      { "fr": "j'ai dû", "phonetic": "zhay DEW", "en": "I had to — devoir", "emoji": "⚠️" },
+      { "fr": "j'ai ouvert", "phonetic": "zhay oo-VEHR", "en": "I opened — ouvrir", "emoji": "🚪" },
+      { "fr": "j'ai offert", "phonetic": "zhay o-FEHR", "en": "I gave / offered — offrir", "emoji": "🎁" },
+      { "fr": "j'ai eu", "phonetic": "zhay EW", "en": "I had — avoir", "emoji": "🔁" },
+      { "fr": "j'ai été", "phonetic": "zhay ay-TAY", "en": "I was — être", "emoji": "🪞" },
+      { "fr": "j'ai fait", "phonetic": "zhay FEH", "en": "I did / I made — faire", "emoji": "🔨" }
+    ],
+    "grammar": {
+      "point": "Three groups, three endings — and then the list",
+      "table": {
+        "title": "the part that follows a rule",
+        "cols": ["group", "participle ends in", "example"],
+        "rows": [
+          { "label": "1er — verbs in -er", "cells": ["-é", "manger → mangé · parler → parlé"] },
+          { "label": "2e — -ir verbs that go -issons", "cells": ["-i", "finir → fini · rougir → rougi"] },
+          { "label": "3e — everything else", "cells": ["-u, -i, -s or -t", "voir → vu · dormir → dormi · prendre → pris · dire → dit"] }
+        ],
+        "highlight": ["-é", "-i"],
+        "note": "The first two rows are watertight, and they cover the great majority of verbs — every new verb French invents joins the first group. The third row isn't a rule, it's a warning: those endings exist, but which one a verb takes has to be learnt one verb at a time."
+      },
+      "table2": {
+        "title": "the third group, worth learning as a block",
+        "cols": ["verbs", "participle"],
+        "rows": [
+          { "label": "mettre · prendre (comprendre, apprendre)", "cells": ["mis · pris · compris · appris"] },
+          { "label": "dire · écrire", "cells": ["dit · écrit"] },
+          { "label": "pouvoir · vouloir · devoir", "cells": ["pu · voulu · dû"] },
+          { "label": "voir · recevoir · boire", "cells": ["vu · reçu · bu"] },
+          { "label": "lire · perdre · répondre", "cells": ["lu · perdu · répondu"] },
+          { "label": "ouvrir · offrir · découvrir", "cells": ["ouvert · offert · découvert"] },
+          { "label": "dormir", "cells": ["dormi"] },
+          { "label": "avoir · faire · être", "cells": ["eu · fait · été"] }
+        ],
+        "highlight": ["eu · fait · été", "ouvert · offert · découvert"],
+        "note": "Eight rows, about twenty verbs — and they are the twenty that come up most. Notice they cluster: a whole family in -u (pu, voulu, dû, vu, reçu, bu, lu, perdu, répondu), a small family in -is / -it (mis, pris, dit, écrit), and a stubborn family in -ert (ouvert, offert, découvert). Learn the clusters, not twenty separate facts."
+      },
+      "explain": "A passé composé is two pieces: an auxiliary in the present, and a past participle. The auxiliary is the easy half — avoir for almost everything, être for the movement verbs. The participle is where the work is. For groups 1 and 2 it is pure arithmetic: cut the -er and add -é, cut the -ir and add -i. Group 3 — the verbs that were already irregular in the present — keeps being irregular here, and there's no derivation to fall back on: you learn them. The good news is how small the list is and how it clumps. Once you know prendre → pris, you get comprendre → compris, apprendre → appris, surprendre → surpris for free, because compounds always follow their parent verb. Same for ouvrir → ouvert giving you couvrir → couvert, découvrir → découvert, offrir → offert, souffrir → souffert. Learn eight patterns and you've covered several dozen verbs. One caution while you drill: a participle is not a conjugated verb. « J'ai pris » is a sentence; « pris » on its own is not. Always practise it welded to its auxiliary."
+    },
+    "notes": [
+      {
+        "title": "« eu » is two letters and one sound",
+        "body": "Avoir's participle is written eu and pronounced like the u in « tu » — « ew ». « J'ai eu » comes out « zhay EW », with the e doing nothing at all. It looks like it should be two syllables and it isn't. Same trick inside « il a eu », « nous avons eu »."
+      },
+      {
+        "title": "dû keeps its accent only in the masculine singular",
+        "body": "The circumflex on dû exists for one reason: to stop it being confused with « du », the partitive. That job disappears the moment the word changes shape, so the accent goes with it — dû, but due, dus, dues. Nobody would misread « elle a été due » as « some »."
+      },
+      {
+        "title": "The -ert family are not -ir verbs",
+        "body": "Ouvrir, offrir, couvrir, découvrir, souffrir end in -ir and behave like nothing else: their present tense takes -er endings (j'ouvre, tu ouvres) and their participle ends in -ert. Five verbs, one exception, and « j'ai ouvert la porte » is a sentence you'll say weekly."
+      },
+      {
+        "title": "reçu keeps the cedilla for a reason",
+        "body": "Without the ç, « recu » would be read « ruh-KEW » — a c before u is hard. The cedilla holds the s sound: reçu, « ruh-SEW ». Same logic behind ça, français, garçon, and behind « nous commençons » growing a cedilla the present tense doesn't otherwise need."
+      },
+      {
+        "title": "Vouloir, pouvoir and devoir in the past mean something sharper",
+        "body": "In the passé composé these three stop being vague. « J'ai voulu » is I decided to, I tried to — not I wanted. « J'ai pu » is I managed to. « J'ai dû » is either I had to, or I must have: « il a dû partir » is both « he had to leave » and « he must have left », and only the context separates them. Say « je voulais » (imparfait) if you mean the softer I wanted."
+      },
+      {
+        "title": "The participle you already learnt as an adjective",
+        "body": "Past participles moonlight as adjectives all over French: une porte ouverte, un plat fait maison, du vin bu, une lettre écrite. If you can already say « fermé » on a shop door, you already know a participle. The passé composé is just that word with an auxiliary bolted in front of it."
+      }
+    ],
+    "examples": [
+      "J'ai pris le métro et j'ai lu tout le trajet. (zhay pree luh may-TROH ay zhay lew too luh tra-ZHAY)",
+      "Je n'ai pas compris la question, pouvez-vous répéter ? (zhuh nay pa kohn-PREE lah kess-TYOHN)",
+      "Elle m'a écrit hier, mais je n'ai pas encore répondu. (el ma ay-KREE ee-YEHR)",
+      "On a bu un café et on a beaucoup parlé. (ohn na bew uhn ka-FAY)",
+      "J'ai dû partir avant la fin. (zhay dew par-TEER a-vahn lah FAN)",
+      "J'ai reçu ta lettre, merci ! (zhay ruh-SEW tah LET-ruh)",
+      "Ils ont ouvert le magasin à neuf heures. (eel zohn oo-VEHR luh ma-ga-ZAN)",
+      "Qu'est-ce que tu as fait ? — J'ai eu une longue journée. (zhay ew ewn lohng zhoor-NAY)"
+    ],
+    "practice": [
+      "Give the participle: parler · finir · choisir · regarder · grandir.",
+      "Now the ones with no rule: prendre · dire · voir · boire · devoir · ouvrir.",
+      "Fill the family: prendre → pris, so comprendre → ___ , apprendre → ___ , surprendre → ___ .",
+      "Same for ouvrir → ouvert: offrir → ___ , découvrir → ___ , souffrir → ___ .",
+      "Say six things you did yesterday, none of them with an -er verb.",
+      "Careful: how do you say « I had a good day »? (the auxiliary and the participle are the same verb)",
+      "Spot the wrong one: j'ai prendu · j'ai mis · j'ai voulu · j'ai écrivé."
+    ],
+    "tutorPrompt": "Be my A2 French tutor drilling past participles. Give me infinitives one at a time and have me answer with « j'ai + participle » — never the bare participle. Mix in the predictable -er and -ir verbs so I stay fast on those, then hammer the irregular list: mis, pris, compris, appris, dit, écrit, pu, voulu, dû, vu, reçu, bu, lu, perdu, répondu, ouvert, offert, découvert, dormi, eu, fait, été. When I invent one (j'ai prendu, j'ai écrivé), tell me the real one and the family it belongs to. Then ask me eight questions about my week so I have to produce them in real sentences. Finish with the ten I should write on a card."
   },
   {
     "id": "a2-02-past-etre",
@@ -2249,7 +2723,7 @@
     "module": "Everyday life",
     "title": "Past tense with être & getting around",
     "minutes": 25,
-    "goal": "Say where you went and came from, using the passé composé with être (with agreement).",
+    "goal": "Say where you went, came from and stayed — the verbs that take être, and the agreement that comes with them.",
     "vocab": [
       { "fr": "Je suis allé(e)", "phonetic": "zhuh swee za-LAY", "en": "I went" },
       { "fr": "Je suis venu(e)", "phonetic": "zhuh swee vuh-NEW", "en": "I came" },
@@ -2257,24 +2731,82 @@
       { "fr": "Je suis resté(e)", "phonetic": "zhuh swee res-TAY", "en": "I stayed" },
       { "fr": "Je suis arrivé(e)", "phonetic": "zhuh swee za-ree-VAY", "en": "I arrived" },
       { "fr": "né(e)", "phonetic": "NAY", "en": "born" },
+      { "fr": "Je suis tombé(e)", "phonetic": "zhuh swee tohn-BAY", "en": "I fell" },
+      { "fr": "Je suis sorti(e)", "phonetic": "zhuh swee sor-TEE", "en": "I went out" },
+      { "fr": "Je suis monté(e) / descendu(e)", "phonetic": "zhuh swee mohn-TAY / day-sahn-DEW", "en": "I went up / came down" },
       { "fr": "en train / en bus / en voiture", "phonetic": "ahn TRAN / ahn BEWSS / ahn vwah-TEWR", "en": "by train / by bus / by car" },
       { "fr": "le week-end dernier", "phonetic": "luh week-end dehr-NYAY", "en": "last weekend" }
     ],
     "grammar": {
-      "point": "Passé composé with être",
-      "table": {"cols": ["subject", "allé + agreement"], "rows": [{"label": "il (m. sing.)", "cells": ["allé"]}, {"label": "elle (f. sing.)", "cells": ["allée"]}, {"label": "ils (m. pl.)", "cells": ["allés"]}, {"label": "elles (f. pl.)", "cells": ["allées"]}], "highlight": ["allée", "allés", "allées"], "note": "être verbs are movement / state-change: aller, venir, partir, arriver, entrer, sortir, monter, descendre, rester, naître, mourir (+ compounds). All others use avoir."},
-      "explain": "A small set of movement / state-change verbs use être in the passé composé, not avoir (see note). With être, the past participle agrees with the subject like an adjective — see grid: « je suis allé » (m.) / « allée » (f.) / « nous sommes allés »."
+      "point": "The être verbs travel in opposite pairs — and the participle agrees",
+      "table": {
+        "title": "learn them two at a time",
+        "cols": ["the pair", "one way", "the other way"],
+        "rows": [
+          { "label": "arriver / partir", "cells": ["arrivé(e)", "parti(e)"] },
+          { "label": "aller / venir", "cells": ["allé(e)", "venu(e)"] },
+          { "label": "entrer / sortir", "cells": ["entré(e)", "sorti(e)"] },
+          { "label": "monter / descendre", "cells": ["monté(e)", "descendu(e)"] },
+          { "label": "naître / mourir", "cells": ["né(e)", "mort(e)"] },
+          { "label": "tomber / rester", "cells": ["tombé(e)", "resté(e)"] },
+          { "label": "passer / retourner", "cells": ["passé(e)", "retourné(e)"] }
+        ],
+        "highlight": ["né(e)", "mort(e)", "venu(e)", "descendu(e)"],
+        "note": "Fourteen verbs, seven pairs, and every one of them is either a movement or an arrival into a state. Their compounds come along too: revenir, devenir, rentrer, remonter, repartir. Everything else in French takes avoir."
+      },
+      "table2": {
+        "title": "with être, the participle behaves like an adjective",
+        "cols": ["subject", "allé + agreement", "sounds like"],
+        "rows": [
+          { "label": "je / il (m.)", "cells": ["allé", "a-LAY"] },
+          { "label": "je / elle (f.)", "cells": ["allée", "a-LAY — identical"] },
+          { "label": "nous / ils (m.pl.)", "cells": ["allés", "a-LAY — identical"] },
+          { "label": "elles (f.pl.)", "cells": ["allées", "a-LAY — identical"] },
+          { "label": "but: elle est venue", "cells": ["venue", "vuh-NEW — no change either"] },
+          { "label": "and: elle est morte", "cells": ["morte", "MORT — this one you hear"] }
+        ],
+        "highlight": ["allée", "morte"],
+        "note": "Almost all of it is silent: allé, allée, allés, allées are four spellings of one sound. You'll only ever hear the agreement on participles ending in a consonant — morte, and at B1 the ones like « prise » and « offerte ». Which means this rule costs you nothing when speaking and everything when writing."
+      },
+      "explain": "A short, closed list of verbs refuses avoir and takes être instead: the ones on the left, all about going somewhere or changing state. « Je suis allé au marché », « elle est née à Paris », « nous sommes restés deux jours ». And because they take être, the participle agrees with the subject exactly like an adjective — add -e for feminine, -s for plural, -es for both: je suis allée (a woman speaking), nous sommes allés, elles sont arrivées. Reflexive verbs join the same club: se lever, se coucher, s'appeler all take être — « je me suis levé(e) à sept heures ». The trap to know about now, because you will meet it within a week: six of these verbs — monter, descendre, sortir, rentrer, passer, retourner — switch back to avoir the moment they take a direct object. « Je suis sorti » is I went out; « j'ai sorti la poubelle » is I took the bin out. « Elle est montée » is she went up; « elle a monté les valises » is she carried the cases up. Nothing goes wrong if you don't use them transitively — but you need to recognise it when you hear it."
     },
     "examples": [
       "Le week-end dernier, je suis allé(e) à Lyon en train. (luh week-end dehr-NYAY, zhuh swee a-LAY ah lee-OHN ahn TRAN)",
-      "Elle est née à Paris et elle est restée en France. (el eh nay ah pa-REE ay el eh res-TAY ahn FRAHNSS)"
+      "Elle est née à Paris et elle est restée en France. (el eh nay ah pa-REE ay el eh res-TAY ahn FRAHNSS)",
+      "Nous sommes arrivés il y a huit mois. (noo som za-ree-VAY eel ee ah wee MWAH)",
+      "Ils sont partis tôt et ils sont revenus tard. (eel sohn par-TEE toh ay eel sohn ruh-vuh-NEW TAR)",
+      "Je suis tombé dans l'escalier. (zhuh swee tohn-BAY dahn les-ka-LYAY)",
+      "Je suis sorti à huit heures — mais j'ai sorti le chien avant. (zhuh swee sor-TEE … zhay sor-TEE luh SHYAN)",
+      "Je me suis levé(e) à six heures ce matin. (zhuh muh swee luh-VAY ah see ZUR)"
     ],
     "practice": [
       "Say where you went last weekend with « je suis allé(e) à… ».",
-      "Add the right ending (m./f.) to: allé, venu, parti for « je ».",
+      "Give the seven pairs back from memory: arriver / ___ , aller / ___ , entrer / ___ …",
+      "Add the right ending for a woman speaking: allé · venu · parti · resté.",
+      "Être or avoir? — marcher · sortir · voyager · descendre · rester · courir.",
+      "Explain the difference: « je suis passé chez toi » / « j'ai passé deux heures chez toi ».",
+      "Put a reflexive in the past: « je me lève à sept heures » → hier, ___ .",
       "Say how you travelled: en train, en bus, en voiture, à pied."
     ],
-    "tutorPrompt": "Be my A2 French tutor on the passé composé with être. Ask me where I went recently and how I got there, one question at a time in simple French. Watch my être/avoir choice and the agreement (-e for feminine). After eight exchanges, recap the « être » verbs and the agreement rule."
+    "tutorPrompt": "Be my A2 French tutor on the passé composé with être. First check I know the closed list — the seven opposite pairs plus their compounds and all reflexives — by asking me « être ou avoir ? » for a mix of verbs, including tempting ones like marcher, voyager and courir that take avoir. Then ask me where I went recently, how I got there and what time I got up, one question at a time. Correct my auxiliary choice first and my agreement second (-e for feminine, -s for plural). Test the transitive trap at least once: « je suis sorti » versus « j'ai sorti le chien ». Finish by recapping the list and any agreement I dropped.",
+    "notes": [
+      {
+        "title": "Six of them go both ways",
+        "body": "Monter, descendre, sortir, rentrer, passer and retourner take être when nothing follows them and avoir when a direct object does. « Je suis passé chez toi » (I dropped by) versus « j'ai passé deux heures chez toi » (I spent two hours). The meaning shifts with the auxiliary, which is why French keeps both."
+      },
+      {
+        "title": "Reflexives are all être, no exceptions",
+        "body": "Every pronominal verb takes être: je me suis levé, tu t'es couché, nous nous sommes promenés, elle s'est appelée. The pronoun and the auxiliary sit together in front — « je ne me suis pas levé tôt » — and the negation wraps them both."
+      },
+      {
+        "title": "You can hear the agreement on exactly one common verb",
+        "body": "Mourir. « Il est mort » ends in a silent t; « elle est morte » sounds the t. Everywhere else — allé/allée, venu/venue, parti/partie, resté/restée — the extra letters are pure spelling. Write them anyway: in a DELF written paper they're marked, and in speech they cost nothing."
+      },
+      {
+        "title": "Naître and mourir are the two you'll use about other people",
+        "body": "« Je suis né en Inde » is one of the first true sentences you can build with this tense, and « il est né en 1990 » is how French gives a birth year. Note the pair is irregular in opposite directions: né is short, mort doesn't look like mourir at all."
+      }
+    ]
   },
   {
     "id": "a2-03-futur-proche",
@@ -2437,7 +2969,7 @@
     "module": "Everyday life",
     "title": "Health & at the doctor",
     "minutes": 25,
-    "goal": "Say how you feel, describe symptoms, and cope at the doctor or pharmacy.",
+    "goal": "Say how you feel and describe symptoms — the words you need before you can get to a doctor.",
     "vocab": [
       { "fr": "Je ne me sens pas bien", "phonetic": "zhuh nuh muh sahn pa BYAN", "en": "I don't feel well" },
       { "fr": "J'ai mal à la tête", "phonetic": "zhay mal ah lah TET", "en": "I have a headache" },
@@ -2459,9 +2991,127 @@
     "practice": [
       "Say three things that hurt using « j'ai mal à… » (mind au / à la / aux).",
       "Tell a doctor how you feel and for how long (depuis…).",
-      "Ask for a medicine at the pharmacy."
+      "Ask for a medicine at the pharmacy.",
+      "Fix it: « J'ai eu mal à la tête depuis hier. » — what's wrong with the tense?"
     ],
-    "tutorPrompt": "Role-play at A2: you're a French doctor or pharmacist and I'm describing how I feel. Ask about my symptoms and how long I've had them, one question at a time in simple French. Correct my « avoir mal à » and au / à la / aux. At the end, recap the health words I should remember."
+    "tutorPrompt": "Role-play at A2: you're a French doctor or pharmacist and I'm describing how I feel. Ask about my symptoms and how long I've had them, one question at a time in simple French. Correct my « avoir mal à » and au / à la / aux. At the end, recap the health words I should remember.",
+    "notes": [
+      {
+        "title": "« Depuis » keeps the verb in the present",
+        "body": "« J'ai mal à la gorge depuis deux jours » — présent, because it still hurts. The moment you say « j'ai eu mal pendant deux jours » you've told them you're better. This is the single most useful tense rule in a doctor's office, and it has its own lesson back in A1."
+      },
+      {
+        "title": "What comes next",
+        "body": "This lesson gets you as far as saying what's wrong. The consultation itself — booking it, the questions they'll ask in order, the verbs they'll use while examining you, and the ordonnance you take to the pharmacie — is the lesson straight after this one."
+      }
+    ]
+  },
+  {
+    "id": "a2-chez-le-medecin",
+    "level": "A2",
+    "module": "Everyday life",
+    "title": "Chez le médecin — the whole appointment",
+    "minutes": 25,
+    "goal": "Get through a French consultation start to finish: book it, describe the problem, follow what the doctor does to you, and leave with an ordonnance you can fill.",
+    "vocab": [
+      { "fr": "prendre rendez-vous", "phonetic": "prahn-druh rahn-day-VOO", "en": "to make an appointment", "emoji": "📅" },
+      { "fr": "Qu'est-ce qui vous arrive ?", "phonetic": "kess kee voo za-REEV", "en": "What's the matter? — how it starts", "emoji": "🩺" },
+      { "fr": "Je ne me sens pas bien", "phonetic": "zhuh nuh muh sahn pa BYAN", "en": "I don't feel well", "emoji": "🤒" },
+      { "fr": "le médecin / le docteur", "phonetic": "luh mayd-SAN / luh dok-TUR", "en": "the doctor (the job / how you address them)", "emoji": "👨‍⚕️" },
+      { "fr": "une infirmière", "phonetic": "ewn an-feer-MYEHR", "en": "a nurse", "emoji": "👩‍⚕️" },
+      { "fr": "un dentiste", "phonetic": "uhn dahn-TEEST", "en": "a dentist", "emoji": "🦷" },
+      { "fr": "examiner", "phonetic": "eg-za-mee-NAY", "en": "to examine", "emoji": "🔍" },
+      { "fr": "ausculter", "phonetic": "oh-skewl-TAY", "en": "to listen to the chest", "emoji": "🫁" },
+      { "fr": "peser", "phonetic": "puh-ZAY", "en": "to weigh", "emoji": "⚖️" },
+      { "fr": "mesurer", "phonetic": "muh-zew-RAY", "en": "to measure (height)", "emoji": "📏" },
+      { "fr": "vérifier", "phonetic": "vay-ree-FYAY", "en": "to check", "emoji": "✔️" },
+      { "fr": "tousser", "phonetic": "too-SAY", "en": "to cough", "emoji": "😷" },
+      { "fr": "une ordonnance", "phonetic": "ewn or-do-NAHNSS", "en": "a prescription", "emoji": "📄" },
+      { "fr": "un médicament", "phonetic": "uhn may-dee-ka-MAHN", "en": "a medicine", "emoji": "💊" },
+      { "fr": "un pansement", "phonetic": "uhn pahns-MAHN", "en": "a plaster, a dressing", "emoji": "🩹" },
+      { "fr": "une piqûre", "phonetic": "ewn pee-KEWR", "en": "an injection", "emoji": "💉" },
+      { "fr": "une pharmacie", "phonetic": "ewn far-ma-SEE", "en": "a pharmacy", "emoji": "🏪" },
+      { "fr": "un hôpital / les urgences", "phonetic": "uhn oh-pee-TAL / lay zewr-ZHAHNSS", "en": "a hospital / A&E", "emoji": "🏥" },
+      { "fr": "une ambulance", "phonetic": "ewn ahn-bew-LAHNSS", "en": "an ambulance", "emoji": "🚑" },
+      { "fr": "la carte Vitale", "phonetic": "lah kart vee-TAL", "en": "the French health card", "emoji": "💳" }
+    ],
+    "grammar": {
+      "point": "Two scripts: what they ask, what you answer",
+      "table": {
+        "title": "what the doctor does — and says while doing it",
+        "cols": ["verb", "in the room", "English"],
+        "rows": [
+          { "label": "examiner", "cells": ["Le médecin examine le bébé.", "examines"] },
+          { "label": "ausculter", "cells": ["Le docteur ausculte Julie.", "listens to the chest"] },
+          { "label": "peser", "cells": ["L'infirmière pèse Jennifer.", "weighs"] },
+          { "label": "mesurer", "cells": ["Elle mesure Julie.", "measures her height"] },
+          { "label": "vérifier", "cells": ["Le médecin vérifie les oreilles.", "checks"] },
+          { "label": "prescrire", "cells": ["Il prescrit des médicaments.", "prescribes"] }
+        ],
+        "highlight": ["Le docteur ausculte Julie."],
+        "note": "You don't have to produce these — you have to recognise them while someone is pointing a stethoscope at you. Hear « je vais vous ausculter » and you know to breathe; hear « on va vous peser » and you know to step on the scales."
+      },
+      "table2": {
+        "title": "what you say, in the order they ask for it",
+        "cols": ["they ask", "you answer"],
+        "rows": [
+          { "label": "Qu'est-ce qui vous arrive ?", "cells": ["J'ai mal à la gorge."] },
+          { "label": "Depuis quand ?", "cells": ["Depuis trois jours."] },
+          { "label": "Vous avez de la fièvre ?", "cells": ["Oui, 38,5 depuis hier soir."] },
+          { "label": "Vous prenez un traitement ?", "cells": ["Non, rien du tout."] },
+          { "label": "Vous êtes allergique à quelque chose ?", "cells": ["Je suis allergique aux antibiotiques."] }
+        ],
+        "highlight": ["Depuis trois jours."],
+        "note": "Note the second answer. « Depuis quand ? » wants depuis and the present — « je tousse depuis trois jours », because you're still coughing. Say « j'ai toussé pendant trois jours » and you've told the doctor you're better and wasting their time."
+      },
+      "explain": "A French consultation runs on a fixed script, which is good news: you can learn it. It opens with « Bonjour docteur » — you greet them by title, always — and « Qu'est-ce qui vous arrive ? » or « Qu'est-ce qui ne va pas ? ». You answer with the frame from the body lesson: avoir mal à + the part, plus how long with depuis. Then come the questions about duration, fever, current treatment and allergies, and then the physical examination, which is where examiner, ausculter, peser, mesurer and vérifier get used at you rather than by you. It ends with an ordonnance — the piece of paper — which you take to a pharmacie, not to a shop: in France the pharmacie is the only place that sells médicaments, it is everywhere, and the pharmacist will advise you for free on small problems without an appointment. Vocabulary aside, the one grammatical habit that matters here is the tense: depuis + présent for a symptom you still have. Everything else the doctor will understand from half a sentence."
+    },
+    "notes": [
+      {
+        "title": "« Médecin » is the job, « docteur » is the person",
+        "body": "You see un médecin and you say « bonjour, docteur ». Never « bonjour, médecin ». And médecin has stayed grammatically masculine whoever holds the job — « ma femme est médecin », « elle est médecin » — though « une médecin » is now common and increasingly standard. Docteur is likewise softening into « docteure » in writing, but in the room everyone still says docteur."
+      },
+      {
+        "title": "The paperwork that makes it cheap",
+        "body": "Three words worth knowing before you're ill. La carte Vitale is the green card that reimburses you automatically. Le médecin traitant is the GP you declare as yours — declare one, or you're reimbursed at a much lower rate. And le tiers payant means you don't advance the money at all. Appointments are booked on Doctolib far more than by phone, and « un généraliste » is the GP, « un spécialiste » anyone else."
+      },
+      {
+        "title": "Tousser, éternuer, saigner — the verbs of being ill",
+        "body": "These are ordinary -er verbs, so the past is easy: j'ai toussé, j'ai éternué, j'ai saigné. Also worth having: avoir de la fièvre, avoir mal au cœur (to feel nauseous, not a heart problem), être enrhumé(e) (to have a cold), avoir la grippe (flu), vomir, se sentir faible."
+      },
+      {
+        "title": "« Une piqûre » covers more than one thing",
+        "body": "It's an injection, a sting and a prick — « une piqûre de moustique » is a mosquito bite. Une seringue is the syringe itself, the object. And « faire une piqûre à quelqu'un » is to give someone a shot: « l'infirmière m'a fait une piqûre »."
+      },
+      {
+        "title": "The number you actually need",
+        "body": "15 is the SAMU, medical emergencies. 112 works across Europe and from any phone. 112 is the one to remember if you remember only one. Say « J'appelle une ambulance » or « C'est une urgence », and give the address first — they ask for it before anything else."
+      },
+      {
+        "title": "Temperature is in degrees, and said with a comma",
+        "body": "38,5 is « trente-huit cinq » in speech — French reads the decimal comma as « virgule » formally, but drops it entirely for temperatures. Anything from 38 is « de la fièvre »; 37,5 is not, whatever it feels like."
+      }
+    ],
+    "examples": [
+      "Bonjour docteur. Je ne me sens pas bien depuis trois jours. (… duh-pwee trwah ZHOOR)",
+      "— Qu'est-ce qui vous arrive ? — J'ai mal à la gorge et je tousse. (kess kee voo za-REEV)",
+      "J'ai de la fièvre : 38,5 depuis hier soir. (zhay duh lah FYEV-ruh)",
+      "Le médecin m'a ausculté et m'a prescrit des antibiotiques. (luh mayd-SAN ma oh-skewl-TAY)",
+      "Je voudrais prendre rendez-vous avec le docteur Martin. (zhuh voo-DREH prahn-druh rahn-day-VOO)",
+      "Vous avez votre carte Vitale ? (voo za-vay vo-truh kart vee-TAL)",
+      "Je vais à la pharmacie chercher les médicaments. (zhuh veh ah lah far-ma-SEE)",
+      "L'infirmière m'a fait une piqûre au bras. (lan-feer-MYEHR ma feh ewn pee-KEWR oh BRAH)"
+    ],
+    "practice": [
+      "Answer out loud: « Bonjour, qu'est-ce qui vous arrive ? »",
+      "Now « Depuis quand ? » — and mind the tense you answer in.",
+      "Book it on the phone: ask for an appointment with Dr Martin this week.",
+      "Match the verb to the moment: peser · ausculter · mesurer · vérifier.",
+      "Say three symptoms in one sentence, joined with « et ».",
+      "At the pharmacie: ask for something for a sore throat, without a prescription.",
+      "Which is it — « j'ai mal au cœur » or « j'ai mal à l'estomac » — if you feel sick in a car?"
+    ],
+    "tutorPrompt": "Role-play a French GP appointment at A2, and stay in role. Open with « Bonjour, qu'est-ce qui vous arrive ? » and take me through the real script: the symptom, « depuis quand ? », fever, current treatment, allergies, then narrate the examination out loud using examiner, ausculter, peser, mesurer and vérifier so I have to follow them by ear. Finish by prescribing something and telling me to go to the pharmacie. Correct two things every time: « avoir mal à » with the right contraction (au / à la / à l' / aux), and « depuis + présent » for a symptom I still have — if I say « j'ai toussé pendant trois jours », tell me I've just said I'm cured. Then swap roles and let me be the doctor. End with the words I hesitated on."
   },
   {
     "id": "a2-08-weather-leisure",

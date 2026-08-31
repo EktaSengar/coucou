@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 486" width="640" height="486" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="A clock face split into two halves. The right half, from twelve down to six, counts forward with « et » — et quart at fifteen minutes past, et demie at thirty. The left half, from six back up to twelve, counts backwards from the next hour with « moins » — moins le quart at forty-five, moins dix at fifty. Beside the clock, the five positions written out. Below, a reminder that the twenty-four-hour clock never uses et quart, et demie or moins.">
+  <defs>
+    <marker id="ab" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1d4ed8"/></marker>
+    <marker id="aa" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b45309"/></marker>
+  </defs>
+  <style>
+    .num  { font-size: 17px; font-weight: 800; fill: #0f172a; }
+    .min  { font-size: 11px; font-weight: 700; fill: #94a3b8; }
+    .key  { font-size: 13.5px; font-weight: 800; }
+    .gl   { font-size: 11px; font-style: italic; fill: #64748b; }
+    .rule { font-size: 12.5px; fill: #334155; }
+    .side { font-size: 13px; font-weight: 800; letter-spacing: .4px; }
+  </style>
+
+  <rect width="640" height="486" fill="#ffffff"/>
+  <text x="320" y="28" text-anchor="middle" font-size="18" font-weight="800" fill="#0f172a">Lire l’heure</text>
+
+  <!-- the two halves: counting forward on the right, backwards on the left -->
+  <path d="M210,60 A150,150 0 0 1 210,360 Z" fill="#dbeafe"/>
+  <path d="M210,60 A150,150 0 0 0 210,360 Z" fill="#fef3c7"/>
+  <circle cx="210" cy="210" r="150" fill="none" stroke="#0f172a" stroke-width="2.5"/>
+
+  <!-- which way each half counts: away from the top, or back up to it -->
+  <text class="side" x="264" y="152" text-anchor="middle" fill="#1d4ed8">et…</text>
+  <path d="M246,166 A60,60 0 0 1 276,196" stroke="#1d4ed8" stroke-width="2" fill="none" marker-end="url(#ab)"/>
+  <text class="side" x="156" y="152" text-anchor="middle" fill="#b45309">moins…</text>
+  <path d="M146,198 A60,60 0 0 1 174,166" stroke="#b45309" stroke-width="2" fill="none" marker-end="url(#aa)"/>
+
+  <!-- hands, pointing at 3:15 -->
+  <line x1="210" y1="210" x2="210" y2="128" stroke="#dc2626" stroke-width="7" stroke-linecap="round"/>
+  <line x1="210" y1="210" x2="308" y2="210" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="210" cy="210" r="6" fill="#0f172a"/>
+
+  <!-- the hours -->
+  <g class="num" text-anchor="middle">
+    <text x="210" y="98">12</text>  <text x="269" y="114">1</text>  <text x="312" y="157">2</text>
+    <text x="328" y="216">3</text>  <text x="312" y="275">4</text>  <text x="269" y="318">5</text>
+    <text x="210" y="334">6</text>  <text x="151" y="318">7</text>  <text x="108" y="275">8</text>
+    <text x="92"  y="216">9</text>  <text x="108" y="157">10</text> <text x="151" y="114">11</text>
+  </g>
+  <!-- and the minutes each one stands for -->
+  <g class="min" text-anchor="middle">
+    <text x="210" y="42">:00</text> <text x="296" y="65">:05</text>  <text x="359" y="128">:10</text>
+    <text x="384" y="214">:15</text><text x="359" y="300">:20</text> <text x="296" y="363">:25</text>
+    <text x="210" y="386">:30</text><text x="124" y="363">:35</text> <text x="61"  y="300">:40</text>
+    <text x="36"  y="214">:45</text><text x="61"  y="128">:50</text> <text x="124" y="65">:55</text>
+  </g>
+
+  <!-- the five positions, written out -->
+  <g>
+    <text class="key" x="420" y="86"  fill="#0f172a">Il est trois heures</text>
+    <text class="gl"  x="420" y="102">3:00 — an s on heures from two on</text>
+
+    <text class="key" x="420" y="146" fill="#1d4ed8">…trois heures et quart</text>
+    <text class="gl"  x="420" y="162">3:15 — quarter past</text>
+
+    <text class="key" x="420" y="206" fill="#1d4ed8">…trois heures et demie</text>
+    <text class="gl"  x="420" y="222">3:30 — half past</text>
+
+    <text class="key" x="420" y="266" fill="#b45309">quatre heures moins le quart</text>
+    <text class="gl"  x="420" y="282">3:45 — back from the next hour</text>
+
+    <text class="key" x="420" y="326" fill="#b45309">quatre heures moins dix</text>
+    <text class="gl"  x="420" y="342">3:50 — ten to four</text>
+  </g>
+  <g stroke="#cbd5e1" stroke-width="1.5">
+    <path d="M412,120 H624"/><path d="M412,180 H624"/><path d="M412,240 H624"/><path d="M412,300 H624"/>
+  </g>
+
+  <!-- the printed clock, which plays by other rules -->
+  <rect x="16" y="398" width="608" height="76" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="36" y="422" font-size="12" font-weight="800" letter-spacing="0.6" fill="#0f172a">AND THE PRINTED CLOCK?</text>
+  <text class="rule" x="36" y="443">Trains, cinemas and appointments use the 24-hour clock, and it never takes any of these words.</text>
+  <text class="rule" x="36" y="462">Say <tspan font-weight="700" fill="#16a34a">quinze heures quarante-cinq</tspan> — never <tspan font-weight="700" fill="#b91c1c">quinze heures moins le quart</tspan>.</text>
+</svg>

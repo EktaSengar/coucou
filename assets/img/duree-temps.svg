@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 444" width="640" height="444" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="A timeline with maintenant in the middle. Il y a marks a single point in the past. Depuis is a bar running from a point in the past all the way to now, and still open. Pendant is a closed bar entirely inside the past. Dans marks a single point in the future. Below, the tense trap: depuis takes the present, pendant takes the passé composé.">
+  <style>
+    .word { font-size: 15px; font-weight: 800; }
+    .gl   { font-size: 11px; font-style: italic; fill: #64748b; }
+    .ex   { font-size: 12px; fill: #334155; }
+    .ax   { font-size: 11.5px; font-weight: 800; letter-spacing: .6px; fill: #94a3b8; }
+    .rule { font-size: 12.5px; fill: #334155; }
+  </style>
+  <defs>
+    <marker id="mb" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#2563eb"/></marker>
+    <marker id="mg" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#16a34a"/></marker>
+    <marker id="mo" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#b45309"/></marker>
+  </defs>
+
+  <rect width="640" height="444" fill="#ffffff"/>
+  <text x="320" y="28" text-anchor="middle" font-size="18" font-weight="800" fill="#0f172a">Combien de temps ? Et quand ?</text>
+
+  <!-- the axis, with now as the fixed landmark -->
+  <line x1="150" y1="62" x2="612" y2="62" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="430" y1="52" x2="430" y2="352" stroke="#0f172a" stroke-width="2" stroke-dasharray="5 4"/>
+  <text class="ax" x="250" y="52" text-anchor="middle">LE PASSÉ</text>
+  <text class="ax" x="430" y="44" text-anchor="middle" fill="#0f172a">MAINTENANT</text>
+  <text class="ax" x="545" y="52" text-anchor="middle">LE FUTUR</text>
+
+  <!-- il y a: one point, back there -->
+  <text class="word" x="16" y="98"  fill="#b45309">il y a</text>
+  <text class="gl"   x="16" y="113">a point in the past</text>
+  <line x1="424" y1="100" x2="250" y2="100" stroke="#b45309" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#mo)"/>
+  <circle cx="230" cy="100" r="7" fill="#b45309"/>
+  <text class="ex" x="150" y="128">J’ai rencontré Pierre <tspan font-weight="700" fill="#b45309">il y a dix ans</tspan>.</text>
+
+  <!-- depuis: a bar that reaches now and keeps going -->
+  <text class="word" x="16" y="168" fill="#16a34a">depuis</text>
+  <text class="gl"   x="16" y="183">from then until now</text>
+  <line x1="230" y1="170" x2="428" y2="170" stroke="#16a34a" stroke-width="9" stroke-linecap="round"/>
+  <line x1="430" y1="170" x2="472" y2="170" stroke="#16a34a" stroke-width="2" stroke-dasharray="3 4" marker-end="url(#mg)"/>
+  <circle cx="230" cy="170" r="7" fill="#16a34a"/>
+  <text class="ex" x="150" y="198">J’habite à Paris <tspan font-weight="700" fill="#16a34a">depuis dix ans</tspan>. — et j’y habite encore.</text>
+
+  <!-- pendant: a closed block, over and done -->
+  <text class="word" x="16" y="238" fill="#be185d">pendant</text>
+  <text class="gl"   x="16" y="253">a finished stretch</text>
+  <line x1="212" y1="240" x2="340" y2="240" stroke="#be185d" stroke-width="9" stroke-linecap="butt"/>
+  <line x1="212" y1="228" x2="212" y2="252" stroke="#be185d" stroke-width="3"/>
+  <line x1="340" y1="228" x2="340" y2="252" stroke="#be185d" stroke-width="3"/>
+  <text class="ex" x="150" y="268">Hier, il a plu <tspan font-weight="700" fill="#be185d">pendant cinq heures</tspan>. — puis ça s’est arrêté.</text>
+
+  <!-- dans: one point, up ahead -->
+  <text class="word" x="16" y="308" fill="#2563eb">dans</text>
+  <text class="gl"   x="16" y="323">a point in the future</text>
+  <line x1="436" y1="310" x2="558" y2="310" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#mb)"/>
+  <circle cx="566" cy="310" r="7" fill="#2563eb"/>
+  <text class="ex" x="150" y="338">Je pars en vacances <tspan font-weight="700" fill="#2563eb">dans une semaine</tspan>.</text>
+
+  <!-- the trap that actually costs marks -->
+  <rect x="16" y="356" width="608" height="76" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="36" y="380" font-size="12" font-weight="800" letter-spacing="0.6" fill="#0f172a">WATCH THE TENSE</text>
+  <text class="rule" x="36" y="401"><tspan font-weight="700" fill="#16a34a">depuis</tspan> takes the <tspan font-weight="700">présent</tspan> — « j’habite ici depuis dix ans », because you still live there.</text>
+  <text class="rule" x="36" y="420">Put the verb in the past and you have moved out: « <tspan font-weight="700" fill="#be185d">j’ai habité ici pendant dix ans</tspan> ».</text>
+</svg>

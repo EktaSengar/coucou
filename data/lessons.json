@@ -1723,6 +1723,9 @@
       { "fr": "J'habite à Paris", "phonetic": "zha-BEET ah pa-REE", "en": "I live in Paris" },
       { "fr": "je travaille / je parle", "phonetic": "zhuh tra-VYE / zhuh PARL", "en": "I work / I speak" },
       { "fr": "je me lève", "phonetic": "zhuh muh LEV", "en": "I get up" },
+      { "fr": "je prends une douche", "phonetic": "zhuh prahn ewn DOOSH", "en": "I have a shower" },
+      { "fr": "je prends mon petit-déjeuner", "phonetic": "zhuh prahn mohn puh-tee-day-zhuh-NAY", "en": "I have breakfast" },
+      { "fr": "je bois un café", "phonetic": "zhuh bwah uhn ka-FAY", "en": "I drink a coffee" },
       { "fr": "tous les jours / souvent", "phonetic": "too lay ZHOOR / soo-VAHN", "en": "every day / often" }
     ],
     "grammar": {
@@ -2459,6 +2462,8 @@
       { "fr": "s'habiller", "phonetic": "sa-bee-YAY", "en": "to get dressed", "emoji": "👕" },
       { "fr": "se dépêcher", "phonetic": "suh day-pay-SHAY", "en": "to hurry", "emoji": "🏃" },
       { "fr": "se reposer", "phonetic": "suh ruh-poh-ZAY", "en": "to rest", "emoji": "🛋️" },
+      { "fr": "se laver", "phonetic": "suh la-VAY", "en": "to wash (oneself)" },
+      { "fr": "se brosser les dents", "phonetic": "suh bro-SAY lay DAHN", "en": "to brush one's teeth" },
       { "fr": "Je me lève à sept heures.", "phonetic": "zhuh muh lev ah set UR", "en": "I get up at seven.", "emoji": "🌅" },
       { "fr": "Tu te couches tard ?", "phonetic": "tew tuh koosh TAR", "en": "Do you go to bed late?", "emoji": "🌙" },
       { "fr": "Nous nous levons tôt.", "phonetic": "noo noo luh-VOHN TOH", "en": "We get up early.", "emoji": "👥" },
@@ -2807,6 +2812,103 @@
         "body": "« Je suis né en Inde » is one of the first true sentences you can build with this tense, and « il est né en 1990 » is how French gives a birth year. Note the pair is irregular in opposite directions: né is short, mort doesn't look like mourir at all."
       }
     ]
+  },
+  {
+    "id": "a2-pronominaux-passe",
+    "level": "A2",
+    "module": "Everyday life",
+    "title": "Reflexive verbs in the past — je me suis levée",
+    "minutes": 25,
+    "goal": "Put your whole morning into the past. The auxiliary is always être — and whether the participle agrees comes down to one question: what exactly did you wash?",
+    "vocab": [
+      { "fr": "Je me suis réveillé(e)", "phonetic": "zhuh muh swee ray-vay-YAY", "en": "I woke up", "emoji": "⏰" },
+      { "fr": "Je me suis levé(e)", "phonetic": "zhuh muh swee luh-VAY", "en": "I got up", "emoji": "🛏️" },
+      { "fr": "Je me suis lavé(e)", "phonetic": "zhuh muh swee la-VAY", "en": "I washed", "emoji": "🚿" },
+      { "fr": "J'ai pris une douche", "phonetic": "zhay pree ewn DOOSH", "en": "I had a shower — avoir, not être", "emoji": "🛁" },
+      { "fr": "Je me suis brossé les dents", "phonetic": "zhuh muh swee bro-SAY lay DAHN", "en": "I brushed my teeth", "emoji": "🪥" },
+      { "fr": "Je me suis habillé(e)", "phonetic": "zhuh muh swee za-bee-YAY", "en": "I got dressed", "emoji": "👕" },
+      { "fr": "J'ai pris mon petit-déjeuner", "phonetic": "zhay pree mohn puh-tee-day-zhuh-NAY", "en": "I had breakfast", "emoji": "🥐" },
+      { "fr": "J'ai bu un café", "phonetic": "zhay bew uhn ka-FAY", "en": "I drank a coffee", "emoji": "☕" },
+      { "fr": "Je suis allé(e) au travail", "phonetic": "zhuh swee za-lay oh tra-VYE", "en": "I went to work", "emoji": "💼" },
+      { "fr": "Je me suis dépêché(e)", "phonetic": "zhuh muh swee day-peh-SHAY", "en": "I hurried", "emoji": "🏃" },
+      { "fr": "Je me suis couché(e) tard", "phonetic": "zhuh muh swee koo-SHAY TAR", "en": "I went to bed late", "emoji": "🌙" },
+      { "fr": "Nous nous sommes reposé(e)s", "phonetic": "noo noo som ruh-po-ZAY", "en": "We rested", "emoji": "😴" },
+      { "fr": "Tu t'es levé à quelle heure ?", "phonetic": "tew teh luh-vay ah kel UR", "en": "What time did you get up?", "emoji": "❓" },
+      { "fr": "Je ne me suis pas réveillé(e) à l'heure", "phonetic": "zhuh nuh muh swee pa ray-vay-YAY ah LUR", "en": "I didn't wake up on time", "emoji": "😬" }
+    ],
+    "grammar": {
+      "point": "Always être — and the agreement depends on what follows the verb",
+      "table": {
+        "title": "se lever, from the present into the past",
+        "cols": ["", "présent", "passé composé"],
+        "rows": [
+          { "label": "je", "cells": ["je me lève", "je me suis levé(e)"] },
+          { "label": "tu", "cells": ["tu te lèves", "tu t'es levé(e)"] },
+          { "label": "il / elle", "cells": ["il se lève", "il s'est levé · elle s'est levée"] },
+          { "label": "nous", "cells": ["nous nous levons", "nous nous sommes levé(e)s"] },
+          { "label": "vous", "cells": ["vous vous levez", "vous vous êtes levé(e)(s)"] },
+          { "label": "ils / elles", "cells": ["ils se lèvent", "ils se sont levés · elles se sont levées"] }
+        ],
+        "highlight": ["tu t'es levé(e)", "il s'est levé · elle s'est levée"],
+        "note": "The little pronoun never goes away — it just moves in front of être: me suis, t'es, s'est, nous sommes, vous êtes, se sont. And it elides before the vowel of être, which is why tu te becomes tu t'es and il se becomes il s'est."
+      },
+      "table2": {
+        "title": "what did you wash? that is the whole rule",
+        "cols": ["what the verb acted on", "sentence", "agrees?"],
+        "rows": [
+          { "label": "yourself", "cells": ["je me suis lavée", "yes — « me » is what got washed"] },
+          { "label": "your hands", "cells": ["je me suis lavé les mains", "no — « les mains » comes after"] },
+          { "label": "herself", "cells": ["elle s'est habillée", "yes"] },
+          { "label": "her teeth", "cells": ["elle s'est brossé les dents", "no"] },
+          { "label": "each other", "cells": ["ils se sont vus", "yes"] },
+          { "label": "messages", "cells": ["ils se sont envoyé des messages", "no"] }
+        ],
+        "highlight": ["je me suis lavée", "je me suis lavé les mains"],
+        "note": "Read the first two rows together — same verb, one letter apart, and the only thing that changed is whether a noun follows. If the pronoun itself is what the verb acted on, the participle agrees. If a real object turns up after the verb, the pronoun is just along for the ride and nothing agrees at all."
+      },
+      "explain": "Every pronominal verb takes être in the passé composé — se lever, se coucher, se réveiller, s'habiller, se laver, se dépêcher, se reposer, s'appeler, all of them, with no exceptions to learn. The shape is: subject + the little pronoun + être in the present + the participle. « Je me suis levé », « nous nous sommes levés », « elles se sont levées ». Two mechanics come with it. ① The pronoun stays glued in front of être and elides against it: tu t'es, il s'est, elle s'est. ② Negation wraps the whole block — ne goes right at the front, before the pronoun, and pas lands after être: « je ne me suis pas levé tôt ». That is four words before you reach the verb, and the order never varies. Then the agreement. Most of the time it looks exactly like the other être verbs — it matches the subject, so a woman writes « je me suis levée » and a group writes « nous nous sommes levés ». But what is really happening is that the participle agrees with the direct object when that object comes before the verb, and usually the little pronoun is that object. Put a real noun after the verb and the pronoun stops being the object, so nothing agrees: « je me suis lavé les mains », « elle s'est brossé les dents », « il s'est coupé le doigt ». The practical version of the rule: if a body part or a thing follows the participle, leave the participle flat."
+    },
+    "notes": [
+      {
+        "title": "« prendre une douche » breaks the pattern, and it's the one you'll use",
+        "body": "Your morning is nearly all être verbs, and then this one takes avoir: « j'ai pris une douche », never « je me suis pris une douche ». There is a reflexive verb, se doucher, and « je me suis douché(e) » is correct — but prendre une douche is what people actually say. Same for breakfast: « j'ai pris mon petit-déjeuner », « j'ai bu un café ». So a single morning runs on both auxiliaries, and you have to switch between them mid-story."
+      },
+      {
+        "title": "« s'est » and « c'est » sound identical",
+        "body": "« Elle s'est levée » (she got up) and « c'est levé » are the same noise and completely different sentences. S'est is the reflexive pronoun plus être and only ever appears with a participle behind it; c'est is « it is » and takes a noun or an adjective. If a participle follows, it is s'est. This is worth a second look in anything you write."
+      },
+      {
+        "title": "Body parts flatten the participle — and take « les »",
+        "body": "« Je me suis lavé les mains », « elle s'est brossé les dents », « il s'est cassé la jambe ». Two things happen at once here: the participle loses its agreement because the body part follows it, and the body part takes the plain article rather than a possessive — les mains, not mes mains. French has already said whose hands they are, twice over, with je and me."
+      },
+      {
+        "title": "None of this can be heard",
+        "body": "levé, levée, levés and levées are four spellings of one sound, and so are lavé/lavée and habillé/habillée. Speaking, you cannot get this wrong. Writing, it is marked — the DELF written papers test exactly this, and it is the fastest place to lose points on a text that otherwise reads well."
+      },
+      {
+        "title": "The best drill you have is tomorrow morning",
+        "body": "You do this sequence every single day, which makes it the one story you can rehearse without inventing anything. Run it in your head while it happens: je me suis réveillée, je me suis levée, j'ai pris une douche, je me suis habillée, j'ai bu un café, je suis allée au travail. A week of that and the auxiliaries stop needing a decision."
+      }
+    ],
+    "examples": [
+      "Ce matin, je me suis réveillée à six heures et je me suis levée à sept heures. (suh ma-TAN, zhuh muh swee ray-vay-YAY)",
+      "J'ai pris une douche et j'ai bu un café. (zhay pree ewn DOOSH ay zhay bew uhn ka-FAY)",
+      "Je me suis lavé les mains avant de manger. (zhuh muh swee la-VAY lay MAN)",
+      "Elle s'est habillée, puis elle s'est brossé les dents. (el seh ta-bee-YAY, pwee el seh bro-SAY lay DAHN)",
+      "Nous nous sommes couchés très tard hier soir. (noo noo som koo-SHAY treh TAR)",
+      "Je ne me suis pas dépêché, et je suis arrivé en retard. (zhuh nuh muh swee pa day-peh-SHAY)",
+      "Tu t'es levé à quelle heure ce matin ? (tew teh luh-VAY ah kel UR)"
+    ],
+    "practice": [
+      "Tell your own morning in order: réveiller → lever → laver → habiller → petit-déjeuner → partir.",
+      "Agreement or not? — « je me suis lavé___ » · « je me suis lavé___ les mains ».",
+      "Same test again: « elle s'est habillé___ » · « elle s'est brossé___ les dents ».",
+      "Make it negative: « je me suis levé tôt » → ___ . (where do ne and pas land?)",
+      "Être or avoir? — se réveiller · prendre une douche · s'habiller · boire un café.",
+      "A man and a woman each got up at seven. Write both sentences in full.",
+      "Answer out loud: « Tu t'es levé à quelle heure ce matin ? »"
+    ],
+    "tutorPrompt": "Be my A2 French tutor for pronominal verbs in the passé composé. Drill my morning routine: ask what I did this morning, in order, and make me produce « je me suis réveillée, je me suis levée, j'ai pris une douche, je me suis habillée, j'ai bu un café, je suis allée au travail ». Correct three things every time. ① The auxiliary — all reflexives take être, but prendre une douche, prendre le petit-déjeuner and boire un café take avoir, so I have to switch mid-story. ② The agreement, and specifically the trap: « je me suis lavée » agrees, but « je me suis lavé les mains » does not, because the object follows the verb. Test that pair, and « elle s'est brossé les dents », at least twice. ③ Negation order — « je ne me suis pas levé tôt », with ne in front of the pronoun. I am a woman, so check my -e endings. Finish by listing which sentences I got the agreement wrong in."
   },
   {
     "id": "a2-03-futur-proche",

@@ -266,6 +266,20 @@
     ]
   },
   {
+    "id": "a2-pronominaux-passe",
+    "level": "A2",
+    "theme": "Reflexive verbs in the past",
+    "title": "Le matin, au passé",
+    "intro": "The agreement on these participles is completely silent — levé, levée, levés and levées are one sound. So this is pure writing practice. Ask yourself each time what the verb actually acted on.",
+    "sentences": [
+      { "fr": "Ce matin, je me suis réveillée à six heures.", "en": "This morning I woke up at six.", "tip": "A woman writing, so réveillée takes the -e: with être the participle agrees with the subject." },
+      { "fr": "Je me suis lavé les mains avant de manger.", "en": "I washed my hands before eating.", "tip": "No -e this time. « les mains » comes after the verb, so nothing agrees — compare « je me suis lavée »." },
+      { "fr": "Elle s'est habillée et elle s'est brossé les dents.", "en": "She got dressed and brushed her teeth.", "tip": "habillée agrees, brossé does not — « les dents » follows the verb. And it is s'est, not c'est." },
+      { "fr": "Nous nous sommes couchés très tard hier soir.", "en": "We went to bed very late last night.", "tip": "The pronoun is written twice: nous nous. couchés takes the plural -s." },
+      { "fr": "Je ne me suis pas dépêché ce matin.", "en": "I didn't hurry this morning.", "tip": "The ne goes in front of the pronoun and the pas after être — four words before you reach the participle." }
+    ]
+  },
+  {
     "id": "b1-societe",
     "level": "B1",
     "theme": "Opinions & society",

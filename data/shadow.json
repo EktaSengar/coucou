@@ -126,6 +126,20 @@
     ]
   },
   {
+    "id": "a2-routine-matin",
+    "level": "A2",
+    "focus": "Your morning, out loud",
+    "title": "Les habitudes du matin",
+    "intro": "Reflexive verbs pile three little words in front of the verb, and French says them as one blur. Copy the run-on, not the spaces — « je me suis » is one sound, not three.",
+    "phrases": [
+      { "fr": "Je me suis réveillée à six heures.", "en": "I woke up at six.", "hint": "« je me suis » collapses into a single blur, « zhuhm-SWEE » — the e of je disappears entirely. Then six‿heures links with a z: « see-ZUR »." },
+      { "fr": "Je me suis habillée et je suis partie.", "en": "I got dressed and left.", "hint": "habillée begins with a silent h, so suis‿habillée runs straight through: « swee-za-bee-YAY ». Leave no gap where the h is written." },
+      { "fr": "J'ai pris une douche et j'ai bu un café.", "en": "I had a shower and drank a coffee.", "hint": "Both take avoir, not être. pris‿une links with a z — « pree-ZEWN » — but « bu un » does not link at all: two vowels, said apart." },
+      { "fr": "Je me suis brossé les dents.", "en": "I brushed my teeth.", "hint": "Five written words, four spoken beats: « zhuhm-swee-bro-SAY lay DAHN ». dents is nasal and its -ts is completely silent." },
+      { "fr": "Tu t'es levé à quelle heure ?", "en": "What time did you get up?", "hint": "tu t'es is « tew TEH » — the pronoun elides into être. quelle‿heure runs together as « ke-LUR », and the voice rises at the very end." }
+    ]
+  },
+  {
     "id": "a2-chez-le-medecin",
     "level": "A2",
     "focus": "At the doctor",

@@ -294,6 +294,20 @@
     ]
   },
   {
+    "id": "b1-premiers-mois",
+    "level": "B1",
+    "theme": "Telling your own story",
+    "title": "Mes premiers mois à Paris",
+    "intro": "Your own story, in the tense it belongs in. Every verb here is an imparfait, so every ending sounds the same — and two of the traps are things French refuses to capitalise.",
+    "sentences": [
+      { "fr": "C'était en décembre et il faisait très froid.", "en": "It was December and it was very cold.", "tip": "faisait is written with ai but said « fuh-ZEH ». Watch the accents either side: décembre takes one é and no more, très takes a grave." },
+      { "fr": "Tous les matins, je prenais le métro.", "en": "Every morning, I took the metro.", "tip": "Three silent plural -s in a row — tous, les, matins — and not one of them is audible. Then prenais, with the -ais of je." },
+      { "fr": "Nous mangions beaucoup de fromage.", "en": "We ate a lot of cheese.", "tip": "No e in mangions. Manger keeps it before a (je mangeais) and drops it before i — exactly like nous mangeons becoming nous mangions." },
+      { "fr": "À la maison, nous parlions anglais.", "en": "At home, we spoke English.", "tip": "The nous ending is -ions, two letters you barely hear. And anglais stays lowercase — French never capitalises a language." },
+      { "fr": "Je ne parlais pas français quand je suis arrivée.", "en": "I didn't speak French when I arrived.", "tip": "Two tenses on purpose: parlais is how things were, suis arrivée is the event — and it takes the -e. français keeps its cedilla and stays lowercase." }
+    ]
+  },
+  {
     "id": "b1-societe",
     "level": "B1",
     "theme": "Opinions & society",

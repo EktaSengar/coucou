@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="Two panels on Guadeloupe. On the left, the water network: of every 100 litres produced, roughly 70 are lost to leaks and only about 30 reach a tap. Rotating water cuts, les tours d'eau, cover about 20 percent of the territory but affect resources serving more than half the population. The SMGEAG has run water for the island since 2021 and aims to repair 5000 leaks by the end of 2026. On the right, a timeline of chlordecone, the pesticide used on banana plantations: spread from 1972, banned in mainland France in 1990, but allowed in the Antilles under an exemption until 1993 — three years highlighted as the heart of the argument. In 2021 prostate cancer linked to it was recognised as an occupational disease, and in 2023 the criminal case ended in a dismissal, un non-lieu.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="Two panels on Guadeloupe. On the left, the water network: of every 100 litres produced, roughly 70 are lost to leaks and only about 30 reach a tap. Rotating water cuts, les tours d'eau, cover about 20 percent of the territory but affect resources serving more than half the population. The SMGEAG has run water for the island since 2021 and aims to repair 5000 leaks by the end of 2026. On the right, a timeline of chlordecone, the pesticide used on banana plantations: spread from 1972, banned in mainland France in 1990, but allowed in the Antilles under an exemption until 1993 — three years highlighted as the heart of the argument. In 2021 prostate cancer linked to it was recognised as an occupational disease, and in 2023 the criminal case ended in a dismissal, un non-lieu. A band across the bottom records the response: in 2009 Guadeloupe struck for forty-four days, from 20 January to 4 March, behind the LKP against la pwofitasyon, ending in a 165-article agreement and a 200-euro rise on low wages.">
   <style>
     .t   { font-size: 17px; font-weight: 800; fill: #0f172a; }
     .st  { font-size: 11px; font-style: italic; fill: #64748b; }
@@ -11,9 +11,11 @@
     .yr  { font-size: 9.5px; font-weight: 800; fill: #b45309; }
     .ev  { font-size: 9px; fill: #334155; }
     .ft  { font-size: 10px; fill: #475569; }
+    .gv  { font-size: 10px; font-weight: 800; fill: #b45309; }
+    .gt  { font-size: 10px; fill: #334155; }
   </style>
 
-  <rect width="640" height="340" fill="#ffffff"/>
+  <rect width="640" height="392" fill="#ffffff"/>
   <text x="320" y="24" text-anchor="middle" class="t">La Guadeloupe — l’eau qui fuit, la terre qui reste</text>
   <text x="320" y="42" text-anchor="middle" class="st">deux dossiers, une même question : les mêmes services et la même protection partout ?</text>
 
@@ -57,5 +59,11 @@
   <circle cx="358" cy="262" r="4" fill="#b45309"/>
   <text x="372" y="265.5" class="yr">2023</text><text x="404" y="265.5" class="ev">non-lieu au pénal</text>
 
-  <text x="320" y="316" text-anchor="middle" class="ft">Plus de 90 % des adultes de Guadeloupe et de Martinique portent le chlordécone dans le sang.</text>
+  <!-- la réponse : 2009 -->
+  <rect x="14" y="304" width="612" height="50" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="32" y="327" class="gv">2009</text>
+  <text x="76" y="323" class="gt" font-weight="700">quarante-quatre jours de grève générale — le LKP contre « la pwofitasyon »</text>
+  <text x="76" y="339" class="gt" font-size="9" fill="#64748b">20 janvier – 4 mars · accord de 165 articles et 200 € sur les bas salaires</text>
+
+  <text x="320" y="376" text-anchor="middle" class="ft">Plus de 90 % des adultes de Guadeloupe et de Martinique portent le chlordécone dans le sang.</text>
 </svg>

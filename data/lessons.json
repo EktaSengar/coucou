@@ -4896,6 +4896,8 @@
       { "fr": "une bananeraie", "phonetic": "ewn ba-nan-REH", "en": "a banana plantation", "emoji": "🍌" },
       { "fr": "épandre", "phonetic": "ay-PAHNDR", "en": "to spread (a chemical on land)", "emoji": "🌾" },
       { "fr": "un scandale sanitaire", "phonetic": "uhn skahn-DAL sa-nee-TEHR", "en": "a public-health scandal", "emoji": "⚠️" },
+      { "fr": "la vie chère", "phonetic": "lah vee SHEHR", "en": "the high cost of living", "emoji": "💸" },
+      { "fr": "une grève générale", "phonetic": "ewn grev zhay-nay-RAL", "en": "a general strike", "emoji": "✊" },
       { "fr": "une maladie professionnelle", "phonetic": "ewn ma-la-DEE pro-fes-yo-NEL", "en": "an occupational disease", "emoji": "🏥" },
       { "fr": "une dérogation", "phonetic": "ewn day-ro-ga-SYOHN", "en": "an exemption, a waiver", "emoji": "📄" },
       { "fr": "un non-lieu", "phonetic": "uhn nohn-LYUH", "en": "a dismissal — the case never reaches trial", "emoji": "⚖️" },
@@ -4939,15 +4941,19 @@
       },
       {
         "title": "L'eau — pourquoi elle n'arrive pas",
-        "body": "The problem is not rainfall, it is the pipes. Around seventy per cent of the water produced leaks away before reaching a tap, so whole areas live on des tours d'eau — a rota where the supply is simply cut for a day or more. They cover about a fifth of the territory but touch more than half the population. Since 2021 one body, le SMGEAG, has run the network, aiming at five thousand leaks repaired by end 2026."
+        "body": "The problem is not rainfall, it is the pipes. Around seventy per cent of the water produced leaks away before reaching a tap, so whole areas live on des tours d'eau — a rota where the supply is cut for a day or more. They cover about a fifth of the territory but touch more than half the population. Since 2021 le SMGEAG has run the network."
       },
       {
         "title": "Le chlordécone — les trois ans qui font tout l'argument",
         "body": "A pesticide used on banana plantations from 1972, banned in mainland France in 1990 — and kept legal in Guadeloupe and Martinique by ministerial derogation until 1993. It stays in the soil for centuries, and more than ninety per cent of adults on both islands carry it in their blood. In 2021 the ANSES found a probable causal link with prostate cancer and a decree made that cancer an occupational disease."
       },
       {
+        "title": "2009 — les quarante-quatre jours du LKP",
+        "body": "Both files feed one grievance: la vie chère. On 20 January 2009 le LKP — Liyannaj Kont Pwofitasyon, Creole for « alliance against profiteering » — a collective of some fifty organisations led by Élie Domota, brought Guadeloupe to a standstill for forty-four days, and the movement spread to Martinique, la Guyane and La Réunion. It ended on 4 March with a 165-article agreement and a 200-euro rise on the lowest wages."
+      },
+      {
         "title": "Un non-lieu is not an acquittal",
-        "body": "In January 2023 the criminal case — opened on a 2006 complaint for empoisonnement and mise en danger de la vie d'autrui — ended in un non-lieu: the investigating judges found insufficient grounds to send anyone to trial, with la prescription doing much of the work. That is not une relaxe, which is an acquittal after a trial, and not a finding that nothing happened. Separately, an administrative court has recognised the State's « négligences fautives »."
+        "body": "The criminal case, opened on a 2006 complaint, ended in January 2023 in un non-lieu: the investigating judges found insufficient grounds to send anyone to trial. That is not une relaxe, which is an acquittal after a trial, and not a finding that nothing happened. Separately, an administrative court has recognised the State's « négligences fautives »."
       }
     ],
     "examples": [
@@ -4956,7 +4962,8 @@
       "Le réseau est si vétuste qu'il perd une part considérable de la production. (see vay-TEWST)",
       "Le chlordécone a été épandu dans les bananeraies jusqu'en 1993. (ay-pahn-DEW)",
       "Interdit en France en 1990, il est resté autorisé aux Antilles pendant trois ans. (ann-tehr-DEE ahn frahnss)",
-      "En 2023, la justice a rendu un non-lieu, ce qui a provoqué une vive émotion. (uhn nohn-LYUH)"
+      "En 2023, la justice a rendu un non-lieu, ce qui a provoqué une vive émotion. (uhn nohn-LYUH)",
+      "À cause de la vie chère, la Guadeloupe s'est mise en grève pendant quarante-quatre jours. (sest meez ahn GREV)"
     ],
     "practice": [
       "À cause de, grâce à, or en raison de? — « ___ des fuites, l'eau est coupée. » · « ___ au nouveau plan, la situation s'améliore. » · « ___ de la sécheresse, la production baisse. »",
@@ -4964,8 +4971,9 @@
       "Tell the chlordécone story from the second table, in the past, in six sentences.",
       "Say the difference out loud, in French: un non-lieu · une relaxe · une condamnation.",
       "Answer in two minutes: « Un produit interdit en métropole devrait-il pouvoir rester autorisé outre-mer ? »",
+      "Say what links the three files — l'eau, le chlordécone, la vie chère — in one sentence carrying a cause and a consequence.",
       "Use both files in one paragraph to answer the big question: are the same rules applied everywhere?"
     ],
-    "tutorPrompt": "Act as a DELF B2 examiner, in French throughout. The topic is Guadeloupe, on two files. First, l'eau: a réseau vétuste that loses something like seventy per cent of what it produces, des tours d'eau affecting more than half the population, and le SMGEAG running the network since 2021. Second, le chlordécone: sprayed on the bananeraies from 1972, interdit en France in 1990 but kept legal in the Antilles by dérogation until 1993, still in the soil, carried in the blood of more than ninety per cent of adults, recognised in 2021 as causing an occupational prostate cancer, and closed at the criminal level by un non-lieu in 2023. Make me present both files and then argue whether the same rules really apply everywhere in the Republic, pushing back three times. Correct exactly two things per turn: the cause connectors — à cause de blames, grâce à credits, en raison de is neutral, and all three take a noun, never « à cause que » — and my use of the legal words, since un non-lieu is not une relaxe. Finish with three concrete fixes and the phrases I hesitated on."
+    "tutorPrompt": "Act as a DELF B2 examiner, in French throughout. The topic is Guadeloupe, on two files. First, l'eau: a réseau vétuste that loses something like seventy per cent of what it produces, des tours d'eau affecting more than half the population, and le SMGEAG running the network since 2021. Second, le chlordécone: sprayed on the bananeraies from 1972, interdit en France in 1990 but kept legal in the Antilles by dérogation until 1993, still in the soil, carried in the blood of more than ninety per cent of adults, recognised in 2021 as causing an occupational prostate cancer, and closed at the criminal level by un non-lieu in 2023. Third, la vie chère and the general strike of 2009, when le LKP — Liyannaj Kont Pwofitasyon — stopped the island for forty-four days behind Élie Domota. Make me present the files and then argue whether the same rules really apply everywhere in the Republic, pushing back three times. Correct exactly two things per turn: the cause connectors — à cause de blames, grâce à credits, en raison de is neutral, and all three take a noun, never « à cause que » — and my use of the legal words, since un non-lieu is not une relaxe. Finish with three concrete fixes and the phrases I hesitated on."
   }
 ]

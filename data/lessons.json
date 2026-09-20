@@ -4441,211 +4441,6 @@
     "tutorPrompt": "Be my B2 French tutor on society and the environment, focusing on compound relative pronouns. Pick an issue (climate, inequality, globalisation) and debate it with me, pushing me to link ideas with lequel, auquel and duquel (and « pour lesquelles », « grâce auquel »). Correct the contractions and agreement, and finish with five « pour lesquelles… »-type phrases plus key vocabulary for the topic."
   },
   {
-    "id": "b2-outre-mer",
-    "level": "B2",
-    "module": "Holding your own",
-    "title": "L'outre-mer — les mêmes droits partout ?",
-    "minutes": 25,
-    "goal": "Answer the class debate question — are rights as well respected outre-mer as in mainland France? — with the two structures it takes, and three cases you can actually cite.",
-    "figures": [
-      {
-        "src": "./assets/img/outre-mer-carte.svg?v=1",
-        "alt": "A world map of the French overseas territories. In the Atlantic: Guadeloupe, Martinique and Guyane under article 73, Saint-Martin, Saint-Barthélemy and Saint-Pierre-et-Miquelon under article 74. In the Indian Ocean: Mayotte and La Réunion under article 73. In the Pacific, which wraps round both edges of the map: Wallis-et-Futuna and la Polynésie française under article 74, and la Nouvelle-Calédonie under title XIII of the Constitution. Mainland France is marked in Europe, with la Corse flagged separately as not outre-mer. Below, three distance bars from Paris: 6 700 km to Pointe-à-Pitre, 9 350 km to Saint-Denis de La Réunion, 15 700 km to Papeete.",
-        "caption": "Same Republic, same Constitution, three oceans. The colour is the legal status: article 73 takes French law directly, article 74 has a statute of its own. La Corse is on the map precisely to show it is not on that list."
-      },
-      {
-        "src": "./assets/img/laicite-1905.svg?v=1",
-        "alt": "A schematic of where the 1905 law of separation does not apply. Mainland France is drawn as a stylised hexagon under the 1905 law, with one amber area at its north-east corner: Alsace-Moselle, German in 1905 and still under the Concordat of 1801, where the state pays priests, pastors and rabbis and religion is taught in public schools. La Corse sits below the hexagon, under the 1905 law. A separate amber box 7 000 km away shows Guyane in South America, where an 1828 royal ordinance still stands and the collectivité pays the Catholic clergy.",
-        "caption": "The 1905 law is the rule everywhere except the two amber patches — one in the Hexagone, one outre-mer. Whichever side of the debate you argue, this is the fact worth having ready."
-      }
-    ],
-    "vocab": [
-      { "fr": "l'outre-mer", "phonetic": "loo-truh-MEHR", "en": "France's overseas territories", "emoji": "🌍" },
-      { "fr": "la métropole / l'Hexagone", "phonetic": "lah may-tro-POL / lek-sa-GON", "en": "mainland France", "emoji": "🇫🇷" },
-      { "fr": "la laïcité", "phonetic": "lah la-ee-see-TAY", "en": "laïcité — the state's religious neutrality", "emoji": "⚖️" },
-      { "fr": "un lieu de culte", "phonetic": "uhn lyuh duh KEWLT", "en": "a place of worship", "emoji": "🛐" },
-      { "fr": "une croix", "phonetic": "ewn KRWAH", "en": "a cross", "emoji": "✝️" },
-      { "fr": "un signe religieux", "phonetic": "uhn see-nyuh ruh-lee-ZHYUH", "en": "a religious sign or symbol", "emoji": "☪️" },
-      { "fr": "l'espace public", "phonetic": "less-PASS pew-BLEEK", "en": "the public space", "emoji": "🏛️" },
-      { "fr": "le vivre-ensemble", "phonetic": "luh vee-vruh-ahn-SAHMBL", "en": "living together, social harmony", "emoji": "🤝" },
-      { "fr": "le métissage", "phonetic": "luh may-tee-SAZH", "en": "cultural and ethnic mixing", "emoji": "🧬" },
-      { "fr": "l'autonomie", "phonetic": "lo-to-no-MEE", "en": "autonomy", "emoji": "🔓" },
-      { "fr": "une revendication", "phonetic": "ewn ruh-vahn-dee-ka-SYOHN", "en": "a demand, a political claim", "emoji": "✊" },
-      { "fr": "la pénurie d'eau", "phonetic": "lah pay-new-REE DOH", "en": "the water shortage", "emoji": "🚱" },
-      { "fr": "les tours d'eau", "phonetic": "lay toor DOH", "en": "rotating water cuts", "emoji": "🚰" },
-      { "fr": "un réseau vétuste", "phonetic": "uhn ray-ZOH vay-TEWST", "en": "a crumbling, decrepit network", "emoji": "🔧" },
-      { "fr": "une inégalité", "phonetic": "ewn ee-nay-ga-lee-TAY", "en": "an inequality", "emoji": "📉" },
-      { "fr": "l'égalité devant la loi", "phonetic": "lay-ga-lee-TAY duh-VAHN lah LWAH", "en": "equality before the law", "emoji": "🟰" }
-    ],
-    "grammar": {
-      "point": "Saying « as … as » — and what changes the moment you disagree",
-      "table": {
-        "title": "French splits « as … as » three ways",
-        "cols": ["on compare…", "la structure", "exemple"],
-        "rows": [
-          { "label": "① un adjectif", "cells": ["aussi + adjectif + que", "aussi respectés qu'en métropole"] },
-          { "label": "② un adverbe", "cells": ["aussi + adverbe + que", "aussi souvent qu'ici"] },
-          { "label": "③ un verbe", "cells": ["verbe + autant que", "on investit autant qu'ailleurs"] },
-          { "label": "④ un nom", "cells": ["autant de + nom + que", "autant de moyens que l'Hexagone"] }
-        ],
-        "highlight": ["aussi + adjectif + que", "autant de + nom + que"],
-        "note": "Aussi goes with words, autant with amounts. The one bridge is de: autant de moyens, never « aussi de moyens »."
-      },
-      "table2": {
-        "title": "« Je pense que… » — until you disagree",
-        "cols": ["", "ce qu'on dit", "le verbe qui suit"],
-        "rows": [
-          { "label": "on affirme", "cells": ["Je pense que…", "indicatif — les droits sont respectés"] },
-          { "label": "on nie", "cells": ["Je ne pense pas que…", "subjonctif — les droits soient respectés"] },
-          { "label": "c'est sûr", "cells": ["Il est évident que…", "indicatif — qu'il y a un problème"] },
-          { "label": "c'est possible", "cells": ["Il est possible que…", "subjonctif — qu'il y ait un problème"] }
-        ],
-        "highlight": ["subjonctif — les droits soient respectés", "subjonctif — qu'il y ait un problème"],
-        "note": "It isn't about how much doubt is in your head — it's about whether the sentence still asserts the thing. Two forms cover most of it: être → soient, avoir → ait."
-      },
-      "explain": "The class question is built from both tables at once. « Les droits sont-ils autant respectés outre-mer qu'en métropole ? » needs the first one: French puts aussi in front of an adjective or an adverb, autant after a verb, and autant de in front of a noun. English makes none of those distinctions, which is why « aussi de moyens » is the slip an examiner hears first. Answering it needs the second: je pense que asserts something, so it takes the indicative — negate it and the sentence stops asserting, so it flips to the subjunctive. Je ne pense pas que les droits soient respectés. That flip is the most visible B2 marker you have, because it fires the moment you disagree."
-    },
-    "notes": [
-      {
-        "title": "L'outre-mer is two categories — and la Corse is in neither",
-        "body": "The map above is the note. Article 73 means French law applies directly; article 74 means a statute of its own. La Corse is on neither list — it sits inside metropolitan France with a special status, so its autonomy debate rests on different ground."
-      },
-      {
-        "title": "Article premier — learn the sentence",
-        "body": "« La France est une République indivisible, laïque, démocratique et sociale. Elle assure l'égalité devant la loi de tous les citoyens sans distinction d'origine, de race ou de religion. » Quotable in the DELF oral, and it comes up in the naturalisation interview. It also hands you both sides of the debate at once."
-      },
-      {
-        "title": "La croix dans l’espace public — la règle de 1905",
-        "body": "La laïcité, in practice. The 1905 law forbids new religious signs on public land; anything older is left alone, which is why every village church keeps its cross. Put up a new one and it becomes a case for the tribunal administratif — Ploërmel, 2017, where the Conseil d'État let the statue stay and took the cross down. The two places the law never reached are in the second figure above."
-      },
-      {
-        "title": "La Réunion — le vivre-ensemble",
-        "body": "France's standard reference for religious coexistence: churches, Tamil temples, mosques and Chinese pagodas within the same few streets, and Dipavali, l'Aïd and Noël all publicly marked. In an exam, stay abstract — le vivre-ensemble, le métissage, la diversité religieuse. The Creole words « malbar » and « zarabe » belong to insiders: recognise them, don't use them."
-      },
-      {
-        "title": "L'eau en Guadeloupe — the example that makes it concrete",
-        "body": "The network is vétuste enough that a large share of the water never reaches a tap, and whole neighbourhoods live on des tours d'eau — the supply cut for a day or more at a time, on rotation. Add le chlordécone, the pesticide used in the banana plantations until 1993 and in the soil for centuries, and you have two documented cases instead of a vague claim."
-      }
-    ],
-    "examples": [
-      "La Réunion est souvent citée comme un modèle de vivre-ensemble. (lah ray-ew-NYOHN)",
-      "Dans la même rue, on peut trouver une église, un temple tamoul et une mosquée. (uhn TAHMPL ta-MOOL)",
-      "Une croix installée sur un terrain communal peut être contestée devant le tribunal administratif. (ewn KRWAH ann-sta-LAY)",
-      "En Guadeloupe, les tours d'eau privent certains quartiers d'eau pendant plusieurs jours. (lay toor DOH)",
-      "Je ne pense pas que les droits soient aussi bien respectés qu'en métropole. (kuh lay drwah SWAHN)",
-      "Les services publics sont-ils aussi efficaces outre-mer que dans l'Hexagone ? (oh-SEE ay-fee-KASS)"
-    ],
-    "practice": [
-      "Fill the gap with aussi · autant · autant de: « Il n'y a pas ___ investissements qu'en métropole. » · « L'eau n'est pas ___ fiable qu'ici. » · « On n'en parle pas ___ que des sujets métropolitains. »",
-      "Say the same opinion twice — once with « Je pense que… », once with « Je ne pense pas que… » — and change the verb.",
-      "Answer the class question out loud in ninety seconds, with one example from La Réunion and one from la Guadeloupe.",
-      "Article 73, article 74, or neither? — la Guadeloupe · la Polynésie française · la Corse · La Réunion.",
-      "Explain « la laïcité » to an English-speaking friend, in French, in three sentences — without using the word « secular ».",
-      "Build the DELF shape: « D'un côté… », « D'un autre côté… », « En fin de compte… » — one paragraph each."
-    ],
-    "tutorPrompt": "Act as a DELF B2 oral examiner, in French throughout. Put this question to me: « Est-ce que vous pensez que les droits sont autant respectés dans les régions d'outre-mer qu'en France métropolitaine ? » Give me a minute to prepare, then make me answer in the DELF shape — introduction, plan annoncé, deux arguments avec exemples, conclusion — and push back three times. Draw on the real material: les tours d'eau et le chlordécone en Guadeloupe, le vivre-ensemble à La Réunion, la croix dans l'espace public et la loi de 1905, l'article premier, les revendications d'autonomie en Corse. Correct exactly two things per turn: the comparison structures (aussi + adjectif/adverbe, autant + verbe, autant de + nom, never « aussi de »), and the subjunctive after « je ne pense pas que » — soient, ait, puisse. Finish with a DELF grid score and three concrete fixes."
-  },
-  {
-    "id": "b2-reunion-corse",
-    "level": "B2",
-    "module": "Holding your own",
-    "title": "La Réunion & la Corse — deux îles, deux laïcités",
-    "minutes": 25,
-    "goal": "Contrast two French islands — one where four religions share a calendar, one that went to court over a cross — and learn the connectors that make a comparison sound B2.",
-    "figures": [
-      {
-        "src": "./assets/img/deux-iles.svg?v=1",
-        "alt": "A side-by-side comparison of two French islands. On the left, La Réunion in the Indian Ocean, about 880 000 inhabitants: four communities share the island — Catholics, Tamil Hindus, Muslims, and Buddhists and Chinese — and Dipavali, l'Aïd, Noël and the Chinese New Year are all publicly marked; mixed marriages are ordinary. On the right, la Corse in the Mediterranean, about 350 000 inhabitants: one largely Catholic tradition, with confréries and processions, and the cross as a marker of identity. Below it, the Quasquara case in three dates: 2022, the council erects a cross; 2025, the tribunal administratif de Bastia overturns the mayor's refusal to remove it; 2026, the cour administrative d'appel de Marseille confirms the removal.",
-        "caption": "Four colours on the left, one on the right — that is the whole lesson in a glance. Same Republic and same 1905 law, but La Réunion's question is how four religions share a public calendar, and la Corse's is whether a cross can be cultural rather than religious."
-      }
-    ],
-    "vocab": [
-      { "fr": "une croyance", "phonetic": "ewn krwah-YAHNSS", "en": "a belief", "emoji": "🙏" },
-      { "fr": "un fidèle", "phonetic": "uhn fee-DEL", "en": "a worshipper, a believer", "emoji": "🧎" },
-      { "fr": "une fête religieuse", "phonetic": "ewn fet ruh-lee-ZHYUHZ", "en": "a religious festival", "emoji": "🎉" },
-      { "fr": "un mariage mixte", "phonetic": "uhn ma-RYAZH MEEKST", "en": "an interfaith marriage", "emoji": "💒" },
-      { "fr": "cohabiter", "phonetic": "ko-a-bee-TAY", "en": "to coexist, to live side by side", "emoji": "🏘️" },
-      { "fr": "le patrimoine", "phonetic": "luh pa-tree-MWAHN", "en": "heritage", "emoji": "🏺" },
-      { "fr": "une identité", "phonetic": "ewn ee-dahn-tee-TAY", "en": "an identity", "emoji": "🪪" },
-      { "fr": "majoritaire", "phonetic": "ma-zho-ree-TEHR", "en": "in the majority", "emoji": "📊" },
-      { "fr": "ériger", "phonetic": "ay-ree-ZHAY", "en": "to erect, to put up", "emoji": "🔨" },
-      { "fr": "le retrait", "phonetic": "luh ruh-TREH", "en": "the removal", "emoji": "↩️" },
-      { "fr": "porter plainte", "phonetic": "por-TAY PLAHNT", "en": "to file a criminal complaint", "emoji": "📣" },
-      { "fr": "déposer un recours", "phonetic": "day-po-ZAY uhn ruh-KOOR", "en": "to lodge an appeal", "emoji": "📨" },
-      { "fr": "le tribunal administratif", "phonetic": "luh tree-bew-NAL ad-mee-nees-tra-TEEF", "en": "the administrative court", "emoji": "⚖️" },
-      { "fr": "annuler", "phonetic": "a-new-LAY", "en": "to overturn, to annul", "emoji": "❌" },
-      { "fr": "faire appel", "phonetic": "fehr a-PEL", "en": "to appeal a ruling", "emoji": "📤" },
-      { "fr": "une commune / un maire", "phonetic": "ewn ko-MEWN / uhn MEHR", "en": "a municipality / a mayor", "emoji": "🏛️" }
-    ],
-    "grammar": {
-      "point": "Opposing two things — and the one connector that takes the subjunctive",
-      "table": {
-        "title": "les connecteurs de l’opposition et de la concession",
-        "cols": ["le connecteur", "ce qui suit", "exemple"],
-        "rows": [
-          { "label": "alors que · tandis que", "cells": ["+ indicatif", "alors qu’ici on défend un héritage"] },
-          { "label": "contrairement à", "cells": ["+ nom", "contrairement à la Corse…"] },
-          { "label": "en revanche", "cells": ["+ phrase", "la Corse, en revanche…"] },
-          { "label": "bien que · quoique", "cells": ["+ subjonctif", "bien que la croix soit ancienne…"] },
-          { "label": "même si", "cells": ["+ indicatif", "même si la croix est ancienne…"] },
-          { "label": "pourtant · cependant", "cells": ["+ phrase", "pourtant, le maire a refusé"] }
-        ],
-        "highlight": ["+ subjonctif"],
-        "note": "These two look interchangeable in English — both come out as « although » — and they are not. Bien que takes the subjunctive, même si never does. If you only remember one thing from this lesson, remember that pair."
-      },
-      "table2": {
-        "title": "L’affaire de Quasquara — comment une affaire avance",
-        "cols": ["l’étape", "ce qu’on dit", "English"],
-        "rows": [
-          { "label": "① 2022", "cells": ["la commune érige une croix", "the council puts up a cross"] },
-          { "label": "②", "cells": ["une habitante demande le retrait", "a resident asks for it to be removed"] },
-          { "label": "③", "cells": ["le maire refuse", "the mayor refuses"] },
-          { "label": "④", "cells": ["elle dépose un recours", "she lodges an appeal"] },
-          { "label": "⑤ 2025", "cells": ["le tribunal annule le refus", "the court overturns the refusal"] },
-          { "label": "⑥ 2026", "cells": ["la cour d’appel confirme le retrait", "the appeal court upholds the removal"] }
-        ],
-        "highlight": ["une habitante demande le retrait", "le tribunal annule le refus"],
-        "note": "Step ⑤ is the one worth noticing: the court does not order the cross down, it annuls the mayor’s refusal to take it down. French administrative law works on the decision, not the object — which is why you attack un refus, not une croix."
-      },
-      "explain": "A comparison is only as good as the words joining its halves, and French sorts them by what comes next. Alors que and tandis que take a full clause in the indicative and are the workhorses of a contrast. Contrairement à takes a noun, so it needs a person or a place after it, never a verb. En revanche, pourtant and cependant simply sit inside a sentence and need nothing special. Then there is the pair that catches everyone: bien que and même si both translate as « although », but bien que takes the subjunctive — bien que la croix soit ancienne — while même si takes the indicative and never wavers. English gives you no warning, so it has to be learned as a fact about the two words rather than a rule you can reason out."
-    },
-    "notes": [
-      {
-        "title": "Bien que + subjonctif, même si + indicatif",
-        "body": "The single most common B2 slip in a debate. « Bien que ce soit un héritage » — subjunctive. « Même si c’est un héritage » — indicative. Quoique behaves like bien que; the false friend quoi que (two words) means whatever and is something else entirely. The three survival forms after bien que are soit, ait and puisse."
-      },
-      {
-        "title": "La Réunion — quatre religions, un seul calendrier",
-        "body": "Catholics, Tamil Hindus, Muslims and a Chinese community have shared the island since the nineteenth century, and Dipavali, l’Aïd, Noël and the Chinese New Year are all publicly marked. Interfaith marriage is ordinary rather than remarkable. In an exam, stay abstract — le vivre-ensemble, le métissage, la diversité religieuse. The Creole words « malbar » and « zarabe » belong to insiders: recognise them, don’t use them."
-      },
-      {
-        "title": "Quasquara — l’affaire en trois dates",
-        "body": "In 2022 the commune of Quasquara, in Corse-du-Sud, put up a cross at the entrance to the village. A resident asked for its removal, the mayor refused, and in 2025 the tribunal administratif de Bastia annulled that refusal. On 26 June 2026 the cour administrative d’appel de Marseille confirmed it: a cross erected in 2022, at a different spot from an older one, is a new religious sign and not the replacement of a pre-1905 cross."
-      },
-      {
-        "title": "« Porter plainte » is not the right verb here",
-        "body": "The press writes « après la plainte d’une habitante », and in everyday French that passes — but it is loose. Une plainte is criminal: you porter plainte against a person, at the police or the procureur. A cross on communal land is an administrative matter, so what you actually do is demander le retrait, then déposer un recours against the mayor’s refusal. Using the right one in an exam is a visible mark of register."
-      }
-    ],
-    "examples": [
-      "À La Réunion, quatre religions cohabitent dans le même village. (ko-a-BEET)",
-      "Les mariages mixtes y sont ordinaires depuis des générations. (lay ma-RYAZH MEEKST)",
-      "En Corse, la croix est autant un symbole identitaire qu’un symbole religieux. (sam-BOL ee-dahn-tee-TEHR)",
-      "La commune a érigé une croix à l’entrée du village en 2022. (a ay-ree-ZHAY ewn KRWAH)",
-      "Une habitante a déposé un recours devant le tribunal administratif. (day-po-ZAY uhn ruh-KOOR)",
-      "Bien que la croix soit un héritage local, le tribunal a ordonné son retrait. (byan kuh lah krwah SWAH)"
-    ],
-    "practice": [
-      "Bien que or même si? — « ___ la croix soit ancienne, elle date de 2022. » · « ___ la croix est ancienne, la loi s’applique. »",
-      "Contrast the two islands in four sentences, using alors que · contrairement à · en revanche · pourtant.",
-      "Tell the Quasquara story in six sentences, in the past, with the verbs from the second table.",
-      "Porter plainte or déposer un recours? — a stolen bike · a cross on communal land · a noisy neighbour · a refused building permit.",
-      "Answer out loud in two minutes: « Une croix peut-elle être culturelle plutôt que religieuse ? »",
-      "Now say what the two islands have in common — not only what separates them."
-    ],
-    "tutorPrompt": "Act as a DELF B2 examiner, in French throughout. The topic is two French islands: La Réunion, where Catholics, Tamil Hindus, Muslims and a Chinese community share the same calendar and interfaith marriage is ordinary, and la Corse, where a largely Catholic identity met the loi de 1905 in the affaire de la croix de Quasquara — a cross erected by the commune in 2022, a resident’s demande de retrait, the mayor’s refusal annulled by the tribunal administratif de Bastia in 2025, and the removal confirmed by the cour administrative d’appel de Marseille on 26 June 2026. Make me compare the two islands out loud, then defend a position on whether a cross can be « culturelle plutôt que religieuse ». Correct exactly two things per turn: the opposition connectors — alors que and même si take the indicative, bien que and quoique take the subjunctive, contrairement à takes a noun — and my choice between porter plainte and déposer un recours. Finish with three concrete fixes and the phrases I hesitated on."
-  },
-  {
     "id": "b2-07-lettre-formelle",
     "level": "B2",
     "module": "Holding your own",
@@ -4775,5 +4570,206 @@
       "Give a 60-second spoken opinion on screen time, then defend it against one objection."
     ],
     "tutorPrompt": "Act as a DELF B2 oral examiner. Give me a short French text or statement on a societal topic; I'll take a minute, then present a structured viewpoint (introduce the document, announce a plan, develop with connectors, conclude). Then debate me with two or three challenging follow-ups and make me defend and nuance my position. Stay in French at B2, and at the end score me on the DELF oral grid (clarity, structure, argument, range, accuracy) with three concrete fixes."
+  },
+  {
+    "id": "b2-outre-mer",
+    "level": "B2",
+    "module": "France & its territories",
+    "title": "L'outre-mer — les mêmes droits partout ?",
+    "minutes": 25,
+    "goal": "Answer the class debate question — are rights as well respected outre-mer as in mainland France? — with the two structures it takes, and three cases you can actually cite.",
+    "figures": [
+      {
+        "src": "./assets/img/outre-mer-carte.svg?v=1",
+        "alt": "A world map of the French overseas territories. In the Atlantic: Guadeloupe, Martinique and Guyane under article 73, Saint-Martin, Saint-Barthélemy and Saint-Pierre-et-Miquelon under article 74. In the Indian Ocean: Mayotte and La Réunion under article 73. In the Pacific, which wraps round both edges of the map: Wallis-et-Futuna and la Polynésie française under article 74, and la Nouvelle-Calédonie under title XIII of the Constitution. Mainland France is marked in Europe, with la Corse flagged separately as not outre-mer. Below, three distance bars from Paris: 6 700 km to Pointe-à-Pitre, 9 350 km to Saint-Denis de La Réunion, 15 700 km to Papeete.",
+        "caption": "Same Republic, same Constitution, three oceans. The colour is the legal status: article 73 takes French law directly, article 74 has a statute of its own. La Corse is on the map precisely to show it is not on that list."
+      },
+      {
+        "src": "./assets/img/laicite-1905.svg?v=1",
+        "alt": "A schematic of where the 1905 law of separation does not apply. Mainland France is drawn as a stylised hexagon under the 1905 law, with one amber area at its north-east corner: Alsace-Moselle, German in 1905 and still under the Concordat of 1801, where the state pays priests, pastors and rabbis and religion is taught in public schools. La Corse sits below the hexagon, under the 1905 law. A separate amber box 7 000 km away shows Guyane in South America, where an 1828 royal ordinance still stands and the collectivité pays the Catholic clergy.",
+        "caption": "The 1905 law is the rule everywhere except the two amber patches — one in the Hexagone, one outre-mer. Whichever side of the debate you argue, this is the fact worth having ready."
+      }
+    ],
+    "vocab": [
+      { "fr": "l'outre-mer", "phonetic": "loo-truh-MEHR", "en": "France's overseas territories", "emoji": "🌍" },
+      { "fr": "la métropole / l'Hexagone", "phonetic": "lah may-tro-POL / lek-sa-GON", "en": "mainland France", "emoji": "🇫🇷" },
+      { "fr": "la laïcité", "phonetic": "lah la-ee-see-TAY", "en": "laïcité — the state's religious neutrality", "emoji": "⚖️" },
+      { "fr": "un lieu de culte", "phonetic": "uhn lyuh duh KEWLT", "en": "a place of worship", "emoji": "🛐" },
+      { "fr": "une croix", "phonetic": "ewn KRWAH", "en": "a cross", "emoji": "✝️" },
+      { "fr": "un signe religieux", "phonetic": "uhn see-nyuh ruh-lee-ZHYUH", "en": "a religious sign or symbol", "emoji": "☪️" },
+      { "fr": "l'espace public", "phonetic": "less-PASS pew-BLEEK", "en": "the public space", "emoji": "🏛️" },
+      { "fr": "le vivre-ensemble", "phonetic": "luh vee-vruh-ahn-SAHMBL", "en": "living together, social harmony", "emoji": "🤝" },
+      { "fr": "le métissage", "phonetic": "luh may-tee-SAZH", "en": "cultural and ethnic mixing", "emoji": "🧬" },
+      { "fr": "l'autonomie", "phonetic": "lo-to-no-MEE", "en": "autonomy", "emoji": "🔓" },
+      { "fr": "une revendication", "phonetic": "ewn ruh-vahn-dee-ka-SYOHN", "en": "a demand, a political claim", "emoji": "✊" },
+      { "fr": "la pénurie d'eau", "phonetic": "lah pay-new-REE DOH", "en": "the water shortage", "emoji": "🚱" },
+      { "fr": "les tours d'eau", "phonetic": "lay toor DOH", "en": "rotating water cuts", "emoji": "🚰" },
+      { "fr": "un réseau vétuste", "phonetic": "uhn ray-ZOH vay-TEWST", "en": "a crumbling, decrepit network", "emoji": "🔧" },
+      { "fr": "une inégalité", "phonetic": "ewn ee-nay-ga-lee-TAY", "en": "an inequality", "emoji": "📉" },
+      { "fr": "l'égalité devant la loi", "phonetic": "lay-ga-lee-TAY duh-VAHN lah LWAH", "en": "equality before the law", "emoji": "🟰" }
+    ],
+    "grammar": {
+      "point": "Saying « as … as » — and what changes the moment you disagree",
+      "table": {
+        "title": "French splits « as … as » three ways",
+        "cols": ["on compare…", "la structure", "exemple"],
+        "rows": [
+          { "label": "① un adjectif", "cells": ["aussi + adjectif + que", "aussi respectés qu'en métropole"] },
+          { "label": "② un adverbe", "cells": ["aussi + adverbe + que", "aussi souvent qu'ici"] },
+          { "label": "③ un verbe", "cells": ["verbe + autant que", "on investit autant qu'ailleurs"] },
+          { "label": "④ un nom", "cells": ["autant de + nom + que", "autant de moyens que l'Hexagone"] }
+        ],
+        "highlight": ["aussi + adjectif + que", "autant de + nom + que"],
+        "note": "Aussi goes with words, autant with amounts. The one bridge is de: autant de moyens, never « aussi de moyens »."
+      },
+      "table2": {
+        "title": "« Je pense que… » — until you disagree",
+        "cols": ["", "ce qu'on dit", "le verbe qui suit"],
+        "rows": [
+          { "label": "on affirme", "cells": ["Je pense que…", "indicatif — les droits sont respectés"] },
+          { "label": "on nie", "cells": ["Je ne pense pas que…", "subjonctif — les droits soient respectés"] },
+          { "label": "c'est sûr", "cells": ["Il est évident que…", "indicatif — qu'il y a un problème"] },
+          { "label": "c'est possible", "cells": ["Il est possible que…", "subjonctif — qu'il y ait un problème"] }
+        ],
+        "highlight": ["subjonctif — les droits soient respectés", "subjonctif — qu'il y ait un problème"],
+        "note": "It isn't about how much doubt is in your head — it's about whether the sentence still asserts the thing. Two forms cover most of it: être → soient, avoir → ait."
+      },
+      "explain": "The class question is built from both tables at once. « Les droits sont-ils autant respectés outre-mer qu'en métropole ? » needs the first one: French puts aussi in front of an adjective or an adverb, autant after a verb, and autant de in front of a noun. English makes none of those distinctions, which is why « aussi de moyens » is the slip an examiner hears first. Answering it needs the second: je pense que asserts something, so it takes the indicative — negate it and the sentence stops asserting, so it flips to the subjunctive. Je ne pense pas que les droits soient respectés. That flip is the most visible B2 marker you have, because it fires the moment you disagree."
+    },
+    "notes": [
+      {
+        "title": "L'outre-mer is two categories — and la Corse is in neither",
+        "body": "The map above is the note. Article 73 means French law applies directly; article 74 means a statute of its own. La Corse is on neither list — it sits inside metropolitan France with a special status, so its autonomy debate rests on different ground."
+      },
+      {
+        "title": "Article premier — learn the sentence",
+        "body": "« La France est une République indivisible, laïque, démocratique et sociale. Elle assure l'égalité devant la loi de tous les citoyens sans distinction d'origine, de race ou de religion. » Quotable in the DELF oral, and it comes up in the naturalisation interview. It also hands you both sides of the debate at once."
+      },
+      {
+        "title": "La croix dans l’espace public — la règle de 1905",
+        "body": "La laïcité, in practice. The 1905 law forbids new religious signs on public land; anything older is left alone, which is why every village church keeps its cross. Put up a new one and it becomes a case for the tribunal administratif — Ploërmel, 2017, where the Conseil d'État let the statue stay and took the cross down. The two places the law never reached are in the second figure above."
+      },
+      {
+        "title": "L'eau en Guadeloupe — the example that makes it concrete",
+        "body": "The network is vétuste enough that a large share of the water never reaches a tap, and whole neighbourhoods live on des tours d'eau — the supply cut for a day or more at a time, on rotation. Add le chlordécone, the pesticide used in the banana plantations until 1993 and in the soil for centuries, and you have two documented cases instead of a vague claim."
+      }
+    ],
+    "examples": [
+      "La Réunion est souvent citée comme un modèle de vivre-ensemble. (lah ray-ew-NYOHN)",
+      "Dans la même rue, on peut trouver une église, un temple tamoul et une mosquée. (uhn TAHMPL ta-MOOL)",
+      "Une croix installée sur un terrain communal peut être contestée devant le tribunal administratif. (ewn KRWAH ann-sta-LAY)",
+      "En Guadeloupe, les tours d'eau privent certains quartiers d'eau pendant plusieurs jours. (lay toor DOH)",
+      "Je ne pense pas que les droits soient aussi bien respectés qu'en métropole. (kuh lay drwah SWAHN)",
+      "Les services publics sont-ils aussi efficaces outre-mer que dans l'Hexagone ? (oh-SEE ay-fee-KASS)"
+    ],
+    "practice": [
+      "Fill the gap with aussi · autant · autant de: « Il n'y a pas ___ investissements qu'en métropole. » · « L'eau n'est pas ___ fiable qu'ici. » · « On n'en parle pas ___ que des sujets métropolitains. »",
+      "Say the same opinion twice — once with « Je pense que… », once with « Je ne pense pas que… » — and change the verb.",
+      "Answer the class question out loud in ninety seconds, with one example from La Réunion and one from la Guadeloupe.",
+      "Article 73, article 74, or neither? — la Guadeloupe · la Polynésie française · la Corse · La Réunion.",
+      "Explain « la laïcité » to an English-speaking friend, in French, in three sentences — without using the word « secular ».",
+      "Build the DELF shape: « D'un côté… », « D'un autre côté… », « En fin de compte… » — one paragraph each."
+    ],
+    "tutorPrompt": "Act as a DELF B2 oral examiner, in French throughout. Put this question to me: « Est-ce que vous pensez que les droits sont autant respectés dans les régions d'outre-mer qu'en France métropolitaine ? » Give me a minute to prepare, then make me answer in the DELF shape — introduction, plan annoncé, deux arguments avec exemples, conclusion — and push back three times. Draw on the real material: les tours d'eau et le chlordécone en Guadeloupe, le vivre-ensemble à La Réunion, la croix dans l'espace public et la loi de 1905, l'article premier, les revendications d'autonomie en Corse. Correct exactly two things per turn: the comparison structures (aussi + adjectif/adverbe, autant + verbe, autant de + nom, never « aussi de »), and the subjunctive after « je ne pense pas que » — soient, ait, puisse. Finish with a DELF grid score and three concrete fixes."
+  },
+  {
+    "id": "b2-reunion-corse",
+    "level": "B2",
+    "module": "France & its territories",
+    "title": "La Réunion & la Corse — deux îles, deux laïcités",
+    "minutes": 25,
+    "goal": "Contrast two French islands — one where four religions share a calendar, one that went to court over a cross — and learn the connectors that make a comparison sound B2.",
+    "figures": [
+      {
+        "src": "./assets/img/deux-iles.svg?v=1",
+        "alt": "A side-by-side comparison of two French islands. On the left, La Réunion in the Indian Ocean, about 880 000 inhabitants: four communities share the island — Catholics, Tamil Hindus, Muslims, and Buddhists and Chinese — and Dipavali, l'Aïd, Noël and the Chinese New Year are all publicly marked; mixed marriages are ordinary. On the right, la Corse in the Mediterranean, about 350 000 inhabitants: one largely Catholic tradition, with confréries and processions, and the cross as a marker of identity. Below it, the Quasquara case in three dates: 2022, the council erects a cross; 2025, the tribunal administratif de Bastia overturns the mayor's refusal to remove it; 2026, the cour administrative d'appel de Marseille confirms the removal.",
+        "caption": "Four colours on the left, one on the right — that is the whole lesson in a glance. Same Republic and same 1905 law, but La Réunion's question is how four religions share a public calendar, and la Corse's is whether a cross can be cultural rather than religious."
+      }
+    ],
+    "vocab": [
+      { "fr": "une croyance", "phonetic": "ewn krwah-YAHNSS", "en": "a belief", "emoji": "🙏" },
+      { "fr": "un fidèle", "phonetic": "uhn fee-DEL", "en": "a worshipper, a believer", "emoji": "🧎" },
+      { "fr": "une fête religieuse", "phonetic": "ewn fet ruh-lee-ZHYUHZ", "en": "a religious festival", "emoji": "🎉" },
+      { "fr": "un mariage mixte", "phonetic": "uhn ma-RYAZH MEEKST", "en": "an interfaith marriage", "emoji": "💒" },
+      { "fr": "cohabiter", "phonetic": "ko-a-bee-TAY", "en": "to coexist, to live side by side", "emoji": "🏘️" },
+      { "fr": "le patrimoine", "phonetic": "luh pa-tree-MWAHN", "en": "heritage", "emoji": "🏺" },
+      { "fr": "une identité", "phonetic": "ewn ee-dahn-tee-TAY", "en": "an identity", "emoji": "🪪" },
+      { "fr": "majoritaire", "phonetic": "ma-zho-ree-TEHR", "en": "in the majority", "emoji": "📊" },
+      { "fr": "ériger", "phonetic": "ay-ree-ZHAY", "en": "to erect, to put up", "emoji": "🔨" },
+      { "fr": "le retrait", "phonetic": "luh ruh-TREH", "en": "the removal", "emoji": "↩️" },
+      { "fr": "porter plainte", "phonetic": "por-TAY PLAHNT", "en": "to file a criminal complaint", "emoji": "📣" },
+      { "fr": "déposer un recours", "phonetic": "day-po-ZAY uhn ruh-KOOR", "en": "to lodge an appeal", "emoji": "📨" },
+      { "fr": "le tribunal administratif", "phonetic": "luh tree-bew-NAL ad-mee-nees-tra-TEEF", "en": "the administrative court", "emoji": "⚖️" },
+      { "fr": "annuler", "phonetic": "a-new-LAY", "en": "to overturn, to annul", "emoji": "❌" },
+      { "fr": "faire appel", "phonetic": "fehr a-PEL", "en": "to appeal a ruling", "emoji": "📤" },
+      { "fr": "une commune / un maire", "phonetic": "ewn ko-MEWN / uhn MEHR", "en": "a municipality / a mayor", "emoji": "🏛️" }
+    ],
+    "grammar": {
+      "point": "Opposing two things — and the one connector that takes the subjunctive",
+      "table": {
+        "title": "les connecteurs de l’opposition et de la concession",
+        "cols": ["le connecteur", "ce qui suit", "exemple"],
+        "rows": [
+          { "label": "alors que · tandis que", "cells": ["+ indicatif", "alors qu’ici on défend un héritage"] },
+          { "label": "contrairement à", "cells": ["+ nom", "contrairement à la Corse…"] },
+          { "label": "en revanche", "cells": ["+ phrase", "la Corse, en revanche…"] },
+          { "label": "bien que · quoique", "cells": ["+ subjonctif", "bien que la croix soit ancienne…"] },
+          { "label": "même si", "cells": ["+ indicatif", "même si la croix est ancienne…"] },
+          { "label": "pourtant · cependant", "cells": ["+ phrase", "pourtant, le maire a refusé"] }
+        ],
+        "highlight": ["+ subjonctif"],
+        "note": "These two look interchangeable in English — both come out as « although » — and they are not. Bien que takes the subjunctive, même si never does. If you only remember one thing from this lesson, remember that pair."
+      },
+      "table2": {
+        "title": "L’affaire de Quasquara — comment une affaire avance",
+        "cols": ["l’étape", "ce qu’on dit", "English"],
+        "rows": [
+          { "label": "① 2022", "cells": ["la commune érige une croix", "the council puts up a cross"] },
+          { "label": "②", "cells": ["une habitante demande le retrait", "a resident asks for it to be removed"] },
+          { "label": "③", "cells": ["le maire refuse", "the mayor refuses"] },
+          { "label": "④", "cells": ["elle dépose un recours", "she lodges an appeal"] },
+          { "label": "⑤ 2025", "cells": ["le tribunal annule le refus", "the court overturns the refusal"] },
+          { "label": "⑥ 2026", "cells": ["la cour d’appel confirme le retrait", "the appeal court upholds the removal"] }
+        ],
+        "highlight": ["une habitante demande le retrait", "le tribunal annule le refus"],
+        "note": "Step ⑤ is the one worth noticing: the court does not order the cross down, it annuls the mayor’s refusal to take it down. French administrative law works on the decision, not the object — which is why you attack un refus, not une croix."
+      },
+      "explain": "A comparison is only as good as the words joining its halves, and French sorts them by what comes next. Alors que and tandis que take a full clause in the indicative and are the workhorses of a contrast. Contrairement à takes a noun, so it needs a person or a place after it, never a verb. En revanche, pourtant and cependant simply sit inside a sentence and need nothing special. Then there is the pair that catches everyone: bien que and même si both translate as « although », but bien que takes the subjunctive — bien que la croix soit ancienne — while même si takes the indicative and never wavers. English gives you no warning, so it has to be learned as a fact about the two words rather than a rule you can reason out."
+    },
+    "notes": [
+      {
+        "title": "Bien que + subjonctif, même si + indicatif",
+        "body": "The single most common B2 slip in a debate. « Bien que ce soit un héritage » — subjunctive. « Même si c’est un héritage » — indicative. Quoique behaves like bien que; the false friend quoi que (two words) means whatever and is something else entirely. The three survival forms after bien que are soit, ait and puisse."
+      },
+      {
+        "title": "La Réunion — quatre religions, un seul calendrier",
+        "body": "Catholics, Tamil Hindus, Muslims and a Chinese community have shared the island since the nineteenth century, and Dipavali, l’Aïd, Noël and the Chinese New Year are all publicly marked. Interfaith marriage is ordinary rather than remarkable. In an exam, stay abstract — le vivre-ensemble, le métissage, la diversité religieuse. The Creole words « malbar » and « zarabe » belong to insiders: recognise them, don’t use them."
+      },
+      {
+        "title": "Quasquara — l’affaire en trois dates",
+        "body": "In 2022 the commune of Quasquara, in Corse-du-Sud, put up a cross at the entrance to the village. A resident asked for its removal, the mayor refused, and in 2025 the tribunal administratif de Bastia annulled that refusal. On 26 June 2026 the cour administrative d’appel de Marseille confirmed it: a cross erected in 2022, at a different spot from an older one, is a new religious sign and not the replacement of a pre-1905 cross."
+      },
+      {
+        "title": "« Porter plainte » is not the right verb here",
+        "body": "The press writes « après la plainte d’une habitante », and in everyday French that passes — but it is loose. Une plainte is criminal: you porter plainte against a person, at the police or the procureur. A cross on communal land is an administrative matter, so what you actually do is demander le retrait, then déposer un recours against the mayor’s refusal. Using the right one in an exam is a visible mark of register."
+      }
+    ],
+    "examples": [
+      "À La Réunion, quatre religions cohabitent dans le même village. (ko-a-BEET)",
+      "Les mariages mixtes y sont ordinaires depuis des générations. (lay ma-RYAZH MEEKST)",
+      "En Corse, la croix est autant un symbole identitaire qu’un symbole religieux. (sam-BOL ee-dahn-tee-TEHR)",
+      "La commune a érigé une croix à l’entrée du village en 2022. (a ay-ree-ZHAY ewn KRWAH)",
+      "Une habitante a déposé un recours devant le tribunal administratif. (day-po-ZAY uhn ruh-KOOR)",
+      "Bien que la croix soit un héritage local, le tribunal a ordonné son retrait. (byan kuh lah krwah SWAH)"
+    ],
+    "practice": [
+      "Bien que or même si? — « ___ la croix soit ancienne, elle date de 2022. » · « ___ la croix est ancienne, la loi s’applique. »",
+      "Contrast the two islands in four sentences, using alors que · contrairement à · en revanche · pourtant.",
+      "Tell the Quasquara story in six sentences, in the past, with the verbs from the second table.",
+      "Porter plainte or déposer un recours? — a stolen bike · a cross on communal land · a noisy neighbour · a refused building permit.",
+      "Answer out loud in two minutes: « Une croix peut-elle être culturelle plutôt que religieuse ? »",
+      "Now say what the two islands have in common — not only what separates them."
+    ],
+    "tutorPrompt": "Act as a DELF B2 examiner, in French throughout. The topic is two French islands: La Réunion, where Catholics, Tamil Hindus, Muslims and a Chinese community share the same calendar and interfaith marriage is ordinary, and la Corse, where a largely Catholic identity met the loi de 1905 in the affaire de la croix de Quasquara — a cross erected by the commune in 2022, a resident’s demande de retrait, the mayor’s refusal annulled by the tribunal administratif de Bastia in 2025, and the removal confirmed by the cour administrative d’appel de Marseille on 26 June 2026. Make me compare the two islands out loud, then defend a position on whether a cross can be « culturelle plutôt que religieuse ». Correct exactly two things per turn: the opposition connectors — alors que and même si take the indicative, bien que and quoique take the subjunctive, contrairement à takes a noun — and my choice between porter plainte and déposer un recours. Finish with three concrete fixes and the phrases I hesitated on."
   }
 ]

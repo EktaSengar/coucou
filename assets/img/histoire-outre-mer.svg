@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 386" width="640" height="386" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="A three-band timeline of the French overseas territories. First band, slavery, 1635 to 1848: in 1685 the Code Noir regulates slavery in the colonies; in 1794 the Convention abolishes it; in 1802 Napoleon restores it, a reversal; on 27 April 1848 the Schoelcher decree abolishes it for good. Second band, indenture and colony, 1848 to 1946: after abolition, l'engagisme brings indentured workers from India, which is the origin of the Tamil community of La Réunion. Third band, the départements, 1946 onwards: the law of 19 March 1946 makes the four old colonies French départements, with Aimé Césaire as its rapporteur; from 1963 the BUMIDOM organises migration to mainland France; in 2001 the loi Taubira recognises slavery and the slave trade as a crime against humanity.">
+  <style>
+    .t   { font-size: 17px; font-weight: 800; fill: #0f172a; }
+    .st  { font-size: 11px; font-style: italic; fill: #64748b; }
+    .era { font-size: 13px; font-weight: 800; fill: #0f172a; }
+    .yrs { font-size: 9px; font-style: italic; fill: #94a3b8; }
+    .y   { font-size: 10px; font-weight: 800; fill: #b45309; }
+    .ev  { font-size: 10px; fill: #334155; }
+    .rev { font-size: 10px; font-weight: 700; fill: #be123c; }
+    .ft  { font-size: 10px; fill: #475569; }
+  </style>
+
+  <rect width="640" height="386" fill="#ffffff"/>
+  <text x="320" y="24" text-anchor="middle" class="t">Comment l’outre-mer est devenu français</text>
+  <text x="320" y="42" text-anchor="middle" class="st">trois siècles en trois temps — et une abolition qu’il a fallu faire deux fois</text>
+
+  <!-- 1 · l'esclavage -->
+  <rect x="14" y="60" width="612" height="112" rx="10" fill="#fff1f2" stroke="#fda4af" stroke-width="1.5"/>
+  <text x="32" y="96" class="era">L’esclavage</text>
+  <text x="32" y="111" class="yrs">1635 – 1848</text>
+  <text x="190" y="86" class="y">1685</text><text x="234" y="86" class="ev">le Code Noir règle le statut des esclaves</text>
+  <text x="190" y="110" class="y">1794</text><text x="234" y="110" class="ev">la Convention abolit l’esclavage</text>
+  <text x="190" y="134" class="y">1802</text><text x="234" y="134" class="rev">Napoléon le rétablit — l’abolition est annulée</text>
+  <text x="190" y="158" class="y">1848</text><text x="234" y="158" class="ev" font-weight="700">le décret Schœlcher l’abolit pour de bon (27 avril)</text>
+
+  <!-- 2 · l'engagisme -->
+  <rect x="14" y="180" width="612" height="58" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="32" y="205" class="era">L’engagisme</text>
+  <text x="32" y="220" class="yrs">1848 – 1946</text>
+  <text x="190" y="205" class="y">après 1848</text><text x="266" y="205" class="ev">les plantations font venir des travailleurs engagés</text>
+  <text x="266" y="221" class="ev" font-style="italic" fill="#64748b">d’Inde surtout — d’où les temples tamouls de La Réunion</text>
+
+  <!-- 3 · les départements -->
+  <rect x="14" y="246" width="612" height="96" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="32" y="282" class="era">Les départements</text>
+  <text x="32" y="297" class="yrs">1946 – aujourd’hui</text>
+  <text x="190" y="272" class="y">1946</text><text x="234" y="272" class="ev" font-weight="700">les quatre vieilles colonies deviennent des départements</text>
+  <text x="234" y="287" class="ev" font-style="italic" fill="#64748b">la « loi d’assimilation » — Aimé Césaire en est le rapporteur</text>
+  <text x="190" y="308" class="y">1963</text><text x="234" y="308" class="ev">le BUMIDOM organise le départ vers l’Hexagone</text>
+  <text x="190" y="328" class="y">2001</text><text x="234" y="328" class="ev">la loi Taubira : un crime contre l’humanité</text>
+
+  <text x="320" y="368" text-anchor="middle" class="ft">Devenir un département fut une revendication d’égalité, portée par les élus d’outre-mer eux-mêmes.</text>
+</svg>

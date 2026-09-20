@@ -4665,6 +4665,111 @@
     "tutorPrompt": "Act as a DELF B2 oral examiner, in French throughout. Put this question to me: « Est-ce que vous pensez que les droits sont autant respectés dans les régions d'outre-mer qu'en France métropolitaine ? » Give me a minute to prepare, then make me answer in the DELF shape — introduction, plan annoncé, deux arguments avec exemples, conclusion — and push back three times. Draw on the real material: l'article premier, la différence entre l'article 73 et l'article 74, la croix dans l'espace public et la loi de 1905, et le fait que cette loi ne s'applique ni en Alsace-Moselle ni en Guyane. Correct exactly two things per turn: the comparison structures (aussi + adjectif/adverbe, autant + verbe, autant de + nom, never « aussi de »), and the subjunctive after « je ne pense pas que » — soient, ait, puisse. Finish with a DELF grid score and three concrete fixes."
   },
   {
+    "id": "b2-histoire-outre-mer",
+    "level": "B2",
+    "module": "France & its territories",
+    "title": "L'histoire — de l'esclavage à la départementalisation",
+    "minutes": 25,
+    "goal": "How the overseas territories became French — three centuries in three stages — and the tense you need to read any of it: le passé simple.",
+    "figures": [
+      {
+        "src": "./assets/img/histoire-outre-mer.svg?v=1",
+        "alt": "A three-band timeline. First band, l'esclavage, 1635 to 1848: in 1685 the Code Noir regulates the status of enslaved people; in 1794 the Convention abolishes slavery; in 1802 Napoléon restores it, cancelling the abolition; on 27 April 1848 the décret Schœlcher abolishes it for good. Second band, l'engagisme, 1848 to 1946: the plantations bring in indentured workers, mostly from India, which is the origin of the Tamil temples of La Réunion. Third band, les départements, 1946 to today: the four old colonies become French départements under the « loi d'assimilation », with Aimé Césaire as its rapporteur; from 1963 the BUMIDOM organises departure for mainland France; in 2001 the loi Taubira recognises slavery as a crime against humanity.",
+        "caption": "Read the middle band and the Tamil temples of lesson two stop being a curiosity — they are the direct consequence of what replaced slavery. And read the bottom one before you judge 1946: becoming a département was a demand for equality, made by the territories themselves."
+      }
+    ],
+    "vocab": [
+      { "fr": "l'esclavage", "phonetic": "less-kla-VAZH", "en": "slavery", "emoji": "⛓️" },
+      { "fr": "la traite négrière", "phonetic": "lah TRET nay-GRYEHR", "en": "the Atlantic slave trade", "emoji": "⚓" },
+      { "fr": "une plantation", "phonetic": "ewn plahn-ta-SYOHN", "en": "a plantation", "emoji": "🌾" },
+      { "fr": "un colon / une colonie", "phonetic": "uhn ko-LOHN / ewn ko-lo-NEE", "en": "a settler / a colony", "emoji": "🚩" },
+      { "fr": "abolir / l'abolition", "phonetic": "a-bo-LEER / la-bo-lee-SYOHN", "en": "to abolish / abolition", "emoji": "✊" },
+      { "fr": "un décret", "phonetic": "uhn day-KREH", "en": "a decree", "emoji": "📃" },
+      { "fr": "se révolter", "phonetic": "suh ray-vol-TAY", "en": "to rise up, to revolt", "emoji": "🔥" },
+      { "fr": "l'engagisme", "phonetic": "lahn-ga-ZEESM", "en": "indentured labour", "emoji": "📜" },
+      { "fr": "un travailleur engagé", "phonetic": "uhn tra-va-YUHR ahn-ga-ZHAY", "en": "an indentured worker", "emoji": "👷" },
+      { "fr": "la main-d'œuvre", "phonetic": "lah man-DUHVR", "en": "the workforce, labour", "emoji": "🛠️" },
+      { "fr": "la départementalisation", "phonetic": "lah day-par-tuh-mahn-ta-lee-za-SYOHN", "en": "becoming a French département", "emoji": "🏛️" },
+      { "fr": "l'assimilation", "phonetic": "la-see-mee-la-SYOHN", "en": "assimilation", "emoji": "🔗" },
+      { "fr": "la migration", "phonetic": "lah mee-gra-SYOHN", "en": "migration", "emoji": "✈️" },
+      { "fr": "la mémoire", "phonetic": "lah may-MWAHR", "en": "memory, remembrance", "emoji": "🕯️" },
+      { "fr": "un crime contre l'humanité", "phonetic": "uhn kreem kohntr lew-ma-nee-TAY", "en": "a crime against humanity", "emoji": "⚖️" },
+      { "fr": "une commémoration", "phonetic": "ewn ko-may-mo-ra-SYOHN", "en": "a commemoration", "emoji": "🗓️" }
+    ],
+    "grammar": {
+      "point": "Le passé simple — the tense you read but never speak",
+      "table": {
+        "title": "reconnaître le passé simple, et le rendre en passé composé",
+        "cols": ["l’infinitif", "passé simple", "ce que vous diriez"],
+        "rows": [
+          { "label": "être", "cells": ["il fut · ils furent", "il a été"] },
+          { "label": "avoir", "cells": ["il eut · ils eurent", "il a eu"] },
+          { "label": "faire", "cells": ["il fit · ils firent", "il a fait"] },
+          { "label": "devenir", "cells": ["il devint · ils devinrent", "il est devenu"] },
+          { "label": "abolir", "cells": ["il abolit · ils abolirent", "il a aboli"] },
+          { "label": "organiser", "cells": ["il organisa · ils organisèrent", "il a organisé"] }
+        ],
+        "highlight": ["il fut · ils furent", "il devint · ils devinrent"],
+        "note": "Two forms carry most history writing: fut and eut. Note the trap on the -ir verbs — « il abolit » is identical in the present and the passé simple, and only the surrounding dates tell you which one you are reading."
+      },
+      "table2": {
+        "title": "Sept dates, toutes au passé simple",
+        "cols": ["date", "ce qui se passa", "English"],
+        "rows": [
+          { "label": "1685", "cells": ["le Code Noir régla le statut des esclaves", "the Code Noir sets the rules"] },
+          { "label": "1794", "cells": ["la Convention abolit l’esclavage", "first abolition"] },
+          { "label": "1802", "cells": ["Napoléon le rétablit", "Napoléon restores it"] },
+          { "label": "1848", "cells": ["le décret Schœlcher l’abolit pour de bon", "abolished for good"] },
+          { "label": "après 1848", "cells": ["l’engagisme fit venir des Indiens", "indentured labour arrives"] },
+          { "label": "1946", "cells": ["les colonies devinrent des départements", "they become départements"] },
+          { "label": "1963", "cells": ["le BUMIDOM organisa les départs", "organised migration begins"] }
+        ],
+        "highlight": ["Napoléon le rétablit", "le décret Schœlcher l’abolit pour de bon"],
+        "note": "Every verb in the middle column is a passé simple, which is exactly how you will meet this timeline in a textbook or on a museum panel. Say the same seven lines in the passé composé and you have the spoken version: Napoléon l’a rétabli, le décret l’a aboli, elles sont devenues des départements."
+      },
+      "explain": "French keeps a separate tense for written narrative, and at B2 you read it rather than produce it. Le passé simple is what you meet in history books, museum captions and novels, while speech uses the passé composé for the very same events: « Napoléon rétablit l'esclavage » on the panel, « Napoléon a rétabli l'esclavage » in the café. The endings are regular enough — parler gives il parla, ils parlèrent — but the forms you actually need are the irregular ones, above all être and avoir: il fut, ils furent, il eut, ils eurent. Recognise those four and most historical prose opens up. One real ambiguity: for -ir verbs the third person singular is identical in the present, so « il abolit » is only datable from context."
+    },
+    "notes": [
+      {
+        "title": "Le passé simple — read it, don't say it",
+        "body": "Nobody speaks this tense. You meet it on a museum panel, in a history book or a novel, and you answer in the passé composé. Four forms open most of it: fut, furent, eut, eurent. The trap is the -ir verbs, where « il abolit » is spelled the same in the present — only the dates around it tell you which tense you are in."
+      },
+      {
+        "title": "Two abolitions, not one",
+        "body": "The Convention abolished slavery in 1794, but it was never applied everywhere — La Réunion refused it outright, and Martinique was under British occupation. Napoléon restored it in 1802, and Guadeloupe rose against the restoration under Louis Delgrès, who died at Matouba rather than submit. Only the décret of 27 April 1848, carried by Victor Schœlcher, ended it for good. That is why the date is a reversal and not a straight line."
+      },
+      {
+        "title": "L'engagisme — why La Réunion has Tamil temples",
+        "body": "Abolition did not end the plantations' hunger for labour, so from 1848 the colonies brought in travailleurs engagés on long contracts, above all from southern India. Those families are the direct origin of the Tamil community you met in the Réunion lesson — the temples, Dipavali, the surnames. Knowing this is what separates a description of le vivre-ensemble from an explanation of it."
+      },
+      {
+        "title": "1946 — the territories asked for it",
+        "body": "The law of 19 March 1946 was known as the loi d'assimilation, and it was pushed by the colonies' own elected representatives. Aimé Césaire, deputy for Martinique and one of the great poets of the century, was its rapporteur. Becoming a département was a demand for equality, not something done to them — which is exactly the promise that the question « are the rights the same everywhere? » measures against."
+      },
+      {
+        "title": "Le BUMIDOM — a migration the State organised",
+        "body": "From 1963 to the early 1980s a state body, the Bureau pour le développement des migrations, arranged departures from the DOM to fill labour shortages in mainland France. Tens of thousands went through it directly, and far more followed on their own. It is remembered very unevenly — as an opportunity by some, as an organised drain by others — and that argument is still live."
+      }
+    ],
+    "examples": [
+      "En 1685, le Code Noir régla le statut des esclaves dans les colonies. (luh kod NWAHR)",
+      "La Convention abolit l'esclavage en 1794, mais Napoléon le rétablit en 1802. (nah-po-lay-OHN luh ray-ta-BLEE)",
+      "Le décret du 27 avril 1848 abolit l'esclavage pour de bon. (dew vangt-set a-VREEL)",
+      "Après l'abolition, l'engagisme fit venir des travailleurs indiens. (lahn-ga-ZEESM fee vuh-NEER)",
+      "En 1946, les quatre vieilles colonies devinrent des départements français. (duh-VANR day day-par-tuh-MAHN)",
+      "Aujourd'hui on dirait plutôt : Napoléon a rétabli l'esclavage. (a ray-ta-BLEE)"
+    ],
+    "practice": [
+      "Put these into the passé composé: il fut · elle devint · ils abolirent · il fit · elle prit · ils organisèrent.",
+      "Read the seven dates aloud, then tell the same story again in the passé composé.",
+      "Which year? — le Code Noir · la première abolition · le rétablissement · le décret Schœlcher · la départementalisation.",
+      "Explain « l'engagisme » in French in three sentences, and say what it has to do with the temples of La Réunion.",
+      "Spot the trap: « il finit », « il abolit » — present or passé simple? What tells you?",
+      "Answer out loud in two minutes: « La départementalisation de 1946 a-t-elle tenu ses promesses ? »"
+    ],
+    "tutorPrompt": "Act as a French history tutor at B2, in French throughout. The subject is how the outre-mer became French: le Code Noir in 1685, the abolition of 1794 that was never fully applied, its rétablissement by Napoléon in 1802 and the revolt of Louis Delgrès at Matouba, the décret Schœlcher of 27 April 1848, l'engagisme that brought indentured workers from India and created the Tamil community of La Réunion, the loi de départementalisation of 19 March 1946 with Aimé Césaire as rapporteur, the BUMIDOM from 1963, and the loi Taubira of 2001. First give me a short written paragraph in the passé simple and make me translate it into the spoken passé composé. Then question me on the chronology, and finish by making me argue whether 1946 kept its promise. Correct exactly two things per turn: my passé simple recognition — especially fut, furent, eut, eurent, devint, devinrent — and my dates. End with three concrete fixes and the phrases I hesitated on."
+  },
+  {
     "id": "b2-reunion-corse",
     "level": "B2",
     "module": "France & its territories",

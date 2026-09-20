@@ -4444,114 +4444,105 @@
     "id": "b2-outre-mer",
     "level": "B2",
     "module": "Holding your own",
-    "title": "L'outre-mer — laïcité, territoires & égalité des droits",
-    "minutes": 30,
-    "goal": "Answer the class question — « les droits sont-ils autant respectés outre-mer qu'en métropole ? » — with the comparison structures it is built from, the opinion-verb switch that marks a B2 speaker, and three cases you can actually cite: La Réunion, la Corse, la Guadeloupe.",
+    "title": "L'outre-mer — les mêmes droits partout ?",
+    "minutes": 25,
+    "goal": "Answer the class debate question — are rights as well respected outre-mer as in mainland France? — with the two structures it takes, and three cases you can actually cite.",
+    "figures": [
+      {
+        "src": "./assets/img/outre-mer-carte.svg?v=1",
+        "alt": "A world map of the French overseas territories. In the Atlantic: Guadeloupe, Martinique and Guyane under article 73, Saint-Martin, Saint-Barthélemy and Saint-Pierre-et-Miquelon under article 74. In the Indian Ocean: Mayotte and La Réunion under article 73. In the Pacific, which wraps round both edges of the map: Wallis-et-Futuna and la Polynésie française under article 74, and la Nouvelle-Calédonie under title XIII of the Constitution. Mainland France is marked in Europe, with la Corse flagged separately as not outre-mer. Below, three distance bars from Paris: 6 700 km to Pointe-à-Pitre, 9 350 km to Saint-Denis de La Réunion, 15 700 km to Papeete.",
+        "caption": "Same Republic, same Constitution, three oceans. The colour is the legal status: article 73 takes French law directly, article 74 has a statute of its own. La Corse is on the map precisely to show it is not on that list."
+      },
+      {
+        "src": "./assets/img/laicite-1905.svg?v=1",
+        "alt": "A schematic of where the 1905 law of separation does not apply. Mainland France is drawn as a stylised hexagon under the 1905 law, with one amber area at its north-east corner: Alsace-Moselle, German in 1905 and still under the Concordat of 1801, where the state pays priests, pastors and rabbis and religion is taught in public schools. La Corse sits below the hexagon, under the 1905 law. A separate amber box 7 000 km away shows Guyane in South America, where an 1828 royal ordinance still stands and the collectivité pays the Catholic clergy.",
+        "caption": "The 1905 law is the rule everywhere except the two amber patches — one in the Hexagone, one outre-mer. Whichever side of the debate you argue, this is the fact worth having ready."
+      }
+    ],
     "vocab": [
       { "fr": "l'outre-mer", "phonetic": "loo-truh-MEHR", "en": "France's overseas territories", "emoji": "🌍" },
-      { "fr": "un département d'outre-mer (un DOM)", "phonetic": "uhn day-par-tuh-MAHN doo-truh-MEHR", "en": "an overseas department", "emoji": "🏝️" },
       { "fr": "la métropole / l'Hexagone", "phonetic": "lah may-tro-POL / lek-sa-GON", "en": "mainland France", "emoji": "🇫🇷" },
-      { "fr": "ultramarin(e)", "phonetic": "ewl-tra-ma-RAN", "en": "from the overseas territories", "emoji": "🌴" },
       { "fr": "la laïcité", "phonetic": "lah la-ee-see-TAY", "en": "laïcité — the state's religious neutrality", "emoji": "⚖️" },
-      { "fr": "la liberté de culte", "phonetic": "lah lee-behr-TAY duh KEWLT", "en": "freedom of worship", "emoji": "🕊️" },
       { "fr": "un lieu de culte", "phonetic": "uhn lyuh duh KEWLT", "en": "a place of worship", "emoji": "🛐" },
-      { "fr": "une église / une mosquée / un temple", "phonetic": "ewn ay-GLEEZ / ewn mos-KAY / uhn TAHMPL", "en": "a church / a mosque / a temple", "emoji": "🕌" },
       { "fr": "une croix", "phonetic": "ewn KRWAH", "en": "a cross", "emoji": "✝️" },
       { "fr": "un signe religieux", "phonetic": "uhn see-nyuh ruh-lee-ZHYUH", "en": "a religious sign or symbol", "emoji": "☪️" },
       { "fr": "l'espace public", "phonetic": "less-PASS pew-BLEEK", "en": "the public space", "emoji": "🏛️" },
       { "fr": "le vivre-ensemble", "phonetic": "luh vee-vruh-ahn-SAHMBL", "en": "living together, social harmony", "emoji": "🤝" },
       { "fr": "le métissage", "phonetic": "luh may-tee-SAZH", "en": "cultural and ethnic mixing", "emoji": "🧬" },
-      { "fr": "la créolité / le créole", "phonetic": "lah kray-o-lee-TAY / luh kray-OL", "en": "Creole identity / the Creole language", "emoji": "🗣️" },
-      { "fr": "une collectivité territoriale", "phonetic": "ewn ko-lek-tee-vee-TAY teh-ree-to-RYAL", "en": "a territorial authority", "emoji": "🗺️" },
       { "fr": "l'autonomie", "phonetic": "lo-to-no-MEE", "en": "autonomy", "emoji": "🔓" },
       { "fr": "une revendication", "phonetic": "ewn ruh-vahn-dee-ka-SYOHN", "en": "a demand, a political claim", "emoji": "✊" },
       { "fr": "la pénurie d'eau", "phonetic": "lah pay-new-REE DOH", "en": "the water shortage", "emoji": "🚱" },
       { "fr": "les tours d'eau", "phonetic": "lay toor DOH", "en": "rotating water cuts", "emoji": "🚰" },
       { "fr": "un réseau vétuste", "phonetic": "uhn ray-ZOH vay-TEWST", "en": "a crumbling, decrepit network", "emoji": "🔧" },
-      { "fr": "une fuite d'eau", "phonetic": "ewn FWEET DOH", "en": "a water leak", "emoji": "💧" },
-      { "fr": "l'assainissement", "phonetic": "la-say-neess-MAHN", "en": "sanitation, waste-water treatment", "emoji": "♻️" },
       { "fr": "une inégalité", "phonetic": "ewn ee-nay-ga-lee-TAY", "en": "an inequality", "emoji": "📉" },
-      { "fr": "un droit fondamental", "phonetic": "uhn DRWAH fohn-da-mahn-TAL", "en": "a fundamental right", "emoji": "📜" },
       { "fr": "l'égalité devant la loi", "phonetic": "lay-ga-lee-TAY duh-VAHN lah LWAH", "en": "equality before the law", "emoji": "🟰" }
     ],
     "grammar": {
-      "point": "Comparing two places, and what happens to the verb when you disagree",
+      "point": "Saying « as … as » — and what changes the moment you disagree",
       "table": {
-        "title": "« as … as » — where French splits and English doesn't",
-        "cols": ["on compare…", "la structure", "en contexte"],
+        "title": "French splits « as … as » three ways",
+        "cols": ["on compare…", "la structure", "exemple"],
         "rows": [
           { "label": "① un adjectif", "cells": ["aussi + adjectif + que", "aussi respectés qu'en métropole"] },
           { "label": "② un adverbe", "cells": ["aussi + adverbe + que", "aussi souvent qu'ici"] },
           { "label": "③ un verbe", "cells": ["verbe + autant que", "on investit autant qu'ailleurs"] },
-          { "label": "④ un nom", "cells": ["autant de + nom + que", "autant de moyens que l'Hexagone"] },
-          { "label": "⑤ supériorité", "cells": ["plus / moins + adjectif + que", "moins bien desservie que la métropole"] },
-          { "label": "⑥ une quantité", "cells": ["plus de / moins de + nom + que", "moins de médecins qu'en métropole"] }
+          { "label": "④ un nom", "cells": ["autant de + nom + que", "autant de moyens que l'Hexagone"] }
         ],
         "highlight": ["aussi + adjectif + que", "autant de + nom + que"],
-        "note": "Aussi goes with words — adjectives and adverbs. Autant goes with amounts — how much a verb happens, or, with de, how many of a noun there are. The only bridge you need is that de: autant de moyens, never « aussi de moyens ». And the que of a comparison elides like any other: qu'en métropole, qu'ici, qu'ailleurs."
+        "note": "Aussi goes with words, autant with amounts. The one bridge is de: autant de moyens, never « aussi de moyens »."
       },
       "table2": {
-        "title": "« Je pense que… » — and what changes the moment you disagree",
+        "title": "« Je pense que… » — until you disagree",
         "cols": ["", "ce qu'on dit", "le verbe qui suit"],
         "rows": [
-          { "label": "on affirme", "cells": ["Je pense que… / Je trouve que…", "indicatif — les droits sont respectés"] },
+          { "label": "on affirme", "cells": ["Je pense que…", "indicatif — les droits sont respectés"] },
           { "label": "on nie", "cells": ["Je ne pense pas que…", "subjonctif — les droits soient respectés"] },
-          { "label": "on demande", "cells": ["Pensez-vous que… ?", "subjonctif si la question porte un doute"] },
           { "label": "c'est sûr", "cells": ["Il est évident que…", "indicatif — qu'il y a un problème"] },
-          { "label": "c'est possible", "cells": ["Il est possible que…", "subjonctif — qu'il y ait un problème"] },
-          { "label": "la nuance", "cells": ["Il me semble que… / Il semble que…", "indicatif / subjonctif"] }
+          { "label": "c'est possible", "cells": ["Il est possible que…", "subjonctif — qu'il y ait un problème"] }
         ],
         "highlight": ["subjonctif — les droits soient respectés", "subjonctif — qu'il y ait un problème"],
-        "note": "The rule isn't about how much doubt is in your head, it's about whether the sentence still asserts the thing. « Je pense que » asserts it, so indicative; « je ne pense pas que » withdraws the assertion, so subjunctive. Two forms cover most of what you'll need under exam pressure: être → soient, avoir → ait."
+        "note": "It isn't about how much doubt is in your head — it's about whether the sentence still asserts the thing. Two forms cover most of it: être → soient, avoir → ait."
       },
-      "explain": "The class question — « Est-ce que vous pensez que les droits sont autant respectés dans les régions d'outre-mer qu'en France métropolitaine ? » — is built out of exactly two structures, and you need both before you can answer it. The first is the comparison of equality, where French splits a distinction English doesn't make: aussi stands in front of an adjective or an adverb, autant attaches to a verb, and autant de attaches to a noun. Say « aussi de moyens » and an examiner hears it instantly. Notice also that the question itself uses autant with a past participle — « autant respectés » — which is the looser spoken form; the tighter written version is aussi bien respectés, since what you're really comparing is how well, an adverb. The second structure is what happens after a verb of opinion. Je pense que takes the indicative because you're asserting something; negate it and French treats the idea as no longer asserted, so it flips to the subjunctive — je ne pense pas que les droits soient respectés. The same flip catches croire, trouver and être sûr, while the doubt expressions — il est possible que, il se peut que, il semble que — take the subjunctive from the start. In an oral exam this is the single most visible B2 marker you have, because the moment you disagree with the examiner, your grammar has to move with you. On the content side, three distinctions will keep your argument honest, and each has a note below: l'outre-mer is not one legal category, la Corse is not outre-mer at all, and la laïcité is not the English word secular."
+      "explain": "The class question is built from both tables at once. « Les droits sont-ils autant respectés outre-mer qu'en métropole ? » needs the first one: French puts aussi in front of an adjective or an adverb, autant after a verb, and autant de in front of a noun. English makes none of those distinctions, which is why « aussi de moyens » is the slip an examiner hears first. Answering it needs the second: je pense que asserts something, so it takes the indicative — negate it and the sentence stops asserting, so it flips to the subjunctive. Je ne pense pas que les droits soient respectés. That flip is the most visible B2 marker you have, because it fires the moment you disagree."
     },
     "notes": [
       {
-        "title": "L'outre-mer is not one category — and la Corse isn't in it",
-        "body": "Five territories are départements et régions d'outre-mer under article 73 of the Constitution — la Guadeloupe, la Martinique, la Guyane, La Réunion and Mayotte — and French law applies there directly, with limited adaptations. The rest sit under article 74 as collectivités d'outre-mer with statutes of their own: la Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, Wallis-et-Futuna. La Nouvelle-Calédonie has an entire title of the Constitution to itself. La Corse is none of the above — it is a collectivité à statut particulier inside metropolitan France, so its autonomy debate is a different argument with a different legal basis, even when a class puts the two in the same hour."
+        "title": "L'outre-mer is two categories — and la Corse is in neither",
+        "body": "The map above is the note. Article 73 means French law applies directly; article 74 means a statute of its own. La Corse is on neither list — it sits inside metropolitan France with a special status, so its autonomy debate rests on different ground."
       },
       {
-        "title": "Article premier is the sentence the whole debate turns on",
-        "body": "« La France est une République indivisible, laïque, démocratique et sociale. Elle assure l'égalité devant la loi de tous les citoyens sans distinction d'origine, de race ou de religion. » Learn it: it is quotable in the DELF oral and it comes up in the naturalisation interview. It also hands you both halves of the class question — indivisible and l'égalité devant la loi are the promise, and the question is whether that promise holds seven thousand kilometres from Paris. Watch the word class: the Republic is laïque (adjective), the principle is la laïcité (noun)."
+        "title": "Article premier — learn the sentence",
+        "body": "« La France est une République indivisible, laïque, démocratique et sociale. Elle assure l'égalité devant la loi de tous les citoyens sans distinction d'origine, de race ou de religion. » Quotable in the DELF oral, and it comes up in the naturalisation interview. It also hands you both sides of the debate at once."
       },
       {
-        "title": "La loi de 1905, article 28, and why a croix ends up in court",
-        "body": "The law separating the churches from the state forbids putting up « aucun signe ou emblème religieux » on public monuments or in any public place. The exceptions are the predictable ones — lieux de culte, cemeteries and funerary monuments, museums and exhibitions — and anything already standing in 1905 is left alone, which is why every village church keeps its cross. That is the whole reason a newly erected croix on communal land becomes a case for the tribunal administratif rather than a local argument. The reference decision is the Conseil d'État's 2017 ruling on the Jean-Paul II memorial at Ploërmel: the statue could stay, the arch above it could stay, the cross crowning it could not."
+        "title": "La croix dans l’espace public — la règle de 1905",
+        "body": "The 1905 law forbids new religious signs on public land; anything older is left alone, which is why every village church keeps its cross. Put up a new one and it becomes a case for the tribunal administratif — Ploërmel, 2017, where the Conseil d'État let the statue stay and took the cross down. The two places the law never reached are in the second figure above."
       },
       {
-        "title": "…but la laïcité is not applied identically everywhere",
-        "body": "The strongest card in this debate, and one most people outside France have never heard. The 1905 law does not apply in Alsace-Moselle, which was German when it passed and still runs under the Concordat of 1801: priests, pastors and rabbis there are paid by the state, and religion is taught in public schools. Nor does it apply in Guyane, where a royal ordinance of 1828 still stands and the Catholic clergy is paid by the collectivité territoriale. So the République indivisible et laïque already contains two legal exceptions — one in the Hexagone, one outre-mer. Whichever side you end up arguing, have that ready."
+        "title": "La Réunion — le vivre-ensemble",
+        "body": "France's standard reference for religious coexistence: churches, Tamil temples, mosques and Chinese pagodas within the same few streets, and Dipavali, l'Aïd and Noël all publicly marked. In an exam, stay abstract — le vivre-ensemble, le métissage, la diversité religieuse. The Creole words « malbar » and « zarabe » belong to insiders: recognise them, don't use them."
       },
       {
-        "title": "La Réunion — the vivre-ensemble example, and its local words",
-        "body": "The island is France's standard reference for religious coexistence: Catholic churches, Tamil temples, mosques and Chinese pagodas often within the same few streets, and a calendar in which Dipavali, l'Aïd, Noël and the Chinese New Year are all publicly marked. In Reunionese Creole the Tamil community is called « malbar » and the Muslim community of Gujarati origin « zarabe » — recognise them when a documentary uses them, but they belong to insiders and are not yours to deploy. The register that is safe in an exam is the abstract one: le vivre-ensemble, le métissage, la créolité, la diversité religieuse, le syncrétisme."
-      },
-      {
-        "title": "L'eau en Guadeloupe — the concrete case the question is asking for",
-        "body": "A vague answer about inequality scores badly; this is the example that makes it real. The island's distribution network is vétuste enough that a large share of the water never reaches a tap — the leaks are counted in tens of percent — and whole neighbourhoods live on des tours d'eau, scheduled rotations where the supply is simply cut for a day or more at a time. Since 2021 a single body, le SMGEAG, has run water and assainissement across the island. Pair it with le chlordécone, the pesticide used in the banana plantations of Guadeloupe and Martinique until 1993 and still in the soil for centuries to come, and you have two documented cases of a right that exists identically on paper and unevenly in practice."
+        "title": "L'eau en Guadeloupe — the example that makes it concrete",
+        "body": "The network is vétuste enough that a large share of the water never reaches a tap, and whole neighbourhoods live on des tours d'eau — the supply cut for a day or more at a time, on rotation. Add le chlordécone, the pesticide used in the banana plantations until 1993 and in the soil for centuries, and you have two documented cases instead of a vague claim."
       }
     ],
     "examples": [
       "La Réunion est souvent citée comme un modèle de vivre-ensemble. (lah ray-ew-NYOHN)",
       "Dans la même rue, on peut trouver une église, un temple tamoul et une mosquée. (uhn TAHMPL ta-MOOL)",
-      "La loi de 1905 interdit d'élever un signe religieux dans l'espace public. (day-luh-VAY uhn SEE-nyuh)",
       "Une croix installée sur un terrain communal peut être contestée devant le tribunal administratif. (ewn KRWAH ann-sta-LAY)",
-      "L'article premier dit que la France est une République indivisible, laïque, démocratique et sociale. (ann-dee-vee-ZEEBL, la-EEK)",
       "En Guadeloupe, les tours d'eau privent certains quartiers d'eau pendant plusieurs jours. (lay toor DOH)",
       "Je ne pense pas que les droits soient aussi bien respectés qu'en métropole. (kuh lay drwah SWAHN)",
       "Les services publics sont-ils aussi efficaces outre-mer que dans l'Hexagone ? (oh-SEE ay-fee-KASS)"
     ],
     "practice": [
       "Fill the gap with aussi · autant · autant de: « Il n'y a pas ___ investissements qu'en métropole. » · « L'eau n'est pas ___ fiable qu'ici. » · « On n'en parle pas ___ que des sujets métropolitains. »",
-      "Say the same opinion twice — once with « Je pense que… », once with « Je ne pense pas que… » — and change the verb correctly.",
+      "Say the same opinion twice — once with « Je pense que… », once with « Je ne pense pas que… » — and change the verb.",
       "Answer the class question out loud in ninety seconds, with one example from La Réunion and one from la Guadeloupe.",
-      "Article 73, article 74, or neither? — la Guadeloupe · la Polynésie française · la Corse · La Réunion · Mayotte.",
-      "Explain « la laïcité » to an English-speaking friend, in French, in three sentences, without using the word « secular ».",
-      "Read the water vocabulary aloud — la pénurie · les tours d'eau · un réseau vétuste · une fuite · l'assainissement — then put three of them in one sentence.",
-      "Build the full DELF shape: « D'un côté… », « D'un autre côté… », « En fin de compte… » — one paragraph each."
+      "Article 73, article 74, or neither? — la Guadeloupe · la Polynésie française · la Corse · La Réunion.",
+      "Build the DELF shape: « D'un côté… », « D'un autre côté… », « En fin de compte… » — one paragraph each."
     ],
-    "tutorPrompt": "Act as a DELF B2 oral examiner and stay in French at B2 throughout. Put this question to me: « Est-ce que vous pensez que les droits sont autant respectés dans les régions d'outre-mer qu'en France métropolitaine ? » Give me one minute to prepare, then make me present a structured answer — introduction, plan annoncé, deux arguments avec exemples, conclusion. Push back with three hard follow-ups, and use the real material: la crise de l'eau et les tours d'eau en Guadeloupe, le chlordécone, le vivre-ensemble à La Réunion, la loi de 1905 et la croix dans l'espace public, l'article premier de la Constitution, les revendications d'autonomie en Corse, and the fact that la laïcité de 1905 ne s'applique ni en Alsace-Moselle ni en Guyane. Correct exactly two things every turn: the comparison structures — aussi + adjectif/adverbe, autant + verbe, autant de + nom, and never « aussi de » — and the mood after a verb of opinion, since « je ne pense pas que » must take the subjunctive (soient, ait, puisse, fasse). At the end, score me on the DELF oral grid and give me three concrete fixes plus every phrase I hesitated on."
+    "tutorPrompt": "Act as a DELF B2 oral examiner, in French throughout. Put this question to me: « Est-ce que vous pensez que les droits sont autant respectés dans les régions d'outre-mer qu'en France métropolitaine ? » Give me a minute to prepare, then make me answer in the DELF shape — introduction, plan annoncé, deux arguments avec exemples, conclusion — and push back three times. Draw on the real material: les tours d'eau et le chlordécone en Guadeloupe, le vivre-ensemble à La Réunion, la croix dans l'espace public et la loi de 1905, l'article premier, les revendications d'autonomie en Corse. Correct exactly two things per turn: the comparison structures (aussi + adjectif/adverbe, autant + verbe, autant de + nom, never « aussi de »), and the subjunctive after « je ne pense pas que » — soient, ait, puisse. Finish with a DELF grid score and three concrete fixes."
   },
   {
     "id": "b2-07-lettre-formelle",

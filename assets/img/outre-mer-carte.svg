@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 396" width="640" height="396" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="A world map of the French overseas territories. In the Atlantic: Guadeloupe, Martinique and Guyane under article 73, Saint-Martin, Saint-Barthelemy and Saint-Pierre-et-Miquelon under article 74. In the Indian Ocean: Mayotte and La Reunion under article 73. In the Pacific, which wraps round both edges of the map: Wallis-et-Futuna and Polynesie francaise under article 74, and Nouvelle-Caledonie under title 13 of the Constitution. Mainland France is marked in Europe, with Corsica flagged separately as not outre-mer but a special-status authority inside metropolitan France. Below, three distance bars from Paris: 6700 km to Pointe-a-Pitre, 9350 km to Saint-Denis de La Reunion, 15700 km to Papeete.">
+  <style>
+    .t  { font-size: 17px; font-weight: 800; fill: #0f172a; }
+    .st { font-size: 11px; font-style: italic; fill: #64748b; }
+    .lb { font-size: 10.5px; font-weight: 700; fill: #0f172a; }
+    .sb { font-size: 9px; fill: #64748b; }
+    .oc { font-size: 9.5px; font-style: italic; fill: #94a3b8; letter-spacing: .08em; }
+    .lg { font-size: 9.5px; fill: #334155; }
+    .dk { font-size: 10px; font-weight: 700; fill: #0f172a; }
+    .dv { font-size: 10px; fill: #475569; }
+  </style>
+  <rect width="640" height="396" fill="#ffffff"/>
+  <text x="320.0" y="25" text-anchor="middle" class="t">La France est dans trois océans</text>
+  <text x="320.0" y="43" text-anchor="middle" class="st">même République, même Constitution — et jusqu’à 15 700 km d’écart</text>
+  <rect x="0" y="62" width="640" height="218" fill="#f8fafc"/>
+  <line x1="53.3" y1="62" x2="53.3" y2="280" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="106.7" y1="62" x2="106.7" y2="280" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="160.0" y1="62" x2="160.0" y2="280" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="213.3" y1="62" x2="213.3" y2="280" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="266.7" y1="62" x2="266.7" y2="280" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="320.0" y1="62" x2="320.0" y2="280" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="373.3" y1="62" x2="373.3" y2="280" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="426.7" y1="62" x2="426.7" y2="280" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="480.0" y1="62" x2="480.0" y2="280" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="533.3" y1="62" x2="533.3" y2="280" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="586.7" y1="62" x2="586.7" y2="280" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="0" y1="133.1" x2="640" y2="133.1" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="0" y1="275.3" x2="640" y2="275.3" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="0" y1="204.2" x2="640" y2="204.2" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="6" y="199.2" class="oc">ÉQUATEUR</text>
+  <text x="266.7" y="273.0" text-anchor="middle" class="oc">ATLANTIQUE</text>
+  <text x="458.7" y="273.0" text-anchor="middle" class="oc">OCÉAN INDIEN</text>
+  <text x="106.7" y="76.0" text-anchor="middle" class="oc">PACIFIQUE</text>
+  <text x="568.9" y="76.0" text-anchor="middle" class="oc">PACIFIQUE</text>
+  <text x="4" y="273.0" class="oc">◀ suite</text>
+  <text x="636" y="273.0" text-anchor="end" class="oc">suite ▶</text>
+  <circle cx="324.2" cy="88.4" r="5" fill="#0f172a"/>
+  <text x="334.2" y="85.4" class="lb">la métropole</text>
+  <text x="334.2" y="95.4" class="sb">l’Hexagone</text>
+  <circle cx="335.5" cy="104.7" r="3.5" fill="#ffffff" stroke="#e11d48" stroke-width="2"/>
+  <line x1="338.5" y1="108.7" x2="349.5" y2="126.7" stroke="#e11d48" stroke-width="1"/>
+  <text x="352.5" y="126.7" class="lb" fill="#e11d48">la Corse</text>
+  <text x="352.5" y="136.7" class="sb" fill="#e11d48">n’est pas l’outre-mer</text>
+  <circle cx="211.0" cy="167.7" r="5" fill="#2563eb"/>
+  <text x="201.0" y="170.7" text-anchor="end" class="lb">Guadeloupe · Martinique</text>
+  <text x="201.0" y="180.7" text-anchor="end" class="sb">art. 73</text>
+  <circle cx="225.6" cy="194.7" r="5" fill="#2563eb"/>
+  <text x="215.6" y="197.7" text-anchor="end" class="lb">Guyane</text>
+  <text x="215.6" y="207.7" text-anchor="end" class="sb">art. 73</text>
+  <circle cx="400.4" cy="234.5" r="5" fill="#2563eb"/>
+  <text x="390.4" y="230.5" text-anchor="end" class="lb">Mayotte</text>
+  <text x="390.4" y="240.5" text-anchor="end" class="sb">art. 73</text>
+  <circle cx="418.7" cy="254.2" r="5" fill="#2563eb"/>
+  <text x="428.7" y="242.2" text-anchor="start" class="lb">La Réunion</text>
+  <text x="428.7" y="252.2" text-anchor="start" class="sb">art. 73</text>
+  <circle cx="208.0" cy="161.0" r="5" fill="#d97706"/>
+  <text x="198.0" y="148.0" text-anchor="end" class="lb">St-Martin · St-Barth</text>
+  <text x="198.0" y="158.0" text-anchor="end" class="sb">art. 74</text>
+  <circle cx="219.9" cy="92.8" r="5" fill="#d97706"/>
+  <text x="209.9" y="95.8" text-anchor="end" class="lb">St-Pierre-et-Miquelon</text>
+  <text x="209.9" y="105.8" text-anchor="end" class="sb">art. 74</text>
+  <circle cx="54.4" cy="245.9" r="5" fill="#d97706"/>
+  <text x="64.4" y="259.9" text-anchor="start" class="lb">Polynésie française</text>
+  <text x="64.4" y="269.9" text-anchor="start" class="sb">art. 74</text>
+  <circle cx="6.8" cy="235.7" r="5" fill="#d97706"/>
+  <text x="16.8" y="223.7" text-anchor="start" class="lb">Wallis-et-Futuna</text>
+  <text x="16.8" y="233.7" text-anchor="start" class="sb">art. 74</text>
+  <circle cx="614.2" cy="254.6" r="5" fill="#7c3aed"/>
+  <text x="604.2" y="242.6" text-anchor="end" class="lb">Nouvelle-Calédonie</text>
+  <text x="604.2" y="252.6" text-anchor="end" class="sb">titre XIII</text>
+  <circle cx="14" cy="298.5" r="4.5" fill="#2563eb"/>
+  <text x="25" y="302" class="lg">art. 73 — la loi française s’applique directement</text>
+  <circle cx="300" cy="298.5" r="4.5" fill="#d97706"/>
+  <text x="311" y="302" class="lg">art. 74 — statut propre</text>
+  <circle cx="440" cy="298.5" r="4.5" fill="#7c3aed"/>
+  <text x="451" y="302" class="lg">titre XIII — la Nouvelle-Calédonie</text>
+  <text x="14" y="328.0" class="dk">Depuis Paris</text>
+  <text x="14" y="347.0" class="dv">Pointe-à-Pitre</text>
+  <rect x="200" y="338.0" width="149.4" height="9" rx="4.5" fill="#bfdbfe"/>
+  <text x="356.4" y="347.0" class="dv">6 700 km</text>
+  <text x="14" y="363.0" class="dv">Saint-Denis de La Réunion</text>
+  <rect x="200" y="354.0" width="208.4" height="9" rx="4.5" fill="#bfdbfe"/>
+  <text x="415.4" y="363.0" class="dv">9 350 km</text>
+  <text x="14" y="379.0" class="dv">Papeete</text>
+  <rect x="200" y="370.0" width="350.0" height="9" rx="4.5" fill="#bfdbfe"/>
+  <text x="557.0" y="379.0" class="dv">15 700 km</text>
+</svg>

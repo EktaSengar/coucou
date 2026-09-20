@@ -3346,6 +3346,106 @@
     "tutorPrompt": "Be my B1 French tutor for the imparfait. Start by testing the recipe: give me infinitives and make me say the nous form, the stem, then the je form — and include prendre, faire, voir, venir and boire, so I see that the irregular verbs behave. Check I know être is the only exception. Then correct three specific things as we talk. ① Pronunciation: faisais, faisait, faisions are « fuh-ZEH », never « feh-ZEH ». ② The double i in nous étudiions, nous voyions, nous travaillions. ③ The spelling of commençais and mangeais. After that, ask me about my childhood and my first months in France, and push me to mix the two tenses — backdrop in the imparfait, events in the passé composé, joined with pendant que or quand. If I put an event in the imparfait, stop me and ask what was going on versus what happened. Finish with the verbs I still build wrong."
   },
   {
+    "id": "b1-pc-imparfait",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "La photo et le film — passé composé ou imparfait ?",
+    "minutes": 25,
+    "goal": "Stop guessing between the two past tenses. One question decides almost every case — and six verbs change meaning depending on which one you pick.",
+    "figures": [
+      {
+        "src": "./assets/img/pc-imparfait.svg?v=1",
+        "alt": "A diagram contrasting the two French past tenses. A long blue band runs the full width with an ellipsis at each end, labelled IMPARFAIT, le décor qui dure, and containing il pleuvait, il faisait nuit, je dormais. A single amber pin drops into the band from above, labelled PASSÉ COMPOSÉ, le téléphone a sonné — the thing that happens and cuts into the scene. Underneath, the whole sentence: « Je dormais quand le téléphone a sonné. » Below, two columns of trigger words: autrefois, à l'époque, d'habitude, tous les jours and pendant que call for the imparfait; soudain, tout à coup, un jour, puis, enfin and trois fois call for the passé composé.",
+        "caption": "The blue band is already running when the picture starts and is still running when it ends — that is the imparfait. The amber pin is a single thing that happens and is over. Almost every choice you have to make is this picture."
+      }
+    ],
+    "vocab": [
+      { "fr": "il était une fois", "phonetic": "ee-lay-tew-nuh FWAH", "en": "once upon a time", "emoji": "🧚" },
+      { "fr": "autrefois", "phonetic": "oh-truh-FWAH", "en": "in the old days, formerly", "emoji": "🕰️" },
+      { "fr": "à l'époque", "phonetic": "a lay-POK", "en": "at the time, back then", "emoji": "📻" },
+      { "fr": "d'habitude", "phonetic": "da-bee-TEWD", "en": "usually", "emoji": "🗓️" },
+      { "fr": "tous les jours", "phonetic": "too lay ZHOOR", "en": "every day", "emoji": "🔁" },
+      { "fr": "pendant que", "phonetic": "pahn-dahn KUH", "en": "while (two things at once)", "emoji": "⏳" },
+      { "fr": "soudain / tout à coup", "phonetic": "soo-DAN / too ta KOO", "en": "suddenly", "emoji": "⚡" },
+      { "fr": "un jour", "phonetic": "uhn ZHOOR", "en": "one day", "emoji": "📅" },
+      { "fr": "puis / ensuite", "phonetic": "PWEE / ahn-SWEET", "en": "then, next", "emoji": "➡️" },
+      { "fr": "enfin / finalement", "phonetic": "ahn-FAN / fee-nal-MAHN", "en": "finally, in the end", "emoji": "🏁" },
+      { "fr": "une histoire", "phonetic": "ewn ees-TWAHR", "en": "a story", "emoji": "📖" },
+      { "fr": "le décor", "phonetic": "luh day-KOR", "en": "the setting, the backdrop", "emoji": "🎬" },
+      { "fr": "savoir / connaître", "phonetic": "sa-VWAHR / ko-NEHTR", "en": "to know (a fact / a person)", "emoji": "🧠" },
+      { "fr": "vouloir", "phonetic": "voo-LWAHR", "en": "to want", "emoji": "🙋" },
+      { "fr": "pouvoir", "phonetic": "poo-VWAHR", "en": "to be able to", "emoji": "💪" },
+      { "fr": "devoir", "phonetic": "duh-VWAHR", "en": "to have to, must", "emoji": "📌" }
+    ],
+    "grammar": {
+      "point": "One question decides it: was it running, or did it happen?",
+      "table": {
+        "title": "la division du travail entre les deux temps",
+        "cols": ["ce que vous racontez", "le temps", "exemple"],
+        "rows": [
+          { "label": "① le décor", "cells": ["imparfait", "il pleuvait, il faisait nuit"] },
+          { "label": "② une description", "cells": ["imparfait", "elle avait vingt ans"] },
+          { "label": "③ une habitude", "cells": ["imparfait", "tous les jours, je prenais le bus"] },
+          { "label": "④ une action qui arrive", "cells": ["passé composé", "soudain, le téléphone a sonné"] },
+          { "label": "⑤ une suite d’actions", "cells": ["passé composé", "je me suis levée, puis sortie"] },
+          { "label": "⑥ une durée fermée", "cells": ["passé composé", "j’ai vécu dix ans à Paris"] }
+        ],
+        "highlight": ["il pleuvait, il faisait nuit", "soudain, le téléphone a sonné"],
+        "note": "The two highlighted lines are the whole lesson. The first was already going on and did not stop; the second happened once and finished. Row ⑥ is the one nobody expects: a long stretch of time still takes the passé composé when you present it as a closed block."
+      },
+      "table2": {
+        "title": "six verbes qui changent de sens selon le temps",
+        "cols": ["le verbe", "à l’imparfait", "au passé composé"],
+        "rows": [
+          { "label": "savoir", "cells": ["je savais — I knew", "j’ai su — I found out"] },
+          { "label": "connaître", "cells": ["je connaissais — I knew (them)", "j’ai connu — I met"] },
+          { "label": "vouloir", "cells": ["je voulais — I wanted", "j’ai voulu — I tried to"] },
+          { "label": "pouvoir", "cells": ["je pouvais — I could", "j’ai pu — I managed to"] },
+          { "label": "devoir", "cells": ["je devais — I was meant to", "j’ai dû — I had to"] },
+          { "label": "avoir peur", "cells": ["j’avais peur — I was afraid", "j’ai eu peur — I got a fright"] }
+        ],
+        "highlight": ["j’ai su — I found out", "j’ai connu — I met"],
+        "note": "These six are not exceptions, they are the rule applied honestly. Savoir in the imparfait is a state you were in; in the passé composé it is the moment the knowing began — so « j’ai su » means the news arrived. Same logic for connaître: the state is knowing someone, the event is meeting them."
+      },
+      "explain": "Every time you tell a story in French you make this choice, so it pays to have one question rather than a list of rules: was it already running, or did it happen? The imparfait is the film — the weather, the mood, how old someone was, what you used to do on Tuesdays. It has no beginning and no end inside your sentence. The passé composé is the photo — a single thing that occurred and was over, or a string of such things moving the story forward. Put them together and you get the commonest shape in French storytelling: « Je dormais quand le téléphone a sonné » — the film, then the thing that cuts into it. One warning: length is not the test. « J'ai vécu dix ans à Paris » is a decade and still the passé composé, because you are presenting it as one closed block rather than as the scenery behind something else."
+    },
+    "notes": [
+      {
+        "title": "The test: could you freeze the frame?",
+        "body": "If you could stop the film at any moment and the sentence would still be true, it is the imparfait — il pleuvait was true at every instant. If it is a thing that occurred and was finished, it is the passé composé. Two English clues carry over almost perfectly: « was …-ing » is nearly always imparfait, and « used to » always is."
+      },
+      {
+        "title": "« Quand » is the hinge",
+        "body": "The classic sentence puts both tenses on either side of quand: « Je dormais quand le téléphone a sonné. » The imparfait sets what was going on, the passé composé is what interrupts it. If instead two things simply run alongside each other, use pendant que with the imparfait on both sides: « Pendant que je cuisinais, il lisait. »"
+      },
+      {
+        "title": "Length is not the test",
+        "body": "The commonest mistake at B1 is reaching for the imparfait because something lasted a long time. « J'ai vécu dix ans à Paris » — ten years, passé composé, because it is a closed block. « Je vivais à Paris quand je l'ai rencontré » — same living, now the scenery behind an event. The same stretch of time takes either tense depending on the job you give it in the sentence."
+      },
+      {
+        "title": "The six verbs that change meaning",
+        "body": "With savoir, connaître, vouloir, pouvoir and devoir the imparfait gives you a state and the passé composé gives you the moment it started or the attempt itself. « Je savais » is I knew; « j'ai su » is I found out. « Je voulais » is I wanted; « j'ai voulu » is I tried. « Je pouvais » is I was able; « j'ai pu » is I managed it. Learn these as six pairs, not as exceptions."
+      }
+    ],
+    "examples": [
+      "Il pleuvait et il faisait nuit quand je suis sortie. (eel pluh-VEH ay eel fuh-zeh NWEE)",
+      "Tous les jours, je prenais le bus de sept heures. (too lay zhoor zhuh pruh-NEH)",
+      "Je dormais quand le téléphone a sonné. (zhuh dor-MEH kahn)",
+      "Pendant que je cuisinais, il lisait le journal. (pahn-dahn kuh zhuh kwee-zee-NEH)",
+      "J'ai vécu dix ans à Paris, puis je suis partie. (zhay vay-KEW dee zahn)",
+      "Je ne la connaissais pas ; je l'ai connue à Lyon. (zhuh luh kon-NEW)"
+    ],
+    "practice": [
+      "Imparfait or passé composé? — « Il ___ (faire) froid. » · « Soudain, quelqu'un ___ (frapper). » · « Tous les étés, on ___ (aller) à la mer. »",
+      "Finish the sentence three different ways: « Je marchais dans la rue quand… »",
+      "Tell what you did yesterday in five sentences, then add a line of décor in the imparfait to each.",
+      "Translate carefully: « I knew him » · « I met him » · « I wanted to call » · « I managed to call ».",
+      "Say the same ten years twice: « ___ dix ans à Paris » as a closed block, then as the backdrop to meeting someone.",
+      "Tell a two-minute story starting « Il était une fois… » — scene in the imparfait, plot in the passé composé."
+    ],
+    "tutorPrompt": "Act as a French tutor at B1, in French, and drill only one thing: the choice between passé composé and imparfait. Start by telling me a short story with ten gaps and make me fill each one, asking me to justify the choice in French each time — décor, habitude, action, durée fermée. Then reverse it: give me sentences in English and make me produce the French. Include at least four items on the six verbs that change meaning — savoir, connaître, vouloir, pouvoir, devoir, avoir peur — since « j'ai su » is I found out, not I knew. Include two traps on length, where a long period still takes the passé composé because it is a closed block. Finally make me tell my own story for two minutes beginning « Il était une fois », and interrupt whenever I pick the wrong tense, saying which of the six cases applies. End with three concrete fixes."
+  },
+  {
     "id": "b1-02-futur-simple",
     "level": "B1",
     "module": "Finding your voice",

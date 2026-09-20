@@ -280,6 +280,20 @@
     ]
   },
   {
+    "id": "b1-imparfait",
+    "level": "B1",
+    "theme": "The imparfait",
+    "title": "Quand j'étais petite",
+    "intro": "The imparfait endings all sound the same — -ais, -ait and -aient are one noise. What you're really writing down is the person, which only the pronoun tells you. Two spelling traps hide in here as well.",
+    "sentences": [
+      { "fr": "Quand j'étais petite, j'habitais en Inde.", "en": "When I was little, I lived in India.", "tip": "Both verbs take -ais for je. habitais keeps its silent h and takes no accent, unlike étais." },
+      { "fr": "Nous faisions du vélo tous les dimanches.", "en": "We used to cycle every Sunday.", "tip": "Said « fuh-ZYOHN » — the ai of faire says « uh ». And dimanches takes an -s: it happened every week." },
+      { "fr": "Pendant que je dormais, mon téléphone a sonné.", "en": "While I was sleeping, my phone rang.", "tip": "Two tenses on purpose: dormais is the backdrop, a sonné is the event. « Pendant que », two words." },
+      { "fr": "Vous étudiiez le français à l'époque ?", "en": "Were you studying French back then?", "tip": "Two i's in étudiiez — the stem ends in i and the ending adds another. You write both and say one." },
+      { "fr": "Je mangeais souvent au restaurant.", "en": "I often ate at restaurants.", "tip": "mangeais keeps the e of manger so the g stays soft before the a — exactly like nous mangeons." }
+    ]
+  },
+  {
     "id": "b1-societe",
     "level": "B1",
     "theme": "Opinions & society",

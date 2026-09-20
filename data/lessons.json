@@ -3252,66 +3252,98 @@
     "level": "B1",
     "module": "Finding your voice",
     "title": "Telling stories — the imparfait",
-    "minutes": 30,
-    "goal": "Describe how things used to be, set the scene in a story, and feel the difference between the imparfait and the passé composé.",
+    "minutes": 25,
+    "goal": "Build the imparfait of any verb from one reliable recipe, describe how things used to be, and pair it with the passé composé so a story has both a backdrop and events.",
     "vocab": [
-      {
-        "fr": "Quand j'étais petit(e)",
-        "phonetic": "kahn zhay-TEH puh-TEE(T)",
-        "en": "When I was little"
-      },
-      {
-        "fr": "avant",
-        "phonetic": "ah-VAHN",
-        "en": "before / in the past"
-      },
-      {
-        "fr": "à l'époque",
-        "phonetic": "ah lay-POK",
-        "en": "back then / at the time"
-      },
-      {
-        "fr": "d'habitude",
-        "phonetic": "dah-bee-TEWD",
-        "en": "usually"
-      },
-      {
-        "fr": "tous les jours",
-        "phonetic": "too lay ZHOOR",
-        "en": "every day"
-      },
-      {
-        "fr": "souvent",
-        "phonetic": "soo-VAHN",
-        "en": "often"
-      },
-      {
-        "fr": "un souvenir",
-        "phonetic": "uhn soov-NEER",
-        "en": "a memory"
-      },
-      {
-        "fr": "il était une fois",
-        "phonetic": "eel ay-teh ewn FWAH",
-        "en": "once upon a time"
-      }
+      { "fr": "Quand j'étais petit(e)", "phonetic": "kahn zhay-teh puh-TEE", "en": "When I was little", "emoji": "🧒" },
+      { "fr": "C'était / Il y avait", "phonetic": "say-TEH / eel ee a-VEH", "en": "It was / There was", "emoji": "🖼️" },
+      { "fr": "je faisais", "phonetic": "zhuh fuh-ZEH", "en": "I used to do — hear the « uh »", "emoji": "🔨" },
+      { "fr": "je prenais", "phonetic": "zhuh pruh-NEH", "en": "I used to take", "emoji": "🚇" },
+      { "fr": "j'allais", "phonetic": "zha-LEH", "en": "I used to go", "emoji": "🚶" },
+      { "fr": "je voulais", "phonetic": "zhuh voo-LEH", "en": "I wanted", "emoji": "🎯" },
+      { "fr": "avant / à l'époque", "phonetic": "a-VAHN / ah lay-POK", "en": "before / back then", "emoji": "⏪" },
+      { "fr": "d'habitude", "phonetic": "da-bee-TEWD", "en": "usually", "emoji": "🔁" },
+      { "fr": "tous les jours", "phonetic": "too lay ZHOOR", "en": "every day", "emoji": "📅" },
+      { "fr": "tout à coup / soudain", "phonetic": "too ta KOO / soo-DAN", "en": "all of a sudden", "emoji": "⚡" },
+      { "fr": "pendant que", "phonetic": "pahn-dahn KUH", "en": "while — takes a whole clause", "emoji": "⏳" },
+      { "fr": "J'étais en train de travailler", "phonetic": "zhay-teh zahn tran duh tra-va-YAY", "en": "I was in the middle of working", "emoji": "⚙️" },
+      { "fr": "quand le téléphone a sonné", "phonetic": "kahn luh tay-lay-fon ah soh-NAY", "en": "when the phone rang", "emoji": "📞" },
+      { "fr": "un souvenir", "phonetic": "uhn soov-NEER", "en": "a memory", "emoji": "💭" }
     ],
     "grammar": {
-      "point": "Imparfait vs passé composé",
-      "table": {"cols": ["", "imparfait", "passé composé"], "rows": [{"label": "use for", "cells": ["the backdrop, habits, how things were", "single completed events"]}, {"label": "signal words", "cells": ["souvent, toujours, tous les jours", "soudain, une fois, hier"]}, {"label": "example", "cells": ["je jouais au foot", "j'ai marqué un but"]}], "note": "Form the imparfait: nous-form stem (nous parlons → parl-) + -ais/-ais/-ait/-ions/-iez/-aient. Only être is irregular (ét-)."},
-      "explain": "The imparfait paints the backdrop — habits, ongoing background, how things were; the passé composé is the single completed events that move the story forward. One sentence often needs both: « je dormais quand le téléphone a sonné » (backdrop + event)."
+      "point": "One recipe: take the « nous » form, drop -ons, add the endings",
+      "table": {
+        "title": "the stem always comes from « nous » — and one verb breaks it",
+        "cols": ["verbe", "nous, au présent", "radical", "à l'imparfait"],
+        "rows": [
+          { "label": "parler", "cells": ["nous parlons", "parl-", "je parlais"] },
+          { "label": "finir", "cells": ["nous finissons", "finiss-", "je finissais"] },
+          { "label": "prendre", "cells": ["nous prenons", "pren-", "je prenais"] },
+          { "label": "faire", "cells": ["nous faisons", "fais-", "je faisais"] },
+          { "label": "voir", "cells": ["nous voyons", "voy-", "je voyais"] },
+          { "label": "venir", "cells": ["nous venons", "ven-", "je venais"] },
+          { "label": "avoir", "cells": ["nous avons", "av-", "j'avais"] },
+          { "label": "être ⚠", "cells": ["nous sommes ✗", "ét-", "j'étais"] }
+        ],
+        "highlight": ["nous sommes ✗", "ét-", "j'étais"],
+        "note": "The endings never vary: -ais · -ais · -ait · -ions · -iez · -aient. Read the table down and notice what isn't there — no exceptions. Verbs that are wild everywhere else (prendre, faire, voir, venir) all fall into line here, because the nous form has already absorbed their irregularity. Être is the single verb in the language whose imparfait stem you have to learn, and it's ét-."
+      },
+      "table2": {
+        "title": "the backdrop and the event — a story needs both",
+        "cols": ["", "imparfait", "passé composé"],
+        "rows": [
+          { "label": "answers", "cells": ["what was going on?", "what happened?"] },
+          { "label": "use for", "cells": ["the backdrop, habits, how things were", "single completed events"] },
+          { "label": "signal words", "cells": ["souvent, toujours, d'habitude, tous les jours", "soudain, tout à coup, une fois, hier"] },
+          { "label": "on its own", "cells": ["je jouais au foot", "j'ai marqué un but"] },
+          { "label": "in one sentence", "cells": ["Pendant que je dormais,", "le téléphone a sonné."] }
+        ],
+        "highlight": ["Pendant que je dormais,", "le téléphone a sonné."],
+        "note": "The last row is the shape most stories actually take: something was already going on, and then something cut across it. The thing that was going on goes in the imparfait; the thing that cut across it goes in the passé composé. « Pendant que » and « quand » are the two words that join them."
+      },
+      "explain": "The imparfait is the one French tense with a recipe you can trust. ① Take the verb's nous form in the present — nous finissons. ② Cut the -ons — finiss-. ③ Add -ais, -ais, -ait, -ions, -iez, -aient. That gives je finissais, tu finissais, il finissait, nous finissions, vous finissiez, ils finissaient. It works for every verb in French except être, which uses ét- (j'étais, nous étions). Even the verbs that fight you everywhere else give in here, because their irregularity is already baked into the nous form you started from. What the tense is for: the backdrop. Habits — « je jouais au foot tous les samedis ». Descriptions — « il faisait nuit, la rue était vide ». States that were simply going on — « j'avais vingt ans, je ne parlais pas français ». The passé composé, by contrast, is what happened: the events that move a story forward. Most real sentences want both, joined by pendant que or quand: « Pendant que j'étais au cinéma, j'ai reçu un appel important. » « J'étais en train de faire mes devoirs quand mon téléphone a sonné. » Note the pattern in that second one — « être en train de » in the imparfait is the strongest way there is to say something was mid-flow when it got interrupted."
     },
+    "notes": [
+      {
+        "title": "« faisais » is not pronounced the way it's spelled",
+        "body": "The ai of faire's imparfait says « uh », not « eh »: je faisais is « zhuh fuh-ZEH », nous faisions is « noo fuh-ZYOHN », il faisait is « eel fuh-ZEH ». It's the same quiet vowel you already say in nous faisons. Faire is the only common verb that does this, and saying « feh-ZEH » is one of the most recognisable learner mistakes there is."
+      },
+      {
+        "title": "nous and vous grow a second i",
+        "body": "If the stem already ends in i or y, the -ions and -iez endings stack another i on top: étudier → nous étudiions, voir → nous voyions, travailler → nous travaillions, rire → nous riions. You write two and say one. It looks like a typo and it is not — and it's exactly the sort of thing a DELF written paper is checking."
+      },
+      {
+        "title": "-cer and -ger keep their soft sound",
+        "body": "The imparfait endings mostly start with a, which would harden a c or a g — so the spelling defends itself the same way the nous form does. Commencer → je commençais, with the cedilla. Manger → je mangeais, keeping the e. Both revert to normal in the nous and vous forms, where the ending starts with i: nous commencions, nous mangions."
+      },
+      {
+        "title": "« Pendant » and « pendant que » are not the same word",
+        "body": "Pendant takes an amount of time: « j'ai attendu pendant deux heures ». Pendant que takes a whole clause with its own subject and verb: « pendant que j'attendais, j'ai lu un livre ». If what follows is a number, you want pendant. If what follows is somebody doing something, you want pendant que. The duration words have their own A1 lesson."
+      },
+      {
+        "title": "You already know these endings",
+        "body": "-ais, -ais, -ait, -ions, -iez, -aient are also the conditionnel's endings — « je voudrais », « tu devrais », « il serait ». The only difference is what you attach them to: the nous stem gives the imparfait, the infinitive-based futur stem gives the conditionnel. Learn the six once and you have two tenses."
+      }
+    ],
     "examples": [
-      "Quand j'étais jeune, je jouais du piano tous les jours. (kahn zhay-teh ZHUHN, zhuh zhoo-EH dew pee-ah-NOH too lay ZHOOR)",
-      "Il faisait nuit quand le téléphone a sonné. (eel fuh-zeh NWEE kahn luh tay-lay-FON ah soh-NAY)"
+      "Quand j'étais petite, j'habitais en Inde et je ne parlais pas français. (kahn zhay-teh puh-TEET, zha-bee-TEH ahn AND)",
+      "Il faisait nuit et la rue était complètement vide. (eel fuh-zeh NWEE ay lah rew ay-TEH)",
+      "D'habitude, nous prenions le métro, mais ce jour-là nous avons marché. (da-bee-TEWD, noo pruh-NYOHN luh may-TROH)",
+      "Pendant que j'étais au cinéma, j'ai reçu un appel important. (pahn-dahn kuh zhay-teh zoh see-nay-MAH)",
+      "J'étais en train de faire mes devoirs quand mon téléphone a sonné. (zhay-teh zahn tran duh fehr may duh-VWAHR)",
+      "Avant, je mangeais souvent au restaurant ; maintenant, je cuisine. (a-VAHN, zhuh mahn-ZHEH soo-VAHN)",
+      "Vous étudiiez le français à l'époque ? (voo zay-tew-DYAY luh frahn-SEH ah lay-POK)"
     ],
     "practice": [
-      "Describe your childhood bedroom using the imparfait: « il y avait… », « c'était… ».",
-      "Tell a 3-sentence story: set the scene in the imparfait, then drop in one event in the passé composé.",
-      "Finish the pattern: « Avant, je… mais maintenant, je… » (before vs now).",
-      "Say three things you used to do every weekend as a kid."
+      "Run the recipe out loud: nous buvons → ___ ; nous écrivons → ___ ; nous savons → ___ .",
+      "Which verb refuses the recipe? Give its imparfait in full.",
+      "Describe your childhood bedroom: « il y avait… », « c'était… », « les murs étaient… ».",
+      "Tell a three-sentence story: two sentences of backdrop, then one event.",
+      "Join them with « pendant que »: « je dormais » + « le téléphone a sonné ».",
+      "Mind the double i: « nous (étudier) ___ » · « vous (voir) ___ » · « nous (travailler) ___ ».",
+      "Finish the pattern five times: « Avant, je… mais maintenant, je… »."
     ],
-    "tutorPrompt": "Be my B1 French tutor focused on the imparfait. Ask me to tell short stories and describe how things used to be when I was a child. Push me to mix the imparfait (background, habits) with the passé composé (events). Correct my tense choice each time with a one-line why, and at the end summarise the imparfait vs passé composé rule in two sentences."
+    "tutorPrompt": "Be my B1 French tutor for the imparfait. Start by testing the recipe: give me infinitives and make me say the nous form, the stem, then the je form — and include prendre, faire, voir, venir and boire, so I see that the irregular verbs behave. Check I know être is the only exception. Then correct three specific things as we talk. ① Pronunciation: faisais, faisait, faisions are « fuh-ZEH », never « feh-ZEH ». ② The double i in nous étudiions, nous voyions, nous travaillions. ③ The spelling of commençais and mangeais. After that, ask me about my childhood and my first months in France, and push me to mix the two tenses — backdrop in the imparfait, events in the passé composé, joined with pendant que or quand. If I put an event in the imparfait, stop me and ask what was going on versus what happened. Finish with the verbs I still build wrong."
   },
   {
     "id": "b1-02-futur-simple",
@@ -3842,6 +3874,110 @@
       "Ask three questions you'd ask in an interview (hours, salary, team)."
     ],
     "tutorPrompt": "Role-play a French job interview at B1. You're the recruiter and I'm the candidate; ask me about my background, experience, strengths and weaknesses, and why I want the job — one question at a time, in French. Make me use « depuis », « pendant » and « il y a » correctly for durations. Help me when I'm stuck and finish with my five most useful corrections plus a few interview phrases to remember."
+  },
+  {
+    "id": "b1-prefecture",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "À la préfecture — les démarches",
+    "minutes": 25,
+    "goal": "Book and survive a préfecture appointment: the verb that goes with each démarche, the documents they will ask for, and how to state your situation when the form asks.",
+    "vocab": [
+      { "fr": "une démarche", "phonetic": "ewn day-MARSH", "en": "an administrative step, a procedure", "emoji": "📋" },
+      { "fr": "prendre rendez-vous", "phonetic": "prahn-druh rahn-day-VOO", "en": "to book an appointment", "emoji": "📅" },
+      { "fr": "faire une demande", "phonetic": "fehr ewn duh-MAHND", "en": "to make an application", "emoji": "✍️" },
+      { "fr": "remplir un formulaire", "phonetic": "rahn-PLEER uhn for-mew-LEHR", "en": "to fill in a form", "emoji": "🖊️" },
+      { "fr": "déposer un dossier", "phonetic": "day-po-ZAY uhn do-SYAY", "en": "to submit a file", "emoji": "📁" },
+      { "fr": "renouveler un titre de séjour", "phonetic": "ruh-noov-LAY uhn tee-truh duh say-ZHOOR", "en": "to renew a residence permit", "emoji": "🔄" },
+      { "fr": "obtenir un document", "phonetic": "ob-tuh-NEER uhn do-kew-MAHN", "en": "to obtain a document", "emoji": "✅" },
+      { "fr": "un titre de séjour", "phonetic": "uhn tee-truh duh say-ZHOOR", "en": "a residence permit", "emoji": "🪪" },
+      { "fr": "un récépissé", "phonetic": "uhn ray-say-pee-SAY", "en": "a receipt proving your renewal is under way", "emoji": "🧾" },
+      { "fr": "un justificatif de domicile", "phonetic": "uhn zhews-tee-fee-ka-TEEF duh do-mee-SEEL", "en": "proof of address", "emoji": "🏠" },
+      { "fr": "une carte d'identité", "phonetic": "ewn kart dee-dahn-tee-TAY", "en": "an ID card", "emoji": "🆔" },
+      { "fr": "un passeport / un visa", "phonetic": "uhn pass-POR / uhn vee-ZAH", "en": "a passport / a visa", "emoji": "🛂" },
+      { "fr": "un permis de conduire", "phonetic": "uhn pehr-mee duh kohn-DWEER", "en": "a driving licence", "emoji": "🚗" },
+      { "fr": "la préfecture / la mairie", "phonetic": "lah pray-fek-TEWR / lah meh-REE", "en": "the prefecture / the town hall", "emoji": "🏛️" },
+      { "fr": "une ambassade / un consulat", "phonetic": "ewn ahn-ba-SAD / uhn kohn-sew-LAH", "en": "an embassy / a consulate", "emoji": "🚩" },
+      { "fr": "Il me manque un document", "phonetic": "eel muh mahnk uhn do-kew-MAHN", "en": "I'm missing a document", "emoji": "❗" },
+      { "fr": "célibataire", "phonetic": "say-lee-ba-TEHR", "en": "single", "emoji": "1️⃣" },
+      { "fr": "marié(e) / pacsé(e)", "phonetic": "ma-RYAY / pak-SAY", "en": "married / in a civil partnership", "emoji": "💍" },
+      { "fr": "divorcé(e) / séparé(e)", "phonetic": "dee-vor-SAY / say-pa-RAY", "en": "divorced / separated", "emoji": "💔" },
+      { "fr": "veuf / veuve", "phonetic": "VUHF / VUHV", "en": "widowed (m. / f.)", "emoji": "🕯️" }
+    ],
+    "grammar": {
+      "point": "Each démarche has its own verb — and the form asks for your situation",
+      "table": {
+        "title": "the verb that goes with each step, in the order you'll need them",
+        "cols": ["l'étape", "ce qu'on dit", "English"],
+        "rows": [
+          { "label": "① book it", "cells": ["prendre rendez-vous", "to book an appointment"] },
+          { "label": "② apply", "cells": ["faire une demande de titre de séjour", "to apply for a permit"] },
+          { "label": "③ the form", "cells": ["remplir un formulaire", "to fill in a form"] },
+          { "label": "④ the file", "cells": ["déposer un dossier", "to submit a file"] },
+          { "label": "⑤ send more", "cells": ["envoyer un justificatif", "to send proof"] },
+          { "label": "⑥ renew", "cells": ["renouveler son titre de séjour", "to renew your permit"] },
+          { "label": "⑦ get it", "cells": ["obtenir un récépissé", "to get an interim receipt"] }
+        ],
+        "highlight": ["déposer un dossier", "obtenir un récépissé"],
+        "note": "These pairings are fixed and you can't swap the verbs around — you déposez a dossier and remplissez a formulaire, never the other way. Learn each one as a block of two or three words rather than as a verb you conjugate freely."
+      },
+      "table2": {
+        "title": "« Quelle est votre situation familiale ? »",
+        "cols": ["", "masculin", "féminin"],
+        "rows": [
+          { "label": "single", "cells": ["célibataire", "célibataire"] },
+          { "label": "married", "cells": ["marié", "mariée"] },
+          { "label": "PACS", "cells": ["pacsé", "pacsée"] },
+          { "label": "divorced", "cells": ["divorcé", "divorcée"] },
+          { "label": "separated", "cells": ["séparé", "séparée"] },
+          { "label": "widowed", "cells": ["veuf", "veuve"] }
+        ],
+        "highlight": ["veuf", "veuve"],
+        "note": "Célibataire is the same for everyone — it already ends in -e. Four of the others just add a silent -e. Only the last one changes what you hear: veuf → veuve, the f turning into a v, exactly as it does in neuf heures."
+      },
+      "explain": "French administration runs on fixed phrases, and knowing them is most of the battle. The sequence is always the same: you prenez rendez-vous, you remplissez un formulaire, you déposez un dossier, and if something is missing you envoyez un justificatif. The verbs don't move between the nouns — you cannot « remplir un dossier » or « déposer un formulaire », even though English would let you. The word that matters most in practice is le récépissé: when your titre de séjour expires before the new one is ready, the préfecture issues this paper, and it is what proves you are legally resident and entitled to keep working in the meantime. Keep it. For requirements, the phrase you'll hear constantly is il faut — « il faut un justificatif de domicile », « il faut prendre rendez-vous en ligne » — and for a missing piece, « il me manque… », which literally says a document is lacking to me. Finally, every form asks for your situation familiale, and the answers are adjectives, so they agree with you: a woman writes « mariée », a man « marié ». Note that pacsé has no English equivalent at all — le PACS is a French civil partnership that sits between living together and marriage, and it is a real category on every form. Procedures and websites change often, so treat the vocabulary here as durable and check the current steps on service-public.fr before any appointment."
+    },
+    "notes": [
+      {
+        "title": "Le récépissé is the piece of paper to care about",
+        "body": "Three accents, all aigus: ré-cé-pi-ssé. When you apply to renew and your current titre expires before the new card arrives, the préfecture gives you this receipt, usually valid a few months and renewable. It proves your right to stay and, depending on what is printed on it, your right to keep working. Losing it is a genuine problem, so photograph it the day you get it."
+      },
+      {
+        "title": "veuf → veuve, like neuf → neuve",
+        "body": "This is the one status where the feminine changes the sound: « VUHF » becomes « VUHV ». French does this f→v swap in a small family of words — neuf/neuve (new), actif/active, sportif/sportive, naïf/naïve. It's the same swap you already make when you say « neuf heures » as « nuh-VUR »."
+      },
+      {
+        "title": "« Pacsé » has no translation",
+        "body": "Le PACS — pacte civil de solidarité — is a registered partnership that gives most of the tax and administrative benefits of marriage without being one. It is signed at the mairie or a notaire, and « pacsé(e) » is a box on essentially every French form. For anything administrative it is treated as a real family situation, not as being single."
+      },
+      {
+        "title": "The words that describe a dossier's fate",
+        "body": "Worth recognising when they land in your inbox: « votre dossier est incomplet » (something is missing), « en cours d'instruction » or « en cours de traitement » (being processed), « une pièce justificative » (a supporting document), « un original » versus « une copie », « une pièce jointe » (an attachment). And « une convocation » is the letter telling you when to turn up."
+      },
+      {
+        "title": "Préfecture, mairie, consulat — three different buildings",
+        "body": "La mairie is your town hall: birth and marriage records, the PACS, school registration. La préfecture is the state in your département: titres de séjour, permis de conduire, carte grise. Une ambassade or un consulat is your own country's outpost in France, for your passport — not for French permits. Sending a request to the wrong one of the three costs weeks, and it's the commonest way to lose time."
+      }
+    ],
+    "examples": [
+      "Bonjour, j'ai rendez-vous à quatorze heures pour renouveler mon titre de séjour. (zhay rahn-day-VOO)",
+      "Je voudrais faire une demande de titre de séjour. (zhuh voo-DREH fehr ewn duh-MAHND)",
+      "J'ai déposé mon dossier il y a deux mois. (zhay day-po-ZAY mohn do-SYAY)",
+      "Il me manque un justificatif de domicile. (eel muh mahnk uhn zhews-tee-fee-ka-TEEF)",
+      "Il faut remplir ce formulaire et l'envoyer avant vendredi. (eel foh rahn-PLEER suh for-mew-LEHR)",
+      "On m'a donné un récépissé en attendant la carte. (ohn ma do-NAY uhn ray-say-pee-SAY)",
+      "— Quelle est votre situation familiale ? — Je suis mariée. (kel eh vo-truh see-tew-a-syohn fa-mee-LYAL)"
+    ],
+    "practice": [
+      "Match the verb to the noun: remplir · déposer · prendre · renouveler → un dossier · rendez-vous · un formulaire · un titre de séjour.",
+      "Book an appointment out loud, giving the reason.",
+      "Say what's missing from your file, using « il me manque… ».",
+      "Answer the form: « Quelle est votre situation familiale ? » — in the right gender.",
+      "Which building? — a passport · a titre de séjour · a PACS · a driving licence.",
+      "Spell it out loud: « récépissé » — how many accents, and which way do they point?",
+      "Explain to a friend what a récépissé is, in French, in two sentences."
+    ],
+    "tutorPrompt": "Role-play a French préfecture appointment at B1, and stay in role as the agent — polite, brisk, slightly bureaucratic. Open with « Bonjour, vous avez rendez-vous ? » and take me through it: why I'm there, my situation familiale, the documents I've brought, one document that is missing, and what happens next. Use the real phrases — déposer un dossier, remplir un formulaire, un justificatif de domicile, un récépissé, « votre dossier est incomplet », « en cours de traitement » — and make me ask you what they mean if I don't know. Correct two things every time: the fixed verb-noun pairings (I must not say « remplir un dossier »), and the agreement on my situation familiale, since I am a woman and should say « mariée ». Finish by telling me, in French, exactly which documents to bring next time, then list the phrases I hesitated on."
   },
   {
     "id": "b1-08-admin-housing",

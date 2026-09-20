@@ -154,6 +154,20 @@
     ]
   },
   {
+    "id": "b1-prefecture",
+    "level": "B1",
+    "focus": "French admin, out loud",
+    "title": "À la préfecture",
+    "intro": "Administrative French is long words said quickly and flatly. Nothing here is dramatic — the skill is keeping four or five syllables even and landing the lift only at the end.",
+    "phrases": [
+      { "fr": "Bonjour, j'ai rendez-vous à quatorze heures.", "en": "Hello, I have an appointment at two.", "hint": "rendez-vous is three even beats, « rahn-day-VOO », with no stress until the last. Then quatorze‿heures links: « ka-tor-ZUR »." },
+      { "fr": "Je voudrais renouveler mon titre de séjour.", "en": "I'd like to renew my residence permit.", "hint": "renouveler drops its middle e in speech — « ruh-noov-LAY », three beats, not four. Keep the whole line flat and calm." },
+      { "fr": "J'ai déposé mon dossier il y a deux mois.", "en": "I submitted my file two months ago.", "hint": "« il y a » collapses to « ya »: « ya duh MWAH ». The x of deux links into a z before a vowel, but not here — mois starts with m." },
+      { "fr": "Il me manque un justificatif de domicile.", "en": "I'm missing proof of address.", "hint": "manque‿un links with the k sound: « mahn-KUHN ». justificatif is five even syllables — resist stressing any of them." },
+      { "fr": "Vous êtes mariée ou célibataire ?", "en": "Are you married or single?", "hint": "vous‿êtes links with a z, « voo-ZET ». The question is carried by the voice alone, rising on -TEHR at the very end." }
+    ]
+  },
+  {
     "id": "b1-fillers",
     "level": "B1",
     "focus": "Sounding natural",

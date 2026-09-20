@@ -4577,7 +4577,7 @@
     "module": "France & its territories",
     "title": "L'outre-mer — les mêmes droits partout ?",
     "minutes": 25,
-    "goal": "Answer the class debate question — are rights as well respected outre-mer as in mainland France? — with the two structures it takes, and three cases you can actually cite.",
+    "goal": "Answer the class debate question — are rights as well respected outre-mer as in mainland France? — with the two structures it takes, and the constitutional ground the answer stands on.",
     "figures": [
       {
         "src": "./assets/img/outre-mer-carte.svg?v=1",
@@ -4602,9 +4602,6 @@
       { "fr": "le métissage", "phonetic": "luh may-tee-SAZH", "en": "cultural and ethnic mixing", "emoji": "🧬" },
       { "fr": "l'autonomie", "phonetic": "lo-to-no-MEE", "en": "autonomy", "emoji": "🔓" },
       { "fr": "une revendication", "phonetic": "ewn ruh-vahn-dee-ka-SYOHN", "en": "a demand, a political claim", "emoji": "✊" },
-      { "fr": "la pénurie d'eau", "phonetic": "lah pay-new-REE DOH", "en": "the water shortage", "emoji": "🚱" },
-      { "fr": "les tours d'eau", "phonetic": "lay toor DOH", "en": "rotating water cuts", "emoji": "🚰" },
-      { "fr": "un réseau vétuste", "phonetic": "uhn ray-ZOH vay-TEWST", "en": "a crumbling, decrepit network", "emoji": "🔧" },
       { "fr": "une inégalité", "phonetic": "ewn ee-nay-ga-lee-TAY", "en": "an inequality", "emoji": "📉" },
       { "fr": "l'égalité devant la loi", "phonetic": "lay-ga-lee-TAY duh-VAHN lah LWAH", "en": "equality before the law", "emoji": "🟰" }
     ],
@@ -4648,29 +4645,24 @@
       {
         "title": "La croix dans l’espace public — la règle de 1905",
         "body": "La laïcité, in practice. The 1905 law forbids new religious signs on public land; anything older is left alone, which is why every village church keeps its cross. Put up a new one and it becomes a case for the tribunal administratif — Ploërmel, 2017, where the Conseil d'État let the statue stay and took the cross down. The two places the law never reached are in the second figure above."
-      },
-      {
-        "title": "L'eau en Guadeloupe — the example that makes it concrete",
-        "body": "The network is vétuste enough that a large share of the water never reaches a tap, and whole neighbourhoods live on des tours d'eau — the supply cut for a day or more at a time, on rotation. Add le chlordécone, the pesticide used in the banana plantations until 1993 and in the soil for centuries, and you have two documented cases instead of a vague claim."
       }
     ],
     "examples": [
       "La Réunion est souvent citée comme un modèle de vivre-ensemble. (lah ray-ew-NYOHN)",
       "Dans la même rue, on peut trouver une église, un temple tamoul et une mosquée. (uhn TAHMPL ta-MOOL)",
       "Une croix installée sur un terrain communal peut être contestée devant le tribunal administratif. (ewn KRWAH ann-sta-LAY)",
-      "En Guadeloupe, les tours d'eau privent certains quartiers d'eau pendant plusieurs jours. (lay toor DOH)",
       "Je ne pense pas que les droits soient aussi bien respectés qu'en métropole. (kuh lay drwah SWAHN)",
       "Les services publics sont-ils aussi efficaces outre-mer que dans l'Hexagone ? (oh-SEE ay-fee-KASS)"
     ],
     "practice": [
       "Fill the gap with aussi · autant · autant de: « Il n'y a pas ___ investissements qu'en métropole. » · « L'eau n'est pas ___ fiable qu'ici. » · « On n'en parle pas ___ que des sujets métropolitains. »",
       "Say the same opinion twice — once with « Je pense que… », once with « Je ne pense pas que… » — and change the verb.",
-      "Answer the class question out loud in ninety seconds, with one example from La Réunion and one from la Guadeloupe.",
+      "Answer the class question out loud in ninety seconds, using article premier and the two exceptions to the 1905 law.",
       "Article 73, article 74, or neither? — la Guadeloupe · la Polynésie française · la Corse · La Réunion.",
       "Explain « la laïcité » to an English-speaking friend, in French, in three sentences — without using the word « secular ».",
       "Build the DELF shape: « D'un côté… », « D'un autre côté… », « En fin de compte… » — one paragraph each."
     ],
-    "tutorPrompt": "Act as a DELF B2 oral examiner, in French throughout. Put this question to me: « Est-ce que vous pensez que les droits sont autant respectés dans les régions d'outre-mer qu'en France métropolitaine ? » Give me a minute to prepare, then make me answer in the DELF shape — introduction, plan annoncé, deux arguments avec exemples, conclusion — and push back three times. Draw on the real material: les tours d'eau et le chlordécone en Guadeloupe, le vivre-ensemble à La Réunion, la croix dans l'espace public et la loi de 1905, l'article premier, les revendications d'autonomie en Corse. Correct exactly two things per turn: the comparison structures (aussi + adjectif/adverbe, autant + verbe, autant de + nom, never « aussi de »), and the subjunctive after « je ne pense pas que » — soient, ait, puisse. Finish with a DELF grid score and three concrete fixes."
+    "tutorPrompt": "Act as a DELF B2 oral examiner, in French throughout. Put this question to me: « Est-ce que vous pensez que les droits sont autant respectés dans les régions d'outre-mer qu'en France métropolitaine ? » Give me a minute to prepare, then make me answer in the DELF shape — introduction, plan annoncé, deux arguments avec exemples, conclusion — and push back three times. Draw on the real material: l'article premier, la différence entre l'article 73 et l'article 74, la croix dans l'espace public et la loi de 1905, et le fait que cette loi ne s'applique ni en Alsace-Moselle ni en Guyane. Correct exactly two things per turn: the comparison structures (aussi + adjectif/adverbe, autant + verbe, autant de + nom, never « aussi de »), and the subjunctive after « je ne pense pas que » — soient, ait, puisse. Finish with a DELF grid score and three concrete fixes."
   },
   {
     "id": "b2-reunion-corse",
@@ -4771,5 +4763,104 @@
       "Now say what the two islands have in common — not only what separates them."
     ],
     "tutorPrompt": "Act as a DELF B2 examiner, in French throughout. The topic is two French islands: La Réunion, where Catholics, Tamil Hindus, Muslims and a Chinese community share the same calendar and interfaith marriage is ordinary, and la Corse, where a largely Catholic identity met the loi de 1905 in the affaire de la croix de Quasquara — a cross erected by the commune in 2022, a resident’s demande de retrait, the mayor’s refusal annulled by the tribunal administratif de Bastia in 2025, and the removal confirmed by the cour administrative d’appel de Marseille on 26 June 2026. Make me compare the two islands out loud, then defend a position on whether a cross can be « culturelle plutôt que religieuse ». Correct exactly two things per turn: the opposition connectors — alors que and même si take the indicative, bien que and quoique take the subjunctive, contrairement à takes a noun — and my choice between porter plainte and déposer un recours. Finish with three concrete fixes and the phrases I hesitated on."
+  },
+  {
+    "id": "b2-eau-chlordecone",
+    "level": "B2",
+    "module": "France & its territories",
+    "title": "L'eau & le chlordécone — la Guadeloupe au concret",
+    "minutes": 25,
+    "goal": "Two documented cases that turn a vague argument about inequality into a good one — and the connectors of cause and consequence you need to lay them out.",
+    "figures": [
+      {
+        "src": "./assets/img/eau-chlordecone.svg?v=1",
+        "alt": "Two panels on Guadeloupe. On the left, the water network: of every 100 litres produced, roughly 70 are lost to leaks and only about 30 reach a tap; les tours d'eau cover about 20 percent of the territory but affect resources serving more than half the population; the SMGEAG has run water for the island since 2021 and aims to repair 5 000 leaks by the end of 2026. On the right, a timeline of le chlordécone, the pesticide used on banana plantations: spread from 1972, banned in mainland France in 1990, but allowed in the Antilles under a derogation until 1993 — three years highlighted as the heart of the argument. In 2021 prostate cancer linked to it was recognised as an occupational disease; in 2023 the criminal case ended in a non-lieu.",
+        "caption": "The two amber bars are the argument. On the left, most of the water never reaches a tap. On the right, three years in which a pesticide banned in the Hexagone stayed legal here — which is why this file comes up every time someone asks whether the rules are the same everywhere."
+      }
+    ],
+    "vocab": [
+      { "fr": "la pénurie d'eau", "phonetic": "lah pay-new-REE DOH", "en": "the water shortage", "emoji": "🚱" },
+      { "fr": "les tours d'eau", "phonetic": "lay toor DOH", "en": "rotating water cuts", "emoji": "🚰" },
+      { "fr": "un réseau vétuste", "phonetic": "uhn ray-ZOH vay-TEWST", "en": "a crumbling, decrepit network", "emoji": "🔧" },
+      { "fr": "une fuite d'eau", "phonetic": "ewn FWEET DOH", "en": "a water leak", "emoji": "💧" },
+      { "fr": "une canalisation", "phonetic": "ewn ka-na-lee-za-SYOHN", "en": "a water pipe, a main", "emoji": "🪠" },
+      { "fr": "l'eau potable", "phonetic": "loh po-TABL", "en": "drinking water", "emoji": "🥛" },
+      { "fr": "une coupure d'eau", "phonetic": "ewn koo-PEWR DOH", "en": "a water cut", "emoji": "🚿" },
+      { "fr": "l'assainissement", "phonetic": "la-say-neess-MAHN", "en": "sanitation, waste-water treatment", "emoji": "♻️" },
+      { "fr": "un pesticide", "phonetic": "uhn pes-tee-SEED", "en": "a pesticide", "emoji": "🧪" },
+      { "fr": "une bananeraie", "phonetic": "ewn ba-nan-REH", "en": "a banana plantation", "emoji": "🍌" },
+      { "fr": "épandre", "phonetic": "ay-PAHNDR", "en": "to spread (a chemical on land)", "emoji": "🌾" },
+      { "fr": "un scandale sanitaire", "phonetic": "uhn skahn-DAL sa-nee-TEHR", "en": "a public-health scandal", "emoji": "⚠️" },
+      { "fr": "une maladie professionnelle", "phonetic": "ewn ma-la-DEE pro-fes-yo-NEL", "en": "an occupational disease", "emoji": "🏥" },
+      { "fr": "une dérogation", "phonetic": "ewn day-ro-ga-SYOHN", "en": "an exemption, a waiver", "emoji": "📄" },
+      { "fr": "un non-lieu", "phonetic": "uhn nohn-LYUH", "en": "a dismissal — the case never reaches trial", "emoji": "⚖️" },
+      { "fr": "indemniser", "phonetic": "ann-dem-nee-ZAY", "en": "to compensate", "emoji": "💶" }
+    ],
+    "grammar": {
+      "point": "Cause and consequence — and the one choice English never makes you make",
+      "table": {
+        "title": "dire pourquoi, et dire ce qui en résulte",
+        "cols": ["ce qu’on exprime", "la structure", "exemple"],
+        "rows": [
+          { "label": "une cause — mauvaise", "cells": ["à cause de + nom", "à cause des fuites"] },
+          { "label": "une cause — bonne", "cells": ["grâce à + nom", "grâce au nouveau plan"] },
+          { "label": "une cause — neutre", "cells": ["en raison de + nom", "en raison de la sécheresse"] },
+          { "label": "ce qui manque", "cells": ["faute de + nom", "faute d’entretien"] },
+          { "label": "une cause — phrase", "cells": ["parce que · car", "parce que le réseau est vétuste"] },
+          { "label": "la conséquence", "cells": ["donc · c’est pourquoi", "c’est pourquoi l’eau est coupée"] }
+        ],
+        "highlight": ["à cause de + nom", "grâce à + nom"],
+        "note": "English says « because of » for good news and bad alike. French makes you take a side: à cause de blames, grâce à credits. « Grâce aux fuites » would be sarcasm, and « à cause du nouveau plan » would be an accusation — so pick deliberately, and use en raison de when you want to stay neutral."
+      },
+      "table2": {
+        "title": "Le chlordécone — l’affaire en cinq dates",
+        "cols": ["date", "ce qui s’est passé", "English"],
+        "rows": [
+          { "label": "1972", "cells": ["on commence à l’épandre dans les bananeraies", "spraying begins in the bananeraies"] },
+          { "label": "1990", "cells": ["le produit est interdit en France", "banned in mainland France"] },
+          { "label": "1993", "cells": ["la dérogation prend fin aux Antilles", "the exemption in the Antilles ends"] },
+          { "label": "2021", "cells": ["le cancer devient maladie professionnelle", "now an occupational disease"] },
+          { "label": "2023", "cells": ["la justice pénale rend un non-lieu", "the criminal case is dismissed"] }
+        ],
+        "highlight": ["le produit est interdit en France", "la dérogation prend fin aux Antilles"],
+        "note": "The two highlighted lines are three years apart, and that gap is the entire argument. Banned in the Hexagone in 1990, still legal in the Antilles until 1993 — whenever someone asks whether the rules are applied identically everywhere, this is the file that gets cited."
+      },
+      "explain": "To argue a case rather than just deplore it, you need the words that link a cause to its effect — and French sorts them by what follows and by whose side you are on. À cause de, grâce à, en raison de and faute de all take a noun, never a clause, so you say à cause des fuites and not « à cause que ». Parce que and car take a full clause. On the consequence side, donc, c'est pourquoi and par conséquent simply introduce the result. The choice that catches English speakers is the first pair: « because of » is neutral in English, while à cause de assigns blame and grâce à gives credit. Saying « grâce à la pollution » is not a small slip — it reads as sarcasm. When you genuinely want neutrality, en raison de is the word, and it is also the one you will meet in any official report."
+    },
+    "notes": [
+      {
+        "title": "À cause de blames, grâce à credits",
+        "body": "Both are « because of », and French will not let you sit on the fence. À cause des coupures, the shortage is someone's fault; grâce au nouveau plan, someone gets the credit. Backwards, you sound sarcastic rather than wrong — worse in an oral. En raison de is the neutral third option, and the one official reports use. All three take a noun: never « à cause que »."
+      },
+      {
+        "title": "L'eau — pourquoi elle n'arrive pas",
+        "body": "The problem is not rainfall, it is the pipes. Around seventy per cent of the water produced leaks away before reaching a tap, so whole areas live on des tours d'eau — a rota where the supply is simply cut for a day or more. They cover about a fifth of the territory but touch more than half the population. Since 2021 one body, le SMGEAG, has run the network, aiming at five thousand leaks repaired by end 2026."
+      },
+      {
+        "title": "Le chlordécone — les trois ans qui font tout l'argument",
+        "body": "A pesticide used on banana plantations from 1972, banned in mainland France in 1990 — and kept legal in Guadeloupe and Martinique by ministerial derogation until 1993. It stays in the soil for centuries, and more than ninety per cent of adults on both islands carry it in their blood. In 2021 the ANSES found a probable causal link with prostate cancer and a decree made that cancer an occupational disease."
+      },
+      {
+        "title": "Un non-lieu is not an acquittal",
+        "body": "In January 2023 the criminal case — opened on a 2006 complaint for empoisonnement and mise en danger de la vie d'autrui — ended in un non-lieu: the investigating judges found insufficient grounds to send anyone to trial, with la prescription doing much of the work. That is not une relaxe, which is an acquittal after a trial, and not a finding that nothing happened. Separately, an administrative court has recognised the State's « négligences fautives »."
+      }
+    ],
+    "examples": [
+      "À cause des fuites, une grande partie de l'eau n'arrive jamais au robinet. (a koz day FWEET)",
+      "Certains quartiers vivent avec des tours d'eau depuis des années. (day toor DOH)",
+      "Le réseau est si vétuste qu'il perd une part considérable de la production. (see vay-TEWST)",
+      "Le chlordécone a été épandu dans les bananeraies jusqu'en 1993. (ay-pahn-DEW)",
+      "Interdit en France en 1990, il est resté autorisé aux Antilles pendant trois ans. (ann-tehr-DEE ahn frahnss)",
+      "En 2023, la justice a rendu un non-lieu, ce qui a provoqué une vive émotion. (uhn nohn-LYUH)"
+    ],
+    "practice": [
+      "À cause de, grâce à, or en raison de? — « ___ des fuites, l'eau est coupée. » · « ___ au nouveau plan, la situation s'améliore. » · « ___ de la sécheresse, la production baisse. »",
+      "Explain the water crisis in four sentences, naming a cause and a consequence in each.",
+      "Tell the chlordécone story from the second table, in the past, in six sentences.",
+      "Say the difference out loud, in French: un non-lieu · une relaxe · une condamnation.",
+      "Answer in two minutes: « Un produit interdit en métropole devrait-il pouvoir rester autorisé outre-mer ? »",
+      "Use both files in one paragraph to answer the big question: are the same rules applied everywhere?"
+    ],
+    "tutorPrompt": "Act as a DELF B2 examiner, in French throughout. The topic is Guadeloupe, on two files. First, l'eau: a réseau vétuste that loses something like seventy per cent of what it produces, des tours d'eau affecting more than half the population, and le SMGEAG running the network since 2021. Second, le chlordécone: sprayed on the bananeraies from 1972, interdit en France in 1990 but kept legal in the Antilles by dérogation until 1993, still in the soil, carried in the blood of more than ninety per cent of adults, recognised in 2021 as causing an occupational prostate cancer, and closed at the criminal level by un non-lieu in 2023. Make me present both files and then argue whether the same rules really apply everywhere in the Republic, pushing back three times. Correct exactly two things per turn: the cause connectors — à cause de blames, grâce à credits, en raison de is neutral, and all three take a noun, never « à cause que » — and my use of the legal words, since un non-lieu is not une relaxe. Finish with three concrete fixes and the phrases I hesitated on."
   }
 ]

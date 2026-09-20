@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="Two panels on Guadeloupe. On the left, the water network: of every 100 litres produced, roughly 70 are lost to leaks and only about 30 reach a tap. Rotating water cuts, les tours d'eau, cover about 20 percent of the territory but affect resources serving more than half the population. The SMGEAG has run water for the island since 2021 and aims to repair 5000 leaks by the end of 2026. On the right, a timeline of chlordecone, the pesticide used on banana plantations: spread from 1972, banned in mainland France in 1990, but allowed in the Antilles under an exemption until 1993 — three years highlighted as the heart of the argument. In 2021 prostate cancer linked to it was recognised as an occupational disease, and in 2023 the criminal case ended in a dismissal, un non-lieu.">
+  <style>
+    .t   { font-size: 17px; font-weight: 800; fill: #0f172a; }
+    .st  { font-size: 11px; font-style: italic; fill: #64748b; }
+    .hd  { font-size: 14px; font-weight: 800; fill: #0f172a; }
+    .sub { font-size: 9px; fill: #94a3b8; }
+    .kq  { font-size: 10px; font-weight: 700; fill: #334155; }
+    .sm  { font-size: 9px; fill: #64748b; }
+    .bar { font-size: 9px; font-weight: 700; fill: #78350f; }
+    .barb{ font-size: 9px; font-weight: 700; fill: #1e3a8a; }
+    .yr  { font-size: 9.5px; font-weight: 800; fill: #b45309; }
+    .ev  { font-size: 9px; fill: #334155; }
+    .ft  { font-size: 10px; fill: #475569; }
+  </style>
+
+  <rect width="640" height="340" fill="#ffffff"/>
+  <text x="320" y="24" text-anchor="middle" class="t">La Guadeloupe — l’eau qui fuit, la terre qui reste</text>
+  <text x="320" y="42" text-anchor="middle" class="st">deux dossiers, une même question : les mêmes services et la même protection partout ?</text>
+
+  <!-- L'eau -->
+  <rect x="14" y="58" width="298" height="232" rx="12" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.5"/>
+  <text x="32" y="82" class="hd">L’eau</text>
+  <text x="32" y="96" class="sub">le réseau de distribution</text>
+  <line x1="32" y1="106" x2="294" y2="106" stroke="#bae6fd" stroke-width="1"/>
+  <text x="32" y="124" class="kq">Sur 100 litres produits…</text>
+  <rect x="32" y="134" width="183" height="22" rx="4" fill="#fcd34d"/>
+  <rect x="215" y="134" width="79" height="22" rx="4" fill="#93c5fd"/>
+  <text x="123" y="149" text-anchor="middle" class="bar">≈ 70 perdus en fuites</text>
+  <text x="254" y="149" text-anchor="middle" class="barb">≈ 30</text>
+  <text x="32" y="171" class="sm">un réseau vétuste, des fuites par milliers</text>
+  <line x1="32" y1="184" x2="294" y2="184" stroke="#bae6fd" stroke-width="1"/>
+  <text x="32" y="202" class="kq">Les tours d’eau</text>
+  <text x="32" y="217" class="sm">≈ 20 % du territoire — mais plus de la moitié</text>
+  <text x="32" y="229" class="sm">de la population concernée.</text>
+  <line x1="32" y1="242" x2="294" y2="242" stroke="#bae6fd" stroke-width="1"/>
+  <text x="32" y="259" class="sm">le SMGEAG, gestionnaire unique depuis 2021</text>
+  <text x="32" y="273" class="sm">objectif : 5 000 fuites réparées d’ici fin 2026</text>
+
+  <!-- Le chlordécone -->
+  <rect x="328" y="58" width="298" height="232" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="346" y="82" class="hd">Le chlordécone</text>
+  <text x="346" y="96" class="sub">le pesticide des bananeraies</text>
+  <line x1="346" y1="106" x2="608" y2="106" stroke="#fde68a" stroke-width="1"/>
+
+  <rect x="344" y="146" width="268" height="56" rx="6" fill="#fde68a" opacity="0.55"/>
+  <line x1="358" y1="124" x2="358" y2="266" stroke="#fcd34d" stroke-width="2"/>
+
+  <circle cx="358" cy="128" r="4" fill="#b45309"/>
+  <text x="372" y="131.5" class="yr">1972</text><text x="404" y="131.5" class="ev">on épand dans les bananeraies</text>
+  <circle cx="358" cy="164" r="4.5" fill="#b45309"/>
+  <text x="372" y="167.5" class="yr">1990</text><text x="404" y="167.5" class="ev" font-weight="700">interdit en France métropolitaine</text>
+  <circle cx="358" cy="188" r="4.5" fill="#b45309"/>
+  <text x="372" y="191.5" class="yr">1993</text><text x="404" y="191.5" class="ev" font-weight="700">fin de la dérogation aux Antilles</text>
+  <text x="372" y="218" class="sm" font-style="italic">trois ans pendant lesquels il reste légal ici</text>
+  <circle cx="358" cy="238" r="4" fill="#b45309"/>
+  <text x="372" y="241.5" class="yr">2021</text><text x="404" y="241.5" class="ev">cancer reconnu maladie professionnelle</text>
+  <circle cx="358" cy="262" r="4" fill="#b45309"/>
+  <text x="372" y="265.5" class="yr">2023</text><text x="404" y="265.5" class="ev">non-lieu au pénal</text>
+
+  <text x="320" y="316" text-anchor="middle" class="ft">Plus de 90 % des adultes de Guadeloupe et de Martinique portent le chlordécone dans le sang.</text>
+</svg>

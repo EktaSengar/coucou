@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 332" width="640" height="332" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="A side-by-side comparison of two French islands. On the left, La Réunion in the Indian Ocean, about 880 000 inhabitants: four communities share the island — Catholics, Tamil Hindus, Muslims, and Buddhists and Chinese — and Dipavali, Eid, Christmas and Chinese New Year are all publicly marked. Mixed marriages are ordinary there. On the right, la Corse in the Mediterranean, about 350 000 inhabitants: one largely Catholic tradition, with confraternities and processions, and the cross as a marker of identity. Below it, the Quasquara case in three dates: in 2022 the council erects a cross, in 2025 the administrative court of Bastia overturns the mayor's refusal to remove it, and on 26 June 2026 the appeal court of Marseille confirms the removal. A footer notes that the two islands share the same 1905 law but face different questions.">
+  <style>
+    .t   { font-size: 17px; font-weight: 800; fill: #0f172a; }
+    .st  { font-size: 11px; font-style: italic; fill: #64748b; }
+    .hd  { font-size: 14px; font-weight: 800; fill: #0f172a; }
+    .sub { font-size: 9px; fill: #94a3b8; }
+    .kq  { font-size: 10px; font-weight: 700; fill: #334155; }
+    .it  { font-size: 10px; fill: #334155; }
+    .sm  { font-size: 9px; fill: #64748b; }
+    .yr  { font-size: 9px; font-weight: 800; fill: #b45309; }
+    .ft  { font-size: 10px; fill: #475569; }
+  </style>
+
+  <rect width="640" height="332" fill="#ffffff"/>
+  <text x="320" y="24" text-anchor="middle" class="t">Deux îles françaises, deux rapports au religieux</text>
+  <text x="320" y="42" text-anchor="middle" class="st">même République, même loi de 1905 — et deux questions très différentes</text>
+
+  <!-- La Réunion -->
+  <rect x="14" y="58" width="298" height="222" rx="12" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.5"/>
+  <text x="32" y="82" class="hd">La Réunion</text>
+  <text x="32" y="96" class="sub">océan Indien · ≈ 880 000 habitants</text>
+  <line x1="32" y1="106" x2="294" y2="106" stroke="#bae6fd" stroke-width="1"/>
+  <text x="32" y="124" class="kq">Quatre communautés, une seule île</text>
+  <circle cx="37" cy="140" r="4" fill="#2563eb"/><text x="48" y="143.5" class="it">catholiques</text>
+  <circle cx="37" cy="159" r="4" fill="#d97706"/><text x="48" y="162.5" class="it">hindous tamouls</text>
+  <circle cx="37" cy="178" r="4" fill="#059669"/><text x="48" y="181.5" class="it">musulmans</text>
+  <circle cx="37" cy="197" r="4" fill="#7c3aed"/><text x="48" y="200.5" class="it">bouddhistes &amp; Chinois</text>
+  <line x1="32" y1="212" x2="294" y2="212" stroke="#bae6fd" stroke-width="1"/>
+  <text x="32" y="229" class="sm">Dipavali · l’Aïd · Noël · le Nouvel An chinois</text>
+  <text x="32" y="241" class="sm" font-style="italic">— tous marqués publiquement</text>
+  <rect x="32" y="250" width="262" height="22" rx="6" fill="#dbeafe"/>
+  <text x="163" y="265" text-anchor="middle" class="kq">les mariages mixtes y sont ordinaires</text>
+
+  <!-- la Corse -->
+  <rect x="328" y="58" width="298" height="222" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="346" y="82" class="hd">la Corse</text>
+  <text x="346" y="96" class="sub">Méditerranée · ≈ 350 000 habitants</text>
+  <line x1="346" y1="106" x2="608" y2="106" stroke="#fde68a" stroke-width="1"/>
+  <text x="346" y="124" class="kq">Une tradition très majoritaire</text>
+  <circle cx="351" cy="140" r="4" fill="#b45309"/><text x="362" y="143.5" class="it">catholicisme majoritaire</text>
+  <circle cx="351" cy="159" r="4" fill="#b45309"/><text x="362" y="162.5" class="it">confréries, processions</text>
+  <circle cx="351" cy="178" r="4" fill="#b45309"/><text x="362" y="181.5" class="it">la croix, symbole identitaire</text>
+  <line x1="346" y1="192" x2="608" y2="192" stroke="#fde68a" stroke-width="1"/>
+  <text x="346" y="209" class="kq">L’affaire de la croix de Quasquara</text>
+  <text x="346" y="226" class="yr">2022</text><text x="392" y="226" class="sm">la commune érige une croix</text>
+  <text x="346" y="242" class="yr">2025</text><text x="392" y="242" class="sm">le TA de Bastia annule le refus du maire</text>
+  <text x="346" y="258" class="yr">2026</text><text x="392" y="258" class="sm">la CAA de Marseille confirme le retrait</text>
+
+  <text x="320" y="302" text-anchor="middle" class="ft">Une même loi, deux questions : comment faire cohabiter quatre religions —</text>
+  <text x="320" y="318" text-anchor="middle" class="ft">et jusqu’où un symbole peut être « culturel » plutôt que religieux.</text>
+</svg>

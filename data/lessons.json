@@ -4516,7 +4516,7 @@
       },
       {
         "title": "La croix dans l’espace public — la règle de 1905",
-        "body": "The 1905 law forbids new religious signs on public land; anything older is left alone, which is why every village church keeps its cross. Put up a new one and it becomes a case for the tribunal administratif — Ploërmel, 2017, where the Conseil d'État let the statue stay and took the cross down. The two places the law never reached are in the second figure above."
+        "body": "La laïcité, in practice. The 1905 law forbids new religious signs on public land; anything older is left alone, which is why every village church keeps its cross. Put up a new one and it becomes a case for the tribunal administratif — Ploërmel, 2017, where the Conseil d'État let the statue stay and took the cross down. The two places the law never reached are in the second figure above."
       },
       {
         "title": "La Réunion — le vivre-ensemble",
@@ -4540,6 +4540,7 @@
       "Say the same opinion twice — once with « Je pense que… », once with « Je ne pense pas que… » — and change the verb.",
       "Answer the class question out loud in ninety seconds, with one example from La Réunion and one from la Guadeloupe.",
       "Article 73, article 74, or neither? — la Guadeloupe · la Polynésie française · la Corse · La Réunion.",
+      "Explain « la laïcité » to an English-speaking friend, in French, in three sentences — without using the word « secular ».",
       "Build the DELF shape: « D'un côté… », « D'un autre côté… », « En fin de compte… » — one paragraph each."
     ],
     "tutorPrompt": "Act as a DELF B2 oral examiner, in French throughout. Put this question to me: « Est-ce que vous pensez que les droits sont autant respectés dans les régions d'outre-mer qu'en France métropolitaine ? » Give me a minute to prepare, then make me answer in the DELF shape — introduction, plan annoncé, deux arguments avec exemples, conclusion — and push back three times. Draw on the real material: les tours d'eau et le chlordécone en Guadeloupe, le vivre-ensemble à La Réunion, la croix dans l'espace public et la loi de 1905, l'article premier, les revendications d'autonomie en Corse. Correct exactly two things per turn: the comparison structures (aussi + adjectif/adverbe, autant + verbe, autant de + nom, never « aussi de »), and the subjunctive after « je ne pense pas que » — soient, ait, puisse. Finish with a DELF grid score and three concrete fixes."

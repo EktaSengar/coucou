@@ -3642,6 +3642,105 @@
     "tutorPrompt": "Be my B1 French tutor for the conditionnel. Practise three things with me: polite requests (« je voudrais », « pourriez-vous »), giving advice (« tu devrais », « à ta place je… »), and hypotheticals with « si + imparfait → conditionnel ». Correct my endings and remind me never to use the conditional right after « si ». End with five conditional phrases worth memorising."
   },
   {
+    "id": "b1-prix-president",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "La hausse des prix — et « si j'étais président… »",
+    "minutes": 25,
+    "goal": "Complain about prices the way the French actually do, then say what you would change instead — the si-clause that turns anger into a proposal.",
+    "figures": [
+      {
+        "src": "./assets/img/si-conditionnel.svg?v=1",
+        "alt": "A diagram of the French si-clause. Top row, the imagined world: a box labelled SI + IMPARFAIT containing « si j'étais président » points by an arrow to a box labelled CONDITIONNEL containing « je baisserais les prix ». Second row, the real possibility: SI + PRÉSENT, « si je suis élu », points to FUTUR, « je changerai tout ». Third row, in red and struck through: « si je serais président » — the conditionnel never follows si. A footer notes that the order is free: « je baisserais les prix si j'étais président » works just as well.",
+        "caption": "Two rows, two worlds: the top one is imagined, the bottom one could really happen. The red line is the one rule with no exceptions — whatever follows « si », it is never a conditionnel."
+      }
+    ],
+    "vocab": [
+      { "fr": "la hausse des prix", "phonetic": "lah ohss day PREE", "en": "the rise in prices", "emoji": "📈" },
+      { "fr": "l'essence", "phonetic": "less-SAHNSS", "en": "petrol", "emoji": "⛽" },
+      { "fr": "mettre de l'essence", "phonetic": "metr duh less-SAHNSS", "en": "to fill up with petrol", "emoji": "🚗" },
+      { "fr": "le litre", "phonetic": "luh LEETR", "en": "the litre", "emoji": "🧴" },
+      { "fr": "le pouvoir d'achat", "phonetic": "luh poo-vwahr da-SHAH", "en": "purchasing power", "emoji": "💶" },
+      { "fr": "une augmentation de salaire", "phonetic": "ewn og-mahn-ta-syohn duh sa-LEHR", "en": "a pay rise", "emoji": "💰" },
+      { "fr": "en colère", "phonetic": "ahn ko-LEHR", "en": "angry", "emoji": "😠" },
+      { "fr": "une manifestation", "phonetic": "ewn ma-nee-fes-ta-SYOHN", "en": "a demonstration, a protest", "emoji": "📣" },
+      { "fr": "un gilet jaune", "phonetic": "uhn zhee-leh ZHOHN", "en": "a yellow vest", "emoji": "🦺" },
+      { "fr": "une taxe / un impôt", "phonetic": "ewn TAX / uhn am-POH", "en": "a tax", "emoji": "🧾" },
+      { "fr": "améliorer", "phonetic": "a-may-lyo-RAY", "en": "to improve", "emoji": "🔧" },
+      { "fr": "sauver", "phonetic": "soh-VAY", "en": "to save", "emoji": "🛟" },
+      { "fr": "régner", "phonetic": "ray-NYAY", "en": "to reign, to prevail", "emoji": "👑" },
+      { "fr": "mourir", "phonetic": "moo-REER", "en": "to die", "emoji": "🥀" },
+      { "fr": "la publicité / la pub", "phonetic": "lah pew-blee-see-TAY / lah PEWB", "en": "advertising / the ads", "emoji": "📺" },
+      { "fr": "un dauphin / une orque", "phonetic": "uhn doh-FAN / ewn ORK", "en": "a dolphin / an orca", "emoji": "🐬" }
+    ],
+    "grammar": {
+      "point": "« Si » picks the tense — and there is one it never accepts",
+      "table": {
+        "title": "les deux phrases avec « si », et l’interdit",
+        "cols": ["la condition", "le résultat", "exemple"],
+        "rows": [
+          { "label": "① c’est possible", "cells": ["si + présent → futur", "si je suis élu, je changerai tout"] },
+          { "label": "② c’est imaginé", "cells": ["si + imparfait → conditionnel", "si j’étais président, je changerais"] },
+          { "label": "③ l’ordre", "cells": ["libre, dans les deux sens", "je changerais si j’étais président"] },
+          { "label": "④ interdit", "cells": ["jamais « si » + conditionnel", "✗ si je serais président"] }
+        ],
+        "highlight": ["si + imparfait → conditionnel", "✗ si je serais président"],
+        "note": "Row ④ is the error that gets corrected in every classroom in France. « Si » takes the imparfait; the conditionnel belongs in the other half of the sentence. If you can hear « -rais » straight after « si », something has gone wrong."
+      },
+      "table2": {
+        "title": "le conditionnel : radical du futur, terminaisons de l’imparfait",
+        "cols": ["l’infinitif", "le conditionnel", "en contexte"],
+        "rows": [
+          { "label": "être", "cells": ["ce serait", "ce serait plus juste"] },
+          { "label": "avoir", "cells": ["il y aurait", "il y aurait moins de pub"] },
+          { "label": "faire", "cells": ["je ferais", "je ferais baisser les prix"] },
+          { "label": "pouvoir", "cells": ["on pourrait", "on pourrait tout changer"] },
+          { "label": "aller", "cells": ["j’irais", "j’irais plus loin"] },
+          { "label": "régner", "cells": ["la paix régnerait", "la paix régnerait enfin"] }
+        ],
+        "highlight": ["il y aurait", "on pourrait"],
+        "note": "Good news: you have already learnt these stems. The conditionnel uses exactly the futur stem — ser-, aur-, fer-, pourr-, ir- — with the imparfait endings stuck on. Learn the irregulars once and you get two tenses out of them."
+      },
+      "explain": "French has two ways of saying « if », and the difference is whether you think it could actually happen. Si je suis élu, je changerai tout — that is a real possibility, so présent then futur. Si j'étais président, je changerais tout — that is a daydream, so imparfait then conditionnel. English blurs this, because « if I was president » and « if I am elected » look almost the same, which is why the French version has to be learnt as a pair of fixed shapes. The one absolute rule is that the conditionnel never sits directly after si: « si je serais » is wrong in the way « if I would be » is wrong in English. Note also that the order is free — you can start with either half, and « si » simply travels with its own clause."
+    },
+    "notes": [
+      {
+        "title": "Why a yellow vest, of all things",
+        "body": "French law requires every vehicle to carry a gilet de haute visibilité. So when the protests started in November 2018, the symbol was already in forty million glove compartments — no organisation, no printing, no membership. That is why the movement became visible overnight and why it had no leaders to negotiate with. The object made the politics possible."
+      },
+      {
+        "title": "La hausse des prix — what actually set it off",
+        "body": "The trigger was a planned rise in the TICPE, the fuel tax: about ten centimes on a litre of essence and nineteen on diesel. The first day, 17 November 2018, brought out some 282 000 people, and thousands of ronds-points and péages were occupied for weeks. The government cancelled the rise in December. Worth knowing: taxes make up roughly sixty per cent of what you pay at the pump."
+      },
+      {
+        "title": "Le pouvoir d'achat — the phrase French politics runs on",
+        "body": "Literally « purchasing power », and it is not quite our « cost of living ». It names the gap between what you earn and what your money actually buys, which is why it survives every change of government and appears in every campaign. If you learn one political expression in French, learn this one — then « une augmentation de salaire » and « la fin du mois » sit naturally beside it."
+      },
+      {
+        "title": "Never « si » + conditionnel",
+        "body": "The single most corrected mistake at B1. « Si je serais président » is wrong exactly the way « if I would be president » is wrong in English — and French speakers hear it just as sharply. Si takes the imparfait, and the -rais goes in the other half. One safe habit: say the second half of your sentence first in your head, then attach the si-clause to it."
+      }
+    ],
+    "examples": [
+      "Le prix de l'essence a beaucoup augmenté cette année. (luh pree duh less-SAHNSS)",
+      "Les gens sont en colère parce que leur pouvoir d'achat baisse. (ahn ko-LEHR)",
+      "Les gilets jaunes ont occupé les ronds-points pendant des semaines. (lay zhee-leh ZHOHN)",
+      "Si j'étais président, je baisserais les taxes sur l'essence. (see zhay-TEH pray-zee-DAHN)",
+      "S'il y avait moins de publicité, les villes seraient plus belles. (seel ee a-VEH mwahn duh pew-blee-see-TAY)",
+      "Si on protégeait mieux les océans, les dauphins ne mourraient pas. (lay doh-FAN nuh moo-REH pah)",
+      "La paix régnerait enfin, et tout le monde serait plus heureux. (lah peh ray-nyuh-REH ahn-FAN)"
+    ],
+    "practice": [
+      "Fill the gap: « Si j'___ (avoir) le temps, je viendrai. » · « Si j'___ (être) président, je changerais tout. » — which tense, and why?",
+      "Spot the error: « Si je serais riche, j'achèterais une maison. » What is wrong, and where should the -rais go?",
+      "Finish it five different ways, out loud: « Si j'étais président… »",
+      "Complain about three prices, using « la hausse des prix » and « le pouvoir d'achat ».",
+      "Describe your city with no advertising at all — three sentences, all in the conditionnel.",
+      "Explain in French why the gilet jaune was the perfect symbol for a protest."
+    ],
+    "tutorPrompt": "Be my B1 French tutor, in French, on two connected things. First the vocabulary of prices and protest — la hausse des prix, l'essence, le litre, le pouvoir d'achat, une augmentation de salaire, en colère, une manifestation, les gilets jaunes — and make me complain convincingly about the cost of living for a minute. Then switch to « Si j'étais président… » and make me produce at least eight sentences with si + imparfait → conditionnel, on subjects like les prix, la publicité dans les villes, la protection des océans et des dauphins, et la paix. Correct exactly two things: any conditionnel placed directly after « si », which is always wrong, and my conditionnel stems, which are the futur stems — serais, aurais, ferais, pourrais, irais. Then give me three sentences with si + présent → futur so I feel the difference. Finish with three concrete fixes."
+  },
+  {
     "id": "b1-04-pronouns",
     "level": "B1",
     "module": "Finding your voice",

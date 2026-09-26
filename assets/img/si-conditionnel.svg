@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" width="640" height="330" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="A diagram of the French si-clause. Top row, the hypothetical: a box labelled SI plus IMPARFAIT containing « si j'étais président » points by an arrow to a box labelled CONDITIONNEL containing « je baisserais les prix ». Second row, the real possibility: a box labelled SI plus PRÉSENT containing « si je suis élu » points to a box labelled FUTUR containing « je changerai tout ». Third row, in red and crossed out: « si je serais président » — the conditionnel never follows si, in either order.">
+  <style>
+    .t   { font-size: 17px; font-weight: 800; fill: #0f172a; }
+    .st  { font-size: 11px; font-style: italic; fill: #64748b; }
+    .tag { font-size: 9px; font-weight: 800; letter-spacing: .09em; }
+    .fr  { font-size: 13px; font-weight: 700; fill: #0f172a; }
+    .no  { font-size: 14px; font-weight: 800; fill: #be123c; }
+    .warn{ font-size: 10.5px; fill: #9f1239; }
+    .ft  { font-size: 10px; fill: #475569; }
+  </style>
+
+  <rect width="640" height="330" fill="#ffffff"/>
+  <text x="320" y="24" text-anchor="middle" class="t">« Si j’étais président… »</text>
+  <text x="320" y="42" text-anchor="middle" class="st">le « si » choisit le temps — et il y en a un qu’il refuse</text>
+
+  <!-- 1 · le monde imaginé -->
+  <rect x="26" y="62" width="256" height="58" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="44" y="82" class="tag" fill="#1d4ed8">SI + IMPARFAIT</text>
+  <text x="44" y="103" class="fr">si j’étais président</text>
+  <line x1="292" y1="91" x2="340" y2="91" stroke="#60a5fa" stroke-width="2.5"/>
+  <polygon points="340,86 352,91 340,96" fill="#60a5fa"/>
+  <rect x="358" y="62" width="256" height="58" rx="10" fill="#dbeafe" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="376" y="82" class="tag" fill="#1d4ed8">CONDITIONNEL</text>
+  <text x="376" y="103" class="fr">je baisserais les prix</text>
+
+  <!-- 2 · le monde possible -->
+  <rect x="26" y="136" width="256" height="58" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="44" y="156" class="tag" fill="#64748b">SI + PRÉSENT</text>
+  <text x="44" y="177" class="fr">si je suis élu</text>
+  <line x1="292" y1="165" x2="340" y2="165" stroke="#cbd5e1" stroke-width="2.5"/>
+  <polygon points="340,160 352,165 340,170" fill="#cbd5e1"/>
+  <rect x="358" y="136" width="256" height="58" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="376" y="156" class="tag" fill="#64748b">FUTUR</text>
+  <text x="376" y="177" class="fr">je changerai tout</text>
+
+  <!-- 3 · l'interdit -->
+  <rect x="26" y="214" width="588" height="66" rx="10" fill="#fff1f2" stroke="#fda4af" stroke-width="1.5"/>
+  <text x="44" y="242" class="no">✗  si je serais président</text>
+  <line x1="62" y1="237" x2="200" y2="237" stroke="#be123c" stroke-width="1.5"/>
+  <text x="44" y="264" class="warn">Le conditionnel ne vient jamais après « si ». Il va toujours dans l’autre moitié.</text>
+
+  <text x="320" y="308" text-anchor="middle" class="ft">L’ordre est libre : « je baisserais les prix si j’étais président » marche aussi bien.</text>
+</svg>

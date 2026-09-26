@@ -3579,67 +3579,89 @@
     "id": "b1-03-conditionnel",
     "level": "B1",
     "module": "Finding your voice",
-    "title": "Politeness, advice & « what if »",
-    "minutes": 30,
-    "goal": "Sound polite, give advice and talk about what you would do — the conditional.",
+    "title": "Politesse & conseils — le conditionnel de tous les jours",
+    "minutes": 25,
+    "goal": "The conditionnel you use twenty times a day and never notice: asking without demanding, and advising without ordering.",
     "vocab": [
-      {
-        "fr": "je voudrais",
-        "phonetic": "zhuh voo-DREH",
-        "en": "I would like"
-      },
-      {
-        "fr": "j'aimerais",
-        "phonetic": "zhem-REH",
-        "en": "I would love / like"
-      },
-      {
-        "fr": "pourriez-vous… ?",
-        "phonetic": "poo-ree-AY voo",
-        "en": "could you…?"
-      },
-      {
-        "fr": "à ta place",
-        "phonetic": "ah tah PLASS",
-        "en": "if I were you"
-      },
-      {
-        "fr": "tu devrais",
-        "phonetic": "tew duh-VREH",
-        "en": "you should"
-      },
-      {
-        "fr": "ce serait",
-        "phonetic": "suh suh-REH",
-        "en": "it would be"
-      },
-      {
-        "fr": "si possible",
-        "phonetic": "see poh-SEE-bluh",
-        "en": "if possible"
-      },
-      {
-        "fr": "au cas où",
-        "phonetic": "oh kah OO",
-        "en": "just in case"
-      }
+      { "fr": "je voudrais", "phonetic": "zhuh voo-DREH", "en": "I would like", "emoji": "🙏" },
+      { "fr": "j'aimerais", "phonetic": "zhem-REH", "en": "I would love to", "emoji": "💭" },
+      { "fr": "pourriez-vous… ?", "phonetic": "poo-ree-ay VOO", "en": "could you…? (formal)", "emoji": "🤝" },
+      { "fr": "pourrais-tu… ?", "phonetic": "poo-reh TEW", "en": "could you…? (informal)", "emoji": "👋" },
+      { "fr": "auriez-vous… ?", "phonetic": "o-ree-ay VOO", "en": "would you have…?", "emoji": "🎁" },
+      { "fr": "tu devrais", "phonetic": "tew duh-VREH", "en": "you should", "emoji": "💡" },
+      { "fr": "il faudrait", "phonetic": "eel foh-DREH", "en": "someone ought to, we should", "emoji": "📋" },
+      { "fr": "à ta place", "phonetic": "a tah PLASS", "en": "if I were you", "emoji": "🔄" },
+      { "fr": "tu ferais mieux de", "phonetic": "tew fuh-reh MYUH duh", "en": "you'd be better off", "emoji": "⚠️" },
+      { "fr": "je te conseille de", "phonetic": "zhuh tuh kohn-SEY duh", "en": "I'd advise you to", "emoji": "🗣️" },
+      { "fr": "ce serait", "phonetic": "suh suh-REH", "en": "it would be", "emoji": "✨" },
+      { "fr": "cela m'arrangerait", "phonetic": "suh-lah ma-rahn-zhuh-REH", "en": "that would suit me", "emoji": "👍" },
+      { "fr": "si possible", "phonetic": "see po-SEEBL", "en": "if possible", "emoji": "🕊️" },
+      { "fr": "au cas où", "phonetic": "oh kah OO", "en": "just in case", "emoji": "☂️" }
     ],
     "grammar": {
-      "point": "Le conditionnel & les phrases avec « si »",
-      "table": {"cols": ["condition — si …", "result"], "rows": [{"label": "si + présent", "cells": ["futur (or présent)"]}, {"label": "si + imparfait", "cells": ["conditionnel"]}], "highlight": ["conditionnel"], "note": "Si j'ai le temps, je viendrai. · Si j'avais le temps, je viendrais. ⚠ The conditional never comes right after « si » — never « si je voudrais »."},
-      "explain": "Build the conditional on the futur-simple stem but with the imparfait endings (-ais, -ais, -ait, -ions, -iez, -aient): « je voudrais, tu pourrais, il serait ». Use it to be polite (« je voudrais… »), to give advice (« tu devrais… ») and for hypotheticals — which follow the si-pattern in the grid."
+      "point": "The conditionnel isn't only for daydreams — it's how French stays polite",
+      "table": {
+        "title": "la même demande, deux niveaux",
+        "cols": ["le verbe", "au présent — brutal", "au conditionnel — poli"],
+        "rows": [
+          { "label": "vouloir", "cells": ["je veux un café", "je voudrais un café"] },
+          { "label": "pouvoir (tu)", "cells": ["tu peux m’aider ?", "pourrais-tu m’aider ?"] },
+          { "label": "pouvoir (vous)", "cells": ["vous pouvez répéter ?", "pourriez-vous répéter ?"] },
+          { "label": "avoir", "cells": ["vous avez l’heure ?", "auriez-vous l’heure ?"] },
+          { "label": "devoir", "cells": ["tu dois partir", "tu devrais partir"] },
+          { "label": "falloir", "cells": ["il faut réserver", "il faudrait réserver"] }
+        ],
+        "highlight": ["je voudrais un café", "tu devrais partir"],
+        "note": "The left column is not wrong, it is blunt — « je veux un café » is what a small child says in a café, and adults hear it that way. The conditionnel puts a step between you and the request, which is exactly what politeness is."
+      },
+      "table2": {
+        "title": "donner un conseil — cinq façons, de la plus douce à la plus ferme",
+        "cols": ["ce qu’on dit", "la force", "English"],
+        "rows": [
+          { "label": "à ta place, je…", "cells": ["très doux", "if I were you, I’d…"] },
+          { "label": "ce serait mieux de…", "cells": ["doux", "it would be better to…"] },
+          { "label": "tu pourrais…", "cells": ["une suggestion", "you could…"] },
+          { "label": "je te conseille de…", "cells": ["clair", "I’d advise you to…"] },
+          { "label": "tu devrais…", "cells": ["ferme", "you should…"] },
+          { "label": "tu ferais mieux de…", "cells": ["très ferme", "you’d be better off…"] }
+        ],
+        "highlight": ["très doux", "très ferme"],
+        "note": "All six are conditionnels, and the strength is in the phrase rather than the tense. « À ta place » leaves the decision entirely with the other person; « tu ferais mieux de » is close to a warning. Pick by how much room you want to leave them."
+      },
+      "explain": "Most of the conditionnel you will ever use has nothing to do with imagining a different world. It is the tense French reaches for whenever a plain request would land too hard. « Je veux un café » is grammatical and slightly rude; « je voudrais un café » is what everyone actually says. The same softening runs through asking (pourriez-vous, auriez-vous), advising (tu devrais, tu ferais mieux de) and general suggestions (il faudrait réserver). Building it is easy once, and free thereafter: take the futur stem and add the imparfait endings, so je voudr-ais, tu pourr-ais, il ser-ait, il faudr-ait. One warning for the ear — with -er verbs the futur and the conditionnel are near-homophones, je parlerai against je parlerais, and only context separates them in speech."
     },
+    "notes": [
+      {
+        "title": "« Je veux » is for children",
+        "body": "This is the single fastest way to sound more French. « Je veux un café » is not incorrect, but adults do not say it in a shop — it is what a five-year-old says, and it is heard that way. The default in every transaction is « je voudrais », or « je vais prendre… » in a café. If you change one habit from this lesson, change this one."
+      },
+      {
+        "title": "Two tenses that sound the same",
+        "body": "For -er verbs the futur and the conditionnel differ by one letter and almost nothing in sound: je parlerai (I will speak) against je parlerais (I would speak). Native speakers distinguish them mostly by context. In writing the -s matters, so it is worth slowing down: a promise takes no -s, a polite or hypothetical form takes one."
+      },
+      {
+        "title": "« Il faudrait » — the impersonal nudge",
+        "body": "« Il faut » states a requirement flatly; « il faudrait » turns it into something that ought to happen, without saying by whom. It is enormously useful at work and in shared flats, because it raises the problem without assigning blame: « il faudrait réserver », « il faudrait prévenir le propriétaire ». French uses it constantly for exactly that reason."
+      }
+    ],
     "examples": [
-      "Si j'étais riche, j'achèterais un appartement à Paris. (see zhay-teh REESH, zhash-tuh-REH uhn ah-par-tuh-MAHN ah pa-REE)",
-      "Pourriez-vous m'aider, s'il vous plaît ? (poo-ree-ay VOO meh-DAY, seel voo PLEH)"
+      "Bonjour, je voudrais un café et un croissant, s'il vous plaît. (zhuh voo-DREH uhn ka-FAY)",
+      "Pourriez-vous répéter, s'il vous plaît ? Je n'ai pas compris. (poo-ree-ay VOO ray-pay-TAY)",
+      "Auriez-vous une table pour deux vers vingt heures ? (o-ree-ay VOO ewn TABL)",
+      "À ta place, je prendrais le train plutôt que la voiture. (a tah PLASS zhuh prahn-DREH)",
+      "Tu devrais vraiment appeler le médecin. (tew duh-VREH vreh-MAHN)",
+      "Il faudrait réserver avant vendredi, ce serait plus sûr. (eel foh-DREH ray-zehr-VAY)",
+      "Est-ce que jeudi vous arrangerait ? (es-kuh zhuh-DEE voo-za-rahn-zhuh-REH)"
     ],
     "practice": [
-      "Make three polite requests with « je voudrais » / « pourriez-vous… ? ».",
-      "Give a friend advice with « tu devrais… ».",
-      "Complete: « Si j'avais plus de temps, je… ».",
-      "Say what you would do with a free week, using the conditional."
+      "Soften each one: « Je veux un thé. » · « Tu peux m'aider ? » · « Vous avez l'heure ? » · « Tu dois partir. »",
+      "Order in a café three times, each one more formal than the last.",
+      "Give a friend advice on the same problem four ways, from « à ta place » up to « tu ferais mieux de ».",
+      "Ask a stranger for something out loud, using « pourriez-vous » and « s'il vous plaît ».",
+      "Write it, don't just say it: « je parlerai » or « je parlerais »? Build one sentence with each.",
+      "Raise a problem at work with « il faudrait », without naming anyone."
     ],
-    "tutorPrompt": "Be my B1 French tutor for the conditionnel. Practise three things with me: polite requests (« je voudrais », « pourriez-vous »), giving advice (« tu devrais », « à ta place je… »), and hypotheticals with « si + imparfait → conditionnel ». Correct my endings and remind me never to use the conditional right after « si ». End with five conditional phrases worth memorising."
+    "tutorPrompt": "Be my B1 French tutor, in French, on the everyday conditionnel — politeness and advice only, not hypotheticals. First run me through real situations where I must ask for something: a café, a shop, a restaurant booking, asking a stranger to repeat, asking a colleague for a favour. Reject any blunt « je veux » or « tu peux ? » and make me reformulate with je voudrais, pourriez-vous, auriez-vous, cela m'arrangerait. Then give me three problems a friend might have and make me advise on each, moving through à ta place, ce serait mieux de, tu devrais and tu ferais mieux de, and tell me how forceful I sounded each time. Correct my conditionnel forms, which are the futur stem plus imparfait endings, and watch the final -s, since je parlerai and je parlerais sound alike but are not the same. Finish with five phrases worth memorising."
   },
   {
     "id": "b1-prix-president",

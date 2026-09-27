@@ -201,7 +201,10 @@ document.addEventListener('alpine:init', () => {
   </div>
 
   <!-- lesson -->
-  <article x-show="!loading && lesson" x-cloak>
+  <!-- x-if, not x-show: x-show would still render this subtree and evaluate every
+       lesson.* expression before the fetch resolves, throwing on each one. -->
+  <template x-if="!loading && lesson">
+  <article>
 
     <!-- breadcrumb + meta -->
     <div class="flex items-center gap-2 text-sm text-slate-500">
@@ -410,6 +413,7 @@ document.addEventListener('alpine:init', () => {
     <p class="mt-8 text-center"><a href="./lessons.html" class="text-sm font-medium text-blue-600 hover:underline">← All lessons</a></p>
 
   </article>
+  </template>
 </main>
 
 <footer class="border-t border-slate-200">

@@ -47,12 +47,12 @@ document.addEventListener('alpine:init', () => {
     },
     get prev() { return this.idx > 0 ? this.all[this.idx - 1] : null; },
     get next() { return (this.idx >= 0 && this.idx < this.all.length - 1) ? this.all[this.idx + 1] : null; },
-    // grammar.table, then the optional grammar.table2 — a second pattern that
-    // earns its own grid rather than being buried in the prose.
+    // grammar.table, then the optional table2 and table3 — further patterns that
+    // earn their own grid rather than being buried in the prose.
     get grammarTables() {
       const g = this.lesson && this.lesson.grammar;
       if (!g) return [];
-      return [g.table, g.table2].filter(Boolean);
+      return [g.table, g.table2, g.table3].filter(Boolean);
     },
     // Flatten a grammar table into a single ordered cell list (header row, then
     // each body row = label + cells) so the grid renders with one x-for — nested

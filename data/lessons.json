@@ -3601,6 +3601,19 @@
     "grammar": {
       "point": "The conditionnel isn't only for daydreams — it's how French stays polite",
       "table": {
+        "cols": ["", "ending", "parler →", "être →"],
+        "rows": [
+          { "label": "je", "cells": ["-ais", "parlerais", "serais"] },
+          { "label": "tu", "cells": ["-ais", "parlerais", "serais"] },
+          { "label": "il / elle / on", "cells": ["-ait", "parlerait", "serait"] },
+          { "label": "nous", "cells": ["-ions", "parlerions", "serions"] },
+          { "label": "vous", "cells": ["-iez", "parleriez", "seriez"] },
+          { "label": "ils / elles", "cells": ["-aient", "parleraient", "seraient"] }
+        ],
+        "highlight": ["-ions", "-iez"],
+        "note": "Six forms, four sounds. Je, tu, il and ils are homophones — parlerais, parlerais, parlerait and parleraient are all « par-luh-REH », and only the spelling separates them. The two highlighted endings are the only ones you actually hear as different. They are exactly the imparfait endings, sitting on the futur stem."
+      },
+      "table2": {
         "title": "la même demande, deux niveaux",
         "cols": ["le verbe", "au présent — brutal", "au conditionnel — poli"],
         "rows": [
@@ -3614,7 +3627,7 @@
         "highlight": ["je voudrais un café", "tu devrais partir"],
         "note": "The left column is not wrong, it is blunt — « je veux un café » is what a small child says in a café, and adults hear it that way. The conditionnel puts a step between you and the request, which is exactly what politeness is."
       },
-      "table2": {
+      "table3": {
         "title": "donner un conseil — cinq façons, de la plus douce à la plus ferme",
         "cols": ["ce qu’on dit", "la force", "English"],
         "rows": [

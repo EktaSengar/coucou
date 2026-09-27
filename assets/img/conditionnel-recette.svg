@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-label="How to build the conditionnel: take the stem from the futur simple and the ending from the imparfait. First example, POUVOIR: from the futur « je pourrai » keep the stem pourr-, from the imparfait « je pouvais » keep the ending -ais, and the result is « je pourrais ». Second example, MANGER: from « je mangerai » keep manger-, from « je mangeais » keep -ais, giving « je mangerais ». A footer notes that this works for every verb, including the irregular ones, because the futur has already done the hard part.">
+  <style>
+    .t   { font-size: 17px; font-weight: 800; fill: #0f172a; }
+    .st  { font-size: 11px; font-style: italic; fill: #64748b; }
+    .col { font-size: 9px; font-weight: 800; letter-spacing: .09em; }
+    .vb  { font-size: 10px; font-weight: 800; letter-spacing: .06em; fill: #94a3b8; }
+    .op  { font-size: 20px; font-weight: 800; fill: #cbd5e1; }
+    .w   { font-size: 16px; font-weight: 700; }
+    .keep-f { fill: #1d4ed8; }
+    .keep-i { fill: #b45309; }
+    .drop   { fill: #cbd5e1; }
+    .ft  { font-size: 10px; fill: #475569; }
+  </style>
+
+  <rect width="640" height="300" fill="#ffffff"/>
+  <text x="320" y="24" text-anchor="middle" class="t">Comment fabriquer le conditionnel</text>
+  <text x="320" y="42" text-anchor="middle" class="st">le radical du futur simple + les terminaisons de l’imparfait</text>
+
+  <text x="104" y="68" text-anchor="middle" class="col" fill="#1d4ed8">FUTUR SIMPLE</text>
+  <text x="312" y="68" text-anchor="middle" class="col" fill="#b45309">IMPARFAIT</text>
+  <text x="528" y="68" text-anchor="middle" class="col" fill="#0f172a">CONDITIONNEL</text>
+
+  <!-- POUVOIR -->
+  <text x="14" y="90" class="vb">POUVOIR</text>
+  <rect x="14" y="96" width="180" height="46" rx="9" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.4"/>
+  <text x="104" y="125" text-anchor="middle" class="w"><tspan class="keep-f">je pourr</tspan><tspan class="drop">ai</tspan></text>
+  <text x="204" y="127" text-anchor="middle" class="op">+</text>
+  <rect x="222" y="96" width="180" height="46" rx="9" fill="#fffbeb" stroke="#fde68a" stroke-width="1.4"/>
+  <text x="312" y="125" text-anchor="middle" class="w"><tspan class="drop">je pouv</tspan><tspan class="keep-i">ais</tspan></text>
+  <text x="412" y="127" text-anchor="middle" class="op">=</text>
+  <rect x="430" y="96" width="196" height="46" rx="9" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.6"/>
+  <text x="528" y="125" text-anchor="middle" class="w"><tspan class="keep-f">je pourr</tspan><tspan class="keep-i">ais</tspan></text>
+
+  <!-- MANGER -->
+  <text x="14" y="172" class="vb">MANGER</text>
+  <rect x="14" y="178" width="180" height="46" rx="9" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.4"/>
+  <text x="104" y="207" text-anchor="middle" class="w"><tspan class="keep-f">je manger</tspan><tspan class="drop">ai</tspan></text>
+  <text x="204" y="209" text-anchor="middle" class="op">+</text>
+  <rect x="222" y="178" width="180" height="46" rx="9" fill="#fffbeb" stroke="#fde68a" stroke-width="1.4"/>
+  <text x="312" y="207" text-anchor="middle" class="w"><tspan class="drop">je mange</tspan><tspan class="keep-i">ais</tspan></text>
+  <text x="412" y="209" text-anchor="middle" class="op">=</text>
+  <rect x="430" y="178" width="196" height="46" rx="9" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.6"/>
+  <text x="528" y="207" text-anchor="middle" class="w"><tspan class="keep-f">je manger</tspan><tspan class="keep-i">ais</tspan></text>
+
+  <text x="320" y="258" text-anchor="middle" class="ft">Ça marche même pour les verbes irréguliers : le futur a déjà fait le travail difficile.</text>
+  <text x="320" y="276" text-anchor="middle" class="ft">aller → j’irai + j’allais = <tspan font-weight="700">j’irais</tspan>  ·  faire → je ferai + je faisais = <tspan font-weight="700">je ferais</tspan></text>
+</svg>

@@ -3582,6 +3582,13 @@
     "title": "Politesse & conseils — le conditionnel de tous les jours",
     "minutes": 25,
     "goal": "The conditionnel you use twenty times a day and never notice: asking without demanding, and advising without ordering.",
+    "figures": [
+      {
+        "src": "./assets/img/conditionnel-recette.svg?v=1",
+        "alt": "How to build the conditionnel: take the stem from the futur simple and the ending from the imparfait. POUVOIR: from « je pourrai » keep pourr-, from « je pouvais » keep -ais, giving « je pourrais ». MANGER: from « je mangerai » keep manger-, from « je mangeais » keep -ais, giving « je mangerais ». A footer adds that it works for irregular verbs too, since the futur has already done the hard part: aller gives j'irais, faire gives je ferais.",
+        "caption": "The method from class, and the fastest way to get there: write the futur, write the imparfait, then keep the front of one and the back of the other. It never fails, because the futur has already absorbed every irregular stem."
+      }
+    ],
     "vocab": [
       { "fr": "je voudrais", "phonetic": "zhuh voo-DREH", "en": "I would like", "emoji": "🙏" },
       { "fr": "j'aimerais", "phonetic": "zhem-REH", "en": "I would love to", "emoji": "💭" },
@@ -3601,17 +3608,17 @@
     "grammar": {
       "point": "The conditionnel isn't only for daydreams — it's how French stays polite",
       "table": {
-        "cols": ["", "ending", "parler →", "être →"],
+        "cols": ["", "terminaison", "-er · aimer", "-ir · finir", "-re · vendre"],
         "rows": [
-          { "label": "je", "cells": ["-ais", "parlerais", "serais"] },
-          { "label": "tu", "cells": ["-ais", "parlerais", "serais"] },
-          { "label": "il / elle / on", "cells": ["-ait", "parlerait", "serait"] },
-          { "label": "nous", "cells": ["-ions", "parlerions", "serions"] },
-          { "label": "vous", "cells": ["-iez", "parleriez", "seriez"] },
-          { "label": "ils / elles", "cells": ["-aient", "parleraient", "seraient"] }
+          { "label": "je", "cells": ["-ais", "aimerais", "finirais", "vendrais"] },
+          { "label": "tu", "cells": ["-ais", "aimerais", "finirais", "vendrais"] },
+          { "label": "il / elle / on", "cells": ["-ait", "aimerait", "finirait", "vendrait"] },
+          { "label": "nous", "cells": ["-ions", "aimerions", "finirions", "vendrions"] },
+          { "label": "vous", "cells": ["-iez", "aimeriez", "finiriez", "vendriez"] },
+          { "label": "ils / elles", "cells": ["-aient", "aimeraient", "finiraient", "vendraient"] }
         ],
         "highlight": ["-ions", "-iez"],
-        "note": "Six forms, four sounds. Je, tu, il and ils are homophones — parlerais, parlerais, parlerait and parleraient are all « par-luh-REH », and only the spelling separates them. The two highlighted endings are the only ones you actually hear as different. They are exactly the imparfait endings, sitting on the futur stem."
+        "note": "For a regular verb the stem is just the infinitive — aimer-, finir- — except the -re group, which drops its e: vendre → vendr-. Only the two highlighted endings sound different; je, tu, il and ils are all « -REH ». And mind the elision: je + aimerais gives j'aimerais."
       },
       "table2": {
         "title": "la même demande, deux niveaux",
@@ -3641,7 +3648,7 @@
         "highlight": ["très doux", "très ferme"],
         "note": "All six are conditionnels, and the strength is in the phrase rather than the tense. « À ta place » leaves the decision entirely with the other person; « tu ferais mieux de » is close to a warning. Pick by how much room you want to leave them."
       },
-      "explain": "Most of the conditionnel you will ever use has nothing to do with imagining a different world. It is the tense French reaches for whenever a plain request would land too hard. « Je veux un café » is grammatical and slightly rude; « je voudrais un café » is what everyone actually says. The same softening runs through asking (pourriez-vous, auriez-vous), advising (tu devrais, tu ferais mieux de) and general suggestions (il faudrait réserver). Building it is easy once, and free thereafter: take the futur stem and add the imparfait endings, so je voudr-ais, tu pourr-ais, il ser-ait, il faudr-ait. One warning for the ear — with -er verbs the futur and the conditionnel are near-homophones, je parlerai against je parlerais, and only context separates them in speech."
+      "explain": "Most of the conditionnel you will ever use has nothing to do with imagining a different world. It is the tense French reaches for whenever a plain request would land too hard. « Je veux un café » is grammatical and slightly rude; « je voudrais un café » is what everyone actually says. The same softening runs through asking (pourriez-vous, auriez-vous), advising (tu devrais, tu ferais mieux de) and general suggestions (il faudrait réserver). Building it costs nothing new. Write the verb in the futur, write it in the imparfait, then keep the front of the first and the back of the second: je pourrai plus je pouvais gives je pourrais. That works for the irregulars too, because the futur has already absorbed them — j'irai and j'allais give j'irais. One warning for the ear — with -er verbs the futur and the conditionnel are near-homophones, je parlerai against je parlerais, and only context separates them in speech."
     },
     "notes": [
       {

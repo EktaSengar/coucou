@@ -4824,6 +4824,8 @@
       { "fr": "l'autonomie", "phonetic": "lo-to-no-MEE", "en": "autonomy", "emoji": "🔓" },
       { "fr": "une revendication", "phonetic": "ewn ruh-vahn-dee-ka-SYOHN", "en": "a demand, a political claim", "emoji": "✊" },
       { "fr": "une inégalité", "phonetic": "ewn ee-nay-ga-lee-TAY", "en": "an inequality", "emoji": "📉" },
+      { "fr": "la sécheresse", "phonetic": "lah say-SHRESS", "en": "the drought", "emoji": "🌵" },
+      { "fr": "le seuil de pauvreté", "phonetic": "luh suhy duh po-vruh-TAY", "en": "the poverty line", "emoji": "🏚️" },
       { "fr": "l'égalité devant la loi", "phonetic": "lay-ga-lee-TAY duh-VAHN lah LWAH", "en": "equality before the law", "emoji": "🟰" }
     ],
     "grammar": {
@@ -4866,6 +4868,10 @@
       {
         "title": "La croix dans l’espace public — la règle de 1905",
         "body": "La laïcité, in practice. The 1905 law forbids new religious signs on public land; anything older is left alone, which is why every village church keeps its cross. Put up a new one and it becomes a case for the tribunal administratif — Ploërmel, 2017, where the Conseil d'État let the statue stay and took the cross down. The two places the law never reached are in the second figure above."
+      },
+      {
+        "title": "Mayotte — le 101e département, et le plus pauvre",
+        "body": "The newest one, created in March 2011 after a referendum, and by a distance the poorest: roughly eighty per cent of people live below the poverty line, against about fifteen in the Hexagone. During the 2023 drought, the worst since 1997, running water was available for something like sixteen hours every three days. If you want the sharpest version of the class question, ask it about Mayotte — same Republic, same article 73, those numbers."
       }
     ],
     "examples": [

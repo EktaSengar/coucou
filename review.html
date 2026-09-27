@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review queue — Coucou</title>
+<meta name="description" content="Spaced repetition over every word in the Coucou lessons: a short daily queue that brings each one back just before you would forget it.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } } };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+<script defer src="./js/streak.js"></script>
+<script>
+// A Leitner queue over every vocab item in data/lessons.json.
+//
+// Each card lives in a box from 1 to 6; answering correctly moves it up a box
+// and pushes its due date out by BOX_DAYS[box], answering wrong sends it back
+// to box 1. State is keyed by the CLEANED French string rather than by lesson
+// id or index, so a word keeps its history when it is edited into a different
+// lesson — which happens often here — and two lessons sharing a word share one
+// card, which is the behaviour you want.
+document.addEventListener('alpine:init', () => {
+  const BOX_DAYS = [0, 1, 2, 4, 8, 16, 32];   // index = box number
+  const MAX_BOX = 6;
+  const STORE = 'lf-review';
+
+  // Local calendar date, not UTC: a review due "today" should turn over at
+  // midnight in Paris, not at 01:00. (streak.js uses UTC; this is deliberate.)
+  const ymd = (d) => { const z = new Date(d.getTime() - d.getTimezoneOffset() * 60000); return z.toISOString().slice(0, 10); };
+  const today = () => ymd(new Date());
+  const plusDays = (n) => { const d = new Date(); d.setDate(d.getDate() + n); return ymd(d); };
+  const clean = (t) => String(t).replace(/\([^)]*\)/g, '').replace(/\s*(?:\/|→)\s*/g, ', ').replace(/\s+/g, ' ').trim();
+
+  Alpine.data('review', () => ({
+    loading: true, error: false,
+    cards: [], state: {},
+    level: 'all', dir: 'fr', newPerDay: 15,
+    queue: [], i: 0, revealed: false, running: false, finished: false,
+    sessionRight: 0, sessionTotal: 0,
+    canSpeak: (typeof window !== 'undefined' && 'speechSynthesis' in window), frVoice: null, speaking: null, audioEl: null,
+
+    async init() {
+      this.initVoice();
+      try { this.level = localStorage.getItem('lf-review-level') || 'all'; } catch (e) {}
+      try { this.dir = localStorage.getItem('lf-review-dir') || 'fr'; } catch (e) {}
+      this.loadState();
+      try {
+        const res = await fetch('./data/lessons.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('http ' + res.status);
+        const lessons = await res.json();
+        const seen = new Set();
+        for (const l of lessons) {
+          for (const v of (l.vocab || [])) {
+            const key = clean(v.fr);
+            if (!key || seen.has(key)) continue;       // one card per word, not per appearance
+            seen.add(key);
+            this.cards.push({ key, fr: v.fr, en: v.en, phonetic: v.phonetic || '', emoji: v.emoji || '',
+                              level: l.level, lessonId: l.id, lessonTitle: l.title });
+          }
+        }
+      } catch (e) { this.error = true; }
+      this.loading = false;
+    },
+
+    loadState() { try { this.state = JSON.parse(localStorage.getItem(STORE) || '{}') || {}; } catch (e) { this.state = {}; } },
+    saveState() { try { localStorage.setItem(STORE, JSON.stringify(this.state)); } catch (e) {} },
+    setLevel(l) { this.level = l; try { localStorage.setItem('lf-review-level', l); } catch (e) {} },
+    setDir(d) { this.dir = d; try { localStorage.setItem('lf-review-dir', d); } catch (e) {} },
+
+    // pools
+    get pool() { return this.level === 'all' ? this.cards : this.cards.filter(c => c.level === this.level); },
+    get levels() { return ['all', ...new Set(this.cards.map(c => c.level))]; },
+    countIn(l) { return l === 'all' ? this.cards.length : this.cards.filter(c => c.level === l).length; },
+    get dueCards() { const t = today(); return this.pool.filter(c => this.state[c.key] && this.state[c.key].due <= t); },
+    get newCards() { return this.pool.filter(c => !this.state[c.key]); },
+    get learning() { return this.pool.filter(c => this.state[c.key] && this.state[c.key].box < MAX_BOX).length; },
+    get mastered() { return this.pool.filter(c => this.state[c.key] && this.state[c.key].box >= MAX_BOX).length; },
+    get seenCount() { return this.pool.filter(c => this.state[c.key]).length; },
+    get pct() { return this.pool.length ? Math.round(this.seenCount / this.pool.length * 100) : 0; },
+    get sessionSize() { return this.dueCards.length + Math.min(this.newCards.length, this.newPerDay); },
+
+    start() {
+      const due = this.dueCards.slice().sort((a, b) => (this.state[a.key].due < this.state[b.key].due ? -1 : 1));
+      const fresh = this.newCards.slice(0, this.newPerDay);
+      this.queue = due.concat(fresh);
+      if (!this.queue.length) return;
+      this.i = 0; this.revealed = false; this.running = true; this.finished = false;
+      this.sessionRight = 0; this.sessionTotal = this.queue.length;
+    },
+    get card() { return this.queue[this.i] || null; },
+    get front() { return this.card ? (this.dir === 'fr' ? this.card.fr : this.card.en) : ''; },
+    get back() { return this.card ? (this.dir === 'fr' ? this.card.en : this.card.fr) : ''; },
+    reveal() { if (this.card && !this.revealed) { this.revealed = true; if (this.dir === 'en') this.speak(this.card.fr, 'b'); } },
+
+    answer(ok) {
+      const c = this.card; if (!c) return;
+      // An unseen card behaves as if it were in box 1: get it right and it moves
+      // up to box 2, get it wrong and it stays at 1. Defaulting to box 0 would
+      // have made those two outcomes identical, which rewards nothing.
+      const prev = this.state[c.key] || { box: 1 };
+      let box;
+      if (!ok) box = 1;
+      else if (c.relearn) box = 1;   // failed earlier in this session — tomorrow, not a promotion
+      else box = Math.min(prev.box + 1, MAX_BOX);
+      this.state[c.key] = { box, due: plusDays(BOX_DAYS[box]) };
+      this.saveState();
+      if (ok && !c.relearn) this.sessionRight++;
+      // A card you didn't know comes back at the end of this same session.
+      if (!ok) this.queue.push(Object.assign({}, c, { relearn: true }));
+      this.i++; this.revealed = false;
+      if (this.i >= this.queue.length) this.finish();
+    },
+    finish() {
+      this.running = false; this.finished = true;
+      try { if (window.CoucouStreak) CoucouStreak.touch(); } catch (e) {}
+    },
+    quit() { this.running = false; this.finished = this.i > 0; },
+    resetAll() {
+      if (!confirm('Reset every review card back to unseen? This cannot be undone.')) return;
+      this.state = {}; this.saveState(); this.running = false; this.finished = false;
+    },
+    get nextDueLabel() {
+      const t = today(), ds = this.pool.map(c => this.state[c.key]).filter(Boolean).map(s => s.due).filter(d => d > t).sort();
+      if (!ds.length) return '';
+      const days = Math.round((new Date(ds[0]) - new Date(t)) / 86400000);
+      return days <= 1 ? 'tomorrow' : 'in ' + days + ' days';
+    },
+
+    onKey(e) {
+      if (!this.running) return;
+      if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); if (!this.revealed) this.reveal(); }
+      else if (this.revealed && (e.key === '1' || e.key === 'j')) { e.preventDefault(); this.answer(false); }
+      else if (this.revealed && (e.key === '2' || e.key === 'k')) { e.preventDefault(); this.answer(true); }
+    },
+
+    // speech — same content-addressed clips the lesson pages use
+    initVoice() {
+      if (!this.canSpeak) return;
+      const pick = () => { const vs = speechSynthesis.getVoices(); this.frVoice = vs.find(v => /fr[-_]?fr/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null; };
+      pick(); speechSynthesis.addEventListener('voiceschanged', pick);
+    },
+    // djb2 over the cleaned text — must match build_audio.py's say_hash().
+    sayHash(s) { let h = 5381; for (let k = 0; k < s.length; k++) h = ((Math.imul(h, 33) >>> 0) ^ s.charCodeAt(k)) >>> 0; return h.toString(36); },
+    playHosted(url) {
+      return new Promise((resolve, reject) => {
+        const a = this.audioEl || (this.audioEl = new Audio());
+        const cleanup = () => { a.removeEventListener('ended', ok); a.removeEventListener('error', bad); };
+        const ok = () => { cleanup(); resolve(); };
+        const bad = () => { cleanup(); reject(new Error('audio')); };
+        a.addEventListener('ended', ok); a.addEventListener('error', bad);
+        try { a.pause(); a.src = url; a.currentTime = 0; a.play().catch(bad); }
+        catch (e) { cleanup(); reject(e); }
+      });
+    },
+    speak(text, key) {
+      if (!text) return;
+      const c = clean(text); if (!c) return;
+      if (this.canSpeak) speechSynthesis.cancel();
+      if (this.audioEl) { try { this.audioEl.pause(); } catch (e) {} }
+      this.speaking = key;
+      const done = () => { if (this.speaking === key) this.speaking = null; };
+      this.playHosted('./assets/audio/tts/say/' + this.sayHash(c) + '.mp3').then(done).catch(() => {
+        if (!this.canSpeak) return done();
+        try {
+          const u = new SpeechSynthesisUtterance(c);
+          u.lang = 'fr-FR'; if (this.frVoice) u.voice = this.frVoice; u.rate = 0.9;
+          u.onend = u.onerror = done;
+          speechSynthesis.speak(u);
+        } catch (e) { done(); }
+      });
+    },
+  }));
+});
+</script>
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+<!-- NAV -->
+<nav x-data="{ open: false }" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="flex items-center justify-between h-16">
+      <a href="./" class="flex items-center gap-2 font-extrabold text-slate-900 tracking-tight"><span>🇫🇷</span> coucou <span class="font-medium text-blue-600 hidden sm:inline">· learn French</span></a>
+      <div class="hidden lg:flex items-center gap-7">
+        <a href="./lessons.html" class="text-sm text-slate-600 hover:text-slate-900">Lessons</a>
+        <div x-data="{ po: false }" class="relative" @mouseenter="po = true" @mouseleave="po = false" @click.outside="po = false">
+          <button @click="po = !po" class="flex items-center gap-1 text-sm font-medium text-blue-600">Practise <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+          <div x-show="po" x-cloak class="absolute left-0 top-full pt-2 w-56 z-50">
+            <div class="rounded-xl border border-slate-200 bg-white shadow-lg py-2">
+              <a href="./practice.html" class="block px-4 py-2 text-sm font-medium text-blue-600">🎴 Flashcards &amp; quiz</a>
+              <a href="./review.html" class="block px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50">🔁 Review queue</a>
+              <a href="./dictee.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">✍️ Dictée</a>
+              <a href="./shadow.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🗣️ Shadow speaking</a>
+              <a href="./train.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎧 Read &amp; Listen</a>
+              <a href="./watch.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎬 Watch real French</a>
+            </div>
+          </div>
+        </div>
+        <div x-data="{ eo: false }" class="relative" @mouseenter="eo = true" @mouseleave="eo = false" @click.outside="eo = false">
+          <button @click="eo = !eo" class="flex items-center gap-1 text-sm text-slate-600 hover:text-slate-900">Exam prep <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+          <div x-show="eo" x-cloak class="absolute left-0 top-full pt-2 w-56 z-50">
+            <div class="rounded-xl border border-slate-200 bg-white shadow-lg py-2">
+              <a href="./oral.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎤 Oral trainer</a>
+              <a href="./ecrire.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">📝 Writing studio</a>
+              <a href="./mock.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">🎓 Mock exam (B2)</a>
+            </div>
+          </div>
+        </div>
+        <a href="./tutor.html" class="text-sm font-medium text-blue-600 hover:text-blue-700">Tutor ✨</a>
+      </div>
+      <button @click="open = !open" class="lg:hidden p-2 text-slate-600" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div x-show="open" x-cloak class="lg:hidden pb-4 space-y-1">
+      <a href="./lessons.html" class="block py-2 text-sm text-slate-600">Lessons</a>
+      <p class="pt-3 pb-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Practise</p>
+      <a href="./practice.html" class="block py-2 text-sm font-medium text-blue-600">🎴 Flashcards &amp; quiz</a>
+      <a href="./review.html" class="block py-2 text-sm font-medium text-blue-600">🔁 Review queue</a>
+      <a href="./dictee.html" class="block py-2 text-sm text-slate-600">✍️ Dictée</a>
+      <a href="./shadow.html" class="block py-2 text-sm text-slate-600">🗣️ Shadow speaking</a>
+      <a href="./train.html" class="block py-2 text-sm text-slate-600">🎧 Read &amp; Listen</a>
+      <a href="./watch.html" class="block py-2 text-sm text-slate-600">🎬 Watch real French</a>
+      <p class="pt-3 pb-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Exam prep</p>
+      <a href="./oral.html" class="block py-2 text-sm text-slate-600">🎤 Oral trainer</a>
+      <a href="./ecrire.html" class="block py-2 text-sm text-slate-600">📝 Writing studio</a>
+      <a href="./mock.html" class="block py-2 text-sm text-slate-600">🎓 Mock exam (B2)</a>
+      <div class="pt-2"></div>
+      <a href="./tutor.html" class="block py-2 text-sm font-medium text-blue-600">Tutor ✨</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-2xl mx-auto px-5 py-10 md:py-14" x-data="review()" @keydown.window="onKey($event)">
+
+  <p class="text-sm font-medium text-blue-600">Practise</p>
+  <h1 class="mt-1 text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">Review queue</h1>
+  <p class="mt-3 text-slate-600 leading-relaxed">
+    Every word from every lesson, brought back just before you would forget it. Answer honestly —
+    a word you get wrong goes straight back to the start, which is the whole point.
+  </p>
+
+  <div x-show="loading" class="mt-8 text-sm text-slate-400">Loading your queue…</div>
+  <div x-show="error" x-cloak class="mt-8 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center text-sm text-slate-500">
+    Couldn't load the words. This page needs to be served by the local server or the live site.
+  </div>
+
+  <!-- ===== the deck ===== -->
+  <div x-show="!loading && !error && !running" x-cloak>
+
+    <div class="mt-8 grid grid-cols-3 gap-3">
+      <div class="rounded-xl border border-blue-200 bg-blue-50 p-4 text-center">
+        <p class="text-2xl font-extrabold text-blue-700" x-text="dueCards.length"></p>
+        <p class="mt-0.5 text-xs font-medium text-blue-600">due today</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-4 text-center">
+        <p class="text-2xl font-extrabold text-slate-900" x-text="learning"></p>
+        <p class="mt-0.5 text-xs text-slate-500">learning</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-4 text-center">
+        <p class="text-2xl font-extrabold text-green-600" x-text="mastered"></p>
+        <p class="mt-0.5 text-xs text-slate-500">mastered</p>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <div class="flex items-center justify-between text-xs text-slate-500">
+        <span><span x-text="seenCount"></span> of <span x-text="pool.length"></span> words started</span>
+        <span x-text="pct + '%'"></span>
+      </div>
+      <div class="mt-1.5 h-2 rounded-full bg-slate-100 overflow-hidden">
+        <div class="h-full bg-blue-500 rounded-full transition-all" :style="'width:' + pct + '%'"></div>
+      </div>
+    </div>
+
+    <div class="mt-6 flex flex-wrap items-center gap-2">
+      <span class="text-xs font-medium text-slate-500 mr-1">Level</span>
+      <template x-for="l in levels" :key="l">
+        <button @click="setLevel(l)"
+          class="px-3 py-1.5 rounded-full border text-sm font-medium transition-colors"
+          :class="level === l ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'">
+          <span x-text="l === 'all' ? 'All' : l"></span>
+          <span class="ml-1 text-xs opacity-60" x-text="countIn(l)"></span>
+        </button>
+      </template>
+    </div>
+
+    <div class="mt-3 flex flex-wrap items-center gap-2">
+      <span class="text-xs font-medium text-slate-500 mr-1">Ask me</span>
+      <button @click="setDir('fr')" class="px-3 py-1.5 rounded-full border text-sm font-medium transition-colors"
+        :class="dir === 'fr' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'">French → English</button>
+      <button @click="setDir('en')" class="px-3 py-1.5 rounded-full border text-sm font-medium transition-colors"
+        :class="dir === 'en' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'">English → French <span class="opacity-60">· harder</span></button>
+    </div>
+
+    <div class="mt-8" x-show="sessionSize > 0">
+      <button @click="start()" class="w-full rounded-xl bg-blue-600 text-white font-semibold py-4 hover:bg-blue-700 transition-colors">
+        Start — <span x-text="sessionSize"></span> <span x-text="sessionSize === 1 ? 'card' : 'cards'"></span>
+      </button>
+      <p class="mt-2 text-center text-xs text-slate-400">
+        <span x-text="dueCards.length"></span> due · up to <span x-text="Math.min(newCards.length, newPerDay)"></span> new
+      </p>
+    </div>
+
+    <div class="mt-8 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center" x-show="sessionSize === 0" x-cloak>
+      <p class="text-lg font-bold text-slate-900">Nothing due. 🎉</p>
+      <p class="mt-1 text-sm text-slate-500">
+        You've reviewed everything scheduled for today<span x-show="nextDueLabel" x-cloak>. Next batch <span x-text="nextDueLabel"></span></span>.
+      </p>
+    </div>
+
+    <p class="mt-10 text-center">
+      <button @click="resetAll()" class="text-xs text-slate-400 hover:text-red-600">Reset all progress</button>
+    </p>
+  </div>
+
+  <!-- ===== the session ===== -->
+  <div x-show="running" x-cloak class="mt-8">
+    <div class="flex items-center justify-between text-xs text-slate-500">
+      <span><span x-text="i"></span> / <span x-text="queue.length"></span></span>
+      <button @click="quit()" class="hover:text-slate-900">Finish early</button>
+    </div>
+    <div class="mt-1.5 h-1.5 rounded-full bg-slate-100 overflow-hidden">
+      <div class="h-full bg-blue-500 rounded-full transition-all" :style="'width:' + (queue.length ? Math.round(i / queue.length * 100) : 0) + '%'"></div>
+    </div>
+
+    <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-8 md:p-10 text-center shadow-sm" x-show="card">
+      <p class="text-xs uppercase tracking-wide text-slate-400">
+        <span x-text="card?.level"></span> · <span x-text="state[card?.key] ? 'box ' + state[card.key].box : 'new'"></span>
+      </p>
+
+      <p class="mt-4 text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight" x-text="front"></p>
+      <p class="mt-2 text-sm italic text-slate-400" x-show="dir === 'fr' && card?.phonetic" x-cloak x-text="card?.phonetic"></p>
+
+      <button x-show="dir === 'fr'" @click="speak(card.fr, 'f')"
+        class="mt-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-sm text-slate-600 hover:border-blue-300">🔊 listen</button>
+
+      <div x-show="!revealed" x-cloak class="mt-8">
+        <button @click="reveal()" class="w-full rounded-xl border-2 border-slate-900 text-slate-900 font-semibold py-3.5 hover:bg-slate-900 hover:text-white transition-colors">
+          Show answer
+        </button>
+        <p class="mt-2 text-xs text-slate-400">or press space</p>
+      </div>
+
+      <div x-show="revealed" x-cloak>
+        <div class="mt-6 pt-6 border-t border-slate-100">
+          <p class="text-2xl font-bold text-blue-700 leading-snug">
+            <span x-show="card?.emoji" x-cloak class="mr-1" aria-hidden="true" x-text="card?.emoji"></span><span x-text="back"></span>
+          </p>
+          <p class="mt-2 text-sm italic text-slate-400" x-show="dir === 'en' && card?.phonetic" x-cloak x-text="card?.phonetic"></p>
+          <button x-show="dir === 'en'" @click="speak(card.fr, 'b')"
+            class="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-sm text-slate-600 hover:border-blue-300">🔊 listen</button>
+          <p class="mt-4 text-xs text-slate-400" x-text="card?.lessonTitle"></p>
+        </div>
+
+        <div class="mt-6 grid grid-cols-2 gap-3">
+          <button @click="answer(false)" class="rounded-xl border border-red-200 bg-red-50 text-red-700 font-semibold py-3.5 hover:bg-red-100 transition-colors">
+            Not yet <span class="hidden sm:inline text-xs opacity-60">· 1</span>
+          </button>
+          <button @click="answer(true)" class="rounded-xl border border-green-200 bg-green-50 text-green-700 font-semibold py-3.5 hover:bg-green-100 transition-colors">
+            I knew it <span class="hidden sm:inline text-xs opacity-60">· 2</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-4 text-center text-xs text-slate-400">
+      Wrong answers come back at the end of this session.
+    </p>
+  </div>
+
+  <!-- ===== the summary ===== -->
+  <div x-show="finished && !running" x-cloak class="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-8 text-center">
+    <p class="text-2xl font-extrabold text-slate-900">Session done 🎉</p>
+    <p class="mt-2 text-slate-600">
+      <span x-text="sessionRight"></span> of <span x-text="sessionTotal"></span> first time.
+    </p>
+    <p class="mt-1 text-sm text-slate-500" x-show="nextDueLabel" x-cloak>Next batch due <span x-text="nextDueLabel"></span>.</p>
+    <div class="mt-6 flex flex-wrap justify-center gap-3">
+      <button @click="finished = false" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800">Back to the deck</button>
+      <a href="./lessons.html" class="px-5 py-2.5 rounded-xl border border-slate-300 text-sm font-semibold text-slate-700 hover:border-slate-400">Lessons</a>
+    </div>
+  </div>
+
+  <p class="mt-10 text-center text-xs text-slate-400">
+    Progress is stored in this browser only — it doesn't travel between devices.
+  </p>
+</main>
+
+
+<footer class="border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-5 py-10 text-center">
+    <p class="text-lg font-bold text-slate-900">C'est en forgeant qu'on devient forgeron. 🇫🇷</p>
+    <p class="mt-2 text-sm text-slate-500"><strong>Coucou</strong> · a free, open playbook · built with AI · 2026</p>
+  </div>
+</footer>
+
+
+</body>
+</html>

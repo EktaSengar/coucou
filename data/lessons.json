@@ -4221,6 +4221,80 @@
     "tutorPrompt": "Role-play a French préfecture appointment at B1, and stay in role as the agent — polite, brisk, slightly bureaucratic. Open with « Bonjour, vous avez rendez-vous ? » and take me through it: why I'm there, my situation familiale, the documents I've brought, one document that is missing, and what happens next. Use the real phrases — déposer un dossier, remplir un formulaire, un justificatif de domicile, un récépissé, « votre dossier est incomplet », « en cours de traitement » — and make me ask you what they mean if I don't know. Correct two things every time: the fixed verb-noun pairings (I must not say « remplir un dossier »), and the agreement on my situation familiale, since I am a woman and should say « mariée ». Finish by telling me, in French, exactly which documents to bring next time, then list the phrases I hesitated on."
   },
   {
+    "id": "b1-banque",
+    "level": "B1",
+    "module": "Finding your voice",
+    "title": "À la banque — prendre rendez-vous avec son conseiller",
+    "minutes": 20,
+    "goal": "Book a bank appointment and say why you're there: the core banking words, and the one polite frame — j'aimerais / je voudrais + infinitive — that carries every request.",
+    "vocab": [
+      { "fr": "une banque", "phonetic": "ewn BAHNK", "en": "a bank", "emoji": "🏦" },
+      { "fr": "un compte bancaire", "phonetic": "uhn kohnt bahn-KEHR", "en": "a bank account", "emoji": "💳" },
+      { "fr": "ouvrir un compte", "phonetic": "oo-vreer uhn KOHNT", "en": "to open an account", "emoji": "🔓" },
+      { "fr": "un conseiller / une conseillère", "phonetic": "uhn kohn-seh-YAY / ewn kohn-seh-YEHR", "en": "an adviser (m. / f.)", "emoji": "🧑‍💼" },
+      { "fr": "un rendez-vous", "phonetic": "uhn rahn-day-VOO", "en": "an appointment", "emoji": "📅" },
+      { "fr": "une carte bancaire / une carte bleue", "phonetic": "ewn kart bahn-KEHR / ewn kart BLUH", "en": "a bank card", "emoji": "💳" },
+      { "fr": "une carte de débit / de crédit", "phonetic": "ewn kart duh day-BEE / duh kray-DEE", "en": "a debit / credit card", "emoji": "🪪" },
+      { "fr": "un paiement", "phonetic": "uhn peh-MAHN", "en": "a payment", "emoji": "🧾" },
+      { "fr": "faire un virement", "phonetic": "fehr uhn veer-MAHN", "en": "to make a transfer", "emoji": "🔁" },
+      { "fr": "virer de l'argent", "phonetic": "vee-RAY duh lar-ZHAHN", "en": "to transfer money", "emoji": "💸" },
+      { "fr": "un prêt", "phonetic": "uhn PREH", "en": "a loan", "emoji": "🏠" },
+      { "fr": "prêter / rembourser", "phonetic": "preh-TAY / rahn-boor-SAY", "en": "to lend / to pay back", "emoji": "↩️" },
+      { "fr": "un découvert", "phonetic": "uhn day-koo-VEHR", "en": "an overdraft", "emoji": "📉" },
+      { "fr": "une dette", "phonetic": "ewn DET", "en": "a debt", "emoji": "⚠️" },
+      { "fr": "à propos de / concernant", "phonetic": "a pro-POH duh / kohn-sehr-NAHN", "en": "about, regarding", "emoji": "💬" }
+    ],
+    "grammar": {
+      "point": "One polite frame for every request: j'aimerais / je voudrais + infinitive",
+      "table": {
+        "title": "« Qu'est-ce qui vous amène ? » — explaining why you've come",
+        "cols": ["le début", "+ infinitif", "English"],
+        "rows": [
+          { "label": "open", "cells": ["J'aimerais", "ouvrir un compte bancaire.", "I'd like to open a bank account."]},
+          { "label": "loan", "cells": ["J'aimerais", "demander un prêt.", "I'd like to ask for a loan."]},
+          { "label": "transfer", "cells": ["Je voudrais", "faire un virement.", "I'd like to make a transfer."]},
+          { "label": "overdraft", "cells": ["J'aimerais", "parler de mon découvert.", "I'd like to talk about my overdraft."]},
+          { "label": "question", "cells": ["J'ai une question", "à propos de mon compte.", "I have a question about my account."]},
+          { "label": "problem", "cells": ["J'ai un problème", "avec ma carte.", "I have a problem with my card."]}
+        ],
+        "highlight": ["J'aimerais", "Je voudrais"],
+        "note": "J'aimerais and je voudrais are conditionnel, the same polite tense as in the conditionnel lesson, and both are followed by a bare infinitive with no « de » and no « à ». When you're describing something rather than asking for it, switch to j'ai + a noun."
+      },
+      "explain": "Every bank visit starts the same way. The adviser asks « Qu'est-ce qui vous amène ? » (what brings you here?) and you need one sentence. There are only two shapes. If you want something done, say j'aimerais or je voudrais followed by an infinitive: ouvrir un compte, demander un prêt, faire un virement. If you have an issue, say j'ai une question or j'ai un problème, followed by à propos de, concernant or avec and a noun. « Je veux » is grammatically correct but sounds blunt across a desk, which is why the class drills the conditionnel forms. French banking also has a few words that don't map onto English. Your personal conseiller is assigned to you, and you book appointments with that person by name. People still say « carte bleue » for any bank card, after the old French card network. Un découvert is an authorised overdraft that is often agreed in advance, and it's a routine thing to discuss rather than a crisis."
+    },
+    "notes": [
+      {
+        "title": "Virer: money, or your job",
+        "body": "Virer de l'argent is to transfer money, and un virement is the transfer. But virer quelqu'un is slang for firing someone, so « je me suis fait virer » means « I got fired », not « I got paid ». The class put both side by side for exactly this reason. At the bank, stick to « faire un virement »."
+      },
+      {
+        "title": "Prêter vs emprunter",
+        "body": "The bank prête (lends), and you empruntez (borrow), then remboursez (pay back). English speakers often say « la banque m'a emprunté », which reverses who has the money. Say « la banque m'a prêté 10 000 euros » or « j'ai emprunté 10 000 euros »."
+      },
+      {
+        "title": "« Carte bleue » is any bank card",
+        "body": "The CB network gave its name to bank cards in everyday speech, so « vous payez par carte bleue ? » just means « by card? », whatever colour your card is. You'll also hear « par carte » or « sans contact »."
+      }
+    ],
+    "examples": [
+      "Bonjour, j'aimerais prendre rendez-vous avec ma conseillère. (zheh-muh-REH prahn-druh rahn-day-VOO)",
+      "J'aimerais ouvrir un compte bancaire. (oo-vreer uhn kohnt bahn-KEHR)",
+      "J'ai une question concernant mon compte. (kohn-sehr-NAHN mohn KOHNT)",
+      "Je voudrais faire un virement à mon propriétaire. (fehr uhn veer-MAHN)",
+      "J'ai un problème avec ma carte : elle est bloquée. (el eh blo-KAY)",
+      "J'aimerais demander un prêt pour acheter un appartement. (duh-mahn-DAY uhn PREH)",
+      "J'aimerais discuter de mon découvert. (dees-kew-TAY duh mohn day-koo-VEHR)"
+    ],
+    "practice": [
+      "Say why you've come, five ways: open an account · a loan · a transfer · a card problem · your overdraft.",
+      "Sort into the right frame: j'aimerais + infinitive, or j'ai un problème / une question + noun.",
+      "Prêter or emprunter? — « La banque m'a ___ de l'argent. » / « J'ai ___ de l'argent à la banque. »",
+      "Virer: explain the difference between « faire un virement » and « se faire virer ».",
+      "Phone the bank and book an appointment with your conseiller, giving a day and a time."
+    ],
+    "tutorPrompt": "Role-play a French bank appointment at B1. You are my conseillère bancaire: polite, professional, a little sales-minded. Open with « Bonjour, qu'est-ce qui vous amène ? » and handle three requests one after another: I want to open an account, I have a problem with my card, and I want to ask about a loan or my découvert. Use real vocabulary (un virement, un prêt, rembourser, un découvert, une carte bleue, un justificatif de domicile) and ask me for details. Correct two things each time: I should use « j'aimerais / je voudrais + infinitive » and not « je veux », and I must not mix up prêter and emprunter. At the end, list the phrases I hesitated on."
+  },
+  {
     "id": "b1-08-admin-housing",
     "level": "B1",
     "module": "Finding your voice",

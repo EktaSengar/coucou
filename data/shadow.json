@@ -210,6 +210,20 @@
     ]
   },
   {
+    "id": "b1-banque",
+    "level": "B1",
+    "focus": "Polite requests",
+    "title": "Au guichet de la banque",
+    "intro": "Say why you've come to the bank: the j'aimerais / je voudrais frame, until it comes out without thinking.",
+    "phrases": [
+      { "fr": "Bonjour, j'aimerais prendre rendez-vous avec ma conseillère.", "en": "Hello, I'd like to book an appointment with my adviser.", "hint": "Keep « rendez-vous » as one smooth unit: rahn-day-VOO." },
+      { "fr": "J'ai un problème avec ma carte.", "en": "I have a problem with my card.", "hint": "Link « un problème » with no gap. The stress falls on the last syllable, « -blème »." },
+      { "fr": "Je voudrais faire un virement.", "en": "I'd like to make a transfer.", "hint": "« voudrais » — the d is soft, and the ending is an open « eh »." },
+      { "fr": "J'aimerais parler de mon découvert.", "en": "I'd like to talk about my overdraft.", "hint": "« découvert » — the final t is silent: day-koo-VEHR." },
+      { "fr": "Qu'est-ce qui vous amène ?", "en": "What brings you here?", "hint": "Rising-then-falling question. This is what the adviser will say first, so learn to recognise it." }
+    ]
+  },
+  {
     "id": "b2-opinion",
     "level": "B2",
     "focus": "Giving an opinion",

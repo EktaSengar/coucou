@@ -308,6 +308,20 @@
     ]
   },
   {
+    "id": "b1-banque",
+    "level": "B1",
+    "theme": "Daily admin",
+    "title": "À la banque",
+    "intro": "The bank appointment from class: polite requests in the conditionnel, and the agreements on bloquée and prêté.",
+    "sentences": [
+      { "fr": "J'aimerais ouvrir un compte bancaire.", "en": "I'd like to open a bank account.", "tip": "« bancaire » — -aire ending, and « compte » keeps its silent p." },
+      { "fr": "J'ai une question concernant mon compte.", "en": "I have a question about my account.", "tip": "« concernant » — the present participle ends in -ant, with a silent t." },
+      { "fr": "Je voudrais faire un virement à mon propriétaire.", "en": "I'd like to make a transfer to my landlord.", "tip": "« voudrais » ends in -ais for je. « virement » — no e after the r." },
+      { "fr": "Ma carte bancaire est bloquée depuis hier.", "en": "My bank card has been blocked since yesterday.", "tip": "« bloquée » agrees with « carte »: feminine, so -ée." },
+      { "fr": "La conseillère m'a prêté de l'argent, que je rembourserai l'année prochaine.", "en": "The adviser lent me money, which I'll pay back next year.", "tip": "« prêté » keeps its circumflex. « rembourserai » — the futur ends in -ai for je." }
+    ]
+  },
+  {
     "id": "b1-societe",
     "level": "B1",
     "theme": "Opinions & society",

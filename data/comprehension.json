@@ -1,5 +1,194 @@
 [
   {
+    "id": "a1-read-passe-present-futur",
+    "skill": "reading",
+    "level": "A1",
+    "theme": "Time",
+    "title": "Passé, présent ou futur ?",
+    "minutes": 8,
+    "source": "Exercice de classe",
+    "intro": "Decide whether each sentence is in the past, the present or the future, then fill in autrefois / aujourd'hui / plus tard. Use two clues every time: the time word if there is one, and the ending of the verb. When they disagree, the verb wins.",
+    "text": "Les indices du temps — the clues:\n\nPassé : hier, autrefois, la semaine dernière, il y a… — verbe au passé composé (j'ai vu) ou à l'imparfait (je voyais).\n\nPrésent : aujourd'hui, maintenant, en ce moment, actuellement — verbe au présent (je vois).\n\nFutur : demain, bientôt, plus tard, la semaine prochaine, dans… — verbe au futur simple (je verrai) ou au futur proche (je vais voir).",
+    "glossary": [
+      {
+        "fr": "autrefois",
+        "en": "in the old days, formerly"
+      },
+      {
+        "fr": "actuellement",
+        "en": "currently (not « actually »)"
+      },
+      {
+        "fr": "plus tard",
+        "en": "later"
+      },
+      {
+        "fr": "en ce moment",
+        "en": "right now, at the moment"
+      },
+      {
+        "fr": "bientôt",
+        "en": "soon"
+      }
+    ],
+    "questions": [
+      {
+        "q": "« Hier, nous avons visité le Louvre. »",
+        "type": "mcq",
+        "options": [
+          "Passé",
+          "Présent",
+          "Futur"
+        ],
+        "answer": 0,
+        "explain": "Two clues agree: « hier » points back, and « avons visité » is passé composé (avoir + participe passé)."
+      },
+      {
+        "q": "« En ce moment, Kartik prépare le dîner. »",
+        "type": "mcq",
+        "options": [
+          "Passé",
+          "Présent",
+          "Futur"
+        ],
+        "answer": 1,
+        "explain": "« En ce moment » means right now, and « prépare » is the plain present. Both clues say présent."
+      },
+      {
+        "q": "« Nous irons à Lyon la semaine prochaine. »",
+        "type": "mcq",
+        "options": [
+          "Passé",
+          "Présent",
+          "Futur"
+        ],
+        "answer": 2,
+        "explain": "« irons » is the futur simple of aller (stem ir- + -ons), and « la semaine prochaine » looks forward."
+      },
+      {
+        "q": "« Autrefois, on payait en francs. »",
+        "type": "mcq",
+        "options": [
+          "Passé",
+          "Présent",
+          "Futur"
+        ],
+        "answer": 0,
+        "explain": "« Autrefois » means in the old days, and « payait » is imparfait (-ait), the tense for how things used to be."
+      },
+      {
+        "q": "« Actuellement, je travaille à Paris. »",
+        "type": "mcq",
+        "options": [
+          "Passé",
+          "Présent",
+          "Futur"
+        ],
+        "answer": 1,
+        "explain": "Careful: « actuellement » means currently, not actually. « travaille » is présent."
+      },
+      {
+        "q": "« Je finirai ce livre bientôt. »",
+        "type": "mcq",
+        "options": [
+          "Passé",
+          "Présent",
+          "Futur"
+        ],
+        "answer": 2,
+        "explain": "« finirai » is futur simple: the infinitive finir + -ai. « bientôt » (soon) also points forward."
+      },
+      {
+        "q": "« Le boulanger a fermé la boutique. »",
+        "type": "mcq",
+        "options": [
+          "Passé",
+          "Présent",
+          "Futur"
+        ],
+        "answer": 0,
+        "explain": "No time word here, so the verb decides. « a fermé » is avoir + participe passé, which makes it passé composé."
+      },
+      {
+        "q": "« Elle se lèvera tôt demain. »",
+        "type": "mcq",
+        "options": [
+          "Passé",
+          "Présent",
+          "Futur"
+        ],
+        "answer": 2,
+        "explain": "« lèvera » is futur simple (lever + -a), and « demain » confirms it. A reflexive verb doesn't change the reasoning."
+      },
+      {
+        "q": "« Il y avait beaucoup de monde au marché. »",
+        "type": "mcq",
+        "options": [
+          "Passé",
+          "Présent",
+          "Futur"
+        ],
+        "answer": 0,
+        "explain": "« avait » is imparfait of avoir. « Il y avait » is the past of « il y a »."
+      },
+      {
+        "q": "« Nous dînons au restaurant ce soir. »",
+        "type": "mcq",
+        "options": [
+          "Passé",
+          "Présent",
+          "Futur"
+        ],
+        "answer": 1,
+        "explain": "Trap: « ce soir » is later today, but the verb « dînons » is présent. French often uses the present for a near, planned future. By form, it's présent."
+      },
+      {
+        "q": "___, il n'y avait pas de téléphones portables.",
+        "type": "mcq",
+        "options": [
+          "Autrefois",
+          "Aujourd'hui",
+          "Plus tard"
+        ],
+        "answer": 0,
+        "explain": "« il n'y avait pas » is imparfait, so it's describing the past. That needs « autrefois »."
+      },
+      {
+        "q": "___, je suis au cours de français.",
+        "type": "mcq",
+        "options": [
+          "Autrefois",
+          "Aujourd'hui",
+          "Plus tard"
+        ],
+        "answer": 1,
+        "explain": "« je suis » is présent, so it pairs with « aujourd'hui »."
+      },
+      {
+        "q": "Je ferai les courses ___.",
+        "type": "mcq",
+        "options": [
+          "Autrefois",
+          "Aujourd'hui",
+          "Plus tard"
+        ],
+        "answer": 2,
+        "explain": "« ferai » is futur simple of faire, so it pairs with « plus tard »."
+      },
+      {
+        "q": "___, mes parents écrivaient des lettres.",
+        "type": "mcq",
+        "options": [
+          "Autrefois",
+          "Aujourd'hui",
+          "Plus tard"
+        ],
+        "answer": 0,
+        "explain": "« écrivaient » ends in -aient, the imparfait. Habits of the past go with « autrefois »."
+      }
+    ]
+  },
+  {
     "id": "b2-read-fast-fashion",
     "skill": "reading",
     "level": "B2",

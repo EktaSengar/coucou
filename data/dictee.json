@@ -154,6 +154,21 @@
     ]
   },
   {
+    "id": "a1-passe-present-futur",
+    "level": "A1",
+    "theme": "Time markers",
+    "title": "Passé, présent ou futur ?",
+    "intro": "Six sentences, one for each time frame and then a pair that differs by a single sound. Listen for the time word, then for the verb ending: -ait, avons + -é, a plain present, or the r of the futur.",
+    "sentences": [
+      { "fr": "Autrefois, on écrivait des lettres à la main.", "en": "In the old days, people wrote letters by hand.", "tip": "« écrivait » is imparfait: -ait for on, with a silent t. « Autrefois » is one word." },
+      { "fr": "Hier, nous avons visité le musée d'Orsay.", "en": "Yesterday, we visited the Musée d'Orsay.", "tip": "Passé composé: « avons » + « visité », with -é and no -er. The liaison in « nous‿avons » sounds like a z." },
+      { "fr": "Aujourd'hui, je travaille à la maison.", "en": "Today, I'm working from home.", "tip": "« aujourd'hui » has an apostrophe in the middle. « travaille » is présent: -e for je, and the ending is silent." },
+      { "fr": "Nous mangeons au restaurant ce soir.", "en": "We're eating at the restaurant tonight.", "tip": "« mangeons » keeps the e after the g so the g stays soft. This is présent, even though the meal is tonight." },
+      { "fr": "Nous mangerons au restaurant samedi.", "en": "We'll eat at the restaurant on Saturday.", "tip": "Compare with the last sentence: « mangerons » adds an r before -ons, and that r is what you hear for the futur." },
+      { "fr": "Plus tard, Julie ira vivre au Canada.", "en": "Later on, Julie will go and live in Canada.", "tip": "« ira » is the futur of aller, built on the irregular stem ir-. Don't confuse it with « il a »." }
+    ]
+  },
+  {
     "id": "a1-duree",
     "level": "A1",
     "theme": "Duration",

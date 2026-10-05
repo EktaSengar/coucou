@@ -84,6 +84,21 @@
     ]
   },
   {
+    "id": "a1-passe-present-futur",
+    "level": "A1",
+    "focus": "Time frames",
+    "title": "Passé, présent ou futur ?",
+    "intro": "The same verbs said three ways: hier / aujourd'hui / demain with manger, then autrefois / en ce moment / plus tard with aller. Shadow each group in order so the time word and the verb ending come out together.",
+    "phrases": [
+      { "fr": "Hier, j'ai mangé chez des amis.", "en": "Yesterday, I ate at some friends' place.", "hint": "Passé composé: « j'ai » runs straight into « mangé ». Say it as one word, zhay-mahn-ZHAY." },
+      { "fr": "Aujourd'hui, je mange à la maison.", "en": "Today, I'm eating at home.", "hint": "Présent: « je mange » is two short beats, and the final e is silent." },
+      { "fr": "Demain, je mangerai au restaurant.", "en": "Tomorrow, I'll eat at the restaurant.", "hint": "Futur: lean on the added r, mahnzh-RAY. The ending -ai sounds like the é of « mangé »." },
+      { "fr": "Autrefois, on allait au marché le dimanche.", "en": "In the old days, we'd go to the market on Sundays.", "hint": "Imparfait: « on allait » links with a liaison, ohn‿na-LEH. The -ait is an open « eh »." },
+      { "fr": "En ce moment, je vais au cours de français.", "en": "At the moment, I'm going to French class.", "hint": "Présent of aller. Keep « je vais au » smooth: zhuh-veh-zoh." },
+      { "fr": "Plus tard, j'irai vivre à la campagne.", "en": "Later on, I'll go and live in the countryside.", "hint": "Futur of aller: « j'irai », zhee-RAY. It has nothing in common with « je vais » apart from the meaning, so drill it." }
+    ]
+  },
+  {
     "id": "a2-liaisons",
     "level": "A2",
     "focus": "Liaisons",

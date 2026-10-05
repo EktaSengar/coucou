@@ -1528,6 +1528,86 @@
     "tutorPrompt": "Be my A1 French tutor for placing things in time. Drill the three zones: passé (hier, avant-hier, la semaine dernière, le mois dernier, il y a + durée), présent (maintenant, aujourd'hui, en ce moment, actuellement) and futur (demain, après-demain, bientôt, la semaine prochaine, dans + durée). Test two traps hard: « il y a » versus « dans » for the same distance in opposite directions, and « actuellement » = currently, never « actually » (which is en fait / en réalité). Also check that I put dernier and prochain after the noun. Ask me simple questions about when I do things, one at a time, and correct every answer. Finish with the markers I still get wrong."
   },
   {
+    "id": "a1-passe-present-futur",
+    "level": "A1",
+    "module": "People & daily life",
+    "title": "Passé, présent ou futur ? — read the clues",
+    "minutes": 20,
+    "goal": "Tell at a glance, or by ear, whether a sentence is about the past, the present or the future: first from the time word, then from the verb ending, and know which one to trust when they disagree.",
+    "vocab": [
+      { "fr": "autrefois", "phonetic": "oh-truh-FWAH", "en": "in the old days, formerly", "emoji": "🕰️" },
+      { "fr": "avant", "phonetic": "a-VAHN", "en": "before, in the past", "emoji": "⏪" },
+      { "fr": "hier", "phonetic": "YEHR", "en": "yesterday", "emoji": "⬅️" },
+      { "fr": "aujourd'hui", "phonetic": "oh-zhoor-DWEE", "en": "today", "emoji": "📍" },
+      { "fr": "en ce moment", "phonetic": "ahn suh mo-MAHN", "en": "right now, at the moment", "emoji": "⏺️" },
+      { "fr": "actuellement", "phonetic": "ak-tew-el-MAHN", "en": "currently (not « actually »)", "emoji": "📍" },
+      { "fr": "ce soir", "phonetic": "suh SWAHR", "en": "this evening, tonight", "emoji": "🌙" },
+      { "fr": "demain", "phonetic": "duh-MAN", "en": "tomorrow", "emoji": "➡️" },
+      { "fr": "bientôt", "phonetic": "byan-TOH", "en": "soon", "emoji": "⏳" },
+      { "fr": "plus tard", "phonetic": "plew TAR", "en": "later", "emoji": "⏩" },
+      { "fr": "cet hiver / cet été", "phonetic": "set ee-VEHR / set ay-TAY", "en": "this winter / this summer", "emoji": "❄️" },
+      { "fr": "j'ai mangé", "phonetic": "zhay mahn-ZHAY", "en": "I ate, I have eaten (passé composé)", "emoji": "🍽️" },
+      { "fr": "je mangeais", "phonetic": "zhuh mahn-ZHEH", "en": "I was eating, I used to eat (imparfait)", "emoji": "🍽️" },
+      { "fr": "je mange", "phonetic": "zhuh MAHNZH", "en": "I eat, I'm eating (présent)", "emoji": "🍽️" },
+      { "fr": "je vais manger", "phonetic": "zhuh veh mahn-ZHAY", "en": "I'm going to eat (futur proche)", "emoji": "🍽️" },
+      { "fr": "je mangerai", "phonetic": "zhuh mahnzh-RAY", "en": "I will eat (futur simple)", "emoji": "🍽️" }
+    ],
+    "grammar": {
+      "point": "Two clues in every sentence: the time word and the verb ending",
+      "table": {
+        "title": "the verb gives the time away, even with no time word",
+        "cols": ["", "the clue", "manger", "aller"],
+        "rows": [
+          { "label": "passé composé", "cells": ["avoir / être + participe", "j'ai mangé", "je suis allée"]},
+          { "label": "imparfait", "cells": ["-ais, -ait, -aient", "je mangeais", "j'allais"]},
+          { "label": "présent", "cells": ["-e, -es, -ons, -ez, -ent", "je mange", "je vais"]},
+          { "label": "futur proche", "cells": ["aller + infinitif", "je vais manger", "je vais aller"]},
+          { "label": "futur simple", "cells": ["-rai, -ra, -rons, -ront", "je mangerai", "j'irai"]}
+        ],
+        "highlight": ["-ais, -ait, -aient", "-rai, -ra, -rons, -ront"],
+        "note": "Read down the manger column: the present is the bare stem, the past adds an auxiliary or -ais, and the futur adds an r. That r is the most useful single sound in French grammar, because mangeons is now and mangerons is later. Aller is irregular in every tense (vais, allais, irai), but the endings still give the time away."
+      },
+      "explain": "Every sentence on a passé / présent / futur worksheet can be solved with two questions. First, is there a time word? Hier, autrefois and la semaine dernière point back. Aujourd'hui, maintenant, en ce moment and actuellement sit on now. Demain, bientôt, plus tard and la semaine prochaine point forward. Second, what does the verb look like? An auxiliary plus a participle (j'ai vu, ils ont fermé) is the passé composé. An -ait ending (on payait, la ville était) is the imparfait. An r before the ending (j'irai, nous mangerons, elle se lèvera) is the futur simple. When there is no time word, as in « La rue était calme », the verb settles it on its own. When the two clues seem to disagree, trust the verb. « Nous dînons au restaurant ce soir » is présent in form, even though the dinner is later, because French uses the present for near, planned events just as English does with « we're having dinner out tonight »."
+    },
+    "notes": [
+      {
+        "title": "The r of the futur",
+        "body": "Mangeons / mangerons, travaillez / travaillerez, il finit / il finira. In the regular futur simple the whole infinitive stays (manger-, finir-) and the ending goes on top, so you hear an r just before the ending. If you hear that r, it's the futur."
+      },
+      {
+        "title": "-ais, -ait, -aient all sound the same",
+        "body": "Je mangeais, il mangeait and ils mangeaient are all pronounced « mahn-ZHEH ». By ear, the subject tells you the person. In writing, the ending tells you it's imparfait: think « it was » or « it used to be »."
+      },
+      {
+        "title": "Actuellement is a présent word",
+        "body": "Actuellement means currently, so « Actuellement, je travaille à la mairie » is présent. « Actually » is en fait. It's the commonest trap on these worksheets, and in conversation too."
+      },
+      {
+        "title": "The present can talk about later",
+        "body": "« Je pars demain », « on mange ensemble ce soir ». French uses the plain present for anything already arranged. On a worksheet that asks about form, the answer is still présent. The time word only tells you when it happens."
+      }
+    ],
+    "examples": [
+      "Hier, j'ai vu Léa au marché. (YEHR zhay VEW lay-A)",
+      "Autrefois, on écrivait des lettres. (oh-truh-FWAH ohn‿nay-kree-VEH)",
+      "La boulangerie était fermée. (ay-TEH fehr-MAY)",
+      "En ce moment, j'apprends le français. (ahn suh mo-MAHN)",
+      "Actuellement, j'habite dans le onzième. (ak-tew-el-MAHN)",
+      "Nous mangeons chez nous. (noo mahn-ZHOHN)",
+      "Nous mangerons à vingt heures. (noo mahnzh-ROHN)",
+      "Kartik se lèvera plus tard. (suh lev-RAH plew TAR)"
+    ],
+    "practice": [
+      "Passé, présent ou futur ? — Je partirai en Bretagne cet été · Elle lit le journal · Le magasin a fermé · Le quartier était calme.",
+      "Fill in autrefois / aujourd'hui / plus tard: « ___, il n'y avait pas de métro. » · « Je rangerai ma chambre ___. » · « Je n'ai pas cours ___. »",
+      "Say it three ways: je travaille → hier, j'ai ___ → demain, je ___.",
+      "Mangeons or mangerons? Write the one that matches: « Ce soir, nous ___ des crêpes. » / « Samedi prochain, nous ___ chez Paul. »",
+      "Spot the clue: in « Elle se lèvera tôt », which letters tell you it's the futur?",
+      "Tell your week out loud: one thing you did hier, one you're doing en ce moment, one you'll do bientôt."
+    ],
+    "tutorPrompt": "Be my French tense detective coach at A1. Give me French sentences one at a time, mixing passé composé, imparfait, présent, futur proche and futur simple. About half should have a time word (hier, autrefois, en ce moment, actuellement, demain, plus tard) and half should have none. For each one I say passé, présent or futur and name the clue I used. If I'm wrong, show me the clue I missed, such as the r of the futur, the -ait of the imparfait or the auxiliary of the passé composé. Include a few traps: actuellement, present tense with ce soir or demain, and mangeons vs mangerons. After ten sentences, ask me to say three sentences about my own life, one in each time frame, and correct them."
+  },
+  {
     "id": "a1-depuis-pendant",
     "level": "A1",
     "module": "People & daily life",
